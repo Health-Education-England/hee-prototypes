@@ -2,7 +2,7 @@
 // COMPONENTS / #RELATED-NAV
 // ==========================================================================
 
-.nhsuk-related-nav {
+/* .nhsuk-related-nav {
   border-top: 1px solid $nhsuk-border-color;
 
   @include mq($until: desktop) {
@@ -29,4 +29,72 @@
 
   list-style: none;
   padding-left: 0;
+} */
+
+// Ported from main www.nhs.uk website
+
+.nhsuk-related-nav {
+	border-top: 2px solid #005eb8;
+}
+.nhsuk-related-nav__heading {
+	font-size: 20px;
+	font-size: 1.25rem;
+	line-height: 1.2;
+	margin-bottom: 16px;
+	padding-top: 16px;
+}
+.nhsuk-related-nav__list {
+	list-style: none;
+	margin-bottom: 16px;
+	padding-left: 0;
+}
+.nhsuk-related-nav__item {
+	font-size: 14px;
+	font-size: .875rem;
+	line-height: 1.71429;
+}
+.nhsuk-related-nav__sub-heading {
+	margin-bottom: 8px;
+	padding-top: 8px;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.2;
+}
+@media (max-width:48.0525em) {
+	.nhsuk-related-nav {
+		margin-top: 48px;
+	}
+}
+@media (min-width:40.0625em) {
+	.nhsuk-related-nav__heading {
+		font-size: 24px;
+		font-size: 1.5rem;
+		line-height: 1.2;
+	}
+	.nhsuk-related-nav__item {
+		font-size: 16px;
+		font-size: 1rem;
+		line-height: 1.5;
+	}
+	.nhsuk-related-nav__sub-heading {
+		margin-bottom: 8px;
+		padding-top: 8px;
+		font-size: 19px;
+		font-size: 1.1875rem;
+		line-height: 1.2;
+	}
+}
+@media print {
+	.nhsuk-related-nav__heading {
+		font-size: 18pt;
+		line-height: 1.2;
+	}
+	.nhsuk-related-nav__item {
+		font-size: 14pt;
+		line-height: 1.2;
+	}
+	.nhsuk-related-nav__sub-heading {
+		font-size: 14pt;
+		line-height: 1.2;
+	}
 }

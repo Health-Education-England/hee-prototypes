@@ -1,0 +1,188 @@
+<!-- Extends the layout from /docs/views/template.html -->
+{% extends "lks-layout.html" %}
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Home - HEE
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+
+  <!-- Hero Banner -->
+  {{ hero({
+  "heading": "Welcome to the Library and Knowledge Services Professionals Hub",
+  "text": "Guidance and information for library and information professionals"
+  }) }}
+{% endblock %}
+
+{% block main %}
+  <div class="nhsuk-width-container nhsuk-width-container--full">
+    <main class="nhsuk-main-wrapper nhsuk-main-wrapper--no-padding nhsuk-homepage" id="maincontent" role="main">
+
+      <section class="nhsuk-section">
+        <div class="nhsuk-width-container">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full nhsuk-section__content">
+              <div class="nhsuk-u-reading-width">
+                <h2>What we do</h2>
+                <p>We provide guidance and support for Library Knowledge Services professionals. Enabling you to access the right knowledge and evidence at the right time.</p>
+                {{ insetText({
+                  "HTML": "<p>You can find out more about what we do on our <a href=\"https://www.hee.nhs.uk/about/how-we-work\" title=\"About us\">About us</a> page.</p>"
+                }) }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="nhsuk-section">
+        <div class="nhsuk-width-container">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full nhsuk-section__content">
+              <div class="nhsuk-u-reading-width">
+                <h2>Our services</h2>
+              </div>
+              <ul class="nhsuk-grid-row nhsuk-card-group">
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                  {{ card({
+                    "href": "#",
+                    "clickable": "true",
+                    "heading": "Evidence and resources",
+                    "headingLevel": "3",
+                    "headingClasses": "nhsuk-heading-m",
+                    "description": "Bulletins, search bank, OpenAthens and ways to collaborate with other libraries."
+                  }) }}
+                </li>
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                  {{ card({
+                    "href": "#",
+                    "clickable": "true",
+                    "heading": "Knowledge Management",
+                    "headingLevel": "3",
+                    "headingClasses": "nhsuk-heading-m",
+                    "description": "Finding the latest evidence through bulletins, literature searching, using trusted sources like OpenAthens and collaboration."
+                  }) }}
+                </li>
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                  {{ card({
+                    "href": "#",
+                    "clickable": "true",
+                    "heading": "Quality and Impact",
+                    "headingLevel": "3",
+                    "headingClasses": "nhsuk-heading-m",
+                    "description": "Finding the latest evidence through bulletins, literature searching, using trusted sources like OpenAthens and collaboration."
+                  }) }}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="nhsuk-section">
+        <div class="nhsuk-width-container">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full nhsuk-section__content">
+              <div class="nhsuk-u-reading-width">
+                <h2>Latest news</h2>
+              </div>
+              <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-half">
+                  <h3 class="nhsuk-heading-m">
+                    <a href="#">Expert Search Early Adopters pilot - pre-switch search data</a>
+                  </h3>
+                  <div class="nhsuk-review-date">
+                    <p class="nhsuk-body-s">4th January 2021</p>
+                  </div>
+                  <p>In mid-September HEE began a pilot to understand how best to help LKS in England move from using HDAS to using provider interfaces.</p>
+                </div>
+                <div class="nhsuk-grid-column-one-half">
+                  <h3 class="nhsuk-heading-m">
+                    <a href="#">Digital Champion</a>
+                  </h3>
+                  <div class="nhsuk-review-date">
+                    <p class="nhsuk-body-s">4th January 2021</p>
+                  </div>
+                  <p>In mid-September HEE began a pilot to understand how best to help LKS in England move from using HDAS to using provider interfaces.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="nhsuk-section">
+        <div class="nhsuk-width-container">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full nhsuk-section__content">
+              <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-half">
+                  <h2>Working with the public</h2>
+                  <p>We work with NHS colleagues and information providers in local communities to improve access to high-quality health and wellbeing information. Our wider goal is to improve the health literacy and available patient information within the public.</p>
+                  <p>You can find a number of health literacy training resources.</p>
+                  {{ insetText({
+                    "HTML": "<p>You can find out more about what we do on our <a href=\"https://www.hee.nhs.uk/about/how-we-work\" title=\"About us\">About us</a> page.</p>"
+                  }) }}
+                </div>
+                <div class="nhsuk-grid-column-one-half">
+                  {{ image({
+                    "src": "https://d1icd6shlvmxi6.cloudfront.net/gsc/EPG3V1/9e/80/a9/9e80a97027904ac79fd785b21d66f6aa/images/home/u8.png?token=94313d147956a87548398383c7f4d96a50c9c608edb1233f8b088763fd4449dd",
+                    "alt": "Working with public"
+                  }) }}
+                  <h3 class="nhsuk-heading-m">
+                    <a href="#">Making the case for evidence-based patient information</a>
+                  </h3>
+                  <p>How we can help patients and members of the public to access high quality, reliable health information.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="nhsuk-section">
+        <div class="nhsuk-width-container">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full nhsuk-section__content">
+              <div class="nhsuk-u-reading-width">
+                <h2>Learning</h2>
+                <p><b>[This needs to be replaced with `signage` component per wireframe, but it isn't available in nhsuk-frontend, but on live www.nhs.uk]</b></p>
+                <p>Discover resources and information designed to support you on your learning journey</p>
+              </div>
+              <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-half">
+                  {{ actionLink({
+                    "text": "Learning zone",
+                    "href": "#"
+                  }) }}
+                </div>
+                <div class="nhsuk-grid-column-one-half">
+                  {{ actionLink({
+                    "text": "Talent Management Toolkit",
+                    "href": "#"
+                  }) }}
+                </div>
+              </div>
+              <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-half">
+                  {{ actionLink({
+                    "text": "Equality, Diversity and Inclusion",
+                    "href": "#"
+                  }) }}
+                </div>
+                <div class="nhsuk-grid-column-one-half">
+                  {{ actionLink({
+                    "text": "Case studies",
+                    "href": "#"
+                  }) }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+{% endblock %}

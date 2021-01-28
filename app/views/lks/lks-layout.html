@@ -1,0 +1,86 @@
+<!-- Extends the layout from /docs/views/template.html -->
+{% extends "template.html" %}
+
+<!-- Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+{% block headCSS %}
+  <link href="/css/main.css" rel="stylesheet">
+{% endblock %}
+
+{% block header %}
+  {{ header({
+      "showNav": "true",
+      "showSearch": "true",
+      "classes": "nhsuk-header--white",
+      "organisation": {
+        "name": "Health Education England",
+        "descriptor": "Library and Knowledge Services"
+      },
+      "primaryLinks": [
+        {
+          "url"  : "#",
+          "label" : "COVID-19"
+        },
+        {
+          'url' : '#',
+          'label' : 'Evidence and resources'
+        },
+        {
+          'url'  : '#',
+          'label' : 'Knowledge management'
+        },
+        {
+          'url'  : '#',
+          'label' : 'Quality and impact'
+        },
+        {
+          'url' : '#',
+          'label' : 'Learning'
+        },
+        {
+          'url' : '#',
+          'label' : 'Working with the public'
+        },
+        {
+          'url' : '#',
+          'label' : 'About'
+        }
+      ]
+    })
+  }}
+{% endblock %}
+
+{% block beforeContent %}
+  <!-- Emergency Alert -->
+  {% call emergencyAlert("Coronavirus (COVID-19)") %}
+    <p>
+      <a href="https://www.nhs.uk/conditions/coronavirus-covid-19/">Get the latest advice about coronavirus</a>
+    </p>
+  {% endcall %}
+{% endblock %}
+
+{% block footer %}
+  {{ footer({
+    "list": "nhsuk-footer__list--three-columns",
+    "links": [
+      {
+        "URL": "#",
+        "label": "Blog"
+      },
+      {
+        "URL": "#",
+        "label": "About us"
+      },
+      {
+        "URL": "#",
+        "label": "Contact us"
+      }
+    ]
+  })}}
+{% endblock %}
+
+{% block bodyEnd %}
+  {% block scripts %}
+    {% include "includes/scripts.html" %}
+    {% block pageScripts %}{% endblock %}
+  {% endblock %}
+{% endblock %}

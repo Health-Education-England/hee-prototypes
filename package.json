@@ -1,10 +1,11 @@
 {
-  "name": "nhsuk-prototype-kit",
+  "name": "hee-prototypes",
   "version": "4.1.0",
   "description": "Rapidly create HTML prototypes of NHS websites and services.",
   "main": "app.js",
   "scripts": {
     "build": "gulp build",
+    "bundle": "gulp bundle",
     "postinstall": "npm run build",
     "start": "node app.js",
     "test": "",
@@ -36,5 +37,7 @@
     "nunjucks": "^3.2.2",
     "path": "^0.12.7"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gulp-uglify": "^3.0.2"
+  }
 }

@@ -5,8 +5,14 @@ const gulp = require('gulp');
 const babel = require('gulp-babel');
 const browserSync = require('browser-sync');
 const clean = require('gulp-clean');
+const rename = require('gulp-rename');
 const sass = require('gulp-sass');
+const cleanCSS = require('gulp-clean-css');
+const uglify = require('gulp-uglify');
 const nodemon = require('gulp-nodemon');
+
+// Version from package.json
+const { version } = require('./package.json');
 
 // Local dependencies
 const config = require('./app/config');
@@ -117,5 +123,63 @@ exports.compileStyles = compileStyles;
 exports.compileScripts = compileScripts;
 exports.cleanPublic = cleanPublic;
 
-gulp.task('build', gulp.series(cleanPublic, compileStyles, compileScripts, compileAssets));
+
+// Delete all the files in /dist build directory
+function cleanDist() {
+  return gulp.src('dist', { allowEmpty: true})
+  .pipe(clean());
+}
+
+/* Copy main.css under dist/css */
+function copyMainCSS() {
+  return gulp.src('public/css/main.css')
+    .pipe(rename(`nhsuk-${version}.css`))
+    .pipe(gulp.dest('dist/css/'));
+}
+
+/* Minify main.css and add a min.css suffix */
+function minifyMainCSS() {
+  return gulp.src('public/css/main.css')
+    .pipe(cleanCSS())
+    .pipe(rename(`nhsuk-${version}.min.css`))
+    .pipe(gulp.dest('dist/css'));
+}
+
+/* Copy main.js under dist/js */
+function copyMainJS() {
+  return gulp.src('public/js/main.js')
+    .pipe(rename(`nhsuk-${version}.js`))
+    .pipe(gulp.dest('dist/js'));
+}
+
+/* Minify main.js file and add a min.js suffix */
+function minifyMainJS() {
+  return gulp.src('public/js/main.js')
+    .pipe(uglify())
+    .pipe(rename(`nhsuk-${version}.min.js`))
+    .pipe(gulp.dest('dist/js'));
+}
+
+// Compile assets
+function compileAppAssets() {
+  return gulp.src([
+    'app/assets/**/**/*.*',
+    'node_modules/nhsuk-frontend/packages/assets/**',
+    '!**/assets/**/*.njk', // Don't copy component files
+    '!**/assets/**/**/*.js', // Don't copy JS files
+    '!**/assets/**/**/*.scss', // Don't copy SCSS files
+  ])
+  .pipe(gulp.dest('dist/assets'));
+}
+
+exports.compileAppAssets = compileAppAssets;
+
+gulp.task('build', gulp.series(cleanPublic, compileStyles, minifyMainCSS, compileScripts, compileAssets));
+gulp.task('bundle', gulp.series(
+  'build',
+  cleanDist,
+  gulp.parallel(
+    gulp.series(copyMainCSS, minifyMainCSS),
+    gulp.series(copyMainJS, minifyMainJS),
+    compileAppAssets)));
 gulp.task('default', gulp.series(startNodemon, startBrowserSync, watch));
