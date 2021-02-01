@@ -51,11 +51,10 @@
 
 {% block beforeContent %}
   <!-- Emergency Alert -->
-  {% call emergencyAlert("Coronavirus (COVID-19)") %}
-    <p>
-      <a href="https://www.nhs.uk/conditions/coronavirus-covid-19/">Get the latest advice about coronavirus</a>
-    </p>
-  {% endcall %}
+  {{ emergencyAlert({
+    "heading": "Coronavirus (COVID-19)",
+    "HTML": "<p><a href=\"https://www.nhs.uk/conditions/coronavirus-covid-19/\">Get the latest advice about coronavirus</a></p>"
+  })}}
 {% endblock %}
 
 {% block footer %}

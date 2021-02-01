@@ -4,8 +4,10 @@
       <div class="nhsuk-grid-column-full">
         <div class="nhsuk-global-alert__content">
           <div class="nhsuk-global-alert__message">
-            <h2>{{ heading }}</h2>
-            {{ caller() | safe }}
+            {%- if params.heading %}
+              <h2>{{ params.heading }}</h2>
+            {% endif -%}
+            {{ params.HTML | safe }}
           </div>
         </div>
       </div>

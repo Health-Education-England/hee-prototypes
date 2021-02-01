@@ -2,13 +2,17 @@
 @import 'node_modules/nhsuk-frontend/packages/nhsuk';
 
 // Components that are not in the NHS.UK frontend library
-@import 'components/related-nav';
-
 // Emergency Alert
 @import '../components/emergency-alert/emergency-alert';
 
-// HomePage Sections related CSS
-@import 'components/homepage-sections';
+// Signage
+@import '../components/signage/signage';
+
+// Related Navigation
+@import '../components/related-nav/related-nav';
+
+// Homepage Section
+@import '../components/homepage-section/homepage-section';
 
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below...

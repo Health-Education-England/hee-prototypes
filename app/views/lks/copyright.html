@@ -39,38 +39,34 @@
         </section>
       </div>
       <div class="nhsuk-grid-column-one-third">
-        <div class="nhsuk-related-nav">
-          <h2 class="nhsuk-related-nav__heading">Quick Links</h2>
-          <nav role="navigation" class="nhsuk-related-nav__nav-section">
-            <ul class="nhsuk-related-nav__list nhsuk-related-nav__list--sub">
-              <li class="nhsuk-related-nav__item">
-                <a class="nhsuk-related-nav__link" href="#">
-                  Briefing for library staff on Library and inter-library document supply and copyright in the NHS
-                </a>
-              </li>
-              <li class="nhsuk-related-nav__item">
-                <a class="nhsuk-related-nav__link" href="#">
-                  Decision Tree
-                </a>
-              </li>
-              <li class="nhsuk-related-nav__item">
-                <a class="nhsuk-related-nav__link" href="#">
-                  NHS-HE crossover copyright queries: guidance for higher education and NHS Library staff
-                </a>
-              </li>
-              <li class="nhsuk-related-nav__item">
-                <a class="nhsuk-related-nav__link" href="#">
-                  CILIP Copyright Hub
-                </a>
-              </li>
-              <li class="nhsuk-related-nav__item">
-                <a class="nhsuk-related-nav__link" href="#">
-                  NHS Copy Aid
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        {{ relatedNav({
+            "heading": "Quick Links",
+            "subsections": [{
+              "links": [
+                {
+                  "url"  : "#",
+                  "label" : "Briefing for library staff on Library and inter-library document supply and copyright in the NHS"
+                },
+                {
+                  "url" : "#",
+                  "label" : "Decision Tree"
+                },
+                {
+                  "url" : "#",
+                  "label" : "NHS-HE crossover copyright queries: guidance for higher education and NHS Library staff"
+                },
+                {
+                  "url"  : "#",
+                  "label" : "CILIP Copyright Hub"
+                },
+                {
+                  "url"  : "#",
+                  "label" : "NHS Copy Aid"
+                }
+              ]
+            }]
+          })
+        }}
       </div>
     </div>
   </article>
