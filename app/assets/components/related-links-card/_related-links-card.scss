@@ -3,10 +3,14 @@
    ========================================================================== */
 
 .nhsuk-related-links-card__list {
-	list-style-type:none;
+  list-style-type: none;
 	padding-left: 0;
 }
 
 .nhsuk-related-links-card__link {
-   text-decoration:none;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
