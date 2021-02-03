@@ -67,6 +67,48 @@
             }]
           })
         }}
+
+        {# <div class="nhsuk-card">
+          <div class="nhsuk-card__content">
+            <h3 class="nhsuk-card__heading">Related Posts</h3>
+            <ul style="list-style-type:none; padding-left: 0">
+              <li>
+                <a class="nhsuk-card__link" href="#">Expert searching</a>
+              </li>
+              <li>
+                <a style="text-decoration:none;" href="#">Search bank</a>
+              </li>
+              <li>
+                <a style="text-decoration:none;" href="#">Costing</a>
+              </li>
+              <li>
+                <a style="text-decoration:none;" href="#">Search training</a>
+              </li>
+          </div>
+        </div> #}
+
+        {{ relatedLinksCard({
+            "heading": "Related Posts",
+            "links": [
+              {
+                "url"  : "#",
+                "label" : "Expert searching"
+              },
+              {
+                "url" : "#",
+                "label" : "Search bank"
+              },
+              {
+                "url" : "#",
+                "label" : "Costing"
+              },
+              {
+                "url"  : "#",
+                "label" : "Search training"
+              }
+            ]
+          })
+        }}
       </div>
     </div>
   </article>

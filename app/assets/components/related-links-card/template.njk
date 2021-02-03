@@ -1,0 +1,15 @@
+<div class="nhsuk-card">
+  <div class="nhsuk-card__content">
+    {%- if params.heading %}
+      <h3 class="nhsuk-card__heading">{{ params.heading }}</h3>
+    {% endif -%}
+
+    <ul class="nhsuk-related-links-card__list">
+      {%- for item in params.links %}
+        <li>
+          <a class="nhsuk-related-links-card__link" href="{{item.url}}">{{item.label}}</a>
+        </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</div>
