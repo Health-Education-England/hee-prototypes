@@ -49,6 +49,26 @@
   }}
 {% endblock %}
 
+{% block main %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/home",
+        text: "Home"
+      },
+      {
+        href: "#",
+        text: "Level two"
+      }
+    ],
+    href: "#",
+    text: "Level three"
+  }) }}
+
+  {{ super() }}
+{% endblock %}
+
+
 {% block beforeContent %}
   <!-- Emergency Alert -->
   {{ emergencyAlert({
