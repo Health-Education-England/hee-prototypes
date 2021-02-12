@@ -1,7 +1,4 @@
-<!-- Extends the layout from /docs/views/template.html -->
 {% extends "template.html" %}
-
-<!-- Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 {% block headCSS %}
   <link href="/css/main.css" rel="stylesheet">
 {% endblock %}
@@ -17,39 +14,44 @@
       },
       "primaryLinks": [
         {
-          "url"  : "#",
-          "label" : "COVID-19"
+          "url": "/landing",
+          "label": "COVID-19"
         },
         {
-          'url' : '#',
-          'label' : 'Evidence and resources'
+          "url": "/landing",
+          "label": "Evidence and resources"
         },
         {
-          'url'  : '#',
-          'label' : 'Knowledge management'
+          "url": "/landing",
+          "label": "Knowledge management"
         },
         {
-          'url'  : '#',
-          'label' : 'Quality and impact'
+          "url": "/landing",
+          "label": "Quality and impact"
         },
         {
-          'url' : '#',
-          'label' : 'Learning'
+          "url": "/landing",
+          "label": "Learning"
         },
         {
-          'url' : '#',
-          'label' : 'Working with the public'
+          "url": "/landing",
+          "label": "Working with the public"
         },
         {
-          'url' : '#',
-          'label' : 'About'
+          "url": "/about-us",
+          "label": "About"
         }
       ]
     })
   }}
 {% endblock %}
 
-{% block main %}
+{% block beforeContent %}
+  {{ emergencyAlert({
+    "heading": "Coronavirus (COVID-19)",
+    "HTML": "<p><a href=\"#\">Get the latest advice about coronavirus</a></p>"
+  })}}
+
   {{ breadcrumb({
     items: [
       {
@@ -57,24 +59,13 @@
         text: "Home"
       },
       {
-        href: "#",
+        href: "/landing",
         text: "Level two"
       }
     ],
     href: "#",
     text: "Level three"
   }) }}
-
-  {{ super() }}
-{% endblock %}
-
-
-{% block beforeContent %}
-  <!-- Emergency Alert -->
-  {{ emergencyAlert({
-    "heading": "Coronavirus (COVID-19)",
-    "HTML": "<p><a href=\"https://www.nhs.uk/conditions/coronavirus-covid-19/\">Get the latest advice about coronavirus</a></p>"
-  })}}
 {% endblock %}
 
 {% block footer %}
@@ -82,15 +73,15 @@
     "list": "nhsuk-footer__list--three-columns",
     "links": [
       {
-        "URL": "#",
+        "URL": "/blog",
         "label": "Blog"
       },
       {
-        "URL": "#",
+        "URL": "/about-us",
         "label": "About us"
       },
       {
-        "URL": "#",
+        "URL": "/contact-us",
         "label": "Contact us"
       }
     ]

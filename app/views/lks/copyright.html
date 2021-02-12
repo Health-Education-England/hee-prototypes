@@ -1,7 +1,4 @@
-<!-- Extends the layout from /docs/views/template.html -->
 {% extends "lks-layout.html" %}
-
-<!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
   Copyright - HEE
 {% endblock %}
@@ -67,25 +64,6 @@
             }]
           })
         }}
-
-        {# <div class="nhsuk-card">
-          <div class="nhsuk-card__content">
-            <h3 class="nhsuk-card__heading">Related Posts</h3>
-            <ul style="list-style-type:none; padding-left: 0">
-              <li>
-                <a class="nhsuk-card__link" href="#">Expert searching</a>
-              </li>
-              <li>
-                <a style="text-decoration:none;" href="#">Search bank</a>
-              </li>
-              <li>
-                <a style="text-decoration:none;" href="#">Costing</a>
-              </li>
-              <li>
-                <a style="text-decoration:none;" href="#">Search training</a>
-              </li>
-          </div>
-        </div> #}
 
         {{ relatedLinksCard({
             "heading": "Related Posts",
