@@ -4,8 +4,6 @@
 {% endblock %}
 
 {% block beforeContent %}
-  {{ super() }}
-
   {{ hero({
     "heading": "Welcome to the Library and Knowledge Services Professionals Hub",
     "text": "Guidance and information for library and information professionals"
@@ -13,6 +11,7 @@
 {% endblock %}
 
 {% block main %}
+ {{ super }}
   <div class="nhsuk-width-container nhsuk-width-container--full">
     <main class="nhsuk-main-wrapper nhsuk-main-wrapper--no-padding nhsuk-homepage" id="maincontent" role="main">
 
@@ -102,7 +101,7 @@
           </div>
           <div class="nhsuk-grid-column-one-half">
             {{ image({
-              "src": "",
+              "src": "https://via.placeholder.com/500x350",
               "alt": "Working with public"
             }) }}
             <h3 class="nhsuk-heading-m">
