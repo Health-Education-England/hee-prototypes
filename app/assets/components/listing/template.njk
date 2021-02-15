@@ -1,6 +1,7 @@
 {%- from 'filter/macro.njk' import filter %}
 {%- from 'pagination/macro.njk' import pagination %}
 {%- from 'summary-list/macro.njk' import summaryList %}
+{%- from 'tag/macro.njk' import tag %}
 
 <div class="nhsuk-listing">
   <div class="nhsuk-grid-row">
@@ -14,6 +15,20 @@
       <div class="nhsuk-listing__summary">
         <h2 class="nhsuk-listing__title nhsuk-heading-l">{{ list.items.length }} results</h2>
       </div>
+
+      {% if list.filter %}
+        <div class="nhsuk-listing__active-filters">
+          {% for group in list.filter.groups %}
+            {% for option in group.items %}
+              {% if option.checked %}
+                {{ tag({
+                  text: option.text
+                })}}
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+        </div>
+      {% endif %}
 
       <hr />
 
