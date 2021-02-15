@@ -23,15 +23,15 @@
 }
 
 .nhsuk-section-break--visible {
-	border-bottom: 1px solid #d8dde0;
+	border-bottom: 1px solid $color_nhsuk-grey-4;
 }
 
 .nhsuk-homepage {
-	background-color: #fff;
+	background-color: $color_nhsuk-white;
 
 	.nhsuk-section {
 		&:nth-of-type(odd) {
-			background: #f0f4f5;
+			background: $color_nhsuk-grey-5;
 		}
 	}
 
@@ -65,7 +65,7 @@
 }
 
 .nhsuk-section__description {
-	color: #4c6272;
+	color: $color_nhsuk-grey-1;
 }
 
 .nhsuk-section--with-image {
@@ -186,8 +186,8 @@
 
 @media (max-width:61.865em) {
 	.nhsuk-header__navigation.js-show {
-		border-bottom: 4px solid #f0f4f5;
-		border-top: 4px solid #f0f4f5;
+		border-bottom: 4px solid $color_nhsuk-grey-5;
+		border-top: 4px solid $color_nhsuk-grey-5;
 		.nhsuk-width-container {
 			margin: 0 16px;
 		}

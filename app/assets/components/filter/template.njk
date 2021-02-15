@@ -1,0 +1,24 @@
+{%- from 'checkboxes/macro.njk' import checkboxes %}
+
+<div class="nhsuk-filter">
+  <p class="nhsuk-filter__title nhsuk-heading-l">Filters</p>
+
+  {% if filter.groups.length > 0 %}
+    <div class="nhsuk-filter__groups">
+      {% for group in filter.groups %}
+        <div class="nhsuk-filter__group">
+          {{ checkboxes({
+            "idPrefix": "filter",
+            "name": "filter",
+            "fieldset": {
+              "legend": {
+                "text": group.title
+              }
+            },
+            "items": group.items
+          }) }}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

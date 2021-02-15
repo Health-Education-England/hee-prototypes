@@ -1,0 +1,41 @@
+{%- from 'filter/macro.njk' import filter %}
+{%- from 'pagination/macro.njk' import pagination %}
+{%- from 'summary-list/macro.njk' import summaryList %}
+
+<div class="nhsuk-listing">
+  <div class="nhsuk-grid-row">
+    {% if list.filter %}
+      <div class="nhsuk-grid-column-one-third">
+        {{ filter(list.filter) }}
+      </div>
+    {% endif %}
+
+    <div class="nhsuk-listing__list nhsuk-grid-column-two-thirds">
+      <div class="nhsuk-listing__summary">
+        <h2 class="nhsuk-listing__title nhsuk-heading-l">{{ list.items.length }} results</h2>
+      </div>
+
+      <hr />
+
+      {% for item in list.items %}
+        <div class="nhsuk-listing__item">
+          <h3><a href="#">{{ item.title }}</a></h3>
+          {{ summaryList(item.summaryList) }}
+        </div>
+      {% else %}
+        <div class="nhsuk-listing__no-items">
+          No results
+        </div>
+      {% endfor %}
+
+      {% if list.showPagination %}
+        {{ pagination({
+          "previousUrl": "#",
+          "previousPage": "Page 1 of 3",
+          "nextUrl": "#",
+          "nextPage": "Page 3 of 3"
+        }) }}
+      {% endif %}
+    </div>
+  </div>
+</div>
