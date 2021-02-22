@@ -6,4 +6,5 @@ window.require = (script, condition) => {
   }
 }
 
+require('/js/components/filter.js', '.nhsuk-filter');
 require('/js/components/listing.js', '.nhsuk-listing');

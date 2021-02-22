@@ -1,7 +1,7 @@
 class Listing {
-  constructor(list) {
-    this.list = list;
-    this.sort = this.list.querySelector('.nhsuk-listing__sort');
+  constructor(container) {
+    this.container = container;
+    this.sort = this.container.querySelector('.nhsuk-listing__sort');
 
     this.addEventListeners();
     this.toggleJavascriptElements();
@@ -9,7 +9,7 @@ class Listing {
 
   addEventListeners() {
     if (this.sort) {
-      [...this.sort.getElementsByTagName('select')].forEach(select => select.addEventListener('change', (evt) => this.updateResults(evt)));
+      [...this.sort.getElementsByTagName('select')].forEach(select => select.addEventListener('change', evt => this.updateResults(evt)));
     }
   }
 
@@ -27,6 +27,4 @@ class Listing {
   }
 }
 
-[...document.getElementsByClassName('nhsuk-listing')].forEach(listing => {
-  new Listing(listing);
-});
+[...document.getElementsByClassName('nhsuk-listing')].forEach(listing => new Listing(listing));
