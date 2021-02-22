@@ -1,5 +1,7 @@
+{%- from 'button/macro.njk' import button %}
 {%- from 'filter/macro.njk' import filter %}
 {%- from 'pagination/macro.njk' import pagination %}
+{%- from 'select/macro.njk' import select %}
 {%- from 'summary-list/macro.njk' import summaryList %}
 {%- from 'tag/macro.njk' import tag %}
 
@@ -12,8 +14,37 @@
     {% endif %}
 
     <div class="nhsuk-listing__list nhsuk-grid-column-two-thirds">
-      <div class="nhsuk-listing__summary">
-        <h2 class="nhsuk-listing__title nhsuk-heading-l">{{ list.items.length }} results</h2>
+      <div class="nhsuk-listing__summary o-flex@tablet">
+        <h2 class="nhsuk-listing__title nhsuk-heading-l o-flex__grow">
+          {{ list.items.length }} results
+        </h2>
+
+        <form method="get" class="nhsuk-listing__sort o-flex o-flex--align-center">
+          <div class="o-flex__grow">
+            {{ select({
+              "id": "sort",
+              "name": "sort",
+              "label": {
+                "text": "Sort by"
+              },
+              "items": [
+                {
+                  "value": "newest",
+                  "text": "Newest"
+                },
+                {
+                  "value": "relevance",
+                  "text": "Relevance"
+                }
+              ]
+            }) }}
+          </div>
+
+          {{ button({
+            "text": "Update",
+            "classes": "nhsuk-listing__sort__submit"
+          }) }}
+        </form>
       </div>
 
       {% if list.filter %}
