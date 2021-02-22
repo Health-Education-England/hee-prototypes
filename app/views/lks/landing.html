@@ -5,34 +5,37 @@
 
 {% block beforeContent %}
   {{ super() }}
-
-  {{ hero({
-    "heading": "Landing page",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac nisi vehicula, laoreet nisi dictum, maximus orci."
-  }) }}
 {% endblock %}
 
 {% block content %}
-  <ul class="nhsuk-grid-row nhsuk-card-group">
-    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-      {{ card({
-        "href": "/content",
-        "clickable": "true",
-        "heading": "Content",
-        "headingLevel": "2",
-        "headingClasses": "nhsuk-heading-m",
-        "description": "Example of a 'content' page"
-      }) }}
-    </li>
-    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-      {{ card({
-        "href": "/listing",
-        "clickable": "true",
-        "heading": "Listing",
-        "headingLevel": "2",
-        "headingClasses": "nhsuk-heading-m",
-        "description": "Example 'listings' page"
-      }) }}
-    </li>
-  </ul>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <h1>Landing</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac nisi vehicula, laoreet nisi dictum, maximus orci.</p>
+  </div>
+</div>
+
+<ul class="nhsuk-grid-row nhsuk-card-group">
+  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+    {{ card({
+      "href": "/content",
+      "clickable": "true",
+      "heading": "Content",
+      "headingLevel": "2",
+      "headingClasses": "nhsuk-heading-m",
+      "description": "Example of a 'content' page"
+    }) }}
+  </li>
+  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+    {{ card({
+      "href": "/listing",
+      "clickable": "true",
+      "heading": "Listing",
+      "headingLevel": "2",
+      "headingClasses": "nhsuk-heading-m",
+      "description": "Example 'listings' page"
+    }) }}
+  </li>
+</ul>
 {% endblock %}

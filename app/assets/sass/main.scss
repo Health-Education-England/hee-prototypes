@@ -5,24 +5,18 @@
 @import 'generic/resets';
 @import 'objects/flex';
 
+///////////////////////////////////////////
+// Overrides
+///////////////////////////////////////////
+@import '../components/header/header';
+@import '../components/hero/hero';
+
+///////////////////////////////////////////
 // Components that are not in the NHS.UK frontend library
-// Emergency Alert
+///////////////////////////////////////////
 @import '../components/emergency-alert/emergency-alert';
-
-// Signage
-@import '../components/signage/signage';
-
-// Related Navigation
-@import '../components/related-nav/related-nav';
-
-// Homepage Section
-@import '../components/homepage-section/homepage-section';
-
-// Related Links Card
-@import '../components/related-links-card/related-links-card';
-
-///////////////////////////////////////////
-// Add your custom CSS/Sass styles below...
-///////////////////////////////////////////
-@import '../components/breadcrumb/breadcrumb';
 @import '../components/filter/filter';
+@import '../components/homepage-section/homepage-section';
+@import '../components/related-links-card/related-links-card';
+@import '../components/related-nav/related-nav';
+@import '../components/signage/signage';
