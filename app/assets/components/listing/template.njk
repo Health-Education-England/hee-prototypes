@@ -1,9 +1,9 @@
 {%- from 'button/macro.njk' import button %}
 {%- from 'filter/macro.njk' import filter %}
+{%- from 'filter-tag/macro.njk' import filterTag %}
 {%- from 'pagination/macro.njk' import pagination %}
 {%- from 'select/macro.njk' import select %}
 {%- from 'summary-list/macro.njk' import summaryList %}
-{%- from 'tag/macro.njk' import tag %}
 
 <div class="nhsuk-listing">
   <div class="nhsuk-grid-row">
@@ -52,8 +52,9 @@
           {% for group in list.filter.groups %}
             {% for option in group.items %}
               {% if option.checked %}
-                {{ tag({
-                  text: option.text
+                {{ filterTag({
+                  text: option.text,
+                  value: option.value
                 })}}
               {% endif %}
             {% endfor %}
