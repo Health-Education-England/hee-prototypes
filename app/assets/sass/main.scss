@@ -1,22 +1,23 @@
 // Import NHS.UK frontend library
 @import 'node_modules/nhsuk-frontend/packages/nhsuk';
 
+// ITCSS
+@import 'generic/resets';
+@import 'objects/flex';
+
+///////////////////////////////////////////
+// Overrides
+///////////////////////////////////////////
+@import '../components/header/header';
+@import '../components/hero/hero';
+
+///////////////////////////////////////////
 // Components that are not in the NHS.UK frontend library
-// Emergency Alert
+///////////////////////////////////////////
 @import '../components/emergency-alert/emergency-alert';
-
-// Signage
-@import '../components/signage/signage';
-
-// Related Navigation
-@import '../components/related-nav/related-nav';
-
-// Homepage Section
+@import '../components/filter/filter';
+@import '../components/filter-tag/filter-tag';
 @import '../components/homepage-section/homepage-section';
-
-// Related Links Card
 @import '../components/related-links-card/related-links-card';
-
-///////////////////////////////////////////
-// Add your custom CSS/Sass styles below...
-///////////////////////////////////////////
+@import '../components/related-nav/related-nav';
+@import '../components/signage/signage';

@@ -1,0 +1,19 @@
+.o-flex {
+  display: flex;
+
+  &--align-center {
+    align-items: center;
+  }
+
+  &__grow {
+    flex-grow: 1;
+  }
+
+  @each $breakpoint, $size in $mq-breakpoints {
+    @media (min-width: $size) {
+      &\@#{$breakpoint} {
+        display: flex;
+      }
+    }
+  }
+}
