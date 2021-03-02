@@ -1,0 +1,30 @@
+{%- from 'button/macro.njk' import button %}
+{%- from 'checkboxes/macro.njk' import checkboxes %}
+
+<form class="nhsuk-filter" method="get">
+  <p class="nhsuk-filter__title nhsuk-heading-l">Filters</p>
+
+  {% if filter.groups.length > 0 %}
+    <div class="nhsuk-filter__groups">
+      {% for group in filter.groups %}
+        <div class="nhsuk-filter__group">
+          {{ checkboxes({
+            "idPrefix": "filter_" + group.title,
+            "name": "filter",
+            "fieldset": {
+              "legend": {
+                "text": group.title
+              }
+            },
+            "items": group.items
+          }) }}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {{ button({
+    "text": "Update results",
+    "classes": "nhsuk-filter__submit"
+  }) }}
+</form>

@@ -1,13 +1,9 @@
-<!-- Extends the layout from /docs/views/template.html -->
 {% extends "lks-layout.html" %}
-
-<!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
   Copyright - HEE
 {% endblock %}
 
 {% block content %}
-
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
       <h1>Copyright</h1>
@@ -36,15 +32,15 @@
 
             <p>See also The British Library’s help about <a href="#">Library Privilege.</a></p>
 
-            <figure class="nhsuk-image">
-              <img class="nhsuk-image__img" src="https://assets.nhs.uk/prod/images/S_1017_allergic-conjunctivitis_M15.2e16d0ba.fill-320x213.jpg" alt="Picture of allergic conjunctivitis">
-              <figcaption class="nhsuk-image__caption">
-                Itchy, red, watering eyes
-              </figcaption>
-            </figure>
+            {{ image({
+            "src": "https://assets.nhs.uk/prod/images/S_1017_allergic-conjunctivitis_M15.2e16d0ba.fill-320x213.jpg",
+            "alt": "Picture of allergic conjunctivitis",
+            "caption": "Itchy, red, watering eyes"
+            }) }}
           </div>
         </section>
       </div>
+      
       <div class="nhsuk-grid-column-one-third">
         {{ relatedNav({
             "heading": "Quick Links",
@@ -74,25 +70,6 @@
             }]
           })
         }}
-
-        {# <div class="nhsuk-card">
-          <div class="nhsuk-card__content">
-            <h3 class="nhsuk-card__heading">Related Posts</h3>
-            <ul style="list-style-type:none; padding-left: 0">
-              <li>
-                <a class="nhsuk-card__link" href="#">Expert searching</a>
-              </li>
-              <li>
-                <a style="text-decoration:none;" href="#">Search bank</a>
-              </li>
-              <li>
-                <a style="text-decoration:none;" href="#">Costing</a>
-              </li>
-              <li>
-                <a style="text-decoration:none;" href="#">Search training</a>
-              </li>
-          </div>
-        </div> #}
 
         {{ relatedLinksCard({
             "heading": "Related Posts",

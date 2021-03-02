@@ -1,7 +1,4 @@
-<!-- Extends the layout from /docs/views/template.html -->
 {% extends "template.html" %}
-
-<!-- Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 {% block headCSS %}
   <link href="/css/main.css" rel="stylesheet">
 {% endblock %}
@@ -10,51 +7,60 @@
   {{ header({
       "showNav": "true",
       "showSearch": "true",
-      "classes": "nhsuk-header--white",
       "organisation": {
         "name": "Health Education England",
         "descriptor": "Library and Knowledge Services"
       },
       "primaryLinks": [
         {
-          "url"  : "#",
-          "label" : "COVID-19"
+          "url": "/landing",
+          "label": "COVID-19"
         },
         {
-          'url' : '#',
-          'label' : 'Evidence and resources'
+          "url": "/landing",
+          "label": "Learning and development"
         },
         {
-          'url'  : '#',
-          'label' : 'Knowledge management'
+          "url": "/landing",
+          "label": "Mobilising knowledge"
         },
         {
-          'url'  : '#',
-          'label' : 'Quality and impact'
+          "url": "/landing",
+          "label": "Patient information"
         },
         {
-          'url' : '#',
-          'label' : 'Learning'
+          "url": "/landing",
+          "label": "Resource discovery"
         },
         {
-          'url' : '#',
-          'label' : 'Working with the public'
-        },
-        {
-          'url' : '#',
-          'label' : 'About'
+          "url": "/landing",
+          "label": "About"
         }
       ]
     })
   }}
+
+  {{ emergencyAlert({
+    "heading": "Coronavirus (COVID-19)",
+    "HTML": "<p><a href=\"#\">Get the latest advice about coronavirus</a></p>"
+  })}}
 {% endblock %}
 
 {% block beforeContent %}
-  <!-- Emergency Alert -->
-  {{ emergencyAlert({
-    "heading": "Coronavirus (COVID-19)",
-    "HTML": "<p><a href=\"https://www.nhs.uk/conditions/coronavirus-covid-19/\">Get the latest advice about coronavirus</a></p>"
-  })}}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/home",
+        text: "Home"
+      },
+      {
+        href: "/landing",
+        text: "Level two"
+      }
+    ],
+    href: "#",
+    text: "Level three"
+  }) }}
 {% endblock %}
 
 {% block footer %}
@@ -62,15 +68,15 @@
     "list": "nhsuk-footer__list--three-columns",
     "links": [
       {
-        "URL": "#",
+        "URL": "/blog",
         "label": "Blog"
       },
       {
-        "URL": "#",
+        "URL": "/content",
         "label": "About us"
       },
       {
-        "URL": "#",
+        "URL": "/content",
         "label": "Contact us"
       }
     ]
