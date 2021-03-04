@@ -4,41 +4,7 @@
 {% endblock %}
 
 {% block header %}
-  {{ header({
-      "showNav": "true",
-      "showSearch": "true",
-      "organisation": {
-        "name": "Health Education England",
-        "descriptor": "Library and Knowledge Services"
-      },
-      "primaryLinks": [
-        {
-          "url": "/landing",
-          "label": "COVID-19"
-        },
-        {
-          "url": "/landing",
-          "label": "Learning and development"
-        },
-        {
-          "url": "/landing",
-          "label": "Mobilising knowledge"
-        },
-        {
-          "url": "/landing",
-          "label": "Patient information"
-        },
-        {
-          "url": "/landing",
-          "label": "Resource discovery"
-        },
-        {
-          "url": "/landing",
-          "label": "About"
-        }
-      ]
-    })
-  }}
+  {{ customHeader() }}
 
   {{ emergencyAlert({
     "heading": "Coronavirus (COVID-19)",
