@@ -1,0 +1,49 @@
+.form {
+  div.form-field {
+    width: 400px;
+    clear: left;
+    margin-bottom: 24px;
+    height: 1%;
+    font-size: 0.8em;
+  }
+
+  div.form-field-error {
+    padding-left: 14px;
+    border-left: 3px solid $color_nhsuk-red;
+  }
+
+  .field-hint {
+    clear: both;
+    display: block;
+    margin-bottom: 4px;
+    font-size: 19px;
+    line-height: 28px;
+    color: $color_nhsuk-grey-1
+  }
+
+  .field-error {
+    clear: both;
+    display: block;
+    font-size: 19px;
+    line-height: 28px;
+    margin-bottom: 8px;
+    color: $color_nhsuk-red;
+  }
+
+  label {
+    display: block;
+    font-weight: normal;
+    float: left;
+    width: 160px;
+    font-size: 19px;
+    line-height: 28px;
+    margin-bottom: 4px;
+  }
+
+  input[type="text"], select, textarea {
+    width: 350px;
+    height: 40px;
+    border: 2px solid $color_nhsuk-grey-1;
+    box-sizing: border-box;
+  }
+}

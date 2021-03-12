@@ -1,0 +1,28 @@
+{% extends "lks-layout.html" %}
+{% block pageTitle %}
+Home - HEE
+{% endblock %}
+
+{% block content %}
+
+<form class="form" method="post" name="newsletter">
+    <h2>Subscribe to our newsletter</h2>
+
+    <div id="page0">
+        <div class="form-field form-field-error">
+            <label for="fullName">Full name</label>
+            <span class="field-error" id="field-fullName">Error message goes here</span>
+            <input type="text" id="fullName" class="required" value="" size="40">
+        </div>
+        <div class="form-field">
+            <label for="email">Email address</label>
+            <span class="field-hint">Your business email address</span>
+            <input type="text" id="email" class="required" value="" size="40">
+        </div>
+    </div>
+
+    <button class="nhsuk-button" type="submit" name="submit">
+        Continue
+    </button>
+</form>
+{% endblock %}
