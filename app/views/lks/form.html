@@ -8,29 +8,32 @@ Home - HEE
 <form class="form" method="post" name="newsletter">
     <h2>Subscribe to our newsletter</h2>
 
-    <div id="page0">
-        <div class="nhsuk-form-group nhsuk-form-group--error">
-            <label class="nhsuk-label" for="fullName">
-                Full name
-            </label>
-            <span class="nhsuk-error-message" id="dob-day-error-error">
-            Error message goes here
-        </span>
-            <input class="nhsuk-input nhsuk-input--error" id="fullName" name="fullName" type="text">
-        </div>
-        <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="email">
-                Email address
-            </label>
-            <div class="nhsuk-hint">
-                Your business email address
-            </div>
-            <input class="nhsuk-input" id="email" name="email" type="text">
-        </div>
-    </div>
+    {{ input({
+        "label": {
+        "text": "Full name"
+        },
+        "id": "fullName",
+        "name": "fullName",
+        "autocomplete": "name",
+        "errorMessage": {
+        "text": "Error message goes here"
+        }
+    }) }}
 
-    <button class="nhsuk-button" type="submit" name="submit">
-        Continue
-    </button>
+    {{ input({
+        "label": {
+        "text": "Email address"
+        },
+        "hint": {
+        "text": "Your business email address"
+        },
+        "id": "email",
+        "name": "email",
+        "autocomplete": "email"
+    }) }}
+
+    {{ button({
+        "text": "Continue"
+    }) }}
 </form>
 {% endblock %}
