@@ -9,15 +9,23 @@ Home - HEE
     <h2>Subscribe to our newsletter</h2>
 
     <div id="page0">
-        <div class="form-field form-field-error">
-            <label for="fullName">Full name</label>
-            <span class="field-error" id="field-fullName">Error message goes here</span>
-            <input type="text" id="fullName" class="required" value="" size="40">
+        <div class="nhsuk-form-group nhsuk-form-group--error">
+            <label class="nhsuk-label" for="fullName">
+                Full name
+            </label>
+            <span class="nhsuk-error-message" id="dob-day-error-error">
+            Error message goes here
+        </span>
+            <input class="nhsuk-input nhsuk-input--error" id="fullName" name="fullName" type="text">
         </div>
-        <div class="form-field">
-            <label for="email">Email address</label>
-            <span class="field-hint">Your business email address</span>
-            <input type="text" id="email" class="required" value="" size="40">
+        <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="email">
+                Email address
+            </label>
+            <div class="nhsuk-hint">
+                Your business email address
+            </div>
+            <input class="nhsuk-input" id="email" name="email" type="text">
         </div>
     </div>
 
