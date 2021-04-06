@@ -8,6 +8,7 @@ Custom component to display a list of results, containing filters (if provided),
 
 {{ listing({
   showPagination: true,
+  pageType: "bulletin",
   items: [
     {
       title: "Item one",
@@ -82,6 +83,7 @@ The filter macro takes the following arguments:
 
 | Name                       | Type     | Required  | Description  |
 | ---------------------------|----------|-----------|--------------|
-| **filter**                  | array    | No        | An array of filter types; see filter component for more information
+| **filter**                 | array    | No        | An array of filter types; see filter component for more information
 | **items**                  | array    | Yes       | An array of results; see summaryList for more information |
 | **showPagination**         | boolean  | No        | Display pagination for this example? |
+| **pageType**               | string   | No        | The list item display will be varied based on the page type. It can be "search", "bulletin" |

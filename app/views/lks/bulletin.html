@@ -1,19 +1,20 @@
 {% extends "lks-layout.html" %}
 
 {% block pageTitle %}
-  Listing - HEE
+  Bulletin - HEE
 {% endblock %}
 
 {% block content %}
   <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
-      <h1>Listing</h1>
-      
+    <div class="nhsuk-grid-column-full">
+      <h2>Bulletins</h2>
+      <p class="nhsuk-lede-text">Find current awareness from our libraries and trusts across the NHS.</p>
     </div>
   </div>
   
   {{ listing({
     showPagination: true,
+    pageType: "bulletin",
     items: [
       {
         title: "Item one",
