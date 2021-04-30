@@ -5,11 +5,13 @@
 
 {% block header %}
   {{ customHeader() }}
-
+ {{cookiebanner()}}
   {{ emergencyAlert({
     "heading": "Coronavirus (COVID-19)",
     "HTML": "<p><a href=\"#\">Get the latest advice about coronavirus</a></p>"
   })}}
+
+ 
 {% endblock %}
 
 {% block beforeContent %}
