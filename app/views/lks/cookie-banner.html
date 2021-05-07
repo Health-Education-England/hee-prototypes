@@ -1,11 +1,12 @@
-{% extends 'layout.html' %}
+{% extends 'lks-layout.html' %}
 
 {% block pageTitle %}
 Cookie Banner - HEE
 {% endblock %}
 
-{% block content %}
-
+{% block beforeContent %}
 {{ cookiebanner() }}
+{% endblock %}
+{% block content %}
 
 {% endblock %}
