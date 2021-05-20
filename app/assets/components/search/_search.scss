@@ -6,7 +6,7 @@
   width: 100%;
 }
 
-.nhsuk-search__input {
+.nhsuk-search__input--search-results {
   -ms-flex-positive: 2;
   -webkit-appearance: listbox;
   background-color: $color_nhsuk-white !important;
@@ -66,7 +66,7 @@
   }
 }
 
-.nhsuk-search__submit {
+.nhsuk-search__submit--search-results {
   color: $color_nhsuk-white;
   background-color: $color_nhsuk-green;
   border: 0;
@@ -96,7 +96,7 @@
   }
 }
 
-.nhsuk-icon__search {
+.nhsuk-icon__search--search-results {
   fill: $color_nhsuk-white;
   height: 38px;
   width: 38px;
