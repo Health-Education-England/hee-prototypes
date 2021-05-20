@@ -115,8 +115,8 @@ $contact-border-hover-color: $color_nhsuk-grey-3;
   + h2,
   + .nhsuk-heading-l,
   + h3,
-  + .nhsuk-heading-m, {
-    padding-top: 0; /* [4] */
+  + .nhsuk-heading-m {
+    padding-top: 0;
   }
 }
 
@@ -142,8 +142,7 @@ $contact-border-hover-color: $color_nhsuk-grey-3;
   }
 }
 
-/* contact feature
-  ========================================================================== */
+/* ======contact feature ====== */
 
 .nhsuk-contact--feature {
   @include nhsuk-responsive-margin(7, 'top');
