@@ -64,23 +64,23 @@
     {%- endif %}
 
     {%- if params.name and params.title and params.displayName === true %}
-      <h2 class="nhsuk-contact__name" >
+      <h2 class="nhsuk-contact__name" aria-label="Name" >
         {{ params.title | safe }} {{ params.name | safe }}
       </h2>
     {%- elif params.name and params.displayName === true %}
-      <h2 class="nhsuk-contact__name" >
+      <h2 class="nhsuk-contact__name" aria-label="Name" >
         {{ params.name | safe }}
       </h2>
     {%- endif %}
 
     {%- if department %}
-      <h{{ departmentHeadingLevel }}>
+      <h{{ departmentHeadingLevel }} aria-label="Department" >
         {{ params.departmentName | safe }}
       </h{{ departmentHeadingLevel }}>
     {%- endif %}
 
     {%- if jobTitle %}
-      <p>{{ params.jobTitle | safe }}</p>
+      <p aria-label="Job Title" >{{ params.jobTitle | safe }}</p>
     {%- endif %}
 
     {%- if phoneNumber or email or address or details %}
@@ -88,23 +88,23 @@
 
       <div class="nhsuk-contact__secondary-info" >
         {%- if phoneNumber %}
-          <p>
+          <p aria-label="Telephone" >
             <a href="tel:{{ params.phoneNumber | safe }}" title="Opens call" >{{ params.phoneNumber | safe }}</a>
           </p>
         {%- endif %}
 
         {%- if email %}
-          <p>
+          <p aria-label="Email" >
             <a href="mailto:{{ params.email | safe }}" title="Opens email" >{{ params.email | safe }}</a>
           </p>
         {%- endif %}
 
         {%- if address %}
-          <p>{{ params.address | safe }}</p>
+          <p aria-label="Address" >{{ params.address | safe }}</p>
         {%- endif %}
 
         {%- if details %}
-          <p class="nhsuk-u-secondary-text-color">{{ params.details | safe }}</p>
+          <p class="nhsuk-u-secondary-text-color" aria-label="Details" >{{ params.details | safe }}</p>
         {%- endif %}
     </div>
     {%- endif %}
