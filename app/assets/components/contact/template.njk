@@ -1,0 +1,112 @@
+{% set headingLevel = params.headingLevel if params.headingLevel else 2 %}
+
+{% set card = true if params.classes === "nhsuk-contact__card" else false %}
+
+{% set departmentHeadingLevel = 3 if params.type === "department" else 4 %}
+
+{%- set department %}
+  {% if params.departmentName and params.displayDepartmentName %}
+    true
+  {% endif %}
+{%- endset -%}
+
+{%- set jobTitle %}
+  {% if params.jobTitle and params.displayjobTitle %}
+    true
+  {% endif %}
+{%- endset -%}
+
+{%- set phoneNumber %}
+  {% if params.phoneNumber and params.displayPhoneNumber %}
+    true
+  {% endif %}
+{%- endset -%}
+
+{%- set email %}
+  {% if params.email and params.displayEmail %}
+    true
+  {% endif %}
+{%- endset -%}
+
+{%- set address %}
+{% if params.address and params.displayAddress %}
+  true
+{% endif %}
+{%- endset -%}
+
+{%- set details %}
+  {% if params.details and params.displayDetails %}
+    true
+  {% endif %}
+{%- endset -%}
+
+
+<div
+  class="nhsuk-contact {%- if params.classes %} {{ params.classes }}{% endif %}"
+  {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}
+>
+  <div class="nhsuk-contact__content{% if params.feature %} nhsuk-contact__content--feature{% endif %}">
+
+    {%- if params.heading %}
+      <h{{ headingLevel }}>
+        {{ params.heading | safe }}
+      </h{{ headingLevel }}>
+    {%- elif card %}
+      <h{{ headingLevel }}>
+        Contact
+      </h{{ headingLevel }}>
+    {%- endif %}
+
+    {%- if params.imgURL and not card %}
+      <div class="nhsuk-contact__img-container" >
+        <img class="nhsuk-contact__img" src="{{ params.imgURL }}" alt="{{ params.imgALT }}">
+      </div>
+    {%- endif %}
+
+    {%- if params.name and params.title and params.displayName === true %}
+      <h2 class="nhsuk-contact__name" >
+        {{ params.title | safe }} {{ params.name | safe }}
+      </h2>
+    {%- elif params.name and params.displayName === true %}
+      <h2 class="nhsuk-contact__name" >
+        {{ params.name | safe }}
+      </h2>
+    {%- endif %}
+
+    {%- if department %}
+      <h{{ departmentHeadingLevel }}>
+        {{ params.departmentName | safe }}
+      </h{{ departmentHeadingLevel }}>
+    {%- endif %}
+
+    {%- if jobTitle %}
+      <p>{{ params.jobTitle | safe }}</p>
+    {%- endif %}
+
+    {%- if phoneNumber or email or address or details %}
+      <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+
+      <div class="nhsuk-contact__secondary-info" >
+        {%- if phoneNumber %}
+          <p>
+            <a href="tel:{{ params.phoneNumber | safe }}" title="Opens call" >{{ params.phoneNumber | safe }}</a>
+          </p>
+        {%- endif %}
+
+        {%- if email %}
+          <p>
+            <a href="mailto:{{ params.email | safe }}" title="Opens email" >{{ params.email | safe }}</a>
+          </p>
+        {%- endif %}
+
+        {%- if address %}
+          <p>{{ params.address | safe }}</p>
+        {%- endif %}
+
+        {%- if details %}
+          <p class="nhsuk-u-secondary-text-color">{{ params.details | safe }}</p>
+        {%- endif %}
+    </div>
+    {%- endif %}
+  </div>
+</div>

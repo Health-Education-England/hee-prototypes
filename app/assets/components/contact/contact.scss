@@ -1,0 +1,173 @@
+/* ==========================================================================
+   COMPONENTS / #contact
+   ========================================================================== */
+
+/**
+ * 1. Is needed for the :active top positioning.
+ * 2. Border is used to create a divider between the white content
+ *    box and an image.
+ * 3. Creates the 'pressed down' effect when clicked.
+ * 4. Removes padding-top from headings directly after the contact group.
+ * 5. Includes the border width to achieve the correct left alignment.
+ * 6. Stops the heading from spanning the full width of the contact.
+ * 7. Removes padding top for the feature heading positioning.
+ */
+
+$contact-border-width: 1px;
+$contact-border-bottom-width: nhsuk-spacing(1);
+$contact-border-color: $color_nhsuk-grey-4;
+$contact-border-hover-color: $color_nhsuk-grey-3;
+
+.nhsuk-contact {
+  @include nhsuk-responsive-margin(7, 'bottom');
+
+  position: relative; /* [1] */
+  width: 100%;
+}
+
+.nhsuk-contact__card {
+  background: $color_nhsuk-white;
+  border: $contact-border-width solid $contact-border-color;
+}
+
+.nhsuk-contact__img-container {
+  @include print-hide();
+  width: 10rem;
+  height: 10rem;
+  margin-bottom: nhsuk-spacing(4);
+}
+
+.nhsuk-contact__img {
+  @include print-hide();
+  border-bottom: $contact-border-width solid $color_nhsuk-grey-5; /* [2] */
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.nhsuk-contact__heading,
+.nhsuk-contact__metadata,
+.nhsuk-contact__description {
+  margin-bottom: nhsuk-spacing(2);
+}
+
+.nhsuk-contact hr {
+  margin-top: nhsuk-spacing(4);
+  margin-bottom: nhsuk-spacing(4);
+}
+
+.nhsuk-contact a {
+  word-wrap:break-word;
+}
+
+.nhsuk-contact__secondary-info > * {
+  margin-bottom: nhsuk-spacing(2);
+}
+
+/* ====== contact card ====== */
+
+.nhsuk-contact__card .nhsuk-contact__content {
+  @include top-and-bottom();
+  @include nhsuk-responsive-padding(5);
+
+  position: relative;
+}
+
+.nhsuk-contact__card {
+  h2 {
+    @extend .nhsuk-heading-s;
+    margin-bottom: nhsuk-spacing(3);
+  }
+  .nhsuk-contact__name,
+  h3,
+  h4,
+  h5 {
+    @extend .nhsuk-heading-xs;
+    margin-bottom: 0;
+  }
+
+  .nhsuk-contact__secondary-info > * {
+    @extend .nhsuk-body-s;
+    margin-bottom: nhsuk-spacing(2);
+  }
+}
+
+/* ====== contact group ====== */
+
+/**
+* contact group allows you to have a row of contacts.
+*
+* Flexbox is used to make each contact in a row the same height.
+*/
+
+.nhsuk-contact-group {
+  @include flex();
+
+  margin-bottom: nhsuk-spacing(3);
+  padding: 0;
+
+  @include mq($until: desktop) {
+    margin-bottom: nhsuk-spacing(6);
+  }
+
+  + h2,
+  + .nhsuk-heading-l,
+  + h3,
+  + .nhsuk-heading-m, {
+    padding-top: 0; /* [4] */
+  }
+}
+
+.nhsuk-contact-group__item {
+  @include flex-item();
+
+  list-style-type: none;
+  margin-bottom: 0;
+
+  .nhsuk-contact {
+    margin-bottom: nhsuk-spacing(5);
+  }
+
+  @include mq($until: desktop) {
+
+    .nhsuk-contact {
+      margin-bottom: nhsuk-spacing(3);
+    }
+
+    &:last-child .nhsuk-contact {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* contact feature
+  ========================================================================== */
+
+.nhsuk-contact--feature {
+  @include nhsuk-responsive-margin(7, 'top');
+}
+
+.nhsuk-contact__heading--feature {
+  background: $color_nhsuk-blue;
+  color: $color_nhsuk-white;
+  display: inline-block;
+  left: - (nhsuk-spacing(4) + $contact-border-width); /* [5] */
+  margin-bottom: nhsuk-spacing(2);
+  margin-right: - nhsuk-spacing(4); /* [6] */
+  padding: nhsuk-spacing(2) nhsuk-spacing(4);
+  position: relative;
+  top: - nhsuk-spacing(2);
+
+  @include mq($from: tablet) {
+    left: - (nhsuk-spacing(5) + $contact-border-width); /* [5] */
+    margin-right: - nhsuk-spacing(5); /* [6] */
+    padding: nhsuk-spacing(2) nhsuk-spacing(5);
+    top: - nhsuk-spacing(3);
+  }
+}
+
+.nhsuk-contact__content--feature {
+  padding-top: 0 !important; // sass-lint:disable-line no-important /* [7] */
+}
