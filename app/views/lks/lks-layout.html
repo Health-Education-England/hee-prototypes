@@ -3,6 +3,10 @@
   <link href="/css/main.css" rel="stylesheet">
 {% endblock %}
 
+{% block cookies %}
+  {{ cookies() }}
+{% endblock %}
+
 {% block header %}
   {{ customHeader() }}
 
