@@ -58,6 +58,50 @@
 
         <hr class="nhsuk-section-break nhsuk-section-break--xl nhsuk-section-break--visible">
 
+        <section class="nhsuk-page-content__section-four">
+          <div class="nhsuk-page-content">
+            <h2>Contact Group, Mixed Types</h2>
+          </div>
+          <ul class="nhsuk-grid-row nhsuk-contact-group">
+            <li class="nhsuk-grid-column-one-half nhsuk-contact-group__item">
+              {{ contact({
+                "title": "Doctor",
+                "name": "Jo Blogs",
+                "displayName": true,
+                "departmentName": "HEE",
+                "displayDepartmentName": true,
+                "jobTitle": "Department Head",
+                "displayJobTitle": true,
+                "phoneNumber": "01234 567890",
+                "displayPhoneNumber": true,
+                "email": "jo.bloggs@hee.co.uk",
+                "displayEmail": true,
+                "address": "123 Fake Street, Fake Town, Fake City, UK, AB1 2CD",
+                "displayAddress": true,
+                "details": "Lorem ipsum dolor sit amet",
+                "displayDetails": true
+              }) }}
+            </li>
+            <li class="nhsuk-grid-column-one-half nhsuk-contact-group__item">
+              {{ contact({
+                "type": "department",
+                "departmentName": "HEE",
+                "displayDepartmentName": true,
+                "phoneNumber": "01234 567890",
+                "displayPhoneNumber": true,
+                "email": "jo.bloggs@hee.co.uk",
+                "displayEmail": true,
+                "address": "123 Fake Street, Fake Town, Fake City, UK, AB1 2CD",
+                "displayAddress": true,
+                "details": "Lorem ipsum dolor sit amet",
+                "displayDetails": true
+              }) }}
+            </li>
+          </ul>
+        </section>
+
+        <hr class="nhsuk-section-break nhsuk-section-break--xl nhsuk-section-break--visible">
+
         <section class="nhsuk-page-content__section-three">
           {{ contact({
             "classes": "nhsuk-contact__card",

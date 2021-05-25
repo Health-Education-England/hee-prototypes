@@ -2,7 +2,7 @@
 
 {% set card = true if params.classes === "nhsuk-contact__card" else false %}
 
-{% set departmentHeadingLevel = 3 if params.type === "department" else 4 %}
+{% set departmentHeadingLevel = 2 if params.type === "department" else 4 %}
 
 {%- set department %}
   {% if params.departmentName and params.displayDepartmentName %}
