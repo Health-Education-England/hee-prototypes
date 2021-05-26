@@ -3,11 +3,11 @@
   <link href="/css/main.css" rel="stylesheet">
 {% endblock %}
 
-{% block cookies %}
-  {{ cookies() }}
+{% block header %}
 {% endblock %}
 
-{% block header %}
+{% block bodyStart %}
+  {{ cookies() }}
   {{ customHeader() }}
 
   {{ emergencyAlert({

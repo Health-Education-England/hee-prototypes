@@ -1,14 +1,18 @@
-.nhsuk-header {
-  &__navigation-list {
-    border-top: 1px solid $color_nhsuk-white;
+.nhsuk-cookie-banner {
+  display: none;
+  padding-top:  nhsuk-spacing(4);
+
+  ul,
+  li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
-
-  &--parent {
-    color: $color_nhsuk-white;
-    text-align: right;
-
-    a {
-      color: inherit;
-    }
+  
+  .nhsuk-success-banner {
+    background-color: #007f3b;
+    color: #fff;
+    padding: 8px 0 8px 0;
+    position: relative;
   }
 }
