@@ -25,7 +25,7 @@ function heeHide(item){
     heeShow('.nhsuk-cookie-banner')
 		document.querySelector('#nhsuk-cookie-banner__link_accept_analytics').onclick = function(e) {
 			e.preventDefault();
-      hide('.nhsuk-cookie-banner')
+      heeHide('.nhsuk-cookie-banner')
 			localStorage.setItem('analyticsCookie', true);
 		};
 		document.querySelector('#nhsuk-cookie-banner__link_decline_analytics').onclick = function(e) {
