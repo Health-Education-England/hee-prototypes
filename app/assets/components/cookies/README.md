@@ -1,4 +1,4 @@
-### Emergency alert with heading and content
+### Analytics cookie consent
 
 # Simply include for cookie conesent. There are no njk variables.
 
