@@ -1,10 +1,12 @@
-{% set headingLevel = params.headingLevel if params.headingLevel else 2 %}
-
 {% set card = true if params.classes === "nhsuk-contact__card" else false %}
 
-{% set departmentHeadingLevel = 2 if params.type === "department" else 4 %}
+{% set headingLevel = 4 if card else 3 %}
 
-{%- set department %}
+{% set departmentHeadingLevel  = 5 if card else 4 %}
+
+{% set departmentType = true if params.type === "department" else false %}
+
+{%- set departmentShow %}
   {% if params.departmentName and params.displayDepartmentName %}
     true
   {% endif %}
@@ -32,52 +34,51 @@
 {% if params.address and params.displayAddress %}
   true
 {% endif %}
-{%- endset -%}
+{% endset %}
 
-{%- set details %}
+{% set details %}
   {% if params.details and params.displayDetails %}
     true
   {% endif %}
-{%- endset -%}
+{% endset %}
 
 
-<div
-  class="nhsuk-contact {%- if params.classes %} {{ params.classes }}{% endif %}"
-  {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}
->
+<div class="nhsuk-contact {%- if params.classes %} {{ params.classes }}{% endif %}">
   <div class="nhsuk-contact__content{% if params.feature %} nhsuk-contact__content--feature{% endif %}">
 
-    {%- if params.heading %}
-      <h{{ headingLevel }}>
-        {{ params.heading | safe }}
-      </h{{ headingLevel }}>
-    {%- elif card %}
-      <h{{ headingLevel }}>
-        Contact
-      </h{{ headingLevel }}>
-    {%- endif %}
+    {% if params.heading %}
+      {% if card %}
+        <h3>{{ params.heading | safe }}</h3>
+      {% else %}
+        <h2>{{ params.heading | safe }}</h2>
+      {% endif %}
+    {% endif %}
 
-    {%- if params.imgURL and not card %}
+    {% if params.imgURL and not card %}
       <div class="nhsuk-contact__img-container" >
         <img class="nhsuk-contact__img" src="{{ params.imgURL }}" alt="{{ params.imgALT }}">
       </div>
-    {%- endif %}
+    {% endif %}
 
     {%- if params.name and params.title and params.displayName === true %}
-      <h2 class="nhsuk-contact__name" aria-label="Name" >
+      <h{{ headingLevel }} class="nhsuk-contact__name" aria-label="Name" >
         {{ params.title | safe }} {{ params.name | safe }}
-      </h2>
-    {%- elif params.name and params.displayName === true %}
-      <h2 class="nhsuk-contact__name" aria-label="Name" >
+      </h{{ headingLevel }}>
+    {% elif params.name and params.displayName === true %}
+      <h{{ headingLevel }} class="nhsuk-contact__name" aria-label="Name" >
         {{ params.name | safe }}
-      </h2>
-    {%- endif %}
+      </h{{ headingLevel }}>
+    {% endif %}
 
-    {%- if department %}
+    {% if departmentShow and departmentType%}
+      <h{{ headingLevel }} aria-label="Department" >
+        {{ params.departmentName | safe }}
+      </h{{ headingLevel }}>
+    {% elif departmentShow %}
       <h{{ departmentHeadingLevel }} aria-label="Department" >
         {{ params.departmentName | safe }}
       </h{{ departmentHeadingLevel }}>
-    {%- endif %}
+    {% endif %}
 
     {%- if jobTitle %}
       <p aria-label="Job Title" >{{ params.jobTitle | safe }}</p>
