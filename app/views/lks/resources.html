@@ -1,0 +1,92 @@
+{% extends "lks-layout.html" %}
+
+{% block pageTitle %}
+  Resources
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>How to use Resources</h1>
+
+      <p class="nhsuk-lede-text">
+        Please ensure you read the following NHS guidance pages:
+      </p>
+
+      <p class="nhsuk-lede-text">
+        {{ resources({
+          "title": "NHS Service Manual Links Article",
+          "text": "NHS guidance on links",
+          "url": "https://service-manual.nhs.uk/content/links"
+        }) }}
+      </p>
+
+      <p class="nhsuk-lede-text">
+        {{ resources({
+          "title": "NHS Service Manual External Documents Article",
+          "text": "NHS guidance on external documents",
+          "url": "https://service-manual.nhs.uk/content/pdfs-and-other-non-html-documents"
+        }) }}
+      </p>
+      
+      <h2>Examples</h2>
+
+      <p>
+        {{ resources({
+          "description": "A verbose description of what the link is for",
+          "title": "Resources link title",
+          "text": "Resources link text",
+          "url": "/"
+        }) }}
+      </p>
+
+      <p>
+        {{ resources({
+          "description": "A link to a pdf document with type tag and size indication",
+          "docType": "pdf",
+          "tagColor": "pdf",
+          "docSize": "83kB",
+          "title": "PDF link title",
+          "text": "PDF file link",
+          "url": "/",
+          "newTab": true
+        }) }}
+      </p>
+
+      <div class="nhsuk-card">
+        <div class="nhsuk-card__content">
+            <h3 class="nhsuk-card__heading">
+              A card with links
+            </h3>
+            <p>
+              {{ resources({
+                "type": "card",
+                "description": "A link to an Excel document with type tag and size indication",
+                "docType": "xls",
+                "tagColor": "xls",
+                "docSize": "83kB",
+                "title": "Excel link title",
+                "text": "Excel file link",
+                "url": "/"
+              }) }}
+            <p>
+            </p>
+              {{ resources({
+                "type": "card",
+                "docType": "txt",
+                "tagColor": "txt",
+                "docSize": "1kB",
+                "title": "Text link title",
+                "text": "Text file link",
+                "url": "/"
+              }) }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+{% endblock %}

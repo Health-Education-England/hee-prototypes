@@ -1,0 +1,77 @@
+{# <div>
+  <p>Hello World</p>
+  <ul>
+    <li>
+      {{ params.type }}
+    </li>
+    <li>
+      {{ params.title }}
+    </li>
+    <li>
+      {{ params.text | safe }}
+    </li>
+    <li>
+      {{ params.url | safe }}
+    </li>
+    <li>
+      {{ params.newTab }}
+    </li>
+  </ul>
+</div> #}
+
+{% set tagColor = params.tagColor %}
+
+{% set card = true if params.card === "card" %}
+
+{%- if params.description %}
+  <p 
+    {%- if card -%}
+      class="nhsuk-card__description"
+    {%- endif -%}
+  >
+    {{ params.description }}
+  </p>
+{%- endif %}
+
+<a  class="nhsuk-resources__link"
+  href="{{ params.url }}"
+  title="{{ params.title }}"
+  {%- if params.newTab === true %}
+    target="_blank"
+  {%- endif %}
+>
+  {%- if params.text %}
+    {{ params.text | safe }}
+  {%- endif -%}
+  {%- if params.docType -%}
+    <span
+      class="nhsuk-resources__tag"
+      style="background-color: 
+        {%- switch tagColor %}
+          {% case "pdf" %}
+            #F40F02
+          {% case "doc" %}
+            #2b579a
+          {% case "docx" %}
+            #2b579a
+          {% case "xls" %}
+            #1D6F42
+          {% case "xlsx" %}
+            #1D6F42
+          {% case "csv" %}
+            #1D6F42
+          {% case "txt" %}
+            #768692
+          {% default %}
+            none
+        {%- endswitch  -%}
+      "
+    >
+      {{ params.docType | safe }}
+    </span>
+  {%- endif -%}
+
+  {%- if params.docSize -%}
+    <span class="nhsuk-resources__docSize" >{{ params.docSize | safe }}<span>
+  {%- endif -%}
+</a>
