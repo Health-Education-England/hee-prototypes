@@ -36,9 +36,10 @@
       <p>
         {{ resources({
           "description": "A verbose description of what the link is for",
-          "title": "Resources link title",
-          "text": "Resources link text",
-          "url": "/"
+          "title": "Resources link title (opens in new tab)",
+          "text": "Resources link text (opens in new tab)",
+          "url": "/",
+          "newTab": true
         }) }}
       </p>
 
@@ -48,10 +49,9 @@
           "docType": "pdf",
           "tagColor": "pdf",
           "docSize": "83kB",
-          "title": "PDF link title",
-          "text": "PDF file link",
-          "url": "/",
-          "newTab": true
+          "title": "PDF link title  (opens document)",
+          "text": "PDF file link  (opens document)",
+          "url": "/"
         }) }}
       </p>
 
@@ -67,8 +67,8 @@
                 "docType": "xls",
                 "tagColor": "xls",
                 "docSize": "83kB",
-                "title": "Excel link title",
-                "text": "Excel file link",
+                "title": "Excel link title (opens document)",
+                "text": "Excel file link  (opens document)",
                 "url": "/"
               }) }}
             <p>
@@ -78,8 +78,8 @@
                 "docType": "txt",
                 "tagColor": "txt",
                 "docSize": "1kB",
-                "title": "Text link title",
-                "text": "Text file link",
+                "title": "Text link title  (opens document)",
+                "text": "Text file link  (opens document)",
                 "url": "/"
               }) }}
             </p>
