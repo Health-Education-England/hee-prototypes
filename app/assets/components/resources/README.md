@@ -1,13 +1,19 @@
 # Card
 
-To set the color of the document tag, you can use a preset or use a color hash
-
-Supported doctype tags:
+To set the color of the document tag, you can use one of the following presets:
 
 pdf - #F40F02
 doc, docx - #2b579a
 xls, xlsx,csv - #1D6F42
 txt - #768692
+odt, ott, fodt: #456697
+ods, ots, fods: #8abf1c
+odf, fodf: #106f5a
+odp, otp, fodp: #f1662d
+oth: #737373
+odg, fodg, otg: #e4a204
+odb, fodb: #a5265b
+odm, fodm: #344c84
 
 
 Available fields:
