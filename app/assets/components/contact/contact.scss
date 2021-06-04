@@ -1,18 +1,3 @@
-/* ==========================================================================
-   COMPONENTS / #contact
-   ========================================================================== */
-
-/**
- * 1. Is needed for the :active top positioning.
- * 2. Border is used to create a divider between the white content
- *    box and an image.
- * 3. Creates the 'pressed down' effect when clicked.
- * 4. Removes padding-top from headings directly after the contact group.
- * 5. Includes the border width to achieve the correct left alignment.
- * 6. Stops the heading from spanning the full width of the contact.
- * 7. Removes padding top for the feature heading positioning.
- */
-
 $contact-border-width: 1px;
 $contact-border-bottom-width: nhsuk-spacing(1);
 $contact-border-color: $color_nhsuk-grey-4;
@@ -25,9 +10,8 @@ $contact-border-hover-color: $color_nhsuk-grey-3;
   width: 100%;
 }
 
-.nhsuk-contact__card {
-  background: $color_nhsuk-white;
-  border: $contact-border-width solid $contact-border-color;
+h4 {
+  font-size: 1.1875rem;
 }
 
 .nhsuk-contact__img-container {
@@ -76,10 +60,19 @@ $contact-border-hover-color: $color_nhsuk-grey-3;
 }
 
 .nhsuk-contact__card {
+  background: $color_nhsuk-white;
+  border: $contact-border-width solid $contact-border-color;
+
   h2 {
     @extend .nhsuk-heading-s;
     margin-bottom: nhsuk-spacing(3);
   }
+
+  h5 {
+    font-size: 1.1875rem;
+    font-weight: normal;
+  }
+
   .nhsuk-contact__name,
   h3,
   h4,
