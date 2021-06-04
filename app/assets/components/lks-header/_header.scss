@@ -42,7 +42,7 @@
  * 20. Add nhsuk-spacing(9) to align right and left main nav with header
  */
 
-@import 'autocomplete';
+@import 'autocomplete'; 
 
 .nhsuk-header {
   @include clearfix();
@@ -538,6 +538,17 @@
   border-top: 1px solid $color_nhsuk-grey-5;
   margin-bottom: 0;
   position: relative;
+}
+
+.nhsuk-header__navigation-item-with-child {
+  border-top: 1px solid $color_nhsuk-grey-5;
+  margin-bottom: 0;
+  position: relative;
+  background: #f0f;
+}
+
+.nhsuk-header__sub-navigation-item {
+  display: none;
 }
 
 .nhsuk-header__navigation-link {
