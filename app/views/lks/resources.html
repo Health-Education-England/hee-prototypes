@@ -57,10 +57,11 @@
 
       <div class="nhsuk-card">
         <div class="nhsuk-card__content">
-            <h3 class="nhsuk-card__heading">
-              A card with links
-            </h3>
-            <p>
+          <h3 class="nhsuk-card__heading">
+            A card with links
+          </h3>
+          <ul class="nhsuk-resources__list">
+            <li>
               {{ resources({
                 "type": "card",
                 "description": "A link to an Excel document with type tag and size indication",
@@ -71,8 +72,8 @@
                 "text": "Excel file link  (opens document)",
                 "url": "/"
               }) }}
-            <p>
-            </p>
+            </li>
+            <li>
               {{ resources({
                 "type": "card",
                 "docType": "txt",
@@ -82,11 +83,50 @@
                 "text": "Text file link  (opens document)",
                 "url": "/"
               }) }}
-            </p>
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
 
     </div>
+
+    <div class="nhsuk-grid-column-one-third">
+      <h2>Side Nav Example</h2>
+      <div class="nhsuk-card">
+        <div class="nhsuk-card__content">
+          <h3 class="nhsuk-card__heading">
+            Resources
+          </h3>
+          <p class="nhsuk-card__description">
+            Lorem ipsum dolor sit amet.
+          </p>
+          <ul class="nhsuk-resources__list">
+            <li>
+              {{ resources({
+                "type": "card",
+                "docType": "xls",
+                "tagColor": "xls",
+                "docSize": "83kB",
+                "title": "Excel link title (opens document)",
+                "text": "Excel file link  (opens document)",
+                "url": "/"
+              }) }}
+            </li>
+            <li>
+              {{ resources({
+                "type": "card",
+                "docType": "txt",
+                "tagColor": "txt",
+                "docSize": "1kB",
+                "title": "Text link title  (opens document)",
+                "text": "Text file link  (opens document)",
+                "url": "/"
+              }) }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </div>
 {% endblock %}

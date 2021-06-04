@@ -1,24 +1,3 @@
-{# <div>
-  <p>Hello World</p>
-  <ul>
-    <li>
-      {{ params.type }}
-    </li>
-    <li>
-      {{ params.title }}
-    </li>
-    <li>
-      {{ params.text | safe }}
-    </li>
-    <li>
-      {{ params.url | safe }}
-    </li>
-    <li>
-      {{ params.newTab }}
-    </li>
-  </ul>
-</div> #}
-
 {% set tagColor = params.tagColor %}
 
 {% set card = true if params.card === "card" %}
