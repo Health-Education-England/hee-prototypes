@@ -1,4 +1,4 @@
-import Header from './header';
+import lksHeader from './lks-header';
 
 describe('NHS.UK header()', () => {
   describe('Does not throw an error', () => {
