@@ -148,7 +148,6 @@ function minifyMainCSS() {
 /* Copy main.js under dist/js */
 function copyMainJS() {
   return gulp.src('public/js/main.js')
-    .pipe(rename(`nhsuk-${version}.js`))
     .pipe(gulp.dest('dist/js'));
 }
 
@@ -156,6 +155,20 @@ function copyMainJS() {
 function minifyMainJS() {
   return gulp.src('public/js/main.js')
     .pipe(uglify())
+    .pipe(rename(`main.min.js`))
+    .pipe(gulp.dest('dist/js'));
+}
+
+/* Copy nhsuk.js under dist/js with version included in the filename */
+function copyNHSUKJS() {
+  return gulp.src('node_modules/nhsuk-frontend/dist/nhsuk.js')
+    .pipe(rename(`nhsuk-${version}.js`))
+    .pipe(gulp.dest('dist/js'));
+}
+
+/* Copy nhsuk.min.js under dist/js with version included in the filename */
+function copyNHSUKMinJS() {
+  return gulp.src('node_modules/nhsuk-frontend/dist/nhsuk.min.js')
     .pipe(rename(`nhsuk-${version}.min.js`))
     .pipe(gulp.dest('dist/js'));
 }
@@ -179,6 +192,7 @@ gulp.task('bundle', gulp.series(
   'build',
   cleanDist,
   gulp.parallel(
+    gulp.parallel(copyNHSUKJS, copyNHSUKMinJS),
     gulp.series(copyMainCSS, minifyMainCSS),
     gulp.series(copyMainJS, minifyMainJS),
     compileAppAssets)));
