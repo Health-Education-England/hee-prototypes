@@ -1,0 +1,113 @@
+{% set card = true if params.classes === "nhsuk-contact__card" else false %}
+
+{% set headingLevel = 4 if card else 3 %}
+
+{% set departmentHeadingLevel  = 5 if card else 4 %}
+
+{% set departmentType = true if params.type === "department" else false %}
+
+{%- set departmentShow %}
+  {% if params.departmentName and params.displayDepartmentName %}
+    true
+  {% endif %}
+{%- endset -%}
+
+{%- set jobTitle %}
+  {% if params.jobTitle and params.displayjobTitle %}
+    true
+  {% endif %}
+{%- endset -%}
+
+{%- set phoneNumber %}
+  {% if params.phoneNumber and params.displayPhoneNumber %}
+    true
+  {% endif %}
+{%- endset -%}
+
+{%- set email %}
+  {% if params.email and params.displayEmail %}
+    true
+  {% endif %}
+{%- endset -%}
+
+{%- set address %}
+{% if params.address and params.displayAddress %}
+  true
+{% endif %}
+{% endset %}
+
+{% set details %}
+  {% if params.details and params.displayDetails %}
+    true
+  {% endif %}
+{% endset %}
+
+
+<div class="nhsuk-contact {%- if params.classes %} {{ params.classes }}{% endif %}">
+  <div class="nhsuk-contact__content{% if params.feature %} nhsuk-contact__content--feature{% endif %}">
+
+    {% if params.heading %}
+      {% if card %}
+        <h3>{{ params.heading | safe }}</h3>
+      {% else %}
+        <h2>{{ params.heading | safe }}</h2>
+      {% endif %}
+    {% endif %}
+
+    {% if params.imgURL and not card %}
+      <div class="nhsuk-contact__img-container" >
+        <img class="nhsuk-contact__img" src="{{ params.imgURL }}" alt="{{ params.imgALT }}">
+      </div>
+    {% endif %}
+
+    {%- if params.name and params.title and params.displayName === true %}
+      <h{{ headingLevel }} class="nhsuk-contact__name" aria-label="Name" >
+        {{ params.title | safe }} {{ params.name | safe }}
+      </h{{ headingLevel }}>
+    {% elif params.name and params.displayName === true %}
+      <h{{ headingLevel }} class="nhsuk-contact__name" aria-label="Name" >
+        {{ params.name | safe }}
+      </h{{ headingLevel }}>
+    {% endif %}
+
+    {% if departmentShow and departmentType%}
+      <h{{ headingLevel }} aria-label="Department" >
+        {{ params.departmentName | safe }}
+      </h{{ headingLevel }}>
+    {% elif departmentShow %}
+      <h{{ departmentHeadingLevel }} aria-label="Department" >
+        {{ params.departmentName | safe }}
+      </h{{ departmentHeadingLevel }}>
+    {% endif %}
+
+    {%- if jobTitle %}
+      <p aria-label="Job Title" >{{ params.jobTitle | safe }}</p>
+    {%- endif %}
+
+    {%- if phoneNumber or email or address or details %}
+      <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+
+      <div class="nhsuk-contact__secondary-info" >
+        {%- if phoneNumber %}
+          <p aria-label="Telephone" >
+            <a href="tel:{{ params.phoneNumber | safe }}" title="Opens call" >{{ params.phoneNumber | safe }}</a>
+          </p>
+        {%- endif %}
+
+        {%- if email %}
+          <p aria-label="Email" >
+            <a href="mailto:{{ params.email | safe }}" title="Opens email" >{{ params.email | safe }}</a>
+          </p>
+        {%- endif %}
+
+        {%- if address %}
+          <p aria-label="Address" >{{ params.address | safe }}</p>
+        {%- endif %}
+
+        {%- if details %}
+          <p class="nhsuk-u-secondary-text-color" aria-label="Details" >{{ params.details | safe }}</p>
+        {%- endif %}
+    </div>
+    {%- endif %}
+  </div>
+</div>
