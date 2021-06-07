@@ -111,13 +111,13 @@
             </a>
           </li>
           {%- for item in params.primaryLinks %}
-          <li class="
-            {% if item.children %}
-              nhsuk-header__navigation-item-with-child
-            {% else %}
-              nhsuk-header__navigation-item
-            {% endif %}
-          ">
+          <li class=
+            {%- if item.children -%}
+              "nhsuk-header__navigation-item nhsuk-header__navigation-parent"
+            {%- else -%}
+              "nhsuk-header__navigation-item"
+            {%- endif -%}
+          >
             <a class="nhsuk-header__navigation-link" href="{{item.url}}">
               {{item.label}}
               <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
@@ -125,9 +125,9 @@
               </svg>
             </a>
             {% if item.children %}
-              <ul class="nhsuk-header__sub-navigation-item">
+              <ul class="nhsuk-header__sub-navigation-list">
                 {%- for sub in item.children %}
-                  <li class="nhsuk-header__navigation-item">
+                  <li class="nhsuk-header__sub-navigation-item">
                     <a class="nhsuk-header__sub-navigation-link" href="{{sub.url}}">
                       {{sub.label}}
                       <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">

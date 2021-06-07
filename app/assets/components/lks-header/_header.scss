@@ -483,7 +483,7 @@
   background-color: $color_nhsuk-white;
   clear: both;
   display: none;
-  overflow: hidden;
+  overflow: visible;
 
   &.js-show {
     display: block;
@@ -535,21 +535,86 @@
 }
 
 .nhsuk-header__navigation-item {
-  border-top: 1px solid $color_nhsuk-grey-5;
-  margin-bottom: 0;
   position: relative;
+  display: flex;
+  padding: 0 nhsuk-spacing(3);
+  margin-bottom: 0;
+  align-items: center;
+  border-top: 1px solid $color_nhsuk-grey-5;
+
+  .nhsuk-header__sub-navigation-list {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    min-width: 16rem;
+    margin: 0;
+    padding: nhsuk-spacing(3);
+    text-align: left;
+    list-style: none;
+    white-space: nowrap; 
+    border: 1px solid $color_nhsuk-grey-4;
+    border-bottom-width: nhsuk-spacing(1);
+    background: $color_nhsuk-white;
+    z-index: 1;
+}
+  
+  &:hover,
+  &:focus {
+      .nhsuk-header__sub-navigation-list {
+      display: block;
+    }
+  }
 }
 
-.nhsuk-header__navigation-item-with-child {
-  border-top: 1px solid $color_nhsuk-grey-5;
-  margin-bottom: 0;
-  position: relative;
-  background: #f0f;
+.nhsuk-header__navigation-parent {
+  .nhsuk-header__navigation-link {
+    .nhsuk-icon__chevron-right {
+      display: block;
+      right: 0;
+      top: 0;
+      fill: $color_nhsuk-white;
+      transform: translateY(50%); 
+    } 
+  }
+
+  &:hover,
+  &:focus {
+    .nhsuk-header__navigation-link {
+      .nhsuk-icon__chevron-right {
+        transform: translateY(50%) rotate(90deg); 
+        fill: $color_nhsuk-white;
+      }
+    }
+  }
+}
+
+.nhsuk-header__navigation-item:nth-last-child(2),
+.nhsuk-header__navigation-item:last-child {
+  .nhsuk-header__sub-navigation-list {
+    left: auto; 
+    right: 0;
+  }
 }
 
 .nhsuk-header__sub-navigation-item {
-  display: none;
+  margin-bottom: 1rem;
 }
+
+.nhsuk-header__sub-navigation-link {
+  width: 100%;
+  text-decoration: underline;
+  
+  &:visited {
+    color: $color_nhsuk-blue;
+  }
+  &:hover {
+    color: $color_nhsuk-purple;
+    text-decoration: none;
+  }
+}
+
 
 .nhsuk-header__navigation-link {
   @include nhsuk-font(16);
