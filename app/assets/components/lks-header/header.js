@@ -1,9 +1,11 @@
-import AutoComplete from './headerAutoComplete';
-import MenuToggle from './menuToggle';
-import SearchToggle from './searchToggle';
+import LksAutoComplete from './headerAutoComplete';
+import LksMenuToggle from './menuToggle';
+import LksSearchToggle from './searchToggle';
+import LksSubMenuToggle from './subMenuToggle';
 
 export default () => {
-  AutoComplete();
-  MenuToggle();
-  SearchToggle();
+  LksAutoComplete();
+  LksMenuToggle();
+  LksSearchToggle();
+  LksSubMenuToggle();
 };

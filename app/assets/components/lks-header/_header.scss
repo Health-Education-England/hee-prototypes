@@ -568,14 +568,15 @@
   }
 }
 
-.nhsuk-header__navigation-parent {
+.nhsuk-header__has-submenu {
   .nhsuk-header__navigation-link {
     .nhsuk-icon__chevron-right {
       display: block;
       right: 0;
       top: 0;
       fill: $color_nhsuk-white;
-      transform: translateY(50%); 
+      transform: translateY(50%);
+      pointer-events: none;
     } 
   }
 

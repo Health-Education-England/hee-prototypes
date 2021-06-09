@@ -111,11 +111,11 @@
             </a>
           </li>
           {%- for item in params.primaryLinks %}
-          <li class=
-            {%- if item.children -%}
-              "nhsuk-header__navigation-item nhsuk-header__navigation-parent"
-            {%- else -%}
-              "nhsuk-header__navigation-item"
+          <li 
+            {% if item.children %}
+              class="nhsuk-header__navigation-item nhsuk-header__has-submenu" aria-haspopup="true" aria-expanded="false"
+            {% else %}
+              class="nhsuk-header__navigation-item"
             {%- endif -%}
           >
             <a class="nhsuk-header__navigation-link" href="{{item.url}}">

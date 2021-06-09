@@ -8,7 +8,7 @@ export default () => {
   const toggleMenu = (event) => {
     event.preventDefault();
     toggleAttribute(toggleButton, 'aria-expanded');
-    toggleClass(toggleButton, 'is-active');
+    // toggleClass(toggleButton, 'is-active');
     toggleClass(nav, 'js-show');
   };
 
