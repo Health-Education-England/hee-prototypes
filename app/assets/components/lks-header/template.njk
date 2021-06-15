@@ -111,34 +111,44 @@
             </a>
           </li>
           {%- for item in params.primaryLinks %}
-          <li 
+          
             {% if item.children %}
-              class="nhsuk-header__navigation-item nhsuk-header__has-submenu" aria-haspopup="true" aria-expanded="false"
-            {% else %}
-              class="nhsuk-header__navigation-item"
-            {%- endif -%}
-          >
-            <a class="nhsuk-header__navigation-link" href="{{item.url}}">
-              {{item.label}}
-              <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-              </svg>
-            </a>
-            {% if item.children %}
-              <ul class="nhsuk-header__sub-navigation-list">
-                {%- for sub in item.children %}
-                  <li class="nhsuk-header__sub-navigation-item">
-                    <a class="nhsuk-header__sub-navigation-link" href="{{sub.url}}">
-                      {{sub.label}}
-                      <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                      </svg>
+              <li class="nhsuk-header__navigation-item nhsuk-subheader" aria-haspopup="true" aria-expanded="false">
+                <a class="nhsuk-header__navigation-link" href="#">
+                  {{item.label}}
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+                  </svg>
+                </a>
+                <ul class="nhsuk-subheader__list">
+                  <li class="nhsuk-subheader-item">
+                    <a class="nhsuk-subheader-link" href="{{item.url}}">
+                      {{item.label}}
                     </a>
                   </li>
-                {%- endfor %}
-              </ul>
-            {% endif %}
-          </li>
+                  {%- for sub in item.children %}
+                    <li class="nhsuk-subheader-item">
+                      <a class="nhsuk-subheader-link" href="{{sub.url}}">
+                        {{sub.label}}
+                        <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+                        </svg>
+                      </a>
+                    </li>
+                  {%- endfor %}
+                </ul>
+              </li>
+            {% else %}
+              <li class="nhsuk-header__navigation-item">
+                <a class="nhsuk-header__navigation-link" href="{{item.url}}">
+                  {{item.label}}
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+                  </svg>
+                </a>
+              </li>
+            {%- endif -%}
+            
           {%- endfor %}
         </ul>
       </div>
