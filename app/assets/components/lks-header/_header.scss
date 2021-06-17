@@ -235,6 +235,11 @@
         fill: $color_nhsuk-white;
       }
 
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+
       &:focus {
         .nhsuk-icon {
           fill: $nhsuk-focus-text-color;
