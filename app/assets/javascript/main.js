@@ -138,9 +138,6 @@ class Submenu {
   constructor(container) {
     this.container = container
     this.toggleLink = this.container.querySelector('a')
-    // console.log(this.container)
-    // console.log(this.toggleLink)
-
     this.addEventListeners();
   }
 
@@ -151,18 +148,14 @@ class Submenu {
   }
 
   toggleMenu(event) {
-    console.log(event)
-    console.log("toggleMenu")
     event.preventDefault()
     const thisElem = event.target
     const thisParent = thisElem.parentNode
+    const thisList = thisParent.parentNode
     const thissubMenu = thisParent.querySelector(".nhsuk-subheader__list")
-    console.log(thisElem)
-    console.log(thisParent)
-    console.log(thissubMenu)
     this.toggleClass(thisParent, 'is-active')
+    this.toggleClass(thisList, 'submenu-open')
     this.toggleAttribute(thisParent, 'aria-expanded')
-    // toggleClass(nav, 'js-show')
   };
 
   getClasses(element) {
