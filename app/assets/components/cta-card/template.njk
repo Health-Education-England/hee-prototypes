@@ -1,0 +1,28 @@
+{%- from 'button/macro.njk' import button %}
+
+{% set headingLevel = params.headingLevel if params.headingLevel else 2 %}
+<div class="nhsuk-cta-card{% if params.clickable %} nhsuk-cta-card--clickable{% endif %}{% if params.feature %} nhsuk-cta-card--feature{% endif %}{%- if params.classes %} {{ params.classes }}{% endif %}" {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+  {%- if params.imgURL %}
+  <img class="nhsuk-cta-card__img" src="{{ params.imgURL }}" alt="{{ params.imgALT }}">
+  {%- endif %}
+  <div class="nhsuk-cta-card__content{% if params.feature %} nhsuk-cta-card__content--feature{% endif %}">
+    {%- if params.headingHtml %}
+    {{ params.headingHtml | safe }}
+    {%- else %}
+    <h{{ headingLevel }} class="nhsuk-cta-card__heading{% if params.feature %} nhsuk-cta-card__heading--feature{% endif %} {%- if params.headingClasses %} {{ params.headingClasses }}{% endif %}">
+      {{ params.heading }}
+    </h{{ headingLevel }}>
+    {%- endif %}
+    {%- if params.descriptionHtml %}
+    {{ params.descriptionHtml | safe }}
+    {%- elif params.description %}
+    <p class="nhsuk-cta-card__description">{{ params.description | safe }}</p>
+    {%- else %}
+    {%- endif %}
+    {{ button({
+      "text": params.linkText,
+      "href": params.href,
+      "element": "a"
+    }) }}
+  </div>
+</div>
