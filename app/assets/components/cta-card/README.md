@@ -1,4 +1,9 @@
 # CTA Card
+Based on the NHS prototype for the Card component. 
+
+Currently in draft as requesting feedback as to whether there are better ways to extend components in nunjucks, rather than copying and tweaking (as has been done here). 
+
+Also, would be worth discussing whether for something like this we need to create a new component, or whether just tweaking the Card components HTML to include a button would be better.
 
 ## Quick start examples
 
