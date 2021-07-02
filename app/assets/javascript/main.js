@@ -1,5 +1,14 @@
-/**
- * main.js
+window.require = (script, condition) => {
+  if (!condition || document.querySelector(condition) !== null) {
+    var scriptElement = document.createElement('script');
+    scriptElement.src = script;
+    document.body.appendChild(scriptElement);
+  }
+}
+
+require('/js/makeItPink.js', 'h1');
+
+ /** main.js
  * All the custom JavaScript for the HEE NHS website are included in this file
  */
 
