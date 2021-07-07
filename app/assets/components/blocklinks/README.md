@@ -3,7 +3,7 @@
 ## Quick start examples
 
 #### HTML markup
-##### 2 Columns
+##### Two Columns
 ```html
 <div class="nhsuk-blocklinks">
   <div class="nhsuk-u-reading-width">
@@ -58,7 +58,7 @@
   </ul>
 </div>
 ```
-##### 2 Columns
+##### One Column
 ```html
 <div class="nhsuk-blocklinks">
   <div class="nhsuk-u-reading-width">
@@ -149,7 +149,7 @@
 {%- from 'blocklinks/macro.njk' import blocklinks %}
 
 {{ blocklinks({
-  "heading": "Learning 2 Columns",
+  "heading": "Learning 1 Column",
   "HTML": "<p>Discover resources and information designed to support you on your learning journey</p>",
   "columns": "1",
   "links": [
