@@ -126,4 +126,35 @@ class Listing {
   }
 }
 
+/**
+ * Tabs
+ * Elements with the selector '.nhsuk-tabs__list-item' and position are passed into this class
+ */
+ class Tabs {
+  constructor(tab,i) {
+    this.tab = tab;
+    this.pos = i;
+    this.tabs = [...document.getElementsByClassName('nhsuk-tabs__list-item')];
+    this.tabPanels = [...document.getElementsByClassName('nhsuk-tabs__panel')];
+    this.addEventListeners();
+  }
+
+  addEventListeners() {
+    this.tab.addEventListener('click', evt => this.actionTabClick(evt))
+  }
+
+  actionTabClick(evt) {
+    evt.preventDefault();
+    this.tabs.forEach(node => {
+      node.classList.remove('nhsuk-tabs__list-item--selected');
+    });
+    evt.currentTarget.classList.add('nhsuk-tabs__list-item--selected');
+    this.tabPanels.forEach(node => {
+      node.classList.add('nhsuk-tabs__panel--hidden');
+    });
+    this.tabPanels[this.pos].classList.remove('nhsuk-tabs__panel--hidden');
+  }
+}
+
 [...document.getElementsByClassName('nhsuk-listing')].forEach(listing => new Listing(listing));
+[...document.getElementsByClassName('nhsuk-tabs__list-item')].forEach((tab,i) => new Tabs(tab,i));
