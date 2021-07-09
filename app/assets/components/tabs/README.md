@@ -2,11 +2,9 @@
 
 ## Guidance
 
-Find out more about the tabs component and when to use it in the [NHS digital service manual](https://service-manual.nhs.uk/design-system/components/tabs).
+Currently work in progress. Initial port of gov.uk tabs component.
 
 ## Quick start example
-
-[Preview the table component](https://nhsuk.github.io/nhsuk-frontend/components/tables/index.html)
 
 ### HTML markup
 
