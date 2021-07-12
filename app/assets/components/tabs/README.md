@@ -1,9 +1,7 @@
 # Tabs
 
 ## Guidance
-
-Currently work in progress. Initial port of gov.uk tabs component.
-TODO: Update styles to use NHS styles. Example here: https://www.nhs.uk/live-well/healthy-weight/?tabname=you-and-your-weight
+Ported NHS styles. Example here: https://www.nhs.uk/live-well/healthy-weight/?tabname=you-and-your-weight
 
 ## Quick start example
 
