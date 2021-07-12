@@ -140,7 +140,17 @@ class Listing {
   }
 
   addEventListeners() {
-    this.tab.addEventListener('click', evt => this.actionTabClick(evt))
+    const query = window.matchMedia('(min-width:40.0625em)');
+    query.onchange = (evt) => {
+      this.tabs.forEach(node => {
+        node.classList.remove('nhsuk-tabs__list-item--selected');
+      });
+      this.tabPanels.forEach(node => {
+        node.classList.add('nhsuk-tabs__panel--hidden');
+      });
+      if( query.matches ) { this.tab.addEventListener('click', evt => this.actionTabClick(evt)); }
+    };
+    query.onchange();    
   }
 
   actionTabClick(evt) {
