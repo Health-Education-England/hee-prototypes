@@ -1,0 +1,33 @@
+{% if params.heading %}
+  <h2>{{ params.heading }}</h2>
+{% endif %}
+
+<figure class="nhsuk-map">
+  <object
+    class="nhsuk-map__image"
+    data="{{ params.src }}"
+    type="image/svg+xml"
+  >
+    <img src="{{ params.src }}"  alt="{{ params.alt }}"/>
+  </object>
+
+  {%- if params.items %}
+    <figcaption class="nhsuk-map__caption">
+      <ul id="regionList" >
+        {% for item in params.items %}
+            {% if item.url %}
+              <li>
+                <a href="{{ item.url}}" >
+                  {{ item.text}}
+                </a>
+              </li>
+            {% elseif item.text %}
+              <li>
+                {{ item.text}}
+              </li>
+            {% endif %}
+        {% endfor %}
+      </ul>
+    </figcaption>
+  {%- endif %}
+</figure>

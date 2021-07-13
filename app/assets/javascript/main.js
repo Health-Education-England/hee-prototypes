@@ -97,7 +97,7 @@ class Filter {
  * Listing
  * Elements with the selector '.nhsuk-listing' are passed into this class
  */
-class Listing {
+ class Listing {
   constructor(container) {
     this.container = container;
     this.sort = this.container.querySelector('.nhsuk-listing__sort');
@@ -127,3 +127,43 @@ class Listing {
 }
 
 [...document.getElementsByClassName('nhsuk-listing')].forEach(listing => new Listing(listing));
+
+/**
+ * Regions
+ * Elements with the selector '.nhsuk-region' are passed into this class
+ */
+ class Map {
+  constructor(map, svg) {
+    this.map = map;
+    this.regions = svg.getElementsByClassName('nhsuk-region');
+    this.list = map.querySelectorAll('#regionList li')
+  
+
+    this.decodeMap();
+    
+    this.addEventListeners();
+
+    consotlam
+    se.log(this.map)
+    consolee.log(this.regions)
+    console.log(this.list)
+  }
+
+  decodeMap(){
+    // console.log(this.regions)
+  }
+
+  addEventListeners() {
+    // console.log("event")
+  }
+
+}
+
+[...document.querySelectorAll('.nhsuk-map')].forEach(map => {
+  // need to wait for SVG to load
+  const obj = map.querySelector('object')
+  obj.addEventListener('load', function(){
+    const svg = obj.getSVGDocument().querySelector('svg');
+    new Map(map, svg);
+  });
+})
