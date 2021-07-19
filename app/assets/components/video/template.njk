@@ -1,0 +1,34 @@
+<div class="nhsuk-video">
+  <iframe
+          src="https://youtube.com/embed/{{ params.videoId }}"
+          title="{{ params.title }}"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+  ></iframe>
+  {% if params.transcript %}
+    <div class="nhsuk-transcript transcript-collapsed">
+      <div class="nhsuk-transcript-expand">
+        <h4>Show transcript</h4>
+        <svg class="nhsuk-icon nhsuk-icon__plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M12 8v8M8 12h8"></path>
+        </svg>
+      </div>
+
+      <div class="nhsuk-transcript-contract">
+        <h4>Hide transcript</h4>
+        <svg class="nhsuk-icon nhsuk-icon__minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M8 12h8"></path>
+        </svg>
+      </div>
+
+      <div class="nhsuk-transcript-text">
+        {% for line in params.transcript %}
+          <p>{{ line }}</p>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+</div>

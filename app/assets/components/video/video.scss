@@ -1,0 +1,52 @@
+.nhsuk-video {
+  min-width: 560px;
+  margin: nhsuk-spacing(6) 0;
+  padding: nhsuk-spacing(6) 0 nhsuk-spacing(4);
+  border-bottom: nhsuk-spacing(1) solid  $color_nhsuk-grey-4;
+  background: $color_nhsuk-white;
+
+  iframe {
+    min-height: 354px;
+    max-height: 100%;
+    width: 100%;
+  }
+
+  .nhsuk-transcript {
+
+    padding: nhsuk-spacing(5) nhsuk-spacing(3) 0;
+
+    h4 {
+      line-height: 34px;
+      margin: 0 0 nhsuk-spacing(3);
+      padding: 0 nhsuk-spacing(2) 0 0;
+    }
+
+    .nhsuk-transcript-contract {
+      display: flex;
+    }
+
+    .nhsuk-transcript-expand {
+      display: none;
+    }
+
+    .nhsuk-transcript-contract,
+    .nhsuk-transcript-expand {
+      cursor: pointer;
+    }
+
+    &.transcript-collapsed {
+        .nhsuk-transcript-text,
+        .nhsuk-transcript-contract {
+          display: none;
+        }
+        .nhsuk-transcript-expand {
+          display: flex;
+        }
+      }
+
+  }
+
+
+
+
+} 
