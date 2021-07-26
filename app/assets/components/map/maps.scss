@@ -20,6 +20,10 @@
 
   margin-left: 0; /* [1] */
   margin-right: 0; /* [1] */
+  padding: 40px 16px;
+  padding: nhsuk-spacing(6) nhsuk-spacing(3);
+  border-bottom: nhsuk-spacing(1) solid $color_nhsuk-grey-4;
+  background: $color_nhsuk-white;
 
   & + .nhsuk-map {
     @include nhsuk-responsive-margin(0, 'top'); /* [4] */
@@ -31,7 +35,7 @@
 .nhsuk-map__caption {
   display: block;
   width: 50%;
-}
+} 
 
 .nhsuk-map_image {
   display: block;
@@ -41,5 +45,31 @@
 .nhsuk-map__caption {
   @include nhsuk-typography-responsive(16);
 
-  padding: nhsuk-spacing(3);
+  display: flex;
+  align-items: center;
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: calc(100% - 64px);
+    margin: 0;
+
+    a {
+      display: block;
+      width: 100%;
+      padding: nhsuk-spacing(3) nhsuk-spacing(4);
+      text-decoration: none;
+
+      &.hover,
+      &:hover {
+        text-decoration: underline;
+      }
+      
+      &:visited{
+        color: $nhsuk-link-color;
+      }
+    }
+  }
 }

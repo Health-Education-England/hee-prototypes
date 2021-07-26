@@ -7,8 +7,8 @@
     class="nhsuk-map__image"
     data="{{ params.src }}"
     type="image/svg+xml"
+    tabindex = "-1"
   >
-    <img src="{{ params.src }}"  alt="{{ params.alt }}"/>
   </object>
 
   {%- if params.items %}
@@ -17,7 +17,7 @@
         {% for item in params.items %}
             {% if item.url %}
               <li>
-                <a href="{{ item.url}}" >
+                <a id="{{item.id}}" href="{{ item.url}}" >
                   {{ item.text}}
                 </a>
               </li>

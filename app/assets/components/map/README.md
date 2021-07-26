@@ -1,56 +1,105 @@
-# Images
+# Macro fields
 
-## Guidance
+**heading** string, title of the map
 
-Find out more about the images component and when to use it in the [NHS digital service manual](https://service-manual.nhs.uk/design-system/components/images).
+**src** string, URL of the SVG file
 
-## Quick start example
+**items** array, each item containing:
 
-[Preview the images component](https://nhsuk.github.io/nhsuk-frontend/components/images/index.html)
+*id*: string, must be unique. to be copied into the correct region in the SVG
+*url*: string, target URL for the region
+*text*: string, link text 
 
-### HTML markup
-
-```html
-<figure class="nhsuk-image">
-  <img class="nhsuk-image__img" src="https://assets.nhs.uk/prod/images/S_1017_allergic-conjunctivitis_M15.2e16d0ba.fill-320x213.jpg" alt="Picture of allergic conjunctivitis" sizes="(min-width: 1020px) 320px, (min-width: 768px) 50vw, 100vw" srcset="https://assets.nhs.uk/prod/images/S_1017_allergic-conjunctivitis_M15.2e16d0ba.fill-640x427.jpg 640w, https://assets.nhs.uk/prod/images/S_1017_allergic-conjunctivitis_M15.2e16d0ba.fill-767x511.jpg 767w">
-  <figcaption class="nhsuk-image__caption">
-    Itchy, red, watering eyes
-  </figcaption>
-</figure>
-<figure class="nhsuk-image">
-  <img class="nhsuk-image__img" src="https://assets.nhs.uk/prod/images/S_1017_allergic-conjunctivitis_M15.2e16d0ba.fill-320x213.jpg" alt="Picture of allergic conjunctivitis">
-</figure>
-```
-
-### Nunjucks macro
-
-```
-{% from 'components/images/macro.njk' import image %}
-
-{{ image({
-  "src": "https://assets.nhs.uk/prod/images/S_1017_allergic-conjunctivitis_M15.2e16d0ba.fill-320x213.jpg",
-  "sizes": "(min-width: 1020px) 320px, (min-width: 768px) 50vw, 100vw",
-  "srcset": "https://assets.nhs.uk/prod/images/S_1017_allergic-conjunctivitis_M15.2e16d0ba.fill-640x427.jpg 640w, https://assets.nhs.uk/prod/images/S_1017_allergic-conjunctivitis_M15.2e16d0ba.fill-767x511.jpg 767w",
-  "alt": "Picture of allergic conjunctivitis",
-  "caption": "Itchy, red, watering eyes"
+Example:
+...
+{{ map({
+  "heading": "Higher regions",
+  "src": "/images/maps/higher-regions.svg",
+  "items": [
+    {
+      "id": "east",
+      "url": "/",
+      "text": "East of England"
+    },
+    {
+      "id": "lon",
+      "url": "/",
+      "text": "London"
+    },
+    {
+      "id": "mid",
+      "url": "/",
+      "text": "Midlands"
+    },
+    {
+      "id": "ney",
+      "url": "/",
+      "text": "North East and Yorkshire"
+    },
+    {
+      "id": "nw",
+      "url": "/",
+      "text": "North West"
+    },
+    {
+      "id": "se",
+      "url": "/",
+      "text": "South East"
+    },
+    {
+      "id": "sw",
+      "url": "/",
+      "text": "South West"
+    }
+  ]
 }) }}
+...
 
-{{ image({
-  "src": "https://assets.nhs.uk/prod/images/S_1017_allergic-conjunctivitis_M15.2e16d0ba.fill-320x213.jpg",
-  "alt": "Picture of allergic conjunctivitis"
-}) }}
-```
+** Applying the region list to the map
 
-### Nunjucks arguments
+You should have a list of all regions required. As mentioned above, you will need to assign each region an ID, which you will then copy into the map. This mapping must be 1:1 for the component to work correctly.
 
-The images Nunjucks macro takes the following arguments:
 
-| Name                    | Type     | Required  | Description             |
-| ------------------------|----------|-----------|-------------------------|
-| **src**                 | string   | Yes       | The source location of the image. |
-| **alt**                 | string   | Yes       | The alt text of the image. |
-| **caption**             | string   | No        | Optional caption text for the image. |
-| **sizes**               | string   | No        | A list of screen sizes for the browser to load the correct image from the srcset images. |
-| **srcset**              | string   | No        | A list of image source URLs and their respective sizes. Separate each image with a comma. |
-| **classes**             | string   | No        | Optional additional classes to add to the image container. Separate each class with a space. |
-| **attributes**          | object   | No        | Any extra HTML attributes (for example data attributes) to add to the image container. |
+# Map Preparation
+
+Please ensure the svg file complies with the following rules, or the functionality will not work properly.
+
+'' style
+
+Make  there are only two style for blue and grey and that the colors are correct. The script will add styling for hover and focus.
+
+Ensure the correct classes are applied to the paths.
+
+...
+<style type="text/css">
+	.st0{fill:#005EB8;stroke:#FFFFFF;stroke-width:0.5;stroke-miterlimit:10;}
+	.st1{fill:#425563;}
+</style>
+...
+
+## body
+
+The body should contain only countries, eg Ireland, Scotland, Wales and England. If you are using a map containing N. Ireland you will need to break Ireland into it's two parts.
+
+These country level groups should contain only one level of groups underneath them in the form of regions. Any paths depicting areas within those regions should be moved to within the correct groups. Any further nested groups **must** be removed for the maps to function properly.
+
+For active regions, add the class *class="nhsuk-region"* and the ID correcsponding to the regions ID in the region list.
+
+If you are not using regions within a country group, you do not need to have any grouping at all.
+
+Example:
+
+<g id="ireland">*paths go here*</g>
+<g id="scotland">*paths go here*</g>
+<g id="wales">*paths go here*</g>
+<g id="england">
+	<g id="me" class="nhsuk-region">*paths go here*</g>
+	<g id="sw" class="nhsuk-region">*paths go here*</g>
+	<g id="tvw" class="nhsuk-region">*paths go here*</g>
+	<g id="nw" class="nhsuk-region">*paths go here*</g>
+	<g id="lk" class="nhsuk-region">*paths go here*</g>
+	<g id="nenc" class="nhsuk-region">*paths go here*</g>
+	<g id="yh" class="nhsuk-region">*paths go here*</g>
+</g>
+
+See the maps contained in images/maps in this repository if you require further examples, or run this project and inspect the map elements at http://localhost:3000/lks/maps
