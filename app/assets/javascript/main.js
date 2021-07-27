@@ -138,7 +138,7 @@ class Submenu {
   constructor(container) {
     this.container = container
     this.toggleLink = this.container.querySelector('a')
-    this.addEventListeners();
+    this.addEventListeners()
   }
 
   addEventListeners() {
@@ -150,64 +150,66 @@ class Submenu {
   toggleMenu(event) {
     event.preventDefault()
     const thisElem = event.target
+    console.log(thisElem)
+    thisElem.blur()
     const thisParent = thisElem.parentNode
     const thisList = thisParent.parentNode
     const thissubMenu = thisParent.querySelector(".nhsuk-subheader__list")
     this.toggleClass(thisParent, 'is-active')
     this.toggleClass(thisList, 'submenu-open')
     this.toggleAttribute(thisParent, 'aria-expanded')
-  };
+  }
 
   getClasses(element) {
     // Return without error if element or class are missing
-    if (!element) return [];
-    return element.className.split(' ').filter(Boolean);
-  };
+    if (!element) return []
+    return element.className.split(' ').filter(Boolean)
+  }
 
   hasClass(element, className) {
     // Return without error if element or class are missing
-    if (!element || !className) return false;
-    return this.getClasses(element).includes(className);
-  };
+    if (!element || !className) return false
+    return this.getClasses(element).includes(className)
+  }
 
   removeClass (element, className) {
     // Return without error if element or class are missing
-    if (!element || !className) return;
+    if (!element || !className) return
     if (this.hasClass(element, className)) {
       // Array of all existing classes
-      const existingClasses = this.getClasses(element, className);
+      const existingClasses = this.getClasses(element, className)
       // String of existing classes minus the class to remove
-      const newClasses = existingClasses.filter((existingClass) => existingClass !== className).join(' ');
+      const newClasses = existingClasses.filter((existingClass) => existingClass !== className).join(' ')
       // Set class attribute to the new classes
-      element.setAttribute('class', newClasses);
+      element.setAttribute('class', newClasses)
     }
-  };
+  }
   
   addClass(element, className) {
     // Return without error if element or class are missing
-    if (!element || !className) return;
+    if (!element || !className) return
     if (!this.hasClass(element, className)) {
       // Set class attribute to the new classes
-      element.setAttribute('class', `${element.className} ${className}`.trim());
+      element.setAttribute('class', `${element.className} ${className}`.trim())
     }
-  };
+  }
 
   toggleClass(element, className) {
-    if (!element || !className) return;
+    if (!element || !className) return
     if (this.hasClass(element, className)) {
-      this.removeClass(element, className);
+      this.removeClass(element, className)
     } else {
-      this.addClass(element, className);
+      this.addClass(element, className)
     }
-  };
+  }
 
   toggleAttribute(element, attr) {
     // Return without error if element or attr are missing
-    if (!element || !attr) return;
+    if (!element || !attr) return
     // Toggle attribute value. Treat no existing attr same as when set to false
-    const value = (element.getAttribute(attr) === 'true') ? 'false' : 'true';
-    element.setAttribute(attr, value);
-  };
+    const value = (element.getAttribute(attr) === 'true') ? 'false' : 'true'
+    element.setAttribute(attr, value)
+  }
 
 }
 
