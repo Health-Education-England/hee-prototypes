@@ -28,21 +28,18 @@
   & + .nhsuk-map {
     @include nhsuk-responsive-margin(0, 'top'); /* [4] */
   }
-
 }
 
-.nhsuk-map__image,
-.nhsuk-map__caption {
+.nhsuk-map__image {
   display: block;
   width: 50%;
 } 
 
-.nhsuk-map_image {
-  display: block;
-  width: 100%;
+.nhsuk-map__image {
+  display: none;
 }
 
-.nhsuk-map__caption {
+  .nhsuk-map__caption {
   @include nhsuk-typography-responsive(16);
 
   display: flex;
@@ -73,3 +70,13 @@
     }
   }
 }
+
+@include mq($from: tablet) {
+  .nhsuk-map__image {
+    display: block;
+  }
+  .nhsuk-map__caption {
+    width: 50%;
+  }   
+}
+
