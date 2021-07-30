@@ -138,6 +138,7 @@ class Submenu {
   constructor(container) {
     this.container = container
     this.toggleLink = this.container.querySelector('a')
+    this.parentList = this.container.parentNode
     this.addEventListeners()
   }
 
@@ -147,59 +148,35 @@ class Submenu {
     }
   }
 
+  handleState(){
+    const activeElems = document.querySelectorAll(".nhsuk-subheader.is-active")
+    activeElems.forEach(elem => {
+      if(elem != this.container){
+        elem.classList.remove("is-active")
+        elem.toggleAttribute("aria-expanded")
+      } else {
+        this.toggleClass(this.parentList, 'submenu-open')
+      }
+    })
+    if(activeElems.length === 0){
+      this.toggleClass(this.parentList, 'submenu-open')
+    }
+  }
+
   toggleMenu(event) {
     event.preventDefault()
-    const thisElem = event.target
-    console.log(thisElem)
-    thisElem.blur()
-    const thisParent = thisElem.parentNode
-    const thisList = thisParent.parentNode
-    const thissubMenu = thisParent.querySelector(".nhsuk-subheader__list")
-    this.toggleClass(thisParent, 'is-active')
-    this.toggleClass(thisList, 'submenu-open')
-    this.toggleAttribute(thisParent, 'aria-expanded')
-  }
-
-  getClasses(element) {
-    // Return without error if element or class are missing
-    if (!element) return []
-    return element.className.split(' ').filter(Boolean)
-  }
-
-  hasClass(element, className) {
-    // Return without error if element or class are missing
-    if (!element || !className) return false
-    return this.getClasses(element).includes(className)
-  }
-
-  removeClass (element, className) {
-    // Return without error if element or class are missing
-    if (!element || !className) return
-    if (this.hasClass(element, className)) {
-      // Array of all existing classes
-      const existingClasses = this.getClasses(element, className)
-      // String of existing classes minus the class to remove
-      const newClasses = existingClasses.filter((existingClass) => existingClass !== className).join(' ')
-      // Set class attribute to the new classes
-      element.setAttribute('class', newClasses)
-    }
-  }
-  
-  addClass(element, className) {
-    // Return without error if element or class are missing
-    if (!element || !className) return
-    if (!this.hasClass(element, className)) {
-      // Set class attribute to the new classes
-      element.setAttribute('class', `${element.className} ${className}`.trim())
-    }
+    this.handleState()
+    this.toggleClass(this.container, "is-active")
+    this.toggleAttribute(this.container, "aria-expanded")
   }
 
   toggleClass(element, className) {
     if (!element || !className) return
-    if (this.hasClass(element, className)) {
-      this.removeClass(element, className)
+    const hasClass = element.classList.contains(className)
+    if (hasClass) {
+      element.classList.remove(className)
     } else {
-      this.addClass(element, className)
+      element.classList.add(className)
     }
   }
 
