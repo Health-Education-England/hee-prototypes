@@ -191,3 +191,7 @@ class Submenu {
 }
 
 [...document.getElementsByClassName('nhsuk-subheader')].forEach(submenu => new Submenu(submenu))
+
+document.getElementById("close-menu").addEventListener('click', function(){
+  document.getElementById("toggle-menu").focus()
+})
