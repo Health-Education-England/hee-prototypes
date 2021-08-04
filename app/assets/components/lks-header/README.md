@@ -13,8 +13,8 @@ To add a submenu, simply add a "children" object to the normal header template, 
     },
     "primaryLinks": [
       {
-        "url": "/",
-        "label": "Item with children",
+        "url": "/landing",
+        "label": "COVID-19",
         "children": [
           {
             "url": "/",
@@ -35,9 +35,79 @@ To add a submenu, simply add a "children" object to the normal header template, 
         ]
       },
       {
-        "url": "/",
-        "label": "Single Item"
+        "url": "/landing",
+        "label": "Learning and development"
       },
+      {
+        "url": "/landing",
+        "label": "Mobilising knowledge"
+      },
+      {
+        "url": "/landing",
+        "label": "Patient information",
+         "children": [
+          {
+            "url": "/",
+            "label": "Lorem"
+          },
+          {
+            "url": "/",
+            "label": "Ipsum"
+          },
+          {
+            "url": "/",
+            "label": "Dolor Set"
+          },
+          {
+            "url": "/",
+            "label": "Amet"
+          }
+        ]
+      },
+      {
+        "url": "/landing",
+        "label": "Resource discovery",
+         "children": [
+          {
+            "url": "/",
+            "label": "Lorem"
+          },
+          {
+            "url": "/",
+            "label": "Ipsum"
+          },
+          {
+            "url": "/",
+            "label": "Dolor Set"
+          },
+          {
+            "url": "/",
+            "label": "Amet"
+          }
+        ]
+     },
+      {
+        "url": "/landing",
+        "label": "About",
+        "children": [
+          {
+            "url": "/",
+            "label": "Lorem"
+          },
+          {
+            "url": "/",
+            "label": "Ipsum"
+          },
+          {
+            "url": "/",
+            "label": "Dolor Set"
+          },
+          {
+            "url": "/",
+            "label": "Amet"
+          }
+        ]
+      }
     ]
   })
 }}
