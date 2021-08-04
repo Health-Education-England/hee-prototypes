@@ -20,7 +20,6 @@
 
   margin-left: 0; /* [1] */
   margin-right: 0; /* [1] */
-  padding: 40px 16px;
   padding: nhsuk-spacing(6) nhsuk-spacing(3);
   border-bottom: nhsuk-spacing(1) solid $color_nhsuk-grey-4;
   background: $color_nhsuk-white;
@@ -46,37 +45,50 @@
   align-items: center;
 
   ul {
-    list-style: none;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     height: calc(100% - 64px);
     margin: 0;
+    padding-left: 0;
+    list-style: none;
 
-    a {
-      display: block;
-      width: 100%;
-      padding: nhsuk-spacing(3) nhsuk-spacing(4);
-      text-decoration: none;
+    li {
+      margin-bottom: 0;
 
-      &.hover,
-      &:hover {
-        text-decoration: underline;
-      }
-      
-      &:visited{
-        color: $nhsuk-link-color;
-      }
+      a {
+        display: block;
+        width: 100%;
+        padding: nhsuk-spacing(3) 0;
+        text-decoration: none;
+  
+        &.hover,
+        &:hover {
+          text-decoration: underline;
+        }
+        
+        &:visited{
+          color: $nhsuk-link-color;
+        }
+      }  
     }
+
   }
 }
 
 @include mq($from: tablet) {
-  .nhsuk-map__image {
-    display: block;
+  .nhsuk-map {
+    .nhsuk-map__image {
+      display: block;
+    }
+    .nhsuk-map__caption {
+      width: 50%;
+      ul {
+        a {
+          padding: nhsuk-spacing(3) nhsuk-spacing(4);
+        }
+      }
+    }
   }
-  .nhsuk-map__caption {
-    width: 50%;
-  }   
 }
 
