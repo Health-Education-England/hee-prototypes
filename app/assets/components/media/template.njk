@@ -1,12 +1,32 @@
-<div class="nhsuk-video">
+<div class="nhsuk-media">
+
+  {% if params.title %}
+    <h2>{{ params.title }}</h2>
+  {% endif %}
+
+  {% if params.type === "youtube" or params.type === "vimeo" %}
   <iframe
-          src="https://youtube.com/embed/{{ params.videoId }}"
-          title="{{ params.title }}"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+    class="video"
+    {% if params.type === "youtube" %}
+      src="https://youtube.com/embed/{{ params.mediaId }}"
+    {% elif params.type === "vimeo" %}
+      src="https://player.vimeo.com/video/{{ params.mediaId }}"
+    {% endif %}
+    title="{{ params.title }}"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"
+    allowfullscreen
   ></iframe>
-  {% if params.transcript %}
+  {% elif params.type === "anchor" %}
+    <iframe
+      class="audio"
+      src="https://anchor.fm/health-education-england/embed/episodes/Robyn-Scargill---Trainee-nursing-associate-eqe7mk/a-a4l5nun"
+      frameborder="0"
+      scrolling="no"
+    ></iframe>
+  {% endif %}
+
+  {% if params.transcript|length %}
     <div class="nhsuk-transcript transcript-collapsed">
       <div class="nhsuk-transcript-expand">
         <h4>Show transcript</h4>
@@ -26,7 +46,7 @@
 
       <div class="nhsuk-transcript-text">
         {% for line in params.transcript %}
-          <p>{{ line }}</p>
+          <p>{{ line | safe }}</p>
         {% endfor %}
       </div>
     </div>

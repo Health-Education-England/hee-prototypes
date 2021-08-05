@@ -1,15 +1,21 @@
-.nhsuk-video {
+.nhsuk-media {
   min-width: 560px;
   margin: nhsuk-spacing(6) 0;
   padding: nhsuk-spacing(6) 0 nhsuk-spacing(4);
   border-bottom: nhsuk-spacing(1) solid  $color_nhsuk-grey-4;
   background: $color_nhsuk-white;
 
+  h2 {
+    margin: 0 0 nhsuk-spacing(6) nhsuk-spacing(3);
+  }
+
   iframe {
-    min-height: 354px;
+    &.video{
+      min-height: 354px;
+    }
     max-height: 100%;
     width: 100%;
-  }
+  } 
 
   .nhsuk-transcript {
 

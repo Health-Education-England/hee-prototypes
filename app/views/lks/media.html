@@ -1,12 +1,12 @@
 {% extends "lks-layout.html" %}
 {% block pageTitle %}
-  Video - HEE 
+  Media - HEE 
 {% endblock %}
 
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-      <h1>Video</h1>
+      <h1>Media</h1>
     </div>
   </div>
 
@@ -15,16 +15,39 @@
       <div class="nhsuk-grid-column-two-thirds">
 
         <section class="nhsuk-page-content__section-one">
-          {{ video({
-            "videoId": "WsUjHf8SD9o",
-            "title": "How do I find out more?"
+          {{ media({
+            "type": "youtube",
+            "mediaId": "WsUjHf8SD9o",
+            "title": "Youtube Example"
           }) }}
         </section>
 
         <section class="nhsuk-page-content__section-two">
-          {{ video({
-            "videoId": "rl9FFZZnWWo",
-            "title": "Dance Monkey",
+          {{ media({
+            "type": "vimeo",
+            "mediaId": "11386048",
+            "title": "Vimeo Example",
+            "transcript": [
+              "<a href=\"https://vimeo.com/11386048\">5.6k Saturn Cassini Photographic Animation - First 1 minute of footage from In Saturn&#039;s Rings</a> from 
+              <a href=\"https://vimeo.com/saturnscape\">Saturnscape Pictures</a> on <a href=\"https://vimeo.com\">Vimeo</a>."
+            ]
+          }) }}
+        </section>
+
+        <section class="nhsuk-page-content__section-three">
+          {{ media({
+            "type": "anchor",
+            "mediaId": "11386048",
+            "title": "Anchor.fm Example",
+            "transcript": []
+          }) }}
+        </section>
+
+        <section class="nhsuk-page-content__section-four">
+          {{ media({
+            "type": "youtube",
+            "mediaId": "rl9FFZZnWWo",
+            "title": "Transcript Example",
             "transcript": [
               "They say oh my God I see the way you shine",
               "Take your hand, my dear, and place them both in mine",
