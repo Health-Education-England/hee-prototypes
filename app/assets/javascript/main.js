@@ -195,3 +195,26 @@ class Submenu {
 document.getElementById("close-menu").addEventListener('click', function(){
   document.getElementById("toggle-menu").focus()
 })
+
+document.addEventListener('click', event => {
+  // close menu if clicking outside
+  const openMenu = document.querySelector(".nhsuk-header__navigation.js-show")
+  if(openMenu){
+    const isNotMenu = event.target !== openMenu
+    const isNotMenuButton = event.target !== document.querySelector("#toggle-menu")
+    const isMenuChild = event.target.closest(".nhsuk-header__navigation.js-show")
+    if(isNotMenu && isNotMenuButton && !isMenuChild){
+      openMenu.classList.remove("js-show")
+    }
+  }
+  // close sub nav if clicking anywhere on the document except the open or a new subnav
+  const openSub = document.querySelector(".nhsuk-subheader.is-active")
+  if(openSub){
+    const isNotSub = event.target !== openSub
+    const isSubChild = event.target.closest(".nhsuk-subheader.is-active")
+    if(isNotSub && !isSubChild){
+      openSub.classList.remove("is-active")
+      document.querySelector(".nhsuk-header__navigation-list").classList.remove("submenu-open")
+    }
+  }
+})
