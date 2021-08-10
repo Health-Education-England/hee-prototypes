@@ -1,3 +1,15 @@
+.nhsuk-header__search-wrap.js-show {
+  margin-left: -(nhsuk-spacing(5));
+  margin-right: -(nhsuk-spacing(5));
+}
+
+.nhsuk-search__close {
+  height: auto;
+  width: auto;
+  margin: 0 -6px 0 0;
+  padding: 4px 7px;
+}
+
 .nhsuk-header__search-form--search-results {
   margin-bottom: 40px;
   background-color: transparent;
