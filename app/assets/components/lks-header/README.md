@@ -114,6 +114,8 @@ To add a submenu, simply add a "children" object to the normal header template, 
 
 The macro will shuffle the URL down into the submenu automatically.
 
+NB: For hyphenated words, please use the character "&#8209;" to prevent line-breaking, for example "COVID&#8209;19"
+
 HTML example:
 
 <nav class="nhsuk-header__navigation js-show" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
