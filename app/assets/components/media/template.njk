@@ -15,12 +15,12 @@
     title="{{ params.title }}"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"
-    allowfullscreen
   ></iframe>
+
   {% elif params.type === "anchor" %}
     <iframe
       class="audio"
-      src="https://anchor.fm/health-education-england/embed/episodes/Robyn-Scargill---Trainee-nursing-associate-eqe7mk/a-a4l5nun"
+      src="{{ params.src }}"
       frameborder="0"
       scrolling="no"
     ></iframe>
