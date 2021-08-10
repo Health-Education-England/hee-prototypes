@@ -1,0 +1,94 @@
+/* ==========================================================================
+   COMPONENTS / #IMAGES
+   ========================================================================== */
+
+/**
+ * 1. Overrides default browser margin values.
+ * 2. Makes the image width two thirds of its container for desktop.
+ * 3. Avoid image printing full width of a page.
+ * 4. Removes top margin from subsequent nhsuk-image.
+ */
+
+.nhsuk-map {
+  // background-color: $color_nhsuk-white;
+  // border-bottom: 1px solid $color_nhsuk-grey-4;
+
+  display: flex;
+
+  @include nhsuk-responsive-margin(6, 'bottom');
+  @include nhsuk-responsive-margin(6, 'top');
+
+  margin-left: 0; /* [1] */
+  margin-right: 0; /* [1] */
+  padding: nhsuk-spacing(6) nhsuk-spacing(3);
+  border-bottom: nhsuk-spacing(1) solid $color_nhsuk-grey-4;
+  background: $color_nhsuk-white;
+
+  & + .nhsuk-map {
+    @include nhsuk-responsive-margin(0, 'top'); /* [4] */
+  }
+}
+
+.nhsuk-map__image {
+  display: block;
+  width: 50%;
+} 
+
+.nhsuk-map__image {
+  display: none;
+}
+
+  .nhsuk-map__caption {
+  @include nhsuk-typography-responsive(16);
+
+  display: flex;
+  align-items: center;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: calc(100% - 64px);
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      margin-bottom: 0;
+
+      a {
+        display: block;
+        width: 100%;
+        padding: nhsuk-spacing(3) 0;
+        text-decoration: none;
+  
+        &.hover,
+        &:hover {
+          text-decoration: underline;
+        }
+        
+        &:visited{
+          color: $nhsuk-link-color;
+        }
+      }  
+    }
+
+  }
+}
+
+@include mq($from: tablet) {
+  .nhsuk-map {
+    .nhsuk-map__image {
+      display: block;
+    }
+    .nhsuk-map__caption {
+      width: 50%;
+      ul {
+        a {
+          padding: nhsuk-spacing(3) nhsuk-spacing(4);
+        }
+      }
+    }
+  }
+}
+
