@@ -161,10 +161,10 @@ class Filter {
     this.regions.forEach(region => {
       const thisCounterpart = this.mapCounterpart(region.id)
       const thisHref = (thisCounterpart.href)? thisCounterpart.href : "/"
-      const thisAlt = (thisCounterpart.alt)? thisCounterpart.alt : "/"
+      const thisTitle = (thisCounterpart.innerHTML)? thisCounterpart.innerHTML : ""
       const children = region.innerHTML;
-      const wrapLink = `<a xlink:href="/" >
-        <title>${thisAlt}</title>
+      const wrapLink = `<a xlink:href="${thisHref}" >
+        <title>${thisTitle}</title>
         ${children}
       </a>`
       region.innerHTML = wrapLink
@@ -237,7 +237,9 @@ class Filter {
   // need to wait for SVG to load
   const obj = map.querySelector('object')
   obj.addEventListener('load', function(){
-    const svg = obj.getSVGDocument().querySelector('svg');
-    new Map(map, svg);
-  });
+    const svg = obj.getSVGDocument().querySelector('svg')
+    if(svg){
+      new Map(map, svg)
+    }
+  })
 })
