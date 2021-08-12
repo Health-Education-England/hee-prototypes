@@ -367,4 +367,49 @@ class Map {
       new Map(map, svg)
     }
   })
-})
+});
+
+/**
+ * AnchorLinks
+ * Elements with the selector '.nhsuk-anchor-links' are passed into this class
+ */ 
+class AnchorLinks {
+  constructor(anchorLinks) {
+    this.anchorLinks = anchorLinks;
+    this.anchorLinks.hidden = true;
+    this.foundHeadings = this.findHeadings(anchorLinks.dataset.headings);
+    if (this.foundHeadings?.length) {
+      this.addAnchorsToPage();
+    }
+  }
+
+  findHeadings(headings) {
+    let foundHeadings = []
+    document.querySelectorAll(headings).forEach((heading, i) => {
+      if (!heading.id) {
+        heading.id = heading.innerText.replace(/ .*/,'').replace(/[\n\r]/g,'').toLowerCase()+i;
+      }
+      foundHeadings.push(heading);
+    })
+    return foundHeadings;
+  }
+
+  addAnchorsToPage() {
+    let ul = document.createElement('ul');
+    this.foundHeadings.forEach(foundHeading => {
+      if (!foundHeading.dataset.anchorlinksignore)
+      {
+        let li = document.createElement('li');
+        let a = document.createElement('a');
+        a.href = '#'+foundHeading.id;
+        a.innerText = foundHeading.innerText;
+        li.appendChild(a);
+        ul.appendChild(li);
+      }
+    });
+    this.anchorLinks.appendChild(ul);
+    this.anchorLinks.hidden = false;
+    console.log(this.foundHeadings);
+  }
+}
+[...document.getElementsByClassName('nhsuk-anchor-links')].forEach(anchorLinks => new AnchorLinks(anchorLinks));
