@@ -16,13 +16,12 @@ To ignore a heading on the page for the anchor links add ```data-anchorlinksigno
 
 #### HTML markup
 ```
-<div class="nhsuk-anchor-links" data-headings="${block.headings}">
-    <h2 data-anchorlinksignore="true">${block.title}</h2>
+<div class="nhsuk-anchor-links" data-headings="h2,h3,h4,h5,h6">
+    <h2 data-anchorlinksignore="true">On this page</h2>
 </div>
 ```
 
 #### Nunjucks macro
-##### Two Columns
 ```
 {%- from 'anchorlinks/macro.njk' import anchorlinks %}
 
