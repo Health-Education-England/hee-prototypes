@@ -153,6 +153,11 @@
       &:focus {
         color: $nhsuk-focus-text-color
       }
+      &.no-link {
+        color: $nhsuk-text-color;
+        text-decoration: none;
+        cursor: default;
+      }
     }
 
   }
