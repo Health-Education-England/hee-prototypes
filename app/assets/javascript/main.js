@@ -129,14 +129,103 @@ class Filter {
 [...document.getElementsByClassName('nhsuk-listing')].forEach(listing => new Listing(listing));
 
 /**
- * Media transcript
- * Elements with the selector '.nhsuk-transcript' are passed into this class
- */
+* Submenu's
+* Elements with the selector '.nhsuk-subheader' are passed into this class
+*/
+
+class Submenu {
+  constructor(container) {
+    this.container = container
+    this.toggleLink = this.container.querySelector('a')
+    this.parentList = this.container.parentNode
+    this.addEventListeners()
+  }
+
+  addEventListeners() {
+    if (this.toggleLink) {
+      this.toggleLink.addEventListener('click', event => this.toggleMenu(event))
+    }
+  }
+
+  handleState(){
+    const activeElems = document.querySelectorAll(".nhsuk-subheader.is-active")
+    activeElems.forEach(elem => {
+      if(elem != this.container){
+        elem.classList.remove("is-active")
+        elem.toggleAttribute("aria-expanded")
+      } else {
+        this.toggleClass(this.parentList, 'submenu-open')
+      }
+    })
+    if(activeElems.length === 0){
+      this.toggleClass(this.parentList, 'submenu-open')
+    }
+  }
+
+  toggleMenu(event) {
+    event.preventDefault()
+    this.handleState()
+    this.toggleClass(this.container, "is-active")
+    this.toggleAttribute(this.container, "aria-expanded")
+  }
+
+  toggleClass(element, className) {
+    if (!element || !className) return
+    const hasClass = element.classList.contains(className)
+    if (hasClass) {
+      element.classList.remove(className)
+    } else {
+      element.classList.add(className)
+    }
+  }
+
+  toggleAttribute(element, attr) {
+    // Return without error if element or attr are missing
+    if (!element || !attr) return
+    // Toggle attribute value. Treat no existing attr same as when set to false
+    const value = (element.getAttribute(attr) === 'true') ? 'false' : 'true'
+    element.setAttribute(attr, value)
+  }
+
+}
+
+[...document.getElementsByClassName('nhsuk-subheader')].forEach(submenu => new Submenu(submenu))
+
+document.getElementById("close-menu").addEventListener('click', function(){
+  document.getElementById("toggle-menu").focus()
+})
+
+document.addEventListener('click', event => {
+  // close menu if clicking outside
+  const openMenu = document.querySelector(".nhsuk-header__navigation.js-show")
+  if(openMenu){
+    const isNotMenu = event.target !== openMenu
+    const isNotMenuButton = event.target !== document.querySelector("#toggle-menu")
+    const isMenuChild = event.target.closest(".nhsuk-header__navigation.js-show")
+    if(isNotMenu && isNotMenuButton && !isMenuChild){
+      openMenu.classList.remove("js-show")
+    }
+  }
+  // close sub nav if clicking anywhere on the document except the open or a new subnav
+  const openSub = document.querySelector(".nhsuk-subheader.is-active")
+  if(openSub){
+    const isNotSub = event.target !== openSub
+    const isSubChild = event.target.closest(".nhsuk-subheader.is-active")
+    if(isNotSub && !isSubChild){
+      openSub.classList.remove("is-active")
+      document.querySelector(".nhsuk-header__navigation-list").classList.remove("submenu-open")
+    }
+  }
+})
+
+/**
+* Media transcript
+* Elements with the selector '.nhsuk-transcript' are passed into this class
+*/
 class Transcript {
   constructor(container) {
     this.container = container
     this.toggles = container.querySelectorAll(".nhsuk-transcript-expand, .nhsuk-transcript-contract")
-
     this.addEventListeners()
   }
 
@@ -167,11 +256,9 @@ class Transcript {
 [...document.getElementsByClassName('nhsuk-transcript')].forEach(transcript => new Transcript(transcript))
 
 /**
- * Regions
- * Elements with the selector '.nhsuk-region' are passed into this class
- */
-
-// todo: hover map highlights link
+* Regions
+* Elements with the selector '.nhsuk-region' are passed into this class
+*/
 
 class Map {
   constructor(map, svg) {
@@ -199,10 +286,10 @@ class Map {
     this.regions.forEach(region => {
       const thisCounterpart = this.mapCounterpart(region.id)
       const thisHref = (thisCounterpart.href)? thisCounterpart.href : "/"
-      const thisAlt = (thisCounterpart.alt)? thisCounterpart.alt : "/"
+      const thisTitle = (thisCounterpart.innerHTML)? thisCounterpart.innerHTML : ""
       const children = region.innerHTML;
-      const wrapLink = `<a xlink:href="/" >
-        <title>${thisAlt}</title>
+      const wrapLink = `<a xlink:href="${thisHref}" >
+        <title>${thisTitle}</title>
         ${children}
       </a>`
       region.innerHTML = wrapLink
@@ -275,7 +362,9 @@ class Map {
   // need to wait for SVG to load
   const obj = map.querySelector('object')
   obj.addEventListener('load', function(){
-    const svg = obj.getSVGDocument().querySelector('svg');
-    new Map(map, svg);
-  });
+    const svg = obj.getSVGDocument().querySelector('svg')
+    if(svg){
+      new Map(map, svg)
+    }
+  })
 })
