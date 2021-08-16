@@ -394,8 +394,8 @@ class AnchorLinks {
     return foundHeadings;
   }
 
-  appearsOnRightPageColumn(heading) {
-    return [...document.querySelectorAll('.nhsuk-grid-column-one-third')].some(el =>      
+  appearsOnRightPageColumn(heading, selector) {
+    return [...document.querySelectorAll(selector)].some(el =>      
       el !== heading && el.contains(heading)
     )
   }
@@ -405,12 +405,13 @@ class AnchorLinks {
     this.foundHeadings.forEach(foundHeading => {
       if (!foundHeading.dataset.anchorlinksignore 
         && !foundHeading.classList.contains('nhsuk-u-visually-hidden')
-        && !this.appearsOnRightPageColumn(foundHeading))
+        && !foundHeading.classList.contains('nhsuk-card__heading')
+        && !this.appearsOnRightPageColumn(foundHeading, '.nhsuk-grid-column-one-third'))
       {
         let li = document.createElement('li');
         let a = document.createElement('a');
         a.href = '#'+foundHeading.id;
-        a.innerText = foundHeading.innerText;
+        a.innerHTML = foundHeading.innerHTML.replace(/<br\s*[\/]?>/gi, " ");        
         li.appendChild(a);
         ul.appendChild(li);
       }
