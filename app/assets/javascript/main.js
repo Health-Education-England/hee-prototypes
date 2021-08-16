@@ -394,10 +394,18 @@ class AnchorLinks {
     return foundHeadings;
   }
 
+  appearsOnRightPageColumn(heading) {
+    return [...document.querySelectorAll('.nhsuk-grid-column-one-third')].some(el =>      
+      el !== heading && el.contains(heading)
+    )
+  }
+
   addAnchorsToPage() {
     let ul = document.createElement('ul');
     this.foundHeadings.forEach(foundHeading => {
-      if (!foundHeading.dataset.anchorlinksignore)
+      if (!foundHeading.dataset.anchorlinksignore 
+        && !foundHeading.classList.contains('nhsuk-u-visually-hidden')
+        && !this.appearsOnRightPageColumn(foundHeading))
       {
         let li = document.createElement('li');
         let a = document.createElement('a');
