@@ -1,0 +1,40 @@
+{% set tagColor = params.tagColor %}
+
+{% set card = true if params.card === "card" %}
+
+{%- if params.description %}
+  <p 
+    {%- if card -%}
+      class="nhsuk-card__description"
+    {%- endif -%}
+  >
+    {{ params.description }}
+  </p>
+{%- endif %}
+
+<a  class="nhsuk-resources__link"
+  href="{{ params.url }}"
+  title="{{ params.title }}"
+  {%- if params.newTab === true %}
+    target="_blank"
+  {%- endif %}
+>
+  {%- if params.text %}
+    {{ params.text | safe }}
+  {%- endif -%}
+  {%- if params.docType -%}
+    <span
+      class=" nhsuk-resources__tag 
+        {% if params.tagColor -%}
+          nhsuk-resources__{{- params.tagColor -}}
+        {% endif -%}
+      "
+    >
+      {{ params.docType | safe }}
+    </span>
+  {%- endif -%}
+
+  {%- if params.docSize -%}
+    <span class="nhsuk-resources__docSize" >{{ params.docSize | safe }}<span>
+  {%- endif -%}
+</a>
