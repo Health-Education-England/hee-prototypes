@@ -387,7 +387,7 @@ class AnchorLinks {
     let foundHeadings = []
     document.querySelectorAll(headings).forEach((heading, i) => {
       if (!heading.id) {
-        heading.id = heading.innerText.replace(/ .*/,'').replace(/[\n\r]/g,'').toLowerCase()+i;
+        heading.id = heading.innerText.replace(/ .*/,'').replace(/[\n\r]/g,'').replace(/\s/g,'').toLowerCase()+i;
       }
       foundHeadings.push(heading);
     })
@@ -411,6 +411,8 @@ class AnchorLinks {
         let li = document.createElement('li');
         let a = document.createElement('a');
         a.href = '#'+foundHeading.id;
+        const hiddenElements = foundHeading.getElementsByClassName("nhsuk-u-visually-hidden");
+        while (hiddenElements.length > 0) hiddenElements[0].remove();
         a.innerText = foundHeading.innerText; // strip tags
         a.innerHTML = a.innerHTML.replace(/<br\s*[\/]?>/gi, " "); // strip <br>
         li.appendChild(a);
