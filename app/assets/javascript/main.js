@@ -410,9 +410,9 @@ class AnchorLinks {
       {
         let li = document.createElement('li');
         let a = document.createElement('a');
-        a.href = '#'+foundHeading.id;        
-        a.innerHTML = foundHeading.innerHTML.replace(/<br\s*[\/]?>/gi, " ");
-        a.innerText = a.innerText; // strip other tags        
+        a.href = '#'+foundHeading.id;
+        a.innerText = foundHeading.innerText; // strip tags
+        a.innerHTML = a.innerHTML.replace(/<br\s*[\/]?>/gi, " "); // strip <br>
         li.appendChild(a);
         ul.appendChild(li);
       }
