@@ -410,15 +410,15 @@ class AnchorLinks {
       {
         let li = document.createElement('li');
         let a = document.createElement('a');
-        a.href = '#'+foundHeading.id;
-        a.innerHTML = foundHeading.innerHTML.replace(/<br\s*[\/]?>/gi, " ");        
+        a.href = '#'+foundHeading.id;        
+        a.innerHTML = foundHeading.innerHTML.replace(/<br\s*[\/]?>/gi, " ");
+        a.innerText = a.innerText; // strip other tags        
         li.appendChild(a);
         ul.appendChild(li);
       }
     });
     this.anchorLinks.appendChild(ul);
     this.anchorLinks.hidden = false;
-    console.log(this.foundHeadings);
   }
 }
 [...document.getElementsByClassName('nhsuk-anchor-links')].forEach(anchorLinks => new AnchorLinks(anchorLinks));
