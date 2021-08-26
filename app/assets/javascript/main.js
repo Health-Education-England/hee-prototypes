@@ -143,7 +143,7 @@ class Submenu {
 
   addEventListeners() {
     if (this.toggleLink) {
-      this.toggleLink.addEventListener('click', event => this.toggleMenu(event))
+      this.toggleLink.addEventListener('mousedown', event => this.toggleMenu(event))
     }
   }
 
@@ -191,11 +191,11 @@ class Submenu {
 
 [...document.getElementsByClassName('nhsuk-subheader')].forEach(submenu => new Submenu(submenu))
 
-document.getElementById("close-menu").addEventListener('click', function(){
+document.getElementById("close-menu").addEventListener('mousedown', function(){
   document.getElementById("toggle-menu").focus()
 })
 
-document.addEventListener('click', event => {
+document.addEventListener('mousedown', event => {
   // close menu if clicking outside
   const openMenu = document.querySelector(".nhsuk-header__navigation.js-show")
   if(openMenu){
