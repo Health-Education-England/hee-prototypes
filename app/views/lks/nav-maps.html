@@ -1,6 +1,6 @@
 {% extends "lks-layout.html" %}
 {% block pageTitle %}
-  Maps - HEE    
+  Maps - HEE
 {% endblock %}
 
 {% block content %}
@@ -15,9 +15,9 @@
       <div class="nhsuk-grid-column-two-thirds">
 
         <section class="nhsuk-page-content__section-one">
-          {{ map({
+          {{ navMap({
             "heading": "Dental regions",
-            "src": "/images/maps/dental-regions.svg",
+            "src": "/images/nav-maps/dental-regions.svg",
             "items": [
               {
                 "id": "lk",
@@ -61,9 +61,9 @@
         <hr class="nhsuk-section-break nhsuk-section-break--xl nhsuk-section-break--visible">
 
         <section class="nhsuk-page-content__section-two">
-          {{ map({
+          {{ navMap({
             "heading": "Higher regions",
-            "src": "/images/maps/higher-regions.svg",
+            "src": "/images/nav-maps/higher-regions.svg",
             "items": [
               {
                 "id": "east",
@@ -104,12 +104,12 @@
           }) }}
         </section>
 
-        <hr class="nhsuk-section-break nhsuk-section-break--xl nhsuk-section-break--visible"> 
+        <hr class="nhsuk-section-break nhsuk-section-break--xl nhsuk-section-break--visible">
 
         <section class="nhsuk-page-content__section-three">
-          {{ map({
+          {{ navMap({
             "heading": "Medical regions",
-            "src": "/images/maps/medical-regions.svg",
+            "src": "/images/nav-maps/medical-regions.svg",
             "items": [
               {
                 "id": "east",

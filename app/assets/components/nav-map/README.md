@@ -8,13 +8,13 @@
 
 *id*: string, must be unique. to be copied into the correct region in the SVG
 *url*: string, target URL for the region
-*text*: string, link text 
+*text*: string, link text
 
 Example:
 ...
-{{ map({
+{{ navMap({
   "heading": "Higher regions",
-  "src": "/images/maps/higher-regions.svg",
+  "src": "/images/nav-maps/higher-regions.svg",
   "items": [
     {
       "id": "east",
@@ -102,4 +102,4 @@ Example:
 	<g id="yh" class="nhsuk-region">*paths go here*</g>
 </g>
 
-See the maps contained in images/maps in this repository if you require further examples, or run this project and inspect the map elements at http://localhost:3000/lks/maps
+See the maps contained in images/nav-maps in this repository if you require further examples, or run this project and inspect the map elements at http://localhost:3000/lks/nav-maps

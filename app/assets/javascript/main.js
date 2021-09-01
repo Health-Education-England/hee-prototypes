@@ -260,13 +260,13 @@ class Transcript {
 * Elements with the selector '.nhsuk-region' are passed into this class
 */
 
-class Map {
+class NavMap {
   constructor(map, svg) {
     this.map = map;
     this.svg = svg;
     this.regions = [...svg.getElementsByClassName('nhsuk-region')];
     this.list = [...map.querySelectorAll('#regionList li a')];
-  
+
     this.addLinksToMap();
     this.addClasses();
     this.mapEventListeners();
@@ -364,7 +364,7 @@ class Map {
   obj.addEventListener('load', function(){
     const svg = obj.getSVGDocument().querySelector('svg')
     if(svg){
-      new Map(map, svg)
+      new NavMap(map, svg)
     }
   })
 });
