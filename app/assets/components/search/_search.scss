@@ -113,3 +113,15 @@
   height: 38px;
   width: 38px;
 }
+
+@include mq($from: tablet) {
+  .autocomplete__input {
+    width: 180px;
+  }
+}
+
+@include mq($from: desktop) {
+  .autocomplete__input {
+    width: 200px;
+  }
+}
