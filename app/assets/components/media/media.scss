@@ -1,26 +1,41 @@
 .nhsuk-media {
-  min-width: 560px;
+  min-width: 288px;
   margin: nhsuk-spacing(6) 0;
-  padding: nhsuk-spacing(6) 0 nhsuk-spacing(4);
-  border-bottom: nhsuk-spacing(1) solid  $color_nhsuk-grey-4;
-  background: $color_nhsuk-white;
+  background: #f0f;
+  padding: 0; 
 
   h2 {
     margin: 0 0 nhsuk-spacing(6) nhsuk-spacing(3);
   }
 
   iframe {
-    &.video{
-      min-height: 480px;
-    }
     max-height: 100%;
     width: 100%;
+    margin-bottom: -7px;
+
+    &.youtube,
+    &.vimeo{
+      min-height: 210px;
+
+      @include mq($from: mobile){
+        min-height: calc(((100vw - 48px) / 16 * 9) + 48px);
+      }
+      @include mq($from: tablet){
+        min-height: calc(((100vw - 48px) / 16 * 9));
+      }
+    }
+
+    &.anchor{
+      height: 98px;
+    }
   } 
 
   .nhsuk-transcript {
 
-    padding: nhsuk-spacing(5) nhsuk-spacing(3) 0;
-
+    padding: nhsuk-spacing(5) nhsuk-spacing(3);
+    background: $color_nhsuk-white;
+    border-bottom: nhsuk-spacing(1) solid  $color_nhsuk-grey-4;
+  
     h4 {
       line-height: 34px;
       margin: 0 0 nhsuk-spacing(3);
@@ -51,8 +66,17 @@
       }
 
   }
+}
 
-
-
-
-} 
+.nhsuk-grid-column-two-thirds {
+  .nhsuk-media {
+    iframe {
+      @include mq($from: desktop){
+        min-height: calc(((100vw - 48px) / 16 * 9) - 74px);
+      }
+      @media (min-width: 61.875em){
+        min-height: 480px;
+      }
+    }
+  }
+}
