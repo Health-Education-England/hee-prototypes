@@ -71,12 +71,15 @@
 .nhsuk-grid-column-two-thirds {
   .nhsuk-media {
     iframe {
-      @include mq($from: desktop){
-        min-height: calc(((100vw - 48px) / 16 * 9) - 74px);
-      }
-      @media (min-width: 61.875em){
-        min-height: 480px;
+      &.youtube,
+      &.vimeo{
+        @include mq($from: desktop){
+          min-height: calc(((100vw - 48px) / 16 * 9) - 74px);
+        }
+        @media (min-width: 61.875em){
+          min-height: 480px;
+        }
       }
     }
   }
-}
+} 
