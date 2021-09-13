@@ -1,8 +1,9 @@
 .nhsuk-media {
   min-width: 288px;
-  margin: nhsuk-spacing(6) 0;
-  background: #f0f;
-  padding: 0; 
+  margin: nhsuk-spacing(6) 0 80px;
+  background: #fff;
+  padding: 0;
+  border-bottom: 4px solid #d8dde0;
 
   h2 {
     margin: 0 0 nhsuk-spacing(6) nhsuk-spacing(3);
@@ -28,43 +29,102 @@
     &.anchor{
       height: 98px;
     }
-  } 
+  }
 
-  .nhsuk-transcript {
+  .nhsuk-media__info {
+    padding: nhsuk-spacing(4);
+  }
 
-    padding: nhsuk-spacing(5) nhsuk-spacing(3);
-    background: $color_nhsuk-white;
-    border-bottom: nhsuk-spacing(1) solid  $color_nhsuk-grey-4;
-  
-    h4 {
-      line-height: 34px;
-      margin: 0 0 nhsuk-spacing(3);
-      padding: 0 nhsuk-spacing(2) 0 0;
+  .nhsuk-media__reviews {
+    p {
+      margin: 0;
+      @include nhsuk-font(16);
+      color: $nhsuk-secondary-button-color;
     }
+  }
 
-    .nhsuk-transcript-contract {
+  .nhsuk-media__transcript {
+
+    a {
+      position: relative;
       display: flex;
+      margin-bottom: nhsuk-spacing(3);
+      padding-left: nhsuk-spacing(4);
+      font-size: 1.1875rem;
+      font-weight: 600;
+      color: $nhsuk-link-color;
+      text-decoration: underline;
+      line-height: 34px;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &:focus {
+        color: $nhsuk-focus-text-color;
+        text-decoration: underline;
+        background: $nhsuk-focus-color;
+      }
+
+      span:before {
+        bottom: 0;
+        content: '';
+        left: 0;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: transparent;
+        clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+        border-width: 8px 0 8px 12px;
+        border-left-color: inherit;
+      }
+
     }
 
-    .nhsuk-transcript-expand {
+    .nhsuk-media__show-text {
+      display: block;
+    }
+
+    .nhsuk-media__hide-text {
       display: none;
     }
 
-    .nhsuk-transcript-contract,
-    .nhsuk-transcript-expand {
-      cursor: pointer;
-    }
+    .nhsuk-media__transcript-text {
+      display: none;
+      margin-bottom: nhsuk-spacing(4);
 
-    &.transcript-collapsed {
-        .nhsuk-transcript-text,
-        .nhsuk-transcript-contract {
+      p {
+        // margin-bottom: 0;
+      }
+    } 
+
+    &.nhsuk-media__transcript-expanded {
+        a {
+          span:before {
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-color: transparent;
+            clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+            border-width: 12px 8px 0 8px;
+            border-top-color: inherit;
+          }
+        }
+
+        .nhsuk-media__transcript-text,
+        .nhsuk-media__hide-text {
+          display: block;
+        }
+        .nhsuk-media__show-text {
           display: none;
         }
-        .nhsuk-transcript-expand {
-          display: flex;
-        }
       }
-
   }
 }
 

@@ -146,7 +146,10 @@ class Filter {
 class Transcript {
   constructor(container) {
     this.container = container
-    this.toggles = container.querySelectorAll(".nhsuk-transcript-expand, .nhsuk-transcript-contract")
+    this.toggles = container.querySelectorAll("a")
+
+    console.log(this.container)
+    console.log(this.toggles)
     this.addEventListeners()
   }
 
@@ -158,14 +161,14 @@ class Transcript {
 
   toggletranscript() {
     if (this.isCollapsed()) {
-      this.container.classList.remove("transcript-collapsed")
+      this.container.classList.remove("nhsuk-media__transcript-expanded")
     } else {
-      this.container.classList.add("transcript-collapsed")
+      this.container.classList.add("nhsuk-media__transcript-expanded")
     }
   }
 
   isCollapsed() {
-    if(this.container.classList.contains("transcript-collapsed")){
+    if(this.container.classList.contains("nhsuk-media__transcript-expanded")){
       return true
     } else {
       return false
@@ -174,7 +177,7 @@ class Transcript {
 
 }
 
-[...document.getElementsByClassName('nhsuk-transcript')].forEach(transcript => new Transcript(transcript))
+[...document.getElementsByClassName('nhsuk-media__transcript')].forEach(transcript => new Transcript(transcript))
 
 /**
  * AnchorLinks

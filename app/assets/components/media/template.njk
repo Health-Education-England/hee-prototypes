@@ -25,29 +25,56 @@
     ></iframe>
   {% endif %}
 
-  {% if params.transcript|length %}
-    <div class="nhsuk-transcript transcript-collapsed">
-      <div class="nhsuk-transcript-expand">
-        <h4>Show transcript</h4>
-        <svg class="nhsuk-icon nhsuk-icon__plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" aria-hidden="true">
-          <circle cx="12" cy="12" r="10"></circle>
-          <path fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M12 8v8M8 12h8"></path>
-        </svg>
-      </div>
+  <div class="nhsuk-media__info">
 
-      <div class="nhsuk-transcript-contract">
-        <h4>Hide transcript</h4>
-        <svg class="nhsuk-icon nhsuk-icon__minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" aria-hidden="true">
-          <circle cx="12" cy="12" r="10"></circle>
-          <path fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M8 12h8"></path>
-        </svg>
-      </div>
+    {% if params.transcript|length %}
+      <div class="nhsuk-media__transcript">
+        <a href="javascript:void(0);">
+          <span class="nhsuk-media__show-text">Show transcript</span>
+          <span class="nhsuk-media__hide-text">Hide transcript</span>
+        </a>
 
-      <div class="nhsuk-transcript-text">
-        {% for line in params.transcript %}
-          <p>{{ line | safe }}</p>
-        {% endfor %}
+        {# <div class="nhsuk-transcript-expand">
+          <a href="javascript:void(0);" >
+            <span>Show transcript</span>
+            <svg class="nhsuk-icon nhsuk-icon__plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M12 8v8M8 12h8"></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="nhsuk-transcript-contract">
+          <a href="javascript:void(0);" >
+            <span>Hide transcript</span>
+            <svg class="nhsuk-icon nhsuk-icon__minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M8 12h8"></path>
+            </svg>
+          </a>
+        </div> #}
+
+        <div class="nhsuk-media__transcript-text">
+          {% for line in params.transcript %}
+            <p>{{ line | safe }}</p>
+          {% endfor %}
+        </div>
       </div>
+    {% endif %}
+
+    <div class="nhsuk-media__reviews">
+      {% if params.lastReview|length %}
+        <p>
+          Page last reviewed: {{ params.lastReview }}
+        </p>
+      {% endif %}
+      {% if params.reviewDue|length %}
+        <p>
+          Next review due: {{ params.reviewDue }}
+        </p>
+      {% endif %}
     </div>
-  {% endif %}
+
+  </div>
+
 </div>
