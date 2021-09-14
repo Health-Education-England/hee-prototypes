@@ -15,8 +15,9 @@
   "author": "https://github.com/nhsuk/",
   "license": "MIT",
   "dependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "babel-loader": "^8.2.2",
     "basic-auth": "^2.0.1",
     "body-parser": "^1.19.0",
     "browser-sync": "^2.26.13",
@@ -38,6 +39,8 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "gulp-uglify": "^3.0.2"
+    "gulp-uglify": "^3.0.2",
+    "webpack": "^5.52.1",
+    "webpack-stream": "^7.0.0"
   }
 }
