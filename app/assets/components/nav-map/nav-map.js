@@ -31,7 +31,7 @@ export default () => {
         const thisHref = (thisCounterpart.href)? thisCounterpart.href : "/"
         const thisTitle = (thisCounterpart.innerHTML)? thisCounterpart.innerHTML : ""
         const children = region.innerHTML;
-        const wrapLink = `<a xlink:href="${thisHref}" >
+        const wrapLink = `<a xlink:href="${thisHref}" xmlns:xlink="http://www.w3.org/1999/xlink">
           <title>${thisTitle}</title>
           ${children}
         </a>`
