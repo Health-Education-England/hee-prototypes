@@ -3,6 +3,39 @@
 {% endif %}
 
 <figure class="nhsuk-map">
+  {%- if params.caption %}
+    <figcaption class="nhsuk-map__caption">
+      {% if params.caption.description %}
+        <div class="nhsuk-map__description">
+          {% if params.caption.description.subHeader %}
+            <h3>{{ params.caption.description.subHeader }}</h3>
+          {% endif %}
+          {% if params.caption.description.text %}
+            {% for item in params.caption.description.text %}
+                <p>{{ item }}</p>
+            {% endfor %}
+          {% endif %}
+        </div>
+      {% endif %}
+
+      <ul id="regionList" >
+        {% for item in params.caption.items %}
+            {% if item.url %}
+              <li>
+                <a id="{{item.id}}" href="{{ item.url}}" >
+                  {{ item.text }}
+                </a>
+              </li>
+            {% elseif item.text %}
+              <li>
+                {{ item.text }}
+              </li>
+            {% endif %}
+        {% endfor %}
+      </ul>
+    </figcaption>
+  {%- endif %}
+  
   <object
     class="nhsuk-map__image"
     data="{{ params.src }}"
@@ -10,24 +43,4 @@
     tabindex = "-1"
   >
   </object>
-
-  {%- if params.items %}
-    <figcaption class="nhsuk-map__caption">
-      <ul id="regionList" >
-        {% for item in params.items %}
-            {% if item.url %}
-              <li>
-                <a id="{{item.id}}" href="{{ item.url}}" >
-                  {{ item.text}}
-                </a>
-              </li>
-            {% elseif item.text %}
-              <li>
-                {{ item.text}}
-              </li>
-            {% endif %}
-        {% endfor %}
-      </ul>
-    </figcaption>
-  {%- endif %}
 </figure>

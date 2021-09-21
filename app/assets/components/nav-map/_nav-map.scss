@@ -21,8 +21,6 @@
   margin-left: 0; /* [1] */
   margin-right: 0; /* [1] */
   padding: nhsuk-spacing(6) nhsuk-spacing(3);
-  border-bottom: nhsuk-spacing(1) solid $color_nhsuk-grey-4;
-  background: $color_nhsuk-white;
 
   & + .nhsuk-map {
     @include nhsuk-responsive-margin(0, 'top'); /* [4] */
@@ -42,24 +40,28 @@
   @include nhsuk-typography-responsive(16);
 
   display: flex;
+  flex-direction: column;
   align-items: center;
+
+  .nhsuk-map__description {
+    width: 100%;
+    text-align: left;
+  }
 
   ul {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: calc(100% - 64px);
+    height: 100%;
+    width: 100%;
     margin: 0;
-    padding-left: 0;
+    padding: 0;
     list-style: none;
 
     li {
-      margin-bottom: 0;
-
       a {
         display: block;
         width: 100%;
-        padding: nhsuk-spacing(3) 0;
         text-decoration: none;
   
         &.hover,
@@ -70,9 +72,8 @@
         &:visited{
           color: $nhsuk-link-color;
         }
-      }  
+      }
     }
-
   }
 }
 
@@ -83,11 +84,7 @@
     }
     .nhsuk-map__caption {
       width: 50%;
-      ul {
-        a {
-          padding: nhsuk-spacing(3) nhsuk-spacing(4);
-        }
-      }
+      margin-right: nhsuk-spacing(4);
     }
   }
 }

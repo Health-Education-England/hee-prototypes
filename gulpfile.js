@@ -8,6 +8,7 @@ const clean = require('gulp-clean');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
+const webpack = require('webpack-stream');
 const uglify = require('gulp-uglify');
 const nodemon = require('gulp-nodemon');
 
@@ -41,13 +42,45 @@ function compileStyles() {
 }
 
 // Compile JavaScript (with ES6 support)
-function compileScripts() {
+function compileNonMainJSScripts() {
   return gulp.src([
     'app/assets/javascript/**/*.js',
-    'docs/assets/javascript/**/*.js'
+    'docs/assets/javascript/**/*.js',
+    '!app/assets/javascript/main.js'
   ])
   .pipe(babel())
   .pipe(gulp.dest('public/js'));
+}
+
+/* Webpack rules to build main.js */
+function mainJSWebpackRules() {
+  return {
+    rules: [
+      {
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+    ],
+  }
+}
+
+/* Use Webpack to build main.js */
+function compileMainJSScript() {
+  return gulp.src('./app/assets/javascript/main.js')
+    .pipe(webpack({
+      mode: 'development',
+      devtool: 'inline-source-map',
+      module: mainJSWebpackRules(),
+      output: {
+        filename: 'main.js',
+      },
+      target: 'web',
+    }))
+    .pipe(gulp.dest('./public/js'));
 }
 
 // Compile assets
@@ -110,17 +143,18 @@ function startBrowserSync(done){
 
 // Watch for changes within assets/
 function watch() {
-  gulp.watch('app/assets/**/**/*.scss', compileStyles);
-  gulp.watch('app/assets/javascript/**/*.js', compileScripts);
-  gulp.watch('app/assets/**/**/*.*', compileAssets);
+  gulp.watch('app/assets/components/**/*.scss', compileStyles);
+  gulp.watch('app/assets/**/**/*.js', gulp.parallel(compileNonMainJSScripts, compileMainJSScript));
+  gulp.watch(['app/assets/**/**/*.*', '!app/assets/components/**/*.scss', '!app/assets/**/**/*.js'], compileAssets);
   gulp.watch('docs/assets/sass/**/*.scss', compileStyles);
-  gulp.watch('docs/assets/javascript/**/*.js', compileScripts);
+  gulp.watch('docs/assets/javascript/**/*.js', compileNonMainJSScripts);
   gulp.watch('docs/assets/**/**/*.*', compileAssets);
 }
 
 exports.watch = watch;
 exports.compileStyles = compileStyles;
-exports.compileScripts = compileScripts;
+exports.compileNonMainJSScripts = compileNonMainJSScripts;
+exports.compileMainJSScript = compileMainJSScript;
 exports.cleanPublic = cleanPublic;
 
 
@@ -145,18 +179,18 @@ function minifyMainCSS() {
     .pipe(gulp.dest('dist/css'));
 }
 
-/* Copy main.js under dist/js */
-function copyMainJS() {
-  return gulp.src('public/js/main.js')
-    .pipe(gulp.dest('dist/js'));
-}
-
-/* Minify main.js file and add a min.js suffix */
-function minifyMainJS() {
-  return gulp.src('public/js/main.js')
-    .pipe(uglify())
-    .pipe(rename(`main.min.js`))
-    .pipe(gulp.dest('dist/js'));
+/* Use Webpack to build minified main.js */
+function compileMainJSScriptAndMinify() {
+  return gulp.src('./app/assets/javascript/main.js')
+    .pipe(webpack({
+      mode: 'production',
+      module: mainJSWebpackRules(),
+      output: {
+        filename: 'main.min.js',
+      },
+      target: 'web',
+    }))
+    .pipe(gulp.dest('./dist/js'));
 }
 
 /* Copy nhsuk.js under dist/js with version included in the filename */
@@ -187,13 +221,21 @@ function compileAppAssets() {
 
 exports.compileAppAssets = compileAppAssets;
 
-gulp.task('build', gulp.series(cleanPublic, compileStyles, minifyMainCSS, compileScripts, compileAssets));
+gulp.task('build', gulp.series(
+  cleanPublic,
+  gulp.parallel(
+    compileStyles,
+    compileNonMainJSScripts,
+    compileMainJSScript,
+    compileAssets)));
+
 gulp.task('bundle', gulp.series(
   'build',
   cleanDist,
   gulp.parallel(
-    gulp.parallel(copyNHSUKJS, copyNHSUKMinJS),
-    gulp.series(copyMainCSS, minifyMainCSS),
-    gulp.series(copyMainJS, minifyMainJS),
+    copyNHSUKMinJS,
+    minifyMainCSS,
+    compileMainJSScriptAndMinify,
     compileAppAssets)));
+
 gulp.task('default', gulp.series(startNodemon, startBrowserSync, watch));

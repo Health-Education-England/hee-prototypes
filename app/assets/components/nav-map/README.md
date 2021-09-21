@@ -8,50 +8,66 @@
 
 *id*: string, must be unique. to be copied into the correct region in the SVG
 *url*: string, target URL for the region
-*text*: string, link text
+*caption* : object containing description and items
+*description*: object containing subHeader and Text items
+*subHeader*: Text String
+*text*: array of text strings
+*items*: array of list objects
+*id*: camelCase string, unique for region. Must match region on map.
+*url*: string,  URL for the region
+*text*: string, text description of region/
 
 Example:
 ...
 {{ navMap({
-  "heading": "Higher regions",
-  "src": "/images/nav-maps/higher-regions.svg",
-  "items": [
-    {
-      "id": "east",
-      "url": "/",
-      "text": "East of England"
+  "heading": "Dental regions",
+  "src": "/images/nav-maps/dental-regions.svg",
+  "caption": {
+    "description": {
+      "subHeader": "A Title",
+      "text": [
+        "Paragraph 1",
+        "Paragraph 2"
+      ]
     },
-    {
-      "id": "lon",
-      "url": "/",
-      "text": "London"
-    },
-    {
-      "id": "mid",
-      "url": "/",
-      "text": "Midlands"
-    },
-    {
-      "id": "ney",
-      "url": "/",
-      "text": "North East and Yorkshire"
-    },
-    {
-      "id": "nw",
-      "url": "/",
-      "text": "North West"
-    },
-    {
-      "id": "se",
-      "url": "/",
-      "text": "South East"
-    },
-    {
-      "id": "sw",
-      "url": "/",
-      "text": "South West"
-    }
-  ]
+    "items": [
+      {
+        "id": "lk",
+        "url": "/1",
+        "text": "London and Kent, Surrey and Sussex (KSS)"
+      },
+      {
+        "id": "me",
+        "url": "/2",
+        "text": "Midlands and the East"
+      },
+      {
+        "id": "nenc",
+        "url": "/3",
+        "text": "North East and North Cumbria"
+      },
+      {
+        "id": "nw",
+        "url": "/4",
+        "text": "North West"
+      },
+      {
+        "id": "sw",
+        "url": "/5",
+        "text": "South West"
+      },
+      {
+        "id": "tvw",
+        "url": "/6",
+        "text": "Thames Valley and Wessex"
+      },
+      {
+        "id": "yh",
+        "url": "/7",
+        "text": "Yorkshire and the Humber"
+      }
+    ]
+  }
 }) }}
 ...
 
