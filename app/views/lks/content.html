@@ -51,24 +51,23 @@
     {% endset -%}
 
     {{ tabs({
+      uniqueId: "tabsone",
+      title: "HEE Tabs Width With RH",
       items: [
         {
           label: "Tab one",
-          id: "tab-a-one",
           panel: {
             html: tabOneContent
           }
         },
         {
           label: "Tab two",
-          id: "tab-a-two",
           panel: {
             html: tabTwoContent
           }
         },
         {
           label: "Tab three",
-          id: "tab-a-three",
           panel: {
             html: tabThreeContent
           }
@@ -149,32 +148,28 @@
   {% endset -%}
 
   {{ tabs({
+    uniqueId: "tabstwo",
+    title: "HEE Tabs Full Width",
     items: [
       {
         label: "Tab one",
-        id: "tab-b-one",
         panel: {
           html: tabOneContent
         }
       },
       {
         label: "Tab two",
-        id: "tab-b-two",
         panel: {
           html: tabTwoContent
         }
       },
       {
         label: "Tab three",
-        id: "tab-b-three",
         panel: {
           html: tabThreeContent
         }
       }
     ]
   }) }}
-  
-
-
 
 {% endblock %}
