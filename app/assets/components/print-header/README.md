@@ -1,0 +1,1 @@
+Simpplified version of lks-header that omits elements not needed for print. See lks-header readme for more info.
