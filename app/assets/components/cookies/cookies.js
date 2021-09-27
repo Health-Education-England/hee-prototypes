@@ -1,35 +1,41 @@
 export default () => {
-    class Foo {
-        constructor(container) {
-            this.container = container;
-
+    class Cookies {
+        constructor() {
             console.log("Constructor says hi")
+            this.banner = document.querySelector('.nhsuk-cookie-banner')
             this.setCookies()
+
+        }
+
+        cookieShow() {
+            console.log("cookieHide")
+            this.banner.style.display = "block"
+        }
+        
+        cookieHide() {
+            console.log("cookieHide")
+            this.banner.style.display = "none"
         }
 
         setCookies() {
-            console.log("hello world")
+            console.log("setCookies")
             if (localStorage.getItem('analyticsCookie') === null) {
-                this.heeShow('.nhsuk-cookie-banner')
-                document.querySelector('#nhsuk-cookie-banner__link_accept_analytics').onclick = function(e) {
-                    e.preventDefault();
-                    this.heeHide('.nhsuk-cookie-banner')
+                this.cookieShow()
+                document.querySelector('#nhsuk-cookie-banner__link_accept_analytics').addEventListener('click', evt => {
+                    evt.preventDefault()
+                    this.cookieHide()
                     localStorage.setItem('analyticsCookie', true)
-                }
-                document.querySelector('#nhsuk-cookie-banner__link_decline_analytics').onclick = function(e) {
-                    e.preventDefault();
-                    this.heeHide('.nhsuk-cookie-banner')
+                })
+                document.querySelector('#nhsuk-cookie-banner__link_decline_analytics').addEventListener('click', evt => {
+                    evt.preventDefault()
+                    this.cookieHide()
                     localStorage.setItem('analyticsCookie', false)
-                }
+                })
             }
         }
-    
-        heeShow(item){
-            document.querySelector(item).style.display = "block"
-        }
-        
-        heeHide(item){
-            document.querySelector(item).style.display = "none"
-        }
     }
+
+    new Cookies(document)
 }
+
+// Use localStorage.removeItem('analyticsCookie') to reset
