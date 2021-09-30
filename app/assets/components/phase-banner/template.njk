@@ -1,0 +1,12 @@
+<div class="nhsuk-phase-banner">
+  <div class="nhsuk-width-container">
+    <p class="nhsuk-phase-banner__content">
+      <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
+        {{ params.version }}
+      </strong>
+      <span class="nhsuk-phase-banner__text">
+        This is a new service – your <a class="nhsuk-link" href="{{ params.url | safe }}"{% if params.target %} target="{{params.target}}"{%- endif -%}{% if params.title %} title="{{params.title}}"{%- endif -%}>feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+</div>
