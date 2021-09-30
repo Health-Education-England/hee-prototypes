@@ -6,6 +6,7 @@ import Listing from '../components/listing/listing';
 import Media from '../components/media/media';
 import NavMap from '../components/nav-map/nav-map';
 import SubMenu from '../components/submenu/submenu';
+import Tabs from '../components/tabs/tabs';
 
 import './polyfills';
 
@@ -18,4 +19,5 @@ document.addEventListener('DOMContentLoaded', () => {
   Media();
   NavMap();
   SubMenu();
+  Tabs();
 });
