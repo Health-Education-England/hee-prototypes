@@ -37,25 +37,34 @@
 
       <h2>Cookies needed for the website to work</h2>
 
-        <table class="nhsuk-table nhsuk-u-margin-top-0">
-          <caption class="nhsuk-table__caption">Cookies used on the HEE system</caption>
-          <thead class="nhsuk-table__head">
-            <tr class="nhsuk-table__row">
-              <th class="nhsuk-table__header" scope="col">Name</th>
-              <th class="nhsuk-table__header" scope="col">Purpose</th>
-              <th class="nhsuk-table__header" scope="col">Expires</th>
-            </tr>
-          </thead>
-          <tbody class="nhsuk-table__body">
-            <tr class="nhsuk-table__row">
-              <td class="nhsuk-table__cell" style="max-width:310px;word-break:break-all;">nhsuk-prototype-kit-4e48532e554b2070726f746f74797065206b6974</td>
-              <td class="nhsuk-table__cell">It remembers your answers across multi-page forms</td>
-              <td class="nhsuk-table__cell" style="min-width:100px;">4 hours</td>
-            </tr>
-          </tbody>
-        </table>
+      <table class="nhsuk-table nhsuk-u-margin-top-0">
+        <caption class="nhsuk-table__caption">Cookies used on the HEE system</caption>
+        <thead class="nhsuk-table__head">
+          <tr class="nhsuk-table__row">
+            <th class="nhsuk-table__header" scope="col">Name</th>
+            <th class="nhsuk-table__header" scope="col">Purpose</th>
+            <th class="nhsuk-table__header" scope="col">Expires</th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell" style="max-width:310px;word-break:break-all;">nhsuk-prototype-kit-4e48532e554b2070726f746f74797065206b6974</td>
+            <td class="nhsuk-table__cell">It remembers your answers across multi-page forms</td>
+            <td class="nhsuk-table__cell" style="min-width:100px;">4 hours</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <button id="showCookies" class="nhsuk-button">Show cookies</button>
+
+      <button id="removeCookies" class="nhsuk-button">
+        Remove cookies (requires refresh)
+      </button>
+
+      <div>
+        <code id="cookies"></code>
+      </div>
 
     </div>
-
   </div>
 {% endblock %}
