@@ -9,7 +9,7 @@ Simplified version of the govuk frontend component
   <div class="nhsuk-width-container">
     <p class="nhsuk-phase-banner__content">
       <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
-        alpha
+        NEW SERVICE
       </strong>
       <span class="nhsuk-phase-banner__text">
         This is a new service – your <a class="nhsuk-link" href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.
@@ -23,7 +23,7 @@ Simplified version of the govuk frontend component
 
 ```
 {{ phaseBanner({
-  version: "alpha",
+  version: "NEW SERVICE",
   title: "Opens in New Window",
   target: "_blank",
   url: "https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu"
