@@ -1,6 +1,6 @@
 # Phase Banner
 
-Simplified version of the govuk frontend component
+Simplified version of the govuk frontend component [gov.uk/components/phase-banner/](https://design-system.service.gov.uk/components/phase-banner/)
 
 #### HTML markup
 
