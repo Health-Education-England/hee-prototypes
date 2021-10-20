@@ -15,12 +15,14 @@ export default () => {
 
     findHeadings(headings) {
       let foundHeadings = []
-      document.querySelectorAll(headings).forEach((heading, i) => {
-        if (!heading.id) {
-          heading.id = heading.innerText.replace(/ .*/,'').replace(/[\n\r]/g,'').replace(/\s/g,'').toLowerCase()+i;
-        }
-        foundHeadings.push(heading);
-      })
+      if (headings) {
+        document.querySelectorAll(headings).forEach((heading, i) => {
+          if (!heading.id) {
+            heading.id = heading.innerText.replace(/ .*/,'').replace(/[\n\r]/g,'').replace(/\s/g,'').toLowerCase()+i;
+          }
+          foundHeadings.push(heading);
+        })
+      }      
       return foundHeadings;
     }
 
