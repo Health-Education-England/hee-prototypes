@@ -11,13 +11,16 @@ export default () => {
       this.list = [...map.querySelectorAll('#regionList li a')];
 
       this.addLinksToMap();
-      this.addClasses();
+      this.cleanStyle();
       this.mapEventListeners();
       this.linkEventListeners();
     }
 
-    addClasses(){
+    cleanStyle(){
+      this.svg.querySelector('style').innerHTML = ""
       this.svg.querySelector('style').appendChild(document.createTextNode(`
+        .st0{fill:#005EB8;stroke:#FFFFFF;stroke-width:0.5;stroke-miterlimit:10;}
+        .st1{fill:#768692;stroke:#FFFFFF;stroke-width:0.5;stroke-miterlimit:10;}
         .hover {transform: scale(1.05);transform-origin: 75% 75%;transition-duration:2s;}
         .hover * {stroke-width: 6;stroke-miterlimit: 1;}
         .focus .st0 {fill:#ffeb3b;stroke:#212b32;}
