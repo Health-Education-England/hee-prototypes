@@ -1,0 +1,105 @@
+{% extends "lks-layout.html" %}
+{% block pageTitle %}
+  Hero - HEE
+{% endblock %}
+
+{% block content %}
+  {{ hero({
+    "heading": "We’re here for you",
+    "text": "Helping you take control of your health and wellbeing."
+  }) }}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-u-reading-width">
+        <h2>Our services</h2>
+      </div>
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          {{ card({
+            "href": "/landing",
+            "clickable": "true",
+            "heading": "Evidence and resources",
+            "headingLevel": "3",
+            "headingClasses": "nhsuk-heading-m",
+            "description": "Bulletins, search bank, OpenAthens and ways to collaborate with other libraries."
+          }) }}
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          {{ card({
+            "href": "/landing",
+            "clickable": "true",
+            "heading": "Knowledge Management",
+            "headingLevel": "3",
+            "headingClasses": "nhsuk-heading-m",
+            "description": "Finding the latest evidence through bulletins, literature searching, using trusted sources like OpenAthens and collaboration."
+          }) }}
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          {{ card({
+            "href": "/landing",
+            "clickable": "true",
+            "heading": "Quality and Impact",
+            "headingLevel": "3",
+            "headingClasses": "nhsuk-heading-m",
+            "description": "Finding the latest evidence through bulletins, literature searching, using trusted sources like OpenAthens and collaboration."
+          }) }}
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+
+
+  {{ hero({
+    "heading": "We’re here for you",
+    "text": "Helping you take control of your health and wellbeing.",
+    "imageURL": "/images/young-child-using-tablet-device.jpg"
+  }) }}
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-u-reading-width">
+        <h2>Our services</h2>
+      </div>
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          {{ card({
+            "imgURL": "https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg",
+            "href": "/landing",
+            "clickable": "true",
+            "heading": "Evidence and resources",
+            "headingLevel": "3",
+            "headingClasses": "nhsuk-heading-m",
+            "description": "Bulletins, search bank, OpenAthens and ways to collaborate with other libraries."
+          }) }}
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          {{ card({
+            "imgURL": "https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg",
+            "href": "/landing",
+            "clickable": "true",
+            "heading": "Knowledge Management",
+            "headingLevel": "3",
+            "headingClasses": "nhsuk-heading-m",
+            "description": "Finding the latest evidence through bulletins, literature searching, using trusted sources like OpenAthens and collaboration."
+          }) }}
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          {{ card({
+            "imgURL": "https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg",
+            "href": "/landing",
+            "clickable": "true",
+            "heading": "Quality and Impact",
+            "headingLevel": "3",
+            "headingClasses": "nhsuk-heading-m",
+            "description": "Finding the latest evidence through bulletins, literature searching, using trusted sources like OpenAthens and collaboration."
+          }) }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+{% endblock %}
