@@ -4,9 +4,17 @@ export default () => {
             this.banner = document.querySelector('.nhsuk-cookie-banner')
             this.showCookies = document.getElementById('showCookies')
             this.removeCookies = document.getElementById('removeCookies')
+            this.host = this.getHost()
 
             this.setCookies()
             this.addEventListeners()
+        }
+
+        getHost(){
+          // split out into it's own function as this could potentially get fiddly
+          const host = window.location.host.toString().split(":")[0]
+          // console.log(host)
+          return host
         }
 
         addEventListeners() {
@@ -48,15 +56,13 @@ export default () => {
 
         useCookie() {
             // console.log("useCookie")
-            // TODO: change localhost to hee.nhs.uk for live
-            document.cookie = "analyticsCookie=true; domain=localhost; max-age=7776000";
+            document.cookie = `analyticsCookie=true; domain=${this.host}; max-age=7776000`
             // console.log(document.cookie)
         }
 
         noCookie() {
             // console.log("noCookie")
-            // TODO: change localhost to hee.nhs.uk for live
-            document.cookie = "analyticsCookie=false; domain=localhost; max-age=7776000";
+            document.cookie = `analyticsCookie=false; domain=${this.host}; max-age=7776000`
             // console.log(document.cookie)
         }
 
@@ -76,7 +82,7 @@ export default () => {
     new Cookies(document)
 }
 
-// Use localStorage.removeItem('analyticsCookie') to reset
+// Use document.cookie = "analyticsCookie=false; max-age=0" and refresh to remove
 
 // read all cookies
 // allCookies = document.cookie;
