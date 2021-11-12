@@ -27,6 +27,10 @@
 
   <div class="nhsuk-media__info">
 
+    {% if params.description %}
+      <p>{{ params.description }}</p>
+    {% endif %}
+
     {% if params.transcript|length %}
       <div class="nhsuk-media__transcript">
         <a href="javascript:void(0);">
