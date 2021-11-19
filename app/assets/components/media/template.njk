@@ -5,7 +5,9 @@
 <div class="nhsuk-media">
 
   {% if params.description %}
-    <p>{{ params.description }}</p>
+    <div class="nhsuk-media__description">
+      <p>{{ params.description }}</p>
+    </div>
   {% endif %}
 
   {% if params.type === "youtube" or params.type === "vimeo" %}

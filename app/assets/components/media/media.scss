@@ -31,6 +31,14 @@
     }
   }
 
+  .nhsuk-media__description {
+    padding: nhsuk-spacing(4);
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   .nhsuk-media__info {
     padding: nhsuk-spacing(4);
   }
