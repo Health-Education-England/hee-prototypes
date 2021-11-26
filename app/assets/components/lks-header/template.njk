@@ -1,7 +1,7 @@
 {# Define some defaults #}
 {% set showNav = true if params.showNav and params.primaryLinks else false %}
 {% set showSearch = true if params.showSearch else false %}
-{% set showValues = true %}
+{% set showValues = false %}
 {% set multiLogo = true if params.logos.en or params.logos.scot or params.logos.wales or params.logos.ni and not params.logos.fpo else false %}
 {% set logoEn = true if params.logos.en else false %}
 
@@ -27,50 +27,50 @@
       <div class="nhsuk-header__multi-logo" >
         {% if params.logos.en %}
           <a
-            class="nhsuk-header__link"
+            class=""
             href="/"
-            aria-label="HEE England homepage"
+            aria-label="Health Education England"
           >
-            <image src="https://assets.nhs.uk/images/nhs-logo.png" xlink:href=""></image>
+            <image src="/images/logos/hee-logo.png"></image>
           </a>
         {%- endif %}
         {% if params.logos.scot %}
           <a
-            class="nhsuk-header__link"
+            class=""
             href="/"
-            aria-label="HEE Scotland homepage"
+            aria-label="National Health Service Scotland"
           >
-            <image src="https://assets.nhs.uk/images/nhs-logo.png" xlink:href=""></image>
+            <image src="/images/logos/nhs-scotland-logo.png"></image>
           </a>
         {%- endif %}
         {% if params.logos.wales %}
           <a
-            class="nhsuk-header__link"
+            class=""
             href="/"
-            aria-label="HEE Wales homepage"
+            aria-label="Health Education and Improvement Wales"
           >
-            <image src="https://assets.nhs.uk/images/nhs-logo.png" xlink:href=""></image>
+            <image src="/images/logos/heiw-logo.png"></image>
           </a>
         {%- endif %}
         {% if params.logos.ni %}
           <a
-            class="nhsuk-header__link"
+            class=""
             href="/"
-            aria-label="HEE Northern Ireland homepage"
+            aria-label="Northern Ireland Medical and Dental Training Agency"
           >
-            <image src="https://assets.nhs.uk/images/nhs-logo.png" xlink:href=""></image>
+            <image src="/images/logos/nimdta-logo.png"></image>
           </a>
         {%- endif %}
       </div>
     {%- else -%}
       <div class="nhsuk-header__logo {%- if showNav == "false" and showSearch == "false" -%}nhsuk-header__logo--only{%- endif -%}">
-        {% if params.logos.fpo %}
+        {% if params.logos.fp %}
           <a
-            class="nhsuk-header__link"
+            class="nhsuk-header__link nhsuk-header__fp"
             href="/"
-            aria-label="FPO homepage"
+            aria-label="United Kingdom Foundation Programme"
           >
-            <image src="https://assets.nhs.uk/images/nhs-logo.png" xlink:href=""></image>
+            <image src="/images/logos/ukfpo-logo.png"></image>
           </a>
         {%- else -%}
           {%- if params.organisation %}

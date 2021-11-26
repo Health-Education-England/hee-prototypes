@@ -41,6 +41,40 @@
  * 20. Add nhsuk-spacing(9) to align right and left main nav with header
  */
 
+.nhsuk-header__multi-logo {
+  display: flex;
+  margin-bottom: nhsuk-spacing(4);
+
+  a {
+    margin-right: nhsuk-spacing(4);
+
+    @include mq($until: desktop) {
+      margin-right: nhsuk-spacing(2);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @include mq($until: tablet) {
+    flex-direction: column;
+    a {
+      margin: 0;
+
+      img {
+        width: auto;
+        height: 55px;
+      }
+    }
+  }
+
+}
+
 
 /* Main navigation
  *
