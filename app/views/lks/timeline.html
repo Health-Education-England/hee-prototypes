@@ -1,0 +1,34 @@
+{% extends "lks-layout.html" %}
+
+{% block pageTitle %}
+  Timeline - HEE
+{% endblock %}
+
+{% block content %}
+  <h2>Timeline</h2>
+
+  <p class="nhsuk-lede-text">Lists out the different events within a timeline.</p>
+
+  {{ timeline({
+    title: "Timeline Title",
+    period: "January 2022",
+    events: [
+      {
+        title: "Lorum Ipsum Fest",
+        description: "A celebration of all things Lorum Ipsum",
+        date: "14/01/2022",
+        time: "9am",
+        link: "/"
+      },
+      {
+        title: "Song 2",
+        description: "Whoo Hoo",
+        date: "22/01/2022",
+        time: "9am",
+        location: "Mayfair, London",
+        contact: "damon.albarn@parklife.co.uk",
+        link: "/"
+      }
+    ]
+  }) }}
+{% endblock %}

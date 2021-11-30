@@ -1,0 +1,100 @@
+{% if params.title %}
+  <h2>{{ params.title | safe }}</h2>
+{% else %}
+  <h2>Timeline</h2>
+{% endif %}
+
+{% if params.start %}
+  <p>This round of recruitment is for posts that start in {{ params.start | safe }}.</p>
+{% else %}
+  <p>Posts for the current round of recruitment.</p>
+{% endif %}
+
+<p>All times are in UK local time (GMT or BST).</p>
+
+{% if params.events %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <div class="nhs-uk__timeline-card" >
+        {% if params.period %}
+          <h3>{{ params.period }}</h3>
+        {% else %}
+          <h3>Date TBC</h3>
+        {% endif %}
+        {% for item in params.events %}
+          <div>
+            {% if item.title %}
+              <h4>{{ item.title }}</h4>
+            {% endif %}
+            {% if item.description %}
+              <p>{{ item.description }}</p>
+            {% endif %}
+            <div class="nhsuk-grid-row">
+              <div>
+                <span class="nhsuk-grid-column-one-third"><b>Date</b></span>
+                <span class="nhsuk-grid-column-two-thirds">
+                  {% if item.date %}
+                    {{ item.date }}
+                  {% else %}
+                    TBC
+                  {% endif %}
+                </span>
+              </div>
+            </div>
+            <hr>
+            <div class="nhsuk-grid-row">
+              <div>
+                <span class="nhsuk-grid-column-one-third"><b>Time</b></span>
+                <span class="nhsuk-grid-column-two-thirds">
+                  {% if item.time %}
+                    {{ item.time }}
+                  {% else %}
+                    TBC
+                  {% endif %}
+                </span>
+              </div>
+            </div>
+            <hr>
+            {% if item.location %}
+              <div class="nhsuk-grid-row">
+                <div>
+                  <span class="nhsuk-grid-column-one-third"><b>Location</b></span>
+                  <span class="nhsuk-grid-column-two-thirds">
+                      {{ item.location }}
+                  </span>
+                </div>
+              </div>
+              <hr>
+            {% endif %}
+            {% if item.contact %}
+              <div class="nhsuk-grid-row">
+                <div>
+                  <span class="nhsuk-grid-column-one-third"><b>Contact</b></span>
+                  <span class="nhsuk-grid-column-two-thirds">
+                      <a href="mailto:{{ item.contact }}" >{{ item.contact }}</a>
+                  </span>
+                </div>
+              </div>
+              <hr>
+            {% endif %}
+            {% if item.link %}
+              <div class="nhsuk-grid-row">
+                <div>
+                  <span class="nhsuk-grid-column-one-third"><b>Link</b></span>
+                  <span class="nhsuk-grid-column-two-thirds">
+                    <a href="{{ item.link }}" target="_blank">Link (Opens in new window)</a>
+                  </span>
+                </div>
+              </div>
+              <hr>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% else %}
+  <h3 class="nhsuk__timeline-no-events" >No Events to Display</h3>
+{% endif %}
+
+

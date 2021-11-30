@@ -1,0 +1,56 @@
+.nhsuk__timeline-no-events {
+  color: red;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nhs-uk__timeline-card {
+  margin-top: nhsuk-spacing(5);
+  padding: nhsuk-spacing(4);
+  background: $color_nhsuk-white;
+  border: 1px solid #D8DDE0;
+
+  h3 {
+    position: relative;
+    top: -(nhsuk-spacing(8));
+    left: -(nhsuk-spacing(4));
+    margin-bottom: -(nhsuk-spacing(5));
+    width: calc(100% - 24px);
+    padding: nhsuk-spacing(3);
+    color: $color_nhsuk-white;
+    font-size: 1.5rem;
+    background: $color_nhsuk-blue;
+  }
+
+  h4 {
+    margin-top: 48px;
+    font-size: 1.5rem;
+
+    &:first-of-type {
+      margin-top: nhsuk-spacing(4);
+    }
+  }
+
+  .nhsuk-grid-row {
+    > div {
+      overflow: hidden;
+      padding: nhsuk-spacing(3) 0;
+    }
+
+  }
+
+  > div {
+    .nhsuk-grid-row:first-of-type > div {
+      padding-top: 0;
+    }
+  }
+
+  hr {
+    padding: 0;
+    margin: 0 0 nhsuk-spacing(1);
+
+    &:last-of-type {
+      margin-bottom: nhsuk-spacing(4);
+    }
+  }
+}
