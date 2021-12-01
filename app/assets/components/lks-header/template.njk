@@ -5,12 +5,22 @@
 {% set multiLogo = true if params.logos.en or params.logos.scot or params.logos.wales or params.logos.ni and not params.logos.fpo else false %}
 {% set logoEn = true if params.logos.en else false %}
 
-
+{% if not multiLogo %}
+  <div class="nhsuk-header nhsuk-header--organisation nhsuk-header--parent" role="banner">
+    <div class="nhsuk-width-container nhsuk-header__container">
+      Part of <a href="https://www.hee.nhs.uk/">NHS Health Education England</a>
+    </div>
+  </div>
+{% endif %}
 
 <header class="nhsuk-header
-{%- if params.organisation and params.organisation.name %} nhsuk-header--organisation{% endif %}
-{%- if params.classes %}{{ params.classes }}{% endif %}" role="banner"
-{%- for attribute, value in params.attributes %} {{ attribute }}="{{ value }}"{% endfor %}>
+    {% if multiLogo %}nhsuk-header__multi{% endif %}
+    {% if params.organisation and params.organisation.name %} nhsuk-header--organisation{% endif %}
+    {% if params.classes %}{{ params.classes }}{% endif %}
+  "
+  role="banner"
+  {%- for attribute, value in params.attributes %} {{ attribute }}="{{ value }}"{% endfor %}
+>
   <div class="nhsuk-width-container nhsuk-header__container">
     {% if showValues === true %}
       <div>
@@ -34,6 +44,15 @@
             <image src="/images/logos/hee-logo.png"></image>
           </a>
         {%- endif %}
+        {% if params.logos.ni %}
+          <a
+            class=""
+            href="/"
+            aria-label="Northern Ireland Medical and Dental Training Agency"
+          >
+            <image src="/images/logos/nimdta-logo.png"></image>
+          </a>
+        {%- endif %}
         {% if params.logos.scot %}
           <a
             class=""
@@ -52,15 +71,17 @@
             <image src="/images/logos/heiw-logo.png"></image>
           </a>
         {%- endif %}
-        {% if params.logos.ni %}
-          <a
-            class=""
-            href="/"
-            aria-label="Northern Ireland Medical and Dental Training Agency"
-          >
-            <image src="/images/logos/nimdta-logo.png"></image>
-          </a>
-        {%- endif %}
+      </div>
+      <div class="nhsuk-header__multi-logo-organisation-name">
+        <span class="nhsuk-organisation-name">
+          {{ params.organisation.name }}
+          {%- if params.organisation.split -%}
+            <span class="nhsuk-organisation-name-split">{{ params.organisation.split }}</span>
+          {%- endif -%}
+        </span>
+        {% if params.organisation.descriptor %}
+          <span class="nhsuk-organisation-descriptor">{{ params.organisation.descriptor }}</span>
+        {% endif %}
       </div>
     {%- else -%}
       <div class="nhsuk-header__logo {%- if showNav == "false" and showSearch == "false" -%}nhsuk-header__logo--only{%- endif -%}">
@@ -172,7 +193,7 @@
             <span class="nhsuk-u-visually-hidden">Close menu</span>
           </button>
         </p>
-        <ul class="nhsuk-header__navigation-list">
+        <ul class="nhsuk-header__navigation-list {% if multiLogo %}multiLogo{% endif %}">
           <li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--for-mobile">
             <a class="nhsuk-header__navigation-link" href="{% if params.homeHref %}{{ params.homeHref }}{% else %}/{% endif %}">
               {% if params.homeText %}{{ params.homeText }}{% else %}Home{% endif %}
