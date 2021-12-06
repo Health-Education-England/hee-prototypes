@@ -1,4 +1,7 @@
 <div class="nhsuk-card">
+  {%- if params.imgURL %}
+    <img class="nhsuk-card__img" src="{{ params.imgURL }}" alt="{{ params.imgALT }}">
+  {%- endif %}
   <div class="nhsuk-card__content">
     {%- if params.heading %}
       <h3 class="nhsuk-card__heading">{{ params.heading }}</h3>
