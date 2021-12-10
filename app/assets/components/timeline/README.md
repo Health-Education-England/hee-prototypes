@@ -1,150 +1,160 @@
-# contact
+# Timeline
 
 ## Guidance
 
-Contact component for either a person or department. Can be either main content or a card.
-
-Note - "title" is the title of the person eg. Mr, Mrs, Dr. "heading" is the headline of the component.
+Timeline component for events. Contains one to many events within a user defined time period
 
 ## Quick start examples
 
-### Person contact
-
-Main content contact for a person. Can include an image with alt text.
+### Nujucks template
 
 ```
-{{ contact({
-  "heading": "Main Content Solo Contact",
-  "imgURL": "/images/headshot.jpg",
-  "imgALT": "This Person",
-  "title": "Doctor",
-  "name": "Jo Blogs",
-  "displayName": true,
-  "departmentName": "HEE",
-  "displayDepartmentName": true,
-  "jobTitle": "Department Head",
-  "displayJobTitle": true,
-  "phoneNumber": "01234 567890",
-  "displayPhoneNumber": true,
-  "email": "jo.bloggs@hee.co.uk",
-  "displayEmail": true,
-  "address": "123 Fake Street, Fake Town, Fake City, UK, AB1 2CD",
-  "displayAddress": true,
-  "details": "Lorem ipsum dolor sit amet",
-  "displayDetails": true
-}) }}
+  {{ timeline({
+    period: "January 2022",
+    events: [
+      {
+        title: "Lorum Ipsum Fest",
+        description: "A celebration of all things Lorum Ipsum",
+        time: "9am",
+        link: "/",
+        text: "Lorum Ipsum Dolores Sit Amet"
+      },
+      {
+        title: "Song 2",
+        description: "Whoo Hoo",
+        date: "22/01/2022",
+        time: "9am",
+        location: "Mayfair, London",
+        contact: "damon.albarn@parklife.co.uk",
+        link: "/",
+        text: "Well I feel heavy metal"
+      }
+    ]
+  }) }}
 ```
 
-### Department contact
 
-Note the addition of "type": "department". Will not render an image.
-
-```
-{{ contact({
-  "type": "department",
-  "heading": "Main Content Department Solo Contact",
-  "departmentName": "HEE",
-  "displayDepartmentName": true,
-  "phoneNumber": "01234 567890",
-  "displayPhoneNumber": true,
-  "email": "jo.bloggs@hee.co.uk",
-  "displayEmail": true,
-  "address": "123 Fake Street, Fake Town, Fake City, UK, AB1 2CD",
-  "displayAddress": true,
-  "details": "Lorem ipsum dolor sit amet",
-  "displayDetails": true
-}) }}
-```
-
-#### Card
-
-Add "classes": "nhsuk-contact__card". Heading will default to "Contact" if empty. Will not render an image.
+### Timeline HTML example
 
 ```
-{{ contact({
-  "classes": "nhsuk-contact__card",
-  "heading": "Contact Card",
-  "title": "Doctor",
-  "name": "Jo Blogs",
-  "displayName": true,
-  "departmentName": "HEE",
-  "displayDepartmentName": true,
-  "jobTitle": "Department Head",
-  "displayJobTitle": true,
-  "email": "jo.bloggs@hee.co.uk",
-  "displayEmail": true
-}) }}
-```
-
-### contact group HTML example
-
-```
-<h2>Halves</h2>
-
-<ul class="nhsuk-grid-row nhsuk-contact-group">
-  <li class="nhsuk-grid-column-one-half nhsuk-contact-group__item">
-    <div class="nhsuk-contact nhsuk-contact__card">
-      <div class="nhsuk-contact__content">
-        <h2>Contact</h2>
-        <h2 class="nhsuk-contact__name" aria-label="Name" >Doctor Jo Blogs</h2>
-        <h4 aria-label="Department" >HEE</h4>
-        <p aria-label="Job Title" >Department Head</p>
-        <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
-        <div class="nhsuk-contact__secondary-info">
-            <p aria-label="Phone Number" ><a href="tel:01234 567890" title="Opens call">01234 567890</a></p>
-            <p aria-label="Email" ><a href="mailto:jo.bloggs@hee.co.uk" title="Opens email">jo.bloggs@hee.co.uk</a></p>
-            <p aria-label="Address" >123 Fake Street, Fake Town, Fake City, UK, AB1 2CD</p>
-            <p class="nhsuk-u-secondary-text-color" aria-label="Details" >Lorem ipsum dolor sit amet</p>
-        </div>
+<div class="nhs-uk__timeline-card">
+  <h3>January 2022</h3>
+  <div>
+      <h4>Lorum Ipsum Fest</h4>
+      <p>A celebration of all things Lorum Ipsum</p>
+    <div class="nhsuk-grid-row">
+      <div>
+        <span class="nhsuk-grid-column-one-third"><b>Date</b></span>
+        <span class="nhsuk-grid-column-two-thirds">
+            TBC
+        </span>
       </div>
     </div>
-  </li>
-  <li class="nhsuk-grid-column-one-half nhsuk-contact-group__item">
-    <div class="nhsuk-contact nhsuk-contact__card">
-      <div class="nhsuk-contact__content">
-        <h2>Contact</h2>
-        <h2 class="nhsuk-contact__name" aria-label="Name" >Doctor Jo Blogs</h2>
-        <h4 aria-label="Department" >HEE</h4>
-        <p aria-label="Job Title" >Department Head</p>
-        <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
-        <div class="nhsuk-contact__secondary-info">
-            <p aria-label="Phone Number" ><a href="tel:01234 567890" title="Opens call">01234 567890</a></p>
-            <p aria-label="Email" ><a href="mailto:jo.bloggs@hee.co.uk" title="Opens email">jo.bloggs@hee.co.uk</a></p>
-            <p aria-label="Address" >123 Fake Street, Fake Town, Fake City, UK, AB1 2CD</p>
-            <p class="nhsuk-u-secondary-text-color" aria-label="Details" >Lorem ipsum dolor sit amet</p>
+    <hr>
+      <div class="nhsuk-grid-row">
+        <div>
+          <span class="nhsuk-grid-column-one-third"><b>Time</b></span>
+          <span class="nhsuk-grid-column-two-thirds">
+              9am
+          </span>
         </div>
       </div>
+      <hr>
+      <div class="nhsuk-grid-row">
+        <div>
+          <span class="nhsuk-grid-column-one-third"><b>Link</b></span>
+          <span class="nhsuk-grid-column-two-thirds">
+            <a href="/" target="_blank">Link (Opens in new window)</a>
+          </span>
+        </div>
+      </div>
+      <hr>
+      <div class="nhsuk-grid-row">
+        <div>
+          <span class="nhsuk-grid-column-one-third"><b>Description</b></span>
+          <span class="nhsuk-grid-column-two-thirds">
+            Lorum Ipsum Dolores Sit Amet
+          </span>
+        </div>
+      </div>
+      <hr>
+  </div>
+  <div>
+      <h4>Song 2</h4>
+      <p>Whoo Hoo</p>
+    <div class="nhsuk-grid-row">
+      <div>
+        <span class="nhsuk-grid-column-one-third"><b>Date</b></span>
+        <span class="nhsuk-grid-column-two-thirds">
+            22/01/2022
+        </span>
+      </div>
     </div>
-  </li>
-</ul>
+    <hr>
+      <div class="nhsuk-grid-row">
+        <div>
+          <span class="nhsuk-grid-column-one-third"><b>Time</b></span>
+          <span class="nhsuk-grid-column-two-thirds">
+              9am
+          </span>
+        </div>
+      </div>
+      <hr>
+      <div class="nhsuk-grid-row">
+        <div>
+          <span class="nhsuk-grid-column-one-third"><b>Location</b></span>
+          <span class="nhsuk-grid-column-two-thirds">
+              Mayfair, London
+          </span>
+        </div>
+      </div>
+      <hr>
+      <div class="nhsuk-grid-row">
+        <div>
+          <span class="nhsuk-grid-column-one-third"><b>Contact</b></span>
+          <span class="nhsuk-grid-column-two-thirds">
+              <a href="mailto:damon.albarn@parklife.co.uk">damon.albarn@parklife.co.uk</a>
+          </span>
+        </div>
+      </div>
+      <hr>
+      <div class="nhsuk-grid-row">
+        <div>
+          <span class="nhsuk-grid-column-one-third"><b>Link</b></span>
+          <span class="nhsuk-grid-column-two-thirds">
+            <a href="/" target="_blank">Link (Opens in new window)</a>
+          </span>
+        </div>
+      </div>
+      <hr>
+      <div class="nhsuk-grid-row">
+        <div>
+          <span class="nhsuk-grid-column-one-third"><b>Description</b></span>
+          <span class="nhsuk-grid-column-two-thirds">
+            Well I feel heavy metal
+          </span>
+        </div>
+      </div>
+      <hr>
+  </div>
+</div>
 ```
 
 ### Nunjucks arguments
 
 The contact Nunjucks macro takes the following arguments:
 
-| Name                         | Type     | Required  | Description
-| -----------------------------|----------|-----------|--------------------------------------------------------------
-| **classes**                  | string   | No        | "nhsuk-contact__card" denotes type "card"
-| **type**                     | string   | No        | "department" denotes type "department"
-| **heading**                  | string   | No        | Heading of the contact
-| **headingLevel**             | integer  | No        | Optional heading level for the contact heading. Default: 2
-| **imgURL**                   | string   | No        | The URL of the image in the contact
-| **imgALT**                   | string   | No        | The alternative text of the image in the contact
-| **title**                    | integer  | No        | Title of person. Will display before name if present
-| **name**                     | integer  | No        | Department Name string
-| **displayName**              | boolean  | No        | Set true to render name
-| **departmentName**           | integer  | No        | Department Name string
-| **displayDepartmentName**    | boolean  | No        | Set true to render department name
-| **jobTitle**                 | integer  | No        | Department Name string
-| **displayJobTitle**          | boolean  | No        | Set true to render jobTitle
-| **phoneNumber**              | integer  | No        | Department Name string
-| **displayPhoneNumber**       | boolean  | No        | Set true to render phoneNumber
-| **email**                    | integer  | No        | Department Name string
-| **displayEmail**             | boolean  | No        | Set true to render email
-| **address**                  | integer  | No        | Department Name string
-| **displayAddress**           | boolean  | No        | Set true to render address
-| **details**                  | string   | No        | Secondary details for the contact
-| **displayDetails**           | boolean  | No        | Set true to render details
+| Name                         | Type    | Required  | Description
+| -----------------------------|---------|-----------|-----------------------------------------------------------------------
+| **period**                   | string  | Yes       | Period within which the events fall. Displays "TBC" if blank
+| **events**                   | array   | No        | Array of events objects. Displays "No Events to Display" if blank
+| **title**                    | string  | No        | Title of individual event
+| **description**              | string  | No        | Description of individual event
+| **time**                     | string  | No        | Time of individual event
+| **date**                     | string  | Yes       | Date of individual event
+| **location**                 | string  | No        | Location of individual event
+| **contact**                  | string  | No        | Contact email for individual event
+| **link**                     | string  | No        | Link for individual event
+| **text**                     | string  | No        | Free textbox for individual event
 
 If you are using Nunjucks macros in production be aware that using `html` arguments, or ones ending with `html` can be a [security risk](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting). Read more about this in the [Nunjucks documentation](https://mozilla.github.io/nunjucks/api.html#user-defined-templates-warning).
