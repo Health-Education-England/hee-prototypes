@@ -1,6 +1,9 @@
 .nhsuk-hero {
-  margin-bottom: 50px;
   & &--border {
     border: 0;
   }
+}
+
+.nhsuk-hero--image-description {
+  margin-bottom: 50px;
 }
