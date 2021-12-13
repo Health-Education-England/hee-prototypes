@@ -1,14 +1,14 @@
-{% if params.title %}
-  <h2>{{ params.title }}</h2>
-{% endif %}
-
 <div class="nhsuk-media">
+  {% if params.title %}
+    <h2>{{ params.title }}</h2>
+  {% endif %}
 
   {% if params.description %}
     <div class="nhsuk-media__description">
       <p>{{ params.description }}</p>
     </div>
   {% endif %}
+  
 
   {% if params.type === "youtube" or params.type === "vimeo" %}
   <iframe
