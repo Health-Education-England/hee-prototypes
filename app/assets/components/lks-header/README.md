@@ -8,15 +8,124 @@ To add a submenu, simply add a "children" object to the normal header template, 
 
 Macro Example:
 
+{{ lksHeader({
+    showNav: true,
+    showSearch: true,
+    organisation: {
+      name: "Health Education England",
+      descriptor: "Library and Knowledge Services"
+    },
+    logos: {
+      en: true,
+      ni: true,
+      scot: true,
+      wales: true,
+      fpo: false
+    },
+    primaryLinks: [
+      {
+        url: "/landing",
+        label: "COVID&#8209;19",
+        children: [
+          {
+            url: "/",
+            label: "Lorem"
+          },
+          {
+            url: "/",
+            label: "Ipsum"
+          },
+          {
+            url: "/",
+            label: "Dolor Set"
+          },
+          {
+            url: "/",
+            label: "Amet"
+          }
+        ]
+      },
+      {
+        url: "/landing",
+        label: "Learning and development"
+      },
+      {
+        url: "/landing",
+        label: "Mobilising knowledge"
+      },
+      {
+        url: "/landing",
+        label: "Patient information",
+         children: [
+          {
+            url: "/",
+            label: "Lorem"
+          },
+          {
+            url: "/",
+            label: "Ipsum"
+          },
+          {
+            url: "/",
+            label: "Dolor Set"
+          },
+          {
+            url: "/",
+            label: "Amet"
+          }
+        ]
+      },
+      {
+        url: "/landing",
+        label: "Resource discovery",
+         children: [
+          {
+            url: "/",
+            label: "Lorem"
+          },
+          {
+            url: "/",
+            label: "Ipsum"
+          },
+          {
+            url: "/",
+            label: "Dolor Set"
+          },
+          {
+            url: "/",
+            label: "Amet"
+          }
+        ]
+     },
+      {
+        url: "/landing",
+        label: "About",
+        children: [
+          {
+            url: "/",
+            label: "Lorem"
+          },
+          {
+            url: "/",
+            label: "Ipsum"
+          },
+          {
+            url: "/",
+            label: "Dolor Set"
+          },
+          {
+            url: "/",
+            label: "Amet"
+          }
+        ]
+      }
+    ]
+  })
+}}
+
 The macro will shuffle the URL down into the submenu automatically.
 
 NB: For hyphenated words, please use the character "&#8209;" to prevent line-breaking, for example "COVID&#8209;19"
-
-HTML example:
-
-
-
-
 
 ---
 
@@ -35,9 +144,9 @@ The emergencyAlert macro takes the following arguments:
 | **organisation.split**                  | string   | No        | Use for long names that should be split over multiple lines |
 | **logos**                               | object   | No        | Logo object for multi logo banner |
 | **logos.en**                            | boolean  | No        | Logo for England |
+| **logos.ni**                            | boolean  | No        | Logo for Northern Ireland |
 | **logos.scot**                          | boolean  | No        | Logo for Scotland |
 | **logos.wales**                         | boolean  | No        | Logo for Wales |
-| **logos.ni**                            | boolean  | No        | Logo for Northern Ireland |
 | **logos.fpo**                           | boolean  | No        | Logo for FPO, disables other logos |
 | **primaryLinks**                        | array    | No        | Array of navigation links for use in the header. |
 | **primaryLinks.object**                 | object   | No        | Onject containing navigation tree |
