@@ -3,15 +3,27 @@
   <div  class="nhsuk-tabs__list" role="tablist" aria-label="{{ params.title | default ("HEE Tabs") }}" data-module="nhsuk-tabs">
     {% for item in params.items %}
       {% if item %}
-        <button class="nhsuk-tabs__list-item{% if loop.index == 1 %} nhsuk-tabs__list-item--selected{% endif %}" role="tab" aria-selected="{% if loop.index == 1 %}true{% else %}false{% endif %}" aria-controls="{{ params.uniqueId }}-panel-{{ loop.index }}" id="{{ params.uniqueId }}-tab-{{ loop.index }}" tabindex="0">
+        <button
+          class="nhsuk-tabs__list-item{% if loop.index == 1 %} nhsuk-tabs__list-item--selected{% endif %}"
+          role="tab"
+          aria-selected="{% if loop.index == 1 %}true{% else %}false{% endif %}"
+          aria-controls="{{ params.uniqueId }}-panel-{{ loop.index }}"
+          id="{{ params.uniqueId }}-tab-{{ loop.index }}"
+          tabindex="0"
+        >
           {{ item.label }}
-        </button>        
+        </button>
       {% endif %}
     {% endfor %}
   </div>
   {% for item in params.items %}
     {% if item %}
-      <div class="nhsuk-tabs__panel" id="{{ params.uniqueId }}-panel-{{ loop.index }}" role="tabpanel" tabindex="0" aria-labelledby="{{ params.uniqueId }}-tab-{{ loop.index }}"{% if loop.index > 1 %} hidden{% endif %}>
+      <div
+        class="nhsuk-tabs__panel"
+        id="{{ params.uniqueId }}-panel-{{ loop.index }}"
+        role="tabpanel" tabindex="0"
+        aria-labelledby="{{ params.uniqueId }}-tab-{{ loop.index }}"{% if loop.index > 1 %} hidden{% endif %}
+      >
         {{ item.panel.html | safe if item.panel.html else item.panel.text }}
       </div>
     {% endif %}
