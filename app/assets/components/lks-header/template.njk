@@ -2,7 +2,7 @@
 {% set showNav = true if params.showNav and params.primaryLinks else false %}
 {% set showSearch = true if params.showSearch else false %}
 {% set showValues = false %}
-{% set multiLogo = true if params.logos.en or params.logos.scot or params.logos.wales or params.logos.ni and not params.logos.fpo else false %}
+{% set multiLogo = true if params.logos.scot or params.logos.wales or params.logos.ni and not params.logos.fpo else false %}
 {% set logoEn = true if params.logos.en else false %}
 
 {# {% if not multiLogo %}
@@ -37,51 +37,61 @@
       <div class="nhsuk-header__multi-logo" >
         {% if params.logos.en %}
           <a
-            class=""
-            href="/"
-            aria-label="Health Education England"
+          class="nhsuk-header__link"
+            href="https://www.hee.nhs.uk/"
+            aria-label="Health Education England Website (Opens in New Window)"
+            target="_blank"
           >
-            <image src="/images/logos/hee-logo.png"></image>
+            <image src="/images/logos/hee-logo.png" alt="Logo for Health Education England" ></image>
           </a>
         {%- endif %}
         {% if params.logos.ni %}
           <a
-            class=""
-            href="/"
-            aria-label="Northern Ireland Medical and Dental Training Agency"
+          class="nhsuk-header__link"
+            href="https://www.nimdta.gov.uk/"
+            aria-label="Northern Ireland Medical and Dental Training Agency Website (Opens in New Window)"
+            target="_blank"
           >
-            <image src="/images/logos/nimdta-logo.png"></image>
+            <image src="/images/logos/nimdta-logo.png" alt="Logo for Northern Ireland Medical and Dental Training Agency" ></image>
           </a>
         {%- endif %}
         {% if params.logos.scot %}
           <a
-            class=""
-            href="/"
-            aria-label="National Health Service Scotland"
+          class="nhsuk-header__link"
+            href="https://www.nes.scot.nhs.uk/"
+            aria-label="NHS Education for Scotland Website (Opens in New Window)"
+            target="_blank"
           >
-            <image src="/images/logos/nhs-scotland-logo.png"></image>
+            <image src="/images/logos/nhs-scotland-logo.png" alt="Logo for NHS Education for Scotland" ></image>
           </a>
         {%- endif %}
         {% if params.logos.wales %}
           <a
-            class=""
-            href="/"
-            aria-label="Health Education and Improvement Wales"
+          class="nhsuk-header__link"
+            href="https://heiw.nhs.wales/"
+            aria-label="Health Education and Improvement Wales Website (Opens in New Window)"
+            target="_blank"
           >
-            <image src="/images/logos/heiw-logo.png"></image>
+            <image src="/images/logos/heiw-logo.png" alt="Logo for Health Education and Improvement Wales" ></image>
           </a>
         {%- endif %}
       </div>
       <div class="nhsuk-header__multi-logo-organisation-name">
-        <span class="nhsuk-organisation-name">
-          {{ params.organisation.name }}
-          {%- if params.organisation.split -%}
-            <span class="nhsuk-organisation-name-split">{{ params.organisation.split }}</span>
-          {%- endif -%}
-        </span>
-        {% if params.organisation.descriptor %}
-          <span class="nhsuk-organisation-descriptor">{{ params.organisation.descriptor }}</span>
-        {% endif %}
+        <a
+          class="nhsuk-header__link"
+          href="/"
+          aria-label="Home"
+        >
+          <span class="nhsuk-organisation-name">
+            {{ params.organisation.name }}
+            {%- if params.organisation.split -%}
+              <span class="nhsuk-organisation-name-split">{{ params.organisation.split }}</span>
+            {%- endif -%}
+          </span>
+          {% if params.organisation.descriptor %}
+            <span class="nhsuk-organisation-descriptor">{{ params.organisation.descriptor }}</span>
+          {% endif %}
+          </a>
       </div>
     {%- else -%}
       <div class="nhsuk-header__logo {%- if showNav == "false" and showSearch == "false" -%}nhsuk-header__logo--only{%- endif -%}">
@@ -89,19 +99,24 @@
           <a
             class="nhsuk-header__link nhsuk-header__fp"
             href="/"
-            aria-label="United Kingdom Foundation Programme"
+            aria-label="United Kingdom Foundation Programme Website (Opens in New Window)"
+            target="_blank"
           >
-            <image src="/images/logos/ukfpo-logo.png"></image>
+            <image src="/images/logos/ukfpo-logo.png" alt="Logo for United Kingdom Foundation Programme" ></image>
           </a>
         {%- else -%}
           {%- if params.organisation %}
             <a
               class="nhsuk-header__link"
-              href="{% if params.homeHref %}{{ params.homeHref }}{% else %}/{% endif %}"
-              aria-label="{%- if params.organisation.name -%}{{ params.organisation.name }} {% endif %}{% if params.organisation.split %}{{ params.organisation.split }} {% endif %}{% if params.organisation.descriptor %}{{ params.organisation.descriptor }} {% endif %}Homepage"
+              href="/"
+              aria-label="Home"
             >
               {%- if params.organisation.logoURL %}
-                <img class="nhsuk-org-logo" src="{{ baseUrl }}{{ params.organisation.logoURL }}" alt=""/>
+                <img
+                  class="nhsuk-org-logo"
+                  src="{{ baseUrl }}{{ params.organisation.logoURL }}"
+                  alt="{%- if params.organisation.logoAlt -%}{{params.organisation.logoAlt}}{%- endif -%}"
+                />
               {%- else -%}
                 <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="presentation" focusable="false" viewBox="0 0 40 16">
                   <path class="nhsuk-logo__background" d="M0 0h40v16H0z"></path>
@@ -123,7 +138,7 @@
             <a
               class="nhsuk-header__link"
               href="{% if params.homeHref %}{{ params.homeHref }}{% else %}/{% endif %}"
-              aria-label="{% if params.ariaLabel %}{{ params.ariaLabel }}{% else %}NHS homepage{% endif %}"
+              aria-label="{% if params.ariaLabel %}{{ params.ariaLabel }}{% else %}Home{% endif %}"
             >
               <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="presentation" focusable="false" viewBox="0 0 40 16">
                 <path class="nhsuk-logo__background" d="M0 0h40v16H0z"></path>
