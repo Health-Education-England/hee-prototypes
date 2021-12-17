@@ -1,6 +1,7 @@
 export default () => {
     class Cookies {
         constructor() {
+            // banner
             this.banner = document.querySelector('.nhsuk-cookie-banner')
             this.showCookies = document.getElementById('showCookies')
             this.removeCookies = document.getElementById('removeCookies')
@@ -8,17 +9,21 @@ export default () => {
 
             this.setCookies()
             this.addEventListeners()
+
+            // policy page
+            this.Status = document.querySelector('.nhsuk__cookieStatus')
+            this.In = document.querySelectorAll('.nhsuk__cookiesIn')
+            this.Out = document.querySelectorAll('.nhsuk__cookiesOut')
+
+            this.toggleStatus()
         }
 
         getHost(){
-          // split out into it's own function as this could potentially get fiddly
           const host = window.location.host.toString().split(":")[0]
-          // console.log(host)
           return host
         }
 
         addEventListeners() {
-            // console.log("addEventListeners")
             if(this.showCookies) {
                 this.showCookies.addEventListener('mousedown', this.showCookie)
             }
@@ -28,19 +33,16 @@ export default () => {
         }
 
         bannerShow() {
-            // console.log("bannerShow")
             this.banner.style.display = "block"
         }
         
         bannerHide() {
-            // console.log("bannerHide")
             this.banner.style.display = "none"
         }
 
         setCookies() {
-            // console.log("setCookies")
             if (document.cookie === '') {
-                    this.bannerShow()
+                this.bannerShow()
                 document.querySelector('#nhsuk-cookie-banner__link_accept_analytics').addEventListener('click', evt => {
                     evt.preventDefault()
                     this.bannerHide()
@@ -55,37 +57,60 @@ export default () => {
         }
 
         useCookie() {
-            // console.log("useCookie")
             document.cookie = `analyticsCookie=true; domain=${this.host}; max-age=7776000`
-            // console.log(document.cookie)
         }
 
         noCookie() {
-            // console.log("noCookie")
             document.cookie = `analyticsCookie=false; domain=${this.host}; max-age=7776000`
-            // console.log(document.cookie)
         }
 
-        removeCookie() {
-            // console.log("removeCookie")
-            document.cookie = "analyticsCookie=false; max-age=0";
-            // console.log(document.cookie)
+        toggleStatus() {
+          console.log(this.Status)
+          if(this.Status){
+            document.querySelector('button.nhsuk__cookiesOut').addEventListener('click', evt => {
+              evt.preventDefault()
+              this.bannerHide()
+              this.useCookie()
+              location.reload()
+            })
+
+            document.querySelector('button.nhsuk__cookiesIn').addEventListener('click', evt => {
+              evt.preventDefault()
+              this.bannerHide()
+              this.noCookie()
+              location.reload()
+            })
+
+            if (document.cookie === '' || document.cookie === "analyticsCookie=false") {
+              this.displayBlock(this.Out)
+              this.displayNone(this.In)
+            } else {
+              this.displayNone(this.Out)
+              this.displayBlock(this.In)
+            }
+          }
         }
 
+        displayBlock(item) {
+          item.forEach(e => e.style.display="inline-block")
+        }
+
+        displayNone(item) {
+          item.forEach(e => e.style.display="none")
+        }
+
+        // redundant but useful
         showCookie() {
-            // console.log("showCookie")
             const output = document.getElementById('cookies')
             output.textContent = '> ' + document.cookie
         }
-    }
+        
+        removeCookie() {
+          document.cookie = "analyticsCookie=false; max-age=0"
+          location.reload()
+      }
+
+  }
 
     new Cookies(document)
 }
-
-// Use document.cookie = "analyticsCookie=false; max-age=0" and refresh to remove
-
-// read all cookies
-// allCookies = document.cookie;
-
-// *.hee.nhs.uk
-// analyticsCookie
