@@ -42,7 +42,7 @@
  */
 
 // color changes
- .nhsuk-header {
+.nhsuk-header {
   background: $color_nhsuk-white;
 
   &__navigation-list {
@@ -139,7 +139,7 @@
   display: flex;
   margin-bottom: nhsuk-spacing(4);
 
-  a {
+  span {
     margin-right: nhsuk-spacing(4);
 
     @include mq($until: desktop) {
@@ -151,19 +151,21 @@
     }
 
     img {
-      width: 100%;
-      max-height: 64px;
+      width: auto;
+      height: 64px;
     }
   }
 
   @include mq($from: tablet, $until: large-desktop) {
-    max-width: 100%;
+    span img {
+      height: 48px;
+    }
   }
 
   @include mq($until: tablet) {
     flex-direction: column;
 
-    a {
+    span {
       margin: 0 0 nhsuk-spacing(2);
 
       &:last-child {
@@ -171,8 +173,7 @@
       }
 
       img {
-        width: auto;
-        height: 42px;
+        height: 48px;
       }
     }
   }
@@ -228,7 +229,7 @@
   margin: 0;
   padding-left: 0;
 
-  &.multiLogo {
+  &.nhsuk-header__multiLogo {
     border-top: none;
   }
 

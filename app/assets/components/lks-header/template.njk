@@ -1,7 +1,6 @@
 {# Define some defaults #}
 {% set showNav = true if params.showNav and params.primaryLinks else false %}
 {% set showSearch = true if params.showSearch else false %}
-{% set showValues = false %}
 {% set multiLogo = true if params.logos.scot or params.logos.wales or params.logos.ni and not params.logos.fpo else false %}
 {% set logoEn = true if params.logos.en else false %}
 
@@ -22,58 +21,57 @@
   {%- for attribute, value in params.attributes %} {{ attribute }}="{{ value }}"{% endfor %}
 >
   <div class="nhsuk-width-container nhsuk-header__container">
-    {% if showValues === true %}
-      <div>
-        <p style="color:white">
-          showSearch: {{ showSearch }}</br>
-          showNav: {{ showNav }}</br>
-          multiLogo : {{ multiLogo }}</br>
-        </p>
-      </div>
-    {% endif %}
 
     {% if multiLogo %}
       <!-- todo: replace image src, link href and labels with regional details -->
       <div class="nhsuk-header__multi-logo" >
         {% if params.logos.en %}
-          <a
-          class="nhsuk-header__link"
-            href="https://www.hee.nhs.uk/"
-            aria-label="Health Education England Website (Opens in New Window)"
-            target="_blank"
-          >
-            <image src="/images/logos/hee-logo.png" alt="Logo for Health Education England" ></image>
-          </a>
+          <span>
+            <a
+            class="nhsuk-header__link"
+              href="https://www.hee.nhs.uk/"
+              aria-label="Health Education England Website (Opens in New Window)"
+              target="_blank"
+            >
+              <image src="/images/logos/hee-logo.png" alt="Logo for Health Education England" ></image>
+            </a>
+          </span>
         {%- endif %}
         {% if params.logos.ni %}
-          <a
-          class="nhsuk-header__link"
-            href="https://www.nimdta.gov.uk/"
-            aria-label="Northern Ireland Medical and Dental Training Agency Website (Opens in New Window)"
-            target="_blank"
-          >
-            <image src="/images/logos/nimdta-logo.png" alt="Logo for Northern Ireland Medical and Dental Training Agency" ></image>
-          </a>
+          <span>
+            <a
+            class="nhsuk-header__link"
+              href="https://www.nimdta.gov.uk/"
+              aria-label="Northern Ireland Medical and Dental Training Agency Website (Opens in New Window)"
+              target="_blank"
+            >
+              <image src="/images/logos/nimdta-logo.png" alt="Logo for Northern Ireland Medical and Dental Training Agency" ></image>
+            </a>
+          </span>
         {%- endif %}
         {% if params.logos.scot %}
-          <a
-          class="nhsuk-header__link"
-            href="https://www.nes.scot.nhs.uk/"
-            aria-label="NHS Education for Scotland Website (Opens in New Window)"
-            target="_blank"
-          >
-            <image src="/images/logos/nhs-scotland-logo.png" alt="Logo for NHS Education for Scotland" ></image>
-          </a>
+          <span>
+            <a
+            class="nhsuk-header__link"
+              href="https://www.nes.scot.nhs.uk/"
+              aria-label="NHS Education for Scotland Website (Opens in New Window)"
+              target="_blank"
+            >
+              <image src="/images/logos/nhs-scotland-logo.png" alt="Logo for NHS Education for Scotland" ></image>
+            </a>
+          </span>
         {%- endif %}
         {% if params.logos.wales %}
-          <a
-          class="nhsuk-header__link"
-            href="https://heiw.nhs.wales/"
-            aria-label="Health Education and Improvement Wales Website (Opens in New Window)"
-            target="_blank"
-          >
-            <image src="/images/logos/heiw-logo.png" alt="Logo for Health Education and Improvement Wales" ></image>
-          </a>
+          <span>
+            <a
+            class="nhsuk-header__link"
+              href="https://heiw.nhs.wales/"
+              aria-label="Health Education and Improvement Wales Website (Opens in New Window)"
+              target="_blank"
+            >
+              <image src="/images/logos/heiw-logo.png" alt="Logo for Health Education and Improvement Wales" ></image>
+            </a>
+          </span>
         {%- endif %}
       </div>
       <div class="nhsuk-header__multi-logo-organisation-name">
@@ -95,14 +93,14 @@
       </div>
     {%- else -%}
       <div class="nhsuk-header__logo {%- if showNav == "false" and showSearch == "false" -%}nhsuk-header__logo--only{%- endif -%}">
-        {% if params.logos.fp %}
+        {% if params.logos.fpo %}
           <a
-            class="nhsuk-header__link nhsuk-header__fp"
+            class="nhsuk-header__link nhsuk-header__fpo"
             href="/"
             aria-label="United Kingdom Foundation Programme Website (Opens in New Window)"
             target="_blank"
           >
-            <image src="/images/logos/ukfpo-logo.png" alt="Logo for United Kingdom Foundation Programme" ></image>
+            <img src="/images/logos/ukfpo-logo.png" alt="Logo for United Kingdom Foundation Programme" ></img>
           </a>
         {%- else -%}
           {%- if params.organisation %}
@@ -208,7 +206,7 @@
             <span class="nhsuk-u-visually-hidden">Close menu</span>
           </button>
         </p>
-        <ul class="nhsuk-header__navigation-list {% if multiLogo %}multiLogo{% endif %}">
+        <ul class="nhsuk-header__navigation-list {% if multiLogo %}nhsuk-header__multiLogo{% endif %}">
           <li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--for-mobile">
             <a class="nhsuk-header__navigation-link" href="{% if params.homeHref %}{{ params.homeHref }}{% else %}/{% endif %}">
               {% if params.homeText %}{{ params.homeText }}{% else %}Home{% endif %}
