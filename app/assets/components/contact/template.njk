@@ -1,6 +1,6 @@
 {% set card = true if params.classes === "nhsuk-contact__card" else false %}
 
-{% set headingLevel = 4 if card else 3 %}
+{% set headingLevel = 3 %}
 
 {% set departmentHeadingLevel  = 5 if card else 4 %}
 
@@ -14,6 +14,12 @@
 
 {%- set jobTitle %}
   {% if params.jobTitle and params.displayjobTitle %}
+    true
+  {% endif %}
+{%- endset -%}
+
+{%- set website %}
+  {% if params.website and params.displayWebsite %}
     true
   {% endif %}
 {%- endset -%}
@@ -70,6 +76,10 @@
       </h{{ headingLevel }}>
     {% endif %}
 
+    {% if params.pronouns %}
+        <p class="nhsuk-contact__pronoun">{{ params.pronouns | safe }}</p>
+    {% endif %}
+
     {% if departmentShow and departmentType%}
       <h{{ headingLevel }} aria-label="Department" >
         {{ params.departmentName | safe }}
@@ -77,6 +87,12 @@
     {% elif departmentShow %}
       <h{{ departmentHeadingLevel }} aria-label="Department" >
         {{ params.departmentName | safe }}
+      </h{{ departmentHeadingLevel }}>
+    {% endif %}
+
+    {% if params.organisation %}
+      <h{{ departmentHeadingLevel }} aria-label="Organisation" >
+        {{ params.organisation | safe }}
       </h{{ departmentHeadingLevel }}>
     {% endif %}
 
@@ -88,11 +104,22 @@
       <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
 
       <div class="nhsuk-contact__secondary-info" >
-        {%- if phoneNumber %}
+        {% if website %}
+          <p aria-label="Website" >
+            <a
+              href="{{ params.website | safe }}"
+              title="{%- if params.websiteTitle -%}{{ params.websiteTitle | safe }}{%- else -%}Website{%- endif -%}"
+            >
+              {{ params.website | safe }}
+            </a>
+          </p>
+        {% endif %}
+
+        {% if phoneNumber %}
           <p aria-label="Telephone" >
             <a href="tel:{{ params.phoneNumber | safe }}" title="Opens call" >{{ params.phoneNumber | safe }}</a>
           </p>
-        {%- endif %}
+        {% endif %}
 
         {%- if email %}
           <p aria-label="Email" >
