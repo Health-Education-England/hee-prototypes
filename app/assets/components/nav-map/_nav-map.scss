@@ -20,7 +20,7 @@
 
   margin-left: 0; /* [1] */
   margin-right: 0; /* [1] */
-  padding: nhsuk-spacing(6) nhsuk-spacing(3);
+  padding: nhsuk-spacing(6) 0;
 
   & + .nhsuk-map {
     @include nhsuk-responsive-margin(0, 'top'); /* [4] */
@@ -39,26 +39,24 @@
   .nhsuk-map__caption {
   @include nhsuk-typography-responsive(16);
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   .nhsuk-map__description {
     width: 100%;
     text-align: left;
+    margin-bottom: nhsuk-spacing(5);
+
+    h3 {
+      margin-bottom: nhsuk-spacing(4);
+    }
   }
 
   ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 100%;
-    width: 100%;
     margin: 0;
     padding: 0;
     list-style: none;
 
     li {
+      margin-bottom: nhsuk-spacing(4);
+      
       a {
         display: block;
         width: 100%;
