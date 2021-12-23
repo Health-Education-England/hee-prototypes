@@ -1,110 +1,121 @@
 # LKS-Header
 
-Includes all functionality of the NHS header, refer to that documentation for more deatail on setting up the header with logo, search options etc.
+Includes all functionality of the NHS header, refer to that documentation for more detail on setting up the header with logo, search options etc.
+
+https://service-manual.nhs.uk/design-system/components/header
 
 To add a submenu, simply add a "children" object to the normal header template, like so:
 
+Macro Example:
+
 {{ lksHeader({
-    "showNav": "true",
-    "showSearch": "true",
-    "organisation": {
-      "name": "Health Education England",
-      "descriptor": "Library and Knowledge Services"
+    showNav: true,
+    showSearch: true,
+    organisation: {
+      name: "Health Education England",
+      descriptor: "Library and Knowledge Services"
     },
-    "primaryLinks": [
+    logos: {
+      en: true,
+      ni: true,
+      scot: true,
+      wales: true,
+      fpo: false
+    },
+    primaryLinks: [
       {
-        "url": "/landing",
-        "label": "COVID-19",
-        "children": [
+        url: "/landing",
+        label: "COVID&#8209;19",
+        children: [
           {
-            "url": "/",
-            "label": "Lorem"
+            url: "/",
+            label: "Lorem"
           },
           {
-            "url": "/",
-            "label": "Ipsum"
+            url: "/",
+            label: "Ipsum"
           },
           {
-            "url": "/",
-            "label": "Dolor Set"
+            url: "/",
+            label: "Dolor Set"
           },
           {
-            "url": "/",
-            "label": "Amet"
+            url: "/",
+            label: "Amet"
           }
         ]
       },
       {
-        "url": "/landing",
-        "label": "Learning and development"
+        url: "/landing",
+        label: "Learning and development"
       },
       {
-        "url": "/landing",
-        "label": "Mobilising knowledge"
+        url: "/landing",
+        label: "Mobilising knowledge"
       },
       {
-        "url": "/landing",
-        "label": "Patient information",
-         "children": [
+        url: "/landing",
+        label: "Patient information",
+         children: [
           {
-            "url": "/",
-            "label": "Lorem"
+            url: "/",
+            label: "Lorem"
           },
           {
-            "url": "/",
-            "label": "Ipsum"
+            url: "/",
+            label: "Ipsum"
           },
           {
-            "url": "/",
-            "label": "Dolor Set"
+            url: "/",
+            label: "Dolor Set"
           },
           {
-            "url": "/",
-            "label": "Amet"
+            url: "/",
+            label: "Amet"
           }
         ]
       },
       {
-        "url": "/landing",
-        "label": "Resource discovery",
-         "children": [
+        url: "/landing",
+        label: "Resource discovery",
+         children: [
           {
-            "url": "/",
-            "label": "Lorem"
+            url: "/",
+            label: "Lorem"
           },
           {
-            "url": "/",
-            "label": "Ipsum"
+            url: "/",
+            label: "Ipsum"
           },
           {
-            "url": "/",
-            "label": "Dolor Set"
+            url: "/",
+            label: "Dolor Set"
           },
           {
-            "url": "/",
-            "label": "Amet"
+            url: "/",
+            label: "Amet"
           }
         ]
      },
       {
-        "url": "/landing",
-        "label": "About",
-        "children": [
+        url: "/landing",
+        label: "About",
+        children: [
           {
-            "url": "/",
-            "label": "Lorem"
+            url: "/",
+            label: "Lorem"
           },
           {
-            "url": "/",
-            "label": "Ipsum"
+            url: "/",
+            label: "Ipsum"
           },
           {
-            "url": "/",
-            "label": "Dolor Set"
+            url: "/",
+            label: "Dolor Set"
           },
           {
-            "url": "/",
-            "label": "Amet"
+            url: "/",
+            label: "Amet"
           }
         ]
       }
@@ -116,248 +127,50 @@ The macro will shuffle the URL down into the submenu automatically.
 
 NB: For hyphenated words, please use the character "&#8209;" to prevent line-breaking, for example "COVID&#8209;19"
 
-HTML example:
+---
 
-<nav class="nhsuk-header__navigation js-show" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
-      <div class="nhsuk-width-container">
-        <p class="nhsuk-header__navigation-title"><span id="label-navigation">Menu</span>
-          <button class="nhsuk-header__navigation-close" id="close-menu">
-            <svg class="nhsuk-icon nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
-            </svg>
-            <span class="nhsuk-u-visually-hidden">Close menu</span>
-          </button>
-        </p>
-        <ul class="nhsuk-header__navigation-list">
-          <li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--for-mobile">
-            <a class="nhsuk-header__navigation-link" href="/">
-              Home
-              <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-              </svg>
-            </a>
-          </li>
-          <li class="nhsuk-header__navigation-item nhsuk-subheader" aria-haspopup="true" aria-expanded="false">
-            <a class="nhsuk-header__navigation-link" href="#">
-              <span class="nhsuk-header__link-text">COVID-19</span>
-              <span class="nhsuk-header__back-text">Back</span>
-              <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-              </svg>
-              <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
-              </svg>
-            </a>
-            <ul class="nhsuk-subheader__list">
-              <li class="nhsuk-subheader-item">
-                <a class="nhsuk-subheader-link" href="/landing">
-                  COVID-19
-                </a>
-              </li>
-                <li class="nhsuk-subheader-item">
-                  <a class="nhsuk-subheader-link" href="/">
-                    Lorem
-                    <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                    </svg>
-                  </a>
-                </li>
-                <li class="nhsuk-subheader-item">
-                  <a class="nhsuk-subheader-link" href="/">
-                    Ipsum
-                    <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                    </svg>
-                  </a>
-                </li>
-                <li class="nhsuk-subheader-item">
-                  <a class="nhsuk-subheader-link" href="/">
-                    Dolor Set
-                    <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                    </svg>
-                  </a>
-                </li>
-                <li class="nhsuk-subheader-item">
-                  <a class="nhsuk-subheader-link" href="/">
-                    Amet
-                    <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                    </svg>
-                  </a>
-                </li>
-            </ul>
-          </li>
-          <li class="nhsuk-header__navigation-item">
-            <a class="nhsuk-header__navigation-link" href="/landing">
-              Learning and development
-              <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-              </svg>
-            </a>
-          </li>
-          <li class="nhsuk-header__navigation-item">
-            <a class="nhsuk-header__navigation-link" href="/landing">
-              Mobilising knowledge
-              <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-              </svg>
-            </a>
-          </li>
-          <li class="nhsuk-header__navigation-item nhsuk-subheader" aria-haspopup="true" aria-expanded="false">
-            <a class="nhsuk-header__navigation-link" href="#">
-              <span class="nhsuk-header__link-text">Patient information</span>
-              <span class="nhsuk-header__back-text">Back</span>
-              <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-              </svg>
-              <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
-              </svg>
-            </a>
-            <ul class="nhsuk-subheader__list">
-              <li class="nhsuk-subheader-item">
-                <a class="nhsuk-subheader-link" href="/landing">
-                  Patient information
-                </a>
-              </li>
-                <li class="nhsuk-subheader-item">
-                  <a class="nhsuk-subheader-link" href="/">
-                    Lorem
-                    <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                    </svg>
-                  </a>
-                </li>
-                <li class="nhsuk-subheader-item">
-                  <a class="nhsuk-subheader-link" href="/">
-                    Ipsum
-                    <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                    </svg>
-                  </a>
-                </li>
-                <li class="nhsuk-subheader-item">
-                  <a class="nhsuk-subheader-link" href="/">
-                    Dolor Set
-                    <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                    </svg>
-                  </a>
-                </li>
-                <li class="nhsuk-subheader-item">
-                  <a class="nhsuk-subheader-link" href="/">
-                    Amet
-                    <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                    </svg>
-                  </a>
-                </li>
-            </ul>
-          </li>
-          <li class="nhsuk-header__navigation-item nhsuk-subheader" aria-haspopup="true" aria-expanded="false">
-            <a class="nhsuk-header__navigation-link" href="#">
-              <span class="nhsuk-header__link-text">Resource discovery</span>
-              <span class="nhsuk-header__back-text">Back</span>
-              <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-              </svg>
-              <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
-              </svg>
-            </a>
-            <ul class="nhsuk-subheader__list">
-              <li class="nhsuk-subheader-item">
-                <a class="nhsuk-subheader-link" href="/landing">
-                  Resource discovery
-                </a>
-              </li>
-                <li class="nhsuk-subheader-item">
-                  <a class="nhsuk-subheader-link" href="/">
-                    Lorem
-                    <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                    </svg>
-                  </a>
-                </li>
-                <li class="nhsuk-subheader-item">
-                  <a class="nhsuk-subheader-link" href="/">
-                    Ipsum
-                    <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                    </svg>
-                  </a>
-                </li>
-                <li class="nhsuk-subheader-item">
-                  <a class="nhsuk-subheader-link" href="/">
-                    Dolor Set
-                    <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                    </svg>
-                  </a>
-                </li>
-                <li class="nhsuk-subheader-item">
-                  <a class="nhsuk-subheader-link" href="/">
-                    Amet
-                    <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                    </svg>
-                  </a>
-                </li>
-            </ul>
-          </li>
-          <li class="nhsuk-header__navigation-item nhsuk-subheader" aria-haspopup="true" aria-expanded="false">
-            <a class="nhsuk-header__navigation-link" href="#">
-              <span class="nhsuk-header__link-text">About</span>
-              <span class="nhsuk-header__back-text">Back</span>
-              <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-              </svg>
-              <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
-              </svg>
-            </a>
-            <ul class="nhsuk-subheader__list">
-              <li class="nhsuk-subheader-item">
-                <a class="nhsuk-subheader-link" href="/landing">
-                  About
-                </a>
-              </li>
-                <li class="nhsuk-subheader-item">
-                  <a class="nhsuk-subheader-link" href="/">
-                    Lorem
-                    <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                    </svg>
-                  </a>
-                </li>
-                <li class="nhsuk-subheader-item">
-                  <a class="nhsuk-subheader-link" href="/">
-                    Ipsum
-                    <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                    </svg>
-                  </a>
-                </li>
-                <li class="nhsuk-subheader-item">
-                  <a class="nhsuk-subheader-link" href="/">
-                    Dolor Set
-                    <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                    </svg>
-                  </a>
-                </li>
-                <li class="nhsuk-subheader-item">
-                  <a class="nhsuk-subheader-link" href="/">
-                    Amet
-                    <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                    </svg>
-                  </a>
-                </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </nav>
+### Nunjucks arguments
 
+The emergencyAlert macro takes the following arguments:
+
+| Name                                    | Type     | Required  | Description  |
+| ----------------------------------------|----------|-----------|--------------|
+| **showNav**                             | boolean  | No        | Set to "true" to show the navigation links in the header. |
+| **showSearch**                          | boolean  | No        | Set to "true" to show the site search input form. |
+| **organisation**                        | object   | Yes       | Settings for header with organisational logo. |
+| **organisation.name**                   | string   | Yes       | Organisation name value. |
+| **organisation.descriptor**             | string   | No        | Organisation descriptor. |
+| **organisation.logoURL**                | string   | No        | Organisation logo if using a static asset, such as PNG, is preferred. |
+| **organisation.split**                  | string   | No        | Use for long names that should be split over multiple lines |
+| **logos**                               | object   | No        | Logo object for multi logo banner |
+| **logos.en**                            | boolean  | No        | Logo for England |
+| **logos.ni**                            | boolean  | No        | Logo for Northern Ireland |
+| **logos.scot**                          | boolean  | No        | Logo for Scotland |
+| **logos.wales**                         | boolean  | No        | Logo for Wales |
+| **logos.fpo**                           | boolean  | No        | Logo for FPO, disables other logos |
+| **primaryLinks**                        | array    | No        | Array of navigation links for use in the header. |
+| **primaryLinks.object**                 | object   | No        | Onject containing navigation tree |
+| **primaryLinks.object.url**             | string   | No        | The href of a navigation item in the header. |
+| **primaryLinks.object.label**           | string   | No        | The label of a navigation item in the header. |
+| **primaryLinks.object.children**        | object   | No        | Second level navigation objects |
+| **primaryLinks.object.children.url**    | string   | No        | The href of a navigation item in the header. |
+| **primaryLinks.object.children.label**  | string   | No        | The label of a navigation item in the header. |
+| **attributes**                          | object   | No        | HTML attributes (for example data attributes) to add to the header container. |
+| **classes**                             | string   | No        | Classes to add to the header container. |
+| **homeHref**                            | string   | No        | The "href" of the link for the logo and mobile home link in the navigation links. Defaults to "/" |
+| **homeText**                            | string   | No        | Text for "Home" link in mobile navigation menu |
+| **ariaLabel**                           | string   | No        | 	Aria label for the logo href. Defaults to "NHS homepage". |
+| **service**                             | object   | No        | NHS property, removed |
+| **service.name**                        | string   | No        | NHS property, removed |
+| **searchAction**                        | string   | No        | Custom search action endpoint. |
+| **searchInputName**                     | string   | No        | The name for the search field. Defaults to "q" |
+| **transactionalService**                | removed  | No        | NHS property, removed |
+| **transactionalService.longName**       | removed  | No        | NHS property, removed |
+| **transactionalService.href**           | removed  | No        | NHS property, removed |
+
+
+
+
+
+
+If you are using Nunjucks macros in production be aware that using `html` arguments, or ones ending with `html` can be a [security risk](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting). Read more about this in the [Nunjucks documentation](https://mozilla.github.io/nunjucks/api.html#user-defined-templates-warning).

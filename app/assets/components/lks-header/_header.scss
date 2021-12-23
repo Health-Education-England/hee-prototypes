@@ -1,7 +1,6 @@
 /* ==========================================================================
    COMPONENTS / #HEADER
    ========================================================================== */
-
 /**
  * The behaviour with regards to responsiveness is as follow:
  *
@@ -42,6 +41,164 @@
  * 20. Add nhsuk-spacing(9) to align right and left main nav with header
  */
 
+// color changes
+.nhsuk-header {
+  background: $color_nhsuk-white;
+
+  &__navigation-list {
+    border-top: none;
+  }
+
+  .nhsuk-header__logo .nhsuk-logo__background {
+    background: $color_nhsuk-white;
+  }
+}
+
+.nhsuk-organisation-name,
+.nhsuk-organisation-descriptor {
+  color: $nhsuk-text-color;
+}
+
+.autocomplete__input,
+.nhsuk-search__submit {
+  border: 1px solid $color_nhsuk-grey-3;
+}
+
+.autocomplete__input {
+  border-right: 0;
+}
+
+.nhsuk-header__search-toggle {
+  background: $color_nhsuk-blue;
+
+  &.is-active {
+    .nhsuk-icon__search {
+      fill: $color_nhsuk-white;
+    }
+  }
+  &:hover {
+    .nhsuk-icon__search {
+      fill: $color_nhsuk-white;
+    }
+  }
+  &:focus {
+    .nhsuk-icon__search {
+      fill: $nhsuk-focus-text-color;
+    }
+  }
+}
+
+@include mq($until: tablet) {
+  .nhsuk-search__submit {
+    border-color: $nhsuk-button-color;
+
+    &:hover {
+      border-color: $nhsuk-button-color;
+    }
+    &:focus {
+      border-color: $nhsuk-focus-color;
+    }
+  }
+}
+
+.nhsuk-header__menu-toggle {
+  background-color: $color_nhsuk-blue;
+}
+
+
+// multi logo header
+
+.nhsuk-header__multi {
+  background: $color_nhsuk-white;
+
+  .autocomplete__input {
+    border-color: $nhsuk-border-color;
+  }
+
+  .nhsuk-header__menu-toggle,
+  .nhsuk-header__search-toggle{
+    background-color: $color_nhsuk-blue;
+
+    &:focus {
+      color: $color_nhsuk-white;
+      background: #003d78;
+
+      .nhsuk-icon {
+        fill: $color_nhsuk-white;
+      }
+    }
+
+    &:hover,
+    &:active {
+      background: #003d78;
+    }
+  }
+}
+
+.nhsuk-header__multi-logo {
+  display: flex;
+  margin-bottom: nhsuk-spacing(4);
+
+  span {
+    margin-right: nhsuk-spacing(4);
+
+    @include mq($until: desktop) {
+      margin-right: nhsuk-spacing(2);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    img {
+      width: auto;
+      height: 64px;
+    }
+  }
+
+  @include mq($from: tablet, $until: large-desktop) {
+    span img {
+      height: 48px;
+    }
+  }
+
+  @include mq($until: tablet) {
+    flex-direction: column;
+
+    span {
+      margin: 0 0 nhsuk-spacing(2);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      img {
+        height: 48px;
+      }
+    }
+  }
+}
+
+.nhsuk-header__multi-logo-organisation-name {
+  float: left;
+
+  .nhsuk-organisation-name {
+    color: $nhsuk-text-color;
+  }
+
+  .nhsuk-organisation-descriptor {
+    color: $color_nhsuk-blue;
+  }
+
+  @include mq($until: tablet) {
+    position: relative;
+    z-index: 1;
+    max-width: 50%;
+  }
+}
+
+
+
 
 /* Main navigation
  *
@@ -71,6 +228,10 @@
   list-style: none;
   margin: 0;
   padding-left: 0;
+
+  &.nhsuk-header__multiLogo {
+    border-top: none;
+  }
 
   &.submenu-open {
     .nhsuk-header__navigation-item {
@@ -140,7 +301,7 @@
       font-weight: 400;
       border-bottom: 4px solid transparent;
       border-top: 4px solid transparent;
-      color: #005eb8;
+      color: $nhsuk-link-color;
 
       &:visited {
         color: $nhsuk-link-color;
