@@ -41,17 +41,6 @@
  * 20. Add nhsuk-spacing(9) to align right and left main nav with header
  */
 
-// color changes
-.nhsuk-header {
-
-  &__navigation-list {
-    border-top: none;
-  }
-
-  .nhsuk-header__logo .nhsuk-logo__background {
-    background: $color_nhsuk-white;
-  }
-}
 
 .nhsuk-organisation-name,
 .nhsuk-organisation-descriptor {
@@ -107,14 +96,6 @@
 
 .nhsuk-header__multi-logo-organisation-name {
   float: left;
-
-  .nhsuk-organisation-name {
-    color: $nhsuk-text-color;
-  }
-
-  .nhsuk-organisation-descriptor {
-    color: $color_nhsuk-blue;
-  }
 
   @include mq($until: tablet) {
     position: relative;
