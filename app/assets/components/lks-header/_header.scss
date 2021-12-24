@@ -43,7 +43,6 @@
 
 // color changes
 .nhsuk-header {
-  background: $color_nhsuk-white;
 
   &__navigation-list {
     border-top: none;
@@ -59,81 +58,8 @@
   color: $nhsuk-text-color;
 }
 
-.autocomplete__input,
-.nhsuk-search__submit {
-  border: 1px solid $color_nhsuk-grey-3;
-}
-
-.autocomplete__input {
-  border-right: 0;
-}
-
-.nhsuk-header__search-toggle {
-  background: $color_nhsuk-blue;
-
-  &.is-active {
-    .nhsuk-icon__search {
-      fill: $color_nhsuk-white;
-    }
-  }
-  &:hover {
-    .nhsuk-icon__search {
-      fill: $color_nhsuk-white;
-    }
-  }
-  &:focus {
-    .nhsuk-icon__search {
-      fill: $nhsuk-focus-text-color;
-    }
-  }
-}
-
-@include mq($until: tablet) {
-  .nhsuk-search__submit {
-    border-color: $nhsuk-button-color;
-
-    &:hover {
-      border-color: $nhsuk-button-color;
-    }
-    &:focus {
-      border-color: $nhsuk-focus-color;
-    }
-  }
-}
-
-.nhsuk-header__menu-toggle {
-  background-color: $color_nhsuk-blue;
-}
-
-
 // multi logo header
 
-.nhsuk-header__multi {
-  background: $color_nhsuk-white;
-
-  .autocomplete__input {
-    border-color: $nhsuk-border-color;
-  }
-
-  .nhsuk-header__menu-toggle,
-  .nhsuk-header__search-toggle{
-    background-color: $color_nhsuk-blue;
-
-    &:focus {
-      color: $color_nhsuk-white;
-      background: #003d78;
-
-      .nhsuk-icon {
-        fill: $color_nhsuk-white;
-      }
-    }
-
-    &:hover,
-    &:active {
-      background: #003d78;
-    }
-  }
-}
 
 .nhsuk-header__multi-logo {
   display: flex;
