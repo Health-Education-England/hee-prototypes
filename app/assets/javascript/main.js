@@ -1,5 +1,6 @@
 // Components
 import AnchorLinks from '../components/anchorlinks/anchor-links';
+import Cookies from '../components/cookies/cookies';
 import Filter from '../components/filter/filter';
 import FilterTag from '../components/filter-tag/filter-tag';
 import Listing from '../components/listing/listing';
@@ -13,6 +14,7 @@ import './polyfills';
 // Initialize components
 document.addEventListener('DOMContentLoaded', () => {
   AnchorLinks();
+  Cookies();
   Filter();
   FilterTag();
   Listing();
