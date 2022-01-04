@@ -15,6 +15,11 @@ export default () => {
     addEventListeners() {
       if (this.toggleLink) {
         this.toggleLink.addEventListener('mousedown', event => this.toggleMenu(event))
+        this.toggleLink.addEventListener('keyup', event => {
+          if (event.keyCode === 13) {
+            this.toggleMenu(event)
+          }
+        })
       }
     }
 
@@ -67,11 +72,20 @@ export default () => {
   }) */
 
   const closeMenu = document.querySelector("#close-menu");
+
   closeMenu && closeMenu.addEventListener('mousedown', function(){
     document.querySelector("#toggle-menu").focus()
   })
 
-  document.addEventListener('mousedown', event => {
+  document.addEventListener('keyup', event => {
+    if (event.keyCode === 13) {
+      userInput(event)
+    }
+  })
+
+  document.addEventListener('mousedown', userInput) 
+  
+  function userInput(event) {
     // close menu if clicking outside
     const openMenu = document.querySelector(".nhsuk-header__navigation.js-show")
     if(openMenu){
@@ -92,5 +106,5 @@ export default () => {
         document.querySelector(".nhsuk-header__navigation-list").classList.remove("submenu-open")
       }
     }
-  })
+  }
 }
