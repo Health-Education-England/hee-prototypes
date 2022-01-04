@@ -1,11 +1,21 @@
 .nhsuk-tabs {
 	margin: 0 0 48px;
 	position: relative;
+
+  .nhsuk-tabs__desktop {
+    
+  }
+
+  .nhsuk-tabs__mobile {
+    
+  }
+
 	.nhsuk-tabs__list {
 		display: flex;
 		justify-content: space-between;
 		list-style: none;
 		padding: 0;
+
 		.nhsuk-tabs__list-item {
 			border-bottom: 0;
 			border: 1px solid #fff;
@@ -26,6 +36,7 @@
 			text-decoration: none;
 			width: 100%;
 			cursor: pointer;
+
 			&:focus {
 				background: #ffeb3b;
 				background-image: url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__plus' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='32' aria-hidden='true'%3E%3Ccircle cx='12' cy='12' r='10' fill='none'%3E%3C/circle%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M12 8v8M8 12h8'%3E%3C/path%3E%3C/svg%3E%0A");
@@ -35,11 +46,13 @@
 				color: #212b32;
 				text-decoration: none;
 			}
+
 			&:active {
 				background-image: url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__plus' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='32' aria-hidden='true'%3E%3Ccircle cx='12' cy='12' r='10' fill='none'%3E%3C/circle%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M12 8v8M8 12h8'%3E%3C/path%3E%3C/svg%3E%0A");
 				color: #212b32;
 			}
 		}
+
 		.nhsuk-tabs__list-item.nhsuk-tabs__list-item--selected {
 			background: #ffeb3b;
       background-image: url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__minus' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='32' aria-hidden='true'%3E%3Ccircle cx='12' cy='12' r='10' fill='none'%3E%3C/circle%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M8 12h8'%3E%3C/path%3E%3C/svg%3E%0A");
@@ -51,14 +64,17 @@
 			cursor: unset;
 		}
 	}
+
 	.nhsuk-tabs__panel {
 		@include nhsuk-responsive-margin(0, "bottom");
+
 		border: 1px solid $nhsuk-border-color;
 		border-top: 0;
 		padding: nhsuk-spacing(6) nhsuk-spacing(4);
 		background-color: #fff;
 		border-bottom: 1px solid #d8dde0;
 		padding: 16px;
+
 		img {
 			max-width: 100%;
 		}
