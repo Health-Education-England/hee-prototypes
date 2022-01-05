@@ -35,20 +35,20 @@
       {% for item in params.items %}
         {% if item %}
           <button
-            class="nhsuk-tabs__list-item{% if loop.index == 1 %} nhsuk-tabs__list-item--selected{% endif %}"
+            class="nhsuk-tabs__list-item"
             role="tab"
-            aria-selected="{% if loop.index == 1 %}true{% else %}false{% endif %}"
-            aria-controls="{{ params.uniqueId }}-panel-{{ loop.index }}"
-            id="{{ params.uniqueId }}-tab-{{ loop.index }}"
+            aria-selected="false"
+            aria-controls="{{ params.uniqueId }}-panel-mobile-{{ loop.index }}"
+            id="{{ params.uniqueId }}-tab-mobile-{{ loop.index }}"
             tabindex="0"
           >
             {{ item.label }}
           </button>
           <div
             class="nhsuk-tabs__panel"
-            id="{{ params.uniqueId }}-panel-{{ loop.index }}"
+            id="{{ params.uniqueId }}-panel-mobile-{{ loop.index }}"
             role="tabpanel" tabindex="0"
-            aria-labelledby="{{ params.uniqueId }}-tab-{{ loop.index }}"{% if loop.index > 1 %} hidden{% endif %}
+            aria-labelledby="{{ params.uniqueId }}-tab-mobile-{{ loop.index }}" hidden
           >
             {{ item.panel.html | safe if item.panel.html else item.panel.text }}
           </div>
