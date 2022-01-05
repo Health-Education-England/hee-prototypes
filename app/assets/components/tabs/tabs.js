@@ -39,6 +39,8 @@ export default () => {
         }
       })
 
+    }
+
     changeTabs(e) {
       console.log(e);
       const target = e.target
