@@ -42,13 +42,13 @@ export default () => {
     }
 
     changeTabs(e) {
-      console.log(e);
+      // console.log(e);
       const target = e.target
-      console.log(target);
+      // console.log(target);
       const parent = target.parentNode
-      console.log(parent);
+      // console.log(parent);
       const grandparent = parent.parentNode
-      console.log(grandparent);
+      // console.log(grandparent);
 
       // Remove all current selected tabs
       this.removeSelected(parent)
@@ -84,7 +84,7 @@ export default () => {
     }
 
     showSelected(ele, target) {
-      console.log(ele.querySelector(`#${target.getAttribute("aria-controls")}`))
+      // console.log(ele.querySelector(`#${target.getAttribute("aria-controls")}`))
       ele
         .querySelector(`#${target.getAttribute("aria-controls")}`)
         .removeAttribute("hidden")
