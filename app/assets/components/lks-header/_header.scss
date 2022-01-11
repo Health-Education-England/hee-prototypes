@@ -42,17 +42,28 @@
  */
 
 
-.nhsuk-organisation-name,
-.nhsuk-organisation-descriptor {
+.nhsuk-header__container {
+  padding: nhsuk-spacing(8) 0;
+}
+
+.nhsuk-header--white .nhsuk-organisation-name {
+  margin-bottom: 8px;
+  font-size: 32px;
+  line-height: 1.25;
   color: $nhsuk-text-color;
 }
 
-// multi logo header
+.nhsuk-header--white .nhsuk-organisation-descriptor {
+  font-size: 24px;
+  line-height: 1.5;
+}
 
+
+// multi logo header
 
 .nhsuk-header__multi-logo {
   display: flex;
-  margin-bottom: nhsuk-spacing(4);
+  margin-bottom: nhsuk-spacing(2);
 
   span {
     margin-right: nhsuk-spacing(4);
@@ -103,9 +114,6 @@
     max-width: 50%;
   }
 }
-
-
-
 
 /* Main navigation
  *
