@@ -1,7 +1,6 @@
 /* ==========================================================================
    COMPONENTS / #HEADER
    ========================================================================== */
-
 /**
  * The behaviour with regards to responsiveness is as follow:
  *
@@ -43,6 +42,71 @@
  */
 
 
+.nhsuk-organisation-name,
+.nhsuk-organisation-descriptor {
+  color: $nhsuk-text-color;
+}
+
+// multi logo header
+
+
+.nhsuk-header__multi-logo {
+  display: flex;
+  margin-bottom: nhsuk-spacing(4);
+
+  span {
+    margin-right: nhsuk-spacing(4);
+
+    @include mq($until: desktop) {
+      margin-right: nhsuk-spacing(2);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    img {
+      width: auto;
+      height: 64px;
+    }
+  }
+
+  @include mq($from: tablet, $until: large-desktop) {
+    span img {
+      height: 48px;
+    }
+  }
+
+  @include mq($until: tablet) {
+    flex-direction: column;
+
+    span {
+      margin: 0 0 nhsuk-spacing(2);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      img {
+        height: 48px;
+      }
+    }
+  }
+}
+
+.nhsuk-header__multi-logo-organisation-name {
+  float: left;
+
+  @include mq($until: tablet) {
+    position: relative;
+    z-index: 1;
+    max-width: 50%;
+  }
+}
+
+
+
+
 /* Main navigation
  *
  * Appears below the header strip
@@ -71,6 +135,10 @@
   list-style: none;
   margin: 0;
   padding-left: 0;
+
+  &.nhsuk-header__multiLogo {
+    border-top: none;
+  }
 
   &.submenu-open {
     .nhsuk-header__navigation-item {
@@ -140,7 +208,7 @@
       font-weight: 400;
       border-bottom: 4px solid transparent;
       border-top: 4px solid transparent;
-      color: #005eb8;
+      color: $nhsuk-link-color;
 
       &:visited {
         color: $nhsuk-link-color;
@@ -231,7 +299,7 @@
     .nhsuk-header__navigation-link {
 
       .nhsuk-icon {
-        top: 0;
+        top: calc(50% - 34px);
         transform: translateY(50%);
         fill: $color_nhsuk-white;
       }

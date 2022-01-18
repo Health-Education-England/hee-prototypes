@@ -32,7 +32,7 @@ export default () => {
       this.container.classList.add('nhsuk-filter--js');
 
       // Close groups
-      this.groups.forEach(group => group.classList.add('nhsuk-filter__group--closed'));
+      // this.groups.forEach(group => group.classList.add('nhsuk-filter__group--closed'));
 
       // Hide submit button
       if (this.submit) {

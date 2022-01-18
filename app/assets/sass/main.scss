@@ -14,14 +14,16 @@
 ///////////////////////////////////////////
 // Components that are not in the NHS.UK frontend library
 ///////////////////////////////////////////
+
+@import '../components/cookies/cookies';
 @import '../components/emergency-alert/emergency-alert';
 @import '../components/filter/filter';
 @import '../components/filter-tag/filter-tag';
 @import '../components/homepage-section/homepage-section';
+@import '../components/image/image';
 @import '../components/related-links-card/related-links-card';
 @import '../components/related-nav/related-nav';
 @import '../components/blocklinks/blocklinks';
-@import '../components/image/image';
 @import '../components/search/search';
 @import '../components/lks-header/_header';
 @import '../components/contact/contact';
