@@ -3,8 +3,6 @@ $contact-border-bottom-width: nhsuk-spacing(1);
 $contact-border-color: $color_nhsuk-grey-4;
 $contact-border-hover-color: $color_nhsuk-grey-3;
 
-/* test comment */
-
 .nhsuk-contact {
   @include nhsuk-responsive-margin(7, 'bottom');
 
