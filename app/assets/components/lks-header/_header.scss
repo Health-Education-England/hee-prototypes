@@ -56,11 +56,18 @@
   font-size: 32px;
   line-height: 1.25;
   color: $nhsuk-text-color;
+
+  @include mq($until: desktop) {
+    font-size: 24px;
+  }
 }
 
 .nhsuk-header--white .nhsuk-organisation-descriptor {
   font-size: 24px;
   line-height: 1.5;
+  @include mq($until: desktop) {
+    font-size: 22px;
+  }
 }
 
 .nhsuk-header__content {
