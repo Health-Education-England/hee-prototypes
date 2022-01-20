@@ -2,11 +2,11 @@
   min-width: 288px;
   margin: nhsuk-spacing(6) 0 80px;
   background: #fff;
-  padding: 0;
-  border-bottom: 4px solid #d8dde0;
+  padding: nhsuk-spacing(4) 0;
+  border-bottom: 4px solid $nhsuk-border-color;
 
   h2 {
-    margin: 0 0 nhsuk-spacing(6) nhsuk-spacing(3);
+    margin: 0 nhsuk-spacing(4) nhsuk-spacing(4);
   }
 
   iframe {
@@ -31,8 +31,16 @@
     }
   }
 
+  .nhsuk-media__description {
+    padding: 0 nhsuk-spacing(4) nhsuk-spacing(4);
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   .nhsuk-media__info {
-    padding: nhsuk-spacing(4);
+    padding: nhsuk-spacing(4) nhsuk-spacing(4) 0;
   }
 
   .nhsuk-media__reviews {
