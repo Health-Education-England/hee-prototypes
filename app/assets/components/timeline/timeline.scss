@@ -5,17 +5,17 @@
 }
 
 .nhs-uk__timeline-card {
+  position: relative;
   margin-top: nhsuk-spacing(5);
-  padding: nhsuk-spacing(4);
+  padding: nhsuk-spacing(5) nhsuk-spacing(4) nhsuk-spacing(4);
   background: $color_nhsuk-white;
   border: 1px solid #D8DDE0;
 
   h3 {
-    position: relative;
-    top: -(nhsuk-spacing(8));
-    left: -(nhsuk-spacing(4));
-    margin-bottom: -(nhsuk-spacing(5));
-    width: calc(100% - 24px);
+    position: absolute;
+    top: -(nhsuk-spacing(5));
+    left: 0;
+    width: calc(100% - 64px);
     padding: nhsuk-spacing(3);
     color: $color_nhsuk-white;
     font-size: 1.5rem;
@@ -23,11 +23,11 @@
   }
 
   h4 {
-    margin-top: 48px;
+    margin-top: nhsuk-spacing(7);
     font-size: 1.5rem;
 
     &:first-of-type {
-      margin-top: nhsuk-spacing(4);
+      margin-top: nhsuk-spacing(6);
     }
   }
 
@@ -37,17 +37,28 @@
       padding: nhsuk-spacing(3) 0;
     }
 
+    .nhsuk-grid-column-one-third,
+    .nhsuk-grid-column-two-thirds {
+      float: left;
+    }
+    .nhsuk-grid-column-one-third {
+      width: 33.33%;
+    }
+    .nhsuk-grid-column-two-thirds {
+      width: 66.66%;
+    }
+
   }
 
   > div {
-    .nhsuk-grid-row:first-of-type > div {
+    .nhsuk-grid-row > div:first-of-type {
       padding-top: 0;
     }
   }
 
   hr {
     padding: 0;
-    margin: 0 0 nhsuk-spacing(1);
+    margin: 0 nhsuk-spacing(3) nhsuk-spacing(1);
 
     &:last-of-type {
       margin-bottom: nhsuk-spacing(4);

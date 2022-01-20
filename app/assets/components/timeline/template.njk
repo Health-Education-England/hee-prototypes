@@ -1,7 +1,7 @@
 {% if params.title %}
   <h2>{{ params.title | safe }}</h2>
 {% else %}
-  <h2>Timeline</h2>
+  <h2>Timeline Component</h2>
 {% endif %}
 
 {% if params.start %}
@@ -40,63 +40,53 @@
                   {% endif %}
                 </span>
               </div>
-            </div>
-            <hr>
-            {% if item.time %}
-              <div class="nhsuk-grid-row">
+              <hr>
+              {% if item.time %}
                 <div>
                   <span class="nhsuk-grid-column-one-third"><b>Time</b></span>
                   <span class="nhsuk-grid-column-two-thirds">
                       {{ item.time }}
                   </span>
                 </div>
-              </div>
-              <hr>
-            {% endif %}
-            {% if item.location %}
-              <div class="nhsuk-grid-row">
+                <hr>
+              {% endif %}
+              {% if item.location %}
                 <div>
                   <span class="nhsuk-grid-column-one-third"><b>Location</b></span>
                   <span class="nhsuk-grid-column-two-thirds">
                       {{ item.location }}
                   </span>
                 </div>
-              </div>
-              <hr>
-            {% endif %}
-            {% if item.contact %}
-              <div class="nhsuk-grid-row">
+                <hr>
+              {% endif %}
+              {% if item.contact %}
                 <div>
                   <span class="nhsuk-grid-column-one-third"><b>Contact</b></span>
                   <span class="nhsuk-grid-column-two-thirds">
                       <a href="mailto:{{ item.contact }}" >{{ item.contact }}</a>
                   </span>
                 </div>
-              </div>
-              <hr>
-            {% endif %}
-            {% if item.link %}
-              <div class="nhsuk-grid-row">
+                <hr>
+              {% endif %}
+              {% if item.link %}
                 <div>
                   <span class="nhsuk-grid-column-one-third"><b>Link</b></span>
                   <span class="nhsuk-grid-column-two-thirds">
                     <a href="{{ item.link }}" target="_blank">Link (Opens in new window)</a>
                   </span>
                 </div>
-              </div>
-              <hr>
-            {% endif %}
-            {% if item.text %}
-              <div class="nhsuk-grid-row">
+                <hr>
+              {% endif %}
+              {% if item.text %}
                 <div>
-                   <span class="nhsuk-grid-column-one-third"><b>Details</b></span>
+                    <span class="nhsuk-grid-column-one-third"><b>Details</b></span>
                   <span class="nhsuk-grid-column-two-thirds">
                     {{ item.text }}
                   </span>
                 </div>
-              </div>
-              <hr>
-            {% endif %}
+                <hr>
+              {% endif %}
+            </div>
           </div>
         {% endfor %}
       </div>
