@@ -17,6 +17,11 @@
 
 .nhsuk-phase-banner__content__tag {
   margin-right: nhsuk-spacing(2);
+
+  @include mq($until: desktop) {
+    line-height: 1.5;
+  }
+
 }
 
 .nhsuk-tag {
