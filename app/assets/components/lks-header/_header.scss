@@ -140,8 +140,11 @@
 }
 
 .nhsuk-header__multi-logo-organisation-name {
-  max-width: 50%;
+  width: 50%;
 
+  @include mq($until: desktop) {
+    max-width: 50%;
+  }
   @include mq($until: tablet) {
     position: relative;
     z-index: 1;
