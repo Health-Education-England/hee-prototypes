@@ -51,6 +51,12 @@
   }
 }
 
+.nhsuk-header__logo {
+  @include mq($until: large-desktop) {
+    width: 50%;
+  }
+}
+
 .nhsuk-header--white .nhsuk-organisation-name {
   margin-bottom: 8px;
   font-size: 32px;
