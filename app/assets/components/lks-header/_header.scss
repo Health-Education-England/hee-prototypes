@@ -42,13 +42,58 @@
  */
 
 
-.nhsuk-organisation-name,
-.nhsuk-organisation-descriptor {
+.nhsuk-header__container {
+  padding: nhsuk-spacing(8) 0;
+
+  @include mq($from: tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.nhsuk-header--white .nhsuk-organisation-name {
+  margin-bottom: 8px;
+  font-size: 32px;
+  line-height: 1.25;
   color: $nhsuk-text-color;
+
+  @include mq($until: desktop) {
+    font-size: 24px;
+  }
+}
+
+.nhsuk-header--white .nhsuk-organisation-descriptor {
+  font-size: 24px;
+  line-height: 1.5;
+  @include mq($until: desktop) {
+    font-size: 22px;
+  }
+}
+
+.nhsuk-header__content {
+  @include mq($from: tablet) {
+    align-self: flex-end;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+
+    .nhsuk-header__menu,
+    .nhsuk-header__search {
+      float: none;
+    }
+  }
+
+  .nhsuk-search__input {
+    @include mq($from: tablet) {
+      width: 166px;
+    }
+    @include mq($from: desktop) {
+      width: 214px;
+    }
+  }
 }
 
 // multi logo header
-
 
 .nhsuk-header__multi-logo {
   display: flex;
@@ -95,17 +140,17 @@
 }
 
 .nhsuk-header__multi-logo-organisation-name {
-  float: left;
+  width: 50%;
 
+  @include mq($until: desktop) {
+    max-width: 50%;
+  }
   @include mq($until: tablet) {
     position: relative;
     z-index: 1;
-    max-width: 50%;
+    float: left;
   }
 }
-
-
-
 
 /* Main navigation
  *
