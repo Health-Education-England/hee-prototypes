@@ -146,6 +146,13 @@
   }
 }
 
+.nhsuk-header__clear {
+width: 100%;
+  clear: both;
+  content: '';
+  display: block;
+}
+
 .nhsuk-header__multi-logo-organisation-name {
   width: 50%;
 
