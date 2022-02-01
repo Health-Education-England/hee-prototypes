@@ -52,9 +52,7 @@
 }
 
 .nhsuk-header__logo {
-  @include mq($until: large-desktop) {
-    width: 50%;
-  }
+  width: 50%;
 }
 
 .nhsuk-header--white .nhsuk-organisation-name {
