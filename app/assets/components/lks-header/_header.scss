@@ -39,6 +39,7 @@
  * 18. Remove random top margin in Safari
  * 19. Align close icon with nav item arrow icons
  * 20. Add nhsuk-spacing(9) to align right and left main nav with header
+ * 21. Add style for Bloomreach so that editors can see multi-logo div
  */
 
 
@@ -98,6 +99,11 @@
 }
 
 // multi logo header
+
+// specifically for bloomreach editing
+.hst-container.hippo-overlay-box {
+  width: 100%!important;
+}
 
 .nhsuk-header__multi-logo {
   display: flex;
