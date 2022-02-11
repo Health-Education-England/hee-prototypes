@@ -143,7 +143,6 @@ The contact Nunjucks macro takes the following arguments:
 | **displayPhoneNumber**       | boolean  | No        | Set true to render phoneNumber
 | **email**                    | integer  | No        | Department Name string
 | **displayEmail**             | boolean  | No        | Set true to render email
-| **address**                  | integer  | No        | Address string (one block)
 | **addressLine1**             | string   | No        | Address string (individual lines)
 | **addressLine2**             | string   | No        | Address string (individual lines)
 | **addressLine3**             | string   | No        | Address string (individual lines)
@@ -153,5 +152,7 @@ The contact Nunjucks macro takes the following arguments:
 | **displayAddress**           | boolean  | No        | Set true to render address
 | **details**                  | string   | No        | Secondary details for the contact
 | **displayDetails**           | boolean  | No        | Set true to render details
+| **viewMore**                 | string   | No        | The URL of the "view more" link
+
 
 If you are using Nunjucks macros in production be aware that using `html` arguments, or ones ending with `html` can be a [security risk](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting). Read more about this in the [Nunjucks documentation](https://mozilla.github.io/nunjucks/api.html#user-defined-templates-warning).

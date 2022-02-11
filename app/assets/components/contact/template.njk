@@ -36,12 +36,6 @@
   {% endif %}
 {%- endset -%}
 
-{%- set address %}
-  {% if params.address and params.displayAddress %}
-    true
-  {% endif %}
-{% endset %}
-
 {%- set addressLines %}
   {% if params.addressLine1 or params.addressLine2 or params.addressLine3 or params.addressCity or params.addressCounty or params.addressPostcode and params.displayAddress %}
     true
@@ -132,48 +126,58 @@
           </p>
         {% endif %}
 
-        {%- if email %}
+        {% if email %}
           <p aria-label="Email" >
             <a href="mailto:{{ params.email | safe }}" title="Opens email" >{{ params.email | safe }}</a>
           </p>
-        {%- endif %}
+        {% endif %}
 
-        {%- if address %}
-          <p aria-label="Address" >{{ params.address | safe }}</p>
-        {%- endif %}
-
-        {%- if addressLines %}
+        {% if addressLines %}
           <p aria-label="Address" >
-            {%- if params.addressLine1 %}
+            {% if params.addressLine1 %}
               {{ params.addressLine1 | safe }}<br>
-            {%- endif %}
+            {% endif %}
 
-            {%- if params.addressLine2 %}
+            {% if params.addressLine2 %}
               {{ params.addressLine2 | safe }}<br>
-            {%- endif %}
+            {% endif %}
 
-            {%- if params.addressLine3 %}
+            {% if params.addressLine3 %}
               {{ params.addressLine3 | safe }}<br>
-            {%- endif %}
+            {% endif %}
 
-            {%- if params.addressCity %}
+            {% if params.addressCity %}
               {{ params.addressCity | safe }}<br>
-            {%- endif %}
+            {% endif %}
 
-            {%- if params.addressCounty %}
+            {% if params.addressCounty %}
               {{ params.addressCounty | safe }}<br>
-            {%- endif %}
+            {% endif %}
 
-            {%- if params.addressPostcode %}
+            {% if params.addressPostcode %}
               {{ params.addressPostcode | safe }}
-            {%- endif %}
+            {% endif %}
           </p>
-        {%- endif %}
+        {% endif %}
 
-        {%- if details %}
+        {% if details %}
           <p class="nhsuk-u-secondary-text-color" aria-label="Details" >{{ params.details | safe }}</p>
-        {%- endif %}
+        {% endif %}
+
+        {% if params.viewLink %}
+          <p>
+            <a href="{{ params.viewLink | safe }}" aria-label="View More" >
+              View more
+              {% if params.name and params.title and params.displayName === true %}
+                about {{ params.title | safe }} {{ params.name | safe }}
+              {% elif params.name and params.displayName === true %}
+                about {{ params.name | safe }}
+              {% endif %}
+            </a>
+          </p>
+        {% endif %}
+
     </div>
-    {%- endif %}
+    {% endif %}
   </div>
 </div>
