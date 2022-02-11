@@ -131,6 +131,7 @@ The contact Nunjucks macro takes the following arguments:
 | **headingLevel**             | integer  | No        | Optional heading level for the contact heading. Default: 2
 | **imgURL**                   | string   | No        | The URL of the image in the contact
 | **imgALT**                   | string   | No        | The alternative text of the image in the contact
+| **initials**                 | string   | No        | Initials for hero
 | **title**                    | integer  | No        | Title of person. Will display before name if present
 | **name**                     | integer  | No        | Department Name string
 | **displayName**              | boolean  | No        | Set true to render name
@@ -142,7 +143,13 @@ The contact Nunjucks macro takes the following arguments:
 | **displayPhoneNumber**       | boolean  | No        | Set true to render phoneNumber
 | **email**                    | integer  | No        | Department Name string
 | **displayEmail**             | boolean  | No        | Set true to render email
-| **address**                  | integer  | No        | Department Name string
+| **address**                  | integer  | No        | Address string (one block)
+| **addressLine1**             | string   | No        | Address string (individual lines)
+| **addressLine2**             | string   | No        | Address string (individual lines)
+| **addressLine3**             | string   | No        | Address string (individual lines)
+| **addressCity**              | string   | No        | Address string (individual lines)
+| **addressCounty**            | string   | No        | Address string (individual lines)
+| **addressPostcode**          | string   | No        | Address string (individual lines)
 | **displayAddress**           | boolean  | No        | Set true to render address
 | **details**                  | string   | No        | Secondary details for the contact
 | **displayDetails**           | boolean  | No        | Set true to render details

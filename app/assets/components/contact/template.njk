@@ -37,9 +37,15 @@
 {%- endset -%}
 
 {%- set address %}
-{% if params.address and params.displayAddress %}
-  true
-{% endif %}
+  {% if params.address and params.displayAddress %}
+    true
+  {% endif %}
+{% endset %}
+
+{%- set addressLines %}
+  {% if params.addressLine1 or params.addressLine2 or params.addressLine3 or params.addressCity or params.addressCounty or params.addressPostcode and params.displayAddress %}
+    true
+  {% endif %}
 {% endset %}
 
 {% set details %}
@@ -60,9 +66,14 @@
       {% endif %}
     {% endif %}
 
-    {% if params.imgURL and not card %}
+    {% if params.imgURL or params.initials %}
       <div class="nhsuk-contact__img-container" >
-        <img class="nhsuk-contact__img" src="{{ params.imgURL }}" alt="{{ params.imgALT }}">
+        {% if params.initials %}
+          {{ params.initials}}
+        {% endif %}
+        {% if params.imgURL %}
+          <img class="nhsuk-contact__img" src="{{ params.imgURL }}" alt="{{ params.imgALT }}">
+        {% endif %}
       </div>
     {% endif %}
 
@@ -80,6 +91,10 @@
         <p class="nhsuk-contact__pronoun">{{ params.pronouns | safe }}</p>
     {% endif %}
 
+    {%- if jobTitle %}
+      <h4 aria-label="Job Title" >{{ params.jobTitle | safe }}</h4>
+    {%- endif %}
+
     {% if departmentShow and departmentType%}
       <h{{ headingLevel }} aria-label="Department" >
         {{ params.departmentName | safe }}
@@ -95,10 +110,6 @@
         {{ params.organisation | safe }}
       </h{{ departmentHeadingLevel }}>
     {% endif %}
-
-    {%- if jobTitle %}
-      <p aria-label="Job Title" >{{ params.jobTitle | safe }}</p>
-    {%- endif %}
 
     {%- if phoneNumber or email or address or details %}
       <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
@@ -129,6 +140,34 @@
 
         {%- if address %}
           <p aria-label="Address" >{{ params.address | safe }}</p>
+        {%- endif %}
+
+        {%- if addressLines %}
+          <p aria-label="Address" >
+            {%- if params.addressLine1 %}
+              {{ params.addressLine1 | safe }}<br>
+            {%- endif %}
+
+            {%- if params.addressLine2 %}
+              {{ params.addressLine2 | safe }}<br>
+            {%- endif %}
+
+            {%- if params.addressLine3 %}
+              {{ params.addressLine3 | safe }}<br>
+            {%- endif %}
+
+            {%- if params.addressCity %}
+              {{ params.addressCity | safe }}<br>
+            {%- endif %}
+
+            {%- if params.addressCounty %}
+              {{ params.addressCounty | safe }}<br>
+            {%- endif %}
+
+            {%- if params.addressPostcode %}
+              {{ params.addressPostcode | safe }}
+            {%- endif %}
+          </p>
         {%- endif %}
 
         {%- if details %}

@@ -16,20 +16,33 @@ $contact-border-hover-color: $color_nhsuk-grey-3;
 
   .nhsuk-contact__img-container {
     @include print-hide();
-    width: 10rem;
-    height: 10rem;
+    position: relative;
     margin-bottom: nhsuk-spacing(4);
+    width: 8.375rem;
+    height: 8.375rem;
+    background: $color_nhsuk-grey-4;
+    border-radius: 50%;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 8.375rem;
+    color: $nhsuk-secondary-text-color;
   }
 
   .nhsuk-contact__img {
     @include print-hide();
-    border-bottom: $contact-border-width solid $color_nhsuk-grey-5; /* [2] */
+    position: absolute;
+    top: 0;
+    left: 0;
     display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 8.375rem;
+    height: 8.375rem;
     border-radius: 50%;
+    object-fit: cover;
+    border-bottom: $contact-border-width solid $color_nhsuk-grey-5; /* [2] */
   }
+
+ 
 
   .nhsuk-contact__heading,
   .nhsuk-contact__metadata,
@@ -54,7 +67,7 @@ $contact-border-hover-color: $color_nhsuk-grey-3;
 
 
 .nhsuk-contact__secondary-info > * {
-  margin-bottom: nhsuk-spacing(2);
+  margin-bottom: 12px;
 }
 
 /* ====== contact card ====== */
@@ -93,7 +106,19 @@ $contact-border-hover-color: $color_nhsuk-grey-3;
   .nhsuk-contact__pronoun,
   .nhsuk-contact__secondary-info > * {
     @extend .nhsuk-body-s;
+  }
+
+  .nhsuk-contact__pronoun {
     margin-bottom: nhsuk-spacing(2);
+  }
+
+  .nhsuk-contact__secondary-info > * {
+    margin-bottom: 12px;
+  }
+
+  p[aria-label="Address"] {
+    font-size: 1.1875rem;
+    line-height: 1.47368;
   }
 
 }
