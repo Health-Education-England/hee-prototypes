@@ -87,10 +87,12 @@
       </div>
 
       <div class="nhsuk-grid-column-one-third">     
-        
-        <div class="nhsuk-sidebar-image">
-          <img src="/images/placeholders/dental-region-map.png" alt="Dental region map" />
-        </div>
+
+        {{ sidebarImage({
+            "imgURL" : "/images/placeholders/dental-region-map.png",
+            "imgALT" : "Dental region map"
+          }) 
+        }}
 
         {{ relatedNav({
             "heading": "Quick Links",
