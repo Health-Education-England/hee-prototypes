@@ -8,7 +8,10 @@
     padding: 24px;
     margin-bottom: 48px;
 
-    img {
+    &__img {
         margin-bottom: -8px;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
     }
 }
