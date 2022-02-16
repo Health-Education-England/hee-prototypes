@@ -1,8 +1,8 @@
 /* ==========================================================================
-   COMPONENTS / #SIDEBAR-IMAGE
+   COMPONENTS / #IMAGE-CARD
    ========================================================================== */
 
-.nhsuk-sidebar-image {
+.nhsuk-image--card {
     border: 1px solid $nhsuk-border-color;
     background-color: $color_nhsuk-white;
     padding: 24px;
@@ -13,5 +13,13 @@
         width: 100%;
         max-width: 100%;
         height: auto;
+    }
+    &__caption {
+        font-size: 16px;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: $color_nhsuk-grey-2;
+        margin-top: nhsuk-spacing(4);
+        font-style: italic;
     }
 }

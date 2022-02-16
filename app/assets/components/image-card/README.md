@@ -1,22 +1,26 @@
-# sidebarImage
+# imageCard
 Custom component to display an image in a box for the sidebar 
 
 ## Nunjucks macro
 
 ```
-{%- from 'sidebar-image/macro.njk' import sidebarImage %}
+{%- from 'image-card/macro.njk' import imageCard %}
 
-{{ sidebarImage({
+{{ imageCard({
     "imgURL" : "/images/placeholders/dental-region-map.png",
-    "imgALT" : "Dental region map"
+    "imgALT" : "Dental region map",
+    "imgCaption" : "Yorkshire and Humber region"
     }) 
 }}
 
 ```
 
 ## Example HTML
-<div class="nhsuk-sidebar-image">
-    <img class="nhsuk-sidebar-image__img" src="/images/placeholders/dental-region-map.png" alt="Dental region map" />
+<div class="nhsuk-image--card">
+    <img class="nhsuk-image--card__img" src="/images/placeholders/dental-region-map.png" alt="Dental region map" />
+    <figcaption class="nhsuk-image__caption">
+    Yorkshire and Humber region
+    </figcaption>
 </div>
 
 
@@ -30,3 +34,4 @@ The sidebarImage macro takes the following arguments:
 | ---------------------------|----------|-----------|--------------|
 | **imgURL**                 | string   | Yes       | The URL of the image 
 | **imgALT**                 | string   | No        | The alternative text of the image
+| **imgCaption**             | string   | No        | The caption to be displayed under the image
