@@ -8,6 +8,7 @@
 ///////////////////////////////////////////
 // Overrides
 ///////////////////////////////////////////
+@import '../components/custom-breadcrumb/breadcrumb';
 @import '../components/custom-header/header';
 @import '../components/hero/hero';
 
@@ -15,6 +16,8 @@
 // Components that are not in the NHS.UK frontend library
 ///////////////////////////////////////////
 
+@import '../components/blocklinks/blocklinks';
+@import '../components/contact/contact';
 @import '../components/cookies/cookies';
 @import '../components/emergency-alert/emergency-alert';
 @import '../components/filter/filter';
@@ -27,9 +30,13 @@
 @import '../components/blocklinks/blocklinks';
 @import '../components/search/search';
 @import '../components/lks-header/_header';
-@import '../components/contact/contact';
-@import '../components/resources/resources';
 @import '../components/media/media';
 @import '../components/nav-map/nav-map';
 @import '../components/phase-banner/phase-banner';
+@import '../components/tabs/tabs';
+@import '../components/promo-banner/promo-banner';
+@import '../components/related-links-card/related-links-card';
+@import '../components/related-nav/related-nav';
+@import '../components/resources/resources';
+@import '../components/search/search';
 @import '../components/tabs/tabs';
