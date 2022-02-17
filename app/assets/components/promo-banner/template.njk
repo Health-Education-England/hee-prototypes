@@ -1,0 +1,11 @@
+{% if params.content %}
+  <div class="nhsuk-phase-banner">
+    <div class="nhsuk-width-container">
+      <p class="nhsuk-phase-banner__content">
+        <span class="nhsuk-phase-banner__text">
+          {{- params.content | safe -}}
+        </span>
+      </p>
+    </div>
+  </div>
+{% endif %}
