@@ -1,16 +1,15 @@
-# Timeline
+# Timeline component
 
 ## Guidance
 
-Timeline component for events. Contains one to many events within a user defined time period
+Timeline component for events. Contains one to many events within a user defined title
 
-## Quick start examples
+## Example with events
 
-### Nujucks template
-
+### Nunjucks macro
 ```
   {{ timeline({
-    period: "January 2022",
+    title: "January 2022",
     events: [
       {
         title: "Lorum Ipsum Fest",
@@ -33,128 +32,146 @@ Timeline component for events. Contains one to many events within a user defined
   }) }}
 ```
 
-
-### Timeline HTML example
+### HTML example
 
 ```
-<div class="nhs-uk__timeline-card">
-  <h3>January 2022</h3>
-  <div>
+<div class="nhsuk-timeline-card">
+    <h3 class="nhsuk-timeline-card__title">January 2022</h3>
+    <div class="nhsuk-timeline-card__event">
       <h4>Lorum Ipsum Fest</h4>
       <p>A celebration of all things Lorum Ipsum</p>
-    <div class="nhsuk-grid-row">
-      <div>
-        <span class="nhsuk-grid-column-one-third"><b>Date</b></span>
-        <span class="nhsuk-grid-column-two-thirds">
-            TBC
-        </span>
-      </div>
-    </div>
-    <hr>
-      <div class="nhsuk-grid-row">
-        <div>
-          <span class="nhsuk-grid-column-one-third"><b>Time</b></span>
-          <span class="nhsuk-grid-column-two-thirds">
-              9am
-          </span>
+      <dl class="nhsuk-summary-list">
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Date
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+              TBC
+          </dd>
         </div>
-      </div>
-      <hr>
-      <div class="nhsuk-grid-row">
-        <div>
-          <span class="nhsuk-grid-column-one-third"><b>Link</b></span>
-          <span class="nhsuk-grid-column-two-thirds">
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Time
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            9am
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Link
+          </dt>
+          <dd class="nhsuk-summary-list__value">
             <a href="/" target="_blank">Link (Opens in new window)</a>
-          </span>
+          </dd>
         </div>
-      </div>
-      <hr>
-      <div class="nhsuk-grid-row">
-        <div>
-          <span class="nhsuk-grid-column-one-third"><b>Description</b></span>
-          <span class="nhsuk-grid-column-two-thirds">
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Details
+          </dt>
+          <dd class="nhsuk-summary-list__value">
             Lorum Ipsum Dolores Sit Amet
-          </span>
+          </dd>
         </div>
-      </div>
-      <hr>
-  </div>
-  <div>
-      <h4>Song 2</h4>
-      <p>Whoo Hoo</p>
-    <div class="nhsuk-grid-row">
-      <div>
-        <span class="nhsuk-grid-column-one-third"><b>Date</b></span>
-        <span class="nhsuk-grid-column-two-thirds">
-            22/01/2022
-        </span>
-      </div>
+      </dl>
     </div>
-    <hr>
-      <div class="nhsuk-grid-row">
-        <div>
-          <span class="nhsuk-grid-column-one-third"><b>Time</b></span>
-          <span class="nhsuk-grid-column-two-thirds">
-              9am
-          </span>
+    <div class="nhsuk-timeline-card__event">
+      <h4>Song 2</h4>
+      <p>Whoo Hoo this is a longer description for a single event, hopefully on multiple lines</p>
+      <dl class="nhsuk-summary-list">
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Date
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            22/01/2022
+          </dd>
         </div>
-      </div>
-      <hr>
-      <div class="nhsuk-grid-row">
-        <div>
-          <span class="nhsuk-grid-column-one-third"><b>Location</b></span>
-          <span class="nhsuk-grid-column-two-thirds">
-              Mayfair, London
-          </span>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Time
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            9am
+          </dd>
         </div>
-      </div>
-      <hr>
-      <div class="nhsuk-grid-row">
-        <div>
-          <span class="nhsuk-grid-column-one-third"><b>Contact</b></span>
-          <span class="nhsuk-grid-column-two-thirds">
-              <a href="mailto:damon.albarn@parklife.co.uk">damon.albarn@parklife.co.uk</a>
-          </span>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Location
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Mayfair, London
+          </dd>
         </div>
-      </div>
-      <hr>
-      <div class="nhsuk-grid-row">
-        <div>
-          <span class="nhsuk-grid-column-one-third"><b>Link</b></span>
-          <span class="nhsuk-grid-column-two-thirds">
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Contact
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <a href="mailto:damon.albarn@parklife.co.uk">damon.albarn@parklife.co.uk</a>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Link
+          </dt>
+          <dd class="nhsuk-summary-list__value">
             <a href="/" target="_blank">Link (Opens in new window)</a>
-          </span>
+          </dd>
         </div>
-      </div>
-      <hr>
-      <div class="nhsuk-grid-row">
-        <div>
-          <span class="nhsuk-grid-column-one-third"><b>Description</b></span>
-          <span class="nhsuk-grid-column-two-thirds">
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Details
+          </dt>
+          <dd class="nhsuk-summary-list__value">
             Well I feel heavy metal
-          </span>
+          </dd>
         </div>
-      </div>
-      <hr>
-  </div>
+      </dl>
+    </div>
 </div>
 ```
 
-### Nunjucks arguments
+## Example with no events
 
-The contact Nunjucks macro takes the following arguments:
+### Nunjucks macro
+```
+  {{ timeline({
+    title: "February 2022",
+    description: "There are currently no events to show. Please come back later."
+  }) }}
+```
+
+### HTML example
+```
+<div class="nhsuk-timeline-card--no-events">
+  <h3 class="nhsuk-timeline-card__title">No Events to Display</h3>
+    <div class="nhsuk-timeline-card__description">
+      <p>There are currently no events to show. Please come back later.</p>
+    </div>
+</div>
+```
+
+
+## Macro arguments
+
+The timeline Nunjucks macro takes the following arguments:
 
 | Name                         | Type    | Required  | Description
 | -----------------------------|---------|-----------|-----------------------------------------------------------------------
-| **period**                   | string  | Yes       | Period within which the events fall. Displays "TBC" if blank
-| **events**                   | array   | No        | Array of events objects. Displays "No Events to Display" if blank
+| **title**                    | string  | Yes       | Period within which the events fall. Displays "TBC" if blank
+| **events**                   | array   | No        | Array of events objects. Displays "No Events to Display" if not included
+| **description**              | string  | No        | Text to appear below the title, and before the events list
+
+### Each event
+
+| Name                         | Type    | Required  | Description
+| -----------------------------|---------|-----------|-----------------------------------------------------------------------
 | **title**                    | string  | No        | Title of individual event
 | **description**              | string  | No        | Description of individual event
-| **time**                     | string  | No        | Time of individual event
 | **date**                     | string  | Yes       | Date of individual event
+| **time**                     | string  | No        | Time of individual event
 | **location**                 | string  | No        | Location of individual event
 | **contact**                  | string  | No        | Contact email for individual event
 | **link**                     | string  | No        | Link for individual event
-| **text**                     | string  | No        | Free textbox for individual event
-
-If you are using Nunjucks macros in production be aware that using `html` arguments, or ones ending with `html` can be a [security risk](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting). Read more about this in the [Nunjucks documentation](https://mozilla.github.io/nunjucks/api.html#user-defined-templates-warning).
+| **details**                  | string  | No        | Free textbox for individual event
