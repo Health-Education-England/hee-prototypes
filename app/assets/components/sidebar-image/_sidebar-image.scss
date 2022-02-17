@@ -1,0 +1,17 @@
+/* ==========================================================================
+   COMPONENTS / #SIDEBAR-IMAGE
+   ========================================================================== */
+
+.nhsuk-sidebar-image {
+    border: 1px solid $nhsuk-border-color;
+    background-color: $color_nhsuk-white;
+    padding: 24px;
+    margin-bottom: 48px;
+
+    &__img {
+        margin-bottom: -8px;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
