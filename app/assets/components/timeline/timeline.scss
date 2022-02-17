@@ -36,16 +36,8 @@
     }
   }
 
-  &__description {
-    margin-top: nhsuk-spacing(3);
-    p:last-of-type {
-      margin-bottom: 0;
-    }
-  }
-
-  
-
 }
+
 .nhsuk-timeline-card--no-events {
   position: relative;
   margin-top: nhsuk-spacing(9);
@@ -55,8 +47,10 @@
   background-color: $color_nhsuk-white;
   border: 1px solid $nhsuk-border-color;
   width: 66.66%;
-  .nhsuk-timeline-card__title {
-    font-size: 1.5rem;
-    font-weight: 700;
+  .nhsuk-timeline-card__description {
+    margin-top: nhsuk-spacing(3);
+    p:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
