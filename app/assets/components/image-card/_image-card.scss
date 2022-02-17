@@ -1,17 +1,24 @@
 /* ==========================================================================
-   COMPONENTS / #SIDEBAR-IMAGE
+   COMPONENTS / #NHSUK-IMAGE--CARD
    ========================================================================== */
 
-.nhsuk-sidebar-image {
+.nhsuk-image--card {
     border: 1px solid $nhsuk-border-color;
     background-color: $color_nhsuk-white;
     padding: 24px;
+    margin-left: 0;
+    margin-right: 0;
     margin-bottom: 48px;
 
-    &__img {
-        margin-bottom: -8px;
-        width: 100%;
+
+    .nhsuk-image__img {
         max-width: 100%;
         height: auto;
+    }
+    .nhsuk-image__caption {
+        font-size: 0.9rem;
+        color: $nhsuk-text-color;
+        padding: 0;
+        margin-top: nhsuk-spacing(3);
     }
 }
