@@ -1,10 +1,10 @@
-<div class="nhsuk-image--card">
+<figure class="nhsuk-image--card">
   {%- if params.imgURL %}
-    <img class="nhsuk-image--card__img" src="{{ params.imgURL }}" alt="{{ params.imgALT }}" />
+    <img class="nhsuk-image__img" src="{{ params.imgURL }}" alt="{{ params.imgALT }}" />
   {%- endif %}
   {%- if params.imgCaption %}
-  <figcaption class="nhsuk-image--card__caption">
+  <figcaption class="nhsuk-image__caption">
     {{ params.imgCaption }}
   </figcaption>
   {%- endif %}
-</div>
+</figure>

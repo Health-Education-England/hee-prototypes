@@ -16,12 +16,12 @@ Custom component to display an image in a box for the sidebar
 ```
 
 ## Example HTML
-<div class="nhsuk-image--card">
-    <img class="nhsuk-image--card__img" src="/images/placeholders/dental-region-map.png" alt="Dental region map" />
+<figure class="nhsuk-image--card">
+    <img class="nhsuk-image__img" src="/images/placeholders/dental-region-map.png" alt="Dental region map" />
     <figcaption class="nhsuk-image__caption">
     Yorkshire and Humber region
     </figcaption>
-</div>
+</figure>
 
 
 ---
