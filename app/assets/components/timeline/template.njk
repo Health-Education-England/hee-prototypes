@@ -5,6 +5,11 @@
   {% else %}
     <h3 class="nhsuk-timeline-card__title">Date TBC</h3>
   {% endif %}
+  {% if params.description %}
+    <div class="nhsuk-timeline-card__description">
+      <p>{{ params.description }}</p>
+    </div>
+  {% endif %}
   {% for item in params.events %}
     <div class="nhsuk-timeline-card__event">
       {% if item.title %}
