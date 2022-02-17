@@ -1,0 +1,54 @@
+
+
+.nhsuk-timeline-card {
+  position: relative;
+  margin-top: nhsuk-spacing(9);
+  margin-bottom: nhsuk-spacing(9); 
+  padding: nhsuk-spacing(5) nhsuk-spacing(4) nhsuk-spacing(4);
+  background-color: $color_nhsuk-white;
+  border: 1px solid $nhsuk-border-color;
+
+  &__title {
+    position: absolute;
+    top: -(nhsuk-spacing(5));
+    left: 0;
+    width: calc(100% - 64px);
+    padding: 10px 24px;
+    color: $color_nhsuk-white;
+    font-size: 24px;
+    line-height: 31px;
+    background: $color_nhsuk-blue;
+  }
+
+  &__event {
+    h4 {
+      margin-top: nhsuk-spacing(4);
+      margin-bottom: nhsuk-spacing(3);
+      font-size: 1.5rem;
+    }
+    p {
+    }
+    &:last-of-type {
+      .nhsuk-summary-list {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+}
+
+.nhsuk-timeline-card--no-events {
+  position: relative;
+  margin-top: nhsuk-spacing(9);
+  margin-bottom: nhsuk-spacing(9); 
+  padding: nhsuk-spacing(5) nhsuk-spacing(4) nhsuk-spacing(4);
+  display: block;
+  background-color: $color_nhsuk-white;
+  border: 1px solid $nhsuk-border-color;
+  .nhsuk-timeline-card__description {
+    margin-top: nhsuk-spacing(3);
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
