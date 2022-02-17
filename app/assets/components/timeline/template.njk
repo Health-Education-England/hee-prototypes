@@ -1,99 +1,92 @@
-{% if params.title %}
-  <h2>{{ params.title | safe }}</h2>
-{% else %}
-  <h2>Timeline Component</h2>
-{% endif %}
-
-{% if params.start %}
-  <p>This round of recruitment is for posts that start in {{ params.start | safe }}.</p>
-{% else %}
-  <p>Posts for the current round of recruitment.</p>
-{% endif %}
-
-<p>All times are in UK local time (GMT or BST).</p>
-
 {% if params.events %}
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
-      <div class="nhs-uk__timeline-card" >
-        {% if params.period %}
-          <h3>{{ params.period }}</h3>
-        {% else %}
-          <h3>Date TBC</h3>
+<div class="nhsuk-timeline-card">
+  {% if params.title %}
+    <h3 class="nhsuk-timeline-card__title">{{ params.title }}</h3>
+  {% else %}
+    <h3 class="nhsuk-timeline-card__title">Date TBC</h3>
+  {% endif %}
+  {% for item in params.events %}
+    <div class="nhsuk-timeline-card__event">
+      {% if item.title %}
+        <h4>{{ item.title }}</h4>
+      {% endif %}
+      {% if item.description %}
+        <p>{{ item.description }}</p>
+      {% endif %}
+      <dl class="nhsuk-summary-list">
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Date
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {% if item.date %}
+              {{ item.date }}
+            {% else %}
+              TBC
+            {% endif %}
+          </dd>
+        </div>
+        {% if item.time %}
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Time
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ item.time }}
+          </dd>
+        </div>
         {% endif %}
-        {% for item in params.events %}
-          <div>
-            {% if item.title %}
-              <h4>{{ item.title }}</h4>
-            {% endif %}
-            {% if item.description %}
-              <p>{{ item.description }}</p>
-            {% endif %}
-            <div class="nhsuk-grid-row">
-              <div>
-                <span class="nhsuk-grid-column-one-third"><b>Date</b></span>
-                <span class="nhsuk-grid-column-two-thirds">
-                  {% if item.date %}
-                    {{ item.date }}
-                  {% else %}
-                    TBC
-                  {% endif %}
-                </span>
-              </div>
-              <hr>
-              {% if item.time %}
-                <div>
-                  <span class="nhsuk-grid-column-one-third"><b>Time</b></span>
-                  <span class="nhsuk-grid-column-two-thirds">
-                      {{ item.time }}
-                  </span>
-                </div>
-                <hr>
-              {% endif %}
-              {% if item.location %}
-                <div>
-                  <span class="nhsuk-grid-column-one-third"><b>Location</b></span>
-                  <span class="nhsuk-grid-column-two-thirds">
-                      {{ item.location }}
-                  </span>
-                </div>
-                <hr>
-              {% endif %}
-              {% if item.contact %}
-                <div>
-                  <span class="nhsuk-grid-column-one-third"><b>Contact</b></span>
-                  <span class="nhsuk-grid-column-two-thirds">
-                      <a href="mailto:{{ item.contact }}" >{{ item.contact }}</a>
-                  </span>
-                </div>
-                <hr>
-              {% endif %}
-              {% if item.link %}
-                <div>
-                  <span class="nhsuk-grid-column-one-third"><b>Link</b></span>
-                  <span class="nhsuk-grid-column-two-thirds">
-                    <a href="{{ item.link }}" target="_blank">Link (Opens in new window)</a>
-                  </span>
-                </div>
-                <hr>
-              {% endif %}
-              {% if item.text %}
-                <div>
-                    <span class="nhsuk-grid-column-one-third"><b>Details</b></span>
-                  <span class="nhsuk-grid-column-two-thirds">
-                    {{ item.text }}
-                  </span>
-                </div>
-                <hr>
-              {% endif %}
-            </div>
-          </div>
-        {% endfor %}
-      </div>
+        {% if item.location %}
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Location
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ item.location }}
+          </dd>
+        </div>
+        {% endif %}
+        {% if item.contact %}
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Contact
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <a href="mailto:{{ item.contact }}" >{{ item.contact }}</a>
+          </dd>
+        </div>
+        {% endif %}
+        {% if item.link %}
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Link
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <a href="{{ item.link }}" target="_blank">Link (Opens in new window)</a>
+          </dd>
+        </div>
+        {% endif %}
+        {% if item.details %}
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Details
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ item.details }}
+          </dd>
+        </div>
+        {% endif %}
+      </dl>
     </div>
-  </div>
+    {%- endfor %}
+</div>
 {% else %}
-  <h3 class="nhsuk__timeline-no-events" >No Events to Display</h3>
+<div class="nhsuk-timeline-card--no-events">
+  <h3 class="nhsuk-timeline-card__title" >No Events to Display</h3>
+  {% if params.description %}
+    <div class="nhsuk-timeline-card__description">
+      <p>{{ params.description }}</p>
+    </div>
+  {% endif %}
+</div>
 {% endif %}
-
-
