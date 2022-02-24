@@ -8,46 +8,72 @@ $contact-border-hover-color: $color_nhsuk-grey-3;
 
   position: relative; /* [1] */
   width: 100%;
+
+  h2, h3, h4, h5 {
+    margin-bottom: 0;
+  }
+
+  h4 {
+    font-size: 1.1875rem;
+  }
+
+  h5 {
+    font-size: 1.1875rem;
+    font-weight: normal;
+  }
+
+  .nhsuk-contact__img-container {
+    @include print-hide();
+    position: relative;
+    margin-bottom: nhsuk-spacing(4);
+    width: 8.375rem;
+    height: 8.375rem;
+    background: $color_nhsuk-grey-4;
+    border-radius: 50%;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 8.375rem;
+    color: $nhsuk-secondary-text-color;
+  }
+
+  .nhsuk-contact__img {
+    @include print-hide();
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 8.375rem;
+    height: 8.375rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border-bottom: $contact-border-width solid $color_nhsuk-grey-5; /* [2] */
+  }
+
+  .nhsuk-contact__heading,
+  .nhsuk-contact__metadata,
+  .nhsuk-contact__description {
+    margin-bottom: nhsuk-spacing(2);
+  }
+
+  .nhsuk-contact hr {
+    margin-top: nhsuk-spacing(4);
+    margin-bottom: nhsuk-spacing(4);
+  }
+
+  .nhsuk-contact a {
+    word-wrap:break-word;
+  }
+
+  .nhsuk-contact__pronoun {
+    color: $nhsuk-secondary-text-color;
+  }
+
 }
 
-h4 {
-  font-size: 1.1875rem;
-}
-
-.nhsuk-contact__img-container {
-  @include print-hide();
-  width: 10rem;
-  height: 10rem;
-  margin-bottom: nhsuk-spacing(4);
-}
-
-.nhsuk-contact__img {
-  @include print-hide();
-  border-bottom: $contact-border-width solid $color_nhsuk-grey-5; /* [2] */
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.nhsuk-contact__heading,
-.nhsuk-contact__metadata,
-.nhsuk-contact__description {
-  margin-bottom: nhsuk-spacing(2);
-}
-
-.nhsuk-contact hr {
-  margin-top: nhsuk-spacing(4);
-  margin-bottom: nhsuk-spacing(4);
-}
-
-.nhsuk-contact a {
-  word-wrap:break-word;
-}
 
 .nhsuk-contact__secondary-info > * {
-  margin-bottom: nhsuk-spacing(2);
+  margin-bottom: 12px;
 }
 
 /* ====== contact card ====== */
@@ -63,28 +89,24 @@ h4 {
   background: $color_nhsuk-white;
   border: $contact-border-width solid $contact-border-color;
 
-  h2 {
-    @extend .nhsuk-heading-s;
-    margin-bottom: nhsuk-spacing(3);
+  .nhsuk-contact__pronoun,
+  .nhsuk-contact__secondary-info > * {
+    @extend .nhsuk-body-s;
   }
 
-  h5 {
-    font-size: 1.1875rem;
-    font-weight: normal;
-  }
-
-  .nhsuk-contact__name,
-  h3,
-  h4,
-  h5 {
-    @extend .nhsuk-heading-xs;
-    margin-bottom: 0;
+  .nhsuk-contact__pronoun {
+    margin-bottom: nhsuk-spacing(2);
   }
 
   .nhsuk-contact__secondary-info > * {
-    @extend .nhsuk-body-s;
-    margin-bottom: nhsuk-spacing(2);
+    margin-bottom: 12px;
   }
+
+  p[aria-label="Address"] {
+    font-size: 1.1875rem;
+    line-height: 1.47368;
+  }
+
 }
 
 /* ====== contact group ====== */
