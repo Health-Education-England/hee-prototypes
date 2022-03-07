@@ -4,6 +4,15 @@ Simply include for cookie consent. There are no njk variables. The minified cook
 
 https://github.com/nhsuk/cookie-consent
 
+## Script include and set policy page
+
+To use the NHSCookieConsent file, include the following js.
+
+The cookie policy url needs setting too.
+
+```
+<script src="/js/nhsuk-cookie-consent.js" data-policy-url="/lks/cookie-policy" type="text/javascript"></script>
+```
 
 ## Methods
 
