@@ -1,6 +1,20 @@
-### Analytics cookie consent
+# NHSUK/cookie-consent
 
-# Simply include for cookie conesent. There are no njk variables.
+Simply include for cookie consent. There are no njk variables. The minified cookie-consent script is included in the /docs/includes/scripts.html location.
 
-# localStorage.getItem('analyticsCookie') to view current state
-# localStorage.removeItem('analyticsCookie');
+https://github.com/nhsuk/cookie-consent
+
+
+## Methods
+
+The data is exposed on a NHSUKCookieConsent variable.
+
+# console.log(NHSUKCookieConsent);
+
+Check whether the user has accepted the cookies:
+
+- NHSCookieConsent.getConsented()
+- NHSCookieConsent.getPreferences()
+- NHSCookieConsent.getStatistics()
+- NHSCookieConsent.getMarketing()
+
