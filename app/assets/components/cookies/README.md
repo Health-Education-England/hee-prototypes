@@ -18,3 +18,19 @@ Check whether the user has accepted the cookies:
 - NHSCookieConsent.getStatistics()
 - NHSCookieConsent.getMarketing()
 
+## Cookie policy page HTML
+
+Include this HTML on the cookie policy page to give the accept/ reject buttons and show the current status of if they are opted in or out.
+
+```
+    <div class="nhsuk-cookie-status">
+        <h2>
+            You are currently opted
+            <span id="acceptedCookies">in to</span>
+            <span id="rejectedCookies">out of</span>
+            using additional cookies.
+        </h2>
+        <button id="acceptCookies" class="nhsuk-button">Accept additional cookies</button>
+        <button id="rejectCookies" class="nhsuk-button">Reject additional cookies</button>
+    </div>
+```
