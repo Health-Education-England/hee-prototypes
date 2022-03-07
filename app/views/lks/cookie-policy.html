@@ -1,19 +1,30 @@
 {% extends "lks-layout.html" %}
 
 {% block pageTitle %}
-  Cookies - NHS.UK prototype kit
+  Cookie policy - HEE prototype
 {% endblock %}
 
 {% block beforeContent %}
-  {{ breadcrumb({
-    href: "/docs",
-    text: "Home"
-  }) }}
+
+{{ breadcrumb({
+  items: [
+    {
+      href: "/home",
+      text: "Home"
+    },
+    {
+      href: "/content-pages",
+      text: "Content pages"
+    }
+  ],
+  href: "/content-examples/cookie-policy",
+  text: "Cookie policy"
+}) }}
 {% endblock %}
 
 {% block content %}
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
+  <div class="nhsuk-grid-row hee-main-row">
+    <div class="nhsuk-grid-column-two-thirds hee-main-column">
 
       <h1>Cookies on the HEE Service</h1>
 
@@ -84,26 +95,16 @@
 
       <p>These are the cookies we use on the homepage. Other cookies from Hotjar and Google Analytics may be used on other parts of the site. For full descriptions of these cookies, visit <a href="https://help.hotjar.com/hc/en-us/articles/115011789248-Hotjar-Cookie-Information" target="_blank">Hotjar (opens in new window)</a> and <a href="https://developers.google.com/analytics/devguides/collection/gajs/cookie-usage#gtagjs_google_analytics_4_-_cookie_usage%5D" target="_blank">Google Analytics (opens in new window)</a>.</p>
 
-      <div class="nhsuk__cookieStatus">
+      <div class="nhsuk-cookie-status">
         <h2>
           You are currently opted
-          <span class="nhsuk__cookiesIn">in to</span>
-          <span class="nhsuk__cookiesOut">out of</span>
+          <span id="acceptedCookies">in to</span>
+          <span id="rejectedCookies">out of</span>
           using additional cookies.
         </h2>
-
-        <button id="acceptCookies" class="nhsuk-button nhsuk__cookiesOut">Accept additional cookies</button>
-
-
-        <button id="rejectCookies" class="nhsuk-button nhsuk__cookiesIn">Reject additional cookies</button>
+        <button id="acceptCookies" class="nhsuk-button">Accept additional cookies</button>
+        <button id="rejectCookies" class="nhsuk-button">Reject additional cookies</button>
       </div>
-      {#
-      <button id="showCookies" class="nhsuk-button">Show cookies</button>
-
-      <div>
-        <code id="cookies"></code>
-      </div>
-      #}
 
       <div class="nhsuk-review-date">
         <p class="nhsuk-body-s">
