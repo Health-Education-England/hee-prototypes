@@ -1,0 +1,77 @@
+{% extends "lks-layout.html" %}
+
+{% block pageTitle %}
+    Listing - HEE Prototype
+{% endblock %}
+
+{% block beforeContent %}
+
+    {{ breadcrumb({
+        items: [{
+          href: "/home",
+          text: "Home"
+        }],
+        href: "/layouts",
+        text: "Layouts"
+    }) }}
+
+    {{ microHero({
+        imgURL: 'https://via.placeholder.com/2000x260'
+    }) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <h1>Case studies</h1>
+        <p class="nhsuk-lede-text">An example case studies page</p>
+    </div>
+</div>
+
+	{{ listing({
+      showPagination: true,
+      pageType: "search",
+      items: [
+      {
+        title: "Search result card",
+        content_type: "Guidance Page",
+        summary: "In mid-September HEE began a pilot to understand how best to help LKS in England move from using HDAS to using provider interfaces.",
+        published_date: "Published on 23 January 2021"
+      },
+      {
+        title: "Search result card",
+        content_type: "Guidance Page",
+        summary: "In mid-September HEE began a pilot to understand how best to help LKS in England move from using HDAS to using provider interfaces.",
+        published_date: "Published on 23 January 2021"
+      },
+      {
+        title: "Search result card",
+        content_type: "Guidance Page",
+        summary: "In mid-September HEE began a pilot to understand how best to help LKS in England move from using HDAS to using provider interfaces.",
+        published_date: "Published on 23 January 2021"
+      }
+    ],
+    filter: {
+      groups: [
+        {
+          title: "Content type",
+          items: [
+            {
+              text: "Guidance Page",
+              value: "guidance+page"
+            },
+            {
+              text: "Landing Page",
+              value: "landing+page"
+            },
+            {
+              text: "MiniHub",
+              value: "minihub"
+            }
+          ]
+        }
+      ]
+    }
+  }) }}
+{% endblock %}

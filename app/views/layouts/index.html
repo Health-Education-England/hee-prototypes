@@ -1,0 +1,67 @@
+{% extends "lks-layout.html" %}
+
+{% block pageTitle %}
+    Layouts - HEE Prototype
+{% endblock %}
+
+{% block beforeContent %}
+
+    {{ breadcrumb({
+        items: [
+            {
+                href: "/home",
+                text: "Home"
+            }
+        ],
+        href: "/layouts",
+        text: "Layouts"
+    }) }}
+
+  {{ microHero({
+    imgURL: 'https://via.placeholder.com/2000x260',
+    imgAlt: 'An example bg image'
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <h1>Layouts</h1>
+        <p class="nhsuk-lede-text">All of the available HEE layouts</p>
+    </div>
+</div>
+<div class="nhsuk-grid-row">
+    <ul class="nhsuk-card-group">
+        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+            {{ card({
+                "href": "/home",
+                "clickable": "true",
+                "heading": "Homepage",
+                "headingLevel": "3",
+                "headingClasses": "nhsuk-heading-s",
+                "description": ""
+            }) }}
+            </li>
+        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+        {{ card({
+            "href": "/layouts/listing",
+            "clickable": "true",
+            "heading": "Listing",
+            "headingLevel": "3",
+            "headingClasses": "nhsuk-heading-s",
+            "description": ""
+        }) }}
+        </li>
+        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+        {{ card({
+            "href": "/components/",
+            "clickable": "false",
+            "heading": "",
+            "headingLevel": "3",
+            "headingClasses": "nhsuk-heading-s",
+            "description": ""
+        }) }}
+        </li>
+    </ul>
+    </div>
+{% endblock %}
