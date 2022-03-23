@@ -9,6 +9,7 @@ import NavMap from '../components/nav-map/nav-map';
 import SubMenu from '../components/submenu/submenu';
 import Tabs from '../components/tabs/tabs';
 import Timeline from '../components/timeline/timeline';
+import Newsletter from '../components/newsletter/newsletter';
 
 import './polyfills';
 
@@ -23,4 +24,5 @@ document.addEventListener('DOMContentLoaded', () => {
   NavMap();
   SubMenu();
   Tabs();
+  Newsletter();
 });
