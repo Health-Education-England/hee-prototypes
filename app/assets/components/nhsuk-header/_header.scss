@@ -43,6 +43,22 @@
  */
 
 
+ .nhsuk-header {
+  &__navigation-list {
+    // border-top: 1px solid $color_nhsuk-white;
+  }
+
+  &--parent {
+    color: $color_nhsuk-white;
+    text-align: right;
+
+    a {
+      color: inherit;
+    }
+  }
+
+}
+
 .nhsuk-header__container {
   padding: nhsuk-spacing(8) 0;
 

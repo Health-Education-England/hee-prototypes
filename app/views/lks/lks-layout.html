@@ -3,12 +3,123 @@
   <link href="/css/main.css" rel="stylesheet">
 {% endblock %}
 
-{% block header %}
-{% endblock %}
 
 {% block bodyStart %}
   {{ cookies() }}
-  {{ customHeader() }}
+  {{ heeHeader({
+      showNav: true,
+      showSearch: true,
+      organisation: {
+        name: "Health Education England",
+        descriptor: "Library and Knowledge Services"
+      },
+      logos: {
+        en: true,
+        ni: true,
+        scot: false,
+        wales: false,
+        fpo: false
+      },
+      primaryLinks: [
+        {
+          url: "/landing",
+          label: "COVID&#8209;19",
+          children: [
+            {
+              url: "/",
+              label: "Lorem"
+            },
+            {
+              url: "/",
+              label: "Ipsum"
+            },
+            {
+              url: "/",
+              label: "Dolor Set"
+            },
+            {
+              url: "/",
+              label: "Amet"
+            }
+          ]
+        },
+        {
+          url: "/landing",
+          label: "Learning and development"
+        },
+        {
+          url: "/landing",
+          label: "Mobilising knowledge"
+        },
+        {
+          url: "/landing",
+          label: "Patient information",
+          children: [
+            {
+              url: "/",
+              label: "Lorem"
+            },
+            {
+              url: "/",
+              label: "Ipsum"
+            },
+            {
+              url: "/",
+              label: "Dolor Set"
+            },
+            {
+              url: "/",
+              label: "Amet"
+            }
+          ]
+        },
+        {
+          url: "/landing",
+          label: "Resource discovery",
+          children: [
+            {
+              url: "/",
+              label: "Lorem"
+            },
+            {
+              url: "/",
+              label: "Ipsum"
+            },
+            {
+              url: "/",
+              label: "Dolor Set"
+            },
+            {
+              url: "/",
+              label: "Amet"
+            }
+          ]
+        },
+        {
+          url: "/landing",
+          label: "About",
+          children: [
+            {
+              url: "/",
+              label: "Lorem"
+            },
+            {
+              url: "/",
+              label: "Ipsum"
+            },
+            {
+              url: "/",
+              label: "Dolor Set"
+            },
+            {
+              url: "/",
+              label: "Amet"
+            }
+          ]
+        }
+      ]
+    })
+  }}
 
   {{ phaseBanner({
     version: "NEW SERVICE",
@@ -25,6 +136,9 @@
     "heading": "Coronavirus (COVID-19)",
     "HTML": "<p><a href=\"#\">Get the latest advice about coronavirus</a></p>"
   })}}
+{% endblock %}
+
+{% block header %}
 {% endblock %}
 
 {% block beforeContent %}
