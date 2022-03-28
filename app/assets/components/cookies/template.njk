@@ -1,0 +1,6 @@
+{% set bannerHTML = params.htmlContent %}
+
+<div id="cookieconsent-custom" class="nhsuk-width-container" style="display:none;"> 
+    <h2>{{ params.title | default ("Cookies on the HEE website") }}</h2> 
+    {{ bannerHTML | safe }}
+</div>

@@ -8,6 +8,7 @@
 {%- from 'checkboxes/macro.njk' import checkboxes %}
 {%- from 'contact/macro.njk' import contact %}
 {%- from 'contents-list/macro.njk' import contentsList %}
+{%- from 'cookies/macro.njk' import cookieBanner %}
 {%- from 'custom-header/macro.njk' import customHeader %}
 {%- from 'date-input/macro.njk' import dateInput %}
 {%- from 'details/macro.njk' import details %}
@@ -121,6 +122,11 @@
       {% endblock %}
 
     {% block bodyEnd %}{% endblock %}
+
+    {{ cookieBanner({
+      title: "Cookies on the HEE website",
+      htmlContent: "<p>We have put some small files called cookies on your device to make our site work.</p><p>We would also like to use analytics cookies. These send information about how our site is used to services called Hotjar and Google Analytics. We use this information to improve our site.</p>"
+    }) }}
 
   </body>
 </html>
