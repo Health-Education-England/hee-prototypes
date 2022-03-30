@@ -17,6 +17,26 @@ You must protect user privacy at all times, even when using prototypes. Prototyp
 - <a href="http://nhsuk-prototype-kit.azurewebsites.net/docs/install/simple">Install guide (non technical)</a>
 - <a href="http://nhsuk-prototype-kit.azurewebsites.net/docs/install/advanced">Developer friendly install guide (technical)</a>
 
+## Create distribution
+
+To build a distribution package with merged and minified css and js
+
+```
+
+npm run-script bundle
+
+```
+
+The distribution package will be created in:
+
+* \hee-prototypes\dist\
+
+With the relevant files for the [HEE CMS Platform](https://github.com/Health-Education-England/hee-cms-platform):
+
+* \hee-prototypes\dist\css\nhsuk-4.1.0.min.css
+
+* \hee-prototypes\dist\js\main.min.js
+
 ## Contribute
 
 If you want to contribute to the NHS.UK prototype kit, by reporting bugs, fixing bugs, suggesting new features or writing documentation, then read our [contributing guidelines](CONTRIBUTING.md).
