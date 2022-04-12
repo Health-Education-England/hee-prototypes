@@ -9,4 +9,8 @@
     dl {
         border-top: 1px solid #d8dde0;
     }
+    dt,dd {
+        padding-left: nhsuk-spacing(3);
+        padding-right: nhsuk-spacing(3);
+    }
 }
