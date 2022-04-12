@@ -24,6 +24,14 @@ Custom component to display a list of results, containing filters (if provided),
           },
           {
             key: {
+              text: "Organisation"
+            },
+            value: {
+              text: "Organisation one"
+            }
+          },
+          {
+            key: {
               text: "Overview"
             },
             value: {
@@ -41,7 +49,44 @@ Custom component to display a list of results, containing filters (if provided),
         ]
       }
     },
-    ...
+    {
+    title: "Item two",
+    summaryList: {
+      rows: [
+        {
+          key: {
+            text: "Category"
+          },
+          value: {
+            text: "Category one, category two"
+          }
+        },
+        {
+          key: {
+            text: "Organisation"
+          },
+          value: {
+            text: "Organisation three"
+          }
+        },
+        {
+          key: {
+            text: "Overview"
+          },
+          value: {
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt felis in felis pharetra, at fringilla neque auctor"
+          }
+        },
+        {
+          key: {
+            text: "Website"
+          },
+          value: {
+            html: "<a href=\"#\">Website title</a>"
+          }
+        }
+      ]
+    }
   ],
   filter: {
     groups: [
@@ -49,10 +94,10 @@ Custom component to display a list of results, containing filters (if provided),
         title: "Category",
         items: [
           {
-            text: "Item one"
+            text: "Category one"
           },
           {
-            text: "Item two"
+            text: "Category two"
           }
         ]
       },
@@ -60,13 +105,13 @@ Custom component to display a list of results, containing filters (if provided),
         title: "Organisation",
         items: [
           {
-            text: "Item one"
+            text: "Organisation one"
           },
           {
-            text: "Item two"
+            text: "Organisation two"
           },
           {
-            text: "Item three"
+            text: "Organisation three"
           }
         ]
       }

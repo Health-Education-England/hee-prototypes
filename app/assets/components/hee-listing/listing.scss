@@ -1,0 +1,12 @@
+.nhsuk-listing__item {
+    background-color: #FFF;
+    padding-top: nhsuk-spacing(4);
+
+    h3 {
+        padding-left: nhsuk-spacing(3);
+        padding-right: nhsuk-spacing(3);
+    }
+    dl {
+        border-top: 1px solid #d8dde0;
+    }
+}
