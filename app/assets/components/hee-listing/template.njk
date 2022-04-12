@@ -83,7 +83,12 @@
             {% for item in list.items %}
                 <div class="nhsuk-listing__item">
                   <h3><a href="#">{{ item.title }}</a></h3>
-                  {{ summaryList(item.summaryList) }}
+                  {{ 
+                    summaryList({
+                      classes: 'nhsuk-hee-summary-list',
+                      rows: item.summaryList.rows
+                    }) 
+                  }}
                 </div>
             {% endfor %}
           {% endif %}
