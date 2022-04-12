@@ -1,0 +1,46 @@
+{% extends "lks-layout.html" %}
+{% block pageTitle %}
+  Summary List - Components - HEE
+{% endblock %}
+
+{% block content %}
+
+{{ summaryList({
+    classes: 'nhsuk-hee-summary-list',
+    rows: [
+      {
+        key: {
+          text: "Name"
+        },
+        value: {
+          text: "Sarah Philips"
+        }
+      },
+      {
+        key: {
+          text: "Date of birth"
+        },
+        value: {
+          text: "5 January 1978"
+        }
+      },
+      {
+        key: {
+          text: "Contact information"
+        },
+        value: {
+          html: "72 Guild Street<br>London<br>SE23 6FH"
+        }
+      },
+      {
+        key: {
+          text: "Contact details"
+        },
+        value: {
+          html: '<p>07700 900457</p><p>sarah.phillips@example.com</p>'
+        }
+      }
+    ]
+  }) }}
+
+{% endblock %}
