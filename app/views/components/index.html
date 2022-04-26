@@ -1,0 +1,51 @@
+{% extends "lks-layout.html" %}
+
+{% block pageTitle %}
+    Components - HEE Prototype
+{% endblock %}
+
+{% block beforeContent %}
+
+    {{ breadcrumb({
+        href: "/home",
+        text: "Home"
+    }) }}
+
+    {{ microHero({
+        imgURL: 'https://via.placeholder.com/2000x260'
+    }) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <h1>Components</h1>
+        <p class="nhsuk-lede-text">All of the available HEE components</p>
+    </div>
+</div>
+<div class="nhsuk-grid-row">
+    <ul class="nhsuk-card-group">
+        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+        {{ card({
+            "href": "/components/microhero",
+            "clickable": "true",
+            "heading": "Micro hero",
+            "headingLevel": "3",
+            "headingClasses": "nhsuk-heading-s",
+            "description": ""
+        }) }}
+        </li>
+        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+        {{ card({
+            "href": "/components/",
+            "clickable": "false",
+            "heading": "",
+            "headingLevel": "3",
+            "headingClasses": "nhsuk-heading-s",
+            "description": ""
+        }) }}
+        </li>
+    </ul>
+    </div>
+{% endblock %}

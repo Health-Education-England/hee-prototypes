@@ -2,11 +2,13 @@ export default () => {
   class Cookies {
     constructor() {
       // banner
+      this.useCookies = ''
       this.banner = document.querySelector('.nhsuk-cookie-banner')
       this.showCookies = document.getElementById('showCookies')
       this.removeCookies = document.getElementById('removeCookies')
       this.host = this.getHost()
 
+      this.cookieStatus()
       this.setCookies()
       this.addEventListeners()
 
@@ -16,6 +18,17 @@ export default () => {
       this.Out = document.querySelectorAll('.nhsuk__cookiesOut')
 
       this.toggleStatus()
+    }
+
+    cookieStatus(){
+      const cookies = document.cookie.split(";")
+      cookies.forEach(c => {
+        const match = c.match(new RegExp('(^| )analyticsCookie([^;]+)'))
+        if(match) {
+          const status = c.split("=")[1]
+          this.useCookies = status
+        }
+      })
     }
 
     getHost(){
@@ -45,7 +58,7 @@ export default () => {
     }
 
     setCookies() {
-        if (document.cookie === '') {
+        if (this.useCookies === '') {
           this.bannerShow()
           document.querySelector('#nhsuk-cookie-banner__link_accept_analytics').addEventListener('click', evt => {
             evt.preventDefault()
@@ -86,7 +99,7 @@ export default () => {
           location.reload()
         })
 
-        if (document.cookie === '' || document.cookie === "analyticsCookie=false") {
+        if (this.useCookies === "false" || this.useCookies === '' ) {
           this.displayBlock(this.Out)
           this.displayNone(this.In)
         } else {
