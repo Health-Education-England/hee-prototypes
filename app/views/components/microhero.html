@@ -1,0 +1,42 @@
+{% extends "lks-layout.html" %}
+
+{% block pageTitle %}
+Search - HEE Prototype
+{% endblock %}
+
+{% block beforeContent %}
+    {{ breadcrumb({
+        items: [
+        {
+            href: "/home",
+            text: "Home"
+        }
+        ],
+        href: "/components",
+        text: "Components"
+    }) }}
+
+  {{ microHero({
+    imgURL: 'https://via.placeholder.com/1600x260',
+    imgAlt: 'An example bg image'
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <h1>Microhero</h1>
+        <p class="nhsuk-lede-text">An example page with a microhero image header</p>
+
+        <ul>
+            <li>Standard content pages (not in minihubs).</li>
+            <li>The first page in a mini-hub.</li>
+            <li>Listing pages.</li>
+            <li>Section homepages (new page template coming in Q1 2022).</li>
+            <li>The micro-hero sits below all navigation elements as and can be seen here [Dental UI](https://www.figma.com/file/JCLoBWN4R6R8edF58xCJrl/Dental-UI?node-id=237%3A10719) (Yorkshire and Humber Living page).</li>
+            <li>The micro-hero stretches the full width of the browser and has a height of 260px</li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
