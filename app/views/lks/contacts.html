@@ -12,7 +12,7 @@
 
   <article>
     <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-two-thirds">
+      <div class="nhsuk-grid-column-two-thirds hee-layout-main">
 
         <section class="nhsuk-page-content__section-one">
           {{ contact({
@@ -183,81 +183,74 @@
         </section>
       </div>
 
-      <div class="nhsuk-grid-column-one-third"> 
+      <div class="nhsuk-grid-column-one-third hee-layout-sidebar"> 
         <h2>Side nav contact cards</h2>
-        <ul class="nhsuk-grid-row nhsuk-contact-group">
-          <li class="nhsuk-contact-group__item">
-            {{ contact({
-              classes: "nhsuk-contact__card",
-              imgURL: "/images/headshot.jpg",
-              imgALT: "This Person",
-              title: "Doctor",
-              name: "Jo Blogs",
-              initials: "JB",
-              pronouns: "Xe/Xem/Xyr",
-              displayName: true,
-              departmentName: "HEE",
-              displayDepartmentName: true,
-              organisation: "NHS England",
-              jobTitle: "Department Head",
-              displayJobTitle: true,
-              website: "https://www.nhs.co.uk",
-              websiteTitle: "nhs.co.uk",
-              displayWebsite: true,
-              phoneNumber: "01234 567890",
-              displayPhoneNumber: true,
-              email: "jo.bloggs@hee.co.uk",
-              displayEmail: true,
-              addressLine1: "Address Line 1",
-              addressLine2: "Address Line 2",
-              addressLine3: "",
-              addressCity: "Address City",
-              addressCounty: "Address County",
-              addressPostcode: "Address Postcode",
-              displayAddress: true,
-              details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque ac pellentesque in sapien. Amet in ante libero a lobortis. Blandit sed pulvinar ultrices gravida vulputate at. Ipsum dolor condimentum habitasse aliquam risus risus consectetur.",
-              displayDetails: true,
-              viewLink: "#"
-            }) }}
-          </li>
-          <li class="nhsuk-contact-group__item">
-            {{ contact({
-              classes: "nhsuk-contact__card",
-              title: "Doctor",
-              name: "Jo Blogs",
-              initials: "JB",
-              displayName: true,
-              departmentName: "HEE",
-              displayDepartmentName: true,
-              jobTitle: "Department Head",
-              displayJobTitle: true,
-              phoneNumber: "01234 567890",
-              displayPhoneNumber: true,
-              email: "jo.bloggs@hee.co.uk",
-              displayEmail: true,
-              address: "123 Fake Street, Fake Town, Fake City, UK, AB1 2CD",
-              displayAddress: true,
-              details: "Lorem ipsum dolor sit amet",
-              displayDetails: true
-            }) }}
-          </li>
-          <li class="nhsuk-contact-group__item">
-              {{ contact({
-                classes: "nhsuk-contact__card",
-                type: "department",
-                departmentName: "HEE",
-                displayDepartmentName: true,
-                phoneNumber: "01234 567890",
-                displayPhoneNumber: true,
-                email: "jo.bloggs@hee.co.uk",
-                displayEmail: true,
-                address: "123 Fake Street, Fake Town, Fake City, UK, AB1 2CD",
-                displayAddress: true,
-                details: "Lorem ipsum dolor sit amet",
-                displayDetails: true
-              }) }}
-          </li>
-        </ul>
+        
+        {{ contact({
+          classes: "nhsuk-contact__card",
+          imgURL: "/images/headshot.jpg",
+          imgALT: "This Person",
+          title: "Doctor",
+          name: "Jo Blogs",
+          initials: "JB",
+          pronouns: "Xe/Xem/Xyr",
+          displayName: true,
+          departmentName: "HEE",
+          displayDepartmentName: true,
+          organisation: "NHS England",
+          jobTitle: "Department Head",
+          displayJobTitle: true,
+          website: "https://www.nhs.co.uk",
+          websiteTitle: "nhs.co.uk",
+          displayWebsite: true,
+          phoneNumber: "01234 567890",
+          displayPhoneNumber: true,
+          email: "jo.bloggs@hee.co.uk",
+          displayEmail: true,
+          addressLine1: "Address Line 1",
+          addressLine2: "Address Line 2",
+          addressLine3: "",
+          addressCity: "Address City",
+          addressCounty: "Address County",
+          addressPostcode: "Address Postcode",
+          displayAddress: true,
+          details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque ac pellentesque in sapien. Amet in ante libero a lobortis. Blandit sed pulvinar ultrices gravida vulputate at. Ipsum dolor condimentum habitasse aliquam risus risus consectetur.",
+          displayDetails: true,
+          viewLink: "#"
+        }) }}
+        {{ contact({
+          classes: "nhsuk-contact__card",
+          title: "Doctor",
+          name: "Jo Blogs",
+          initials: "JB",
+          displayName: true,
+          departmentName: "HEE",
+          displayDepartmentName: true,
+          jobTitle: "Department Head",
+          displayJobTitle: true,
+          phoneNumber: "01234 567890",
+          displayPhoneNumber: true,
+          email: "simon.killough@belfasttrust.hscni.net",
+          displayEmail: true,
+          address: "123 Fake Street, Fake Town, Fake City, UK, AB1 2CD",
+          displayAddress: true,
+          details: "Lorem ipsum dolor sit amet",
+          displayDetails: true
+        }) }}
+        {{ contact({
+            classes: "nhsuk-contact__card",
+            type: "department",
+            departmentName: "HEE",
+            displayDepartmentName: true,
+            phoneNumber: "01234 567890",
+            displayPhoneNumber: true,
+            email: "jo.bloggs@hee.co.uk",
+            displayEmail: true,
+            address: "123 Fake Street, Fake Town, Fake City, UK, AB1 2CD",
+            displayAddress: true,
+            details: "Lorem ipsum dolor sit amet",
+            displayDetails: true
+          }) }}
       </div>
 
     </div>
