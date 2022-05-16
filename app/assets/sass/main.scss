@@ -1,25 +1,38 @@
-// Import NHS.UK frontend library
+///////////////////////////////////////////
+// NHS.UK Frontend library
+///////////////////////////////////////////
 @import 'node_modules/nhsuk-frontend/packages/nhsuk';
 
-// ITCSS
+///////////////////////////////////////////
+// UTILS
+///////////////////////////////////////////
 @import 'generic/resets';
-@import 'objects/flex';
+@import 'utils/flex';
+@import 'utils/mixins';
 
 ///////////////////////////////////////////
-// Overrides
+// NHSUK-HEE Components (Overrides)
 ///////////////////////////////////////////
-@import '../components/custom-breadcrumb/breadcrumb';
-@import '../components/custom-header/header';
-@import '../components/hero/hero';
+@import '../components/nhsuk-hee/nhsuk-hee-breadcrumb/breadcrumb';
+@import '../components/nhsuk-hee/nhsuk-hee-header/header';
+@import '../components/nhsuk-hee/nhsuk-hee-hero/hero';
+@import '../components/nhsuk-hee/nhsuk-hee-globalalert/globalalert';
 
 ///////////////////////////////////////////
-// Components that are not in the NHS.UK frontend library
+// HEE Components
 ///////////////////////////////////////////
 
-@import '../components/blocklinks/blocklinks';
+@import '../components/hee/hee-anchorlinks/anchorlinks';
+@import '../components/hee/hee-blocklinks/blocklinks';
+@import '../components/hee/hee-micro-hero/micro-hero';
+@import '../components/hee/hee-newsletter/newsletter';
+@import '../components/hee/hee-tabs/tabs';
+
+///////////////////////////////////////////
+// Unsorted components
+///////////////////////////////////////////
 @import '../components/contact/contact';
 @import '../components/cookies/cookies';
-@import '../components/emergency-alert/emergency-alert';
 @import '../components/filter/filter';
 @import '../components/filter-tag/filter-tag';
 @import '../components/homepage-section/homepage-section';
@@ -27,18 +40,14 @@
 @import '../components/image-card/image-card';
 @import '../components/related-links-card/related-links-card';
 @import '../components/related-nav/related-nav';
-@import '../components/blocklinks/blocklinks';
 @import '../components/search/search';
 @import '../components/lks-header/_header';
 @import '../components/media/media';
 @import '../components/nav-map/nav-map';
 @import '../components/phase-banner/phase-banner';
-@import '../components/tabs/tabs';
-@import '../components/hee-micro-hero/micro-hero';
 @import '../components/promo-banner/promo-banner';
 @import '../components/related-links-card/related-links-card';
 @import '../components/related-nav/related-nav';
 @import '../components/resources/resources';
 @import '../components/search/search';
-@import '../components/tabs/tabs';
 @import '../components/timeline/timeline';

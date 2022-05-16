@@ -1,7 +1,5 @@
 {%- from 'action-link/macro.njk' import actionLink %}
 {%- from 'back-link/macro.njk' import backLink %}
-{%- from 'blocklinks/macro.njk' import blocklinks %}
-{%- from 'breadcrumb/macro.njk' import breadcrumb %}
 {%- from 'button/macro.njk' import button %}
 {%- from 'card/macro.njk' import card %}
 {%- from 'care-card/macro.njk' import careCard %}
@@ -9,17 +7,14 @@
 {%- from 'contact/macro.njk' import contact %}
 {%- from 'contents-list/macro.njk' import contentsList %}
 {%- from 'cookies/macro.njk' import cookies %}
-{%- from 'custom-header/macro.njk' import customHeader %}
 {%- from 'date-input/macro.njk' import dateInput %}
 {%- from 'details/macro.njk' import details %}
 {%- from 'do-dont-list/macro.njk' import list %}
 {%- from 'error-message/macro.njk' import errorMessage %}
 {%- from 'error-summary/macro.njk' import errorSummary %}
-{%- from 'emergency-alert/macro.njk' import emergencyAlert %}
 {%- from 'fieldset/macro.njk' import fieldset %}
 {%- from 'filter/macro.njk' import filter %}
 {%- from 'footer/macro.njk' import footer %}
-{%- from 'hero/macro.njk' import hero %}
 {%- from 'hint/macro.njk' import hint %}
 {%- from 'homepage-section/macro.njk' import homepageSection %}
 {%- from 'images/macro.njk' import image %}
@@ -51,10 +46,21 @@
 {%- from 'nav-map/macro.njk' import navMap %}
 {%- from 'phase-banner/macro.njk' import phaseBanner %}
 {%- from 'promo-banner/macro.njk' import promoBanner %}
-{%- from 'anchorlinks/macro.njk' import anchorlinks %}
-{%- from 'tabs/macro.njk' import tabs %}
 {%- from 'timeline/macro.njk' import timeline %}
-{%- from 'hee-micro-hero/macro.njk' import microHero %}
+
+{# HEE Components #}
+{%- from 'hee/hee-anchorlinks/macro.njk' import anchorlinks %}
+{%- from 'hee/hee-blocklinks/macro.njk' import blocklinks %}
+{%- from 'hee/hee-micro-hero/macro.njk' import microHero %}
+{%- from 'hee/hee-tabs/macro.njk' import tabs %}
+
+{# NHSUK-HEE Components #}
+{%- from 'nhsuk-hee/nhsuk-hee-header/macro.njk' import customHeader %}
+{%- from 'nhsuk-hee/nhsuk-hee-globalalert/macro.njk' import emergencyAlert %}
+
+{# NHSUK Components #}
+{%- from 'breadcrumb/macro.njk' import breadcrumb %}
+{%- from 'hero/macro.njk' import hero %}
 
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="ie8" lang="en"><![endif]--><!--[if IE 9]><html class="ie9" lang="en"><![endif]--><!--[if gt IE 9]><!--><html lang="en" style="{{ html_style }}"><!--<![endif]-->

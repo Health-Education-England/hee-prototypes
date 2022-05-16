@@ -17,6 +17,4 @@ The Javascript then adds onfocusout event listeners to the required fields which
 On event invocation the field values are validated and if necessary error messages are displayed above the target fields, as well as within the error summary box.
 
 ## Nunjucks macro
-
 None / To be developed
-

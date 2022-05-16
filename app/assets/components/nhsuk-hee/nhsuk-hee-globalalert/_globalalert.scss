@@ -1,0 +1,75 @@
+/* ==========================================================================
+   COMPONENTS / #GLOBAL-ALERT
+   ========================================================================== */
+
+.nhsuk-hee-globalalert {
+	@include print-hide();
+	background-color: $color_nhsuk-yellow;
+	padding-bottom: nhsuk-spacing(4);
+	padding-top: nhsuk-spacing(4);
+
+	a {
+		@include nhsuk-link-style-inverted; /* [1] */
+	}
+
+	.nhsuk-hee-globalalert__content {
+		@include top-and-bottom;
+		position: relative;
+	}
+
+	.nhsuk-hee-globalalert__message {
+		h2, h3 {
+			font-size: 24px;
+			line-height: 1.33333;
+			margin: 0;
+		}
+	
+		p {
+			@include nhsuk-responsive-margin(2, 'top');
+			font-size: 16px;
+			line-height: 1.5;
+			display: block;
+			margin-bottom: 0;
+	
+			@media (min-width: 40.0625em) {
+				font-size: 19px;
+			}
+		}
+	}
+}
+
+.nhsuk-global-alert {
+	@include print-hide();
+	background-color: $color_nhsuk-yellow;
+	padding-bottom: nhsuk-spacing(4);
+	padding-top: nhsuk-spacing(4);
+
+	a {
+		@include nhsuk-link-style-inverted;
+	}
+}
+
+.nhsuk-global-alert__content {
+	@include top-and-bottom;
+	position: relative;
+}
+
+.nhsuk-global-alert__message {
+	h2, h3 {
+		font-size: 24px;
+	    line-height: 1.33333;
+		margin: 0;
+	}
+
+	p {
+		@include nhsuk-responsive-margin(2, 'top');
+		font-size: 16px;
+		line-height: 1.5;
+		display: block;
+		margin-bottom: 0;
+
+		@media (min-width: 40.0625em) {
+			font-size: 19px;
+		}
+	}
+}
