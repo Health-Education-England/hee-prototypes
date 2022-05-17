@@ -1,5 +1,7 @@
 # Listing
-Custom component to display a list of results, containing filters (if provided), results, sort by and pagination (if required)
+Custom component to display a list of results, containing filters (if provided), results, sort by and pagination (if required).
+
+The listing component uses the summaryList() macro to display each result.
 
 ## Nunjucks macro
 
