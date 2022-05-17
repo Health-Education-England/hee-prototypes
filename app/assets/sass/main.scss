@@ -16,7 +16,10 @@
 @import '../components/nhsuk-hee/nhsuk-hee-breadcrumb/breadcrumb';
 @import '../components/nhsuk-hee/nhsuk-hee-header/header';
 @import '../components/nhsuk-hee/nhsuk-hee-hero/hero';
-@import '../components/nhsuk-hee/nhsuk-hee-globalalert/globalalert';
+@import '../components/nhsuk-hee/nhsuk-hee-global-alert/global-alert';
+@import '../components/nhsuk-hee/nhsuk-hee-summary-list/summary-list';
+@import '../components/nhsuk-hee/nhsuk-hee-cookies/cookies';
+
 
 ///////////////////////////////////////////
 // HEE Components
@@ -32,7 +35,7 @@
 // Unsorted components
 ///////////////////////////////////////////
 @import '../components/contact/contact';
-@import '../components/cookies/cookies';
+
 @import '../components/filter/filter';
 @import '../components/filter-tag/filter-tag';
 @import '../components/homepage-section/homepage-section';
