@@ -2,7 +2,7 @@
    COMPONENTS / #GLOBAL-ALERT
    ========================================================================== */
 
-.nhsuk-hee-globalalert {
+.nhsuk-hee-global-alert {
 	@include print-hide();
 	background-color: $color_nhsuk-yellow;
 	padding-bottom: nhsuk-spacing(4);
@@ -12,12 +12,12 @@
 		@include nhsuk-link-style-inverted; /* [1] */
 	}
 
-	.nhsuk-hee-globalalert__content {
+	.nhsuk-hee-global-alert__content {
 		@include top-and-bottom;
 		position: relative;
 	}
 
-	.nhsuk-hee-globalalert__message {
+	.nhsuk-hee-global-alert__message {
 		h2, h3 {
 			font-size: 24px;
 			line-height: 1.33333;
