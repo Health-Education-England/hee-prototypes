@@ -1,0 +1,38 @@
+
+<div class="hee-related-links">
+  {%- if params.imgURL %}
+    <img class="hee-related-links__img" src="{{ params.imgURL }}" alt="{{ params.imgALT }}">
+  {%- endif %}
+  <div class="hee-related-links__content">
+    {%- if params.heading %}
+      <h3 class="hee-related-links__heading">{{ params.heading }}</h3>
+    {% endif -%}
+
+    <ul class="hee-related-links__list">
+      {%- for item in params.links %}
+        <li>
+          <a class="nhsuk-related-links-card__link" href="{{item.url}}">{{item.label}}</a>
+        </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</div>
+
+{#<div class="nhsuk-card hee-related-links-card">
+  {%- if params.imgURL %}
+    <img class="nhsuk-card__img" src="{{ params.imgURL }}" alt="{{ params.imgALT }}">
+  {%- endif %}
+  <div class="nhsuk-card__content">
+    {%- if params.heading %}
+      <h3 class="nhsuk-card__heading">{{ params.heading }}</h3>
+    {% endif -%}
+
+    <ul class="nhsuk-related-links-card__list">
+      {%- for item in params.links %}
+        <li>
+          <a class="nhsuk-related-links-card__link" href="{{item.url}}">{{item.label}}</a>
+        </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</div>#}

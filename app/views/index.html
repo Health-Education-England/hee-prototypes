@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  HEE Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ hero({
+    "heading": "Welcome to HEE's Prototype Kit",
+    "text": "Helping you build consistent HEE websites.",
+    "imageURL": "/images/young-child-using-tablet-device.jpg"
+  }) }}
+{% endblock %}
+
+{% block main %}
+  {{ super }}
+  <main class="nhsuk-main-wrapper nhsuk-main-wrapper--no-padding nhsuk-homepage" id="maincontent" role="main">
+
+    {#% call homepageSection() %}
+      <h2>What we do</h2>
+      <p></p>
+    {% endcall %#}
+
+    {% call homepageSection() %}
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          {{ card({
+            "href": "/components",
+            "clickable": "true",
+            "heading": "Components",
+            "headingLevel": "3",
+            "headingClasses": "nhsuk-heading-m",
+            "description": "All of the available components"
+          }) }}
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          {{ card({
+            "href": "/layouts",
+            "clickable": "true",
+            "heading": "Layouts",
+            "headingLevel": "3",
+            "headingClasses": "nhsuk-heading-m",
+            "description": "All of the available layouts"
+          }) }}
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          {{ card({
+            "href": "/examples",
+            "clickable": "true",
+            "heading": "Examples",
+            "headingLevel": "3",
+            "headingClasses": "nhsuk-heading-m",
+            "description": "Examples of the layouts and components in use"
+          }) }}
+        </li>
+      </ul>
+    {% endcall %}
+
+  </main>
+{% endblock %}

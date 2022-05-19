@@ -1,48 +1,59 @@
-{% extends "lks-layout.html" %}
+{% extends "layout.html" %}
 
 {% block pageTitle %}
-    Components - HEE Prototype
+    Components - HEE Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-
-    {{ breadcrumb({
-        href: "/home",
-        text: "Home"
-    }) }}
-
-    {{ microHero({
-        imgURL: 'https://via.placeholder.com/2000x260'
-    }) }}
-
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/",
+            text: "Home"
+        }
+    ],
+        href: "/components/",
+        text: "Components"
+    }) 
+}}
 {% endblock %}
 
 {% block content %}
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
         <h1>Components</h1>
-        <p class="nhsuk-lede-text">All of the available HEE components</p>
     </div>
 </div>
 <div class="nhsuk-grid-row">
     <ul class="nhsuk-card-group">
-        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
         {{ card({
-            "href": "/components/microhero",
+            "href": "/components/hee/",
             "clickable": "true",
-            "heading": "Micro hero",
-            "headingLevel": "3",
-            "headingClasses": "nhsuk-heading-s",
+            "heading": "HEE",
+            "headingLevel": "2",
+            "headingClasses": "nhsuk-heading-m",
             "description": ""
         }) }}
         </li>
-        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
         {{ card({
-            "href": "/components/",
+            "href": "/components/nhsuk-hee/",
             "clickable": "false",
-            "heading": "",
-            "headingLevel": "3",
-            "headingClasses": "nhsuk-heading-s",
+            "heading": "NHSUK-HEE",
+            "headingLevel": "2",
+            "headingClasses": "nhsuk-heading-m",
+            "description": ""
+        }) }}
+        </li>
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+        {{ card({
+            "href": "/components/nhsuk/",
+            "clickable": "false",
+            "heading": "NHSUK",
+            "headingLevel": "2",
+            "headingClasses": "nhsuk-heading-m",
             "description": ""
         }) }}
         </li>

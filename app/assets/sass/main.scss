@@ -13,44 +13,44 @@
 ///////////////////////////////////////////
 // NHSUK-HEE Components (Overrides)
 ///////////////////////////////////////////
+@import '../components/nhsuk-hee/nhsuk-hee-blocklinks/blocklinks';
 @import '../components/nhsuk-hee/nhsuk-hee-breadcrumb/breadcrumb';
+@import '../components/nhsuk-hee/nhsuk-hee-cookies/cookies';
 @import '../components/nhsuk-hee/nhsuk-hee-header/header';
 @import '../components/nhsuk-hee/nhsuk-hee-hero/hero';
-@import '../components/nhsuk-hee/nhsuk-hee-global-alert/global-alert';
-@import '../components/nhsuk-hee/nhsuk-hee-summary-list/summary-list';
-@import '../components/nhsuk-hee/nhsuk-hee-cookies/cookies';
+@import '../components/nhsuk-hee/nhsuk-hee-globalalert/globalalert';
+@import '../components/nhsuk-hee/nhsuk-phasebanner/phasebanner';
+@import '../components/nhsuk-hee/nhsuk-hee-summarylist/summarylist';
 
+@import '../components/image/image';
+@import '../components/hee/hee-sidebarlinks/links';
 
 ///////////////////////////////////////////
 // HEE Components
 ///////////////////////////////////////////
-
 @import '../components/hee/hee-anchorlinks/anchorlinks';
-@import '../components/hee/hee-blocklinks/blocklinks';
-@import '../components/hee/hee-micro-hero/micro-hero';
+@import '../components/contact/contact';
+@import '../components/hee/hee-homesection/homesection';
+@import '../components/hee/hee-sidebarlinks/sidebarlinks';
+@import '../components/hee/hee-microhero/microhero';
 @import '../components/hee/hee-newsletter/newsletter';
 @import '../components/hee/hee-tabs/tabs';
+@import '../components/hee/hee-timeline/timeline';
 
 ///////////////////////////////////////////
 // Unsorted components
 ///////////////////////////////////////////
-@import '../components/contact/contact';
 
 @import '../components/filter/filter';
 @import '../components/filter-tag/filter-tag';
-@import '../components/homepage-section/homepage-section';
-@import '../components/image/image';
 @import '../components/image-card/image-card';
-@import '../components/related-links-card/related-links-card';
 @import '../components/related-nav/related-nav';
 @import '../components/search/search';
 @import '../components/lks-header/_header';
 @import '../components/media/media';
 @import '../components/nav-map/nav-map';
-@import '../components/phase-banner/phase-banner';
+
 @import '../components/promo-banner/promo-banner';
-@import '../components/related-links-card/related-links-card';
 @import '../components/related-nav/related-nav';
 @import '../components/resources/resources';
 @import '../components/search/search';
-@import '../components/timeline/timeline';

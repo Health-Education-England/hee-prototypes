@@ -1,6 +1,10 @@
 # Related links card
 An extension of [NHS digital service manual - Card](https://service-manual.nhs.uk/design-system/components/card) component in order to accommodate it to render a collection of links.
 
+- Related pages / links
+- Downloads
+- Resources (external)
+
 ## Quick start examples
 
 ### Related links card with heading and links

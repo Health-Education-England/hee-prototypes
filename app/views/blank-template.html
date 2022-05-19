@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+ - HEE - Components - HEE Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ 
+    breadcrumb({
+        items: [
+            {
+                href: "/",
+                text: "Home"
+            },
+            {
+                href: "/components",
+                text: "Components"
+            },
+            {
+                href: "/components/hee",
+                text: "HEE"
+            }
+        ],
+        href: "",
+        text: ""
+    }) 
+}}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row hee-layout">
+    <div class="nhsuk-grid-column-two-thirds hee-layout-content">
+        <h1>Page title</h1>
+        <p class="nhsuk-lede-text">An example page...</p>
+
+    </div>
+    <div class="nhsuk-grid-column-two-thirds hee-layout-sidebar">
+
+    
+    </div>
+</div>
+
+{% endblock %}

@@ -1,6 +1,6 @@
 {% extends "template.html" %}
 {% block headCSS %}
-  <link href="/css/main.css" rel="stylesheet">
+  <link href="/css/main.css" rel="stylesheet" />
 {% endblock %}
 
 {% block header %}
@@ -13,111 +13,45 @@
     showSearch: true,
     organisation: {
       name: "Health Education England",
-      descriptor: "Library and Knowledge Services"
+      descriptor: "HEE Prototype Kit"
     },
     logos: {
-      en: true,
-      ni: true,
+      en: false,
+      ni: false,
       scot: false,
       wales: false,
       fpo: false
     },
     primaryLinks: [
       {
-        url: "/landing",
-        label: "COVID&#8209;19",
+        url: "/",
+        label: "Home"
+      },
+      {
+        url: "/components",
+        label: "Components",
         children: [
           {
-            url: "/",
-            label: "Lorem"
+            url: "/components/hee",
+            label: "HEE"
           },
           {
-            url: "/",
-            label: "Ipsum"
+            url: "/components/nhsuk-hee",
+            label: "NHSUK-HEE"
           },
           {
-            url: "/",
-            label: "Dolor Set"
-          },
-          {
-            url: "/",
-            label: "Amet"
+            url: "/nhsuk",
+            label: "NHSUK"
           }
         ]
       },
       {
-        url: "/landing",
-        label: "Learning and development"
+        url: "/layouts",
+        label: "Layouts"
       },
       {
-        url: "/landing",
-        label: "Mobilising knowledge"
-      },
-      {
-        url: "/landing",
-        label: "Patient information",
-        children: [
-          {
-            url: "/",
-            label: "Lorem"
-          },
-          {
-            url: "/",
-            label: "Ipsum"
-          },
-          {
-            url: "/",
-            label: "Dolor Set"
-          },
-          {
-            url: "/",
-            label: "Amet"
-          }
-        ]
-      },
-      {
-        url: "/landing",
-        label: "Resource discovery",
-        children: [
-          {
-            url: "/",
-            label: "Lorem"
-          },
-          {
-            url: "/",
-            label: "Ipsum"
-          },
-          {
-            url: "/",
-            label: "Dolor Set"
-          },
-          {
-            url: "/",
-            label: "Amet"
-          }
-        ]
-      },
-      {
-        url: "/landing",
-        label: "About",
-        children: [
-          {
-            url: "/",
-            label: "Lorem"
-          },
-          {
-            url: "/",
-            label: "Ipsum"
-          },
-          {
-            url: "/",
-            label: "Dolor Set"
-          },
-          {
-            url: "/",
-            label: "Amet"
-          }
-        ]
+        url: "/examples",
+        label: "Examples"
       }
     ]
   })
@@ -144,7 +78,7 @@
   {{ breadcrumb({
     items: [
       {
-        href: "/home",
+        href: "/",
         text: "Home"
       },
       {
