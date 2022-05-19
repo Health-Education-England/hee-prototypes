@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block bodyStart %}
-  {{ cookies() }}
+  {#{ cookies() }#}
   {{ lksHeader({
     showNav: true,
     showSearch: true,
@@ -57,21 +57,21 @@
   })
 }}
 
-  {{ phaseBanner({
+  {#{ phaseBanner({
     version: "NEW SERVICE",
     title: "Opens in New Window",
     target: "_blank",
     url: "https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu"
-  }) }}
+  }) }#}
 
   {#{ promoBanner({
     content: "Lorum Ipsum Dolor <a href=\"#\" >Sit Amet</a>"
   }) }#}
 
-  {{ emergencyAlert({
+  {#{ emergencyAlert({
     "heading": "Coronavirus (COVID-19)",
     "HTML": "<p><a href=\"#\">Get the latest advice about coronavirus</a></p>"
-  })}}
+  }) }#}
 {% endblock %}
 
 {% block beforeContent %}
