@@ -19,11 +19,13 @@
 @import '../components/nhsuk-hee/nhsuk-hee-header/header';
 @import '../components/nhsuk-hee/nhsuk-hee-hero/hero';
 @import '../components/nhsuk-hee/nhsuk-hee-globalalert/globalalert';
-@import '../components/nhsuk-hee/nhsuk-phasebanner/phasebanner';
+@import '../components/nhsuk-hee/nhsuk-hee-phasebanner/phasebanner';
+@import '../components/nhsuk-hee/nhsuk-hee-promobanner/promobanner';
 @import '../components/nhsuk-hee/nhsuk-hee-summarylist/summarylist';
+@import '../components/nhsuk-hee/nhsuk-hee-tables/tables';
 
 @import '../components/image/image';
-@import '../components/hee/hee-sidebarlinks/links';
+@import '../components/hee/hee-sidebarlinks/sidebarlinks';
 
 ///////////////////////////////////////////
 // HEE Components
@@ -49,8 +51,6 @@
 @import '../components/lks-header/_header';
 @import '../components/media/media';
 @import '../components/nav-map/nav-map';
-
-@import '../components/promo-banner/promo-banner';
 @import '../components/related-nav/related-nav';
 @import '../components/resources/resources';
 @import '../components/search/search';
