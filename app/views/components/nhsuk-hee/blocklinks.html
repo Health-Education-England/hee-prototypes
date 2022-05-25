@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Blocklinks - NHSUK HEE - Components - HEE Prototype Kit
+  BlockLinks - NHSUK-HEE - Components - HEE Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -18,11 +18,11 @@ Blocklinks - NHSUK HEE - Components - HEE Prototype Kit
             },
             {
                 href: "/components/nhsuk-hee",
-                text: "NHSUK HEE"
+                text: "NHSUK-HEE"
             }
         ],
         href: "/components/nhsuk-hee/blocklinks",
-        text: "Blocklinks"
+        text: "BlockLinks"
     }) 
 }}
 {% endblock %}
@@ -30,60 +30,59 @@ Blocklinks - NHSUK HEE - Components - HEE Prototype Kit
 {% block content %}
 <div class="nhsuk-grid-row hee-layout">
     <div class="nhsuk-grid-column-two-thirds hee-layout-content">
-        <h1>Block links</h1>
-        <p class="nhsuk-lede-text">An example page...</p>
+        <h1>BlockLinks</h1>
+        <p class="nhsuk-lede-text"></p>
 
     </div>
     <div class="nhsuk-grid-column-two-thirds hee-layout-sidebar">
         {{ blocklinks({
-            "heading": "Learning 2 Columns",
-            "HTML": "<p>Discover resources and information designed to support you on your learning journey</p>",
-            "columns": "2",
-            "links": [
-              {
-                "url": "/listing",
-                "label": "Learning Zone"
-              },
-              {
-                "url": "/listing",
-                "label": "Equality, Diversity and Inclusion"
-              },
-              {
-                "url": "/listing",
-                "label": "Talent Management Toolkit"
-              },
-              {
-                "url": "/listing",
-                "label": "Case studies"
-              }]
-            })
-          }}
-  
-          {{ blocklinks({
-            "heading": "Learning 1 Column",
-            "HTML": "<p>Discover resources and information designed to support you on your learning journey</p>",
-            "columns": "1",
-            "links": [
-              {
-                "url": "/listing",
-                "label": "Learning Zone"
-              },
-              {
-                "url": "/listing",
-                "label": "Equality, Diversity and Inclusion"
-              },
-              {
-                "url": "/listing",
-                "label": "Talent Management Toolkit"
-              },
-              {
-                "url": "/listing",
-                "label": "Case studies"
-              }]
-            })
-          }}
+          "heading": "Learning 2 Columns",
+          "HTML": "<p>Discover resources and information designed to support you on your learning journey</p>",
+          "columns": "2",
+          "links": [
+            {
+              "url": "/listing",
+              "label": "Learning Zone"
+            },
+            {
+              "url": "/listing",
+              "label": "Equality, Diversity and Inclusion"
+            },
+            {
+              "url": "/listing",
+              "label": "Talent Management Toolkit"
+            },
+            {
+              "url": "/listing",
+              "label": "Case studies"
+            }]
+          })
+        }}
+
+        {{ blocklinks({
+          "heading": "Learning 1 Column",
+          "HTML": "<p>Discover resources and information designed to support you on your learning journey</p>",
+          "columns": "1",
+          "links": [
+            {
+              "url": "/listing",
+              "label": "Learning Zone"
+            },
+            {
+              "url": "/listing",
+              "label": "Equality, Diversity and Inclusion"
+            },
+            {
+              "url": "/listing",
+              "label": "Talent Management Toolkit"
+            },
+            {
+              "url": "/listing",
+              "label": "Case studies"
+            }]
+          })
+        }}
     
     </div>
 </div>
-
 {% endblock %}

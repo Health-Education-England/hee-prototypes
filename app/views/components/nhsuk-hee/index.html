@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-    NHSUK HEE - Components - HEE Prototype Kit
+    NHSUK-HEE - Components - HEE Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -18,7 +18,7 @@
         }
     ],
         href: "/components/nhsuk-hee",
-        text: "NHSUK HEE"
+        text: "NHSUK-HEE"
     }) 
 }}
 {% endblock %}
@@ -26,7 +26,7 @@
 {% block content %}
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-        <h1>NHSUK HEE Components</h1>
+        <h1>NHSUK-HEE Components</h1>
         <p class="nhsuk-lede-text">THe NHSUK components that have been modified/ overriden by us.</p>
     </div>
 </div>
@@ -37,6 +37,16 @@
                 "href": "/components/nhsuk-hee/blocklinks",
                 "clickable": "true",
                 "heading": "BlockLinks",
+                "headingLevel": "3",
+                "headingClasses": "nhsuk-heading-s",
+                "description": ""
+            }) }}
+        </li>
+        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+            {{ card({
+                "href": "/components/nhsuk-hee/summarylist",
+                "clickable": "true",
+                "heading": "SummaryList",
                 "headingLevel": "3",
                 "headingClasses": "nhsuk-heading-s",
                 "description": ""
