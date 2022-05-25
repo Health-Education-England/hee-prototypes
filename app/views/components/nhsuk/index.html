@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+    NHSUK - Components - HEE Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/",
+            text: "Home"
+        },
+        {
+            href: "/components",
+            text: "Components"
+        }
+    ],
+        href: "/components/nhsuk",
+        text: "NHSUK"
+    }) 
+}}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <h1>NHSUK Components</h1>
+        <p class="nhsuk-lede-text">You can find the NHSUK components on the <a href="https://service-manual.nhs.uk/design-system/components/">NHS Digital service manual</a>.</p>
+
+        <h2>NHS components that have been integrated into the NWP</h2>
+        <h3>Content presentation</h3>
+        <ul>
+            <li><s>Care cards</s></li>
+            <li>Details</li>
+            <li><s>Do and Don't lists</s></li>    
+            <li>Expander</li>    
+            <li>Images</li>    
+            <li>Inset text</li>    
+            <li>Review date</li>    
+            <li>Summary list</li>    
+            <li>Table</li>    
+            <li>Tag</li>    
+            <li>Warning callout</li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

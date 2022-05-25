@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+HomeSection - HEE - Components - HEE Prototype
+{% endblock %}
+
+{% block beforeContent %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/home",
+            text: "Home"
+        },
+        {
+            href: "/components",
+            text: "Components"
+        },
+        {
+            href: "/components/hee",
+            text: "HEE"
+        }
+    ],
+        href: "/components/hee/components/homesection",
+        text: "HomeSection"
+    }) 
+}}
+{% endblock %}
+
+{% block main %}
+
+<div class="nhsuk-width-container">
+    <div class="nhsuk-grid-row hee-layout">
+        <div class="nhsuk-grid-column-two-thirds hee-layout-content">
+            <h1>HomeSection</h1>
+            <p class="nhsuk-lede-text"></p>
+            
+            <h3>Hoc loco discipulos quaerere videtur</h3>
+            <p>Utilitatis causa amicitia est quaesita. Duo Reges: constructio interrete. Quid est igitur, inquit, quod requiras? Illi enim inter se dissentiunt. </p>
+            <p>Nunc haec primum fortasse audientis servire debemus. Hoc Hieronymus summum bonum esse dixit. Quid ait Aristoteles reliquique Platonis alumni? Sin aliud quid voles, postea. Sed ad bona praeterita redeamus. Nonne igitur tibi videntur, inquit, mala? </p>
+            
+        </div>
+        <div class="nhsuk-grid-column-two-thirds hee-layout-sidebar">
+
+        
+        </div>
+    </div>
+</div>
+
+<div class="nhsuk-width-container nhsuk-width-container--full">
+<main class="nhsuk-homepage" id="maincontent" role="main">
+
+    {% call homepageSection() %}
+        <div class="nhsuk-u-reading-width">
+          <h2>What we do</h2>
+          <p>We provide guidance and support for Library Knowledge Services professionals. Enabling you to access the right knowledge and evidence at the right time.</p>
+          {{ insetText({
+            "HTML": "<p>You can find out more about what we do on our <a href=\"https://www.hee.nhs.uk/about/how-we-work\" title=\"About us\">About us</a> page.</p>"
+          }) }}
+        </div>
+      {% endcall %}
+
+      {% call homepageSection() %}
+        <div class="nhsuk-u-reading-width">
+          <h2>What we do</h2>
+          <p>We provide guidance and support for Library Knowledge Services professionals. Enabling you to access the right knowledge and evidence at the right time.</p>
+          {{ insetText({
+            "HTML": "<p>You can find out more about what we do on our <a href=\"https://www.hee.nhs.uk/about/how-we-work\" title=\"About us\">About us</a> page.</p>"
+          }) }}
+        </div>
+      {% endcall %}
+
+
+    </main>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+
+{% endblock %}
