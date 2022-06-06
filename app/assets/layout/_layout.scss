@@ -1,0 +1,55 @@
+.hee-page {
+}
+
+.hee-page__header {}
+.hee-page__main {
+    padding-bottom: nhsuk-spacing(6);
+}
+.hee-page__footer {}
+
+.hee-layout {}
+.hee-layout__content {}
+.hee-layout__sidebar {}
+
+
+// Content full
+.hee-page--home {}
+
+.hee-page--landing {
+    .hee-page__heading {
+        padding-top: nhsuk-spacing(6);
+    }
+}
+
+
+// Content left, sidebar right
+// Standard, minihub
+.hee-page--standard {
+
+    .hee-page__header,
+    .hee-page__main,
+    .hee-page__footer {
+        // Full width
+    }
+
+    .hee-page__heading {
+        padding-top: nhsuk-spacing(4);
+    }
+
+    .hee-page__main.hee-layout {
+        // Grid
+    }
+    .hee-layout__content {
+        // Col 2/3
+    }
+    .hee-layout__sidebar {
+        // Col 1/3
+    }
+}
+
+// Sidebar left, listing right
+// 
+.hee-layout--listing {
+
+}
+
