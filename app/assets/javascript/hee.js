@@ -16,7 +16,7 @@ import NavMap from '../components/nav-map/nav-map';
 import SubMenu from '../components/submenu/submenu';
 
 
-import './polyfills';
+//import './polyfills';
 
 // Initialize components
 document.addEventListener('DOMContentLoaded', () => {
