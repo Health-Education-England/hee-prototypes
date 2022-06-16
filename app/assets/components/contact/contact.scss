@@ -125,6 +125,8 @@ $contact-border-hover-color: $color_nhsuk-grey-3;
 .nhsuk-contact-group {
   margin-bottom: nhsuk-spacing(3);
   padding: 0;
+  display: flex; //
+  flex-wrap: wrap; //
 
   @include mq($until: desktop) {
     margin-bottom: nhsuk-spacing(6);
@@ -137,7 +139,7 @@ $contact-border-hover-color: $color_nhsuk-grey-3;
     padding-top: 0;
   }
 
-
+  .hee-layout__rightbar,
   .hee-layout-sidebar & {
     margin-left: 0;
     margin-right: 0;
@@ -150,10 +152,12 @@ $contact-border-hover-color: $color_nhsuk-grey-3;
 }
 
 .nhsuk-contact-group__item {
-  //@include flex-item();
-
+  display: flex; //
+  flex-wrap: wrap; //
   list-style-type: none;
   margin-bottom: 0;
+
+  // on mob - flex: 0 0 100%;
 
   .nhsuk-contact {
     margin-bottom: nhsuk-spacing(5);
