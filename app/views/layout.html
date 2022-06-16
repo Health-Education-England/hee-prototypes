@@ -1,119 +1,31 @@
 {% extends "template.html" %}
-{% block headCSS %}
-  <link href="/css/main.css" rel="stylesheet" />
-{% endblock %}
-
-{% block header %}
-{% endblock %}
 
 {% block bodyStart %}
   {#{ cookies() }#}
-  {{ lksHeader({
-    showNav: true,
-    showSearch: true,
-    organisation: {
-      name: "Health Education England",
-      descriptor: "HEE Prototype Kit"
-    },
-    logos: {
-      en: false,
-      ni: false,
-      scot: false,
-      wales: false,
-      fpo: false
-    },
-    primaryLinks: [
-      {
-        url: "/",
-        label: "Home"
-      },
-      {
-        url: "/components",
-        label: "Components",
-        children: [
-          {
-            url: "/components/hee",
-            label: "HEE"
-          },
-          {
-            url: "/components/nhsuk-hee",
-            label: "NHSUK-HEE"
-          },
-          {
-            url: "/nhsuk",
-            label: "NHSUK"
-          }
-        ]
-      },
-      {
-        url: "/layouts",
-        label: "Layouts"
-      },
-      {
-        url: "/examples",
-        label: "Examples"
-      }
-    ]
-  })
-}}
-
-  {#{ phaseBanner({
-    version: "NEW SERVICE",
-    title: "Opens in New Window",
-    target: "_blank",
-    url: "https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu"
-  }) }#}
-
-  {#{ promoBanner({
-    content: "Lorum Ipsum Dolor <a href=\"#\" >Sit Amet</a>"
-  }) }#}
-
-  {#{ emergencyAlert({
-    "heading": "Coronavirus (COVID-19)",
-    "HTML": "<p><a href=\"#\">Get the latest advice about coronavirus</a></p>"
-  }) }#}
 {% endblock %}
 
-{% block beforeContent %}
-  {{ breadcrumb({
-    items: [
-      {
-        href: "/",
-        text: "Home"
-      },
-      {
-        href: "/landing",
-        text: "Level two"
-      }
-    ],
-    href: "#",
-    text: "Level three"
-  }) }}
+{% block pageClass %}hee-page--standard{% endblock %}
+
+{% block pageHeader %}
+    {#{ hero({
+        "heading": "Welcome to HEE's Prototype Kit",
+        "text": "Helping you build consistent HEE websites.",
+        "imageURL": "/images/young-child-using-tablet-device.jpg"
+    }) }#}
 {% endblock %}
 
-{% block footer %}
-  {{ footer({
-    "list": "nhsuk-footer__list--three-columns",
-    "links": [
-      {
-        "URL": "/blog",
-        "label": "Blog"
-      },
-      {
-        "URL": "/content",
-        "label": "About us"
-      },
-      {
-        "URL": "/content",
-        "label": "Contact us"
-      }
-    ]
-  })}}
+{% block pageMain %}
+<div class="nhsuk-width-container">
+  <div class="nhsuk-grid-row hee-layout">
+    {% block content %}Content...{% endblock %}
+    {% block sidebar %}Sidebar...{% endblock %}
+  </div>
+</div>
+{% endblock %}
+
+{% block pageFooter %}
 {% endblock %}
 
 {% block bodyEnd %}
-  {% block scripts %}
-    {% include "includes/scripts.html" %}
-    {% block pageScripts %}{% endblock %}
-  {% endblock %}
+  {% block pageScripts %}{% endblock %}
 {% endblock %}

@@ -1,59 +1,78 @@
-{% extends "layout.html" %}
+{% extends "template.html" %}
+
+{% block pageClass %}hee-page--home{% endblock %}
+
 {% block pageTitle %}
-  HEE Prototype Kit
+HEE Prototype Kit
 {% endblock %}
 
-{% block beforeContent %}
-  {{ hero({
+{% block headerEnd %} 
+{{ phaseBanner({
+  version: "NEW SERVICE",
+  title: "Opens in New Window",
+  target: "_blank",
+  url: "https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu"
+}) }}
+
+{#{ promoBanner({
+  content: "Lorum Ipsum Dolor <a href=\"#\" >Sit Amet</a>"
+}) }#}
+
+{{ emergencyAlert({
+  "heading": "Coronavirus (COVID-19)",
+  "HTML": "<p><a href=\"#\">Get the latest advice about coronavirus</a></p>"
+}) }}
+{% endblock %}
+
+{% block pageHeader %}
+{{ hero({
     "heading": "Welcome to HEE's Prototype Kit",
     "text": "Helping you build consistent HEE websites.",
     "imageURL": "/images/young-child-using-tablet-device.jpg"
-  }) }}
+}) }}
 {% endblock %}
 
-{% block main %}
-  {{ super }}
-  <main class="nhsuk-main-wrapper nhsuk-main-wrapper--no-padding nhsuk-homepage" id="maincontent" role="main">
+{% block pageMain %}
+{#% call homepageSection() %}
+  <h2>What we do</h2>
+  <p></p>
+{% endcall %#}
 
-    {#% call homepageSection() %}
-      <h2>What we do</h2>
-      <p></p>
-    {% endcall %#}
+{% call homepageSection() %}
+  <ul class="nhsuk-grid-row nhsuk-card-group">
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+      {{ card({
+        "href": "/components",
+        "clickable": "true",
+        "heading": "Components",
+        "headingLevel": "3",
+        "headingClasses": "nhsuk-heading-m",
+        "description": "All of the available components"
+      }) }}
+    </li>
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+      {{ card({
+        "href": "/layouts",
+        "clickable": "true",
+        "heading": "Layouts",
+        "headingLevel": "3",
+        "headingClasses": "nhsuk-heading-m",
+        "description": "All of the available layouts"
+      }) }}
+    </li>
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+      {{ card({
+        "href": "/examples",
+        "clickable": "true",
+        "heading": "Examples",
+        "headingLevel": "3",
+        "headingClasses": "nhsuk-heading-m",
+        "description": "Examples of the layouts and components in use"
+      }) }}
+    </li>
+  </ul>
+{% endcall %}
+{% endblock %}
 
-    {% call homepageSection() %}
-      <ul class="nhsuk-grid-row nhsuk-card-group">
-        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-          {{ card({
-            "href": "/components",
-            "clickable": "true",
-            "heading": "Components",
-            "headingLevel": "3",
-            "headingClasses": "nhsuk-heading-m",
-            "description": "All of the available components"
-          }) }}
-        </li>
-        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-          {{ card({
-            "href": "/layouts",
-            "clickable": "true",
-            "heading": "Layouts",
-            "headingLevel": "3",
-            "headingClasses": "nhsuk-heading-m",
-            "description": "All of the available layouts"
-          }) }}
-        </li>
-        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-          {{ card({
-            "href": "/examples",
-            "clickable": "true",
-            "heading": "Examples",
-            "headingLevel": "3",
-            "headingClasses": "nhsuk-heading-m",
-            "description": "Examples of the layouts and components in use"
-          }) }}
-        </li>
-      </ul>
-    {% endcall %}
-
-  </main>
+{% block pageFooter %}
 {% endblock %}

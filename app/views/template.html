@@ -2,7 +2,6 @@
 {%- from 'back-link/macro.njk' import backLink %}
 {%- from 'care-card/macro.njk' import careCard %}
 {%- from 'contact/macro.njk' import contact %}
-{%- from 'contents-list/macro.njk' import contentsList %}
 {%- from 'date-input/macro.njk' import dateInput %}
 {%- from 'details/macro.njk' import details %}
 {%- from 'error-message/macro.njk' import errorMessage %}
@@ -11,7 +10,6 @@
 {%- from 'filter/macro.njk' import filter %}
 {%- from 'footer/macro.njk' import footer %}
 {%- from 'hint/macro.njk' import hint %}
-{%- from 'images/macro.njk' import image %}
 {%- from 'image-card/macro.njk' import imageCard %}
 {%- from 'input/macro.njk' import input %}
 {%- from 'label/macro.njk' import label %}
@@ -19,13 +17,11 @@
 {%- from 'lks-header/macro.njk' import lksHeader %}
 {%- from 'nav-a-z/macro.njk' import azNav %}
 {%- from 'nav-map/macro.njk' import navMap %}
-{%- from 'pagination/macro.njk' import pagination %}
 {%- from 'radios/macro.njk' import radios %}
 {%- from 'resources/macro.njk' import resources %}
 {%- from 'skip-link/macro.njk' import skipLink %}
 {%- from 'tag/macro.njk' import tag %}
 {%- from 'textarea/macro.njk' import textarea %}
-{%- from 'review-date/macro.njk' import reviewDate %}
 {%- from 'related-nav/macro.njk' import relatedNav %}
 {%- from 'lks-header/macro.njk' import lksHeader %}
 {%- from 'resources/macro.njk' import resources %}
@@ -54,9 +50,13 @@
 {%- from 'button/macro.njk' import button %}
 {%- from 'card/macro.njk' import card %}
 {%- from 'checkboxes/macro.njk' import checkboxes %}
+{%- from 'contents-list/macro.njk' import contentsList %}
+{%- from 'images/macro.njk' import image %}
 {%- from 'inset-text/macro.njk' import insetText %}
 {%- from 'do-dont-list/macro.njk' import list %}
 {%- from 'hero/macro.njk' import hero %}
+{%- from 'pagination/macro.njk' import pagination %}
+{%- from 'review-date/macro.njk' import reviewDate %}
 {%- from 'summary-list/macro.njk' import summaryList %}
 {%- from 'select/macro.njk' import select %}
 {%- from 'tables/macro.njk' import table %}
@@ -69,20 +69,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-
-    <title>{% block pageTitle %}NHS.UK prototype kit{% endblock %}</title>
-
+    <title>{% block pageTitle %}NWP Prototype Kit{% endblock %}</title>
     <link href="https://www.nhs.uk/" rel="preconnect">
     <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
-
     <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
     <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
 
     {% block headCSS %}
-      <link href="/css/main.css" rel="stylesheet">
+      <link href="/css/nhsuk-hee.css" rel="stylesheet" />
     {% endblock %}
-
-    <script src="/nhsuk-frontend/nhsuk.min.js" defer></script>
 
     {% block headIcons %}
     <link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico" type="image/x-icon">
@@ -99,36 +94,112 @@
   </head>
 
   <body class="{{ bodyClasses }}">
-
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
     {% block bodyStart %}{% endblock %}
 
-      {% block skipLink %}
-        {{ skipLink({
-          href: '#maincontent',
-          text: 'Skip to main content'
-        }) }}
-      {% endblock %}
+    {% block skipLink %}
+      {{ skipLink({
+        href: '#maincontent',
+        text: 'Skip to main content'
+      }) }}
+    {% endblock %}
 
-      {% block header %}
-        {{ header({}) }}
-      {% endblock %}
+    {% block header %}
+      {{ lksHeader({
+          showNav: true,
+          showSearch: true,
+          organisation: {
+          name: "Health Education England",
+          descriptor: "NWP Prototype Kit"
+          },
+          logos: {
+          en: false,
+          ni: false,
+          scot: false,
+          wales: false,
+          fpo: false
+          },
+          primaryLinks: [
+          {
+              url: "/",
+              label: "Home"
+          },
+          {
+              url: "/components",
+              label: "Components",
+              children: [
+              {
+                  url: "/components/hee",
+                  label: "HEE"
+              },
+              {
+                  url: "/components/nhsuk-hee",
+                  label: "NHSUK-HEE"
+              },
+              {
+                  url: "/nhsuk",
+                  label: "NHSUK"
+              }
+              ]
+          },
+          {
+              url: "/layouts",
+              label: "Layouts"
+          },
+          {
+              url: "/examples",
+              label: "Examples"
+          }
+          ]
+          })
+      }}
+    {% endblock %}
+    {% block headerEnd %}{% endblock %}
 
-      {% block beforeContent %}{% endblock %}
+    <div class="hee-page {% block pageClass %}{% endblock %}" id="maincontent" role="main">
+      <div class="hee-page__header">
+        {% block pageHeader %}
+          {# Breadcrumbs... Hero... Microhero... Title #}
+        {% endblock %}
+      </div>
+      <div class="hee-page__main">
+        {% block pageMain %}
+          {# Content... #}
+        {% endblock %}
+      </div>
+      <div class="hee-page__footer">
+        {% block pageFooter %}
+          {# Last updated... Tags... Page created... #}
+        {% endblock %}
+      </div>
+    </div>
 
-      {% block main %}
-        <div class="nhsuk-width-container {{ containerClasses }}">
-          <main class="nhsuk-main-wrapper {{ mainClasses }}" id="maincontent" role="main">
-            {% block content %}{% endblock %}
-          </main>
-        </div>
-      {% endblock %}
+    {% block footer %}
+      {{ footer({
+        "list": "nhsuk-footer__list--three-columns",
+        "links": [
+          {
+            "URL": "/blog",
+            "label": "Blog"
+          },
+          {
+            "URL": "/content",
+            "label": "About us"
+          },
+          {
+            "URL": "/content",
+            "label": "Contact us"
+          }
+        ]
+      }) }}
+    {% endblock %}
 
-      {% block footer %}
-        {{ footer() }}
-      {% endblock %}
-
-    {% block bodyEnd %}{% endblock %}
-
+    {% block scripts %}
+      <script src="/js/jquery-3.3.1.min.js"></script>
+      <script src="/js/nhsuk-hee.js"></script>
+    {% endblock %}
+    {% block bodyEnd %}
+      {% block pageScripts %}{% endblock %}
+    {% endblock %}
   </body>
 </html>

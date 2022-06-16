@@ -1,10 +1,12 @@
-{% extends "layout.html" %}
+{% extends "template.html" %}
+
+{% block pageClass %}hee-page--standard{% endblock %}
 
 {% block pageTitle %}
-    Components - HEE Prototype Kit
+Components - NWP Prototype Kit
 {% endblock %}
 
-{% block beforeContent %}
+{% block pageHeader %}
 {{ 
     breadcrumb({
     items: [
@@ -17,46 +19,52 @@
         text: "Components"
     }) 
 }}
+{{ microHero({
+    "imgURL": "/images/hee_cl_gloucester_04361.jpeg"
+}) }}
+<div class="nhsuk-width-container hee-page__heading">
+    <h1>Components</h1>
+    <p class="nhsuk-lede-text"></p>
+</div>
 {% endblock %}
 
-{% block content %}
-<div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
-        <h1>Components</h1>
+{% block pageMain %}
+<div class="nhsuk-width-container">
+    <div class="nhsuk-grid-row">
+        <ul class="nhsuk-card-group">
+            <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+            {{ card({
+                "href": "/components/hee/",
+                "clickable": "true",
+                "heading": "HEE",
+                "headingLevel": "2",
+                "headingClasses": "nhsuk-heading-m",
+                "description": ""
+            }) }}
+            </li>
+            <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+            {{ card({
+                "href": "/components/nhsuk-hee/",
+                "clickable": "false",
+                "heading": "NHSUK-HEE",
+                "headingLevel": "2",
+                "headingClasses": "nhsuk-heading-m",
+                "description": ""
+            }) }}
+            </li>
+            <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+            {{ card({
+                "href": "/components/nhsuk/",
+                "clickable": "false",
+                "heading": "NHSUK",
+                "headingLevel": "2",
+                "headingClasses": "nhsuk-heading-m",
+                "description": ""
+            }) }}
+            </li>
+        </ul>
     </div>
 </div>
-<div class="nhsuk-grid-row">
-    <ul class="nhsuk-card-group">
-        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-        {{ card({
-            "href": "/components/hee/",
-            "clickable": "true",
-            "heading": "HEE",
-            "headingLevel": "2",
-            "headingClasses": "nhsuk-heading-m",
-            "description": ""
-        }) }}
-        </li>
-        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-        {{ card({
-            "href": "/components/nhsuk-hee/",
-            "clickable": "false",
-            "heading": "NHSUK-HEE",
-            "headingLevel": "2",
-            "headingClasses": "nhsuk-heading-m",
-            "description": ""
-        }) }}
-        </li>
-        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-        {{ card({
-            "href": "/components/nhsuk/",
-            "clickable": "false",
-            "heading": "NHSUK",
-            "headingLevel": "2",
-            "headingClasses": "nhsuk-heading-m",
-            "description": ""
-        }) }}
-        </li>
-    </ul>
-    </div>
 {% endblock %}
+
+{% block pageFooter %}{% endblock %}

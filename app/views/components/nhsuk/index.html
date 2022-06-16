@@ -1,10 +1,12 @@
-{% extends "layout.html" %}
+{% extends "template.html" %}
+
+{% block pageClass %}hee-page--standard{% endblock %}
 
 {% block pageTitle %}
-    NHSUK - Components - HEE Prototype Kit
+NHSUK - Components - HEE Prototype Kit
 {% endblock %}
 
-{% block beforeContent %}
+{% block pageHeader %}
 {{ 
     breadcrumb({
     items: [
@@ -21,30 +23,41 @@
         text: "NHSUK"
     }) 
 }}
-{% endblock %}
-
-{% block content %}
-<div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
-        <h1>NHSUK Components</h1>
-        <p class="nhsuk-lede-text">You can find the NHSUK components on the <a href="https://service-manual.nhs.uk/design-system/components/">NHS Digital service manual</a>.</p>
-
-        <h2>NHS components that have been integrated into the NWP</h2>
-        <h3>Content presentation</h3>
-        <ul>
-            <li><s>Care cards</s></li>
-            <li>Details</li>
-            <li><s>Do and Don't lists</s></li>    
-            <li>Expander</li>    
-            <li>Images</li>    
-            <li>Inset text</li>    
-            <li>Review date</li>    
-            <li>Summary list</li>    
-            <li>Table</li>    
-            <li>Tag</li>    
-            <li>Warning callout</li>
-        </ul>
+<div class="nhsuk-width-container">
+    <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds hee-page__heading">
+            <h1>NHSUK Components</h1>
+            <p class="nhsuk-lede-text">You can find the NHSUK components on the <a href="https://service-manual.nhs.uk/design-system/components/">NHS Digital service manual</a>.</p>
+        </div>
     </div>
 </div>
-
 {% endblock %}
+
+{% block pageMain %}
+<div class="nhsuk-width-container">
+    <div class="nhsuk-grid-row hee-layout">
+        <div class="nhsuk-grid-column-two-thirds hee-layout__content">
+            <h2>NHS components that have been integrated into the NWP</h2>
+            <h3>Content presentation</h3>
+            <ul>
+                <li><s>Care cards</s></li>
+                <li>Details</li>
+                <li><s>Do and Don't lists</s></li>    
+                <li>Expander</li>    
+                <li>Images</li>    
+                <li>Inset text</li>    
+                <li>Review date</li>    
+                <li>Summary list</li>    
+                <li>Table</li>    
+                <li>Tag</li>    
+                <li>Warning callout</li>
+            </ul>
+        </div>
+        <div class="nhsuk-grid-column-one-third hee-layout__rightbar">
+            Sidebar...
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

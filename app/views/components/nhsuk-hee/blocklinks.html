@@ -28,61 +28,90 @@
 {% endblock %}
 
 {% block content %}
-<div class="nhsuk-grid-row hee-layout">
+<div class="nhsuk-grid-row hee-layout hee-layout--standard">
+    <div class="nhsuk-grid-column-two-thirds hee-layout-header">
+      <h1>BlockLinks</h1>
+      <p class="nhsuk-lede-text"></p>
+    </div>
     <div class="nhsuk-grid-column-two-thirds hee-layout-content">
-        <h1>BlockLinks</h1>
-        <p class="nhsuk-lede-text"></p>
+      {{ blocklinks({
+        "heading": "Learning 2 Columns",
+        "HTML": "<p>Discover resources and information designed to support you on your learning journey</p>",
+        "columns": "2",
+        "links": [
+          {
+            "url": "/listing",
+            "label": "Learning Zone"
+          },
+          {
+            "url": "/listing",
+            "label": "Equality, Diversity and Inclusion"
+          },
+          {
+            "url": "/listing",
+            "label": "Talent Management Toolkit"
+          },
+          {
+            "url": "/listing",
+            "label": "Case studies"
+          }]
+        })
+      }}
+
+      {{ blocklinks({
+        "heading": "Learning 1 Column",
+        "HTML": "<p>Discover resources and information designed to support you on your learning journey</p>",
+        "columns": "1",
+        "links": [
+          {
+            "url": "/listing",
+            "label": "Learning Zone"
+          },
+          {
+            "url": "/listing",
+            "label": "Equality, Diversity and Inclusion"
+          },
+          {
+            "url": "/listing",
+            "label": "Talent Management Toolkit"
+          },
+          {
+            "url": "/listing",
+            "label": "Case studies"
+          }]
+        })
+      }}
+    </div>
+    <div class="nhsuk-grid-column-one-third hee-layout-sidebar">
 
     </div>
-    <div class="nhsuk-grid-column-two-thirds hee-layout-sidebar">
-        {{ blocklinks({
-          "heading": "Learning 2 Columns",
-          "HTML": "<p>Discover resources and information designed to support you on your learning journey</p>",
-          "columns": "2",
-          "links": [
-            {
-              "url": "/listing",
-              "label": "Learning Zone"
-            },
-            {
-              "url": "/listing",
-              "label": "Equality, Diversity and Inclusion"
-            },
-            {
-              "url": "/listing",
-              "label": "Talent Management Toolkit"
-            },
-            {
-              "url": "/listing",
-              "label": "Case studies"
-            }]
-          })
-        }}
+</div>
 
-        {{ blocklinks({
-          "heading": "Learning 1 Column",
-          "HTML": "<p>Discover resources and information designed to support you on your learning journey</p>",
-          "columns": "1",
-          "links": [
-            {
-              "url": "/listing",
-              "label": "Learning Zone"
-            },
-            {
-              "url": "/listing",
-              "label": "Equality, Diversity and Inclusion"
-            },
-            {
-              "url": "/listing",
-              "label": "Talent Management Toolkit"
-            },
-            {
-              "url": "/listing",
-              "label": "Case studies"
-            }]
-          })
-        }}
-    
+<div class="hee-layout hee-layout--full">
+    <div class="hee-layout-content">
+      {{ blocklinks({
+        "heading": "Learning 2 Columns",
+        "HTML": "<p>Discover resources and information designed to support you on your learning journey</p>",
+        "columns": "2",
+        "links": [
+          {
+            "url": "/listing",
+            "label": "Learning Zone"
+          },
+          {
+            "url": "/listing",
+            "label": "Equality, Diversity and Inclusion"
+          },
+          {
+            "url": "/listing",
+            "label": "Talent Management Toolkit"
+          },
+          {
+            "url": "/listing",
+            "label": "Case studies"
+          }]
+        })
+      }}
     </div>
 </div>
 {% endblock %}

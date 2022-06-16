@@ -1,0 +1,26 @@
+{% extends "template.html" %}
+
+{% block pageClass %}hee-page--article{% endblock %}
+
+{% block pageHeader %}
+{% endblock %}
+
+{% block pageMain %}
+<div class="nhsuk-width-container">
+  <div class="nhsuk-grid-row hee-layout">
+    <div class="nhsuk-grid-column-two-thirds hee-layout__content">
+      {% block content %}Content...{% endblock %}
+    </div>
+    <div class="nhsuk-grid-column-one-third hee-layout__sidebar">
+      {% block sidebar %}Sidebar...{% endblock %}
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block pageFooter %}
+{% endblock %}
+
+{% block bodyEnd %}
+  {% block pageScripts %}{% endblock %}
+{% endblock %}

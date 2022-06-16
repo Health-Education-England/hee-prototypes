@@ -1,10 +1,12 @@
-{% extends "layout.html" %}
+{% extends "template-article.html" %}
+
+{% block pageClass %}hee-page--standard{% endblock %}
 
 {% block pageTitle %}
 MicroHero - HEE - Components - HEE Prototype
 {% endblock %}
 
-{% block beforeContent %}
+{% block pageHeader %}
 {{ 
     breadcrumb({
     items: [
@@ -31,25 +33,27 @@ MicroHero - HEE - Components - HEE Prototype
         imgAlt: 'An example bg image'
     }) 
 }}
+<div class="nhsuk-width-container hee-page__heading">
+    <h1>MicroHero</h1>
+    <p class="nhsuk-lede-text">An example page with a microhero image header</p>
+</div>
 {% endblock %}
 
 {% block content %}
-<div class="nhsuk-grid-row hee-layout">
-    <div class="nhsuk-grid-column-two-thirds hee-layout-content">
-        <h1>MicroHero</h1>
-        <p class="nhsuk-lede-text">An example page with a microhero image header</p>
-        <ul>
-            <li>Standard content pages (not in minihubs).</li>
-            <li>The first page in a mini-hub.</li>
-            <li>Listing pages.</li>
-            <li>Section homepages (new page template coming in Q1 2022).</li>
-            <li>The micro-hero sits below all navigation elements as and can be seen here [Dental UI](https://www.figma.com/file/JCLoBWN4R6R8edF58xCJrl/Dental-UI?node-id=237%3A10719) (Yorkshire and Humber Living page).</li>
-            <li>The micro-hero stretches the full width of the browser and has a height of 260px</li>
-        </ul>
-    </div>
-    <div class="nhsuk-grid-column-two-thirds hee-layout-sidebar">
+<div class="nhsuk-grid-column-two-thirds hee-layout__content">
+    <ul>
+        <li>Standard content pages (not in minihubs).</li>
+        <li>The first page in a mini-hub.</li>
+        <li>Listing pages.</li>
+        <li>Section homepages (new page template coming in Q1 2022).</li>
+        <li>The micro-hero sits below all navigation elements as and can be seen here [Dental UI](https://www.figma.com/file/JCLoBWN4R6R8edF58xCJrl/Dental-UI?node-id=237%3A10719) (Yorkshire and Humber Living page).</li>
+        <li>The micro-hero stretches the full width of the browser and has a height of 260px</li>
+    </ul>
+</div>
+{% endblock %}
 
-    
-    </div>
+{% block sidebar %}
+<div class="nhsuk-grid-column-one-third hee-layout__rightbar">
+    Sidebar...
 </div>
 {% endblock %}
