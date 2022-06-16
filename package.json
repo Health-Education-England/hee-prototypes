@@ -1,6 +1,6 @@
 {
-  "name": "hee-prototypes",
-  "version": "4.1.0",
+  "name": "HEE-prototypes",
+  "version": "2.0.0",
   "description": "Rapidly create HTML prototypes of NHS websites and services.",
   "main": "app.js",
   "scripts": {
@@ -27,11 +27,14 @@
     "express-session": "^1.17.1",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
     "gulp-clean": "^0.4.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-nodemon": "^2.5.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
     "keypather": "^3.0.0",
     "nhsuk-frontend": "4.1.0",
     "node-sass": "^7.0",
@@ -39,7 +42,6 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "gulp-uglify": "^3.0.2",
     "webpack": "^5.72.0",
     "webpack-stream": "^7.0.0"
   }

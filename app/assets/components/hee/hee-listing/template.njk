@@ -5,15 +5,15 @@
 {%- from 'select/macro.njk' import select %}
 {%- from 'summary-list/macro.njk' import summaryList %}
 
-<div class="nhsuk-listing">
-  <div class="nhsuk-grid-row">
+<div class="nhsuk-listing hee-listing">
+  <div class="nhsuk-grid-row hee-layout">
     {% if list.filter %}
-      <div class="nhsuk-grid-column-one-third">
+      <div class="nhsuk-grid-column-one-third hee-layout__leftbar">
         {{ filter(list.filter) }}
       </div>
     {% endif %}
 
-    <div class="nhsuk-listing__list nhsuk-grid-column-two-thirds">
+    <div class="nhsuk-listing__list nhsuk-grid-column-two-thirds hee-layout__content">
       <div class="nhsuk-listing__summary o-flex@tablet">
         <h2 class="nhsuk-listing__title nhsuk-heading-l o-flex__grow">
           {{ list.items.length }} results
