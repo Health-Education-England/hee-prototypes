@@ -3,7 +3,29 @@
    ========================================================================== */
 
 .hee-sidebarlinks {
+    margin-bottom: 40px;
+    background: #fff;
+    border: 1px solid #d8dde0;
+    position: relative;
+    width: 100%;
 
+    .hee-sidebarlinks__content {
+      padding: 32px;
+    }
+    .hee-sidebarlinks__list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      li::last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    .hee-sidebarlinks__link {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
 }
 
 .nhsuk-related-links-card__list {
