@@ -25,191 +25,194 @@
         text: "Tables"
     }) 
 }}
+<div class="nhsuk-width-container">
+    <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds hee-page__heading">
+            <h1>SummaryList</h1>
+            <p class="nhsuk-lede-text">An example page with a summary list.</p>
+        </div>
+    </div>
+  </div>
 {% endblock %}
 
 {% block content %}
-<div class="nhsuk-grid-row hee-layout">
-    <div class="nhsuk-grid-column-two-thirds hee-layout-content">
-        <h1>Tables</h1>
-        <p class="nhsuk-lede-text"></p>
+<h2>A standard table</h2>
 
-        <h2>A standard table</h2>
-        {{ 
-            table({
-                tableClasses: 'nhsuk-hee-table',
-                responsive: true,
-                panel: false,
-                caption: "Ibuprofen tablet dosages for children",
-                firstCellIsHeader: false,
-                head: [
-                {
-                    text: "Age"
-                },
-                {
-                    text: "How much"
-                },
-                {
-                    text: "How often"
-                }
-                ],
-                rows: [
-                [
-                    {
-                    header: "Age",
-                    text: "7 to 9 years"
-                    },
-                    {
-                    header: "How much?",
-                    text: "200mg"
-                    },
-                    {
-                    header: "How often?",
-                    text: "Max 3 times in 24 hours"
-                    }
-                ],
-                [
-                    {
-                    header: "Age",
-                    text: "10 to 11 years"
-                    },
-                    {
-                    header: "How much?",
-                    text: "200mg to 300mg"
-                    },
-                    {
-                    header: "How often?",
-                    text: "Max 3 times in 24 hours"
-                    }
-                ],
-                [
-                    {
-                    header: "Age",
-                    text: "12 to 17 years"
-                    },
-                    {
-                    header: "How much?",
-                    text: "200mg to 400mg"
-                    },
-                    {
-                    header: "How often?",
-                    text: "Max 3 times in 24 hours"
-                    }
-                ]
-                ]
-            }) 
-        }}
+{{ 
+    table({
+        tableClasses: 'nhsuk-hee-table',
+        responsive: true,
+        panel: false,
+        caption: "Ibuprofen tablet dosages for children",
+        firstCellIsHeader: false,
+        head: [
+        {
+            text: "Age"
+        },
+        {
+            text: "How much"
+        },
+        {
+            text: "How often"
+        }
+        ],
+        rows: [
+        [
+            {
+            header: "Age",
+            text: "7 to 9 years"
+            },
+            {
+            header: "How much?",
+            text: "200mg"
+            },
+            {
+            header: "How often?",
+            text: "Max 3 times in 24 hours"
+            }
+        ],
+        [
+            {
+            header: "Age",
+            text: "10 to 11 years"
+            },
+            {
+            header: "How much?",
+            text: "200mg to 300mg"
+            },
+            {
+            header: "How often?",
+            text: "Max 3 times in 24 hours"
+            }
+        ],
+        [
+            {
+            header: "Age",
+            text: "12 to 17 years"
+            },
+            {
+            header: "How much?",
+            text: "200mg to 400mg"
+            },
+            {
+            header: "How often?",
+            text: "Max 3 times in 24 hours"
+            }
+        ]
+        ]
+    }) 
+}}
 
-        <h3>A table with more than 3 rows</h3>
-        {{ 
-            table({
-                tableClasses: 'nhsuk-hee-table nhsuk-hee-table--multicols',
-                responsive: true,
-                panel: false,
-                caption: "Ibuprofen tablet dosages for children",
-                firstCellIsHeader: false,
-                head: [
-                {
-                    text: "Age"
-                },
-                {
-                    text: "How much"
-                },
-                {
-                    text: "How often"
-                },
-                {
-                    text: "How often"
-                },
-                {
-                    text: "How often"
-                }
-                ],
-                rows: [
-                [
-                    {
-                    header: "Age",
-                    text: "7 to 9 years"
-                    },
-                    {
-                    header: "How much?",
-                    text: "200mg"
-                    },
-                    {
-                    header: "How often?",
-                    text: "Max 3 times in 24 hours"
-                    },
-                    {
-                    header: "How often?",
-                    text: "Max 3 times in 24 hours"
-                    },
-                    {
-                    header: "How often?",
-                    text: "Max 3 times in 24 hours"
-                    },
-                    {
-                    header: "How often?",
-                    text: "Max 3 times in 24 hours"
-                    }
-                ],
-                [
-                    {
-                    header: "Age",
-                    text: "10 to 11 years"
-                    },
-                    {
-                    header: "How much?",
-                    text: "200mg to 300mg"
-                    },
-                    {
-                    header: "How often?",
-                    text: "Max 3 times in 24 hours"
-                    },
-                    {
-                    header: "How often?",
-                    text: "Max 3 times in 24 hours"
-                    },
-                    {
-                    header: "How often?",
-                    text: "Max 3 times in 24 hours"
-                    },
-                    {
-                    header: "How often?",
-                    text: "Max 3 times in 24 hours"
-                    }
-                ],
-                [
-                    {
-                    header: "Age",
-                    text: "12 to 17 years"
-                    },
-                    {
-                    header: "How much?",
-                    text: "200mg to 400mg"
-                    },
-                    {
-                    header: "How often?",
-                    text: "Max 3 times in 24 hours"
-                    },
-                    {
-                    header: "How often?",
-                    text: "Max 3 times in 24 hours"
-                    },
-                    {
-                    header: "How often?",
-                    text: "Max 3 times in 24 hours"
-                    },
-                    {
-                    header: "How often?",
-                    text: "Max 3 times in 24 hours"
-                    }
-                ]
-                ]
-            }) 
-        }}
-    </div>
-    <div class="nhsuk-grid-column-two-thirds hee-layout-sidebar">
-        
-    </div>
-</div>
-
+<h3>A table with more than 3 rows</h3>
+{{ 
+    table({
+        tableClasses: 'nhsuk-hee-table nhsuk-hee-table--multicols',
+        responsive: true,
+        panel: false,
+        caption: "Ibuprofen tablet dosages for children",
+        firstCellIsHeader: false,
+        head: [
+        {
+            text: "Age"
+        },
+        {
+            text: "How much"
+        },
+        {
+            text: "How often"
+        },
+        {
+            text: "How often"
+        },
+        {
+            text: "How often"
+        }
+        ],
+        rows: [
+        [
+            {
+            header: "Age",
+            text: "7 to 9 years"
+            },
+            {
+            header: "How much?",
+            text: "200mg"
+            },
+            {
+            header: "How often?",
+            text: "Max 3 times in 24 hours"
+            },
+            {
+            header: "How often?",
+            text: "Max 3 times in 24 hours"
+            },
+            {
+            header: "How often?",
+            text: "Max 3 times in 24 hours"
+            },
+            {
+            header: "How often?",
+            text: "Max 3 times in 24 hours"
+            }
+        ],
+        [
+            {
+            header: "Age",
+            text: "10 to 11 years"
+            },
+            {
+            header: "How much?",
+            text: "200mg to 300mg"
+            },
+            {
+            header: "How often?",
+            text: "Max 3 times in 24 hours"
+            },
+            {
+            header: "How often?",
+            text: "Max 3 times in 24 hours"
+            },
+            {
+            header: "How often?",
+            text: "Max 3 times in 24 hours"
+            },
+            {
+            header: "How often?",
+            text: "Max 3 times in 24 hours"
+            }
+        ],
+        [
+            {
+            header: "Age",
+            text: "12 to 17 years"
+            },
+            {
+            header: "How much?",
+            text: "200mg to 400mg"
+            },
+            {
+            header: "How often?",
+            text: "Max 3 times in 24 hours"
+            },
+            {
+            header: "How often?",
+            text: "Max 3 times in 24 hours"
+            },
+            {
+            header: "How often?",
+            text: "Max 3 times in 24 hours"
+            },
+            {
+            header: "How often?",
+            text: "Max 3 times in 24 hours"
+            }
+        ]
+        ]
+    }) 
+}}
 {% endblock %}
+
+{% block sidebar %}
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}
