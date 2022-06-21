@@ -1,4 +1,4 @@
-{% extends "lks-layout.html" %}
+{% extends "layout.html" %}
 {% block pageTitle %}
   Contact - HEE
 {% endblock %}
@@ -105,6 +105,26 @@
                 displayDetails: true
               }) }}
             </li>
+            <li class="nhsuk-grid-column-one-half nhsuk-contact-group__item">
+              {{ contact({
+                title: "Doctor",
+                name: "Jo Blogs",
+                displayName: true,
+                departmentName: "HEE",
+                displayDepartmentName: true,
+                jobTitle: "Department Head",
+                displayJobTitle: true,
+                phoneNumber: "01234 567890",
+                displayPhoneNumber: true,
+                email: "jo.bloggs@hee.co.uk",
+                displayEmail: true,
+                address: "123 Fake Street, Fake Town, Fake City, UK, AB1 2CD",
+                displayAddress: true,
+                details: "Lorem ipsum dolor sit amet",
+                displayDetails: true
+              }) }}
+            </li>
+            
           </ul>
         </section>
 

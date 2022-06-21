@@ -9,6 +9,7 @@
 // Page (Standard, minihub)
 // Content is in line with the sidebar
 .hee-page--landing,
+.hee-page--listing,
 .hee-page--standard {
 
     .hee-page__header,
@@ -35,6 +36,7 @@
 // Article (News, blog, etc)
 // Heading is in line with the sidebar
 .hee-page--article {
+    .hee-page__header {}
     .hee-page__main {
         padding-top: nhsuk-spacing(6);
         padding-bottom: nhsuk-spacing(6);

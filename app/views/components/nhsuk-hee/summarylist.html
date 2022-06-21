@@ -1,115 +1,117 @@
-{% extends "layout.html" %}
+{% extends "template-article.html" %}
+
+{% block pageClass %}hee-page--standard{% endblock %}
 
 {% block pageTitle %}
-    SummaryList - NHSUK-HEE - Components - HEE Prototype Kit
+SummaryList - NHSUK-HEE - Components - HEE Prototype Kit
 {% endblock %}
 
-{% block beforeContent %}
+{% block pageHeader %}
 {{ 
-    breadcrumb({
-        items: [
-            {
-                href: "/",
-                text: "Home"
-            },
-            {
-                href: "/components",
-                text: "Components"
-            },
-            {
-                href: "/components/nhsuk-hee",
-                text: "NHSUK-HEE"
-            }
-        ],
-        href: "/components/nhsuk-hee/summarylist",
-        text: "SummaryList"
-    }) 
+  breadcrumb({
+      items: [
+          {
+              href: "/",
+              text: "Home"
+          },
+          {
+              href: "/components",
+              text: "Components"
+          },
+          {
+              href: "/components/nhsuk-hee/",
+              text: "NHSUK-HEE"
+          }
+      ],
+      href: "/components/nhsuk-hee/summarylist",
+      text: "SummaryList"
+  }) 
 }}
+<div class="nhsuk-width-container hee-page__heading">
+  <h1>SummaryList</h1>
+  <p class="nhsuk-lede-text">An example page with blocklinks</p>
+</div>
 {% endblock %}
 
 {% block content %}
-<div class="nhsuk-grid-row hee-layout">
-    <div class="nhsuk-grid-column-two-thirds hee-layout-content">
-        <h1>SummaryList</h1>
-        <p class="nhsuk-lede-text"></p>
-        {{ summaryList({
-            rows: [
+  {{ summaryList({
+      rows: [
+        {
+          key: {
+            text: "Name"
+          },
+          value: {
+            text: "Karen Francis"
+          },
+          actions: {
+            items: [
               {
-                key: {
-                  text: "Name"
-                },
-                value: {
-                  text: "Karen Francis"
-                },
-                actions: {
-                  items: [
-                    {
-                      href: "#",
-                      text: "Change",
-                      visuallyHiddenText: "name"
-                    }
-                  ]
-                }
-              },
-              {
-                key: {
-                  text: "Date of birth"
-                },
-                value: {
-                  text: "15 March 1984"
-                },
-                actions: {
-                  items: [
-                    {
-                      href: "#",
-                      text: "Change",
-                      visuallyHiddenText: "date of birth"
-                    }
-                  ]
-                }
-              },
-              {
-                key: {
-                  text: "Contact information"
-                },
-                value: {
-                  html: "73 Roman Rd<br>Leeds<br> LS2 5ZN"
-                },
-                actions: {
-                  items: [
-                    {
-                      href: "#",
-                      text: "Change",
-                      visuallyHiddenText: "contact information"
-                    }
-                  ]
-                }
-              },
-              {
-                key: {
-                  text: "Contact details"
-                },
-                value: {
-                  html: '<p>07700 900362</p><p>karen.francis@example.com</p>'
-                },
-                actions: {
-                  items: [
-                    {
-                      href: "#",
-                      text: "Change",
-                      visuallyHiddenText: "contact details"
-                    }
-                  ]
-                }
+                href: "#",
+                text: "Change",
+                visuallyHiddenText: "name"
               }
             ]
-          }) 
-        }}
+          }
+        },
+        {
+          key: {
+            text: "Date of birth"
+          },
+          value: {
+            text: "15 March 1984"
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Change",
+                visuallyHiddenText: "date of birth"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Contact information"
+          },
+          value: {
+            html: "73 Roman Rd<br>Leeds<br> LS2 5ZN"
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Change",
+                visuallyHiddenText: "contact information"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Contact details"
+          },
+          value: {
+            html: '<p>07700 900362</p><p>karen.francis@example.com</p>'
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Change",
+                visuallyHiddenText: "contact details"
+              }
+            ]
+          }
+        }
+      ]
+    }) 
+  }}
+{% endblock %}
 
-    </div>
-    <div class="nhsuk-grid-column-two-thirds hee-layout-sidebar">
-        
-    </div>
-</div>
+{% block sidebar %}
+Sidebar...
+{% endblock %}
 
+{% block pageFooter %}
 {% endblock %}

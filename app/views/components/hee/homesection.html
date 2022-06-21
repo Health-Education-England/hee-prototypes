@@ -1,10 +1,12 @@
-{% extends "layout.html" %}
+{% extends "template-article.html" %}
+
+{% block pageClass %}hee-page--home{% endblock %}
 
 {% block pageTitle %}
 HomeSection - HEE - Components - HEE Prototype
 {% endblock %}
 
-{% block beforeContent %}
+{% block pageHeader %}
 {{ 
     breadcrumb({
     items: [
@@ -25,58 +27,72 @@ HomeSection - HEE - Components - HEE Prototype
         text: "HomeSection"
     }) 
 }}
+{{ microHero({
+  "imgURL": "/images/young-child-using-tablet-device.jpg"
+}) }}
 {% endblock %}
 
-{% block main %}
+{% block pageMain %}
+<div class="nhsuk-homepage">
 
-<div class="nhsuk-width-container">
-    <div class="nhsuk-grid-row hee-layout">
-        <div class="nhsuk-grid-column-two-thirds hee-layout-content">
-            <h1>HomeSection</h1>
-            <p class="nhsuk-lede-text"></p>
-            
-            <h3>Hoc loco discipulos quaerere videtur</h3>
-            <p>Utilitatis causa amicitia est quaesita. Duo Reges: constructio interrete. Quid est igitur, inquit, quod requiras? Illi enim inter se dissentiunt. </p>
-            <p>Nunc haec primum fortasse audientis servire debemus. Hoc Hieronymus summum bonum esse dixit. Quid ait Aristoteles reliquique Platonis alumni? Sin aliud quid voles, postea. Sed ad bona praeterita redeamus. Nonne igitur tibi videntur, inquit, mala? </p>
-            
-        </div>
-        <div class="nhsuk-grid-column-two-thirds hee-layout-sidebar">
-
-        
-        </div>
+  {% call homepageSection() %}
+    <div class="nhsuk-u-reading-width">
+      <h2>HomeSection</h2>
+      <p>This demonstrates the homeSection blocks alternating colours down the page.</p>
+      {{ insetText({
+        "HTML": "<p>You can find out more about what we do on our <a href=\"https://www.hee.nhs.uk/about/how-we-work\" title=\"About us\">About us</a> page.</p>"
+      }) }}
     </div>
-</div>
+  {% endcall %}
 
-<div class="nhsuk-width-container nhsuk-width-container--full">
-<main class="nhsuk-homepage" id="maincontent" role="main">
-
-    {% call homepageSection() %}
-        <div class="nhsuk-u-reading-width">
-          <h2>What we do</h2>
-          <p>We provide guidance and support for Library Knowledge Services professionals. Enabling you to access the right knowledge and evidence at the right time.</p>
-          {{ insetText({
-            "HTML": "<p>You can find out more about what we do on our <a href=\"https://www.hee.nhs.uk/about/how-we-work\" title=\"About us\">About us</a> page.</p>"
-          }) }}
+  {% call homepageSection() %}
+    <div class="nhsuk-u-reading-width">
+      <h2>Latest news</h2>
+    </div>
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-one-half">
+        <h3 class="nhsuk-heading-m">
+          <a href="/blog/post">Expert Search Early Adopters pilot - pre-switch search data</a>
+        </h3>
+        <div class="nhsuk-review-date">
+          <p class="nhsuk-body-s">4th January 2021</p>
         </div>
-      {% endcall %}
-
-      {% call homepageSection() %}
-        <div class="nhsuk-u-reading-width">
-          <h2>What we do</h2>
-          <p>We provide guidance and support for Library Knowledge Services professionals. Enabling you to access the right knowledge and evidence at the right time.</p>
-          {{ insetText({
-            "HTML": "<p>You can find out more about what we do on our <a href=\"https://www.hee.nhs.uk/about/how-we-work\" title=\"About us\">About us</a> page.</p>"
-          }) }}
+        <p>In mid-September HEE began a pilot to understand how best to help LKS in England move from using HDAS to using provider interfaces.</p>
+      </div>
+      <div class="nhsuk-grid-column-one-half">
+        <h3 class="nhsuk-heading-m">
+          <a href="/blog/post">Digital Champion</a>
+        </h3>
+        <div class="nhsuk-review-date">
+          <p class="nhsuk-body-s">4th January 2021</p>
         </div>
-      {% endcall %}
+        <p>In mid-September HEE began a pilot to understand how best to help LKS in England move from using HDAS to using provider interfaces.</p>
+      </div>
+    </div>
+  {% endcall %}
 
+  {% call homepageSection() %}
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-one-half">
+        <h2>Working with the public</h2>
+        <p>We work with NHS colleagues and information providers in local communities to improve access to high-quality health and wellbeing information. Our wider goal is to improve the health literacy and available patient information within the public.</p>
+        <p>You can find a number of health literacy training resources.</p>
+        {{ insetText({
+          "HTML": "<p>You can find out more about what we do on our <a href=\"https://www.hee.nhs.uk/about/how-we-work\" title=\"About us\">About us</a> page.</p>"
+        }) }}
+      </div>
+      <div class="nhsuk-grid-column-one-half">
+        {{ image({
+          "src": "https://via.placeholder.com/500x350",
+          "alt": "Working with public"
+        }) }}
+        <h3 class="nhsuk-heading-m">
+          <a href="/guidance">Making the case for evidence-based patient information</a>
+        </h3>
+        <p>How we can help patients and members of the public to access high quality, reliable health information.</p>
+      </div>
+    </div>
+  {% endcall %}
 
-    </main>
 </div>
-
-{% endblock %}
-
-{% block content %}
-
-
 {% endblock %}

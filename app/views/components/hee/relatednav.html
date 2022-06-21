@@ -1,0 +1,73 @@
+{% extends "template-article.html" %}
+
+{% block pageClass %}hee-page--standard{% endblock %}
+
+{% block pageTitle %}
+RelatedNav - HEE - Components - HEE Prototype
+{% endblock %}
+
+{% block pageHeader %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/home",
+            text: "Home"
+        },
+        {
+            href: "/components",
+            text: "Components"
+        },
+        {
+            href: "/components/hee",
+            text: "HEE"
+        }
+    ],
+        href: "/components/hee/components/relatednav",
+        text: "RelatedNav"
+    }) 
+}}
+<div class="nhsuk-width-container">
+  <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds hee-page__heading">
+          <h1>RelatedNav</h1>
+          <p class="nhsuk-lede-text">An example page with a related nav block in the sidebar.</p>
+      </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+  Content...
+{% endblock %}
+
+{% block sidebar %}
+{{ relatedNav({
+    "heading": "Quick Links",
+    "subsections": [{
+      "links": [
+        {
+          "url"  : "#",
+          "label" : "Briefing for library staff on Library and inter-library document supply and copyright in the NHS"
+        },
+        {
+          "url" : "#",
+          "label" : "Decision Tree"
+        },
+        {
+          "url" : "#",
+          "label" : "NHS-HE crossover copyright queries: guidance for higher education and NHS Library staff"
+        },
+        {
+          "url"  : "#",
+          "label" : "CILIP Copyright Hub"
+        },
+        {
+          "url"  : "#",
+          "label" : "NHS Copy Aid"
+        }
+      ]
+    }]
+  })
+}}
+{% endblock %}

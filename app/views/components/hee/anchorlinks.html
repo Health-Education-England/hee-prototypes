@@ -24,17 +24,20 @@ AnchorLinks - HEE - Components - HEE Prototype
         }
     ],
         href: "/components/hee/components/anchorlinks",
-        text: "Anchorlinks"
+        text: "AnchorLinks"
     }) 
 }}
-<div class="nhsuk-width-container hee-page__heading">
-    <h1>Anchorlinks</h1>
-    <p class="nhsuk-lede-text">An example page with an anchorlinks quickjump</p>
+<div class="nhsuk-width-container">
+    <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds hee-page__heading">
+            <h1>AnchorLinks</h1>
+            <p class="nhsuk-lede-text">An example page with an anchorlinks quickjump</p>
+        </div>
+    </div>
 </div>
 {% endblock %}
 
 {% block content %}
-<div class="nhsuk-grid-column-two-thirds hee-layout__content">
     {{ 
         anchorlinks({
             "title": "On this page",
@@ -46,13 +49,9 @@ AnchorLinks - HEE - Components - HEE Prototype
     <h3>Hoc loco discipulos quaerere videtur</h3>
     <p>Utilitatis causa amicitia est quaesita. Duo Reges: constructio interrete. Quid est igitur, inquit, quod requiras? Illi enim inter se dissentiunt. </p>
     <p>Nunc haec primum fortasse audientis servire debemus. Hoc Hieronymus summum bonum esse dixit. Quid ait Aristoteles reliquique Platonis alumni? Sin aliud quid voles, postea. Sed ad bona praeterita redeamus. Nonne igitur tibi videntur, inquit, mala? </p>
-</div>
 {% endblock %}
 
 {% block sidebar %}
-<div class="nhsuk-grid-column-one-third hee-layout__sidebar">
-    Sidebar...
-</div>
 {% endblock %}
 
 {% block pageFooter %}{% endblock %}
