@@ -1,4 +1,4 @@
-{% extends "template.html" %}
+{% extends "template-article.html" %}
 
 {% block pageClass %}hee-page--standard{% endblock %}
 
@@ -33,31 +33,26 @@ NHSUK - Components - HEE Prototype Kit
 </div>
 {% endblock %}
 
-{% block pageMain %}
-<div class="nhsuk-width-container">
-    <div class="nhsuk-grid-row hee-layout">
-        <div class="nhsuk-grid-column-two-thirds hee-layout__content">
-            <h2>NHS components that have been integrated into the NWP</h2>
-            <h3>Content presentation</h3>
-            <ul>
-                <li><s>Care cards</s></li>
-                <li>Details</li>
-                <li><s>Do and Don't lists</s></li>    
-                <li>Expander</li>    
-                <li>Images</li>    
-                <li>Inset text</li>    
-                <li>Review date</li>    
-                <li>Summary list</li>    
-                <li>Table</li>    
-                <li>Tag</li>    
-                <li>Warning callout</li>
-            </ul>
-        </div>
-        <div class="nhsuk-grid-column-one-third hee-layout__rightbar">
-            Sidebar...
-        </div>
-    </div>
-</div>
+{% block content %}
+<h2>NHS components that have been integrated into the NWP</h2>
+<h3>Content presentation</h3>
+<ul>
+    <li><s>Care cards</s></li>
+    <li>Details</li>
+    <li><s>Do and Don't lists</s></li>    
+    <li>Expander</li>    
+    <li>Images</li>    
+    <li>Inset text</li>    
+    <li>Review date</li>    
+    <li>Summary list</li>    
+    <li>Table</li>    
+    <li>Tag</li>    
+    <li>Warning callout</li>
+</ul>
+
+{% endblock %}
+
+{% block sidebar %}
 {% endblock %}
 
 {% block pageFooter %}{% endblock %}
