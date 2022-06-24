@@ -1,9 +1,21 @@
+table {
+    background-color: #FFF;
+    padding: nhsuk-spacing(3);
+
+    caption {
+        background-color: #FFF;
+        padding: nhsuk-spacing(3) nhsuk-spacing(3) nhsuk-spacing(0) nhsuk-spacing(3);
+    }
+}
+
 .nhsuk-hee-table {
     margin-bottom: 4em!important;
+    background-color: #FFF;
 }
 
 .nhsuk-hee-table--multicols {
     width: 100%;
+    background-color: #FFF;
 
     caption {
         font-size: 1.375rem;

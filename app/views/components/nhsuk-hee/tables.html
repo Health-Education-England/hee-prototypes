@@ -1,10 +1,12 @@
-{% extends "layout.html" %}
+{% extends "template-article.html" %}
+
+{% block pageClass %}hee-page--standard{% endblock %}
 
 {% block pageTitle %}
     Tables - NHSUK-HEE - Components - HEE Prototype Kit
 {% endblock %}
 
-{% block beforeContent %}
+{% block pageHeader %}
 {{ 
     breadcrumb({
         items: [
@@ -28,8 +30,8 @@
 <div class="nhsuk-width-container">
     <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-two-thirds hee-page__heading">
-            <h1>SummaryList</h1>
-            <p class="nhsuk-lede-text">An example page with a summary list.</p>
+            <h1>Tables</h1>
+            <p class="nhsuk-lede-text">Examples of the table component.</p>
         </div>
     </div>
   </div>
