@@ -1,0 +1,177 @@
+{% macro authorCard(params) %}
+  {% set card = true if params.classes === "nhsuk-contact__card" else false %}
+
+  {% set departmentType = true if params.type === "department" else false %}
+
+  {%- set departmentShow %}
+    {% if params.departmentName and params.displayDepartmentName %}
+      true
+    {% endif %}
+  {%- endset -%}
+
+  {%- set jobTitle %}
+    {% if params.jobTitle and params.displayjobTitle %}
+      true
+    {% endif %}
+  {%- endset -%}
+
+  {%- set website %}
+    {% if params.website and params.displayWebsite %}
+      true
+    {% endif %}
+  {%- endset -%}
+
+  {%- set phoneNumber %}
+    {% if params.phoneNumber and params.displayPhoneNumber %}
+      true
+    {% endif %}
+  {%- endset -%}
+
+  {%- set email %}
+    {% if params.email and params.displayEmail %}
+      true
+    {% endif %}
+  {%- endset -%}
+
+  {%- set addressLines %}
+    {% if params.addressLine1 or params.addressLine2 or params.addressLine3 or params.addressCity or params.addressCounty or params.addressPostcode and params.displayAddress %}
+      true
+    {% endif %}
+  {% endset %}
+
+  {% set details %}
+    {% if params.details and params.displayDetails %}
+      true
+    {% endif %}
+  {% endset %}
+
+
+  <div class="nhsuk-contact {%- if params.classes %} {{ params.classes }}{% endif %}">
+    <div class="nhsuk-contact__content{% if params.feature %} nhsuk-contact__content--feature{% endif %}">
+
+      {% if params.heading %}
+        <h2>{{ params.heading | safe }}</h2>
+      {% endif %}
+
+      {% if params.imgURL or params.initials %}
+        <div class="nhsuk-contact__img-container" >
+          {% if params.initials %}
+            {{ params.initials}}
+          {% endif %}
+          {% if params.imgURL %}
+            <img class="nhsuk-contact__img" src="{{ params.imgURL }}" alt="{{ params.imgALT }}">
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {%- if params.name and params.title and params.displayName === true %}
+        <h2 aria-label="Name" >
+          {{ params.title | safe }} {{ params.name | safe }}
+        </h2>
+      {% elif params.name and params.displayName === true %}
+        <h2 aria-label="Name" >
+          {{ params.name | safe }}
+        </h2>
+      {% endif %}
+
+      {% if params.pronouns %}
+          <p class="nhsuk-contact__pronoun">{{ params.pronouns | safe }}</p>
+      {% endif %}
+
+      {%- if jobTitle %}
+        <h3 class="nhsuk-contact__job-title" aria-label="Job Title" >{{ params.jobTitle | safe }}</h3>
+      {%- endif %}
+
+      {% if departmentShow and departmentType%}
+        <h5 aria-label="Department" >
+          {{ params.departmentName | safe }}
+        </h5>
+      {% elif departmentShow %}
+        <h5 aria-label="Department" >
+          {{ params.departmentName | safe }}
+        </h5>
+      {% endif %}
+
+      {% if params.organisation %}
+        <h5 aria-label="Organisation" >
+          {{ params.organisation | safe }}
+        </h5>
+      {% endif %}
+
+      {%- if phoneNumber or email or address or details %}
+        <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+
+        <div class="nhsuk-contact__secondary-info" >
+          {% if website %}
+            <p aria-label="Website" >
+              <a
+                href="{{ params.website | safe }}"
+                title="{%- if params.websiteTitle -%}{{ params.websiteTitle | safe }}{%- else -%}Website{%- endif -%}"
+              >
+                {{ params.website | safe }}
+              </a>
+            </p>
+          {% endif %}
+
+          {% if phoneNumber %}
+            <p aria-label="Telephone" >
+              <a href="tel:{{ params.phoneNumber | safe }}" title="Opens call" >{{ params.phoneNumber | safe }}</a>
+            </p>
+          {% endif %}
+
+          {% if email %}
+            <p aria-label="Email" >
+              <a href="mailto:{{ params.email | safe }}" title="Opens email" >{{ params.email | safe }}</a>
+            </p>
+          {% endif %}
+
+          {% if addressLines %}
+            <p aria-label="Address" >
+              {% if params.addressLine1 %}
+                {{ params.addressLine1 | safe }}<br>
+              {% endif %}
+
+              {% if params.addressLine2 %}
+                {{ params.addressLine2 | safe }}<br>
+              {% endif %}
+
+              {% if params.addressLine3 %}
+                {{ params.addressLine3 | safe }}<br>
+              {% endif %}
+
+              {% if params.addressCity %}
+                {{ params.addressCity | safe }}<br>
+              {% endif %}
+
+              {% if params.addressCounty %}
+                {{ params.addressCounty | safe }}<br>
+              {% endif %}
+
+              {% if params.addressPostcode %}
+                {{ params.addressPostcode | safe }}
+              {% endif %}
+            </p>
+          {% endif %}
+
+          {% if details %}
+            <p class="nhsuk-u-secondary-text-color" aria-label="Details" >{{ params.details | safe }}</p>
+          {% endif %}
+
+          {% if params.viewLink %}
+            <p>
+              <a href="{{ params.viewLink | safe }}" aria-label="View More" >
+                View more
+                {% if params.name and params.title and params.displayName === true %}
+                  about {{ params.title | safe }} {{ params.name | safe }}
+                {% elif params.name and params.displayName === true %}
+                  about {{ params.name | safe }}
+                {% endif %}
+              </a>
+            </p>
+          {% endif %}
+
+      </div>
+      {% endif %}
+    </div>
+  </div>
+{% endmacro %}

@@ -3,7 +3,7 @@
 {% block pageClass %}hee-page--standard{% endblock %}
 
 {% block pageTitle %}
-Contacts - HEE - Components - HEE Prototype
+Person - HEE - Components - HEE Prototype
 {% endblock %}
 
 {% block pageHeader %}
@@ -23,24 +23,23 @@ Contacts - HEE - Components - HEE Prototype
           text: "HEE"
       }
   ],
-      href: "/components/hee/components/contacts",
-      text: "Contacts"
+      href: "/components/hee/components/person",
+      text: "Person"
   }) 
 }}
 <div class="nhsuk-width-container">
   <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-two-thirds hee-page__heading">
-          <h1>Contacts</h1>
-          <p class="nhsuk-lede-text">The contact card component...</p>
+          <h1>Person</h1>
+          <p class="nhsuk-lede-text">There are two display variations of a person - author and contact - each with their own requirements.</p>
       </div>
   </div>
 </div>
 {% endblock %}
 
 {% block content %}
-
 <section class="nhsuk-page-content__section-one">
-  {{ contact({
+  {{ contactCard({
     heading: "Main Content Solo Contact",
     imgURL: "/images/headshot.jpg",
     imgALT: "This Person",
@@ -72,7 +71,7 @@ Contacts - HEE - Components - HEE Prototype
 <hr class="nhsuk-section-break nhsuk-section-break--xl nhsuk-section-break--visible">
 
 <section class="nhsuk-page-content__section-two">
-  {{ contact({
+  {{ contactCard({
     type: "department",
     heading: "Main Content Department Solo Contact",
     departmentName: "HEE",
@@ -97,7 +96,7 @@ Contacts - HEE - Components - HEE Prototype
   </div>
   <ul class="nhsuk-grid-row nhsuk-contact-group">
     <li class="nhsuk-grid-column-one-half nhsuk-contact-group__item">
-      {{ contact({
+      {{ contactCard({
         title: "Doctor",
         name: "Jo Blogs",
         displayName: true,
@@ -116,7 +115,7 @@ Contacts - HEE - Components - HEE Prototype
       }) }}
     </li>
     <li class="nhsuk-grid-column-one-half nhsuk-contact-group__item">
-      {{ contact({
+      {{ contactCard({
         type: "department",
         departmentName: "HEE",
         displayDepartmentName: true,
@@ -131,7 +130,7 @@ Contacts - HEE - Components - HEE Prototype
       }) }}
     </li>
     <li class="nhsuk-grid-column-one-half nhsuk-contact-group__item">
-      {{ contact({
+      {{ contactCard({
         title: "Doctor",
         name: "Jo Blogs",
         displayName: true,
@@ -156,7 +155,7 @@ Contacts - HEE - Components - HEE Prototype
 <hr class="nhsuk-section-break nhsuk-section-break--xl nhsuk-section-break--visible">
 
 <section class="nhsuk-page-content__section-three">
-  {{ contact({
+  {{ contactCard({
     classes: "nhsuk-contact__card",
     heading: "Contact Card",
     title: "Doctor",
@@ -179,7 +178,7 @@ Contacts - HEE - Components - HEE Prototype
   </div>
   <ul class="nhsuk-grid-row nhsuk-contact-group">
     <li class="nhsuk-grid-column-one-half nhsuk-contact-group__item">
-      {{ contact({
+      {{ contactCard({
         classes: "nhsuk-contact__card",
         title: "Doctor",
         name: "Jo Blogs",
@@ -209,7 +208,7 @@ Contacts - HEE - Components - HEE Prototype
       }) }}
     </li>
     <li class="nhsuk-grid-column-one-half nhsuk-contact-group__item">
-      {{ contact({
+      {{ contactCard({
         classes: "nhsuk-contact__card",
         type: "department",
         departmentName: "HEE",
@@ -230,7 +229,7 @@ Contacts - HEE - Components - HEE Prototype
 
 {% block sidebar %}
 <h2>Side nav contact cards</h2>
-{{ contact({
+{{ contactCard({
   classes: "nhsuk-contact__card",
   imgURL: "/images/headshot.jpg",
   imgALT: "This Person",
@@ -262,7 +261,7 @@ Contacts - HEE - Components - HEE Prototype
   displayDetails: true,
   viewLink: "#"
 }) }}
-{{ contact({
+{{ contactCard({
   classes: "nhsuk-contact__card",
   title: "Doctor",
   name: "Jo Blogs",
@@ -281,7 +280,7 @@ Contacts - HEE - Components - HEE Prototype
   details: "Lorem ipsum dolor sit amet",
   displayDetails: true
 }) }}
-{{ contact({
+{{ contactCard({
     classes: "nhsuk-contact__card",
     type: "department",
     departmentName: "HEE",
