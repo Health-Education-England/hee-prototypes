@@ -1,0 +1,133 @@
+{% extends "template-article.html" %}
+
+{% block pageClass %}hee-page--standard{% endblock %}
+
+{% block pageTitle %}
+Media - HEE - Components - HEE Prototype
+{% endblock %}
+
+{% block pageHeader %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/home",
+            text: "Home"
+        },
+        {
+            href: "/components",
+            text: "Components"
+        },
+        {
+            href: "/components/hee",
+            text: "HEE"
+        }
+    ],
+        href: "/components/hee/components/media",
+        text: "Media"
+    }) 
+}}
+<div class="nhsuk-width-container">
+  <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds hee-page__heading">
+          <h1>Media</h1>
+          <p class="nhsuk-lede-text">An example page with Media.</p>
+      </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+    {{ media({
+      "type": "youtube",
+      "mediaId": "WsUjHf8SD9o",
+      "title": "Youtube Example",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "lastReview": "01/01/2021",
+      "reviewDue": "01/01/2022"
+    }) }}
+  
+    <hr />
+
+    {{ media({
+      "type": "vimeo",
+      "mediaId": "509213116",
+      "title": "NHS- Call 111",
+      "lastReview": "01/01/2021",
+      "reviewDue": "01/01/2022"
+    }) }}
+  
+    <hr />
+
+    {{ media({
+      "type": "anchor",
+      "src": "https://anchor.fm/health-education-england/embed/episodes/Robyn-Scargill---Trainee-nursing-associate-eqe7mk/a-a4l5nun",
+      "title": "Anchor.fm Example",
+      "lastReview": "01/01/2021",
+      "reviewDue": "01/01/2022"
+    }) }}
+  
+    <hr />
+
+    {{ media({
+      "type": "youtube",
+      "mediaId": "rl9FFZZnWWo",
+      "title": "Transcript Example",
+      "lastReview": "01/01/2021",
+      "reviewDue": "01/01/2022",
+      "transcript": [
+        "They say oh my God I see the way you shine",
+        "Take your hand, my dear, and place them both in mine",
+        "You know you stopped me dead while I was passing by",
+        "And now I beg to see you dance just one more time",
+        "Ooh I see you, see you, see you every time",
+        "And oh my I, I, I like your style",
+        "You, you make me, make me, make me wanna cry",
+        "And now I beg to see you dance just one more time",
+        "So they say",
+        "Dance for me, dance for me, dance for me, oh, oh, oh",
+        "I've never seen anybody do the things you do before",
+        "They say move for me, move for me, move for me, ay, ay, ay",
+        "And when you're done I'll make you do it all again",
+        "I said oh my God I see you walking by",
+        "Take my hands, my dear, and look me in my eyes",
+        "Just like a monkey I've been dancing my whole life",
+        "But you just beg to see me dance just one more time",
+        "Ooh I see you, see you, see you every time",
+        "And oh my I, I like your style",
+        "You, you make me, make me, make me wanna cry",
+        "And now I beg to see you dance just one more time",
+        "So they say",
+        "Dance for me, dance for me, dance for me, oh, oh, oh",
+        "I've never seen anybody do the things you do before",
+        "They say move for me, move for me, move for me, ay, ay, ay",
+        "And when you're done I'll make you do it all again",
+        "They say",
+        "Dance for me, dance for me, dance for me, oh, oh, oh, oh, oh, oh, oh",
+        "I've never seen anybody do the things you do before",
+        "They say move for me, move for me, move for me, ay, ay, ay",
+        "And when you're done I'll make you do it all again",
+        "Ooh",
+        "Woah-oh, woah-oh, oh",
+        "Ooh",
+        "Ah ah, ah",
+        "They say",
+        "Dance for me, dance for me, dance for me, oh, oh, oh",
+        "I've never seen anybody do the things you do before",
+        "They say move for me, move for me, move for me, ay, ay, ay",
+        "And when you're done I'll make you do it all again",
+        "They say",
+        "Dance for me, dance for me, dance for me, oh, oh, oh, oh, oh, oh, oh",
+        "I've never seen anybody do the things you do before",
+        "They say move for me, move for me, move for me, ay, ay, ay",
+        "And when you're done I'll make you do it all again",
+        "All again"
+      ]
+    }) }}
+
+{% endblock %}
+
+{% block sidebar %}
+
+{% endblock %}

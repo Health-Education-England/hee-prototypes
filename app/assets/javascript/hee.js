@@ -4,6 +4,7 @@ import Cookies from '../components/nhsuk-hee/nhsuk-hee-cookies/cookies';
 // HEE Components
 import AnchorLinks from '../components/hee/hee-anchorlinks/anchorlinks';
 import Listing from '../components/hee/hee-listing/listing';
+import Media from '../components/hee/hee-media/media';
 import NavMap from '../components/hee/hee-navmap/navmap';
 import Newsletter from '../components/hee/hee-newsletter/newsletter';
 import Tabs from '../components/hee/hee-tabs/tabs';
@@ -12,7 +13,6 @@ import Tabs from '../components/hee/hee-tabs/tabs';
 // Unsorted components
 import Filter from '../components/filter/filter';
 import FilterTag from '../components/filter-tag/filter-tag';
-import Media from '../components/media/media';
 import SubMenu from '../components/submenu/submenu';
 
 
