@@ -1,3 +1,91 @@
+.hee-resources__link {
+
+    .hee-resources__tag,
+    .hee-resources__docSize {
+        text-decoration: none;
+    }
+
+    .hee-resources__tag {
+        display: inline-block;
+        position: relative;
+        top: -1px;
+        min-width: nhsuk-spacing(6);
+        margin: 0 nhsuk-spacing(2);
+        padding: 2px nhsuk-spacing(2);
+        color: $color_nhsuk-white;
+        font-size: .75em;
+        text-align: center;
+        text-transform: uppercase;
+        border-radius: 12px;
+    }
+
+    .hee-resources__pdf {
+        background-color: #F40F02;
+    }
+    .hee-resources__doc,
+    .hee-resources__docx {
+        background-color: #2b579a;
+    }
+    .hee-resources__xls,
+    .hee-resources__xlsx,
+    .hee-resources__csv {
+        background-color: #1D6F42;
+    }
+    .hee-resources__txt {
+        background-color: #768692;
+    }
+    .hee-resources__odt,
+    .hee-resources__ott,
+    .hee-resources__fodt {
+        background-color: #456697;
+    }
+    .hee-resources__ods,
+    .hee-resources__ots,
+    .hee-resources__fods {
+        background-color: #8abf1c;
+    }
+    .hee-resources__odf,
+    .hee-resources__fodf {
+            background-color: #106f5a;
+    }
+    .hee-resources__odp,
+    .hee-resources__otp,
+    .hee-resources__fodp {
+        background-color: #f1662d;
+    }
+    .hee-resources__oth {
+        background-color: #737373;
+    }
+    .hee-resources__odg,
+    .hee-resources__fodg,
+    .hee-resources__otg {
+        background-color: #e4a204;
+    }
+    .hee-resources__odb,
+    .hee-resources__fodb {
+        background-color: #a5265b;
+    }
+    .hee-resources__odm,
+    .hee-resources__fodm {
+        background-color: #344c84;
+    }
+
+
+    .hee-resources__docSize {
+        display: inline-block;
+        color: $color_nhsuk-grey-2;
+    }
+
+}
+
+.hee-resources__list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+
+
+
 .nhsuk-resources__link {
 
     .nhsuk-resources__tag,
