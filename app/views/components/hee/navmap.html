@@ -1,0 +1,224 @@
+{% extends "template-article.html" %}
+
+{% block pageClass %}hee-page--standard{% endblock %}
+
+{% block pageTitle %}
+NavMap - HEE - Components - HEE Prototype
+{% endblock %}
+
+{% block pageHeader %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/",
+            text: "Home"
+        },
+        {
+            href: "/components",
+            text: "Components"
+        },
+        {
+            href: "/components/hee",
+            text: "HEE"
+        }
+    ],
+        href: "/components/hee/components/navmap",
+        text: "NavMap"
+    }) 
+}}
+<div class="nhsuk-width-container">
+    <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds hee-page__heading">
+            <h1>NavMap</h1>
+            <p class="nhsuk-lede-text"></p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+    
+{{ navMap({
+    "heading": "Dental regions",
+    "src": "/images/nav-maps/dental-regions.svg",
+    "caption": {
+      "description": {
+        "subHeader": "A Title",
+        "text": [
+          "Paragraph 1",
+          "Paragraph 2"
+        ]
+      },
+      "items": [
+        {
+          "id": "lk",
+          "url": "/1",
+          "text": "London and Kent, Surrey and Sussex (KSS)"
+        },
+        {
+          "id": "me",
+          "url": "/2",
+          "text": "Midlands and the East"
+        },
+        {
+          "id": "nenc",
+          "url": "/3",
+          "text": "North East and North Cumbria"
+        },
+        {
+          "id": "nw",
+          "url": "/4",
+          "text": "North West"
+        },
+        {
+          "id": "sw",
+          "url": "/5",
+          "text": "South West"
+        },
+        {
+          "id": "tvw",
+          "url": "/6",
+          "text": "Thames Valley and Wessex"
+        },
+        {
+          "id": "yh",
+          "url": "/7",
+          "text": "Yorkshire and the Humber"
+        }
+      ]
+    }
+  }) }}
+
+  <hr />
+
+  {{ navMap({
+    "heading": "Higher regions",
+    "src": "/images/nav-maps/higher-regions.svg",
+    "caption": {
+      "description": {
+        "subHeader": "A Title",
+        "text": [
+          "Paragraph 1",
+          "Paragraph 2"
+        ]
+      },
+      "items": [
+        {
+          "id": "east",
+          "url": "/",
+          "text": "East of England"
+        },
+        {
+          "id": "lon",
+          "url": "/",
+          "text": "London"
+        },
+        {
+          "id": "mid",
+          "url": "/",
+          "text": "Midlands"
+        },
+        {
+          "id": "ney",
+          "url": "/",
+          "text": "North East and Yorkshire"
+        },
+        {
+          "id": "nw",
+          "url": "/",
+          "text": "North West"
+        },
+        {
+          "id": "se",
+          "url": "/",
+          "text": "South East"
+        },
+        {
+          "id": "sw",
+          "url": "/",
+          "text": "South West"
+        }
+      ]
+    }
+  }) }}
+
+  <hr />
+
+  {{ navMap({
+    "heading": "Medical regions",
+    "src": "/images/nav-maps/medical-regions.svg",
+    "caption": {
+      "description": {
+        "subHeader": "A Title",
+        "text": [
+          "Paragraph 1",
+          "Paragraph 2"
+        ]
+      },
+      "items": [
+        {
+          "id": "east",
+          "url": "/",
+          "text": "East of England"
+        },
+        {
+          "id": "eMid",
+          "url": "/",
+          "text": "East Midlands"
+        },
+        {
+          "id": "kss",
+          "url": "/",
+          "text": "Kent, Surrey and Sussex"
+        },
+        {
+          "id": "lon",
+          "url": "/",
+          "text": "London"
+        },
+        {
+          "id": "nenc",
+          "url": "/",
+          "text": "North East and North Cumbria"
+        },
+        {
+          "id": "nw",
+          "url": "/",
+          "text": "North West"
+        },
+        {
+          "id": "sw",
+          "url": "/",
+          "text": "South West"
+        },
+        {
+          "id": "tv",
+          "url": "/",
+          "text": "Thames Valley"
+        },
+        {
+          "id": "wes",
+          "url": "/",
+          "text": "Wessex"
+        },
+        {
+          "id": "wMid",
+          "url": "/",
+          "text": "West Midlands"
+        },
+        {
+          "id": "yh",
+          "url": "/",
+          "text": "Yorkshire and the Humber"
+        }
+      ]
+    }
+  }) }}
+
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}
