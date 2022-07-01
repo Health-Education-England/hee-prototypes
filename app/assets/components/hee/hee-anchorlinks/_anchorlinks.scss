@@ -1,5 +1,22 @@
 .hee-anchorlinks {
-    h2 {}
+    background-color: #FFF;
+    padding: nhsuk-spacing(4);
+    margin-bottom: nhsuk-spacing(6);
+    h2 {
+        @extend %nhsuk-heading-xs;
+        margin-bottom: nhsuk-spacing(3);
+    }
+    ul {
+        @extend %nhsuk-list;
+        margin-bottom: 0;
+        li {
+            @extend %nhsuk-body-s;
+            margin-bottom: nhsuk-spacing(2);
+            a {
+                text-decoration: none;
+            }
+        }
+    }
 }
 
 .nhsuk-anchor-links {
