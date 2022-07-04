@@ -1,0 +1,42 @@
+.hee-appliesto {
+    @include nhsuk-responsive-margin(8, 'top');
+    padding: nhsuk-spacing(4);
+    background-color: $nhsuk-link-color;
+
+    p {
+        @extend %nhsuk-body-s;
+        color: #FFF;
+        margin-bottom: 0;
+    }
+
+    a {
+        color: #FFF;
+    }
+
+    span {
+        font-weight: bold;
+    }
+}
+
+.hee-appliesto {
+    margin-top: 56px;
+    padding: 24px;
+    margin-top: 48px;
+    background-color: #005eb8;
+}
+
+.hee-appliesto p {
+    color: #FFF;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.hee-appliesto a {
+    color: #FFF;
+}
+
+.hee-appliesto span {
+    font-weight: bold;
+}
