@@ -188,8 +188,8 @@ function startBrowserSync(done){
 
 // Watch for changes within assets/
 function watch() {
-  gulp.watch(['app/assets/components/**/*.scss','app/assets/layout/*.scss'], compilePublicStyles);
-  gulp.watch('app/assets/**/**/*.js', gulp.parallel(compileVendorScripts, compilePublicScripts));
+  gulp.watch(['app/assets/**/*.scss'], compilePublicStyles);
+  gulp.watch(['app/assets/**/**/*.js'], gulp.parallel(compileVendorScripts, compilePublicScripts));
   //gulp.watch(['app/assets/**/**/*.*', '!app/assets/components/**/*.scss', '!app/assets/**/**/*.js'], compileAssets);
   //gulp.watch('docs/assets/sass/**/*.scss', compileStyles);
   //gulp.watch('docs/assets/javascript/**/*.js', compileNonMainJSScripts);
