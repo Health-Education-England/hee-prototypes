@@ -7,15 +7,19 @@
 ///////////////////////////////////////////
 // UTILS
 ///////////////////////////////////////////
-@import 'generic/resets';
-@import 'utils/flex';
-@import 'utils/mixins';
 
 ///////////////////////////////////////////
-// LAYOUTS
+// UTILS
 ///////////////////////////////////////////
-@import '../layout/page';
-@import '../layout/layout';
+@import 'utils/resets';
+@import 'utils/mixins';
+@import 'utils/grid';
+
+///////////////////////////////////////////
+// TEMPLATES
+///////////////////////////////////////////
+@import '../templates/page';
+@import '../templates/layout';
 
 ///////////////////////////////////////////
 // NHSUK-HEE Components (Overrides)
@@ -39,13 +43,15 @@
 ///////////////////////////////////////////
 @import '../components/hee/hee-appliesto/appliesto';
 @import '../components/hee/hee-anchorlinks/anchorlinks';
+//@import '../components/hee/hee-person/contact';
+@import '../components/hee/hee-person/person';
+@import '../components/hee/hee-person/authorcard/authorcard';
+@import '../components/hee/hee-person/contactcard/contactcard';
 @import '../components/hee/hee-homesection/homesection';
 @import '../components/hee/hee-media/media';
 @import '../components/hee/hee-microhero/microhero';
 @import '../components/hee/hee-navmap/navmap';
 @import '../components/hee/hee-newsletter/newsletter';
-@import '../components/hee/hee-person/contactcard';
-@import '../components/hee/hee-person/authorcard';
 @import '../components/hee/hee-relatednav/relatednav';
 @import '../components/hee/hee-resources/resources';
 @import '../components/hee/hee-sidebarimage/sidebarimage';
@@ -56,6 +62,7 @@
 ///////////////////////////////////////////
 // Unsorted components
 ///////////////////////////////////////////
+@import '../components/misc';
 @import '../components/filter/filter';
 @import '../components/filter-tag/filter-tag';
 @import '../components/search/search';

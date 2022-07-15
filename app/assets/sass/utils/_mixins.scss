@@ -26,3 +26,58 @@
 	  color: $color_nhsuk-white;
 	}
 }
+
+$max-width: 960px;
+@mixin container(
+    $max-width: $max-width
+) {
+    @if $max-width == "large" {
+        //max-width: 98%;
+    } @else {
+        //max-width: $max-width;
+    }
+    max-width: $max-width;
+    margin: 0 auto;
+    
+    @include media(tablet) {
+        margin: 0 32px;
+    }
+    @include media(mobile) {
+        //width: 94%;
+        margin: 0 16px;
+    }
+    @include media(desktop) {
+    }
+}
+
+$tablet: 767px;
+$desktop: 1024px;
+$mac: 1281px;
+
+@mixin media($media) {
+    @if $media == mobile {
+        @media only screen and (max-width: $tablet) { @content; }
+    }
+    @if $media == tablet-down {
+        @media only screen and (max-width: $desktop - 0.001) { @content; }
+    }
+    @if $media == tablet {
+        @media only screen and (min-width: $tablet + 0.001) and (max-width: $desktop - 0.001) { @content; }
+    }
+    @if $media == desktop {
+        @media only screen and (min-width: $desktop) and (max-width: $mac + 0.001){ @content; }
+    }
+    
+    @if $media == mac { // this is the norm
+        @media only screen and (min-width: $mac) { @content; }
+    }
+}
+
+
+@mixin browser($browser) {
+    
+    @if $browser == ie {
+        @media screen\0 { @content; }
+    }
+    
+}

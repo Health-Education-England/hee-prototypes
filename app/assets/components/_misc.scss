@@ -1,0 +1,47 @@
+// FLEX-GRID
+
+.hee-flexgrid-row {
+    @include hee-flexgrid-row($gutter: 16px);
+}
+
+.hee-flexgrid-column-full {
+    @include hee-flexgrid-col(12, $gutter: 16px);
+    //padding-left: 16px;
+    //padding-right: 16px;
+}
+
+.hee-flexgrid-column-one-half {
+    @include hee-flexgrid-col(6, $gutter: 16px);
+}
+
+.hee-flexgrid-column-one-quarter {
+    @include hee-flexgrid-col(3, $gutter: 16px);
+}
+
+.hee-flexgrid-column-three-quarters {
+    @include hee-flexgrid-col(9, $gutter: 16px);
+}
+
+.hee-flexgrid-column-one-third {
+    @include hee-flexgrid-col(4, $gutter: 16px);
+}
+
+.hee-flexgrid-column-two-thirds {
+    @include hee-flexgrid-col(8, $gutter: 16px);
+}
+
+// QUICK DETAILS BOX
+.hee-details {
+    //padding: 0 1em;
+
+    .hee-details__title {
+        font-size: 1.6em;
+    }
+
+    .hee-details__content {
+        ul {
+            font-size: 1em;
+            list-style: square;
+        }
+    }
+}
