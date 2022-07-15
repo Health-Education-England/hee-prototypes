@@ -1,0 +1,184 @@
+{% extends "template-article.html" %}
+
+{% block pageClass %}hee-page--standard{% endblock %}
+
+{% block pageTitle %}
+AuthorCard - HEE - Components - HEE Prototype
+{% endblock %}
+
+{% block pageHeader %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/",
+            text: "Home"
+        },
+        {
+            href: "/components",
+            text: "Components"
+        },
+        {
+            href: "/components/hee",
+            text: "HEE"
+        },
+        {
+            href: "/components/hee/detailscard",
+            text: "DetailsCard"
+        }
+    ],
+    href: "/components/hee/components/detailscard/author",
+    text: "AuthorCard"
+    }) 
+}}
+<div class="nhsuk-width-container">
+  <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds hee-page__heading">
+          <h1>AuthorCard</h1>
+          <p class="nhsuk-lede-text">The AuthorCard component uses the Person object in Bloomreach.</p>
+      </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<h2>Full card</h2>
+{{ authorCard({
+    title: "Dr",
+    name: "Jo Blogs", 
+    initials: "JB",
+    pronouns: "She/her",
+    jobRole: "Head of Digital",
+    department: "Genomics",
+    organisation: "HEE",
+    email: "jo.bloggs@hee.co.uk",
+    website: "http://nhs.uk/",
+    twitter: "nhsengland",
+    linkedIn: "nhs",
+    bio: "Lorem ipsum dolor sit amet",
+    authorURL: "/author/jo-blogs"
+}) }}
+
+<h2>Mandatory fields only</h2>
+{{ authorCard({
+    name: "Jo Blogs", 
+    initials: "JB"
+}) }}
+
+<h2>In page, single author</h2>
+<div class="hee-flexgrid-row">
+{{ authorCard({
+    classes: '',
+    gridCol: 'hee-flexgrid-column-full',
+    name: "Jo Blogs", 
+    initials: "JB",
+    bio: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus."
+}) }}
+</div>
+
+<h2>In page, multiple authors (2 grid)</h2>
+<div class="hee-flexgrid-row">
+    {{ authorCard({
+        classes: '',
+        gridCol: 'hee-flexgrid-column-one-half',
+        title: "Dr",
+        name: "Jo Blogs", 
+        initials: "JB",
+        pronouns: "She/her",
+        jobRole: "Head of Digital",
+        department: "Genomics",
+        organisation: "HEE",
+        email: "jo.bloggs@hee.co.uk",
+        website: "http://nhs.uk/",
+        bio: "Lorem ipsum dolor sit amet"
+    }) }}
+    {{ authorCard({
+        classes: '',
+        gridCol: 'hee-flexgrid-column-one-half',
+        title: "Dr",
+        name: "Jo Blogs", 
+        initials: "JB",
+        pronouns: "She/her",
+        jobRole: "Head of Digital",
+        department: "Genomics",
+        organisation: "HEE",
+        email: "jo.bloggs@hee.co.uk",
+        website: "http://nhs.uk/",
+        bio: "Lorem ipsum dolor sit amet"
+    }) }}
+</div>
+
+<h2>In page, multiple authors (3 grid)</h2>
+<div class="hee-flexgrid-row">
+    {{ authorCard({
+        classes: '',
+        gridCol: 'hee-flexgrid-column-one-third',
+        title: "Dr",
+        name: "Jo Blogs", 
+        initials: "JB",
+        pronouns: "She/her",
+        jobRole: "Head of Digital",
+        department: "Genomics",
+        organisation: "HEE",
+        email: "jo.bloggs@hee.co.uk",
+        website: "http://nhs.uk/",
+        bio: "Lorem ipsum dolor sit amet"
+    }) }}
+    {{ authorCard({
+        classes: '',
+        gridCol: 'hee-flexgrid-column-one-third',
+        title: "Dr",
+        name: "Jo Blogs", 
+        initials: "JB",
+        pronouns: "She/her",
+        jobRole: "Head of Digital",
+        department: "Genomics",
+        organisation: "HEE",
+        email: "jo.bloggs@hee.co.uk",
+        website: "http://nhs.uk/",
+        bio: "Lorem ipsum dolor sit amet"
+    }) }}
+    {{ authorCard({
+        classes: '',
+        gridCol: 'hee-flexgrid-column-one-third',
+        title: "Dr",
+        name: "Jo Blogs", 
+        initials: "JB",
+        pronouns: "She/her",
+        jobRole: "Head of Digital",
+        department: "Genomics",
+        organisation: "HEE",
+        email: "jo.bloggs@hee.co.uk",
+        website: "http://nhs.uk/",
+        bio: "Lorem ipsum dolor sit amet"
+    }) }}
+</div>
+
+{% endblock %}
+
+{% block sidebar %}
+<div class="hee-details">
+    
+    <h2 class="hee-details__title">Params</h2>
+    <div class="hee-details__content">
+        <ul>
+            <li>Image (Optional) - if there is an image it will display as per the design with an image. If there is no image it will display as per the design in this ticket without an image.</li>
+            <li>Title (Optional)</li>
+            <li>Name (Mandatory)</li>
+            <li>Pro-nouns (Optional)</li>
+            <li>Job Role (Optional)</li>
+            <li>Department (Optional)</li>
+            <li>Organisation (Optional)</li>
+            <li>Email (Optional)</li>
+            <li>Website (Optional)</li>
+            <li>Twitter handle (Optional)</li>
+            <li>Linkedin profile (Optional)</li>
+            <li>Bio (Optional)</li>
+            <li>Link to author page (Optional)</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

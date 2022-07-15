@@ -1,4 +1,5 @@
-{% macro authorCard(params) %}
+{% macro contact(params) %}
+
   {% set card = true if params.classes === "nhsuk-contact__card" else false %}
 
   {% set departmentType = true if params.type === "department" else false %}

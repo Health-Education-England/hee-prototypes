@@ -43,10 +43,11 @@
 ///////////////////////////////////////////
 @import '../components/hee/hee-appliesto/appliesto';
 @import '../components/hee/hee-anchorlinks/anchorlinks';
-//@import '../components/hee/hee-person/contact';
-@import '../components/hee/hee-person/person';
-@import '../components/hee/hee-person/authorcard/authorcard';
-@import '../components/hee/hee-person/contactcard/contactcard';
+@import '../components/hee/hee-detailscard/contact';
+@import '../components/hee/hee-detailscard/detailscard';
+@import '../components/hee/hee-detailscard/authorcard/authorcard';
+@import '../components/hee/hee-detailscard/contactcard/contactcard';
+@import '../components/hee/hee-detailscard/departmentcard/departmentcard';
 @import '../components/hee/hee-homesection/homesection';
 @import '../components/hee/hee-media/media';
 @import '../components/hee/hee-microhero/microhero';

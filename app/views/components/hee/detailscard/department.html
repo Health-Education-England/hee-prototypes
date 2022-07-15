@@ -1,0 +1,86 @@
+{% extends "template-article.html" %}
+
+{% block pageClass %}hee-page--standard{% endblock %}
+
+{% block pageTitle %}
+AuthorCard - HEE - Components - HEE Prototype
+{% endblock %}
+
+{% block pageHeader %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/",
+            text: "Home"
+        },
+        {
+            href: "/components",
+            text: "Components"
+        },
+        {
+            href: "/components/hee",
+            text: "HEE"
+        },
+        {
+            href: "/components/hee/detailscard",
+            text: "DetailsCard"
+        }
+    ],
+    href: "/components/hee/components/detailscard/department",
+    text: "DepartmentCard"
+    }) 
+}}
+<div class="nhsuk-width-container">
+  <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds hee-page__heading">
+          <h1>DepartmentCard</h1>
+          <p class="nhsuk-lede-text">The DepartmentCard component uses the Department object in Bloomreach.</p>
+      </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<h2>Full card</h2>
+{{ departmentCard({
+    name: "National Website Platform", 
+    organisation: "NHS UK",
+    address: {
+      Line1: "2 Stephenson St",
+      Line2: "",
+      Line3: "",
+      City: "Birmingham",
+      County: "West Midlands",
+      Postcode: "B1 2SE"
+    },
+    email: "nwp@hee.co.uk",
+    telephone: "01162344444",
+    website: "http://nwp.nhs.uk/",
+    description: "Lorem upsum blah blah"
+}) }}
+
+<h2>Mandatory fields only</h2>
+{{ departmentCard({
+    name: "National Website Platform"
+}) }}
+
+{% endblock %}
+
+{% block sidebar %}
+<div class="hee-details">
+    <h2 class="hee-details__title">Params</h2>
+    <div class="hee-details__content">
+        <ul>
+            <li>Name (Mandatory)</li>
+            <li>Organisation (Optional)</li>
+            <li>Email (Optional)</li>
+            <li>Website (Optional)</li>
+            <li>Description (Optional)</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

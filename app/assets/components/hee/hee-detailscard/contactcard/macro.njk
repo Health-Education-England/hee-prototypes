@@ -1,0 +1,123 @@
+{% macro contactCard(params) %}
+
+{#{ contactCard({
+    title: "Dr",
+    name: "Bobby Smith", 
+    initials: "BS",
+    pronouns: "They/them",
+    jobRole: "Content Editor",
+    department: "National Website Platform",
+    organisation: "NHS UK",
+    address: {
+      line1: "2 Stephenson St",
+      line2: "",
+      line3: "",
+      city: "Birmingham",
+      county: "West Midlands",
+      postcode: "B1 2SE"
+    },
+    email: "bobby.smithandthelongestemail@hee.co.uk",
+    telephone: "01162344444",
+    website: "http://nhs.uk/",
+    twitter: "nhsengland",
+    linkedIn: "nhs",
+    description: "Lorem upsum blah blah"
+}) }#}
+  
+{%- if params.gridCol %}<div class="{{ params.gridCol }}">{% endif %}
+  
+<div class="hee-detailscard hee-detailscard--contact{%- if params.classes %} {{ params.classes }}{% endif %}">
+
+  {% if params.heading %}
+    <h2 class="hee-detailscard__heading">{{ params.heading | safe }}</h2>
+  {% endif %}
+
+  <div class="hee-detailscard__image">
+  {% if params.imgURL %}
+    <img class="hee-detailscard__img" src="{{ params.imgURL }}" alt="{{ params.imgALT }}">
+  {% else %}
+    <div class="hee-detailscard__initials">
+      {% if params.initials %}
+        <span>{{ params.initials}}</span>
+      {% endif %}
+    </div>
+  {% endif %}
+  </div>
+
+  <h2 class="hee-detailscard__name" aria-label="Name">
+    {{ params.title | safe }} {{ params.name | safe }}
+  </h2>
+
+  {% if params.pronouns %}
+      <span class="hee-detailscard__pronouns">{{ params.pronouns | safe }}</span>
+  {% endif %}
+
+  {%- if params.jobRole %}
+    <h3 class="nhsuk-heading-m hee-detailscard__jobrole" aria-label="Job Role" >{{ params.jobRole | safe }}</h3>
+  {%- endif %}
+
+  {%- if params.department %}
+    <p class="hee-detailscard__department" aria-label="Department" >{{ params.department | safe }}</p>
+  {%- endif %}
+
+  {%- if params.organisation %}
+    <p class="hee-detailscard__organisation" aria-label="Organisation" >{{ params.organisation | safe }}</p>
+  {%- endif %}
+
+  <hr />
+
+  <ul class="hee-detailscard__contact">
+    {%- if params.telephone %}
+      <li class="hee-detailscard__telephone" aria-label="Telephone"><a href="tel:{{ params.telephone | safe }};">{{ params.telephone | safe }}</a></li>
+    {%- endif %}
+    {%- if params.email %}
+      <li class="hee-detailscard__email" aria-label="Email"><a href="mailto:{{ params.email | safe }};">{{ params.email | safe }}</a></li>
+    {%- endif %}
+    {%- if params.website %}
+      <li class="hee-detailscard__website" aria-label="Website"><a href="{{ params.website | safe }}">{{ params.website | safe }}</a></li>
+    {%- endif %}
+    {%- if params.twitter %}
+      <li class="hee-detailscard__twitter" aria-label="Twitter"><a href="https://twitter.com/{{ params.twitter | safe }}">@{{ params.twitter | safe }}</a></li>
+    {%- endif %}
+    {%- if params.linkedin %}
+      <li class="hee-detailscard__linkedin" aria-label="Linkedin"><a href="https://www.linkedin.com/company/{{ params.linkedin | safe }}">{{ params.linkedin | safe }}</a></li>
+    {%- endif %}
+  </ul>
+
+  {% if params.address %}
+    <p class="hee-detailscard__address" aria-label="Address">
+      {% if params.address.line1 %}
+        {{ params.address.line1 | safe }}<br>
+      {% endif %}
+
+      {% if params.address.line2 %}
+        {{ params.address.Line2 | safe }}<br>
+      {% endif %}
+
+      {% if params.address.line3 %}
+        {{ params.address.line3 | safe }}<br>
+      {% endif %}
+
+      {% if params.address.city %}
+        {{ params.address.city | safe }}<br>
+      {% endif %}
+
+      {% if params.address.county %}
+        {{ params.address.county | safe }}<br>
+      {% endif %}
+
+      {% if params.address.postcode %}
+        {{ params.address.postcode | safe }}
+      {% endif %}
+    </p>
+  {% endif %}
+
+  {%- if params.description %}
+    <p class="hee-detailscard__description" aria-label="Description" >{{ params.description | safe }}</p>
+  {%- endif %}
+
+</div>
+
+{%- if params.gridCol %}</div>{% endif %}
+
+{% endmacro %}

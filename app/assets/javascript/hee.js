@@ -7,6 +7,7 @@ import Listing from '../components/hee/hee-listing/listing';
 import Media from '../components/hee/hee-media/media';
 import NavMap from '../components/hee/hee-navmap/navmap';
 import Newsletter from '../components/hee/hee-newsletter/newsletter';
+import DetailsCard from '../components/hee/hee-detailscard/detailscard';
 import Tabs from '../components/hee/hee-tabs/tabs';
 //import Timeline from '../components/hee/hee-timeline/timeline';
 
