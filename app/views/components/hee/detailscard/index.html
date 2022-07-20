@@ -112,7 +112,7 @@ DetailsCard - HEE - Components - HEE Prototype
     <hr />
     <h2>Contact (Old component)</h2>
     <div class="hee-flexgrid-row">
-        <div class="hee-flexgrid-column-two-thirds">
+        <div class="hee-flexgrid-column-one-half">
             <h3>Body</h3>
             {{ contact({
                 "imgURL": "/images/headshot.jpg",
@@ -133,29 +133,9 @@ DetailsCard - HEE - Components - HEE Prototype
                 "details": "Lorem ipsum dolor sit amet",
                 "displayDetails": true
               }) }}
+              <p><a href="/components/hee/detailscard/contact-old">View ContactOld component</a></p>
         </div>
-        <div class="hee-flexgrid-column-one-third">
-            <h3>Sidebar</h3>
-            {{ contact({
-                "imgURL": "/images/headshot.jpg",
-                "imgALT": "This Person",
-                "title": "Doctor",
-                "name": "Jo Blogs",
-                "displayName": true,
-                "departmentName": "HEE",
-                "displayDepartmentName": true,
-                "jobTitle": "Department Head",
-                "displayJobTitle": true,
-                "phoneNumber": "01234 567890",
-                "displayPhoneNumber": true,
-                "email": "jo.bloggs@hee.co.uk",
-                "displayEmail": true,
-                "address": "123 Fake Street, Fake Town, Fake City, UK, AB1 2CD",
-                "displayAddress": true,
-                "details": "Lorem ipsum dolor sit amet",
-                "displayDetails": true
-              }) }}
-        </div>
+        
     </div>
 </div>
 
