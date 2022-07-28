@@ -3,7 +3,7 @@
 {% block pageClass %}hee-page--standard{% endblock %}
 
 {% block pageTitle %}
-ContactCard - HEE - Components - HEE Prototype
+PersonCard - HEE - Components - HEE Prototype
 {% endblock %}
 
 {% block pageHeader %}
@@ -28,14 +28,14 @@ ContactCard - HEE - Components - HEE Prototype
         }
     ],
     href: "/components/hee/components/detailscard/contact",
-    text: "ContactCard"
+    text: "PersonCard"
     }) 
 }}
 <div class="nhsuk-width-container">
   <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-two-thirds hee-page__heading">
-          <h1>ContactCard</h1>
-          <p class="nhsuk-lede-text">The ContactCard component uses the Person object in Bloomreach.</p>
+          <h1>PersonCard</h1>
+          <p class="nhsuk-lede-text">The PersonCard component uses the Person object in Bloomreach.</p>
       </div>
   </div>
 </div>
@@ -44,7 +44,7 @@ ContactCard - HEE - Components - HEE Prototype
 {% block content %}
 
 <h2>Full card</h2>
-{{ contactCard({
+{{ personCard({
     title: "Dr",
     name: "Bobby Smith", 
     initials: "BS",
@@ -71,7 +71,7 @@ ContactCard - HEE - Components - HEE Prototype
 <hr />
 
 <h2>Mandatory fields only</h2>
-{{ contactCard({
+{{ personCard({
     name: "Jo Blogs", 
     initials: "JB"
 }) }}
@@ -80,7 +80,7 @@ ContactCard - HEE - Components - HEE Prototype
 
 <h2>In page, single contact</h2>
 <div class="hee-flexgrid-row">
-{{ contactCard({
+{{ personCard({
     gridCol: 'hee-flexgrid-column-full',
     title: "Dr",
     name: "Bobby Smith", 
@@ -110,7 +110,7 @@ ContactCard - HEE - Components - HEE Prototype
 
 <h2>In page, multiple authors (2 grid)</h2>
 <div class="hee-flexgrid-row">
-    {{ contactCard({
+    {{ personCard({
         gridCol: 'hee-flexgrid-column-one-half',
         title: "Dr",
         name: "Bobby Smith", 
@@ -134,7 +134,7 @@ ContactCard - HEE - Components - HEE Prototype
         linkedIn: "nhs",
         description: "Lorem upsum blah blah"
     }) }}
-    {{ contactCard({
+    {{ personCard({
         gridCol: 'hee-flexgrid-column-one-half',
         title: "Dr",
         name: "Bobby Smith", 
@@ -164,7 +164,7 @@ ContactCard - HEE - Components - HEE Prototype
 
 {% block sidebar %}
 
-{{ contactCard({
+{{ personCard({
     classes: '',
     name: "Jo Blogs", 
     initials: "JB",
