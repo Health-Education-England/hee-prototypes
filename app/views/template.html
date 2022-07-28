@@ -18,13 +18,11 @@
 {%- from 'skip-link/macro.njk' import skipLink %}
 {%- from 'tag/macro.njk' import tag %}
 {%- from 'textarea/macro.njk' import textarea %}
-{%- from 'lks-header/macro.njk' import lksHeader %}
-
 
 {# HEE Components #}
 {%- from 'hee/hee-anchorlinks/macro.njk' import anchorLinks %}
 {%- from 'hee/hee-detailscard/authorcard/macro.njk' import authorCard %}
-{%- from 'hee/hee-detailscard/contactcard/macro.njk' import contactCard %}
+{%- from 'hee/hee-detailscard/personcard/macro.njk' import personCard %}
 {%- from 'hee/hee-detailscard/departmentcard/macro.njk' import departmentCard %}
 {%- from 'hee/hee-detailscard/contact.njk' import contact %}
 {%- from 'hee/hee-homesection/macro.njk' import homepageSection %}
@@ -107,7 +105,7 @@
     {% endblock %}
 
     {% block header %}
-      {{ lksHeader({
+      {{ customHeader({
           showNav: true,
           showSearch: true,
           organisation: {

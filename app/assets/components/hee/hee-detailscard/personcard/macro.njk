@@ -1,6 +1,6 @@
-{% macro contactCard(params) %}
+{% macro personCard(params) %}
 
-{#{ contactCard({
+{#{ personCard({
     title: "Dr",
     name: "Bobby Smith", 
     initials: "BS",
@@ -26,7 +26,7 @@
   
 {%- if params.gridCol %}<div class="{{ params.gridCol }}">{% endif %}
   
-<div class="hee-detailscard hee-detailscard--contact{%- if params.classes %} {{ params.classes }}{% endif %}">
+<div class="hee-detailscard hee-detailscard--person{%- if params.classes %} {{ params.classes }}{% endif %}">
 
   {% if params.heading %}
     <h2 class="hee-detailscard__heading">{{ params.heading | safe }}</h2>
