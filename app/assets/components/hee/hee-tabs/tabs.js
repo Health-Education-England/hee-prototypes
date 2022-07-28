@@ -49,18 +49,33 @@ export default () => {
       // console.log(parent);
       const grandparent = parent.parentNode
       // console.log(grandparent);
+      const selected = parent.getElementsByClassName('nhsuk-tabs__list-item--selected')[0];
+      // console.log(selected)
+      const is_mobile = grandparent.classList.contains('nhsuk-tabs__mobile');
+      //console.log(is_mobile)
 
-      // Remove all current selected tabs
-      this.removeSelected(parent)
+      // Compare selected and target, and if on mobile
+      // Close the tab if already open
+      if(target == selected && is_mobile) {
+        // Unselect all tabs
+        this.removeSelected(parent)
+        // Hide all tabs
+        this.hideTabs(grandparent)
+      } else {
+        // Remove all current selected tabs
+        this.removeSelected(parent)
 
-      // Set this tab as selected
-      this.setSelected(target)
+        // Set this tab as selected
+        this.setSelected(target)
 
-      // Hide all tab panels
-      this.hideTabs(grandparent)
+        // Hide all tab panels
+        this.hideTabs(grandparent)
 
-      // Show the selected panel
-      this.showSelected(grandparent.parentNode, target)
+        // Show the selected panel
+        this.showSelected(grandparent.parentNode, target)
+      }
+
+      
     }
 
     removeSelected(ele) {
