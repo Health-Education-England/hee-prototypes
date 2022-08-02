@@ -3,15 +3,23 @@
     padding: nhsuk-spacing(4);
     margin-bottom: nhsuk-spacing(6);
     h2 {
-        @extend %nhsuk-heading-xs;
-        margin-bottom: nhsuk-spacing(3);
+        @include nhsuk-typography-responsive(22);
+        display: block;
+        font-weight: $nhsuk-font-bold;
+        margin-top: 0;
+        @include nhsuk-responsive-margin(3, 'bottom');
     }
     ul {
-        @extend %nhsuk-list;
-        margin-bottom: 0;
+        @include nhsuk-typography-responsive(19);
+        @include nhsuk-responsive-margin(0, 'bottom');
+        list-style-type: none;
+        margin-top: 0;
+        padding-left: 0;
         li {
-            @extend %nhsuk-body-s;
-            margin-bottom: nhsuk-spacing(2);
+            @include nhsuk-typography-responsive(16);
+            display: block;
+            margin-top: 0;
+            @include nhsuk-responsive-margin(2, 'bottom');
             a {
                 text-decoration: none;
             }
