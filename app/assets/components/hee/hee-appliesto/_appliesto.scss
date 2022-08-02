@@ -4,7 +4,9 @@
     background-color: $nhsuk-link-color;
 
     p {
-        @extend %nhsuk-body-s;
+        @include nhsuk-typography-responsive(16);
+        display: block;
+        margin-top: 0;
         color: #FFF;
         margin-bottom: 0;
     }
