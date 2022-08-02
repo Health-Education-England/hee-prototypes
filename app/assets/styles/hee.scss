@@ -2,18 +2,17 @@
 // NHS.UK Frontend library
 ///////////////////////////////////////////
 //@import 'node_modules/nhsuk-frontend/packages/nhsuk';
-@import 'node_modules/nhsuk-frontend/packages/core/all';
+//@import 'node_modules/nhsuk-frontend/packages/core/all';
+@import 'node_modules/nhsuk-frontend/packages/core/settings/all';
+@import 'node_modules/nhsuk-frontend/packages/core/tools/all';
 
 ///////////////////////////////////////////
 // UTILS
 ///////////////////////////////////////////
-
-///////////////////////////////////////////
-// UTILS
-///////////////////////////////////////////
-@import 'utils/resets';
-@import 'utils/mixins';
-@import 'utils/grid';
+@import '../sass/resets';
+@import '../sass/mixins';
+@import '../sass/grid';
+@import '../sass/misc';
 
 ///////////////////////////////////////////
 // TEMPLATES
@@ -63,7 +62,7 @@
 ///////////////////////////////////////////
 // Unsorted components
 ///////////////////////////////////////////
-@import '../components/misc';
+
 @import '../components/filter/filter';
 @import '../components/filter-tag/filter-tag';
 @import '../components/search/search';

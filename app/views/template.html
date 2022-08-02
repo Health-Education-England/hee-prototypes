@@ -76,7 +76,8 @@
     <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
 
     {% block headCSS %}
-      <link href="/css/nhsuk-hee.css" rel="stylesheet" />
+      <link href="/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
+      <link href="/css/hee.css" rel="stylesheet" />
     {% endblock %}
 
     {% block headIcons %}
@@ -95,7 +96,9 @@
 
   <body class="{{ bodyClasses }}">
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
-    {% block bodyStart %}{% endblock %}
+    {% block bodyStart %}
+    {{ cookies() }}
+    {% endblock %}
 
     {% block skipLink %}
       {{ skipLink({
@@ -109,49 +112,49 @@
           showNav: true,
           showSearch: true,
           organisation: {
-          name: "Health Education England",
-          descriptor: "NWP Prototype Kit"
+            name: "Health Education England",
+            descriptor: "NWP Prototype Kit"
           },
           logos: {
-          en: false,
-          ni: false,
-          scot: false,
-          wales: false,
-          fpo: false
+            en: false,
+            ni: false,
+            scot: false,
+            wales: false,
+            fpo: false
           },
           primaryLinks: [
-          {
+            {
               url: "/",
               label: "Home"
-          },
-          {
+            },
+            {
               url: "/components",
               label: "Components",
               children: [
-              {
-                  url: "/components/hee",
-                  label: "HEE"
-              },
-              {
-                  url: "/components/nhsuk-hee",
-                  label: "NHSUK-HEE"
-              },
-              {
-                  url: "/components/nhsuk",
-                  label: "NHSUK"
-              }
+                {
+                    url: "/components/hee",
+                    label: "HEE"
+                },
+                {
+                    url: "/components/nhsuk-hee",
+                    label: "NHSUK-HEE"
+                },
+                {
+                    url: "/components/nhsuk",
+                    label: "NHSUK"
+                }
               ]
-          },
-          {
+            },
+            {
               url: "/layouts",
               label: "Layouts"
-          },
-          {
+            },
+            {
               url: "/examples",
               label: "Examples"
-          }
+            }
           ]
-          })
+        })
       }}
     {% endblock %}
     {% block headerEnd %}{% endblock %}
@@ -196,7 +199,8 @@
 
     {% block scripts %}
       <script src="/js/jquery-3.3.1.min.js"></script>
-      <script src="/js/nhsuk-hee.js"></script>
+      <script src="/js/nhsuk.min.js"></script>
+      <script src="/js/hee.js"></script>
     {% endblock %}
     {% block bodyEnd %}
       {% block pageScripts %}{% endblock %}
