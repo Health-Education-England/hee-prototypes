@@ -3,7 +3,7 @@
 {% block pageClass %}hee-page--standard{% endblock %}
 
 {% block pageTitle %}
-SidebarLinks - HEE - Components - HEE Prototype
+Timeline - HEE - Components - HEE Prototype
 {% endblock %}
 
 {% block pageHeader %}
@@ -31,7 +31,7 @@ SidebarLinks - HEE - Components - HEE Prototype
   <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-two-thirds hee-page__heading">
           <h1>Timeline</h1>
-          <p class="nhsuk-lede-text">Example uses of the timeline component.</p>
+          <p class="nhsuk-lede-text">Example uses of the timeline component - it uses the summaryList macro.</p>
       </div>
   </div>
 </div>
@@ -39,30 +39,155 @@ SidebarLinks - HEE - Components - HEE Prototype
 
 {% block content %}
 {{ timeline({
+    classList: 'hee-timeline',
     title: "January 2022",
     events: [
       {
         title: "Lorum Ipsum Fest",
         description: "A celebration of all things Lorum Ipsum",
-        time: "9am",
-        link: "/",
-        text: "Lorum Ipsum Dolores Sit Amet"
+        details: [
+          {
+            key: {
+              text: "Date"
+            },
+            value: {
+              text: "22/01/2022"
+            }
+          },
+          {
+            key: {
+              text: "Time"
+            },
+            value: {
+              text: "10am - 2pm"
+            }
+          },
+          {
+            key: {
+              text: "Links"
+            },
+            value: {
+              html: "<a href='/'>Link (opens in new window)</a>"
+            }
+          }
+        ]
+      }
+    ]
+}) }}
+{{ timeline({
+    classList: 'hee-timeline',
+    title: "February 2022",
+    events: [
+      {
+        title: "Lorum Ipsum Fest",
+        description: "A celebration of all things Lorum Ipsum",
+        details: [
+          {
+            key: {
+              text: "Date"
+            },
+            value: {
+              text: "13/02/2022"
+            }
+          },
+          {
+            key: {
+              text: "Time"
+            },
+            value: {
+              text: "9am"
+            }
+          },
+          {
+            key: {
+              text: "Links"
+            },
+            value: {
+              html: "<a href='/'>Link (opens in new window)</a>"
+            }
+          }
+        ]
       },
       {
         title: "Song 2",
         description: "Whoo Hoo",
-        date: "22/01/2022",
-        time: "9am",
-        location: "Mayfair, London",
-        contact: "damon.albarn@parklife.co.uk",
-        link: "/",
-        text: "Well I feel heavy metal"
+        details: [
+          {
+            key: {
+              text: "Date"
+            },
+            value: {
+              text: "13/02/2022"
+            }
+          },
+          {
+            key: {
+              text: "Time"
+            },
+            value: {
+              text: "9am"
+            }
+          },
+          {
+            key: {
+              text: "Location"
+            },
+            value: {
+              text: "London, UK"
+            }
+          },
+          {
+            key: {
+              text: "Contact"
+            },
+            value: {
+              html: "<a href='mailto:email@nhs.uk'>email@nhs.uk</a>"
+            }
+          },
+          {
+            key: {
+              text: "Links"
+            },
+            value: {
+              html: "<a href='/'>Link (opens in new window)</a>"
+            }
+          },
+          {
+            key: {
+              text: "Details"
+            },
+            value: {
+              text: "Lorem upsum dorit seru thius"
+            }
+          }
+        ]
       }
     ]
 }) }}
 {% endblock %}
 
 {% block sidebar %}
+<div class="hee-details">
+  <h2 class="hee-details__title">Params</h2>
+  <div class="hee-details__content">
+      <ul>
+          <li>Title (Mandatory) - Date (Month,year)</li>
+          <li>Description (Optional)</li>
+          <li>Events (Mandatory)
+            <ul>
+              <li>Title</li>
+              <li>Description</li>
+              <li>Details
+                <ul>
+                  <li>Key, value list</li>
+                </ul>
+              </li>
+            </ul>
+
+          </li>
+      </ul>
+  </div>
+</div>
 {% endblock %}
 
 {% block pageFooter %}{% endblock %}
