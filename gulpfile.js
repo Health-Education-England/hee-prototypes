@@ -139,10 +139,11 @@ function startBrowserSync(done){
 
 // Watch for changes within assets/
 function watch() {
-  gulp.watch(['app/assets/**/*.scss'], compileHEEStyles);
-  gulp.watch(['app/assets/styles/*.css'], copyVendorStyles);
+  gulp.watch(['app/assets/**/*.scss', 'app/assets*/**/*.scss'], compileHEEStyles);
+  gulp.watch(['app/assets/styles/*.css', 'app/assets/styles/hee.scss'], copyVendorStyles);
   gulp.watch(['app/assets/components/**/*.js'], compileHEEScripts);
   gulp.watch(['app/assets/javascript/hee.js'], copyVendorScripts);
+  gulp.watch(['app/assets/**/*.njk'], browserSync.reload);
   //gulp.watch(['app/assets/**/**/*.*', '!app/assets/components/**/*.scss', '!app/assets/**/**/*.js'], compileAssets);
   //gulp.watch('docs/assets/sass/**/*.scss', compileStyles);
   //gulp.watch('docs/assets/javascript/**/*.js', compileNonMainJSScripts);
