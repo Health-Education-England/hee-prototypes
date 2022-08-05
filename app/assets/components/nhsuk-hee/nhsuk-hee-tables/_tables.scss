@@ -13,6 +13,40 @@ table {
     background-color: #FFF;
 }
 
+@include mq($until: desktop) {
+    .nhsuk-table-responsive {
+        .nhsuk-table__body {
+            .nhsuk-table__row {
+                display: block;
+                margin-bottom: 24px;
+
+                .nhsuk-table__cell {
+                    display: block;
+                    min-width: 1px;
+                    padding-right: 0;
+                    text-align: right;
+
+                    &:last-of-type {
+                        border-bottom: 3px solid #d8dde0;
+                    }
+                }
+
+                .nhsuk-table-responsive__heading {
+                    width: 50%;
+                    background: pink;
+                    font-weight: 600;
+                    padding-right: 16px;
+                    text-align: left;
+                    display: inline-block;
+                    float: left;
+                }
+
+            }
+            
+        }
+    }
+}
+
 .nhsuk-hee-table--multicols {
     width: 100%;
     background-color: #FFF;
@@ -42,8 +76,7 @@ table {
             margin-bottom: 24px;
 
             .nhsuk-table__cell {
-                display: flex;
-                justify-content: space-between;
+                display: block;
                 min-width: 1px;
                 padding-right: 0;
                 text-align: right;
@@ -54,10 +87,12 @@ table {
             }
 
             .nhsuk-table-responsive__heading {
+                width: 50%;
                 font-weight: 600;
                 padding-right: 16px;
                 text-align: left;
-                display: block;
+                display: inline-block;
+                float: left;
             }
 
         }
