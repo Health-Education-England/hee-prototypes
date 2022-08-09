@@ -1,0 +1,64 @@
+{% extends "template-article.html" %}
+
+{% block pageClass %}hee-page--standard{% endblock %}
+
+{% block pageTitle %}
+PhaseBanner - NHSUK-HEE - Components - HEE Prototype Kit
+{% endblock %}
+
+{% block pageHeader %}
+{{ 
+  breadcrumb({
+      items: [
+          {
+              href: "/",
+              text: "Home"
+          },
+          {
+              href: "/components",
+              text: "Components"
+          },
+          {
+              href: "/components/nhsuk-hee/",
+              text: "NHSUK-HEE"
+          }
+      ],
+      href: "/components/nhsuk-hee/phasebanner",
+      text: "PhaseBanner"
+  }) 
+}}
+
+<div class="nhsuk-width-container">
+  <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds hee-page__heading">
+          <h1>PhaseBanner</h1>
+          <p class="nhsuk-lede-text">An example page with different phase banners. To see this within the page, check the homepage.</p>
+      </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block pageMain %}
+
+<div class="nhsuk-width-container">
+{{ phaseBanner({
+    tag: "Alpha",
+    description: 'This is a new service – your <a class="nhsuk-link" href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.'
+}) }}
+{{ phaseBanner({
+    tag: "Beta",
+    description: 'This is a new service – your <a class="nhsuk-link" href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.'
+}) }}
+{{ phaseBanner({
+    tag: "Longer title",
+    description: 'This is a new service – your <a class="nhsuk-link" href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.'
+}) }}
+{{ phaseBanner({
+    tag: "",
+    description: 'This is a new service – your <a class="nhsuk-link" href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.'
+}) }}
+</div>
+  
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

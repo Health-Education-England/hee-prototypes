@@ -5,23 +5,36 @@
 
   .nhsuk-hee-phasebanner__content {
     @include nhsuk-font(16);
-    display: table;
     margin: 0;
   }
 
-  .nhsuk-hee-phasebanner__text {
-    display: table-cell;
-    vertical-align: middle;
-  }
-
   .nhsuk-hee-phasebanner__tag {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 8px 16px;
+    line-height: 1em;
+    color: #FFF;
     margin-right: nhsuk-spacing(2);
+    background-color: $color_nhsuk-blue;
+    font-weight: bold;
+    text-transform: uppercase;
     @include mq($until: desktop) {
       line-height: 1.5;
     }
   }
 
 }
+
+.nhsuk-hee-phasebanner--notag {
+  .nhsuk-hee-phasebanner__tag {
+    display: none!important;
+  }
+}
+
+.nhsuk-hee-phasebanner--promo {
+
+}
+
 
 .nhsuk-phase-banner {
   padding-top: nhsuk-spacing(2);
