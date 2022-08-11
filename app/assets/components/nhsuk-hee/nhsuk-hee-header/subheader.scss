@@ -3,11 +3,11 @@
     .nhsuk-header__navigation-link {
 
       .nhsuk-icon {
-        top: calc(50% - 24px);
-        transform: translateY(50%);
+        top: calc(50% - 22px);
+        transform: rotate(90deg) translateX(50%);
         fill: $color_nhsuk-white;
-        width: 24px!important;
-        height: 24px!important;
+        width: 22px!important;
+        height: 22px!important;
       }
 
       // &:hover,
