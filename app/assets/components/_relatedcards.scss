@@ -1,0 +1,14 @@
+/* Related cards (from live) */
+.nhsuk-related-links-card__list {
+    list-style-type: none;
+    padding-left: 0;
+}
+.nhsuk-related-links-card__list li {
+    margin-bottom: 24px;
+}
+.nhsuk-related-links-card__link {
+    text-decoration: none;
+}
+.nhsuk-related-links-card__link:hover {
+    text-decoration: underline;
+}

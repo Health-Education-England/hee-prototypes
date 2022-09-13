@@ -1,3 +1,4 @@
+/* NHSUK-Header__search */
 .nhsuk-header__search-wrap.js-show {
   margin-left: -(nhsuk-spacing(5));
   margin-right: -(nhsuk-spacing(5));
@@ -52,6 +53,7 @@
   font-size: 14px;
 }
 
+/* Why is this in the middle of header__search? */
 .nhsuk-list--border {
   >li {
     border-bottom: 1px solid #d8dde0;
@@ -77,6 +79,16 @@
     }
   }
 }
+
+.nhsuk-contact__card .nhsuk-list--border > li .nhsuk-review-date .nhsuk-contact__pronoun,
+.nhsuk-contact__card .nhsuk-list--border > li .nhsuk-review-date .nhsuk-contact__secondary-info > *,
+.nhsuk-list--border > li .nhsuk-review-date .nhsuk-body-s,
+.nhsuk-list--border > li .nhsuk-review-date .nhsuk-contact__card .nhsuk-contact__pronoun,
+.nhsuk-list--border > li .nhsuk-review-date .nhsuk-contact__card .nhsuk-contact__secondary-info > * {
+    margin-bottom: 0;
+}
+
+/* ... Resume nhsuk-search */
 
 .nhsuk-search__submit--search-results {
   color: $color_nhsuk-white;

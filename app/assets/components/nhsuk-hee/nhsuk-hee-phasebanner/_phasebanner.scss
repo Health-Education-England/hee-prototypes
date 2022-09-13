@@ -1,3 +1,4 @@
+/* NHSUK-HEE-PhaseBanner - swap to HEE-PhaseBanner */
 .nhsuk-hee-phasebanner {
   padding-top: nhsuk-spacing(2);
   padding-bottom: nhsuk-spacing(2);
@@ -35,32 +36,28 @@
 
 }
 
-
-.nhsuk-phase-banner {
-  padding-top: nhsuk-spacing(2);
-  padding-bottom: nhsuk-spacing(2);
-  border-top: 1px solid $nhsuk-border-color;
-  border-bottom: 1px solid $nhsuk-border-color;
-}
-
-.nhsuk-phase-banner__content {
-  @include nhsuk-font(16);
-  display: table;
-  margin: 0;
-}
-
-.nhsuk-phase-banner__text {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.nhsuk-phase-banner__content__tag {
-  margin-right: nhsuk-spacing(3);
-}
-
-.nhsuk-tag {
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-family: "GDS Transport",arial,sans-serif;
-  padding: 5px 8px 4px;
-}
+// /* NHSUK-Phase-Banner - old
+//.nhsuk-phase-banner {
+//  padding-top: nhsuk-spacing(2);
+//  padding-bottom: nhsuk-spacing(2);
+//  border-top: 1px solid $nhsuk-border-color;
+//  border-bottom: 1px solid $nhsuk-border-color;
+//}
+//.nhsuk-phase-banner__content {
+//  @include nhsuk-font(16);
+//  display: table;
+//  margin: 0;
+//}
+//.nhsuk-phase-banner__text {
+//  display: table-cell;
+//  vertical-align: middle;
+//}
+//.nhsuk-phase-banner__content__tag {
+//  margin-right: nhsuk-spacing(3);
+//}
+//.nhsuk-tag {
+//  letter-spacing: 1px;
+//  text-transform: uppercase;
+//  font-family: "GDS Transport",arial,sans-serif;
+//  padding: 5px 8px 4px;
+//}*/

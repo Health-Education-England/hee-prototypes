@@ -1,0 +1,127 @@
+
+/* NHSUK-Header custom */
+.nhsuk-header__container {
+  padding: nhsuk-spacing(8) 0;
+
+  @include mq($from: tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.nhsuk-header__logo {
+  width: 50%;
+}
+
+.nhsuk-header--white .nhsuk-organisation-name {
+  margin-bottom: 8px;
+  font-size: 32px;
+  line-height: 1.25;
+  color: $nhsuk-text-color;
+
+  @include mq($until: desktop) {
+    font-size: 24px;
+  }
+}
+
+.nhsuk-header--white .nhsuk-organisation-descriptor {
+  font-size: 24px;
+  line-height: 1.5;
+  @include mq($until: desktop) {
+    font-size: 22px;
+  }
+}
+
+.nhsuk-header__content {
+  @include mq($from: tablet) {
+    align-self: flex-end;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+
+    .nhsuk-header__menu,
+    .nhsuk-header__search {
+      float: none;
+    }
+  }
+
+  .nhsuk-search__input {
+    @include mq($from: tablet) {
+      width: 166px;
+    }
+    @include mq($from: desktop) {
+      width: 214px;
+    }
+  }
+}
+
+/* specifically for bloomreach editing*/
+.hst-container.hippo-overlay-box {
+  width: 100%!important;
+}
+
+  /* Multi logo header */
+.nhsuk-header__multi-logo {
+  display: flex;
+  width: 100%;
+  margin-bottom: nhsuk-spacing(4);
+
+  span {
+    margin-right: nhsuk-spacing(4);
+
+    @include mq($until: desktop) {
+      margin-right: nhsuk-spacing(2);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    img {
+      width: auto;
+      height: 50px;
+    }
+  }
+
+  @media screen and (min-width: 640px) and (max-width: 660px){
+    span img {
+      height: 48px;
+    }
+  }
+
+  @include mq($until: tablet) {
+    flex-direction: column;
+
+    span {
+      margin: 0 0 nhsuk-spacing(2);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      img {
+        height: 48px;
+      }
+    }
+  }
+}
+
+.nhsuk-header__clear {
+  width: 100%;
+  clear: both;
+  content: '';
+  display: block;
+}
+
+.nhsuk-header__multi-logo-organisation-name {
+  width: 50%;
+
+  @include mq($until: desktop) {
+    max-width: 50%;
+  }
+  @include mq($until: tablet) {
+    position: relative;
+    z-index: 1;
+    float: left;
+  }
+}

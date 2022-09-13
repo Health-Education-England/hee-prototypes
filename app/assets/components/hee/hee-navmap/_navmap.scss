@@ -1,29 +1,17 @@
-/* ==========================================================================
-   COMPONENTS / #IMAGES
-   ========================================================================== */
-
-/**
- * 1. Overrides default browser margin values.
- * 2. Makes the image width two thirds of its container for desktop.
- * 3. Avoid image printing full width of a page.
- * 4. Removes top margin from subsequent nhsuk-image.
- */
+/* NHSUK-Map - need swapping to HEE-Navmap */
 
 .nhsuk-map {
-  // background-color: $color_nhsuk-white;
-  // border-bottom: 1px solid $color_nhsuk-grey-4;
-
   display: flex;
 
   @include nhsuk-responsive-margin(6, 'bottom');
   @include nhsuk-responsive-margin(6, 'top');
 
-  margin-left: 0; /* [1] */
-  margin-right: 0; /* [1] */
+  margin-left: 0; 
+  margin-right: 0;
   padding: nhsuk-spacing(6) 0;
 
   & + .nhsuk-map {
-    @include nhsuk-responsive-margin(0, 'top'); /* [4] */
+    @include nhsuk-responsive-margin(0, 'top');
   }
 }
 

@@ -1,8 +1,4 @@
-/**
- * 1. Use inverted link colours due to the yellow
- *    ($color_nhsuk-yellow) background.
- */
-
+// Invert link style
  @mixin nhsuk-link-style-inverted {
 	color: $nhsuk-link-color;
 
@@ -27,15 +23,11 @@
 	}
 }
 
+// Container
 $max-width: 960px;
 @mixin container(
     $max-width: $max-width
 ) {
-    @if $max-width == "large" {
-        //max-width: 98%;
-    } @else {
-        //max-width: $max-width;
-    }
     max-width: $max-width;
     margin: 0 auto;
     
@@ -43,17 +35,16 @@ $max-width: 960px;
         margin: 0 32px;
     }
     @include media(mobile) {
-        //width: 94%;
         margin: 0 16px;
     }
     @include media(desktop) {
     }
 }
 
+// Media
 $tablet: 767px;
 $desktop: 1024px;
 $mac: 1281px;
-
 @mixin media($media) {
     @if $media == mobile {
         @media only screen and (max-width: $tablet) { @content; }

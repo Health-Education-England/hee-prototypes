@@ -1,5 +1,5 @@
-/* HEE-Timeline */
-.hee-timeline {
+/* Timeline Card - old */
+.nhsuk-timeline-card {
   position: relative;
   margin-top: nhsuk-spacing(9);
   margin-bottom: nhsuk-spacing(9); 
@@ -7,7 +7,7 @@
   background-color: $color_nhsuk-white;
   border: 1px solid $nhsuk-border-color;
 
-  .hee-timeline__title {
+  &__title {
     position: absolute;
     top: -(nhsuk-spacing(5));
     left: 0;
@@ -19,7 +19,7 @@
     background: $color_nhsuk-blue;
   }
 
-  .hee-timeline__event {
+  &__event {
     h4 {
       margin-top: nhsuk-spacing(4);
       margin-bottom: nhsuk-spacing(3);
@@ -33,9 +33,10 @@
       }
     }
   }
+
 }
 
-.hee-timeline--noevents {
+.nhsuk-timeline-card--no-events {
   position: relative;
   margin-top: nhsuk-spacing(9);
   margin-bottom: nhsuk-spacing(9); 
@@ -43,7 +44,7 @@
   display: block;
   background-color: $color_nhsuk-white;
   border: 1px solid $nhsuk-border-color;
-  .hee-timeline__description {
+  .nhsuk-timeline-card__description {
     margin-top: nhsuk-spacing(3);
     p:last-of-type {
       margin-bottom: 0;

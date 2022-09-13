@@ -1,25 +1,4 @@
-.hee-appliesto {
-    @include nhsuk-responsive-margin(8, 'top');
-    padding: nhsuk-spacing(4);
-    background-color: $nhsuk-link-color;
-
-    p {
-        @include nhsuk-typography-responsive(16);
-        display: block;
-        margin-top: 0;
-        color: #FFF;
-        margin-bottom: 0;
-    }
-
-    a {
-        color: #FFF;
-    }
-
-    span {
-        font-weight: bold;
-    }
-}
-
+/* HEE-AppliesTo */
 .hee-appliesto {
     margin-top: 56px;
     padding: 24px;
@@ -42,3 +21,25 @@
 .hee-appliesto span {
     font-weight: bold;
 }
+
+// /*.hee-appliesto {
+//    @include nhsuk-responsive-margin(8, 'top');
+//    padding: nhsuk-spacing(4);
+//    background-color: $nhsuk-link-color;
+//
+//    p {
+//        @include nhsuk-typography-responsive(16);
+//        display: block;
+//        margin-top: 0;
+//        color: #FFF;
+//        margin-bottom: 0;
+//    }
+//
+//    a {
+//        color: #FFF;
+//   }
+//
+//    span {
+//        font-weight: bold;
+//    }
+//}*/

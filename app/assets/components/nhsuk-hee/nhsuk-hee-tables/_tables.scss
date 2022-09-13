@@ -1,3 +1,4 @@
+/* NHSUK-HEE-Tables
 table {
     background-color: #FFF;
     padding: nhsuk-spacing(3);
@@ -11,41 +12,9 @@ table {
 .nhsuk-hee-table {
     margin-bottom: 4em!important;
     background-color: #FFF;
-}
+}*/
 
-@include mq($until: desktop) {
-    .nhsuk-table-responsive {
-        .nhsuk-table__body {
-            .nhsuk-table__row {
-                display: block;
-                margin-bottom: 24px;
-
-                .nhsuk-table__cell {
-                    display: block;
-                    min-width: 1px;
-                    padding-right: 0;
-                    text-align: right;
-
-                    &:last-of-type {
-                        border-bottom: 3px solid #d8dde0;
-                    }
-                }
-
-                .nhsuk-table-responsive__heading {
-                    width: 50%;
-                    font-weight: 600;
-                    padding-right: 16px;
-                    text-align: left;
-                    display: inline-block;
-                    float: left;
-                }
-
-            }
-            
-        }
-    }
-}
-
+/* NHSUK-HEE-Table--Multicols
 .nhsuk-hee-table--multicols {
     width: 100%;
     background-color: #FFF;
@@ -90,6 +59,7 @@ table {
                 font-weight: 600;
                 padding-right: 16px;
                 text-align: left;
+                display: block;
                 display: inline-block;
                 float: left;
             }
@@ -98,3 +68,46 @@ table {
         
     }
 }
+
+@include mq($until: desktop) {
+    .nhsuk-table-responsive {
+        .nhsuk-table__body {
+            .nhsuk-table__row {
+                display: block;
+                margin-bottom: 24px;
+
+                .nhsuk-table__cell {
+                    display: block;
+                    min-width: 1px;
+                    padding-right: 0;
+                    text-align: right;
+
+                    &:last-of-type {
+                        border-bottom: 3px solid #d8dde0;
+                    }
+                }
+
+                .nhsuk-table-responsive__heading {
+                    width: 50%;
+                    font-weight: 600;
+                    padding-right: 16px;
+                    text-align: left;
+                    display: inline-block;
+                    float: left;
+                }
+
+            }
+            
+        }
+    }
+} */
+
+/* NHSUK-HEE-Table -- ?
+.nhsuk-hee-table {
+    background-color: #fff;
+    padding: 16px;
+}
+.nhsuk-hee-table caption {
+    background-color: #fff;
+    padding: 16px 16px 0 16px;
+} */

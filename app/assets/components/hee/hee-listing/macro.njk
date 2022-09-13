@@ -1,3 +1,109 @@
 {% macro listing(list) %}
-  {%- include './template.njk' -%}
+  {%- from 'button/macro.njk' import button %}
+{%- from 'hee/hee-filter/macro.njk' import filter %}
+{%- from 'hee/hee-filtertag/macro.njk' import filterTag %}
+{%- from 'pagination/macro.njk' import pagination %}
+{%- from 'select/macro.njk' import select %}
+{%- from 'summary-list/macro.njk' import summaryList %}
+
+<div class="nhsuk-listing hee-listing">
+  <div class="nhsuk-grid-row hee-layout">
+    {% if list.filter %}
+      <div class="nhsuk-grid-column-one-third hee-layout__leftbar">
+        {{ filter(list.filter) }}
+      </div>
+    {% endif %}
+
+    <div class="nhsuk-listing__list nhsuk-grid-column-two-thirds hee-layout__content">
+      <div class="nhsuk-listing__summary o-flex@tablet">
+        <h2 class="nhsuk-listing__title nhsuk-heading-l o-flex__grow">
+          {{ list.items.length }} results
+        </h2>
+
+        <form method="get" class="nhsuk-listing__sort o-flex o-flex--align-center">
+          <div class="o-flex__grow">
+            {{ select({
+              "id": "sort",
+              "name": "sort",
+              "label": {
+                "text": "Sort by"
+              },
+              "items": [
+                {
+                  "value": "newest",
+                  "text": "Newest"
+                },
+                {
+                  "value": "relevance",
+                  "text": "Relevance"
+                }
+              ]
+            }) }}
+          </div>
+
+          {{ button({
+            "text": "Update",
+            "classes": "nhsuk-listing__sort__submit"
+          }) }}
+        </form>
+      </div>
+
+      {% if list.filter %}
+        <div class="nhsuk-listing__active-filters">
+          {% for group in list.filter.groups %}
+            {% for option in group.items %}
+              {% if option.checked %}
+                {{ filterTag({
+                  text: option.text,
+                  value: option.value
+                })}}
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% if list.items.length > 0 %}
+          {% if list.pageType == "search" %}
+            <ul class="nhsuk-list nhsuk-list--border">
+              {% for item in list.items %}
+                  <li>
+                      <span class="app-search-results-category">{{item.content_type}}</span>
+                      <a href="#" class="app-search-results-item">{{item.title}}</a>
+                      <p class="nhsuk-body-s nhsuk-u-margin-top-1">{{item.summary}}</p>
+                      <div class="nhsuk-review-date">
+                          <p class="nhsuk-body-s">
+                              {{item.published_date}}
+                          </p>
+                      </div>
+                  </li>
+              {% endfor %}
+            </ul>
+          {% elseif list.pageType == "bulletin" %}
+            <hr/>
+            {% for item in list.items %}
+                <div class="nhsuk-listing__item">
+                  <h3><a href="#">{{ item.title }}</a></h3>
+                  {{ summaryList(item.summaryList) }}
+                </div>
+            {% endfor %}
+          {% endif %}
+      {% else %}
+          <div class="nhsuk-listing__no-items">
+            No results
+          </div>
+      {% endif %}
+
+      {% if list.showPagination %}
+        {{ pagination({
+          "previousUrl": "#",
+          "previousPage": "Page 1 of 3",
+          "nextUrl": "#",
+          "nextPage": "Page 3 of 3"
+        }) }}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
 {% endmacro %}

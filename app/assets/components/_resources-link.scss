@@ -1,12 +1,12 @@
-/* HEE-Resources */
-.hee-resources__link {
+/* NHSUK-Resources__link - old */
+.nhsuk-resources__link {
 
-    .hee-resources__tag,
-    .hee-resources__docSize {
+    .nhsuk-resources__tag,
+    .nhsuk-resources__docSize {
         text-decoration: none;
     }
 
-    .hee-resources__tag {
+    .nhsuk-resources__tag {
         display: inline-block;
         position: relative;
         top: -1px;
@@ -20,72 +20,66 @@
         border-radius: 12px;
     }
 
-    .hee-resources__pdf {
+    .nhsuk-resources__pdf {
         background-color: #F40F02;
     }
-    .hee-resources__doc,
-    .hee-resources__docx {
+    .nhsuk-resources__doc,
+    .nhsuk-resources__docx {
         background-color: #2b579a;
     }
-    .hee-resources__xls,
-    .hee-resources__xlsx,
-    .hee-resources__csv {
+    .nhsuk-resources__xls,
+    .nhsuk-resources__xlsx,
+    .nhsuk-resources__csv {
         background-color: #1D6F42;
     }
-    .hee-resources__txt {
+    .nhsuk-resources__txt {
         background-color: #768692;
     }
-    .hee-resources__odt,
-    .hee-resources__ott,
-    .hee-resources__fodt {
+    .nhsuk-resources__odt,
+    .nhsuk-resources__ott,
+    .nhsuk-resources__fodt {
         background-color: #456697;
     }
-    .hee-resources__ods,
-    .hee-resources__ots,
-    .hee-resources__fods {
+    .nhsuk-resources__ods,
+    .nhsuk-resources__ots,
+    .nhsuk-resources__fods {
         background-color: #8abf1c;
     }
-    .hee-resources__odf,
-    .hee-resources__fodf {
+    .nhsuk-resources__odf,
+    .nhsuk-resources__fodf {
             background-color: #106f5a;
     }
-    .hee-resources__odp,
-    .hee-resources__otp,
-    .hee-resources__fodp {
+    .nhsuk-resources__odp,
+    .nhsuk-resources__otp,
+    .nhsuk-resources__fodp {
         background-color: #f1662d;
     }
-    .hee-resources__oth {
+    .nhsuk-resources__oth {
         background-color: #737373;
     }
-    .hee-resources__odg,
-    .hee-resources__fodg,
-    .hee-resources__otg {
+    .nhsuk-resources__odg,
+    .nhsuk-resources__fodg,
+    .nhsuk-resources__otg {
         background-color: #e4a204;
     }
-    .hee-resources__odb,
-    .hee-resources__fodb {
+    .nhsuk-resources__odb,
+    .nhsuk-resources__fodb {
         background-color: #a5265b;
     }
-    .hee-resources__odm,
-    .hee-resources__fodm {
+    .nhsuk-resources__odm,
+    .nhsuk-resources__fodm {
         background-color: #344c84;
     }
 
 
-    .hee-resources__docSize {
+    .nhsuk-resources__docSize {
         display: inline-block;
         color: $color_nhsuk-grey-2;
     }
 
 }
 
-.hee-resources__list {
+.nhsuk-resources__list {
     list-style-type: none;
     padding-left: 0;
 }
-
-
-
-
-
-

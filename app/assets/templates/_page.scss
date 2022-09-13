@@ -1,6 +1,8 @@
+// Basic structure
 .hee-page {}
 .hee-page__header {}
 .hee-page__main {}
+.hee-page__sidebar {}
 .hee-page__footer {}
 
 // Content full
@@ -29,13 +31,9 @@
     }
 }
 
-//.hee-page__main.hee-layout {} // Grid
-//.hee-layout__content {} // Col 2/3
-//.hee-layout__rightbar {} // Col 1/3
-
 // Article (News, blog, etc)
 // Heading is in line with the sidebar
-.hee-page--article {
+/*.hee-page--article {
     .hee-page__header {}
     .hee-page__main {
         padding-top: nhsuk-spacing(6);
@@ -44,4 +42,4 @@
     .hee-page__footer {
         padding-bottom: nhsuk-spacing(6);
     }
-}
+}*/

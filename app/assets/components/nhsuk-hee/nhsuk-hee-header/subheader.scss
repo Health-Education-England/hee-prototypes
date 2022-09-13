@@ -1,4 +1,5 @@
-.nhsuk-subheader {
+
+/*.nhsuk-subheader {
 
     .nhsuk-header__navigation-link {
 
@@ -70,95 +71,6 @@
 
     }
 
-  }
+  }*/
 
-  .nhsuk-subheader {
-    .nhsuk-subheader__list { 
-      display: none;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      text-align: left;
-      z-index: 1;
-    }
   
-    .nhsuk-subheader-item {
-      margin-bottom: 0;
-      border-top: 1px solid #f0f4f5;
-  
-      .nhsuk-subheader-link {
-        display: inline-block;
-        width: 100%;
-        padding: 12px 16px;
-        text-decoration: none;
-        font-size: 1rem;
-        line-height: 1.5;
-        font-weight: 400;
-        border-bottom: 4px solid transparent;
-        border-top: 4px solid transparent;
-        color: $nhsuk-link-color;
-  
-        &:visited {
-          color: $nhsuk-link-color;
-          text-decoration: none;
-        }
-        &:hover,
-        &:focus {
-          text-decoration: underline;
-        }
-        &:focus {
-          color: $nhsuk-focus-text-color
-        }
-        &.no-link {
-          color: $nhsuk-text-color;
-          text-decoration: none;
-          cursor: default;
-        }
-      }
-  
-    }
-  
-    .nhsuk-header__navigation-link {
-      align-items: center;
-      padding-right: nhsuk-spacing(6);
-  
-      .nhsuk-icon {
-        display: block;
-        pointer-events: none;
-      }
-  
-      .nhsuk-icon__chevron-left {
-        display: none;
-        position: absolute;
-        top: 11px;
-        right: 4px;
-      }
-    }
-  
-    .nhsuk-header__back-text {
-      display: none;
-    }
-  
-    &:active {
-      .nhsuk-icon {
-        fill: $nhsuk-focus-text-color;
-      }
-      // &:hover {
-      //   .nhsuk-icon {
-      //     fill: $nhsuk-focus-text-color;
-      //   }
-      // }
-    }
-  
-  }
-  
-  .nhsuk-header__navigation-item:last-child {
-    .nhsuk-subheader__list {
-      left: auto; 
-      right: 0;
-    }
-  }
-  
-  .nhsuk-subheader__item {
-    margin-bottom: 1rem;
-  }

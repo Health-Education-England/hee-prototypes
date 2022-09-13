@@ -12,13 +12,15 @@
 @import '../sass/resets';
 @import '../sass/mixins';
 @import '../sass/grid';
-@import '../sass/misc';
+//@import '../sass/misc';
+
+@import '../components/utils';
 
 ///////////////////////////////////////////
 // TEMPLATES
 ///////////////////////////////////////////
-@import '../templates/page';
-@import '../templates/layout';
+//@import '../templates/page';
+//@import '../templates/layout';
 
 ///////////////////////////////////////////
 // NHSUK-HEE Components (Overrides)
@@ -26,43 +28,56 @@
 @import '../components/nhsuk-hee/nhsuk-hee-blocklinks/blocklinks';
 @import '../components/nhsuk-hee/nhsuk-hee-breadcrumb/breadcrumb';
 @import '../components/nhsuk-hee/nhsuk-hee-contentslist/contentslist';
-@import '../components/nhsuk-hee/nhsuk-hee-cookies/cookies';
-@import '../components/nhsuk-hee/nhsuk-hee-globalalert/globalalert';
+@import '../components/cookies';
 @import '../components/nhsuk-hee/nhsuk-hee-header/header';
 @import '../components/nhsuk-hee/nhsuk-hee-hero/hero';
-@import '../components/nhsuk-hee/nhsuk-hee-image/image';
+@import '../components/globalalert';
+@import '../components/hee-table';
+@import '../components/image';
+@import '../components/relatedcards';
+@import '../components/contact';
+@import '../components/sectionbreak';
+@import '../sass/print';
+@import '../components/related-links-card';
+@import '../components/hee/hee-microhero/microhero';
+@import '../components/hee/hee-timeline/timeline';
+@import '../components/timeline';
+@import '../components/hee/hee-filter/filter';
+@import '../components/hee/hee-filtertag/filtertag';
+@import '../components/image-card';
+@import '../components/related-nav';
+@import '../components/header-search';
+@import '../components/header';
+@import '../components/navigation';
+@import '../components/subheader';
+@import '../components/media';
+@import '../components/hee/hee-navmap/navmap';
+@import '../components/related-nav'; //?
+@import '../components/resources-link';
+@import '../components/header-search'; //?
+@import '../components/hee-table-2';
+@import '../components/hee/hee-appliesto/appliesto';
+@import '../components/hee/hee-anchorlinks/anchorlinks';
 @import '../components/nhsuk-hee/nhsuk-hee-phasebanner/phasebanner';
-@import '../components/nhsuk-hee/nhsuk-hee-reviewdate/reviewdate';
-@import '../components/nhsuk-hee/nhsuk-hee-summarylist/summarylist';
-@import '../components/nhsuk-hee/nhsuk-hee-tables/tables';
+@import '../components/nhsuk-icon'; //?
+@import '../components/hee/hee-tabs/tabs';
+@import '../components/nhsuk-hee/nhsuk-hee-tables/tables2'; //?
+
+@import '../components/hee/hee-globalalert/globalalert';
+//@import '../components/hee/hee-detailscard/detailscard';
+//@import '../components/hee/hee-detailscard/authorcard/authorcard';
+//@import '../components/hee/hee-detailscard/personcard/personcard';
+//@import '../components/hee/hee-detailscard/departmentcard/departmentcard';
 
 ///////////////////////////////////////////
 // HEE Components
 ///////////////////////////////////////////
-@import '../components/hee/hee-appliesto/appliesto';
-@import '../components/hee/hee-anchorlinks/anchorlinks';
-@import '../components/hee/hee-detailscard/contact';
-@import '../components/hee/hee-detailscard/detailscard';
-@import '../components/hee/hee-detailscard/authorcard/authorcard';
-@import '../components/hee/hee-detailscard/personcard/personcard';
-@import '../components/hee/hee-detailscard/departmentcard/departmentcard';
-@import '../components/hee/hee-homesection/homesection';
-@import '../components/hee/hee-media/media';
-@import '../components/hee/hee-microhero/microhero';
-@import '../components/hee/hee-navmap/navmap';
-@import '../components/hee/hee-newsletter/newsletter';
-@import '../components/hee/hee-relatednav/relatednav';
-@import '../components/hee/hee-resources/resources';
-@import '../components/hee/hee-sidebarimage/sidebarimage';
-@import '../components/hee/hee-sidebarlinks/sidebarlinks';
-@import '../components/hee/hee-tabs/tabs';
-@import '../components/hee/hee-timeline/timeline';
 
-///////////////////////////////////////////
-// Unsorted components
-///////////////////////////////////////////
-
-@import '../components/filter/filter';
-@import '../components/filter-tag/filter-tag';
-@import '../components/search/search';
-@import '../components/search/search';
+//@import '../components/nhsuk-hee/nhsuk-hee-reviewdate/reviewdate';
+//@import '../components/nhsuk-hee/nhsuk-hee-summarylist/summarylist';
+//@import '../components/hee/hee-homesection/homesection';
+//@import '../components/hee/hee-newsletter/newsletter';
+//@import '../components/hee/hee-relatednav/relatednav';
+//@import '../components/hee/hee-resources/resources';
+//@import '../components/hee/hee-sidebarimage/sidebarimage';
+//@import '../components/hee/hee-sidebarlinks/sidebarlinks';

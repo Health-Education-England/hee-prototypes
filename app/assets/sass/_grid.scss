@@ -1,8 +1,6 @@
+
 // Grid
-//@use "sass:math";
-
 $grid-columns: 12;
-
 @mixin hee-flexgrid-row(
     $flex-display: flex,
     $flex-direction: null, 
@@ -123,18 +121,11 @@ $grid-columns: 12;
 		order: $order;
 	}
 
-    //@include browser(ie) {
-        //float: left; 
-        //flex: none;
-    //}
-    
-    /*@include browser(ie) {
-        display: inline-block;
-        margin-right: -4px;
-        vertical-align: top;
-        flex: none!important;
-    }*/
-    
+    @include browser(ie) {
+        float: left; 
+        flex: none;
+    }
+
 	@content;
 }
 

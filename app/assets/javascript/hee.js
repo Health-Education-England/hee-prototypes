@@ -13,8 +13,8 @@ import Tabs from '../components/hee/hee-tabs/tabs';
 //import Timeline from '../components/hee/hee-timeline/timeline';
 
 // Unsorted components
-import Filter from '../components/filter/filter';
-import FilterTag from '../components/filter-tag/filter-tag';
+import Filter from '../components/hee/hee-filter/filter';
+import FilterTag from '../components/hee/hee-filtertag/filtertag';
 
 //import './polyfills';
 

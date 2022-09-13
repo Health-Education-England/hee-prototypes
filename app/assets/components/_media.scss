@@ -1,5 +1,5 @@
-/* HEE-Media */
-.hee-media {
+/* NHSUK-Media - old */
+.nhsuk-media {
   min-width: 288px;
   margin: nhsuk-spacing(6) 0 80px;
   background: #fff;
@@ -32,7 +32,7 @@
     }
   }
 
-  .hee-media__description {
+  .nhsuk-media__description {
     padding: 0 nhsuk-spacing(4) nhsuk-spacing(4);
 
     p:last-child {
@@ -40,11 +40,11 @@
     }
   }
 
-  .hee-media__info {
+  .nhsuk-media__info {
     padding: nhsuk-spacing(4) nhsuk-spacing(4) 0;
   }
 
-  .hee-media__reviews {
+  .nhsuk-media__reviews {
     p {
       margin: 0;
       @include nhsuk-font(16);
@@ -52,7 +52,7 @@
     }
   }
 
-  .hee-media__transcript {
+  .nhsuk-media__transcript {
 
     a {
       position: relative;
@@ -88,27 +88,28 @@
         height: 0;
         border-style: solid;
         border-color: transparent;
-        clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+        //clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+        clip-path: polygon(0 0, 100% 50%, 0 100%);
         border-width: 8px 0 8px 12px;
         border-left-color: inherit;
       }
 
     }
 
-    .hee-media__show-text {
+    .nhsuk-media__show-text {
       display: block;
     }
 
-    .hee-media__hide-text {
+    .nhsuk-media__hide-text {
       display: none;
     }
 
-    .hee-media__transcript-text {
+    .nhsuk-media__transcript-text {
       display: none;
       margin-bottom: nhsuk-spacing(4);
     } 
 
-    &.hee-media__transcript-expanded {
+    &.nhsuk-media__transcript-expanded {
         a {
           span:before {
             display: block;
@@ -116,25 +117,26 @@
             height: 0;
             border-style: solid;
             border-color: transparent;
-            clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+            //clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+            clip-path: polygon(0 0, 50% 100%, 100% 0);
             border-width: 12px 8px 0 8px;
             border-top-color: inherit;
           }
         }
 
-        .hee-media__transcript-text,
-        .hee-media__hide-text {
+        .nhsuk-media__transcript-text,
+        .nhsuk-media__hide-text {
           display: block;
         }
-        .hee-media__show-text {
+        .nhsuk-media__show-text {
           display: none;
         }
       }
   }
 }
 
-.hee-layout__content {
-  .hee-media {
+.nhsuk-grid-column-two-thirds {
+  .nhsuk-media {
     iframe {
       &.youtube,
       &.vimeo{
@@ -148,4 +150,3 @@
     }
   }
 } 
-

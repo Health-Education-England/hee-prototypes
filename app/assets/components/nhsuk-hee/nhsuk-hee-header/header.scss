@@ -1,47 +1,16 @@
-/* ==========================================================================
-   COMPONENTS / #HEADER
-   ========================================================================== */
-/**
- * The behaviour with regards to responsiveness is as follow:
- *
- * - Mobile to tablet view
- *   Menu toggle button visible and navigation links hidden, search toggle
-     button visible and search form hidden
- *
- * - Tablet to desktop view
- *   Menu toggle button visible and navigation links hidden, search toggle
- *   button hidden and search form visible
- *
- * - Desktop+ view
- *   Menu toggle button hidden and navigation links visible, search toggle
- *   button hidden and search form visible
- *
- * 1. Custom height and width of the logo
- * 2. Custom height and width of form items
- * 3. Custom height and width of svg icons
- * 4. Remove inner border on buttons for Firefox, see
- *    https://github.com/necolas/normalize.css/issues/393
- * 5. Proprietary extension so form field looks the same in Safari
- * 6. Needs !important because typeahead js adds inline styling so need to
- *    override
- * 7. Custom spacing to position the search icon
- * 8. Drop shadow on search suggestions dopdown box, custom spread and blur
- * 9. No current spacing at 12px so using this value
- * 10. Z-index to bring the dropdown to the front
- * 11. Custom margin to move menu toggle past the search toggle button
- * 12. Custom border value between expanded search and expanded menu if both open at the same time
- * 13. Don't display the link address for the logo anchor, see
- *     core/elements/_links.scss
- * 14. IE 10 prefix for flexbox
- * 15. IE 9 alternative for flexbox
- * 16. Use non variable colour to follow NHS England guidelines on logo colour
- * 17. On print stylesheets remove the header link
- * 18. Remove random top margin in Safari
- * 19. Align close icon with nav item arrow icons
- * 20. Add nhsuk-spacing(9) to align right and left main nav with header
- * 21. Add style for Bloomreach so that editors can see multi-logo div
- */
+/* Header */
 
-@import 'custom';
-@import 'navigation';
-@import 'subheader';
+.nhsuk-header {
+    &__navigation-list {
+      // border-top: 1px solid $color_nhsuk-white;
+    }
+  
+    &--parent {
+      color: $color_nhsuk-white;
+      text-align: right;
+  
+        a {
+            color: inherit;
+        }
+    }
+}

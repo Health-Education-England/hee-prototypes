@@ -1,22 +1,29 @@
-{%- from 'action-link/macro.njk' import actionLink %}
-{%- from 'back-link/macro.njk' import backLink %}
-{%- from 'care-card/macro.njk' import careCard %}
-{%- from 'date-input/macro.njk' import dateInput %}
-{%- from 'details/macro.njk' import details %}
-{%- from 'error-message/macro.njk' import errorMessage %}
-{%- from 'error-summary/macro.njk' import errorSummary %}
-{%- from 'fieldset/macro.njk' import fieldset %}
-{%- from 'filter/macro.njk' import filter %}
-{%- from 'footer/macro.njk' import footer %}
-{%- from 'hint/macro.njk' import hint %}
-{%- from 'input/macro.njk' import input %}
-{%- from 'label/macro.njk' import label %}
-{%- from 'list-panel/macro.njk' import listPanel %}
-{%- from 'nav-a-z/macro.njk' import azNav %}
-{%- from 'radios/macro.njk' import radios %}
+{# SCAFFOLDING #}
+
+{# Header #}
+{%- from 'nhsuk-hee/nhsuk-hee-cookies/macro.njk' import cookies %}
+{%- from 'nhsuk-hee/nhsuk-hee-header/macro.njk' import customHeader %}
 {%- from 'skip-link/macro.njk' import skipLink %}
-{%- from 'tag/macro.njk' import tag %}
-{%- from 'textarea/macro.njk' import textarea %}
+
+{# Notifications #}
+{%- from 'hee/hee-globalalert/macro.njk' import globalAlert %}
+{%- from 'nhsuk-hee/nhsuk-hee-phasebanner/macro.njk' import phaseBanner %}
+
+{# Footer #}
+{%- from 'footer/macro.njk' import footer %}
+
+{# Main #}
+{%- from 'breadcrumb/macro.njk' import breadcrumb %}
+
+{# TEMPLATE COMPONENTS #}
+{%- from 'hero/macro.njk' import hero %}
+{%- from 'hee/hee-microhero/macro.njk' import microHero %}
+{%- from 'hee/hee-homesection/macro.njk' import homepageSection %}
+{%- from 'hee/hee-listing/macro.njk' import listing %}
+{%- from 'hee/hee-filter/macro.njk' import filter %}
+{%- from 'pagination/macro.njk' import pagination %}
+
+{# CONTENT (BLOCKS) COMPONENTS #}
 
 {# HEE Components #}
 {%- from 'hee/hee-anchorlinks/macro.njk' import anchorLinks %}
@@ -24,10 +31,7 @@
 {%- from 'hee/hee-detailscard/personcard/macro.njk' import personCard %}
 {%- from 'hee/hee-detailscard/departmentcard/macro.njk' import departmentCard %}
 {%- from 'hee/hee-detailscard/contact.njk' import contact %}
-{%- from 'hee/hee-homesection/macro.njk' import homepageSection %}
-{%- from 'hee/hee-listing/macro.njk' import listing %}
 {%- from 'hee/hee-media/macro.njk' import media %}
-{%- from 'hee/hee-microhero/macro.njk' import microHero %}
 {%- from 'hee/hee-navmap/macro.njk' import navMap %}
 {%- from 'hee/hee-relatednav/macro.njk' import relatedNav %}
 {%- from 'hee/hee-resources/macro.njk' import resources %}
@@ -37,15 +41,9 @@
 {%- from 'hee/hee-timeline/macro.njk' import timeline %}
 
 {# NHSUK-HEE Components #}
-{%- from 'nhsuk-hee/nhsuk-hee-header/macro.njk' import customHeader %}
 {%- from 'nhsuk-hee/nhsuk-hee-blocklinks/macro.njk' import blocklinks %}
-{%- from 'nhsuk-hee/nhsuk-hee-cookies/macro.njk' import cookies %}
-{%- from 'nhsuk-hee/nhsuk-hee-globalalert/macro.njk' import emergencyAlert %}
-{%- from 'nhsuk-hee/nhsuk-hee-phasebanner/macro.njk' import phaseBanner %}
-{#%- from 'nhsuk-hee/nhsuk-hee-promobanner/macro.njk' import promoBanner %#}
 
 {# NHSUK Components #}
-{%- from 'breadcrumb/macro.njk' import breadcrumb %}
 {%- from 'button/macro.njk' import button %}
 {%- from 'card/macro.njk' import card %}
 {%- from 'checkboxes/macro.njk' import checkboxes %}
@@ -53,13 +51,12 @@
 {%- from 'images/macro.njk' import image %}
 {%- from 'inset-text/macro.njk' import insetText %}
 {%- from 'do-dont-list/macro.njk' import list %}
-{%- from 'hero/macro.njk' import hero %}
-{%- from 'pagination/macro.njk' import pagination %}
 {%- from 'review-date/macro.njk' import reviewDate %}
 {%- from 'summary-list/macro.njk' import summaryList %}
 {%- from 'select/macro.njk' import select %}
 {%- from 'tables/macro.njk' import table %}
 {%- from 'warning-callout/macro.njk' import warningCallout %}
+
 
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="ie8" lang="en"><![endif]--><!--[if IE 9]><html class="ie9" lang="en"><![endif]--><!--[if gt IE 9]><!--><html lang="en" style="{{ html_style }}"><!--<![endif]-->
@@ -96,13 +93,18 @@
   <body class="{{ bodyClasses }}">
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
     {% block bodyStart %}
-    {{ cookies() }}
+      {{ cookies() }}
     {% endblock %}
 
-    {% block skipLink %}
+    {% block headerStart %}
       {{ skipLink({
         href: '#maincontent',
         text: 'Skip to main content'
+      }) }}
+      {{ globalAlert({
+        customClass: 'hee-globalalert--black',
+        heading: "Her Majesty Queen Elizabeth II",
+        HTML: "<p>21 April 1926 to 8 September 2022</p><p><a href='https://www.hee.nhs.uk/news-blogs-events/news/her-majesty-queen-elizabeth-ii'>We join with the people across HEE and the NHS in mourning the death of Queen Elizabeth II</a></p>"
       }) }}
     {% endblock %}
 
@@ -156,7 +158,18 @@
         })
       }}
     {% endblock %}
-    {% block headerEnd %}{% endblock %}
+
+    {% block headerEnd %}
+      {{ phaseBanner({
+        tag: "Alpha",
+        description: 'This is a new service – your <a class="nhsuk-link" href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.'
+      }) }}
+      {{ globalAlert({
+        customClass: '',
+        heading: "Coronavirus (COVID-19)",
+        HTML: "<p><a href='https://www.nhs.uk/conditions/coronavirus-covid-19/'>Get the latest advice about coronavirus</a></p>"
+      }) }}
+    {% endblock %}
 
     <div class="hee-page {% block pageClass %}{% endblock %}" id="maincontent" role="main">
       <div class="hee-page__header">
@@ -206,3 +219,20 @@
     {% endblock %}
   </body>
 </html>
+
+{#%- from 'action-link/macro.njk' import actionLink %}
+{%- from 'back-link/macro.njk' import backLink %}
+{%- from 'care-card/macro.njk' import careCard %}
+{%- from 'date-input/macro.njk' import dateInput %}
+{%- from 'details/macro.njk' import details %}
+{%- from 'error-message/macro.njk' import errorMessage %}
+{%- from 'error-summary/macro.njk' import errorSummary %}
+{%- from 'fieldset/macro.njk' import fieldset %}
+{%- from 'hint/macro.njk' import hint %}
+{%- from 'input/macro.njk' import input %}
+{%- from 'label/macro.njk' import label %}
+{%- from 'list-panel/macro.njk' import listPanel %}
+{%- from 'nav-a-z/macro.njk' import azNav %}
+{%- from 'radios/macro.njk' import radios %}
+{%- from 'tag/macro.njk' import tag %}
+{%- from 'textarea/macro.njk' import textarea %#}
