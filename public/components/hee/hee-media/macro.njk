@@ -1,0 +1,67 @@
+{% macro media(params) %}
+  <div class="hee-media">
+    {% if params.title %}
+      <h2>{{ params.title }}</h2>
+    {% endif %}
+
+    {% if params.description %}
+      <div class="hee-media__description">
+        <p>{{ params.description }}</p>
+      </div>
+    {% endif %}
+    
+    {% if params.type === "youtube" or params.type === "vimeo" %}
+    <iframe
+      class="{{ params.type }}"
+      {% if params.type === "youtube" %}
+        src="https://youtube.com/embed/{{ params.mediaId }}"
+      {% elif params.type === "vimeo" %}
+        src="https://player.vimeo.com/video/{{ params.mediaId }}"
+      {% endif %}
+      title="{{ params.title }}"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"
+    ></iframe>
+
+    {% elif params.type === "anchor" %}
+      <iframe
+        class="{{ params.type }}"
+        src="{{ params.src }}"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
+    {% endif %}
+
+    <div class="hee-media__info">
+
+      {% if params.transcript|length %}
+        <div class="hee-media__transcript">
+          <a href="javascript:void(0);">
+            <span class="hee-media__show-text">Show transcript</span>
+            <span class="hee-media__hide-text">Hide transcript</span>
+          </a>
+
+          <div class="hee-media__transcript-text">
+            {% for line in params.transcript %}
+              <p>{{ line | safe }}</p>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+
+      <div class="hee-media__reviews">
+        {% if params.lastReview|length %}
+          <p>
+            Page last reviewed: {{ params.lastReview }}
+          </p>
+        {% endif %}
+        {% if params.reviewDue|length %}
+          <p>
+            Next review due: {{ params.reviewDue }}
+          </p>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+{% endmacro %}

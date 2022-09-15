@@ -1,0 +1,40 @@
+{%- from 'summary-list/macro.njk' import summaryList %}
+
+{% macro timeline(params) %}
+  {% if params.events %}
+  <div class="hee-timeline">
+    {% if params.title %}
+      <h3 class="hee-timeline__title">{{ params.title }}</h3>
+    {% else %}
+      <h3 class="hee-timeline__title">Date TBC</h3>
+    {% endif %}
+    {% if params.description %}
+      <div class="hee-timeline__description">
+        <p>{{ params.description }}</p>
+      </div>
+    {% endif %}
+    {% for item in params.events %}
+      <div class="hee-timeline__event">
+        {% if item.title %}
+          <h4>{{ item.title }}</h4>
+        {% endif %}
+        {% if item.description %}
+          <p>{{ item.description }}</p>
+        {% endif %}
+        {{ summaryList({
+          rows: item.details
+        }) }}
+      </div>
+      {%- endfor %}
+  </div>
+  {% else %}
+  <div class="hee-timeline--no-events">
+    <h3 class="hee-timeline__title" >No Events to Display</h3>
+    {% if params.description %}
+      <div class="hee-timeline__description">
+        <p>{{ params.description }}</p>
+      </div>
+    {% endif %}
+  </div>
+  {% endif %}
+{% endmacro %}

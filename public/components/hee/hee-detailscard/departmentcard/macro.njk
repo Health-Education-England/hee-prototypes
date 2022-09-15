@@ -1,0 +1,50 @@
+{% macro departmentCard(params) %}
+
+{#{ departmentCard({
+    name: "Jo Blogs", 
+    department: "HEE",
+    organisation: "NHS UK",
+    email: "email@hee.co.uk",
+    website: "http://nhs.uk/",
+    description: "Lorem ipsum dolor sit amet"
+}) }#}
+  
+{%- if params.gridCol %}<div class="{{ params.gridCol }}">{% endif %}
+  
+<div class="hee-detailscard hee-detailscard--author{%- if params.classes %} {{ params.classes }}{% endif %}">
+
+  {% if params.heading %}
+    <h2 class="hee-detailscard__heading">{{ params.heading | safe }}</h2>
+  {% endif %}
+
+  <h2 class="nhsuk-heading-m hee-detailscard__jobrole" aria-label="Department name">
+    {{ params.name | safe }}
+  </h2>
+
+  {%- if params.organisation %}
+    <p class="hee-detailscard__organisation" aria-label="Organisation" >{{ params.organisation | safe }}</p>
+  {%- endif %}
+
+  <hr />
+
+  <ul class="hee-detailscard__contact">
+    {%- if params.telephone %}
+      <li class="hee-detailscard__telephone" aria-label="Telephone"><a href="tel:{{ params.telephone | safe }};">{{ params.tel | safe }}</a></li>
+    {%- endif %}
+    {%- if params.email %}
+      <li class="hee-detailscard__email" aria-label="Email"><a href="mailto:{{ params.website | safe }};">{{ params.email | safe }}</a></li>
+    {%- endif %}
+    {%- if params.website %}
+      <li class="hee-detailscard__website" aria-label="Website"><a href="{{ params.website | safe }}">{{ params.website | safe }}</a></li>
+    {%- endif %}
+  </ul>
+
+  {%- if params.description %}
+    <p class="hee-detailscard__description" aria-label="Description" >{{ params.description | safe }}</p>
+  {%- endif %}
+
+</div>
+
+{%- if params.gridCol %}</div>{% endif %}
+
+{% endmacro %}
