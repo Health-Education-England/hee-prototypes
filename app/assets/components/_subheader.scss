@@ -102,10 +102,8 @@
   }
 
   .nhsuk-subheader .nhsuk-header__navigation-link .nhsuk-icon {
-      /* investigate this */
-      top: calc(50% - 22px);
-      /*top: calc(50% - 34px);
-      transform: translateY(50%);*/
+      top: calc(50% - 34px);
+      transform: translateY(50%);
       fill: #fff;
   }
   .nhsuk-subheader .nhsuk-header__navigation-link:focus {
