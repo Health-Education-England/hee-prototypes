@@ -1,0 +1,18 @@
+/* NHSUK-Header__menu */
+
+.nhsuk-header__menu {
+  float: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+
+  .nhsuk-header__menu-toggle {
+    right: auto;
+  }
+
+  .no-search & {
+    position: relative;
+  }
+  
+}

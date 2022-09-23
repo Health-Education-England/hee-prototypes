@@ -1,0 +1,17 @@
+/* NHSUK-Header__navigation */
+
+.nhsuk-header__navigation {
+  overflow: visible;
+}
+
+.nhsuk-header__navigation-item {
+  display: block;
+}
+
+@include mq($until: desktop) {
+  .nhsuk-header__navigation {
+    .nhsuk-width-container {
+      margin: 0!important;
+    }
+  }
+}

@@ -29,7 +29,13 @@
 @import '../components/nhsuk-hee/nhsuk-hee-breadcrumb/breadcrumb';
 @import '../components/nhsuk-hee/nhsuk-hee-contentslist/contentslist';
 @import '../components/cookies';
-@import '../components/nhsuk-hee/nhsuk-hee-header/header';
+@import '../components/scaffolding/header/header';
+@import '../components/scaffolding/header/logos/logo';
+@import '../components/scaffolding/header/logos/multilogo';
+@import '../components/scaffolding/header/search/search';
+@import '../components/scaffolding/header/navigation/navigation';
+@import '../components/scaffolding/header/navigation/menu';
+@import '../components/scaffolding/header/navigation/subnav';
 @import '../components/nhsuk-hee/nhsuk-hee-hero/hero';
 @import '../components/hee-table';
 @import '../components/image';
@@ -45,15 +51,15 @@
 @import '../components/hee/hee-filtertag/filtertag';
 @import '../components/image-card';
 @import '../components/related-nav';
-@import '../components/header-search';
-@import '../components/header';
-@import '../components/navigation';
-@import '../components/subheader';
+//@import '../components/header-search';
+//@import '../components/header';
+//@import '../components/navigation';
+//@import '../components/subheader';
 @import '../components/media';
 @import '../components/hee/hee-navmap/navmap';
 @import '../components/related-nav'; //?
 @import '../components/resources-link';
-@import '../components/header-search'; //?
+//@import '../components/header-search'; //?
 @import '../components/hee-table-2';
 @import '../components/hee/hee-appliesto/appliesto';
 @import '../components/hee/hee-anchorlinks/anchorlinks';

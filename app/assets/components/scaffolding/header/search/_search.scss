@@ -1,0 +1,23 @@
+/* NHSUK-Header__search */
+
+.nhsuk-header__search {
+  margin-left: 0;
+  width: 100%;
+
+  .nhsuk-header__search-wrap {
+    width: 100%;
+    
+    .nhsuk-header__search-form {
+      padding: 0;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+@include mq($until: tablet) {
+  .nhsuk-header__search-wrap.js-show {
+    padding-top: 64px;
+    margin: 0;
+    display: block;
+  }
+}

@@ -1,8 +1,8 @@
 {# SCAFFOLDING #}
 
 {# Header #}
+{%- from 'scaffolding/header/macro.njk' import customHeader %}
 {%- from 'nhsuk-hee/nhsuk-hee-cookies/macro.njk' import cookies %}
-{%- from 'nhsuk-hee/nhsuk-hee-header/macro.njk' import customHeader %}
 {%- from 'skip-link/macro.njk' import skipLink %}
 
 {# Notifications #}
@@ -101,36 +101,48 @@
         href: '#maincontent',
         text: 'Skip to main content'
       }) }}
-      {{ globalAlert({
+      {#{ globalAlert({
         customClass: 'hee-globalalert--black',
         heading: "Her Majesty Queen Elizabeth II",
         HTML: "<p>21 April 1926 to 8 September 2022</p><p><a href='https://www.hee.nhs.uk/news-blogs-events/news/her-majesty-queen-elizabeth-ii'>We join with the people across HEE and the NHS in mourning the death of Queen Elizabeth II</a></p>"
-      }) }}
+      }) }#}
     {% endblock %}
 
     {% block header %}
-      {{ customHeader({
-          showNav: true,
-          showSearch: true,
-          organisation: {
-            name: "Health Education England",
-            descriptor: "NWP Prototype Kit"
+        {{ customHeader({
+          "showNav": "true",
+          "showSearch": "true",
+          "showLogos": "false",
+          "classes": "nhsuk-header--white",
+          "organisation": {
+            "name": "Health Education England",
+            "split": "",
+            "descriptor": "Dental Education Hub"
           },
-          logos: {
-            en: false,
-            ni: false,
-            scot: false,
-            wales: false,
-            fpo: false
-          },
-          primaryLinks: [
+          "logos": [
             {
-              url: "/",
-              label: "Home"
+              "href": "https://www.nimdta.gov.uk/",
+              "label": "Northern Ireland Medical and Dental Training Agency Website (Opens in New Window)",
+              "imgSrc": "/images/logos/nimdta-logo.png",
+              "imgAlt": "Logo for Northern Ireland Medical and Dental Training Agency"
             },
             {
-              url: "/components",
-              label: "Components",
+              "href": "https://www.nes.scot.nhs.uk/",
+              "label": "NHS Education for Scotland Website (Opens in New Window)",
+              "imgSrc": "/images/logos/nhs-scotland-logo.png",
+              "imgAlt": "Logo for NHS Education for Scotland"
+            },
+            {
+              "href": "https://heiw.nhs.wales/",
+              "label": "Health Education and Improvement Wales Website (Opens in New Window)",
+              "imgSrc": "/images/logos/heiw-logo.png",
+              "imgAlt": "Logo for Health Education and Improvement Wales"
+            }
+          ],
+          "primaryLinks": [
+            {
+              "url": "/components",
+              "label": "Components",
               children: [
                 {
                     url: "/components/hee",
@@ -147,12 +159,26 @@
               ]
             },
             {
-              url: "/layouts",
-              label: "Layouts"
+              'url' : '/layouts',
+              'label' : 'Layouts',
+              children: [
+                {
+                    url: "/layouts/full",
+                    label: "Full width"
+                },
+                {
+                    url: "/layouts/left-sidebar",
+                    label: "Left sidebar"
+                },
+                {
+                    url: "/layouts/right-sidebar",
+                    label: "Right sidebar"
+                }
+              ]
             },
             {
-              url: "/examples",
-              label: "Examples"
+              'url'  : '/examples',
+              'label' : 'Examples'
             }
           ]
         })
@@ -164,11 +190,11 @@
         tag: "Alpha",
         description: 'This is a new service – your <a class="nhsuk-link" href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.'
       }) }}
-      {{ globalAlert({
+      {#{ globalAlert({
         customClass: '',
         heading: "Coronavirus (COVID-19)",
         HTML: "<p><a href='https://www.nhs.uk/conditions/coronavirus-covid-19/'>Get the latest advice about coronavirus</a></p>"
-      }) }}
+      }) }#}
     {% endblock %}
 
     <div class="hee-page {% block pageClass %}{% endblock %}" id="maincontent" role="main">

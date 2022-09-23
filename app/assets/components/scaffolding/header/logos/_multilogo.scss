@@ -1,0 +1,24 @@
+/* NHSUK-Header__multilogo */
+
+.nhsuk-header__multilogo {
+  .nhsuk-header__logo {
+    display: inline-block;
+    margin-right: 16px;
+    vertical-align: top;
+  }
+}
+
+@include mq($until: desktop) {
+  .nhsuk-header__multilogo {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    .nhsuk-header__logo-home {
+      margin-bottom: 0!important;
+      order: 10;
+    }
+    .nhsuk-header__logo {
+      margin-bottom: 16px;
+    }
+  }
+}

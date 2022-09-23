@@ -1,0 +1,132 @@
+/* NHSUK-Subnav */
+
+.nhsuk-subnav {
+
+    .nhsuk-header__navigation-link {
+      padding-right: 28px;
+
+      .nhsuk-icon {
+        display: block;
+        top: calc(50% - 11px);
+        transform: rotate(90deg) translateX(0);
+        fill: #FFF;
+        width: 22px!important;
+        height: 22px!important;
+      }
+
+      &:focus {
+        text-decoration: none;
+      }
+
+      &:focus {
+        .nhsuk-icon {
+          fill: $nhsuk-focus-text-color;
+        }
+      }
+    }
+
+    .nhsuk-subnav__list { 
+      display: none;
+      position: absolute;
+      right: 0;
+      z-index: 9999;
+      min-width: 16rem;
+      padding: 0;
+      border: 1px solid $color_nhsuk-grey-4;
+      border-bottom-width: nhsuk-spacing(1);
+      background: $color_nhsuk-white;
+      list-style: none;
+      text-align: left;
+
+      &-item {
+        margin-bottom: 0;
+        border-top: 1px solid #f0f4f5;
+      }
+
+      &-link {
+        display: block;
+        width: 100%;
+        padding: 12px 16px;
+        text-decoration: none;
+        font-size: 1rem;
+        line-height: 1.5;
+        font-weight: 400;
+        border-bottom: 4px solid transparent;
+        border-top: 4px solid transparent;
+        color: #005eb8;
+      }
+
+    }
+
+    .nhsuk-nav__link {
+      padding: nhsuk-spacing(2) nhsuk-spacing(3);
+    }
+
+    .nhsuk-header__back-text {
+      display: none;
+    }
+
+    // &:hover,
+    &.is-active {
+
+      .nhsuk-header__navigation-link {
+
+        & > * {
+          pointer-events: none;
+        }
+
+      }
+
+      .nhsuk-subnav__list {
+        display: block; 
+      }
+
+    }
+
+}
+
+@include mq($until: desktop) {
+
+  .nhsuk-subnav {
+
+    .nhsuk-header__navigation-link { 
+      position: relative;
+      .nhsuk-icon {
+        fill: #005eb8!important;
+        right: 16px;
+        transform: rotate(0deg);
+      }
+    }
+
+
+    &.is-active {
+
+      .nhsuk-header__navigation-link {
+
+        .nhsuk-icon {
+          transform: rotate(90deg);
+          fill: #005eb8!important;
+        }
+
+      }
+
+      .nhsuk-subnav__list {
+        width: 100%;
+        left: 0;
+        display: block;
+        position: inherit;
+        margin-bottom: 0;
+        border: 0;
+        border-bottom: 1px solid #CCC;
+
+        .nhsuk-subnav__list-link {
+          font-size: .875rem;
+          line-height: 1.71429;
+          padding-left: 28px;
+        }
+      }
+
+    }
+  }
+
+}
