@@ -113,6 +113,7 @@
           "showNav": "true",
           "showSearch": "true",
           "showLogos": "false",
+          "heeHref": "http://hee.nhs.uk/",
           "classes": "nhsuk-header--white",
           "organisation": {
             "name": "Health Education England",
@@ -190,11 +191,11 @@
         tag: "Alpha",
         description: 'This is a new service – your <a class="nhsuk-link" href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.'
       }) }}
-      {#{ globalAlert({
+      {{ globalAlert({
         customClass: '',
         heading: "Coronavirus (COVID-19)",
         HTML: "<p><a href='https://www.nhs.uk/conditions/coronavirus-covid-19/'>Get the latest advice about coronavirus</a></p>"
-      }) }#}
+      }) }}
     {% endblock %}
 
     <div class="hee-page {% block pageClass %}{% endblock %}" id="maincontent" role="main">
