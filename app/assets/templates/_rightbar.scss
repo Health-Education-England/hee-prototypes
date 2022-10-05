@@ -17,6 +17,18 @@
       }
   }
 
+  @include mq($until: desktop) {
+    .page__header {
+        h1, p, span {
+            max-width: 100%;
+        }
+    }
+    .page__rightbar, 
+    .page__main {
+        @include hee-flexgrid-col(12,$col-offset:0);
+    }
+}
+
 }
 
 .page--template-standard {}
