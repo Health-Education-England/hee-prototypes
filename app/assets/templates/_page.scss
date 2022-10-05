@@ -12,6 +12,17 @@
     //min-height: 20px;
 }
 
+.page {
+    &.has-microhero {
+        .page__header {
+            padding-top: 0;
+            .hee-microhero {
+                margin-bottom: nhsuk-spacing(7);
+            }
+        }
+    }
+}
+
 .page__header {
     h1 ~ span {
         margin-top: - nhsuk-spacing(6);

@@ -1,10 +1,7 @@
 // FULLWIDTH 
 .page--fullwidth {
-  //background-color: palegoldenrod;
   .page__header {
-    .hee-microhero {
-      margin-bottom: nhsuk-spacing(7);
-    }
+    padding-top: nhsuk-spacing(7);
     h1, p, span {
       max-width: 66.6667%;
     }
