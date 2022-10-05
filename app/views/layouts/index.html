@@ -22,18 +22,52 @@ Layouts - HEE Prototype
     imgAlt: 'An example bg image'
 }) }}
 <div class="nhsuk-width-container">
-    <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-two-thirds hee-page__heading">
-            <h1>Layouts</h1>
-            <p class="nhsuk-lede-text">All of the available HEE layouts</p>
-        </div>
+    <div class="page__heading">
+        <h1>Layouts</h1>
+        <p class="nhsuk-lede-text">All of the available HEE layouts</p>
     </div>
 </div>
 {% endblock %}
 
 {% block pageMain %}
 <div class="nhsuk-width-container">
+    <h2>Base layouts</h2>
     <div class="nhsuk-grid-row">
+        <ul class="nhsuk-card-group">
+            <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                {{ card({
+                    "href": "/layouts/base/fullwidth",
+                    "clickable": "true",
+                    "heading": "Fullwidth",
+                    "headingLevel": "3",
+                    "headingClasses": "nhsuk-heading-s",
+                    "description": ""
+                }) }}
+                </li>
+            <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+            {{ card({
+                "href": "/layouts/base/leftbar",
+                "clickable": "true",
+                "heading": "Leftbar",
+                "headingLevel": "3",
+                "headingClasses": "nhsuk-heading-s",
+                "description": ""
+            }) }}
+            </li>
+            <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                {{ card({
+                    "href": "/layouts/base/rightbar",
+                    "clickable": "true",
+                    "heading": "Rightbar",
+                    "headingLevel": "3",
+                    "headingClasses": "nhsuk-heading-s",
+                    "description": ""
+                }) }}
+            </li>
+        </ul>
+        </div>
+        <h2>Specific templates</h2>
+        <div class="nhsuk-grid-row">
         <ul class="nhsuk-card-group">
             <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
                 {{ card({

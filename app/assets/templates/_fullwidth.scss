@@ -1,0 +1,21 @@
+// FULLWIDTH 
+.page--fullwidth {
+  //background-color: palegoldenrod;
+  .page__header {
+    .hee-microhero {
+      margin-bottom: nhsuk-spacing(7);
+    }
+    h1, p, span {
+      max-width: 66.6667%;
+    }
+  }
+  .page__main {
+    padding-bottom: nhsuk-spacing(6);
+  }
+}
+
+.page--template-homepage {}
+.page--template-landinghub {}
+.page--template-404 {}
+.page--archive-az {}
+.page--archive-search {}

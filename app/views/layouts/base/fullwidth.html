@@ -1,0 +1,45 @@
+{% extends "template.html" %}
+
+{% block pageClass %}page--fullwidth{% endblock %}
+{% block pageTitle %}Fullwidth - Layouts - HEE Prototype{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+  breadcrumb({
+  items: [
+      {
+          href: "/",
+          text: "Home"
+      },
+      {
+          href: "/layouts",
+          text: "Layouts"
+      }
+  ],
+      href: "/layouts/base/fullwidth",
+      text: "Base - Fullwidth"
+  }) 
+}}
+{% endblock %}
+
+{% block pageHeader %}
+{{ microHero({
+  "imgURL": "/images/hee_cl_gloucester_04361.jpeg"
+}) }}
+<div class="nhsuk-width-container">
+    <h1>Base - Fullwidth</h1>
+    <p class="nhsuk-lede-text">Typically used for landing pages</p>
+</div>
+{% endblock %}
+
+{% block pageMain %}
+<div class="page__main">
+  <div class="nhsuk-width-container">
+    <div class="page__content">
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

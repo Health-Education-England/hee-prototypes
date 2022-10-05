@@ -1,0 +1,30 @@
+// MAIN+RIGHTBAR
+.page--rightbar {
+  padding-bottom: nhsuk-spacing(6);
+  .page__header {
+      padding-top: nhsuk-spacing(7);
+      h1, p, span {
+        max-width: 66.6667%;
+      }
+  }
+  .page__layout {
+      @include hee-flexgrid-row;
+      .page__rightbar {
+          @include hee-flexgrid-col(3.75,$col-offset:0.25);
+      }
+      .page__main {
+          @include hee-flexgrid-col(8);
+      }
+  }
+
+}
+
+.page--template-standard {}
+.page--template-minihub {}
+.page--template-sectionhome {}
+.page--single-post {}
+.page--single-post {}
+.page--single-post {}
+.page--single-post {}
+.page--single-post {}
+.page--template-legal {}

@@ -1,45 +1,28 @@
-// Basic structure
-.hee-page {}
-.hee-page__header {}
-.hee-page__main {}
-.hee-page__sidebar {}
-.hee-page__footer {}
+// TemplateAreas
+.page {}
+.page__breadcrumbs,
+.page__header,
+.page__main,
+.page__leftbar,
+.page__rightbar,
+.page__footer,
+.page__feature ,
+.page__nav {
+    //border: 1px solid #FFF;
+    //min-height: 20px;
+}
 
-// Content full
-.hee-page--home {}
-
-// Page (Standard, minihub)
-// Content is in line with the sidebar
-.hee-page--landing,
-.hee-page--listing,
-.hee-page--standard {
-
-    .hee-page__header,
-    .hee-page__main,
-    .hee-page__footer {
-        // Full width
-    }
-
-    .hee-page__heading {
-        padding-top: nhsuk-spacing(6);
-    }
-    .hee-page__main {
-        padding-bottom: nhsuk-spacing(6);
-    }
-    .hee-page__footer {
-        padding-bottom: nhsuk-spacing(6);
+.page__header {
+    h1 ~ span {
+        margin-top: - nhsuk-spacing(6);
+        margin-bottom: nhsuk-spacing(4);
     }
 }
 
-// Article (News, blog, etc)
-// Heading is in line with the sidebar
-/*.hee-page--article {
-    .hee-page__header {}
-    .hee-page__main {
-        padding-top: nhsuk-spacing(6);
-        padding-bottom: nhsuk-spacing(6);
-    }
-    .hee-page__footer {
-        padding-bottom: nhsuk-spacing(6);
-    }
-}*/
+.page__main {
+    padding-bottom: nhsuk-spacing(6);
+}
+
+@import '../templates/fullwidth';
+@import '../templates/leftbar';
+@import '../templates/rightbar';
