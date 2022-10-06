@@ -1,6 +1,6 @@
 {% extends "template.html" %}
 
-{% block pageClass %}page--fullwidth{% endblock %}
+{% block pageClass %}page--fullwidth has-microhero{% endblock %}
 {% block pageTitle %}Layouts - HEE Prototype{% endblock %}
 
 {% block pageBreadcrumbs %}
@@ -11,18 +11,18 @@
                 text: "Home"
             }
         ],
-        href: "/layouts",
-        text: "Layouts"
+        href: "/templates",
+        text: "Templates"
     }) }}
 {% endblock %}
 
 {% block pageHeader %}
     {{ microHero({
-        imgURL: 'https://via.placeholder.com/2000x260',
+        imgURL: '/images/young-child-using-tablet-device.jpg',
         imgAlt: 'An example bg image'
     }) }}
     <div class="nhsuk-width-container">
-        <h1>Layouts</h1>
+        <h1>Templates</h1>
         <p class="nhsuk-lede-text">All of the available HEE layouts</p>
     </div>
 {% endblock %}
@@ -35,7 +35,7 @@
             <ul class="nhsuk-card-group">
                 <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
                     {{ card({
-                        "href": "/layouts/base/fullwidth",
+                        "href": "/templates/base/fullwidth",
                         "clickable": "true",
                         "heading": "Fullwidth",
                         "headingLevel": "3",
@@ -45,7 +45,7 @@
                     </li>
                 <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
                 {{ card({
-                    "href": "/layouts/base/leftbar",
+                    "href": "/templates/base/leftbar",
                     "clickable": "true",
                     "heading": "Leftbar",
                     "headingLevel": "3",
@@ -55,7 +55,7 @@
                 </li>
                 <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
                     {{ card({
-                        "href": "/layouts/base/rightbar",
+                        "href": "/templates/base/rightbar",
                         "clickable": "true",
                         "heading": "Rightbar",
                         "headingLevel": "3",
