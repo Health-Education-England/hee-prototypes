@@ -56,7 +56,7 @@ function compileHEEStyles() {
 function compileHEEScripts() {
   return gulp.src(PATHS.heeJS)
     .pipe(webpack({
-      mode: 'development',
+      mode: 'production',
       devtool: 'inline-source-map',
       module: {
         rules: [
