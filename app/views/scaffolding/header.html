@@ -1,0 +1,40 @@
+{% extends "template-fullwidth.html" %}
+
+{% block pageClass %}page--fullwidth{% endblock %}
+{% block pageTitle %}Header - Scaffolding - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/",
+            text: "Home"
+        },
+        {
+            href: "/scaffolding",
+            text: "Scaffolding"
+        }
+    ],
+        href: "/scaffolding/header",
+        text: "Header"
+    }) 
+}}
+{% endblock %}
+
+{% block pageHeader %}
+    <div class="nhsuk-width-container">
+        <h1>Header</h1>
+        <p class="nhsuk-lede-text"></p>
+    </div>
+{% endblock %}
+
+{% block pageMain %}
+<div class="nhsuk-width-container">
+{{ highlight({
+  "html" : '
+'}) }}
+</div>
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

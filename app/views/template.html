@@ -4,13 +4,13 @@
 {# SCAFFOLDING #}
 
 {# Header #}
-{%- from 'nhsuk-hee/nhsuk-hee-cookies/macro.njk' import cookies %}
-{%- from 'nhsuk-hee/nhsuk-hee-header/macro.njk' import customHeader %}
+{%- from 'components/nhsuk-hee/nhsuk-hee-cookies/macro.njk' import cookies %}
+{%- from 'components/nhsuk-hee/nhsuk-hee-header/macro.njk' import customHeader %}
 {%- from 'skip-link/macro.njk' import skipLink %}
 
 {# Notifications #}
-{%- from 'hee/hee-globalalert/macro.njk' import globalAlert %}
-{%- from 'nhsuk-hee/nhsuk-hee-phasebanner/macro.njk' import phaseBanner %}
+{%- from 'components/hee/hee-globalalert/macro.njk' import globalAlert %}
+{%- from 'components/nhsuk-hee/nhsuk-hee-phasebanner/macro.njk' import phaseBanner %}
 
 {# Footer #}
 {%- from 'footer/macro.njk' import footer %}
@@ -20,31 +20,31 @@
 
 {# TEMPLATE COMPONENTS #}
 {%- from 'hero/macro.njk' import hero %}
-{%- from 'hee/hee-microhero/macro.njk' import microHero %}
-{%- from 'hee/hee-homesection/macro.njk' import homepageSection %}
-{%- from 'hee/hee-listing/macro.njk' import listing %}
-{%- from 'hee/hee-filter/macro.njk' import filter %}
+{%- from 'components/hee/hee-microhero/macro.njk' import microHero %}
+{%- from 'components/hee/hee-homesection/macro.njk' import homepageSection %}
+{%- from 'components/hee/hee-listing/macro.njk' import listing %}
+{%- from 'components/hee/hee-filter/macro.njk' import filter %}
 {%- from 'pagination/macro.njk' import pagination %}
 
 {# CONTENT (BLOCKS) COMPONENTS #}
 
 {# HEE Components #}
-{%- from 'hee/hee-anchorlinks/macro.njk' import anchorLinks %}
-{%- from 'hee/hee-detailscard/authorcard/macro.njk' import authorCard %}
-{%- from 'hee/hee-detailscard/personcard/macro.njk' import personCard %}
-{%- from 'hee/hee-detailscard/departmentcard/macro.njk' import departmentCard %}
-{%- from 'hee/hee-detailscard/contact.njk' import contact %}
-{%- from 'hee/hee-media/macro.njk' import media %}
-{%- from 'hee/hee-navmap/macro.njk' import navMap %}
-{%- from 'hee/hee-relatednav/macro.njk' import relatedNav %}
-{%- from 'hee/hee-resources/macro.njk' import resources %}
-{%- from 'hee/hee-sidebarimage/macro.njk' import imageCard %}
-{%- from 'hee/hee-sidebarlinks/macro.njk' import relatedLinksCard %}
-{%- from 'hee/hee-tabs/macro.njk' import tabs %}
-{%- from 'hee/hee-timeline/macro.njk' import timeline %}
+{%- from 'components/hee/hee-anchorlinks/macro.njk' import anchorLinks %}
+{%- from 'components/hee/hee-detailscard/authorcard/macro.njk' import authorCard %}
+{%- from 'components/hee/hee-detailscard/personcard/macro.njk' import personCard %}
+{%- from 'components/hee/hee-detailscard/departmentcard/macro.njk' import departmentCard %}
+{%- from 'components/hee/hee-detailscard/contact.njk' import contact %}
+{%- from 'components/hee/hee-media/macro.njk' import media %}
+{%- from 'components/hee/hee-navmap/macro.njk' import navMap %}
+{%- from 'components/hee/hee-relatednav/macro.njk' import relatedNav %}
+{%- from 'components/hee/hee-resources/macro.njk' import resources %}
+{%- from 'components/hee/hee-sidebarimage/macro.njk' import imageCard %}
+{%- from 'components/hee/hee-sidebarlinks/macro.njk' import relatedLinksCard %}
+{%- from 'components/hee/hee-tabs/macro.njk' import tabs %}
+{%- from 'components/hee/hee-timeline/macro.njk' import timeline %}
 
 {# NHSUK-HEE Components #}
-{%- from 'nhsuk-hee/nhsuk-hee-blocklinks/macro.njk' import blocklinks %}
+{%- from 'components/nhsuk-hee/nhsuk-hee-blocklinks/macro.njk' import blocklinks %}
 
 {# NHSUK Components #}
 {%- from 'button/macro.njk' import button %}
@@ -113,6 +113,7 @@
     {% endblock %}
 
     {% block header %}
+    <div class="site-header">
       {{ customHeader({
           showNav: true,
           showSearch: true,
@@ -157,17 +158,19 @@
                   label: "Right Blocks"
                 },
                 {
-                  url: "/components/feature",
-                  label: "Features"
+                  url: "/components/featureblocks",
+                  label: "Feature Blocks"
                 }
               ]
             }
           ]
         })
       }}
+    </div>
     {% endblock %}
 
     {% block headerEnd %}
+    <div class="site-notifications">
       {{ phaseBanner({
         tag: "Alpha",
         description: 'This is a new service – your <a class="nhsuk-link" href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.'
@@ -177,6 +180,7 @@
         heading: "Coronavirus (COVID-19)",
         HTML: "<p><a href='https://www.nhs.uk/conditions/coronavirus-covid-19/'>Get the latest advice about coronavirus</a></p>"
       }) }#}
+    </div>
     {% endblock %}
 
     <main class="page {% block pageClass %}{% endblock %}" id="maincontent" role="main">
@@ -206,6 +210,7 @@
 
     {% block footer %}
       {{ footer({
+        "classes" : 'site-footer',
         "list": "nhsuk-footer__list--three-columns",
         "links": [
           {

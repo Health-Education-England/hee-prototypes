@@ -48,7 +48,7 @@ app.locals.serviceName = config.serviceName
 var appViews = [
   path.join(__dirname, 'app/views/'),
   path.join(__dirname, 'app/views/lks/'),
-  path.join(__dirname, 'app/assets/components/'),
+  path.join(__dirname, 'app/assets/'),
   path.join(__dirname, 'node_modules/nhsuk-frontend/packages/components/'),
   path.join(__dirname, 'docs/views/')
 ]
