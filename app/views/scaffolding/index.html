@@ -1,0 +1,75 @@
+{% extends "template.html" %}
+
+{% block pageClass %}page--fullwidth page--template-landinghub{% endblock %}
+{% block pageTitle %}Scaffolding - Components - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/",
+            text: "Home"
+        },
+        {
+            href: "/components/",
+            text: "Components"
+        }
+    ],
+        href: "/scaffolding",
+        text: "Scaffolding"
+    }) 
+}}
+{% endblock %}
+
+{% block pageHeader %}
+    <div class="nhsuk-width-container">
+        <h1>Scaffolding</h1>
+        <p class="nhsuk-lede-text">The global header, notifications and footer areas</p>
+    </div>
+{% endblock %}
+
+{% block pageMain %}
+<div class="page__main">
+
+    <section class="nhsuk-width-container">
+        <div class="nhsuk-grid-row">
+            <ul class="nhsuk-card-group">
+                <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+                {{ card({
+                    "href": "/scaffolding/header",
+                    "clickable": "false",
+                    "heading": "Header",
+                    "headingLevel": "2",
+                    "headingClasses": "nhsuk-heading-m",
+                    "description": "Search, navigation, cookies and skiplink"
+                }) }}
+                </li>
+                <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+                {{ card({
+                    "href": "/scaffolding/footer",
+                    "clickable": "false",
+                    "heading": "Footer",
+                    "headingLevel": "2",
+                    "headingClasses": "nhsuk-heading-m",
+                    "description": "Global links"
+                }) }}
+                </li>
+                <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+                {{ card({
+                    "href": "/scaffolding/notifications",
+                    "clickable": "false",
+                    "heading": "Notifications",
+                    "headingLevel": "2",
+                    "headingClasses": "nhsuk-heading-m",
+                    "description": "Phasebanner and globalalerts"
+                }) }}
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+</div>
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

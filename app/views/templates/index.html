@@ -1,6 +1,6 @@
 {% extends "template.html" %}
 
-{% block pageClass %}page--fullwidth has-microhero{% endblock %}
+{% block pageClass %}page--fullwidth{% endblock %}
 {% block pageTitle %}Layouts - HEE Prototype{% endblock %}
 
 {% block pageBreadcrumbs %}
@@ -17,10 +17,10 @@
 {% endblock %}
 
 {% block pageHeader %}
-    {{ microHero({
+    {#{ microHero({
         imgURL: '/images/young-child-using-tablet-device.jpg',
         imgAlt: 'An example bg image'
-    }) }}
+    }) }#}
     <div class="nhsuk-width-container">
         <h1>Templates</h1>
         <p class="nhsuk-lede-text">All of the available HEE layouts</p>
@@ -30,7 +30,6 @@
 {% block pageMain %}
 <div class="page__main">
     <section class="nhsuk-width-container">
-        <h2>Base layouts</h2>
         <div class="nhsuk-grid-row">
             <ul class="nhsuk-card-group">
                 <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
@@ -40,7 +39,7 @@
                         "heading": "Fullwidth",
                         "headingLevel": "3",
                         "headingClasses": "nhsuk-heading-s",
-                        "description": ""
+                        "description": "Landing/ section pages"
                     }) }}
                     </li>
                 <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
@@ -50,7 +49,7 @@
                     "heading": "Leftbar",
                     "headingLevel": "3",
                     "headingClasses": "nhsuk-heading-s",
-                    "description": ""
+                    "description": "Listings"
                 }) }}
                 </li>
                 <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
@@ -60,26 +59,26 @@
                         "heading": "Rightbar",
                         "headingLevel": "3",
                         "headingClasses": "nhsuk-heading-s",
-                        "description": ""
+                        "description": "Content pages"
                     }) }}
                 </li>
             </ul>
         </div>
     </section>
     <section class="nhsuk-width-container" style="display:none;">
-        <h2>Specific templates</h2>
+        <h2>Fullwidth templates</h2>
         <div class="nhsuk-grid-row">
             <ul class="nhsuk-card-group">
                 <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
-                    {{ card({
-                        "href": "/",
-                        "clickable": "true",
-                        "heading": "Homepage",
-                        "headingLevel": "3",
-                        "headingClasses": "nhsuk-heading-s",
-                        "description": ""
-                    }) }}
-                    </li>
+                {{ card({
+                    "href": "/dfds",
+                    "clickable": "false",
+                    "heading": "Homepage",
+                    "headingLevel": "3",
+                    "headingClasses": "nhsuk-heading-s",
+                    "description": ""
+                }) }}
+                </li>
                 <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
                 {{ card({
                     "href": "/layouts/listing",
@@ -89,26 +88,6 @@
                     "headingClasses": "nhsuk-heading-s",
                     "description": ""
                 }) }}
-                </li>
-                <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
-                    {{ card({
-                        "href": "/layouts/minihub",
-                        "clickable": "true",
-                        "heading": "Minihub",
-                        "headingLevel": "3",
-                        "headingClasses": "nhsuk-heading-s",
-                        "description": ""
-                    }) }}
-                </li>
-                <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
-                    {{ card({
-                        "href": "/layouts/article",
-                        "clickable": "true",
-                        "heading": "Article",
-                        "headingLevel": "3",
-                        "headingClasses": "nhsuk-heading-s",
-                        "description": ""
-                    }) }}
                 </li>
             </ul>
         </div>

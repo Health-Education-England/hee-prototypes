@@ -133,16 +133,34 @@
               label: "Home"
             },
             {
+              url: "/scaffolding",
+              label: "Scaffolding"
+            },
+            {
               url: "/templates",
               label: "Templates"
             },
             {
-              url: "/components/furniture",
-              label: "Furniture"
-            },
-            {
-              url: "/components/content-blocks",
-              label: "Content blocks"
+              url: "/components",
+              label: "Components",
+              children: [
+                {
+                  url: "/components/furniture",
+                  label: "Furniture"
+                },
+                {
+                  url: "/components/contentblocks",
+                  label: "Content Blocks"
+                },
+                {
+                  url: "/components/rightblocks",
+                  label: "Right Blocks"
+                },
+                {
+                  url: "/components/feature",
+                  label: "Features"
+                }
+              ]
             }
           ]
         })

@@ -46,27 +46,33 @@
       <p class="nhsuk-lede-text">[ EXCERPT ]</p>
       [ PUBLISHED_BY | PUBLISHED_DATE ]
       [ TAXONOMIES ]
-      [ MINIHUB_NAV_LIST ]
+      [ IF MINIHUB ]
+        [ MINIHUB_NAV_LIST ]
+      [ ENDIF ]
     </div>
   </div>
   <div class="nhsuk-width-container">
     <div class="page__layout">
       <div class="page__main">
-        [ CONTENT_BLOCKS ]
+        <div class="page__content">
+          [ CONTENT_BLOCKS ]
+        </div>
         [ LAST_UPDATED | REVIEWED_NEXTLAST ]
       </div>
       <aside class="page__rightbar">
-        [ RIGHT_BLOCKS ]
+        [ RIGHTBAR_BLOCKS ]
       </aside>
     </div>
   </div>
   <div class="page__footer">
-    [ MINIHUB_NAV_PAGINATION ]
+    [ IF MINIHUB ]
+      [ MINIHUB_NAV_PAGINATION ]
+    [ ENDIF ]
     [ APPLIES_TO | VERSION_CONTROL ]
     [ ANCHORLINKS--FIXED | BACK_TO_TOP ]
   </div>
   <section class="page__feature">
-    [ RELATED_CONTENT ]
+    [ FEATURE_BLOCKS ]
   </section>
 </article>'
   }) 
