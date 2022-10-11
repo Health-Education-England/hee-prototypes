@@ -1,0 +1,98 @@
+{% extends "template.html" %}
+
+{% block pageClass %}page--fullwidth{% endblock %}
+{% block pageTitle %}Layouts - HEE Prototype{% endblock %}
+
+{% block pageBreadcrumbs %}
+    {{ breadcrumb({
+        items: [
+            {
+                href: "/",
+                text: "Home"
+            }
+        ],
+        href: "/templates",
+        text: "Templates"
+    }) }}
+{% endblock %}
+
+{% block pageHeader %}
+    {#{ microHero({
+        imgURL: '/images/young-child-using-tablet-device.jpg',
+        imgAlt: 'An example bg image'
+    }) }#}
+    <div class="nhsuk-width-container">
+        <h1>Templates</h1>
+        <p class="nhsuk-lede-text">All of the available HEE layouts</p>
+    </div>
+{% endblock %}
+
+{% block pageMain %}
+<div class="page__main">
+    <section class="nhsuk-width-container">
+        <div class="nhsuk-grid-row">
+            <ul class="nhsuk-card-group">
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                    {{ card({
+                        "href": "/templates/base/fullwidth",
+                        "clickable": "true",
+                        "heading": "Fullwidth",
+                        "headingLevel": "3",
+                        "headingClasses": "nhsuk-heading-s",
+                        "description": "Landing/ section pages"
+                    }) }}
+                    </li>
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                {{ card({
+                    "href": "/templates/base/leftbar",
+                    "clickable": "true",
+                    "heading": "Leftbar",
+                    "headingLevel": "3",
+                    "headingClasses": "nhsuk-heading-s",
+                    "description": "Listings"
+                }) }}
+                </li>
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                    {{ card({
+                        "href": "/templates/base/rightbar",
+                        "clickable": "true",
+                        "heading": "Rightbar",
+                        "headingLevel": "3",
+                        "headingClasses": "nhsuk-heading-s",
+                        "description": "Content pages"
+                    }) }}
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="nhsuk-width-container" style="display:none;">
+        <h2>Fullwidth templates</h2>
+        <div class="nhsuk-grid-row">
+            <ul class="nhsuk-card-group">
+                <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+                {{ card({
+                    "href": "/dfds",
+                    "clickable": "false",
+                    "heading": "Homepage",
+                    "headingLevel": "3",
+                    "headingClasses": "nhsuk-heading-s",
+                    "description": ""
+                }) }}
+                </li>
+                <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+                {{ card({
+                    "href": "/layouts/listing",
+                    "clickable": "true",
+                    "heading": "Listing",
+                    "headingLevel": "3",
+                    "headingClasses": "nhsuk-heading-s",
+                    "description": ""
+                }) }}
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}
