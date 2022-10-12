@@ -13,7 +13,7 @@
 {%- from 'components/nhsuk-hee/nhsuk-hee-phasebanner/macro.njk' import phaseBanner %}
 
 {# Footer #}
-{%- from 'footer/macro.njk' import footer %}
+{%- from 'scaffolding/footer/macro.njk' import siteFooter %}
 
 {# Main #}
 {%- from 'breadcrumb/macro.njk' import breadcrumb %}
@@ -209,7 +209,7 @@
     </main>
 
     {% block footer %}
-      {{ footer({
+      {{ siteFooter({
         "classes" : 'site-footer',
         "list": "nhsuk-footer__list--three-columns",
         "links": [
@@ -218,11 +218,11 @@
             "label": "Blog"
           },
           {
-            "URL": "/content",
+            "URL": "/about",
             "label": "About us"
           },
           {
-            "URL": "/content",
+            "URL": "/contact",
             "label": "Contact us"
           }
         ]
