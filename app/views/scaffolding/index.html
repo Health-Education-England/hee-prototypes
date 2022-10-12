@@ -27,14 +27,13 @@
 
 {% block pageMain %}
 <div class="page__main">
-
     <section class="nhsuk-width-container">
         <div class="nhsuk-grid-row">
             <ul class="nhsuk-card-group">
                 <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
                 {{ card({
-                    "href": "/scaffolding/header",
-                    "clickable": "false",
+                    "href": "/scaffolding/site-header",
+                    "clickable": "true",
                     "heading": "Header",
                     "headingLevel": "2",
                     "headingClasses": "nhsuk-heading-m",
@@ -43,8 +42,8 @@
                 </li>
                 <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
                 {{ card({
-                    "href": "/scaffolding/footer",
-                    "clickable": "false",
+                    "href": "/scaffolding/site-footer",
+                    "clickable": "true",
                     "heading": "Footer",
                     "headingLevel": "2",
                     "headingClasses": "nhsuk-heading-m",
@@ -53,8 +52,8 @@
                 </li>
                 <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
                 {{ card({
-                    "href": "/scaffolding/notifications",
-                    "clickable": "false",
+                    "href": "/scaffolding/site-notifications",
+                    "clickable": "true",
                     "heading": "Notifications",
                     "headingLevel": "2",
                     "headingClasses": "nhsuk-heading-m",
@@ -64,7 +63,6 @@
             </ul>
         </div>
     </section>
-    
 </div>
 {% endblock %}
 
