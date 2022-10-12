@@ -1,5 +1,5 @@
 // NHSUK-HEE Components
-import Cookies from '../components/nhsuk-hee/nhsuk-hee-cookies/cookies';
+import Cookies from '../scaffolding/cookies/cookies';
 import SubMenu from '../components/nhsuk-hee/nhsuk-hee-header/submenu';
 
 // HEE Components
