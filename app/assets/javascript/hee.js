@@ -1,6 +1,6 @@
 // NHSUK-HEE Components
 import Cookies from '../components/nhsuk-hee/nhsuk-hee-cookies/cookies';
-import SubNav from '../components/scaffolding/header/navigation/subnav';
+import SubNav from '../scaffolding/header/navigation/subnav';
 
 // HEE Components
 import AnchorLinks from '../components/hee/hee-anchorlinks/anchorlinks';
