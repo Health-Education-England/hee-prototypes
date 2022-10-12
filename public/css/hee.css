@@ -29,6 +29,135 @@
   .o-flex\@large-desktop {
     display: flex; } }
 
+.prototype .page__breadcrumbs, .prototype
+.page__header, .prototype
+.page__main, .prototype
+.page__leftbar, .prototype
+.page__rightbar, .prototype
+.page__footer, .prototype
+.page__feature, .prototype
+.page__nav {
+  border: 2px dashed #CCC;
+  min-height: 20px; }
+
+.page.has-microhero .page__header {
+  padding-top: 0; }
+  .page.has-microhero .page__header .hee-microhero {
+    margin-bottom: 48px; }
+
+.page__header h1 ~ span {
+  margin-top: -40px;
+  margin-bottom: 24px; }
+
+.page__main {
+  padding-bottom: 40px; }
+
+.page--fullwidth .page__header {
+  padding-top: 48px; }
+  .page--fullwidth .page__header h1, .page--fullwidth .page__header p, .page--fullwidth .page__header span {
+    max-width: 66.6667%; }
+
+.page--fullwidth .page__main {
+  padding-bottom: 40px; }
+
+@media (max-width: 48.0525em) {
+  .page--fullwidth .page__header h1, .page--fullwidth .page__header p, .page--fullwidth .page__header span {
+    max-width: 100%; } }
+
+.page--leftbar .page__header {
+  padding-top: 48px; }
+  .page--leftbar .page__header h1, .page--leftbar .page__header p, .page--leftbar .page__header span {
+    max-width: 66.6667%; }
+
+.page--leftbar .page__layout {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap; }
+  @media screen\0 {
+    .page--leftbar .page__layout:after {
+      content: "";
+      display: table;
+      clear: both; } }
+  .page--leftbar .page__layout .page__leftbar {
+    box-sizing: border-box;
+    width: 31.25%;
+    flex: 0 0 31.25%; }
+    @media screen\0 {
+      .page--leftbar .page__layout .page__leftbar {
+        float: left;
+        flex: none; } }
+  .page--leftbar .page__layout .page__main {
+    box-sizing: border-box;
+    width: 66.66667%;
+    flex: 0 0 66.66667%;
+    margin-left: 2.08333%; }
+    @media screen\0 {
+      .page--leftbar .page__layout .page__main {
+        float: left;
+        flex: none; } }
+
+@media (max-width: 48.0525em) {
+  .page--leftbar .page__header h1, .page--leftbar .page__header p, .page--leftbar .page__header span {
+    max-width: 100%; }
+  .page--leftbar .page__layout .page__leftbar,
+  .page--leftbar .page__layout .page__main {
+    box-sizing: border-box;
+    width: 100%;
+    flex: 0 0 100%;
+    margin-left: 0%; } }
+  @media screen\0  and (max-width: 48.0525em) {
+    .page--leftbar .page__layout .page__leftbar,
+    .page--leftbar .page__layout .page__main {
+      float: left;
+      flex: none; } }
+
+.page--rightbar {
+  padding-bottom: 40px; }
+  .page--rightbar .page__header {
+    padding-top: 48px; }
+    .page--rightbar .page__header h1, .page--rightbar .page__header p, .page--rightbar .page__header span {
+      max-width: 66.6667%; }
+  .page--rightbar .page__layout {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap; }
+    @media screen\0 {
+      .page--rightbar .page__layout:after {
+        content: "";
+        display: table;
+        clear: both; } }
+    .page--rightbar .page__layout .page__rightbar {
+      box-sizing: border-box;
+      width: 31.25%;
+      flex: 0 0 31.25%;
+      margin-left: 2.08333%; }
+      @media screen\0 {
+        .page--rightbar .page__layout .page__rightbar {
+          float: left;
+          flex: none; } }
+    .page--rightbar .page__layout .page__main {
+      box-sizing: border-box;
+      width: 66.66667%;
+      flex: 0 0 66.66667%; }
+      @media screen\0 {
+        .page--rightbar .page__layout .page__main {
+          float: left;
+          flex: none; } }
+  @media (max-width: 48.0525em) {
+    .page--rightbar .page__header h1, .page--rightbar .page__header p, .page--rightbar .page__header span {
+      max-width: 100%; }
+    .page--rightbar .page__layout .page__rightbar,
+    .page--rightbar .page__layout .page__main {
+      box-sizing: border-box;
+      width: 100%;
+      flex: 0 0 100%;
+      margin-left: 0%; } }
+  @media screen\0  and (max-width: 48.0525em) {
+    .page--rightbar .page__layout .page__rightbar,
+    .page--rightbar .page__layout .page__main {
+      float: left;
+      flex: none; } }
+
 /* NHSUK-HEE-Blocklinks */
 .nhsuk-hee-blocklinks {
   padding-top: 24px;

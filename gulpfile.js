@@ -27,10 +27,12 @@ const PATHS = {
   heeCSS: './app/assets/styles/hee.scss',
   heeJS: './app/assets/javascript/hee.js',
   vendorCSS: [
+    './app/assets/styles/highlight.css',
     'node_modules/nhsuk-frontend/dist/nhsuk-4.1.0.min.css'
   ],
   vendorJS: [
     './app/assets/javascript/jquery-3.3.1.min.js',
+    './app/assets/javascript/highlight.min.js',
     'node_modules/nhsuk-frontend/dist/nhsuk.min.js'
   ],
   public: 'public',
@@ -56,7 +58,7 @@ function compileHEEStyles() {
 function compileHEEScripts() {
   return gulp.src(PATHS.heeJS)
     .pipe(webpack({
-      mode: 'development',
+      mode: 'production',
       devtool: 'inline-source-map',
       module: {
         rules: [

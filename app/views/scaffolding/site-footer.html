@@ -1,0 +1,51 @@
+{% extends "template.html" %}
+
+{% block pageClass %}page--fullwidth{% endblock %}
+{% block pageTitle %}Header - Scaffolding - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/",
+            text: "Home"
+        },
+        {
+            href: "/scaffolding",
+            text: "Scaffolding"
+        }
+    ],
+        href: "/scaffolding/footer",
+        text: "Footer"
+    }) 
+}}
+{% endblock %}
+
+{% block pageHeader %}
+    <div class="nhsuk-width-container">
+        <h1>Footer</h1>
+        <p class="nhsuk-lede-text"></p>
+    </div>
+{% endblock %}
+
+{% block pageMain %}
+<div class="nhsuk-width-container">
+{{ highlight({
+  "html" : '<footer class="nhsuk-footer site-footer" id="nhsuk-footer" role="contentinfo">
+  <div class="nhsuk-width-container">
+    <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+    <ul class="nhsuk-footer__list nhsuk-footer__list--three-columns">
+      <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/blog">Blog</a></li>
+      <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/about">About us</a></li>
+      <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/contact">Contact us</a></li>
+    </ul>
+    <p class="nhsuk-footer__copyright">© Crown copyright</p>
+  </div>
+</footer>
+'
+}) }}
+</div>
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

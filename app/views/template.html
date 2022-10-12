@@ -1,47 +1,51 @@
+{# UTILS #}
+{%- from 'utils/highlight.njk' import highlight %}
+
 {# SCAFFOLDING #}
 
 {# Header #}
 {%- from 'scaffolding/header/macro.njk' import customHeader %}
 {%- from 'nhsuk-hee/nhsuk-hee-cookies/macro.njk' import cookies %}
+
 {%- from 'skip-link/macro.njk' import skipLink %}
 
 {# Notifications #}
-{%- from 'hee/hee-globalalert/macro.njk' import globalAlert %}
-{%- from 'nhsuk-hee/nhsuk-hee-phasebanner/macro.njk' import phaseBanner %}
+{%- from 'components/hee/hee-globalalert/macro.njk' import globalAlert %}
+{%- from 'components/nhsuk-hee/nhsuk-hee-phasebanner/macro.njk' import phaseBanner %}
 
 {# Footer #}
-{%- from 'footer/macro.njk' import footer %}
+{%- from 'scaffolding/footer/macro.njk' import siteFooter %}
 
 {# Main #}
 {%- from 'breadcrumb/macro.njk' import breadcrumb %}
 
 {# TEMPLATE COMPONENTS #}
 {%- from 'hero/macro.njk' import hero %}
-{%- from 'hee/hee-microhero/macro.njk' import microHero %}
-{%- from 'hee/hee-homesection/macro.njk' import homepageSection %}
-{%- from 'hee/hee-listing/macro.njk' import listing %}
-{%- from 'hee/hee-filter/macro.njk' import filter %}
+{%- from 'components/hee/hee-microhero/macro.njk' import microHero %}
+{%- from 'components/hee/hee-homesection/macro.njk' import homepageSection %}
+{%- from 'components/hee/hee-listing/macro.njk' import listing %}
+{%- from 'components/hee/hee-filter/macro.njk' import filter %}
 {%- from 'pagination/macro.njk' import pagination %}
 
 {# CONTENT (BLOCKS) COMPONENTS #}
 
 {# HEE Components #}
-{%- from 'hee/hee-anchorlinks/macro.njk' import anchorLinks %}
-{%- from 'hee/hee-detailscard/authorcard/macro.njk' import authorCard %}
-{%- from 'hee/hee-detailscard/personcard/macro.njk' import personCard %}
-{%- from 'hee/hee-detailscard/departmentcard/macro.njk' import departmentCard %}
-{%- from 'hee/hee-detailscard/contact.njk' import contact %}
-{%- from 'hee/hee-media/macro.njk' import media %}
-{%- from 'hee/hee-navmap/macro.njk' import navMap %}
-{%- from 'hee/hee-relatednav/macro.njk' import relatedNav %}
-{%- from 'hee/hee-resources/macro.njk' import resources %}
-{%- from 'hee/hee-sidebarimage/macro.njk' import imageCard %}
-{%- from 'hee/hee-sidebarlinks/macro.njk' import relatedLinksCard %}
-{%- from 'hee/hee-tabs/macro.njk' import tabs %}
-{%- from 'hee/hee-timeline/macro.njk' import timeline %}
+{%- from 'components/hee/hee-anchorlinks/macro.njk' import anchorLinks %}
+{%- from 'components/hee/hee-detailscard/authorcard/macro.njk' import authorCard %}
+{%- from 'components/hee/hee-detailscard/personcard/macro.njk' import personCard %}
+{%- from 'components/hee/hee-detailscard/departmentcard/macro.njk' import departmentCard %}
+{%- from 'components/hee/hee-detailscard/contact.njk' import contact %}
+{%- from 'components/hee/hee-media/macro.njk' import media %}
+{%- from 'components/hee/hee-navmap/macro.njk' import navMap %}
+{%- from 'components/hee/hee-relatednav/macro.njk' import relatedNav %}
+{%- from 'components/hee/hee-resources/macro.njk' import resources %}
+{%- from 'components/hee/hee-sidebarimage/macro.njk' import imageCard %}
+{%- from 'components/hee/hee-sidebarlinks/macro.njk' import relatedLinksCard %}
+{%- from 'components/hee/hee-tabs/macro.njk' import tabs %}
+{%- from 'components/hee/hee-timeline/macro.njk' import timeline %}
 
 {# NHSUK-HEE Components #}
-{%- from 'nhsuk-hee/nhsuk-hee-blocklinks/macro.njk' import blocklinks %}
+{%- from 'components/nhsuk-hee/nhsuk-hee-blocklinks/macro.njk' import blocklinks %}
 
 {# NHSUK Components #}
 {%- from 'button/macro.njk' import button %}
@@ -73,6 +77,7 @@
 
     {% block headCSS %}
       <link href="/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
+      <link href="/css/highlight.css" rel="stylesheet" />
       <link href="/css/hee.css" rel="stylesheet" />
     {% endblock %}
 
@@ -109,6 +114,7 @@
     {% endblock %}
 
     {% block header %}
+    <div class="site-header">
         {{ customHeader({
           "showNav": "true",
           "showSearch": "true",
@@ -142,82 +148,83 @@
           ],
           "primaryLinks": [
             {
-              "url": "/components",
-              "label": "Components",
-              children: [
-                {
-                    url: "/components/hee",
-                    label: "HEE"
-                },
-                {
-                    url: "/components/nhsuk-hee",
-                    label: "NHSUK-HEE"
-                },
-                {
-                    url: "/components/nhsuk",
-                    label: "NHSUK"
-                }
-              ]
+              url: "/scaffolding",
+              label: "Scaffolding"
             },
             {
-              'url' : '/layouts',
-              'label' : 'Layouts',
-              children: [
-                {
-                    url: "/layouts/full",
-                    label: "Full width"
-                },
-                {
-                    url: "/layouts/left-sidebar",
-                    label: "Left sidebar"
-                },
-                {
-                    url: "/layouts/right-sidebar",
-                    label: "Right sidebar"
-                }
-              ]
+              url: "/templates",
+              label: "Templates"
             },
             {
-              'url'  : '/examples',
-              'label' : 'Examples'
+              url: "/components",
+              label: "Components",
+              children: [
+                {
+                  url: "/components/furniture",
+                  label: "Furniture"
+                },
+                {
+                  url: "/components/contentblocks",
+                  label: "Content Blocks"
+                },
+                {
+                  url: "/components/rightblocks",
+                  label: "Right Blocks"
+                },
+                {
+                  url: "/components/featureblocks",
+                  label: "Feature Blocks"
+                }
+              ]
             }
           ]
         })
       }}
+    </div>
     {% endblock %}
 
     {% block headerEnd %}
+    <div class="site-notifications">
       {{ phaseBanner({
         tag: "Alpha",
         description: 'This is a new service – your <a class="nhsuk-link" href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.'
       }) }}
-      {{ globalAlert({
+      {#{ globalAlert({
         customClass: '',
         heading: "Coronavirus (COVID-19)",
         HTML: "<p><a href='https://www.nhs.uk/conditions/coronavirus-covid-19/'>Get the latest advice about coronavirus</a></p>"
-      }) }}
+      }) }#}
+    </div>
     {% endblock %}
 
-    <div class="hee-page {% block pageClass %}{% endblock %}" id="maincontent" role="main">
-      <div class="hee-page__header">
+    <main class="page {% block pageClass %}{% endblock %}" id="maincontent" role="main">
+      <div class="page__breadcrumbs">
+        {% block pageBreadcrumbs %}
+          {# Breadcrumbs... #}
+        {% endblock %}
+      </div>
+      <div class="page__header">
         {% block pageHeader %}
-          {# Breadcrumbs... Hero... Microhero... Title #}
+          {# Hero... Microhero... Title #}
         {% endblock %}
       </div>
-      <div class="hee-page__main">
-        {% block pageMain %}
-          {# Content... #}
-        {% endblock %}
-      </div>
-      <div class="hee-page__footer">
+      {% block pageMain %}
+        {# Template... #}
+      {% endblock %}
+      <div class="page__footer">
         {% block pageFooter %}
           {# Last updated... Tags... Page created... #}
         {% endblock %}
       </div>
-    </div>
+      <section class="page__feature">
+        {% block pageFeature %}
+        {% endblock %}
+      </section>
+    </main>
 
     {% block footer %}
-      {{ footer({
+      {{ siteFooter({
+        "classes" : '',
         "list": "nhsuk-footer__list--three-columns",
         "links": [
           {
@@ -225,11 +232,11 @@
             "label": "Blog"
           },
           {
-            "URL": "/content",
+            "URL": "/about",
             "label": "About us"
           },
           {
-            "URL": "/content",
+            "URL": "/contact",
             "label": "Contact us"
           }
         ]
@@ -239,10 +246,13 @@
     {% block scripts %}
       <script src="/js/jquery-3.3.1.min.js"></script>
       <script src="/js/nhsuk.min.js"></script>
+      <script src="/js/highlight.min.js"></script>
       <script src="/js/hee.js"></script>
     {% endblock %}
     {% block bodyEnd %}
-      {% block pageScripts %}{% endblock %}
+      {% block pageScripts %}
+        <script>hljs.highlightAll();</script>
+      {% endblock %}
     {% endblock %}
   </body>
 </html>

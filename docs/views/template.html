@@ -46,22 +46,6 @@
 {%- from 'promo-banner/macro.njk' import promoBanner %}
 {%- from 'timeline/macro.njk' import timeline %}
 
-{# HEE Components #}
-{%- from 'hee/hee-anchorlinks/macro.njk' import anchorlinks %}
-{%- from 'hee/hee-blocklinks/macro.njk' import blocklinks %}
-{%- from 'hee/hee-listing/macro.njk' import listing %}
-{%- from 'hee/hee-micro-hero/macro.njk' import microHero %}
-{%- from 'hee/hee-tabs/macro.njk' import tabs %}
-
-{# NHSUK-HEE Components #}
-{%- from 'nhsuk-hee/nhsuk-hee-header/macro.njk' import customHeader %}
-{%- from 'nhsuk-hee/nhsuk-hee-global-alert/macro.njk' import emergencyAlert %}
-{%- from 'nhsuk-hee/nhsuk-hee-cookies/macro.njk' import cookies %}
-
-{# NHSUK Components #}
-{%- from 'breadcrumb/macro.njk' import breadcrumb %}
-{%- from 'hero/macro.njk' import hero %}
-
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="ie8" lang="en"><![endif]--><!--[if IE 9]><html class="ie9" lang="en"><![endif]--><!--[if gt IE 9]><!--><html lang="en" style="{{ html_style }}"><!--<![endif]-->
   <head>
@@ -99,36 +83,5 @@
   </head>
 
   <body class="{{ bodyClasses }}">
-
-    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
-    {% block bodyStart %}{% endblock %}
-
-      {% block skipLink %}
-        {{ skipLink({
-          href: '#maincontent',
-          text: 'Skip to main content'
-        }) }}
-      {% endblock %}
-
-      {% block header %}
-        {{ header({}) }}
-      {% endblock %}
-
-      {% block beforeContent %}{% endblock %}
-
-      {% block main %}
-        <div class="nhsuk-width-container {{ containerClasses }}">
-          <main class="nhsuk-main-wrapper {{ mainClasses }}" id="maincontent" role="main">
-            {% block content %}{% endblock %}
-          </main>
-        </div>
-      {% endblock %}
-
-      {% block footer %}
-        {{ footer() }}
-      {% endblock %}
-
-    {% block bodyEnd %}{% endblock %}
-
   </body>
 </html>

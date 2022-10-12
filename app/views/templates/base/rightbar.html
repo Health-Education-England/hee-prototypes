@@ -1,0 +1,99 @@
+{% extends "template-fullwidth.html" %}
+
+{% block pageClass %}page--fullwidth{% endblock %}
+{% block pageTitle %}Rightbar - Layouts - HEE Prototype{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+  breadcrumb({
+  items: [
+      {
+        href: "/",
+        text: "Home"
+      },
+      {
+        href: "/templates",
+        text: "Templates"
+      }
+  ],
+      href: "/templates/base/rightbar",
+      text: "Base - Rightbar"
+  }) 
+}}
+{% endblock %}
+
+{% block pageHeader %}
+  <div class="nhsuk-width-container">
+    <h1>Rightbar</h1>
+    <span class="nhsuk-caption-xl">Base templates</span>
+    <p class="nhsuk-lede-text">A layout with a left content area and right sidebar. Typically used for listing pages.</p>
+  </div>
+{% endblock %}
+
+{% block pageMain %}
+<div class="page__main">
+  <div class="nhsuk-width-container">
+    <div class="page__content">
+
+{{ highlight({
+  "html" : '<article class="page page--rightbar" id="maincontent" role="main">
+  <div class="page__breadcrumbs">[ BREADCRUMBS ]</div>
+  <div class="page__header">
+    <div class="nhsuk-width-container">
+      [ GO_BACK ]
+      <h1>[ TITLE ]</h1>
+      <span class="nhsuk-caption-xl">[ CAPTION/ SUBTITLE ]</span>
+      <p class="nhsuk-lede-text">[ EXCERPT ]</p>
+      [ PUBLISHED_BY | PUBLISHED_DATE ]
+      [ TAXONOMIES ]
+      [ IF MINIHUB ]
+        [ MINIHUB_NAV_LIST ]
+      [ ENDIF ]
+    </div>
+  </div>
+  <div class="nhsuk-width-container">
+    <div class="page__layout">
+      <div class="page__main">
+        <div class="page__content">
+          [ CONTENT_BLOCKS ]
+        </div>
+        [ LAST_UPDATED | REVIEWED_NEXTLAST ]
+      </div>
+      <aside class="page__rightbar">
+        [ RIGHTBAR_BLOCKS ]
+      </aside>
+    </div>
+  </div>
+  <div class="page__footer">
+    [ IF MINIHUB ]
+      [ MINIHUB_NAV_PAGINATION ]
+    [ ENDIF ]
+    [ APPLIES_TO | VERSION_CONTROL ]
+    [ ANCHORLINKS--FIXED | BACK_TO_TOP ]
+  </div>
+  <section class="page__feature">
+    [ FEATURE_BLOCKS ]
+  </section>
+</article>'
+  }) 
+}}
+
+      <h2>Example usage:</h2>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+        <li>SectionHome</li>
+        <li>StandardContent</li>
+        <li>MiniHub</li>
+        <li>NewsSingle</li>
+        <li>BlogSingle</li>
+        <li>CasestudiesSingle</li>
+        <li>PublicationSingle</li>
+        <li>EventSingle</li>
+        <li>Legal</li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}
