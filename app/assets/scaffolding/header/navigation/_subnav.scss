@@ -3,67 +3,39 @@
 .nhsuk-subnav {
 
     .nhsuk-header__navigation-link {
-      padding-right: 28px;
 
       .nhsuk-icon {
-        display: block;
-        top: calc(50% - 11px);
-        transform: rotate(90deg) translateX(0);
-        fill: #FFF;
-        width: 22px!important;
-        height: 22px!important;
+
       }
 
       &:focus {
-        text-decoration: none;
+
       }
 
       &:focus {
         .nhsuk-icon {
-          fill: $nhsuk-focus-text-color;
+
         }
       }
     }
 
-    .nhsuk-subnav__list { 
-      display: none;
-      position: absolute;
-      right: 0;
-      z-index: 9999;
-      min-width: 16rem;
-      padding: 0;
-      border: 1px solid $color_nhsuk-grey-4;
-      border-bottom-width: nhsuk-spacing(1);
-      background: $color_nhsuk-white;
-      list-style: none;
-      text-align: left;
+    .nhsuk-subnav__list {
 
       &-item {
-        margin-bottom: 0;
-        border-top: 1px solid #f0f4f5;
+
       }
 
       &-link {
-        display: block;
-        width: 100%;
-        padding: 12px 16px;
-        text-decoration: none;
-        font-size: 1rem;
-        line-height: 1.5;
-        font-weight: 400;
-        border-bottom: 4px solid transparent;
-        border-top: 4px solid transparent;
-        color: #005eb8;
+
       }
 
     }
 
     .nhsuk-nav__link {
-      padding: nhsuk-spacing(2) nhsuk-spacing(3);
     }
 
     .nhsuk-header__back-text {
-      display: none;
+
     }
 
     // &:hover,
@@ -78,55 +50,148 @@
       }
 
       .nhsuk-subnav__list {
-        display: block; 
       }
 
     }
 
 }
 
-@include mq($until: desktop) {
+.nhsuk-subnav {
 
-  .nhsuk-subnav {
+  .nhsuk-header__navigation-link {
+    position: relative;
 
-    .nhsuk-header__navigation-link { 
-      position: relative;
-      .nhsuk-icon {
-        fill: #005eb8!important;
-        right: 16px;
-        transform: rotate(0deg);
+    @include mq($from: large-desktop) {
+      padding-right: 28px;
+
+      &:focus {
+        text-decoration: none;
+      }
+
+      &:focus {
+        .nhsuk-icon {
+          fill: $nhsuk-focus-text-color;
+        }
       }
     }
 
+    .nhsuk-icon {
+      fill: $color_nhsuk-blue;
+      height: 22px;
+      right: 16px;
+      transform: rotate(0) translateX(50%);
+      width: 22px;
 
-    &.is-active {
-
-      .nhsuk-header__navigation-link {
-
-        .nhsuk-icon {
-          transform: rotate(90deg);
-          fill: #005eb8!important;
-        }
-
-      }
-
-      .nhsuk-subnav__list {
-        width: 100%;
-        left: 0;
+      @include mq($from: large-desktop) {
         display: block;
-        position: inherit;
-        margin-bottom: 0;
-        border: 0;
-        border-bottom: 1px solid #CCC;
-
-        .nhsuk-subnav__list-link {
-          font-size: .875rem;
-          line-height: 1.71429;
-          padding-left: 28px;
-        }
+        fill: $color_nhsuk-white;
+        right: 0;
+        transform: rotate(90deg);
       }
-
     }
   }
 
+  .nhsuk-subnav__list {
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+    z-index: 1;
+
+    @include mq($from: large-desktop) {
+      border: 1px solid $color_nhsuk-grey-4;
+      border-bottom-width: nhsuk-spacing(1);
+      background: $color_nhsuk-white;
+      display: none;
+      list-style: none;
+      min-width: 16rem;
+      padding: 0;
+      position: absolute;
+      right: 0;
+      text-align: left;
+      z-index: 9999;
+    }
+
+    .nhsuk-subnav__list-item {
+      margin-bottom: 0;
+      border-top: 1px solid $color_nhsuk-grey-5;
+    }
+
+    .nhsuk-subnav__list-link {
+      border-bottom: 4px solid transparent;
+      border-top: 4px solid transparent;
+      color: $nhsuk-link-color;
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      padding: 12px 16px;
+      text-decoration: none;
+      width: 100%;
+
+      &:visited {
+        color: $nhsuk-link-color;
+        text-decoration: none;
+      }
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+      &:focus {
+        color: $nhsuk-focus-text-color
+      }
+      &.no-link {
+        color: $nhsuk-text-color;
+        text-decoration: none;
+        cursor: default;
+      }
+
+      @include mq($from: large-desktop) {
+        display: block;
+      }
+    }
+  }
+
+  .nhsuk-nav__link {
+    @include mq($from: large-desktop) {
+      padding: nhsuk-spacing(2) nhsuk-spacing(3);
+    }
+  }
+
+  .nhsuk-header__back-text {
+    @include mq($from: large-desktop) {
+      display: none;
+    }
+  }
+
+  &.is-active {
+    .nhsuk-header__navigation-link {
+      .nhsuk-icon {
+        transform: rotate(90deg);
+      }
+    }
+
+    .nhsuk-subnav__list {
+      border: 0;
+      display: block;
+      left: 0;
+      margin-bottom: 0;
+      position: inherit;
+      width: 100%;
+
+      @include mq($from: large-desktop) {
+        display: block;
+        left: inherit;
+        position: absolute;
+      }
+
+      .nhsuk-subnav__list-link {
+        @include mq($from: large-desktop) {
+          font-size: 1rem;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
 }
