@@ -1,24 +1,31 @@
 /* NHSUK-Header__multilogo */
 
 .nhsuk-header__multilogo {
-  .nhsuk-header__logo {
-    display: inline-block;
-    margin-right: 16px;
-    vertical-align: top;
-  }
-}
+  display: flex;
+  flex-direction: column;
 
-@include mq($until: desktop) {
-  .nhsuk-header__multilogo {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    .nhsuk-header__logo-home {
-      margin-bottom: 0!important;
-      order: 10;
+  @include mq($from: desktop) {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .nhsuk-header__logo-home {
+    order: 10;
+
+    @include mq($from: desktop) {
+      margin-bottom: 0;
+      order: 0;
     }
-    .nhsuk-header__logo {
-      margin-bottom: 16px;
+  }
+
+  .nhsuk-header__logo {
+    margin-bottom: 16px;
+
+    @include mq($from: desktop) {
+      display: inline-block;
+      margin-bottom: 0;
+      margin-right: 16px;
+      vertical-align: top;
     }
   }
 }
