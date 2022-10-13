@@ -1,10 +1,21 @@
 /* NHSUK-Header__menu */
 
 .nhsuk-header__menu {
+  display: inline-block;
   float: none;
   position: absolute;
-  top: 0;
-  left: 0;
+  right: 46px;
+
+  @include mq($from: tablet) {
+    left: -68px;
+    right: 0;
+  }
+
+  @include mq($from: large-desktop) {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
 
   .nhsuk-header__menu-toggle {

@@ -1,33 +1,32 @@
-
 /* NHSUK-Header__container */
 
-@include mq($until: desktop) {
-  .nhsuk-header__container {
-    padding-left: 0;
-    padding-right: 0;
-  }
+.nhsuk-header__container {
+/*  display: flex;
+  flex-direction: row;
+  justify-content: space-between;*/
+  padding: 20px 0;
 }
 
 /* NHSUK-Header__content */
 
 .nhsuk-header__content {
-  width: 100%;
-  min-height: 40px;
-  float: none;
-  margin: 0;
-  text-align: right;
+  float:right;
+  margin: -48px 0 0 0;
+
+  @include mq($from: desktop) {
+    margin: 0;
+  }
 
   &.js-show {
     border-bottom: 0;
+    width: 100%;
+
+    @include mq($from: desktop) {
+      width: auto;
+    }
   }
   &.no-search {
     min-height: auto;
-  }
-}
-
-@include mq($until: large-desktop) {
-  .nhsuk-header__content {
-    margin-top: 16px;
   }
 }
 
