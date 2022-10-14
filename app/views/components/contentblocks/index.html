@@ -1,6 +1,5 @@
-{% extends "template.html" %}
+{% extends "components/contentblocks/template.html" %}
 
-{% block pageClass %}page--fullwidth page--template-landinghub{% endblock %}
 {% block pageTitle %}Content Blocks - Components - NWP Prototype Kit{% endblock %}
 
 {% block pageBreadcrumbs %}
@@ -23,33 +22,12 @@
 {% endblock %}
 
 {% block pageHeader %}
-    <div class="nhsuk-width-container">
-        <h1>Content Blocks</h1>
-        <p class="nhsuk-lede-text"></p>
-    </div>
+    <h1>Content Blocks</h1>
+    <p class="nhsuk-lede-text"></p>
 {% endblock %}
 
-{% block pageMain %}
-<div class="page__main">
+{% block pageContent %}
 
-    <section class="nhsuk-width-container">
-        <div class="nhsuk-grid-row">
-            <ul class="nhsuk-card-group">
-                <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-                {{ card({
-                    "href": "/components/contentblocks/",
-                    "clickable": "false",
-                    "heading": "",
-                    "headingLevel": "2",
-                    "headingClasses": "nhsuk-heading-m",
-                    "description": ""
-                }) }}
-                </li>
-            </ul>
-        </div>
-    </section>
-    
-</div>
 {% endblock %}
 
 {% block pageFooter %}{% endblock %}

@@ -1,4 +1,4 @@
-{% extends "components/template.html" %}
+{% extends "template-fullwidth.html" %}
 
 {% block pageTitle %}Components - NWP Prototype Kit{% endblock %}
 
@@ -25,8 +25,51 @@
     </div>
 {% endblock %}
 
-{% block pageContent %}
-
+{% block pageMain %}
+<div class="nhsuk-width-container">
+    <ul class="nhsuk-grid-row nhsuk-card-group">
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          {{ card({
+            "href": "/components/furniture",
+            "clickable": "true",
+            "heading": "Furniture",
+            "headingLevel": "3",
+            "headingClasses": "nhsuk-heading-m",
+            "description": ""
+          }) }}
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+            {{ card({
+              "href": "/components/contentblocks",
+              "clickable": "true",
+              "heading": "ContentBlocks",
+              "headingLevel": "3",
+              "headingClasses": "nhsuk-heading-m",
+              "description": ""
+            }) }}
+          </li>
+          <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+            {{ card({
+              "href": "/components/rightblocks",
+              "clickable": "true",
+              "heading": "RightBlocks",
+              "headingLevel": "3",
+              "headingClasses": "nhsuk-heading-m",
+              "description": ""
+            }) }}
+          </li>
+          <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+            {{ card({
+              "href": "/components/featureblocks",
+              "clickable": "true",
+              "heading": "FeatureBlocks",
+              "headingLevel": "3",
+              "headingClasses": "nhsuk-heading-m",
+              "description": ""
+            }) }}
+          </li>
+    </ul>
+</div>
 {% endblock %}
 
 {% block pageFooter %}{% endblock %}
