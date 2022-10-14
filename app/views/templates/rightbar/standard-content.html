@@ -1,0 +1,39 @@
+{% extends "templates/rightbar/template.html" %}
+
+{% block pageTitle %}Header - Scaffolding - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/",
+            text: "Home"
+        },
+        {
+            href: "/templates",
+            text: "Templates"
+        }
+    ],
+        href: "/templates/rightbar/standard-content",
+        text: "StandardContent"
+    }) 
+}}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Templates</span>
+    <h1>StandardContent</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+<h3>HTML</h3>
+{{ highlight({
+  "html" : '
+'}) }}
+<h3>Example</h3>
+<a href="/templates/examples/standard-content">Click to preview the template</a>
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}
