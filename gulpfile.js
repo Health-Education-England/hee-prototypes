@@ -120,7 +120,7 @@ function startNodemon(done) {
   });
 }
 
-function reload() {
+function reload(done) {
   browserSync.reload();
   done();
 }
