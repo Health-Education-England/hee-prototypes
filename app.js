@@ -53,7 +53,8 @@ var appViews = [
 ]
 
 var nunjucksConfig = {
-  autoescape: true
+  autoescape: true,
+  watch: true,
 }
 
 nunjucksConfig.express = app
@@ -188,7 +189,8 @@ if (useDocumentation || onlyDocumentation == 'true') {
 
   var nunjucksAppEnv = nunjucks.configure(docViews, {
     autoescape: true,
-    express: documentationApp
+    express: documentationApp,
+    watch: true,
   });
   nunjucksAppEnv.addGlobal('version', packageInfo.version);
 
