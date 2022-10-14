@@ -1,6 +1,5 @@
-{% extends "template.html" %}
+{% extends "components/template.html" %}
 
-{% block pageClass %}page--fullwidth page--template-landinghub{% endblock %}
 {% block pageTitle %}Components - NWP Prototype Kit{% endblock %}
 
 {% block pageBreadcrumbs %}
@@ -26,83 +25,8 @@
     </div>
 {% endblock %}
 
-{% block pageMain %}
-<div class="page__main">
+{% block pageContent %}
 
-    <section class="nhsuk-width-container">
-        <div class="nhsuk-grid-row">
-            <ul class="nhsuk-card-group">
-                <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-                    {{ card({
-                        "href": "/components/furniture/",
-                        "clickable": "true",
-                        "heading": "Furniture",
-                        "headingLevel": "2",
-                        "headingClasses": "nhsuk-heading-m",
-                        "description": "Specific to templates"
-                    }) }}
-                </li>
-                <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-                    {{ card({
-                        "href": "/components/contentblocks/",
-                        "clickable": "false",
-                        "heading": "Content Blocks",
-                        "headingLevel": "2",
-                        "headingClasses": "nhsuk-heading-m",
-                        "description": "Content area blocks"
-                    }) }}
-                </li>
-                <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-                    {{ card({
-                        "href": "/components/rightblocks/",
-                        "clickable": "false",
-                        "heading": "Right Blocks",
-                        "headingLevel": "2",
-                        "headingClasses": "nhsuk-heading-m",
-                        "description": "Right sidebar area blocks"
-                }) }}
-                </li>
-                <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-                    {{ card({
-                        "href": "/components/featureblocks/",
-                        "clickable": "false",
-                        "heading": "Feature Blocks",
-                        "headingLevel": "2",
-                        "headingClasses": "nhsuk-heading-m",
-                        "description": "Feature blocks like related content"
-                }) }}
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="nhsuk-width-container" style="display:none;">
-        <div class="nhsuk-grid-row">
-            <ul class="nhsuk-card-group">
-                <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-                {{ card({
-                    "href": "/components/hee/",
-                    "clickable": "true",
-                    "heading": "HEE",
-                    "headingLevel": "2",
-                    "headingClasses": "nhsuk-heading-m",
-                    "description": "Custom components created specifically for HEE"
-                }) }}
-                </li>
-                <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-                {{ card({
-                    "href": "/components/nhsuk-hee/",
-                    "clickable": "false",
-                    "heading": "NHSUK-HEE",
-                    "headingLevel": "2",
-                    "headingClasses": "nhsuk-heading-m",
-                    "description": "NHSUK design manual components"
-                }) }}
-                </li>
-            </ul>
-        </div>
-    </section>
-
-</div>
 {% endblock %}
 
 {% block pageFooter %}{% endblock %}

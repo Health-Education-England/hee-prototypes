@@ -1,7 +1,6 @@
-{% extends "template.html" %}
+{% extends "scaffolding/template.html" %}
 
-{% block pageClass %}page--fullwidth{% endblock %}
-{% block pageTitle %}Header - Scaffolding - NWP Prototype Kit{% endblock %}
+{% block pageTitle %}Footer - Scaffolding - NWP Prototype Kit{% endblock %}
 
 {% block pageBreadcrumbs %}
 {{ 
@@ -23,14 +22,34 @@
 {% endblock %}
 
 {% block pageHeader %}
-    <div class="nhsuk-width-container">
-        <h1>Footer</h1>
-        <p class="nhsuk-lede-text"></p>
-    </div>
+    <span class="nhsuk-caption-xl">Scaffolding</span>
+    <h1>Footer</h1>
+    <p class="nhsuk-lede-text"></p>
 {% endblock %}
 
-{% block pageMain %}
-<div class="nhsuk-width-container">
+{% block pageContent %}
+<h3>Macro</h3>
+{{ highlight({
+    "html" : '
+  '}) }}
+<h3>Params</h3>
+<table class="nhsuk-table">
+    <thead>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<h3>HTML</h3>
 {{ highlight({
   "html" : '<footer class="nhsuk-footer site-footer" id="nhsuk-footer" role="contentinfo">
   <div class="nhsuk-width-container">
@@ -45,7 +64,6 @@
 </footer>
 '
 }) }}
-</div>
 {% endblock %}
 
 {% block pageFooter %}{% endblock %}

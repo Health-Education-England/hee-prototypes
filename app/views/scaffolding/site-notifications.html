@@ -1,6 +1,5 @@
-{% extends "template-rightbar.html" %}
+{% extends "scaffolding/template.html" %}
 
-{% block pageClass %}page--rightbar{% endblock %}
 {% block pageTitle %}Notifications - Scaffolding - NWP Prototype Kit{% endblock %}
 
 {% block pageBreadcrumbs %}
@@ -23,15 +22,35 @@
 {% endblock %}
 
 {% block pageHeader %}
-    <div class="nhsuk-width-container">
-        <h1>Notifications</h1>
-        <p class="nhsuk-lede-text"></p>
-    </div>
+    <span class="nhsuk-caption-xl">Scaffolding</span>
+    <h1>Notifications</h1>
+    <p class="nhsuk-lede-text"></p>
 {% endblock %}
 
-{% block pageMain %}
-<div class="nhsuk-width-container">
-    <h2>PhaseBanner</h2>
+{% block pageContent %}
+<h2>PhaseBanner</h2>
+<h3>Macro</h3>
+{{ highlight({
+    "html" : '
+  '}) }}
+<h3>Params</h3>
+<table class="nhsuk-table">
+    <thead>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<h3>HTML</h3>
 {{ highlight({
   "html" : '<div class="nhsuk-hee-phasebanner">
     <div class="nhsuk-width-container">
@@ -42,7 +61,33 @@
     </div>
 </div>
 '}) }}
-</div>
+
+<h2>GlobalAlert</h2>
+<h3>Macro</h3>
+{{ highlight({
+    "html" : '
+  '}) }}
+<h3>Params</h3>
+<table class="nhsuk-table">
+    <thead>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<h3>HTML</h3>
+{{ highlight({
+    "html" : '
+  '}) }}
 {% endblock %}
 
 {% block pageFooter %}{% endblock %}
