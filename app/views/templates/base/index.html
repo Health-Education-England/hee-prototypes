@@ -1,0 +1,32 @@
+{% extends "templates/base/template.html" %}
+
+{% block pageTitle %}Templates - HEE Prototype{% endblock %}
+
+{% block pageBreadcrumbs %}
+    {{ breadcrumb({
+        items: [
+            {
+                href: "/",
+                text: "Home"
+            }
+        ],
+        href: "/templates",
+        text: "Templates"
+    }) }}
+{% endblock %}
+
+{% block pageHeader %}
+    {#{ microHero({
+        imgURL: '/images/young-child-using-tablet-device.jpg',
+        imgAlt: 'An example bg image'
+    }) }#}
+    <span class="nhsuk-caption-xl">Templates</span>
+    <h1>Base</h1>
+    <p class="nhsuk-lede-text">All of the available HEE layouts</p>
+{% endblock %}
+
+{% block pageContent %}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}
