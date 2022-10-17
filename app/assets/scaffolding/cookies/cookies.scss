@@ -1,5 +1,22 @@
 /* Add new cookie code here */
 
+.nhsuk-cookie-banner {
+  padding-top: 24px;
+
+  ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    @include mq($from: tablet) {
+      display: inline-block;
+      margin-right: map-get($nhsuk-spacing-points, 4)
+    }
+  }
+}
+
 /* Policy table - corrected typo */
 .nhsuk__policy-table {
   border: none;
