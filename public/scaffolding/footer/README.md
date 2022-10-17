@@ -1,7 +1,5 @@
 # Footer
 
-This is a custom implementation of the NHSUK-Footer component.
-
 ## Guidance
 
 Find out more about the footer component and when to use it in the [NHS digital service manual](https://service-manual.nhs.uk/design-system/components/footer).
@@ -15,7 +13,7 @@ Find out more about the footer component and when to use it in the [NHS digital 
 #### HTML markup
 
 ```html
-<footer class="nhsuk-footer site-footer" id="nhsuk-footer" role="contentinfo">
+<footer class="nhsuk-footer" id="nhsuk-footer" role="contentinfo">
   <div class="nhsuk-width-container">
     <h2 class="nhsuk-u-visually-hidden">Support links</h2>
     <ul class="nhsuk-footer__list">
@@ -33,9 +31,9 @@ Find out more about the footer component and when to use it in the [NHS digital 
 #### Nunjucks macro
 
 ```
-{% from 'scaffolding/footer/macro.njk' import footer %}
+{% from 'components/footer/macro.njk' import footer %}
 
-{{ siteFooter({
+{{ footer({
   "links": [
     {
       "URL": "https://www.nhs.uk/nhs-sites/",
