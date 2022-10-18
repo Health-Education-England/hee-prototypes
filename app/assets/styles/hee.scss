@@ -63,11 +63,11 @@
 @import '../components/hee-table-2';
 @import '../components/hee/hee-appliesto/appliesto';
 @import '../components/hee/hee-anchorlinks/anchorlinks';
-@import '../components/nhsuk-hee/nhsuk-hee-phasebanner/phasebanner';
+@import '../scaffolding/notifications/phasebanner/phasebanner';
 @import '../components/hee/hee-tabs/tabs';
 @import '../components/nhsuk-hee/nhsuk-hee-tables/tables2'; //?
 
-@import '../components/hee/hee-globalalert/globalalert';
+@import '../scaffolding/notifications/globalalert/globalalert';
 //@import '../components/hee/hee-detailscard/detailscard';
 //@import '../components/hee/hee-detailscard/authorcard/authorcard';
 //@import '../components/hee/hee-detailscard/personcard/personcard';
