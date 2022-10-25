@@ -1,0 +1,36 @@
+{% extends "templates/fullwidth/template.html" %}
+
+{% block pageTitle %}Templates - FullWidth - HEE Prototype{% endblock %}
+
+{% block pageBreadcrumbs %}
+    {{ breadcrumb({
+        items: [
+            {
+                href: "/",
+                text: "Home"
+            },
+            {
+                href: "/templates",
+                text: "Templates"
+            }
+        ],
+        href: "/templates/fullwidth",
+        text: "FullWidth"
+    }) }}
+{% endblock %}
+
+{% block pageHeader %}
+    {#{ microHero({
+        imgURL: '/images/young-child-using-tablet-device.jpg',
+        imgAlt: 'An example bg image'
+    }) }#}
+    <span class="nhsuk-caption-xl">Templates</span>
+    <h1>FullWidth</h1>
+    <p class="nhsuk-lede-text">All of the available fullwidth templates</p>
+{% endblock %}
+
+{% block pageContent %}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}
