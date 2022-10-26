@@ -44,7 +44,7 @@
 
     @include mq($from: large-desktop) {
       border: 1px solid $color_nhsuk-grey-4;
-      border-bottom-width: nhsuk-spacing(1);
+      border-bottom-width: nhsuk-spacing(1)!important;
       background: $color_nhsuk-white;
       display: none;
       list-style: none;
@@ -52,6 +52,7 @@
       padding: 0;
       position: absolute;
       right: 0;
+      top: 100%;
       text-align: left;
       z-index: 9999;
     }
@@ -89,7 +90,6 @@
         text-decoration: none;
         cursor: default;
       }
-
       @include mq($from: large-desktop) {
         display: block;
       }
@@ -115,8 +115,11 @@
       }
     }
 
+    .nhsuk-subnav__list-link {
+      padding-left: 28px;
+    }
+
     .nhsuk-subnav__list {
-      border: 0;
       display: block;
       left: 0;
       margin-bottom: 0;

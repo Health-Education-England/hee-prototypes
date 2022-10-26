@@ -18,14 +18,49 @@
   font-size: 1rem;
 }
 
-.nhsuk-header__navigation-item {
+.nhsuk-header__navigation-list {
   display: block;
 }
 
+.nhsuk-header__navigation-item {
+  display: inline-block;
+  //min-width: 160px;
+}
+
+
 @include mq($until: desktop) {
+  .nhsuk-header__navigation-item {
+    display: block;
+  }
   .nhsuk-header__navigation {
     .nhsuk-width-container {
       margin: 0;
     }
   }
+}
+
+/* NHSUK-Header__navigation -- more than 3 items */
+
+.nhsuk-header__navigation--more-items {
+  .nhsuk-header__navigation-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  .nhsuk-header__navigation-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include mq($until: desktop) {
+    .nhsuk-header__navigation-list {
+      display: block;
+    }
+    .nhsuk-header__navigation-item {
+      display: block;
+    }
+  }
+
 }
