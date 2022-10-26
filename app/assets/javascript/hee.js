@@ -1,6 +1,6 @@
 // NHSUK-HEE Components
-import Cookies from '../components/nhsuk-hee/nhsuk-hee-cookies/cookies';
-import SubMenu from '../components/nhsuk-hee/nhsuk-hee-header/submenu';
+import Cookies from '../scaffolding/cookies/cookies';
+import SubNav from '../scaffolding/header/navigation/subnav';
 
 // HEE Components
 import AnchorLinks from '../components/hee/hee-anchorlinks/anchorlinks';
@@ -28,6 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
   Listing();
   Media();
   NavMap();
-  SubMenu();
+  SubNav();
   Newsletter();
 });

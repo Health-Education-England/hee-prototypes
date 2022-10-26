@@ -1,10 +1,10 @@
 /**
-* Submenu's
-* Elements with the selector '.nhsuk-subheader' are passed into this class
+* SubNav
+* Elements with the selector '.nhsuk-subnav' are passed into this class
 */
 
 export default () => {
-  class Submenu {
+  class subNav {
     constructor(container) {
       this.container = container
       this.toggleLink = this.container.querySelector('a')
@@ -24,17 +24,17 @@ export default () => {
     }
 
     handleState(){
-      const activeElems = document.querySelectorAll(".nhsuk-subheader.is-active")
+      const activeElems = document.querySelectorAll(".nhsuk-subnav.is-active")
       activeElems.forEach(elem => {
         if(elem != this.container){
           elem.classList.remove("is-active")
           elem.toggleAttribute("aria-expanded")
         } else {
-          this.toggleClass(this.parentList, 'submenu-open')
+          this.toggleClass(this.parentList, 'subnav-open')
         }
       })
       if(activeElems.length === 0){
-        this.toggleClass(this.parentList, 'submenu-open')
+        this.toggleClass(this.parentList, 'subnav-open')
       }
     }
 
@@ -65,7 +65,7 @@ export default () => {
 
   }
 
-  [...document.getElementsByClassName('nhsuk-subheader')].forEach(submenu => new Submenu(submenu))
+  [...document.getElementsByClassName('nhsuk-subnav')].forEach(subnav => new subNav(subnav))
 
   /* document.getElementById("close-menu").addEventListener('mousedown', function(){
     document.getElementById("toggle-menu").focus()
@@ -97,13 +97,13 @@ export default () => {
       }
     }
     // close sub nav if clicking anywhere on the document except the open or a new subnav
-    const openSub = document.querySelector(".nhsuk-subheader.is-active")
+    const openSub = document.querySelector(".nhsuk-subnav.is-active")
     if(openSub){
       const isNotSub = event.target !== openSub
-      const isSubChild = event.target.closest(".nhsuk-subheader.is-active")
+      const isSubChild = event.target.closest(".nhsuk-subnav.is-active")
       if(isNotSub && !isSubChild){
         openSub.classList.remove("is-active")
-        document.querySelector(".nhsuk-header__navigation-list").classList.remove("submenu-open")
+        document.querySelector(".nhsuk-header__navigation-list").classList.remove("subnav-open")
       }
     }
   }
