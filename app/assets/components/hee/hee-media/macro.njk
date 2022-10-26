@@ -1,11 +1,11 @@
 {% macro media(params) %}
-  <div class="hee-media">
+  <div class="nhsuk-media">
     {% if params.title %}
       <h2>{{ params.title }}</h2>
     {% endif %}
 
     {% if params.description %}
-      <div class="hee-media__description">
+      <div class="nhsuk-media__description">
         <p>{{ params.description }}</p>
       </div>
     {% endif %}
@@ -32,16 +32,16 @@
       ></iframe>
     {% endif %}
 
-    <div class="hee-media__info">
+    <div class="nhsuk-media__info">
 
       {% if params.transcript|length %}
-        <div class="hee-media__transcript">
+        <div class="nhsuk-media__transcript">
           <a href="javascript:void(0);">
-            <span class="hee-media__show-text">Show transcript</span>
-            <span class="hee-media__hide-text">Hide transcript</span>
+            <span class="nhsuk-media__show-text">Show transcript</span>
+            <span class="nhsuk-media__hide-text">Hide transcript</span>
           </a>
 
-          <div class="hee-media__transcript-text">
+          <div class="nhsuk-media__transcript-text">
             {% for line in params.transcript %}
               <p>{{ line | safe }}</p>
             {% endfor %}
@@ -49,7 +49,7 @@
         </div>
       {% endif %}
 
-      <div class="hee-media__reviews">
+      <div class="nhsuk-media__reviews">
         {% if params.lastReview|length %}
           <p>
             Page last reviewed: {{ params.lastReview }}
