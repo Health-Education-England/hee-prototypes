@@ -10,11 +10,12 @@
     "start": "node app.js",
     "test": "",
     "prewatch": "gulp build",
-    "watch": "gulp"
+    "watch": "gulp",
+    "lint:css": "stylelint -f verbose --config ./tests/linters/.stylelintrc.yml --customSyntax postcss-scss './app/assets/components/**/*.scss'"
   },
   "author": "https://github.com/nhsuk/",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
     "babel-loader": "^8.2.5",
@@ -40,9 +41,12 @@
     "nhsuk-frontend": "4.1.0",
     "node-sass": "^7.0",
     "nunjucks": "^3.2.2",
-    "path": "^0.12.7"
-  },
-  "devDependencies": {
+    "path": "^0.12.7",
+    "postcss": "^8.4.18",
+    "stylelint": "^14.14.0",
+    "stylelint-config-standard-scss": "^6.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.3.0",
     "webpack": "^5.72.0",
     "webpack-stream": "^7.0.0"
   }
