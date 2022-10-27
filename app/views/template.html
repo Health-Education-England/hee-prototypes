@@ -3,14 +3,16 @@
 
 {# SCAFFOLDING #}
 
+{# Cookies #}
+{%- from 'scaffolding/cookies/macro.njk' import cookies %}
+
 {# Header #}
 {%- from 'scaffolding/header/macro.njk' import customHeader %}
-{%- from 'components/nhsuk-hee/nhsuk-hee-cookies/macro.njk' import cookies %}
 {%- from 'skip-link/macro.njk' import skipLink %}
 
 {# Notifications #}
-{%- from 'components/hee/hee-globalalert/macro.njk' import globalAlert %}
-{%- from 'components/nhsuk-hee/nhsuk-hee-phasebanner/macro.njk' import phaseBanner %}
+{%- from 'scaffolding/notifications/globalalert/macro.njk' import globalAlert %}
+{%- from 'scaffolding/notifications/phasebanner/macro.njk' import phaseBanner %}
 
 {# Footer #}
 {%- from 'scaffolding/footer/macro.njk' import siteFooter %}

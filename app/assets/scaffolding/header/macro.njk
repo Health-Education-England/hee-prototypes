@@ -13,6 +13,7 @@
   <div class="nhsuk-width-container nhsuk-header__container">
 
       <div class="nhsuk-header__multilogo">
+
         <span class="nhsuk-header__logo nhsuk-header__logo-home">
           <a class="nhsuk-header__link" href="{% if params.heeHref %}{{ params.heeHref }}{% else %}/{% endif %}" aria-label="{{ params.organisation.name }} {{ params.organisation.split }} {{ params.organisation.descriptor }} homepage">
             <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="presentation" focusable="false" viewBox="0 0 40 16">
@@ -26,6 +27,7 @@
             {% if params.organisation.descriptor %}<span class="nhsuk-organisation-descriptor">{{ params.organisation.descriptor }}</span>{% endif %}
           </a>
         </span>
+
         {% if showLogos == "true" and params.logos %}
           {%- for item in params.logos %}
           <span class="nhsuk-header__logo">
@@ -33,7 +35,6 @@
             class="nhsuk-header__link"
               href="{{ item.href }}"
               aria-label="{{ item.label }}"
-              target="_blank"
             >
               <img src="{{ item.imgSrc }}" alt="{{ item.imgAlt }}" />
             </a>
