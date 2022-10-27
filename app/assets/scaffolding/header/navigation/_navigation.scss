@@ -16,6 +16,13 @@
 
 .nhsuk-header__navigation-link {
   font-size: 1rem;
+
+  @include mq($from: desktop) {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .nhsuk-header__navigation-list {
@@ -24,7 +31,33 @@
 
 .nhsuk-header__navigation-item {
   display: inline-block;
-  //min-width: 160px;
+
+  &.nhsuk-subnav {
+
+    .nhsuk-subnav__wrapper {
+      @include mq($from: desktop) {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .nhsuk-header__navigation-link {
+      @include mq($from: desktop) {
+        align-items: stretch;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .nhsuk-icon {
+        @include mq($from: desktop) {
+          position: relative;
+          top: 0;
+        }
+      }
+    }
+  }
 }
 
 

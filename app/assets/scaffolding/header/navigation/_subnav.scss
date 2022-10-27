@@ -28,6 +28,7 @@
       @include mq($from: large-desktop) {
         display: block;
         fill: $color_nhsuk-white;
+        left: 20px;
         right: 0;
         transform: rotate(90deg);
       }
