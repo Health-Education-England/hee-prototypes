@@ -1,9 +1,8 @@
-// Core dependencies
-const gulp = require('gulp');
-const connect = require('gulp-connect');
-
-// External dependencies
+// Dependencies
 const clean = require('gulp-clean');
+const connect = require('gulp-connect');
+const fs = require('fs')
+const gulp = require('gulp');
 
 // Task runners
 const taskAssets = require('./tasks/assets');
@@ -33,11 +32,6 @@ function watch() {
   gulp.watch(['app/views/**/*.njk', 'app/views/**/*.html'], taskTemplates.buildTemplates);
 }
 
-function cleanPublic() {
-  return gulp.src('public', { allowEmpty: true})
-  .pipe(clean());
-}
-
 function serve() {
   connect.server({
     host: 'localhost',
@@ -46,33 +40,40 @@ function serve() {
     root: PATHS.public,
     middleware: function(connect, opt) {
       return [function(req, res, next) {
-        let redirect = true
-
-        // Don't redirect URLs with trailing slashes
-        if (req.url.slice(-1) === '/') {
-          redirect = false
-        }
-
-        // Don't redirect asset URLs
-        if (redirect) {
-          const extensions = ['html', 'css', 'js', 'less', 'jpg', 'jpeg', 'png', 'gif']
-          for (let i = 0; i < extensions.length; i++) {
-            if (req.url.search('.' + extensions[i]) !== -1) {
-              redirect = false
-              break
-            }
+        // Check if the request is for an asset.
+        let isAsset = false
+        const extensions = ['html', 'css', 'js', 'less', 'jpg', 'jpeg', 'png', 'gif']
+        for (let i = 0; i < extensions.length; i++) {
+          if (req.url.search('.' + extensions[i]) !== -1) {
+            isAsset = true
+            break
           }
         }
 
-        if (redirect) {
-          res.writeHead(301, {Location: 'http://' + opt.host + ':' + opt.port + req.url + '.html'});
-          res.end()
+        // Redirect to HTML file if not a directory root / index page. This
+        // fixes broken links that don't contain the .html extension from the
+        // legacy node app.
+        if (!isAsset && req.url.slice(-1) === '/') {
+          const filename = './public' + req.url + '.html'
+          try {
+            if (fs.existsSync(filename)) {
+              res.writeHead(301, {Location: 'http://' + opt.host + ':' + opt.port + req.url + '.html'});
+              res.end()
+            }
+          } catch(err) {
+            console.error(err)
+          }
         }
 
         next()
       }]
     }
   });
+}
+
+function cleanPublic() {
+  return gulp.src('public', { allowEmpty: true})
+    .pipe(clean());
 }
 
 gulp.task('build', gulp.series(
