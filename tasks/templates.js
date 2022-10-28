@@ -14,9 +14,6 @@ const config = {
   ],
 };
 
-/**
- * Turn markdown into html with a nunjucks layout
- */
 function buildHtml() {
   return gulp.src(['app/views/**/*.html', '!app/views/lks/*.html'])
     .pipe(gulpNunjucks.compile({

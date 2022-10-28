@@ -5,8 +5,6 @@ const cleanCSS = require("gulp-clean-css");
 const rename = require("gulp-rename");
 const webpack = require("webpack-stream");
 const minify = require("gulp-minify");
-const clean = require("gulp-clean");
-
 const config = require('../gulpfile')
 
 function compileHEEStyles() {
@@ -61,22 +59,18 @@ function compileHEEScripts() {
     });
 }
 
-/* Copy nhsuk.js under dist/js with version included in the filename */
 function copyVendorScripts() {
   return gulp.src(config.PATHS.vendorJS)
     .pipe(gulp.dest(config.PATHS.public+'/js'));
 }
 
-/* Copy nhsuk.css under dist/css with version included in the filename */
 function copyVendorStyles() {
   return gulp.src(config.PATHS.vendorCSS)
     .pipe(gulp.dest(config.PATHS.public+'/css'));
 }
 
-// Compile assets
 function compileHEEAssets() {
   return gulp.src([
-    //'app/assets/**/**/*.*',
     'node_modules/nhsuk-frontend/packages/assets/**',
     '!**/assets/**/**/*.js',
     '!**/assets/**/**/*.scss'
@@ -91,3 +85,9 @@ gulp.task('build:assets', gulp.parallel(
   copyVendorStyles,
   copyVendorScripts
 ));
+
+exports.compileHEEAssets = compileHEEAssets
+exports.compileHEEStyles = compileHEEStyles
+exports.compileHEEScripts = compileHEEScripts
+exports.copyVendorStyles = copyVendorStyles
+exports.copyVendorScripts = copyVendorScripts

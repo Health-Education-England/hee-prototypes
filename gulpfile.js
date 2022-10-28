@@ -3,18 +3,14 @@ const gulp = require('gulp');
 const connect = require('gulp-connect');
 
 // External dependencies
-const browserSync = require('browser-sync');
 const clean = require('gulp-clean');
-const nodemon = require('gulp-nodemon');
-
-// Version from package.json
-const { version } = require('./package.json');
 
 // Local dependencies
 const config = require('./app/config');
 
-// Set configuration variables
-const port = process.env.PORT || config.port;
+// Task runners
+const taskAssets = require('./tasks/assets');
+require('./tasks/templates');
 
 const PATHS = {
   heeCSS: './app/assets/styles/hee.scss',
@@ -32,36 +28,11 @@ const PATHS = {
   dist: 'dist'
 };
 
-// Task runners
-require('./tasks/assets');
-require('./tasks/templates');
-
-function reload(done) {
-  browserSync.reload();
-  done();
-}
-
-// Start browsersync
-function startBrowserSync(done){
-  browserSync.init({
-    proxy: 'localhost:' + port,
-    port: port + 1000,
-    ui: false,
-    files: ['app/views/**/*.*'],
-    ghostmode: false,
-    open: false,
-    notify: true,
-    watch: true,
-  }, done);
-  gulp.watch('public/**/*.*').on('change', reload);
-}
-
-// Watch for changes within assets/
 function watch() {
-  gulp.watch(['app/assets/**/*.scss', 'app/assets*/**/*.scss'], compileHEEStyles);
-  gulp.watch(['app/assets/styles/!*.css', 'app/assets/styles/hee.scss'], copyVendorStyles);
-  gulp.watch(['app/assets/components/!**/!*.js'], compileHEEScripts);
-  gulp.watch(['app/assets/javascript/hee.js'], copyVendorScripts);
+  gulp.watch(['app/assets/**/*.scss', 'app/assets*/**/*.scss'], taskAssets.compileHEEStyles);
+  gulp.watch(['app/assets/styles/!*.css', 'app/assets/styles/hee.scss'], taskAssets.copyVendorStyles);
+  gulp.watch(['app/assets/components/!**/!*.js'], taskAssets.compileHEEScripts);
+  gulp.watch(['app/assets/javascript/hee.js'], taskAssets.copyVendorScripts);
 }
 
 function cleanPublic() {
@@ -88,6 +59,9 @@ gulp.task('serve', gulp.series(
   gulp.parallel(serve)
 ));
 
-gulp.task('default', gulp.series(startBrowserSync, watch));
+gulp.task('default', gulp.parallel(
+  serve,
+  watch
+));
 
 exports.PATHS = PATHS;
