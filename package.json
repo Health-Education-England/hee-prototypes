@@ -14,7 +14,7 @@
   },
   "author": "https://github.com/nhsuk/",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
     "babel-loader": "^8.2.5",
@@ -40,9 +40,7 @@
     "nhsuk-frontend": "4.1.0",
     "node-sass": "^7.0",
     "nunjucks": "^3.2.2",
-    "path": "^0.12.7"
-  },
-  "devDependencies": {
+    "path": "^0.12.7",
     "webpack": "^5.72.0",
     "webpack-stream": "^7.0.0"
   }
