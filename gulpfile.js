@@ -21,7 +21,7 @@ const PATHS = {
     'node_modules/nhsuk-frontend/dist/nhsuk.min.js'
   ],
   public: 'public',
-  dist: 'dist'
+  dist: 'dist',
 };
 
 function watch() {
@@ -53,7 +53,7 @@ function serve() {
         // Redirect to HTML file if not a directory root / index page. This
         // fixes broken links that don't contain the .html extension from the
         // legacy node app.
-        if (!isAsset && req.url.slice(-1) === '/') {
+        if (!isAsset && req.url.slice(-1) !== '/') {
           const filename = './public' + req.url + '.html'
           try {
             if (fs.existsSync(filename)) {

@@ -73,9 +73,16 @@ function compileHEEAssets() {
   return gulp.src([
     'node_modules/nhsuk-frontend/packages/assets/**',
     '!**/assets/**/**/*.js',
-    '!**/assets/**/**/*.scss'
+    '!**/assets/**/**/*.scss',
   ])
     .pipe(gulp.dest(config.PATHS.public));
+}
+
+function copyImages() {
+  return gulp.src([
+    'app/assets/images/**/*.*',
+  ])
+    .pipe(gulp.dest(config.PATHS.public + '/images'));
 }
 
 gulp.task('build:assets', gulp.parallel(
@@ -83,7 +90,8 @@ gulp.task('build:assets', gulp.parallel(
   compileHEEStyles,
   compileHEEScripts,
   copyVendorStyles,
-  copyVendorScripts
+  copyVendorScripts,
+  copyImages,
 ));
 
 exports.compileHEEAssets = compileHEEAssets
@@ -91,3 +99,4 @@ exports.compileHEEStyles = compileHEEStyles
 exports.compileHEEScripts = compileHEEScripts
 exports.copyVendorStyles = copyVendorStyles
 exports.copyVendorScripts = copyVendorScripts
+exports.copyImages = copyImages
