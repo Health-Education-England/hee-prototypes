@@ -16,16 +16,84 @@
 
 .nhsuk-header__navigation-link {
   font-size: 1rem;
+
+  @include mq($from: desktop) {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
-.nhsuk-header__navigation-item {
+.nhsuk-header__navigation-list {
   display: block;
 }
 
+.nhsuk-header__navigation-item {
+  display: inline-block;
+
+  &.nhsuk-subnav {
+
+    .nhsuk-subnav__wrapper {
+      @include mq($from: desktop) {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .nhsuk-header__navigation-link {
+      @include mq($from: desktop) {
+        align-items: stretch;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .nhsuk-icon {
+        @include mq($from: desktop) {
+          position: relative;
+          top: 0;
+        }
+      }
+    }
+  }
+}
+
+
 @include mq($until: desktop) {
+  .nhsuk-header__navigation-item {
+    display: block;
+  }
   .nhsuk-header__navigation {
     .nhsuk-width-container {
       margin: 0;
     }
   }
+}
+
+/* NHSUK-Header__navigation -- more than 3 items */
+
+.nhsuk-header__navigation--more-items {
+  .nhsuk-header__navigation-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  .nhsuk-header__navigation-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include mq($until: desktop) {
+    .nhsuk-header__navigation-list {
+      display: block;
+    }
+    .nhsuk-header__navigation-item {
+      display: block;
+    }
+  }
+
 }
