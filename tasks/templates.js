@@ -14,7 +14,7 @@ const config = {
   ],
 };
 
-function buildHtml() {
+function buildTemplates() {
   return gulp.src(['app/views/**/*.html', '!app/views/lks/*.html'])
     .pipe(gulpNunjucks.compile({
       baseUrl: config.baseUrl,
@@ -35,7 +35,7 @@ function buildHtml() {
 }
 
 gulp.task('build:templates', gulp.parallel(
-  buildHtml
+  buildTemplates
 ));
 
-exports.buildHtml = buildHtml
+exports.buildTemplates = buildTemplates

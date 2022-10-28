@@ -30,7 +30,7 @@ function watch() {
   gulp.watch(['app/assets/styles/!*.css', 'app/assets/styles/hee.scss'], taskAssets.copyVendorStyles);
   gulp.watch(['app/assets/components/!**/!*.js'], taskAssets.compileHEEScripts);
   gulp.watch(['app/assets/javascript/hee.js'], taskAssets.copyVendorScripts);
-  gulp.watch(['app/**/*.njk', 'app/**/*.html'], taskTemplates.buildHtml);
+  gulp.watch(['app/views/**/*.njk', 'app/views/**/*.html'], taskTemplates.buildTemplates);
 }
 
 function cleanPublic() {
@@ -44,6 +44,34 @@ function serve() {
     livereload: true,
     port: 3000,
     root: PATHS.public,
+    middleware: function(connect, opt) {
+      return [function(req, res, next) {
+        let redirect = true
+
+        // Don't redirect URLs with trailing slashes
+        if (req.url.slice(-1) === '/') {
+          redirect = false
+        }
+
+        // Don't redirect asset URLs
+        if (redirect) {
+          const extensions = ['html', 'css', 'js', 'less', 'jpg', 'jpeg', 'png', 'gif']
+          for (let i = 0; i < extensions.length; i++) {
+            if (req.url.search('.' + extensions[i]) !== -1) {
+              redirect = false
+              break
+            }
+          }
+        }
+
+        if (redirect) {
+          res.writeHead(301, {Location: 'http://' + opt.host + ':' + opt.port + req.url + '.html'});
+          res.end()
+        }
+
+        next()
+      }]
+    }
   });
 }
 
