@@ -5,12 +5,9 @@ const connect = require('gulp-connect');
 // External dependencies
 const clean = require('gulp-clean');
 
-// Local dependencies
-const config = require('./app/config');
-
 // Task runners
 const taskAssets = require('./tasks/assets');
-require('./tasks/templates');
+const taskTemplates = require('./tasks/templates');
 
 const PATHS = {
   heeCSS: './app/assets/styles/hee.scss',
@@ -33,6 +30,7 @@ function watch() {
   gulp.watch(['app/assets/styles/!*.css', 'app/assets/styles/hee.scss'], taskAssets.copyVendorStyles);
   gulp.watch(['app/assets/components/!**/!*.js'], taskAssets.compileHEEScripts);
   gulp.watch(['app/assets/javascript/hee.js'], taskAssets.copyVendorScripts);
+  gulp.watch(['app/**/*.njk', 'app/**/*.html'], taskTemplates.buildHtml);
 }
 
 function cleanPublic() {
@@ -42,7 +40,7 @@ function cleanPublic() {
 
 function serve() {
   connect.server({
-    host: '0.0.0.0',
+    host: 'localhost',
     livereload: true,
     port: 3000,
     root: PATHS.public,

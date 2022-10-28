@@ -17,7 +17,6 @@ const config = {
 function buildHtml() {
   return gulp.src(['app/views/**/*.html', '!app/views/lks/*.html'])
     .pipe(gulpNunjucks.compile({
-      // site-wide data goes here
       baseUrl: config.baseUrl,
     }, {
       env: new nunjucks.Environment(
@@ -38,3 +37,5 @@ function buildHtml() {
 gulp.task('build:templates', gulp.parallel(
   buildHtml
 ));
+
+exports.buildHtml = buildHtml
