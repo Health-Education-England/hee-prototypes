@@ -31,8 +31,9 @@ const PATHS = {
   dist: 'dist'
 };
 
-// Build task runner.
-require('./tasks/build.js');
+// Task runners
+require('./tasks/assets');
+require('./tasks/templates');
 
 // Start nodemon
 function startNodemon(done) {
@@ -97,7 +98,13 @@ function cleanPublic() {
 
 gulp.task('build', gulp.series(
   cleanPublic,
-  'build:assets'
+  'build:assets',
+  'build:templates'
+));
+
+gulp.task('templates', gulp.series(
+  cleanPublic,
+  'build:templates'
 ));
 
 gulp.task('default', gulp.series(startNodemon, startBrowserSync, watch));
