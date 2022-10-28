@@ -1,5 +1,6 @@
 // Core dependencies
 const gulp = require('gulp');
+const connect = require('gulp-connect');
 
 // External dependencies
 const browserSync = require('browser-sync');
@@ -35,34 +36,6 @@ const PATHS = {
 require('./tasks/assets');
 require('./tasks/templates');
 
-// Start nodemon
-function startNodemon(done) {
-  const server = nodemon({
-    script: 'app.js',
-    stdout: false,
-    ext: 'scss js html njk',
-    quiet: true,
-  });
-  let starting = false;
-
-  const onReady = () => {
-    starting = false;
-    done();
-  };
-
-  server.on('start', () => {
-    starting = true;
-    setTimeout(onReady);
-  });
-
-  server.on('stdout', (stdout) => {
-    process.stdout.write(stdout);
-    if (starting) {
-      onReady();
-    }
-  });
-}
-
 function reload(done) {
   browserSync.reload();
   done();
@@ -96,17 +69,25 @@ function cleanPublic() {
   .pipe(clean());
 }
 
+function serve() {
+  connect.server({
+    host: '0.0.0.0',
+    livereload: true,
+    port: 3000,
+    root: PATHS.public,
+  });
+}
+
 gulp.task('build', gulp.series(
   cleanPublic,
   'build:assets',
   'build:templates'
 ));
 
-gulp.task('templates', gulp.series(
-  cleanPublic,
-  'build:templates'
+gulp.task('serve', gulp.series(
+  gulp.parallel(serve)
 ));
 
-gulp.task('default', gulp.series(startNodemon, startBrowserSync, watch));
+gulp.task('default', gulp.series(startBrowserSync, watch));
 
 exports.PATHS = PATHS;

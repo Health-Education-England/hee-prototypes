@@ -2,7 +2,6 @@ const gulp = require('gulp');
 const rename = require('gulp-rename');
 const gulpNunjucks = require('gulp-nunjucks');
 const nunjucks = require('nunjucks');
-const connect = require('gulp-connect');
 const htmlbeautify = require('gulp-html-beautify');
 
 const config = {
