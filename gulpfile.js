@@ -97,7 +97,7 @@ function startNodemon(done) {
   const server = nodemon({
     script: 'app.js',
     stdout: false,
-    ext: 'scss js html',
+    ext: 'scss js html njk',
     quiet: true,
   });
   let starting = false;
@@ -120,8 +120,9 @@ function startNodemon(done) {
   });
 }
 
-function reload() {
+function reload(done) {
   browserSync.reload();
+  done();
 }
 
 // Start browsersync
@@ -145,7 +146,7 @@ function watch() {
   gulp.watch(['app/assets/styles/*.css', 'app/assets/styles/hee.scss'], copyVendorStyles);
   gulp.watch(['app/assets/components/**/*.js'], compileHEEScripts);
   gulp.watch(['app/assets/javascript/hee.js'], copyVendorScripts);
-  gulp.watch(['app/assets/**/*.njk'], browserSync.reload);
+  gulp.watch(['app/assets/**/*.njk'], reload);
   //gulp.watch(['app/assets/**/**/*.*', '!app/assets/components/**/*.scss', '!app/assets/**/**/*.js'], compileAssets);
   //gulp.watch('docs/assets/sass/**/*.scss', compileStyles);
   //gulp.watch('docs/assets/javascript/**/*.js', compileNonMainJSScripts);
