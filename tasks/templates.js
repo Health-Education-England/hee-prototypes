@@ -4,6 +4,8 @@ const gulpNunjucks = require('gulp-nunjucks');
 const nunjucks = require('nunjucks');
 const htmlbeautify = require('gulp-html-beautify');
 
+const base = require('../gulpfile');
+
 const config = {
   baseUrl: process.env.BASE_URL ? process.env.BASE_URL : '/',
   dest: 'public',
@@ -31,7 +33,8 @@ function buildTemplates() {
       'indent_char': ' ',
       'preserve_newlines': false
     }))
-    .pipe(gulp.dest(config.dest));
+    .pipe(gulp.dest(config.dest))
+    .pipe(base.connect.reload());
 }
 
 gulp.task('build:templates', gulp.parallel(

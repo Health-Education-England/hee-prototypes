@@ -4,6 +4,7 @@
   "description": "Rapidly create HTML prototypes of NHS websites and services.",
   "main": "app.js",
   "scripts": {
+    "serve": "gulp",
     "build": "gulp build",
     "bundle": "gulp bundle",
     "postinstall": "npm run build",

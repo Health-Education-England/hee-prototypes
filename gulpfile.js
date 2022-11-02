@@ -24,7 +24,7 @@ const PATHS = {
   dist: 'dist',
 };
 
-function watch() {
+function watch(done) {
   gulp.watch(['app/assets/**/*.scss', 'app/assets*/**/*.scss'], taskAssets.compileHEEStyles);
   gulp.watch(['app/assets/styles/!*.css', 'app/assets/styles/hee.scss'], taskAssets.copyVendorStyles);
   gulp.watch(['app/assets/components/!**/!*.js'], taskAssets.compileHEEScripts);
@@ -86,9 +86,10 @@ gulp.task('serve', gulp.series(
   gulp.parallel(serve)
 ));
 
-gulp.task('default', gulp.parallel(
-  serve,
-  watch
-));
+gulp.task('default', gulp.series([
+  'build',
+  gulp.parallel([serve, watch]),
+]));
 
 exports.PATHS = PATHS;
+exports.connect = connect
