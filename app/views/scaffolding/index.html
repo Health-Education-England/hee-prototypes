@@ -1,6 +1,9 @@
-{% extends "template.html" %}
+{% extends "template-fullwidth.html" %}
 
-{% block pageClass %}page--fullwidth page--template-landinghub{% endblock %}
+{%- from 'components/hee/hee-microhero/macro.njk' import microHero %}
+{%- from 'card/macro.njk' import card %}
+
+{% block pageClass %}page--fullwidth page--template-landing{% endblock %}
 {% block pageTitle %}Scaffolding - Components - NWP Prototype Kit{% endblock %}
 
 {% block pageBreadcrumbs %}
@@ -19,50 +22,49 @@
 {% endblock %}
 
 {% block pageHeader %}
-    <div class="nhsuk-width-container">
-        <h1>Scaffolding</h1>
-        <p class="nhsuk-lede-text">The global header, notifications and footer areas</p>
-    </div>
+<div class="nhsuk-width-container">
+    <h1>Scaffolding</h1>
+    <p class="nhsuk-lede-text">The global header, notifications and footer areas</p>
+</div>
 {% endblock %}
 
 {% block pageMain %}
-<div class="page__main">
-    <section class="nhsuk-width-container">
-        <div class="nhsuk-grid-row">
-            <ul class="nhsuk-card-group">
-                <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-                {{ card({
-                    "href": "/scaffolding/site-header",
-                    "clickable": "true",
-                    "heading": "Header",
-                    "headingLevel": "2",
-                    "headingClasses": "nhsuk-heading-m",
-                    "description": "Search, navigation, cookies and skiplink"
-                }) }}
-                </li>
-                <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-                {{ card({
-                    "href": "/scaffolding/site-footer",
-                    "clickable": "true",
-                    "heading": "Footer",
-                    "headingLevel": "2",
-                    "headingClasses": "nhsuk-heading-m",
-                    "description": "Global links"
-                }) }}
-                </li>
-                <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-                {{ card({
-                    "href": "/scaffolding/site-notifications",
-                    "clickable": "true",
-                    "heading": "Notifications",
-                    "headingLevel": "2",
-                    "headingClasses": "nhsuk-heading-m",
-                    "description": "Phasebanner and globalalerts"
-                }) }}
-                </li>
-            </ul>
-        </div>
-    </section>
+<div class="nhsuk-width-container">
+    <p>Scaffolding elements are the global/site-wide parts of the user interface that are consistent throughout the whole site.</p>
+    <p>This includes the site header, navigation, search bar, notifications and footer.</p>
+    <br />
+    <ul class="nhsuk-grid-row nhsuk-card-group">
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          {{ card({
+            "href": "/scaffolding/site-header",
+            "clickable": "true",
+            "heading": "Header",
+            "headingLevel": "3",
+            "headingClasses": "nhsuk-heading-m",
+            "description": ""
+          }) }}
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+            {{ card({
+              "href": "/scaffolding/site-footer",
+              "clickable": "true",
+              "heading": "Footer",
+              "headingLevel": "3",
+              "headingClasses": "nhsuk-heading-m",
+              "description": ""
+            }) }}
+          </li>
+          <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+            {{ card({
+              "href": "/scaffolding/site-notifications",
+              "clickable": "true",
+              "heading": "Notifications",
+              "headingLevel": "3",
+              "headingClasses": "nhsuk-heading-m",
+              "description": ""
+            }) }}
+          </li>
+    </ul>
 </div>
 {% endblock %}
 

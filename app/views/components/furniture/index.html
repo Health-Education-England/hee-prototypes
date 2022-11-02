@@ -1,6 +1,5 @@
-{% extends "template.html" %}
+{% extends "components/furniture/template.html" %}
 
-{% block pageClass %}page--fullwidth page--template-landinghub{% endblock %}
 {% block pageTitle %}Furniture - Components - NWP Prototype Kit{% endblock %}
 
 {% block pageBreadcrumbs %}
@@ -23,33 +22,18 @@
 {% endblock %}
 
 {% block pageHeader %}
-    <div class="nhsuk-width-container">
-        <h1>Furniture</h1>
-        <p class="nhsuk-lede-text"></p>
-    </div>
+    <span class="nhsuk-caption-xl">Components</span>
+    <h1>Furniture</h1>
+    <p class="nhsuk-lede-text"></p>
 {% endblock %}
 
-{% block pageMain %}
-<div class="page__main">
-
-    <section class="nhsuk-width-container">
-        <div class="nhsuk-grid-row">
-            <ul class="nhsuk-card-group">
-                <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-                {{ card({
-                    "href": "/components/furniture/",
-                    "clickable": "false",
-                    "heading": "",
-                    "headingLevel": "2",
-                    "headingClasses": "nhsuk-heading-m",
-                    "description": ""
-                }) }}
-                </li>
-            </ul>
-        </div>
-    </section>
-    
-</div>
+{% block pageContent %}
+<p>Furniture components are core features of templates.</p>
+<ul>
+    <li><strong>Global</strong>: Components can appear across all the template types</li>
+    <li><strong>FurnContent</strong>: Components that appear on item/ page templates</li>
+    <li><strong>FurnCollections</strong>: Components that feature on collection templates</li>
+</ul>
 {% endblock %}
 
 {% block pageFooter %}{% endblock %}

@@ -1,0 +1,97 @@
+{% extends "template-rightbar.html" %}
+
+{% block pageTitle %}Examples - StadardContent - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+  {{
+  breadcrumb({
+    items: [
+      {
+        href: "/",
+        text: "Home"
+      },
+      {
+        href: "/templates",
+        text: "Templates"
+      },
+      {
+        href: "/templates/examples",
+        text: "Examples"
+      }
+    ],
+    href: "/templates/rightbar/standard-content",
+    text: "StandardContent"
+  })
+  }}
+{% endblock %}
+
+{% block pageContent %}
+  <h1>Example - StandardContent Template</h1>
+  <p class="nhsuk-body-l">Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi.</p>
+
+  {{ warningCallout({
+    heading: "Important",
+    HTML: "<p>Maecenas eu magna a sem aliquam luctus. Donec nec metus condimentum, molestie nulla eu, auctor sem.</p>"
+  }) }}
+
+  {{ anchorLinks({
+    title: "On this page",
+    headings: "h3"
+  }) }}
+
+  <h3 id="heading1">Donec pulvinar sollicitudin</h3>
+  <p>Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi. Sed vestibulum quis mi nec volutpat. Proin tristique eleifend volutpat. Maecenas eu magna a sem aliquam luctus. Donec nec metus condimentum, molestie nulla eu, auctor sem. Cras nec arcu sed lorem eleifend pellentesque nec nec ligula.</p>
+  <p>Nulla sodales dictum auctor. Donec pulvinar sollicitudin massa, nec pulvinar turpis dictum maximus. Duis consequat sem pretium purus vehicula ultricies. Maecenas sed turpis sed eros euismod consectetur.</p>
+
+  <h3 id="heading2">Pellentesque sit amet nulla</h3>
+  <p>Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus, semper ligula quis, eleifend ante. Pellentesque non malesuada tellus. Donec porta faucibus lacus at elementum. Pellentesque tempus magna vulputate felis ultricies porta. Cras condimentum imperdiet lobortis. Suspendisse aliquam nisl ut augue ultrices, sit amet tristique enim placerat. Nunc augue sapien, rhoncus scelerisque urna quis, posuere semper enim.</p>
+
+  {{ card({
+    feature: "true",
+    heading: "Feature card heading",
+    headingClasses: "nhsuk-heading-m",
+    description: "Ipsum commodo condimentum at tincidunt urna. Pulvinar ultrices sollicitudin volutpat bibendum ultricies. Dui hac at risus."
+  }) }}
+
+  {{ media({
+    title: "Pellentesque sit amet nulla",
+    description: "Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus.",
+    type: "youtube",
+    transcript: ["Donec pulvinar sollicitudin massa, nec pulvinar turpis dictum maximus."],
+    mediaId: "C0DPdy98e4c",
+    lastReview: "09/05/2022",
+    reviewDue: "09/05/2023"
+  }) }}
+
+{% endblock %}
+
+{% block pageRightbar %}
+  {{ relatedLinksCard({
+    heading: "Curabitur sit amet",
+    links: [
+      {
+        label: "Donec pulvinar",
+        url: "#"
+      },
+      {
+        label: "Duis consequat",
+        url: "#"
+      },
+      {
+        label: "Fusce at neque",
+        url: "#"
+      }
+    ]
+  })}}
+
+  {{ imageCard({
+    imgURL: "https://1000logos.net/wp-content/uploads/2017/09/NHS-logo-500x229.png",
+    imgALT: "Donec pulvinar sollicitudin massa",
+    imgCaption: "Donec pulvinar sollicitudin massa"
+  }) }}
+
+  {{ card({
+    heading: "Manage your GP application",
+    descriptionHtml: "<a class=\"nhsuk-button\" href=\"https://oriel.nhs.uk/Web/\" draggable=\"false\">Go to Oriel</a>"
+  }) }}
+{% endblock %}

@@ -11,16 +11,13 @@
 ///////////////////////////////////////////
 @import '../sass/resets';
 @import '../sass/mixins';
-@import '../sass/grid';
-//@import '../sass/misc';
-
+@import '../sass/print';
 @import '../components/utils';
 
 ///////////////////////////////////////////
 // TEMPLATES
 ///////////////////////////////////////////
 @import '../templates/page';
-//@import '../templates/layout';
 
 ///////////////////////////////////////////
 // NHSUK-HEE Components (Overrides)
@@ -42,7 +39,6 @@
 @import '../components/relatedcards';
 @import '../components/contact';
 @import '../components/sectionbreak';
-@import '../sass/print';
 @import '../components/related-links-card';
 @import '../components/hee/hee-microhero/microhero';
 @import '../components/hee/hee-timeline/timeline';
@@ -51,10 +47,7 @@
 @import '../components/hee/hee-filtertag/filtertag';
 @import '../components/image-card';
 @import '../components/related-nav';
-//@import '../components/header-search';
-//@import '../components/header';
-//@import '../components/navigation';
-//@import '../components/subheader';
+@import '../components/media';
 @import '../components/hee/hee-media/media';
 @import '../components/hee/hee-navmap/navmap';
 @import '../components/related-nav'; //?
@@ -72,16 +65,11 @@
 //@import '../components/hee/hee-detailscard/authorcard/authorcard';
 //@import '../components/hee/hee-detailscard/personcard/personcard';
 //@import '../components/hee/hee-detailscard/departmentcard/departmentcard';
-
-///////////////////////////////////////////
-// HEE Components
-///////////////////////////////////////////
-
 //@import '../components/nhsuk-hee/nhsuk-hee-reviewdate/reviewdate';
 //@import '../components/nhsuk-hee/nhsuk-hee-summarylist/summarylist';
 //@import '../components/hee/hee-homesection/homesection';
 //@import '../components/hee/hee-newsletter/newsletter';
 //@import '../components/hee/hee-relatednav/relatednav';
 //@import '../components/hee/hee-resources/resources';
-//@import '../components/hee/hee-sidebarimage/sidebarimage';
-//@import '../components/hee/hee-sidebarlinks/sidebarlinks';
+@import '../components/hee/hee-sidebarimage/sidebarimage';
+@import '../components/hee/hee-sidebarlinks/sidebarlinks';

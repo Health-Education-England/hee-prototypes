@@ -1,0 +1,80 @@
+{% extends "templates/rightbar/template.html" %}
+
+{% block pageTitle %}Templates - StandardContent - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/",
+            text: "Home"
+        },
+        {
+            href: "/templates",
+            text: "Templates"
+        }
+    ],
+        href: "/templates/rightbar/standard-content",
+        text: "StandardContent"
+    }) 
+}}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Templates</span>
+    <h1>StandardContent</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+<h3>HTML</h3>
+    {{ highlight({
+        "html" : '
+    <article class="page page--rightbar" id="maincontent" role="main">
+      <div class="page__breadcrumbs">[ BREADCRUMBS ]</div>
+      <div class="page__header">
+        <div class="nhsuk-width-container">
+          [ GO_BACK ]
+          <h1>[ TITLE ]</h1>
+          <span class="nhsuk-caption-xl">[ CAPTION/ SUBTITLE ]</span>
+          <p class="nhsuk-lede-text">[ EXCERPT ]</p>
+          [ PUBLISHED_BY | PUBLISHED_DATE ]
+          [ TAXONOMIES ]
+          [ IF MINIHUB ]
+            [ MINIHUB_NAV_LIST ]
+          [ ENDIF ]
+        </div>
+      </div>
+      <div class="nhsuk-width-container">
+        <div class="page__layout">
+          <div class="page__main">
+            <div class="page__content">
+              [ CONTENT_BLOCKS ]
+            </div>
+            [ LAST_UPDATED | REVIEWED_NEXTLAST ]
+          </div>
+          <aside class="page__rightbar">
+            [ RIGHTBAR_BLOCKS ]
+          </aside>
+        </div>
+      </div>
+      <div class="page__footer">
+        [ IF MINIHUB ]
+          [ MINIHUB_NAV_PAGINATION ]
+        [ ENDIF ]
+        [ APPLIES_TO | VERSION_CONTROL ]
+        [ ANCHORLINKS--FIXED | BACK_TO_TOP ]
+      </div>
+      <section class="page__feature">
+        [ FEATURE_BLOCKS ]
+      </section>
+    </article>'
+    })
+}}
+
+<h3>Example</h3>
+<a href="/templates/examples/standard-content">Click to preview the template</a>
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}
