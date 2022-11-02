@@ -4,7 +4,7 @@ const gulpNunjucks = require('gulp-nunjucks');
 const nunjucks = require('nunjucks');
 const htmlbeautify = require('gulp-html-beautify');
 
-const base = require('../gulpfile');
+const taskServe = require('./serve');
 
 const config = {
   baseUrl: process.env.BASE_URL ? process.env.BASE_URL : '/',
@@ -34,7 +34,7 @@ function buildTemplates() {
       'preserve_newlines': false
     }))
     .pipe(gulp.dest(config.dest))
-    .pipe(base.connect.reload());
+    .pipe(taskServe.connect.reload());
 }
 
 gulp.task('build:templates', gulp.parallel(

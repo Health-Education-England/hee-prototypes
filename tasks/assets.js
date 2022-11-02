@@ -5,18 +5,20 @@ const cleanCSS = require("gulp-clean-css");
 const rename = require("gulp-rename");
 const webpack = require("webpack-stream");
 const minify = require("gulp-minify");
-const base = require('../gulpfile')
+
+const config = require('../gulpfile')
+const taskServe = require('./serve')
 
 function compileHEEStyles() {
-  return gulp.src(base.PATHS.heeCSS)
+  return gulp.src(config.PATHS.heeCSS)
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(base.PATHS.public+'/css'))
+    .pipe(gulp.dest(config.PATHS.public+'/css'))
     .pipe(cleanCSS())
     .pipe(rename({ extname: '.min.css' }))
-    .pipe(gulp.dest(base.PATHS.public+'/css'))
-    .pipe(base.connect.reload())
+    .pipe(gulp.dest(config.PATHS.public+'/css'))
+    .pipe(taskServe.connect.reload())
     .on('error', (err) => {
       console.log(err)
       process.exit(1)
@@ -24,7 +26,7 @@ function compileHEEStyles() {
 }
 
 function compileHEEScripts() {
-  return gulp.src(base.PATHS.heeJS)
+  return gulp.src(config.PATHS.heeJS)
     .pipe(webpack({
       mode: 'production',
       devtool: 'inline-source-map',
@@ -45,7 +47,7 @@ function compileHEEScripts() {
       },
       target: 'web',
     }))
-    .pipe(gulp.dest(base.PATHS.public+'/js'))
+    .pipe(gulp.dest(config.PATHS.public+'/js'))
     .pipe(minify({
       noSource: true,
       ext:{
@@ -53,8 +55,8 @@ function compileHEEScripts() {
         min:'.min.js'
       }
     }))
-    .pipe(gulp.dest(base.PATHS.public+'/js'))
-    .pipe(base.connect.reload())
+    .pipe(gulp.dest(config.PATHS.public+'/js'))
+    .pipe(taskServe.connect.reload())
     .on('error', (err) => {
       console.log(err)
       process.exit(1)
@@ -62,13 +64,13 @@ function compileHEEScripts() {
 }
 
 function copyVendorScripts() {
-  return gulp.src(base.PATHS.vendorJS)
-    .pipe(gulp.dest(base.PATHS.public+'/js'));
+  return gulp.src(config.PATHS.vendorJS)
+    .pipe(gulp.dest(config.PATHS.public+'/js'));
 }
 
 function copyVendorStyles() {
-  return gulp.src(base.PATHS.vendorCSS)
-    .pipe(gulp.dest(base.PATHS.public+'/css'));
+  return gulp.src(config.PATHS.vendorCSS)
+    .pipe(gulp.dest(config.PATHS.public+'/css'));
 }
 
 function compileHEEAssets() {
@@ -77,14 +79,14 @@ function compileHEEAssets() {
     '!**/assets/**/**/*.js',
     '!**/assets/**/**/*.scss',
   ])
-    .pipe(gulp.dest(base.PATHS.public));
+    .pipe(gulp.dest(config.PATHS.public));
 }
 
 function copyImages() {
   return gulp.src([
     'app/assets/images/**/*.*',
   ])
-    .pipe(gulp.dest(base.PATHS.public + '/images'));
+    .pipe(gulp.dest(config.PATHS.public + '/images'));
 }
 
 gulp.task('build:assets', gulp.parallel(
