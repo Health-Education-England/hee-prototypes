@@ -464,13 +464,57 @@
 
 .nhsuk-header__navigation-link {
   font-size: 1rem; }
+  @media (min-width: 48.0625em) {
+    .nhsuk-header__navigation-link {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      justify-content: center; } }
 
-.nhsuk-header__navigation-item {
+.nhsuk-header__navigation-list {
   display: block; }
 
+.nhsuk-header__navigation-item {
+  display: inline-block; }
+  @media (min-width: 48.0625em) {
+    .nhsuk-header__navigation-item.nhsuk-subnav .nhsuk-subnav__wrapper {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; } }
+  @media (min-width: 48.0625em) {
+    .nhsuk-header__navigation-item.nhsuk-subnav .nhsuk-header__navigation-link {
+      align-items: stretch;
+      flex-direction: row;
+      justify-content: space-between; } }
+  @media (min-width: 48.0625em) {
+    .nhsuk-header__navigation-item.nhsuk-subnav .nhsuk-header__navigation-link .nhsuk-icon {
+      position: relative;
+      top: 0; } }
+
 @media (max-width: 48.0525em) {
+  .nhsuk-header__navigation-item {
+    display: block; }
   .nhsuk-header__navigation .nhsuk-width-container {
     margin: 0; } }
+
+/* NHSUK-Header__navigation -- more than 3 items */
+.nhsuk-header__navigation--more-items .nhsuk-header__navigation-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; }
+
+.nhsuk-header__navigation--more-items .nhsuk-header__navigation-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+@media (max-width: 48.0525em) {
+  .nhsuk-header__navigation--more-items .nhsuk-header__navigation-list {
+    display: block; }
+  .nhsuk-header__navigation--more-items .nhsuk-header__navigation-item {
+    display: block; } }
 
 /* NHSUK-Header__menu */
 .nhsuk-header__menu {
@@ -512,6 +556,7 @@
       .nhsuk-subnav .nhsuk-header__navigation-link .nhsuk-icon {
         display: block;
         fill: #ffffff;
+        left: 20px;
         right: 0;
         transform: rotate(90deg); } }
 
@@ -525,7 +570,7 @@
   @media (min-width: 61.875em) {
     .nhsuk-subnav .nhsuk-subnav__list {
       border: 1px solid #d8dde0;
-      border-bottom-width: 4px;
+      border-bottom-width: 4px !important;
       background: #ffffff;
       display: none;
       list-style: none;
@@ -533,6 +578,7 @@
       padding: 0;
       position: absolute;
       right: 0;
+      top: 100%;
       text-align: left;
       z-index: 9999; } }
   .nhsuk-subnav .nhsuk-subnav__list .nhsuk-subnav__list-item {
@@ -575,8 +621,10 @@
 .nhsuk-subnav.is-active .nhsuk-header__navigation-link .nhsuk-icon {
   transform: rotate(90deg); }
 
+.nhsuk-subnav.is-active .nhsuk-subnav__list-link {
+  padding-left: 28px; }
+
 .nhsuk-subnav.is-active .nhsuk-subnav__list {
-  border: 0;
   display: block;
   left: 0;
   margin-bottom: 0;
