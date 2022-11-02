@@ -1,6 +1,5 @@
 // Dependencies
 const clean = require('gulp-clean');
-const fs = require('fs')
 const gulp = require('gulp');
 
 // Task runners
