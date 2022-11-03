@@ -1,0 +1,72 @@
+{% extends "template-rightbar.html" %}
+
+{% block pageTitle %}Examples - NewsSingle - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+  {{
+  breadcrumb({
+    items: [
+      {
+        href: "/",
+        text: "Home"
+      },
+      {
+        href: "/templates",
+        text: "Templates"
+      },
+      {
+        href: "/templates/examples",
+        text: "Examples"
+      }
+    ],
+    href: "/templates/rightbar/news-single",
+    text: "NewsSingle"
+  })
+  }}
+{% endblock %}
+
+{% block pageContent %}
+  <h1>Example - NewsSingle Template</h1>
+  <p class="nhsuk-body-s nhsuk-u-secondary-text-color">Published on 25 October 2022</p>
+  <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-7">
+    <a href="#">Learning and development</a>,
+    <a href="#">Artificial intelligence and robotics</a>,
+    <a href="#">Policy and strategy</a>
+  </p>
+
+  <p class="nhsuk-body-l">Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi.</p>
+
+  <h3 id="heading1">Donec pulvinar sollicitudin</h3>
+  <p>Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi. Sed vestibulum quis mi nec volutpat. Proin tristique eleifend volutpat. Maecenas eu magna a sem aliquam luctus. Donec nec metus condimentum, molestie nulla eu, auctor sem. Cras nec arcu sed lorem eleifend pellentesque nec nec ligula.</p>
+  <p>Nulla sodales dictum auctor. Donec pulvinar sollicitudin massa, nec pulvinar turpis dictum maximus. Duis consequat sem pretium purus vehicula ultricies. Maecenas sed turpis sed eros euismod consectetur.</p>
+
+  {{ image({
+    src: "https://digital-transformation.hee.nhs.uk/binaries/content/gallery/digital-transformation/blogs/vr-headsets.jpg",
+    alt: "Nulla vitae est vel metus aliquam pharetra",
+    caption: "Pellentesque sit amet nulla a nibh"
+  }) }}
+
+  <h3 id="heading2">Pellentesque sit amet nulla</h3>
+  <p>Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus, semper ligula quis, eleifend ante. Pellentesque non malesuada tellus. Donec porta faucibus lacus at elementum. Pellentesque tempus magna vulputate felis ultricies porta. Cras condimentum imperdiet lobortis. Suspendisse aliquam nisl ut augue ultrices, sit amet tristique enim placerat. Nunc augue sapien, rhoncus scelerisque urna quis, posuere semper enim.</p>
+
+{% endblock %}
+
+{% block pageRightbar %}
+  {{ relatedLinksCard({
+    heading: "Curabitur sit amet",
+    links: [
+      {
+        label: "Donec pulvinar",
+        url: "#"
+      },
+      {
+        label: "Duis consequat",
+        url: "#"
+      },
+      {
+        label: "Fusce at neque",
+        url: "#"
+      }
+    ]
+  })}}
+{% endblock %}

@@ -1,4 +1,8 @@
 /* NHSUK-HEE-Image */
-
+.nhsuk-image {
+  @include mq($from: desktop) {
+    width: 100%;
+  }
+}
 
 // Add layout classes here too
