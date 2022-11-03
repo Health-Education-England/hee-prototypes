@@ -21,14 +21,14 @@ export default () => {
 
     toggletranscript() {
       if (this.isCollapsed()) {
-        this.container.classList.remove("hee-media__transcript-expanded")
+        this.container.classList.remove("nhsuk-media__transcript-expanded")
       } else {
-        this.container.classList.add("hee-media__transcript-expanded")
+        this.container.classList.add("nhsuk-media__transcript-expanded")
       }
     }
 
     isCollapsed() {
-      if(this.container.classList.contains("hee-media__transcript-expanded")){
+      if(this.container.classList.contains("nhsuk-media__transcript-expanded")){
         return true
       } else {
         return false
@@ -37,5 +37,5 @@ export default () => {
 
   }
 
-  [...document.getElementsByClassName('hee-media__transcript')].forEach(transcript => new Transcript(transcript))
+  [...document.getElementsByClassName('nhsuk-media__transcript')].forEach(transcript => new Transcript(transcript))
 }

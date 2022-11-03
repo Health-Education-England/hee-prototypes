@@ -4,6 +4,7 @@
   "description": "Rapidly create HTML prototypes of NHS websites and services.",
   "main": "app.js",
   "scripts": {
+    "serve": "gulp",
     "build": "gulp build",
     "bundle": "gulp bundle",
     "postinstall": "npm run build",
@@ -14,7 +15,7 @@
   },
   "author": "https://github.com/nhsuk/",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
     "babel-loader": "^8.2.5",
@@ -30,8 +31,11 @@
     "gulp-clean": "^0.4.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-html-beautify": "^1.0.1",
     "gulp-minify": "^3.1.0",
     "gulp-nodemon": "^2.5.0",
+    "gulp-nunjucks": "^5.1.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
@@ -40,9 +44,7 @@
     "nhsuk-frontend": "4.1.0",
     "node-sass": "^7.0",
     "nunjucks": "^3.2.2",
-    "path": "^0.12.7"
-  },
-  "devDependencies": {
+    "path": "^0.12.7",
     "webpack": "^5.72.0",
     "webpack-stream": "^7.0.0"
   }

@@ -1,4 +1,4 @@
-{% extends "template-article.html" %}
+{% extends "template.html" %}
 
 {% block pageClass %}hee-page--article{% endblock %}
 
@@ -7,7 +7,7 @@ Article - Layouts - HEE Prototype
 {% endblock %}
 
 {% block pageHeader %}
-{{ 
+{{
     breadcrumb({
     items: [
         {
@@ -21,7 +21,7 @@ Article - Layouts - HEE Prototype
     ],
         href: "/layouts/article",
         text: "Article"
-    }) 
+    })
 }}
 {% endblock %}
 
@@ -31,7 +31,7 @@ Article - Layouts - HEE Prototype
     <p class="nhsuk-lede-text">An example page with an anchorlinks quickjump</p>
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color">Published on 12 May 2022, by Susan Smith</p>
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-7">
-        <a href="/about/blogs?category=Qi-Stats">Statistics and data</a>, 
+        <a href="/about/blogs?category=Qi-Stats">Statistics and data</a>,
         <a href="/about/blogs?category=resource_discovery">Resource Discovery</a>
     </p>
     <h2>Qui autem esse poteris, nisi te amor ipse ceperit?</h2>
