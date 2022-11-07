@@ -64,8 +64,11 @@
             <div class="nhsuk-header__search-wrap" id="wrap-search">
               <form class="nhsuk-header__search-form" id="search" action="https://www.nhs.uk/search/" method="get" role="search">
                 <label class="nhsuk-u-visually-hidden" for="search-field">Search the NHS website</label>
-                <div class="autocomplete-container" id="autocomplete-container"></div>
-                <input class="nhsuk-search__input" id="search-field" name="q" type="search" placeholder="Search" autocomplete="off">
+                <div class="autocomplete-container" id="autocomplete-container">
+                  <div class="autocomplete__wrapper">
+                    <input class="nhsuk-search__input" id="search-field" name="q" type="search" placeholder="Search" autocomplete="off">
+                  </div>
+                </div>
                 <button class="nhsuk-search__submit" type="submit">
                   <svg class="nhsuk-icon nhsuk-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                     <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
@@ -162,7 +165,7 @@
     <div class="page__header">
       <div class="nhsuk-width-container">
         <h1>Templates</h1>
-        <p class="nhsuk-lede-text">All of the available HEE layouts</p>
+        <p class="nhsuk-lede-text">All of the available HEE templates</p>
       </div>
     </div>
     <div class="page__main">
@@ -173,9 +176,15 @@
               <div class="nhsuk-card nhsuk-card--clickable">
                 <div class="nhsuk-card__content">
                   <h3 class="nhsuk-card__heading nhsuk-heading-s">
-                    <a class="nhsuk-card__link" href="/templates/base/fullwidth">Fullwidth</a>
+                    <a class="nhsuk-card__link" href="/templates/base/">Base</a>
                   </h3>
-                  <p class="nhsuk-card__description">Landing/ section pages</p>
+                </div>
+              </div>
+            </li>
+            <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+              <div class="nhsuk-card nhsuk-card--clickable">
+                <div class="nhsuk-card__content">
+                  <h3 class="nhsuk-card__heading nhsuk-heading-s"> LeftBar </h3>
                 </div>
               </div>
             </li>
@@ -183,43 +192,30 @@
               <div class="nhsuk-card nhsuk-card--clickable">
                 <div class="nhsuk-card__content">
                   <h3 class="nhsuk-card__heading nhsuk-heading-s">
-                    <a class="nhsuk-card__link" href="/templates/base/leftbar">Leftbar</a>
+                    <a class="nhsuk-card__link" href="/templates/rightbar/">RightBar</a>
                   </h3>
-                  <p class="nhsuk-card__description">Listings</p>
                 </div>
               </div>
             </li>
             <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
               <div class="nhsuk-card nhsuk-card--clickable">
                 <div class="nhsuk-card__content">
-                  <h3 class="nhsuk-card__heading nhsuk-heading-s">
-                    <a class="nhsuk-card__link" href="/templates/base/rightbar">Rightbar</a>
-                  </h3>
-                  <p class="nhsuk-card__description">Content pages</p>
+                  <h3 class="nhsuk-card__heading nhsuk-heading-s"> FullWidth </h3>
                 </div>
               </div>
             </li>
           </ul>
         </div>
       </section>
-      <section class="nhsuk-width-container" style="display:none;">
-        <h2>Fullwidth templates</h2>
+      <section class="nhsuk-width-container">
+        <h2>Rightbar templates</h2>
         <div class="nhsuk-grid-row">
           <ul class="nhsuk-card-group">
-            <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+            <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
               <div class="nhsuk-card nhsuk-card--clickable">
                 <div class="nhsuk-card__content">
                   <h3 class="nhsuk-card__heading nhsuk-heading-s">
-                    <a class="nhsuk-card__link" href="/dfds">Homepage</a>
-                  </h3>
-                </div>
-              </div>
-            </li>
-            <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
-              <div class="nhsuk-card nhsuk-card--clickable">
-                <div class="nhsuk-card__content">
-                  <h3 class="nhsuk-card__heading nhsuk-heading-s">
-                    <a class="nhsuk-card__link" href="/layouts/listing">Listing</a>
+                    <a class="nhsuk-card__link" href="/templates/rightbar/standard-content">StandardContent</a>
                   </h3>
                 </div>
               </div>
