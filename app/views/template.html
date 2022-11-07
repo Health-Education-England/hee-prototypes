@@ -1,5 +1,6 @@
 {# UTILS #}
 {%- from 'utils/highlight.njk' import highlight %}
+{%- from 'utils/subnav.njk' import subnav %}
 
 {# SCAFFOLDING #}
 
@@ -202,6 +203,7 @@
     </div>
     {% endblock %}
 
+    {% block main %}
     <main class="page {% block pageClass %}{% endblock %}" id="maincontent" role="main">
       <div class="page__breadcrumbs">
         {% block pageBreadcrumbs %}
@@ -226,6 +228,7 @@
         {% endblock %}
       </section>
     </main>
+    {% endblock %}
 
     {% block footer %}
       {{ siteFooter({
