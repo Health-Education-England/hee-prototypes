@@ -1,0 +1,28 @@
+{% extends "template-example.html" %}
+
+{% block pageClass %}page--rightbar{% endblock %}
+
+{% block pageBreadcrumbs %}
+{% endblock %}
+
+{% block pageHeader %}
+{% endblock %}
+
+{% block pageMain %}
+<div class="nhsuk-width-container">
+  <div class="page__layout">
+    <div class="page__main">
+      {% block pageContent %}Content...{% endblock %}
+    </div>
+    <aside class="page__rightbar">
+      {% block pageRightbar %}Rightbar...{% endblock %}
+    </aside>
+  </div>
+</div>
+{% endblock %}
+
+{% block pageFooter %}
+{% endblock %}
+
+{% block pageFeature %}
+{% endblock %}
