@@ -1,7 +1,7 @@
-{% extends "template.html" %}
+{% extends "prototype-inner.html" %}
 
-{% block pageClass %}page--fullwidth{% endblock %}
-{% block pageTitle %}Layouts - HEE Prototype{% endblock %}
+
+{% block pageTitle %}Templates - HEE Prototype{% endblock %}
 
 {% block pageBreadcrumbs %}
     {{ breadcrumb({
@@ -16,83 +16,25 @@
     }) }}
 {% endblock %}
 
-{% block pageHeader %}
-    {#{ microHero({
-        imgURL: '/images/young-child-using-tablet-device.jpg',
-        imgAlt: 'An example bg image'
-    }) }#}
-    <div class="nhsuk-width-container">
-        <h1>Templates</h1>
-        <p class="nhsuk-lede-text">All of the available HEE templates</p>
-    </div>
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'templates'
+}) }}
 {% endblock %}
 
-{% block pageMain %}
-<div class="page__main">
-    <section class="nhsuk-width-container">
-        <div class="nhsuk-grid-row">
-            <ul class="nhsuk-card-group">
-                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-                    {{ card({
-                        "href": "/templates/base/",
-                        "clickable": "true",
-                        "heading": "Base",
-                        "headingLevel": "3",
-                        "headingClasses": "nhsuk-heading-s",
-                        "description": ""
-                    }) }}
-                    </li>
-                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-                {{ card({
-                    "href": "",
-                    "clickable": "true",
-                    "heading": "LeftBar",
-                    "headingLevel": "3",
-                    "headingClasses": "nhsuk-heading-s",
-                    "description": ""
-                }) }}
-                </li>
-                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-                    {{ card({
-                        "href": "/templates/rightbar/",
-                        "clickable": "true",
-                        "heading": "RightBar",
-                        "headingLevel": "3",
-                        "headingClasses": "nhsuk-heading-s",
-                        "description": ""
-                    }) }}
-                </li>
-                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-                    {{ card({
-                        "href": "",
-                        "clickable": "true",
-                        "heading": "FullWidth",
-                        "headingLevel": "3",
-                        "headingClasses": "nhsuk-heading-s",
-                        "description": ""
-                    }) }}
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="nhsuk-width-container">
-        <h2>Rightbar templates</h2>
-        <div class="nhsuk-grid-row">
-            <ul class="nhsuk-card-group">
-                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-                {{ card({
-                    "href": "/templates/rightbar/standard-content",
-                    "clickable": "false",
-                    "heading": "StandardContent",
-                    "headingLevel": "3",
-                    "headingClasses": "nhsuk-heading-s",
-                    "description": ""
-                }) }}
-                </li>
-            </ul>
-        </div>
-    </section>
-</div>
+{% block pageHeader %}
+    <h1>Templates</h1>
+    <p class="nhsuk-lede-text">All of the available HEE templates</p>
+{% endblock %}
+
+{% block pageContent %}
+    <p>The templates are grouped into <strong>three layout types</strong>:
+        <ul>
+            <li>Full width</li>
+            <li>Leftbar</li>
+            <li>Rightbar</li>
+        </ul>
+    </p>
 {% endblock %}
 
 {% block pageFooter %}{% endblock %}
