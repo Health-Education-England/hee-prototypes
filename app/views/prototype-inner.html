@@ -1,0 +1,20 @@
+{% extends "prototype.html" %}
+
+{% block pageClass %}page--template-prototype{% endblock %}
+
+{% block pageMain %}
+  <div class="nhsuk-width-container">
+    <div class="page__layout">
+      <div class="page__leftbar">
+        {% block pageLeftbar %}Leftbar...{% endblock %}
+      </div>
+      <div class="page__main">
+        <div class="page__header">
+          {% block pageHeader %}Header...{% endblock %}
+        </div>
+        {% block pageContent %}Content...{% endblock %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
+    
