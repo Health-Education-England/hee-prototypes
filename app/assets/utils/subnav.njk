@@ -1,7 +1,41 @@
 {% macro subnav(params) %}
 
 <nav class="page__subnav">
-{% if params.area == 'content' %}
+{% if params.area == 'templates' %}
+
+  <h3>Fullwidth</h3>
+  <ul>
+    <li><a href="/templates/fullwidth.html">Base</a></li>
+    <li>Homepage</li>
+    <li>Landing Page</li>
+    <li>404</li>
+    <li>A-Z Listing</li>
+    <li>Search Listing</li>
+  </ul>
+
+  <h3>Leftbar</h3>
+  <ul>
+    <li><a href="/templates/leftbar.html">Base</a></li>
+    <li>News Collection</li>
+    <li>Blog Collection</li>
+    <li>Casestudies Collection</li>
+    <li>Publication Collection</li>
+    <li>Event Collection</li>
+  </ul>
+
+  <h3>Rightbar</h3>
+  <ul>
+    <li><a href="/templates/rightbar.html">Base</a></li>
+    <li><a href="/templates/standard-content.html">Standard Content</a></li>
+    <li>Mini-hub</li>
+    <li><a href="/templates/news-item.html">News Item</a></li>
+    <li>Blog Item</li>
+    <li>Publication Landing</li>
+    <li>Publication Item</li>
+    <li>Event Item</li>
+  </ul>
+
+{% elseif params.area == 'content' %}
 
   {% if params.subarea == 'main' %}
     <h3>Main</h3>
