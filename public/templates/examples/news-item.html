@@ -7,13 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Fullwidth - Layouts - HEE Prototype</title>
+  <title>Examples - NewsSingle - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
   <link href="/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
-  <link href="/css/highlight.css" rel="stylesheet" />
   <link href="/css/hee.css" rel="stylesheet" />
   <link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png">
@@ -150,72 +149,58 @@
       </div>
     </div>
   </div>
-  <main class="page page--fullwidth has-microhero" id="maincontent" role="main">
+  <main class="page page--rightbar" id="maincontent" role="main">
     <div class="page__breadcrumbs">
       <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
         <div class="nhsuk-width-container">
           <ol class="nhsuk-breadcrumb__list">
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates">Templates</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates/base/fullwidth">Base - Fullwidth</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates/rightbar/news-item">News Item</a></li>
           </ol>
-          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/templates/base/fullwidth">Back to Base - Fullwidth</a></p>
+          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/templates/rightbar/news-item">Back to News Item</a></p>
         </div>
       </nav>
     </div>
     <div class="page__header">
-      <div class="hee-microhero" style="background-image:url(/images/hee_cl_gloucester_04361.jpeg);"></div>
-      <div class="nhsuk-width-container">
-        <h1>Base - Fullwidth</h1>
-        <p class="nhsuk-lede-text">Typically used for landing pages</p>
-      </div>
     </div>
-    <div class="page__main">
-      <div class="nhsuk-width-container">
-        <div class="page__content">
-          <pre><code>&lt;main class=&quot;page page--fullwidth&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
-  &lt;div class=&quot;page__breadcrumbs&quot;&gt;[ BREADCRUMBS ]&lt;/div&gt;
-  &lt;div class=&quot;page__header&quot;&gt;
-    [ MICROHERO | HERO ]
-    &lt;div class=&quot;nhsuk-width-container&quot;&gt;
-      &lt;h1&gt;[ TITLE ]&lt;/h1&gt;
-      &lt;span class=&quot;nhsuk-caption-xl&quot;&gt;[ CAPTION/ SUBTITLE ]&lt;/span&gt;
-      &lt;p class=&quot;nhsuk-lede-text&quot;&gt;[ EXCERPT ]&lt;/p&gt;
-      [ CAPTION ]
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;page__main&quot;&gt;
-    &lt;div class=&quot;nhsuk-width-container&quot;&gt;
-
-      [ IF HOMEPAGE, LANDINGHUB, 404 ]
-      &lt;div class=&quot;page__content&quot;&gt;
-        [ CONTENT_SECTIONS ]
-      &lt;/div&gt;
-      [ ELSEIF SEARCHRESULTSLISTING ]
-        [ SEARCH_INPUT ]
-        [ RESULTS_TITLE | FILTER_TAG | RESULTS_SORTING ]
-        [ RESULTS_LISTING ]
-        [ RESULTS_PAGINATION ]
-      [ ELSEIF AZLISTING ]
-        [ ALPHA_NAV ]
-        [ ALPHA_LISTING ]
-      [ ENDIF ]
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;page__footer&quot;&gt;
-  &lt;/div&gt;
-  &lt;section class=&quot;page__feature&quot;&gt;
-  &lt;/section&gt;
-&lt;/main&gt;</code></pre>
-          <h2>Example usage:</h2>
-          <ul class="nhsuk-list nhsuk-list--bullet">
-            <li>Homepage</li>
-            <li>LandingHub</li>
-            <li>404</li>
-            <li>AZListing</li>
-            <li>SearchResultsListing</li>
-          </ul>
+    <div class="nhsuk-width-container">
+      <div class="page__layout">
+        <div class="page__main">
+          <h1>News Item</h1>
+          <p class="nhsuk-body-s nhsuk-u-secondary-text-color">Published on 25 October 2022</p>
+          <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-7">
+            <a href="#">Learning and development</a>, <a href="#">Artificial intelligence and robotics</a>, <a href="#">Policy and strategy</a>
+          </p>
+          <p class="nhsuk-body-l">Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi.</p>
+          <h3 id="heading1">Donec pulvinar sollicitudin</h3>
+          <p>Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi. Sed vestibulum quis mi nec volutpat. Proin tristique eleifend volutpat. Maecenas eu magna a sem aliquam luctus. Donec nec metus condimentum, molestie nulla eu, auctor sem. Cras nec arcu sed lorem eleifend pellentesque nec nec ligula.</p>
+          <p>Nulla sodales dictum auctor. Donec pulvinar sollicitudin massa, nec pulvinar turpis dictum maximus. Duis consequat sem pretium purus vehicula ultricies. Maecenas sed turpis sed eros euismod consectetur.</p>
+          <figure class="nhsuk-image">
+            <img class="nhsuk-image__img" src="https://digital-transformation.hee.nhs.uk/binaries/content/gallery/digital-transformation/blogs/vr-headsets.jpg" alt="Nulla vitae est vel metus aliquam pharetra">
+            <figcaption class="nhsuk-image__caption"> Pellentesque sit amet nulla a nibh </figcaption>
+          </figure>
+          <h3 id="heading2">Pellentesque sit amet nulla</h3>
+          <p>Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus, semper ligula quis, eleifend ante. Pellentesque non malesuada tellus. Donec porta faucibus lacus at elementum. Pellentesque tempus magna vulputate felis ultricies porta. Cras condimentum imperdiet lobortis. Suspendisse aliquam nisl ut augue ultrices, sit amet tristique enim placerat. Nunc augue sapien, rhoncus scelerisque urna quis, posuere semper enim.</p>
         </div>
+        <aside class="page__rightbar">
+          <div class="hee-sidebarlinks">
+            <div class="hee-sidebarlinks__content">
+              <h3 class="hee-sidebarlinks__heading">Curabitur sit amet</h3>
+              <ul class="hee-sidebarlinks__list">
+                <li>
+                  <a class="hee-sidebarlinks__link" href="#">Donec pulvinar</a>
+                </li>
+                <li>
+                  <a class="hee-sidebarlinks__link" href="#">Duis consequat</a>
+                </li>
+                <li>
+                  <a class="hee-sidebarlinks__link" href="#">Fusce at neque</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
       </div>
     </div>
     <div class="page__footer">
@@ -236,11 +221,7 @@
   </footer>
   <script src="/js/jquery-3.3.1.min.js"></script>
   <script src="/js/nhsuk.min.js"></script>
-  <script src="/js/highlight.min.js"></script>
   <script src="/js/hee.js"></script>
-  <script>
-    hljs.highlightAll();
-  </script>
 </body>
 
 </html>
