@@ -1,6 +1,8 @@
 {# UTILS #}
 {%- from 'utils/highlight.njk' import highlight %}
 {%- from 'utils/subnav.njk' import subnav %}
+{%- from 'utils/example.njk' import example %}
+{%- from 'utils/components.njk' import components %}
 
 {# SCAFFOLDING #}
 
@@ -9,8 +11,8 @@
 {%- from 'skip-link/macro.njk' import skipLink %}
 
 {# Notifications #}
-{%- from 'scaffolding/notifications/globalalert/macro.njk' import globalAlert %}
-{%- from 'scaffolding/notifications/phasebanner/macro.njk' import phaseBanner %}
+{#%- from 'scaffolding/notifications/globalalert/macro.njk' import globalAlert %#}
+{#%- from 'scaffolding/notifications/phasebanner/macro.njk' import phaseBanner %#}
 
 {# Footer #}
 {%- from 'scaffolding/footer/macro.njk' import siteFooter %}
@@ -20,6 +22,7 @@
 
 {# GLOBAL #}
 {%- from 'hero/macro.njk' import hero %}
+{#%- from 'components/hee/hee-microhero/macro.njk' import microHero %#}
 {%- from 'components/hee/hee-homesection/macro.njk' import homepageSection %}
 {%- from 'card/macro.njk' import card %}
 
@@ -57,11 +60,11 @@
     {% block header %}
     <div class="site-header">
       {{ customHeader({
-          "showNav": "true",
+          "showNav": "false",
           "showSearch": "false",
           "showLogos": "false",
           "heeHref": "http://hee.nhs.uk/",
-          "classes": "nhsuk-header--white",
+          "classes": "",
           "organisation": {
             "name": "Health Education England",
             "split": "",
@@ -106,15 +109,10 @@
       <div class="page__breadcrumbs">
         {% block pageBreadcrumbs %}{% endblock %}
       </div>
-      {% block pageHeader %}{% endblock %}
       {% block pageMain %}{% endblock %}
       <div class="page__footer">
         {% block pageFooter %}{% endblock %}
       </div>
-      <section class="page__feature">
-        {% block pageFeature %}
-        {% endblock %}
-      </section>
     </main>
     {% endblock %}
     
