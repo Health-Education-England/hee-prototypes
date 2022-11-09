@@ -1,0 +1,101 @@
+{% extends "prototype-inner.html" %}
+
+{% block pageTitle %}News Item - Templates - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/",
+            text: "Home"
+        },
+        {
+            href: "/templates",
+            text: "Templates"
+        }
+    ],
+        href: "/templates/news-item",
+        text: "News Item"
+    }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+  {{ subnav({
+      area: 'templates'
+  }) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Templates</span>
+    <h1>News Item</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+<h3>Example</h3>
+<a href="/templates/examples/news-item" target="_blank">Click to preview the template [opens in new window]</a>
+
+<hr />
+
+<h3>HTML</h3>
+    {{ highlight({
+        "html" : '
+    <article class="page page--rightbar" id="maincontent" role="main">
+      <div class="page__breadcrumbs">[ INTEMPLATE_BREADCRUMBS ]</div>
+      <div class="page__header">
+        <div class="nhsuk-width-container">
+          [ GO_BACK ]
+          <h1>[ PAGE_TITLE ]</h1>
+          <span class="nhsuk-caption-xl">[ PAGE_CAPTION ]</span>
+          <p class="nhsuk-lede-text">[ PAGE_SUMMARY ]</p>
+          [ PUBLISHED_INFO ]
+          [ TAXONOMIES ]
+        </div>
+      </div>
+      <div class="nhsuk-width-container">
+        <div class="page__layout">
+          <div class="page__main">
+            <div class="page__content">
+              [ CONTENT--MAIN_BLOCKS ]
+            </div>
+            [ PAGE_LASTUPDATED ]
+          </div>
+          <aside class="page__rightbar">
+            [ CONTENT--SIDEBAR_BLOCKS ]
+          </aside>
+        </div>
+      </div>
+      <div class="page__footer">
+        [ INTEMPLATE_BACKTOTOP ]
+      </div>
+      <section class="page__feature">
+        [ CONTENT--FEATURED_BLOCKS ]
+      </section>
+    </article>'
+    })
+}}
+
+<hr />
+
+<h3>Components</h3>
+{{ components({
+    'data' : [
+        {
+            'type' : 'Furniture',
+            'list' : ['Page', 'Content']
+        },
+        {
+            'type' : 'Content Blocks',
+            'list' : ['Main', 'Sidebar', 'Featured']
+        }
+    ]
+}) }}
+
+<hr />
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

@@ -44,7 +44,7 @@
     }
 
     .nhsuk-header__navigation-link {
-      @include mq($from: desktop) {
+      @include mq($from: large-desktop) {
         align-items: stretch;
         flex-direction: row;
         justify-content: space-between;
@@ -61,7 +61,7 @@
 }
 
 
-@include mq($until: desktop) {
+@include mq($until: large-desktop) {
   .nhsuk-header__navigation-item {
     display: block;
   }
@@ -76,24 +76,22 @@
 
 .nhsuk-header__navigation--more-items {
   .nhsuk-header__navigation-list {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
+    display: block;
+
+    @include mq($from: large-desktop) {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+    }
   }
   .nhsuk-header__navigation-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+    display: block;
 
-  @include mq($until: desktop) {
-    .nhsuk-header__navigation-list {
-      display: block;
-    }
-    .nhsuk-header__navigation-item {
-      display: block;
+    @include mq($from: large-desktop) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   }
-
 }

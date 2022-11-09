@@ -1,0 +1,46 @@
+{% extends "prototype-examples.html" %}
+
+{% set page_url = '/examples' %}
+{% set page_title = 'Examples' %}
+
+{% block pageTitle %}{{ page_title }} - HEE Prototype{% endblock %}
+
+{% block pageBreadcrumbs %}
+    {{ breadcrumb({
+        items: [
+            {
+                href: "/",
+                text: "Home"
+            }
+        ],
+        href: page_url,
+        text: page_title
+    }) }}
+{% endblock %}
+
+{% block pageHeader %}
+  <div class="nhsuk-width-container">
+      <h1>{{ page_title }}</h1>
+      <p class="nhsuk-lede-text"></p>
+  </div>
+{% endblock %}
+
+{% block pageColLeft %}
+
+  <h2>Templates</h2>
+  <ul>
+    <li></li>
+  </ul>
+
+{% endblock %}
+
+{% block pageColRight %}
+
+  <h2>Blocks</h2>
+  <ul>
+    <li></li>
+  </ul>
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

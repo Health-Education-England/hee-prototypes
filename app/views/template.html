@@ -1,5 +1,6 @@
 {# UTILS #}
-{%- from 'utils/highlight.njk' import highlight %}
+{#%- from 'utils/highlight.njk' import highlight %#}
+{#%- from 'utils/subnav.njk' import subnav %#}
 
 {# SCAFFOLDING #}
 
@@ -71,7 +72,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <title>{% block pageTitle %}NWP Prototype Kit{% endblock %}</title>
+    <title>{% block pageTitle %}Examples{% endblock %}</title>
     <link href="https://www.nhs.uk/" rel="preconnect">
     <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
     <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -79,7 +80,6 @@
 
     {% block headCSS %}
       <link href="/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
-      <link href="/css/highlight.css" rel="stylesheet" />
       <link href="/css/hee.css" rel="stylesheet" />
     {% endblock %}
 
@@ -203,6 +203,7 @@
     </div>
     {% endblock %}
 
+    {% block main %}
     <main class="page {% block pageClass %}{% endblock %}" id="maincontent" role="main">
       <div class="page__breadcrumbs">
         {% block pageBreadcrumbs %}
@@ -227,6 +228,7 @@
         {% endblock %}
       </section>
     </main>
+    {% endblock %}
 
     {% block footer %}
       {{ siteFooter({
@@ -252,12 +254,10 @@
     {% block scripts %}
       <script src="/js/jquery-3.3.1.min.js"></script>
       <script src="/js/nhsuk.min.js"></script>
-      <script src="/js/highlight.min.js"></script>
       <script src="/js/hee.js"></script>
     {% endblock %}
     {% block bodyEnd %}
       {% block pageScripts %}
-        <script>hljs.highlightAll();</script>
       {% endblock %}
     {% endblock %}
   </body>

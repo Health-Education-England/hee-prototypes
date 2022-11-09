@@ -1,0 +1,12 @@
+{% macro components(params) %}
+
+{% for category in params.data %}
+  <h4>{{category.type}}</h4>
+  <ul>
+      {% for thing in category.list %}
+      <li>{{thing}}</li>
+      {% endfor %}
+  </ul>
+{% endfor %}
+
+{% endmacro %}

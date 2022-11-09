@@ -14,6 +14,7 @@ export default () => {
 
     addEventListeners() {
       if (this.toggleLink) {
+        this.toggleLink.addEventListener('click', event => event.preventDefault())
         this.toggleLink.addEventListener('mousedown', event => this.toggleMenu(event))
         this.toggleLink.addEventListener('keyup', event => {
           if (event.keyCode === 13) {
@@ -39,7 +40,6 @@ export default () => {
     }
 
     toggleMenu(event) {
-      event.preventDefault()
       this.handleState()
       this.toggleClass(this.container, "is-active")
       this.toggleAttribute(this.container, "aria-expanded")

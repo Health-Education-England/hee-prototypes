@@ -1,0 +1,88 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'content-goback' %}
+{% set page_title = 'Go Back' %}
+{% set page_tag = 'NHS' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/",
+            text: "Home"
+        },
+        {
+            href: "/blocks",
+            text: "Blocks"
+        },
+        {
+            href: "/blocks/furniture",
+            text: "Furniture"
+        }
+    ],
+        href: "/blocks/furniture/"+page_url,
+        text: page_title
+    }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'blocks',
+    subarea: 'furniture'
+}) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Furniture</span>
+    <h1>{{ page_title }}</h1>
+    
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+<h3>Example</h3>
+{{ example({
+    view: 'block',
+    url: '/blocks/furniture/examples/'+page_url,
+    height: '100px'
+}) }}
+
+<hr />
+
+<h3>Macro</h3>
+{{ highlight({
+  html: '
+{%- from "back-link/macro.njk" import backLink %}
+
+{{ backLink({
+    href: "/publications",
+    text: "Publications"
+}) }}
+  '
+}) }}
+
+<hr />
+
+<h3>HTML</h3>
+{{ highlight({
+  html : '
+<div class="nhsuk-back-link">
+    <a class="nhsuk-back-link__link" href="/publications">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg> 
+        Publications
+    </a>
+</div>
+'
+  }) 
+}}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}
