@@ -1,3 +1,31 @@
 {% macro example(params) %}
 
+{% if params.height %}
+  {% set height = params.height %}
+  {% set preview_height = (params.height/1.7)+'px' %}
+{% else %}
+  {% set height = '400px' %}
+  {% set preview_height = '200px' %}
+{% endif %}
+
+{# view - scaled, block #}
+{% if params.view == 'scaled' %}
+  <div class="prototype__example scaled" style="height:{{ preview_height }};">
+      <a href="{{ params.url }}" target="_blank" class="prototype__example-link">Open this example in new window</a>
+      <div class="thumbnail">
+        <iframe src="{{ params.url }}" height="{{ height }}"></iframe>
+      </div>
+  </div>
+
+{% else %}
+  <div class="prototype__example block">
+    <a href="{{ params.url }}" target="_blank" class="prototype__example-link">Open this example in new window</a>
+    <div class="thumbnail">
+      <iframe src="{{ params.url }}" height="{{ height }}"></iframe>
+    </div>
+  </div>
+{% endif %}
+
+
+
 {% endmacro %}
