@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Fullwidth - Layouts - HEE Prototype</title>
+  <title>Fullwidth - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -17,11 +17,10 @@
   <link href="/css/hee.css" rel="stylesheet" />
 </head>
 
-<body class="">
+<body class="prototype prototype--inner">
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script>
-  <a class="nhsuk-skip-link" href="#maincontent">Skip to main content</a>
   <div class="site-header">
     <header class="nhsuk-header nhsuk-header--organisation" role="banner">
       <div class="nhsuk-width-container nhsuk-header__container">
@@ -45,64 +44,94 @@
   </div>
   <div class="site-notifications">
   </div>
-  <main class="page page--fullwidth has-microhero" id="maincontent" role="main">
+  <main class="page " id="maincontent" role="main">
     <div class="page__breadcrumbs">
       <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
         <div class="nhsuk-width-container">
           <ol class="nhsuk-breadcrumb__list">
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates">Templates</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates/base/fullwidth">Base - Fullwidth</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates/base-fullwidth">Fullwidth</a></li>
           </ol>
-          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/templates/base/fullwidth">Back to Base - Fullwidth</a></p>
+          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/templates/base-fullwidth">Back to Fullwidth</a></p>
         </div>
       </nav>
     </div>
-    <div class="page__main">
-      <div class="nhsuk-width-container">
-        <div class="page__content">
+    <div class="nhsuk-width-container">
+      <div class="page__layout">
+        <div class="page__leftbar">
+          <nav class="page__subnav">
+            <h3>Fullwidth</h3>
+            <ul>
+              <li><a href="/templates/base-fullwidth.html">Base</a></li>
+              <li>Homepage</li>
+              <li>Landing Page</li>
+              <li>404</li>
+              <li>A-Z Listing</li>
+              <li>Search Listing</li>
+            </ul>
+            <h3>Leftbar</h3>
+            <ul>
+              <li><a href="/templates/base-leftbar.html">Base</a></li>
+              <li>News Collection</li>
+              <li>Blog Collection</li>
+              <li>Casestudies Collection</li>
+              <li>Publication Collection</li>
+              <li>Event Collection</li>
+            </ul>
+            <h3>Rightbar</h3>
+            <ul>
+              <li><a href="/templates/base-rightbar.html">Base</a></li>
+              <li><a href="/templates/standard-content.html">Standard Content</a></li>
+              <li>Mini-hub</li>
+              <li><a href="/templates/news-item.html">News Item</a></li>
+              <li>Blog Item</li>
+              <li>Publication Landing</li>
+              <li>Publication Item</li>
+              <li>Event Item</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="page__main">
+          <div class="page__header">
+            <span class="nhsuk-caption-xl">Templates</span>
+            <h1>Fullwidth</h1>
+            <p class="nhsuk-lede-text">Typically used for landing pages.</p>
+          </div>
           <pre><code>&lt;main class=&quot;page page--fullwidth&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
   &lt;div class=&quot;page__breadcrumbs&quot;&gt;[ BREADCRUMBS ]&lt;/div&gt;
   &lt;div class=&quot;page__header&quot;&gt;
-    [ MICROHERO | HERO ]
+    [ PAGE_HERO | PAGE_MICROHERO ]
     &lt;div class=&quot;nhsuk-width-container&quot;&gt;
-      &lt;h1&gt;[ TITLE ]&lt;/h1&gt;
-      &lt;span class=&quot;nhsuk-caption-xl&quot;&gt;[ CAPTION/ SUBTITLE ]&lt;/span&gt;
-      &lt;p class=&quot;nhsuk-lede-text&quot;&gt;[ EXCERPT ]&lt;/p&gt;
-      [ CAPTION ]
+      &lt;h1&gt;[ PAGE_TITLE ]&lt;/h1&gt;
+      &lt;span class=&quot;nhsuk-caption-xl&quot;&gt;[ PAGE_CAPTION ]&lt;/span&gt;
+      &lt;p class=&quot;nhsuk-lede-text&quot;&gt;[ PAGE_SUMMARY ]&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;page__main&quot;&gt;
     &lt;div class=&quot;nhsuk-width-container&quot;&gt;
-
       [ IF HOMEPAGE, LANDINGHUB, 404 ]
       &lt;div class=&quot;page__content&quot;&gt;
-        [ CONTENT_SECTIONS ]
+        [ CONTENT_BLOCKS ]
       &lt;/div&gt;
-      [ ELSEIF SEARCHRESULTSLISTING ]
+      [ ELSEIF SEARCH_LISTING ]
         [ SEARCH_INPUT ]
-        [ RESULTS_TITLE | FILTER_TAG | RESULTS_SORTING ]
+        [ RESULTS_TITLE | RESULTS_SORTING ]
+        [ FILTER_TAG ]
         [ RESULTS_LISTING ]
         [ RESULTS_PAGINATION ]
-      [ ELSEIF AZLISTING ]
-        [ ALPHA_NAV ]
-        [ ALPHA_LISTING ]
+      [ ELSEIF AZ_LISTING ]
+        [ AZLISTING_NAV ]
+        [ AZLISTING_RESULTS ]
       [ ENDIF ]
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;page__footer&quot;&gt;
   &lt;/div&gt;
   &lt;section class=&quot;page__feature&quot;&gt;
+    [ FEATURE_BLOCKS ]
   &lt;/section&gt;
 &lt;/main&gt;</code></pre>
-          <h2>Example usage:</h2>
-          <ul class="nhsuk-list nhsuk-list--bullet">
-            <li>Homepage</li>
-            <li>LandingHub</li>
-            <li>404</li>
-            <li>AZListing</li>
-            <li>SearchResultsListing</li>
-          </ul>
         </div>
       </div>
     </div>

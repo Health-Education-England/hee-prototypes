@@ -17,11 +17,10 @@
   <link href="/css/hee.css" rel="stylesheet" />
 </head>
 
-<body class="">
+<body class="prototype prototype--inner">
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script>
-  <a class="nhsuk-skip-link" href="#maincontent">Skip to main content</a>
   <div class="site-header">
     <header class="nhsuk-header nhsuk-header--organisation" role="banner">
       <div class="nhsuk-width-container nhsuk-header__container">
@@ -45,7 +44,7 @@
   </div>
   <div class="site-notifications">
   </div>
-  <main class="page page--template-prototype" id="maincontent" role="main">
+  <main class="page " id="maincontent" role="main">
     <div class="page__breadcrumbs">
       <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
         <div class="nhsuk-width-container">
@@ -99,12 +98,12 @@
             <h1>Standard Content</h1>
             <p class="nhsuk-lede-text"></p>
           </div>
-          <h3>Example</h3>
+          <h2>Example</h2>
           <a href="/templates/examples/standard-content" target="_blank">Click to preview the template [opens in new window]</a>
           <hr />
-          <h3>HTML</h3>
+          <h2>HTML</h2>
           <pre><code>&lt;article class=&quot;page page--rightbar&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
-  &lt;div class=&quot;page__breadcrumbs&quot;&gt;[ BREADCRUMBS ]&lt;/div&gt;
+  &lt;div class=&quot;page__breadcrumbs&quot;&gt;[ INTEMPLATE_BREADCRUMBS ]&lt;/div&gt;
   &lt;div class=&quot;page__header&quot;&gt;
     &lt;div class=&quot;nhsuk-width-container&quot;&gt;
       &lt;h1&gt;[ PAGE_TITLE ]&lt;/h1&gt;
@@ -117,44 +116,33 @@
     &lt;div class=&quot;page__layout&quot;&gt;
       &lt;div class=&quot;page__main&quot;&gt;
         &lt;div class=&quot;page__content&quot;&gt;
-          [ CONTENT_BLOCKS ]
+          [ CONTENT--MAIN_BLOCKS ]
         &lt;/div&gt;
         [ PAGE_LASTUPDATED ]
       &lt;/div&gt;
       &lt;aside class=&quot;page__rightbar&quot;&gt;
-        [ SIDEBAR_BLOCKS ]
+        [ CONTENT--SIDEBAR_BLOCKS ]
       &lt;/aside&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;page__footer&quot;&gt;
-    [ PAGE_BACKTOTOP ]
+    [ INTEMPLATE_BACKTOTOP ]
   &lt;/div&gt;
   &lt;section class=&quot;page__feature&quot;&gt;
-    [ FEATURE_BLOCKS ]
+    [ CONTENT--FEATURED_BLOCKS ]
   &lt;/section&gt;
 &lt;/article&gt;</code></pre>
-          <h3>Components</h3>
+          <h2>Components</h2>
           <h4>Furniture</h4>
           <ul>
-            <li>Micro Hero</li>
-            <li>Page Title</li>
-            <li>Page Caption</li>
-            <li>Page Subtitle</li>
-            <li>Page Summary</li>
-            <li>Page Last Updated</li>
-            <li>Table of Contents</li>
+            <li>Page</li>
+            <li>Content</li>
           </ul>
           <h4>Content Blocks</h4>
           <ul>
-            <li>All</li>
-          </ul>
-          <h4>Sidebar Blocks</h4>
-          <ul>
-            <li>All</li>
-          </ul>
-          <h4>Feature Blocks</h4>
-          <ul>
-            <li>All</li>
+            <li>Main</li>
+            <li>Sidebar</li>
+            <li>Featured</li>
           </ul>
           <hr />
         </div>

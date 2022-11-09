@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>News Article - Templates - NWP Prototype Kit</title>
+  <title>Logos - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -17,11 +17,10 @@
   <link href="/css/hee.css" rel="stylesheet" />
 </head>
 
-<body class="">
+<body class="prototype prototype--inner">
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script>
-  <a class="nhsuk-skip-link" href="#maincontent">Skip to main content</a>
   <div class="site-header">
     <header class="nhsuk-header nhsuk-header--organisation" role="banner">
       <div class="nhsuk-width-container nhsuk-header__container">
@@ -45,64 +44,74 @@
   </div>
   <div class="site-notifications">
   </div>
-  <main class="page page--template-prototype" id="maincontent" role="main">
+  <main class="page " id="maincontent" role="main">
     <div class="page__breadcrumbs">
       <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
         <div class="nhsuk-width-container">
           <ol class="nhsuk-breadcrumb__list">
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates">Templates</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates/news-article">News Article</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/blocks">Blocks</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/blocks/scaffolding">Scaffolding</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/blocks/scaffolding/header-logos">Logos</a></li>
           </ol>
-          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/templates/news-article">Back to News Article</a></p>
+          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/blocks/scaffolding/header-logos">Back to Logos</a></p>
         </div>
       </nav>
     </div>
     <div class="nhsuk-width-container">
       <div class="page__layout">
-        <div class="page__leftbar"> Leftbar... </div>
+        <div class="page__leftbar">
+          <nav class="page__subnav">
+            <div class="nhsuk-back-link">
+              <a class="nhsuk-back-link__link" href="/blocks">
+                <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+                </svg> Blocks</a>
+            </div>
+            <h3>Header</h3>
+            <ul>
+              <li><a href="/blocks/scaffolding/header">HEE Header</a></li>
+              <li><a href="/blocks/scaffolding/header-logos">Logos</a></li>
+              <li><a href="/blocks/scaffolding/header-navigation">Navigation</a></li>
+              <li><a href="/blocks/scaffolding/header-cookies">Cookies</a></li>
+              <li><a href="/blocks/scaffolding/header-search">Search</a></li>
+              <li><a href="/blocks/scaffolding/header-skiplink">Skip Link</a></li>
+            </ul>
+            <h3>InTemplate</h3>
+            <ul>
+              <li><a href="/blocks/scaffolding/intemplate-breadcrumbs">Breadcrumbs</a></li>
+              <li><a href="/blocks/scaffolding/intemplate-backtotop">Back to Top</a></li>
+            </ul>
+            <h3>Notifications</h3>
+            <ul>
+              <li><a href="/blocks/scaffolding/notifications-phasebanner">Phase Banner</a></li>
+              <li><a href="/blocks/scaffolding/notifications-globalalert">Global Alert</a></li>
+            </ul>
+            <h3>Footer</h3>
+            <ul>
+              <li><a href="/blocks/scaffolding/footer-links">Links + copyright</a></li>
+            </ul>
+          </nav>
+        </div>
         <div class="page__main">
           <div class="page__header">
-            <span class="nhsuk-caption-xl">Templates</span>
-            <h1>News Article</h1>
+            <span class="nhsuk-caption-xl">Scaffolding</span>
+            <h1>Logos</h1>
             <p class="nhsuk-lede-text"></p>
           </div>
-          <h3>HTML</h3>
-          <pre><code>
-    &lt;article class=&quot;page page--rightbar&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
-      &lt;div class=&quot;page__breadcrumbs&quot;&gt;[ BREADCRUMBS ]&lt;/div&gt;
-      &lt;div class=&quot;page__header&quot;&gt;
-        &lt;div class=&quot;nhsuk-width-container&quot;&gt;
-          [ GO_BACK ]
-          &lt;h1&gt;[ PAGE_TITLE ]&lt;/h1&gt;
-          &lt;span class=&quot;nhsuk-caption-xl&quot;&gt;[ PAGE_CAPTION ]&lt;/span&gt;
-          &lt;p class=&quot;nhsuk-lede-text&quot;&gt;[ PAGE_SUMMARY ]&lt;/p&gt;
-          [ PUBLISHED_INFO ]
-          [ TAXONOMIES ]
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;nhsuk-width-container&quot;&gt;
-        &lt;div class=&quot;page__layout&quot;&gt;
-          &lt;div class=&quot;page__main&quot;&gt;
-            &lt;div class=&quot;page__content&quot;&gt;
-              [ CONTENT--MAIN_BLOCKS ]
-            &lt;/div&gt;
-            [ PAGE_LASTUPDATED ]
-          &lt;/div&gt;
-          &lt;aside class=&quot;page__rightbar&quot;&gt;
-            [ SIDEBAR_BLOCKS ]
-          &lt;/aside&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;page__footer&quot;&gt;
-        [ BACK_TO_TOP ]
-      &lt;/div&gt;
-      &lt;section class=&quot;page__feature&quot;&gt;
-        [ FEATURE_BLOCKS ]
-      &lt;/section&gt;
-    &lt;/article&gt;</code></pre>
           <h3>Example</h3>
-          <a href="/templates/examples/news-article">Click to preview the template</a>
+          <div class="prototype__example block">
+            <a href="/blocks/scaffolding/examples/header-logos" target="_blank" class="prototype__example-link">Open this example in new window</a>
+            <div class="thumbnail">
+              <iframe src="/blocks/scaffolding/examples/header-logos" height="400px"></iframe>
+            </div>
+          </div>
+          <hr />
+          <h3>Macro</h3>
+          <pre><code></code></pre>
+          <hr />
+          <h3>HTML</h3>
+          <pre><code></code></pre>
         </div>
       </div>
     </div>

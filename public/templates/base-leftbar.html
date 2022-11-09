@@ -17,11 +17,10 @@
   <link href="/css/hee.css" rel="stylesheet" />
 </head>
 
-<body class="">
+<body class="prototype prototype--inner">
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script>
-  <a class="nhsuk-skip-link" href="#maincontent">Skip to main content</a>
   <div class="site-header">
     <header class="nhsuk-header nhsuk-header--organisation" role="banner">
       <div class="nhsuk-width-container nhsuk-header__container">
@@ -45,16 +44,16 @@
   </div>
   <div class="site-notifications">
   </div>
-  <main class="page page--template-prototype" id="maincontent" role="main">
+  <main class="page " id="maincontent" role="main">
     <div class="page__breadcrumbs">
       <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
         <div class="nhsuk-width-container">
           <ol class="nhsuk-breadcrumb__list">
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates">Templates</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates/leftbar">Leftbar</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates/base-leftbar">Leftbar</a></li>
           </ol>
-          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/templates/leftbar">Back to Leftbar</a></p>
+          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/templates/base-leftbar">Back to Leftbar</a></p>
         </div>
       </nav>
     </div>
@@ -102,10 +101,11 @@
           <pre><code>&lt;main class=&quot;page page--leftbar&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
   &lt;div class=&quot;page__breadcrumbs&quot;&gt;[ BREADCRUMBS ]&lt;/div&gt;
   &lt;div class=&quot;page__header&quot;&gt;
+    [ PAGE_MICROHERO ]
     &lt;div class=&quot;nhsuk-width-container&quot;&gt;
-      &lt;h1&gt;[ TITLE ]&lt;/h1&gt;
-      &lt;span class=&quot;nhsuk-caption-xl&quot;&gt;[ CAPTION/ SUBTITLE ]&lt;/span&gt;
-      &lt;p class=&quot;nhsuk-lede-text&quot;&gt;[ EXCERPT ]&lt;/p&gt;
+      &lt;h1&gt;[ PAGE_TITLE ]&lt;/h1&gt;
+      &lt;span class=&quot;nhsuk-caption-xl&quot;&gt;[ PAGE_CAPTION ]&lt;/span&gt;
+      &lt;p class=&quot;nhsuk-lede-text&quot;&gt;[ PAGE_SUMMARY ]&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;nhsuk-width-container&quot;&gt;
@@ -114,7 +114,8 @@
         [ FILTER_GROUP | FILTER_CLEAR ]
       &lt;/div&gt;
       &lt;div class=&quot;page__main&quot;&gt;
-        [ RESULTS_TITLE | FILTER_TAG | RESULTS_SORTING ]
+        [ RESULTS_TITLE | RESULTS_SORTING ]
+        [ FILTER_TAG ]
         [ RESULTS_LISTING ]
         [ RESULTS_PAGINATION ]
       &lt;/div&gt;

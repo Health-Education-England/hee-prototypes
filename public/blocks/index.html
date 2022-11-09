@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Layouts - HEE Prototype</title>
+  <title>Blocks - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -17,11 +17,10 @@
   <link href="/css/hee.css" rel="stylesheet" />
 </head>
 
-<body class="">
+<body class="prototype prototype--inner">
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script>
-  <a class="nhsuk-skip-link" href="#maincontent">Skip to main content</a>
   <div class="site-header">
     <header class="nhsuk-header nhsuk-header--organisation" role="banner">
       <div class="nhsuk-width-container nhsuk-header__container">
@@ -45,28 +44,37 @@
   </div>
   <div class="site-notifications">
   </div>
-  <main class="page page--template-prototype" id="maincontent" role="main">
+  <main class="page " id="maincontent" role="main">
     <div class="page__breadcrumbs">
       <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
         <div class="nhsuk-width-container">
           <ol class="nhsuk-breadcrumb__list">
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates">Templates</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/blocks">Blocks</a></li>
           </ol>
-          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/templates">Back to Templates</a></p>
+          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/blocks">Back to Blocks</a></p>
         </div>
       </nav>
     </div>
     <div class="nhsuk-width-container">
       <div class="page__layout">
-        <div class="page__leftbar"> Leftbar... </div>
+        <div class="page__leftbar">
+          <nav class="page__subnav">
+            <h3>Blocks</h3>
+            <ul>
+              <li><a href="/blocks/content/">Content</a></li>
+              <li><a href="/blocks/furniture/">Furniture</a></li>
+              <li><a href="/blocks/scaffolding/">Scaffolding</a></li>
+            </ul>
+          </nav>
+        </div>
         <div class="page__main">
           <div class="page__header">
             <div class="nhsuk-width-container">
               <h1>Blocks</h1>
               <p class="nhsuk-lede-text"></p>
             </div>
-          </div> Content...
+          </div>
         </div>
       </div>
     </div>
