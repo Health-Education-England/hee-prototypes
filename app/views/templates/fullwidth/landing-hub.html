@@ -1,0 +1,73 @@
+{% extends "templates/fullwidth/template.html" %}
+
+{% block pageTitle %}Templates - FullWidth - Landing Page - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/",
+            text: "Home"
+        },
+        {
+            href: "/templates",
+            text: "Templates"
+        }
+    ],
+        href: "/templates/fullwidth/landing-hub",
+        text: "LandingHub"
+    }) 
+}}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Templates</span>
+    <h1>Landing Page</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+    <h3>HTML</h3>
+    {{ highlight({
+        "html" : '<main class="page page--fullwidth" id="maincontent" role="main">
+  <div class="page__breadcrumbs">[ BREADCRUMBS ]</div>
+  <div class="page__header">
+    [ MICROHERO | HERO ]
+    <div class="nhsuk-width-container">
+      <h1>[ TITLE ]</h1>
+      <span class="nhsuk-caption-xl">[ CAPTION/ SUBTITLE ]</span>
+      <p class="nhsuk-lede-text">[ EXCERPT ]</p>
+      [ CAPTION ]
+    </div>
+  </div>
+  <div class="page__main">
+    <div class="nhsuk-width-container">
+
+      [ IF HOMEPAGE, LANDINGHUB, 404 ]
+      <div class="page__content">
+        [ CONTENT_SECTIONS ]
+      </div>
+      [ ELSEIF SEARCHRESULTSLISTING ]
+        [ SEARCH_INPUT ]
+        [ RESULTS_TITLE | FILTER_TAG | RESULTS_SORTING ]
+        [ RESULTS_LISTING ]
+        [ RESULTS_PAGINATION ]
+      [ ELSEIF AZLISTING ]
+        [ ALPHA_NAV ]
+        [ ALPHA_LISTING ]
+      [ ENDIF ]
+    </div>
+  </div>
+  <div class="page__footer">
+  </div>
+  <section class="page__feature">
+  </section>
+</main>'
+    })
+    }}
+    <h3>Example</h3>
+    <a href="/templates/examples/landing-hub">Click to preview the template</a>
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

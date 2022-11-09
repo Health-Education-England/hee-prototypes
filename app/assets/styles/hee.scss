@@ -47,10 +47,10 @@
 @import '../components/hee/hee-filtertag/filtertag';
 @import '../components/image-card';
 @import '../components/related-nav';
-@import '../components/header-search';
-//@import '../components/header';
+@import '../components/header';
 //@import '../components/navigation';
 //@import '../components/subheader';
+@import '../components/media';
 @import '../components/hee/hee-media/media';
 @import '../components/hee/hee-navmap/navmap';
 @import '../components/related-nav'; //?
@@ -74,5 +74,5 @@
 //@import '../components/hee/hee-newsletter/newsletter';
 //@import '../components/hee/hee-relatednav/relatednav';
 //@import '../components/hee/hee-resources/resources';
-//@import '../components/hee/hee-sidebarimage/sidebarimage';
-//@import '../components/hee/hee-sidebarlinks/sidebarlinks';
+@import '../components/hee/hee-sidebarimage/sidebarimage';
+@import '../components/hee/hee-sidebarlinks/sidebarlinks';
