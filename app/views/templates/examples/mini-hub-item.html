@@ -1,6 +1,6 @@
-{% extends "template-rightbar.html" %}
+{% extends "example-template-rightbar.html" %}
 
-{% block pageTitle %}Examples - MiniHubSingle - NWP Prototype Kit{% endblock %}
+{% block pageTitle %}Mini-hub Item - Examples - NWP Prototype Kit{% endblock %}
 
 {% block pageBreadcrumbs %}
   {{
@@ -9,25 +9,22 @@
       {
         href: "/",
         text: "Home"
-      },
-      {
-        href: "/templates",
-        text: "Templates"
-      },
-      {
-        href: "/templates/examples",
-        text: "Examples"
       }
     ],
-    href: "/templates/rightbar/mini-hub-single",
-    text: "MiniHubSingle"
+    href: "/templates/examples/mini-hub-item",
+    text: "Mini-hub Item"
   })
   }}
 {% endblock %}
 
-{% block pageContent %}
-  <h1>Example - MiniHubSingle Template</h1>
+{% block pageHeader %}
+  <div class="nhsuk-width-container">
+    <h1>Mini-hub Item</h1>
+    <p class="nhsuk-lede-text"></p>
+  </div>
+{% endblock %}
 
+{% block pageContent %}
   {{ contentsList({
     items: [
       {
