@@ -1,4 +1,6 @@
-{% extends "template-rightbar.html" %}
+{% extends "example-template-rightbar.html" %}
+
+{% block pageTitle %}Standard Content - Examples - NWP Prototype Kit{% endblock %}
 
 {% block pageBreadcrumbs %}
 {{ 
@@ -7,10 +9,6 @@
         {
             href: "/",
             text: "Home"
-        },
-        {
-            href: "/templates",
-            text: "Templates"
         }
     ],
         href: "/templates/examples/standard-content",
@@ -27,7 +25,7 @@
 {% endblock %}
 
 {% block pageContent %}
-<article class="nhsuk-width-container">
+<article>
   <p>NHS library staff in England may copy and share extracts from most printed and digital work in the following ways.</p>
   {{ reviewDate({
     "lastReview": "12 February 2017",

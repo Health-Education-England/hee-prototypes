@@ -35,27 +35,8 @@
 
 {% block pageContent %}
 
-<h3>Components</h3>
-{{ components({
-    'data' : [
-        {
-            'type' : 'Furniture',
-            'list' : ['Micro Hero', 'Page Title', 'Page Caption', 'Page Subtitle', 'Page Summary', 'Page Last Updated', 'Table of Contents']
-        },
-        {
-            'type' : 'Content Blocks',
-            'list' : ['All']
-        },
-        {
-            'type' : 'Sidebar Blocks',
-            'list' : ['All']
-        },
-        {
-            'type' : 'Feature Blocks',
-            'list' : ['All']
-        }
-    ]
-}) }}
+<h3>Example</h3>
+<a href="/templates/examples/news-item" target="_blank">Click to preview the template [opens in new window]</a>
 
 <hr />
 
@@ -63,7 +44,7 @@
     {{ highlight({
         "html" : '
     <article class="page page--rightbar" id="maincontent" role="main">
-      <div class="page__breadcrumbs">[ BREADCRUMBS ]</div>
+      <div class="page__breadcrumbs">[ INTEMPLATE_BREADCRUMBS ]</div>
       <div class="page__header">
         <div class="nhsuk-width-container">
           [ GO_BACK ]
@@ -83,21 +64,38 @@
             [ PAGE_LASTUPDATED ]
           </div>
           <aside class="page__rightbar">
-            [ SIDEBAR_BLOCKS ]
+            [ CONTENT--SIDEBAR_BLOCKS ]
           </aside>
         </div>
       </div>
       <div class="page__footer">
-        [ BACK_TO_TOP ]
+        [ INTEMPLATE_BACKTOTOP ]
       </div>
       <section class="page__feature">
-        [ FEATURE_BLOCKS ]
+        [ CONTENT--FEATURED_BLOCKS ]
       </section>
     </article>'
     })
 }}
-<h3>Example</h3>
-<a href="/templates/examples/news-item" target="_blank">Click to preview the template [opens in new window]</a>
+
+<hr />
+
+<h3>Components</h3>
+{{ components({
+    'data' : [
+        {
+            'type' : 'Furniture',
+            'list' : ['Page', 'Content']
+        },
+        {
+            'type' : 'Content Blocks',
+            'list' : ['Main', 'Sidebar', 'Featured']
+        }
+    ]
+}) }}
+
+<hr />
+
 {% endblock %}
 
 {% block pageFooter %}{% endblock %}

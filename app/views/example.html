@@ -46,6 +46,7 @@
 {%- from 'components/nhsuk-hee/nhsuk-hee-blocklinks/macro.njk' import blocklinks %}
 
 {# NHSUK Components #}
+{%- from 'back-link/macro.njk' import backLink %}
 {%- from 'button/macro.njk' import button %}
 {%- from 'card/macro.njk' import card %}
 {%- from 'checkboxes/macro.njk' import checkboxes %}
@@ -59,7 +60,6 @@
 {%- from 'tables/macro.njk' import table %}
 {%- from 'warning-callout/macro.njk' import warningCallout %}
 {#%- from 'action-link/macro.njk' import actionLink %}
-{%- from 'back-link/macro.njk' import backLink %}
 {%- from 'care-card/macro.njk' import careCard %}
 {%- from 'date-input/macro.njk' import dateInput %}
 {%- from 'details/macro.njk' import details %}
@@ -114,47 +114,15 @@
     {% endblock %}
 
     {% block headerStart %}
-      {{ skipLink({
-        href: '#maincontent',
-        text: 'Skip to main content'
-      }) }}
     {% endblock %}
 
     {% block header %}
-    <div class="site-header">
-    </div>
     {% endblock %}
 
     {% block headerEnd %}
-    <div class="site-notifications">
-    </div>
     {% endblock %}
 
     {% block main %}
-    <main class="page {% block pageClass %}{% endblock %}" id="maincontent" role="main">
-      <div class="page__breadcrumbs">
-        {% block pageBreadcrumbs %}
-          {# Breadcrumbs... #}
-        {% endblock %}
-      </div>
-      <div class="page__header">
-        {% block pageHeader %}
-          {# Hero... Microhero... Title #}
-        {% endblock %}
-      </div>
-      {% block pageMain %}
-        {# Template... #}
-      {% endblock %}
-      <div class="page__footer">
-        {% block pageFooter %}
-          {# Last updated... Tags... Page created... #}
-        {% endblock %}
-      </div>
-      <section class="page__feature">
-        {% block pageFeature %}
-        {% endblock %}
-      </section>
-    </main>
     {% endblock %}
 
     {% block footer %}

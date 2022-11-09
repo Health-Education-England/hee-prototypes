@@ -1,6 +1,9 @@
 {% extends "prototype-inner.html" %}
 
-{% block pageTitle %}Rightbar - Templates - NWP Prototype Kit{% endblock %}
+{% set page_url = 'base-rightbar' %}
+{% set page_title = 'Rightbar' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
 
 {% block pageBreadcrumbs %}
 {{ 
@@ -15,8 +18,8 @@
         text: "Templates"
       }
   ],
-      href: "/templates/rightbar",
-      text: "Rightbar"
+      href: "/templates/"+page_url,
+      text: page_title
   }) 
 }}
 {% endblock %}
@@ -29,7 +32,7 @@
 
 {% block pageHeader %}
     <span class="nhsuk-caption-xl">Templates</span>
-    <h1>RightBar</h1>
+    <h1>{{ page_title }}</h1>
     <p class="nhsuk-lede-text">A layout with a left content area and right sidebar.</p>
 {% endblock %}
 
@@ -84,3 +87,4 @@
 {% endblock %}
 
 {% block pageFooter %}{% endblock %}
+{% block pageFeature %}{% endblock %}

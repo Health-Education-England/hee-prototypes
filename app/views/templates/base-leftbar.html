@@ -1,6 +1,9 @@
 {% extends "prototype-inner.html" %}
 
-{% block pageTitle %}Leftbar - Templates - NWP Prototype Kit{% endblock %}
+{% set page_url = 'base-leftbar' %}
+{% set page_title = 'Leftbar' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
 
 {% block pageBreadcrumbs %}
 {{ 
@@ -15,8 +18,8 @@
         text: "Templates"
       }
   ],
-      href: "/templates/leftbar",
-      text: "Leftbar"
+      href: "/templates/"+page_url,
+      text: page_title
   }) 
 }}
 {% endblock %}
@@ -29,7 +32,7 @@
 
 {% block pageHeader %}
     <span class="nhsuk-caption-xl">Templates</span>
-    <h1>Leftbar</h1>
+    <h1>{{ page_title }}</h1>
     <p class="nhsuk-lede-text">A layout with a left sidebar and right content area. Typically used for listing pages.</p>
 {% endblock %}
 
@@ -38,10 +41,11 @@
   "html" : '<main class="page page--leftbar" id="maincontent" role="main">
   <div class="page__breadcrumbs">[ BREADCRUMBS ]</div>
   <div class="page__header">
+    [ PAGE_MICROHERO ]
     <div class="nhsuk-width-container">
-      <h1>[ TITLE ]</h1>
-      <span class="nhsuk-caption-xl">[ CAPTION/ SUBTITLE ]</span>
-      <p class="nhsuk-lede-text">[ EXCERPT ]</p>
+      <h1>[ PAGE_TITLE ]</h1>
+      <span class="nhsuk-caption-xl">[ PAGE_CAPTION ]</span>
+      <p class="nhsuk-lede-text">[ PAGE_SUMMARY ]</p>
     </div>
   </div>
   <div class="nhsuk-width-container">
@@ -50,7 +54,8 @@
         [ FILTER_GROUP | FILTER_CLEAR ]
       </div>
       <div class="page__main">
-        [ RESULTS_TITLE | FILTER_TAG | RESULTS_SORTING ]
+        [ RESULTS_TITLE | RESULTS_SORTING ]
+        [ FILTER_TAG ]
         [ RESULTS_LISTING ]
         [ RESULTS_PAGINATION ]
       </div>
@@ -66,3 +71,4 @@
 {% endblock %}
 
 {% block pageFooter %}{% endblock %}
+{% block pageFeature %}{% endblock %}

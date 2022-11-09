@@ -1,0 +1,75 @@
+{% extends "example-blocks.html" %}
+
+{% block main %}
+<div class="site-header">
+{{ customHeader({
+  "showNav": "true",
+  "showSearch": "true",
+  "showLogos": "true",
+  "heeHref": "http://hee.nhs.uk/",
+  "classes": "nhsuk-header--white",
+  "organisation": {
+    "name": "Health Education England",
+    "split": "",
+    "descriptor": "Hub Name"
+  },
+  "logos": [
+    {
+      "href": "https://www.nimdta.gov.uk/",
+      "label": "Northern Ireland Medical and Dental Training Agency Website (Opens in New Window)",
+      "imgSrc": "/images/logos/nimdta-logo.png",
+      "imgAlt": "Logo for Northern Ireland Medical and Dental Training Agency"
+    },
+    {
+      "href": "https://www.nes.scot.nhs.uk/",
+      "label": "NHS Education for Scotland Website (Opens in New Window)",
+      "imgSrc": "/images/logos/nhs-scotland-logo.png",
+      "imgAlt": "Logo for NHS Education for Scotland"
+    },
+    {
+      "href": "https://heiw.nhs.wales/",
+      "label": "Health Education and Improvement Wales Website (Opens in New Window)",
+      "imgSrc": "/images/logos/heiw-logo.png",
+      "imgAlt": "Logo for Health Education and Improvement Wales"
+    }
+  ],
+  "primaryLinks": [
+    {
+      url: "/templates",
+      label: "Templates"
+    },
+    {
+      url: "/templates",
+      label: "Templates longer name"
+    },
+    {
+      url: "/components",
+      label: "Components",
+      children: [
+        {
+          url: "/scaffolding",
+          label: "Scaffolding"
+        },
+        {
+          url: "/components/furniture",
+          label: "Furniture"
+        },
+        {
+          url: "/components/contentblocks",
+          label: "Content Blocks"
+        },
+        {
+          url: "/components/rightblocks",
+          label: "Right Blocks"
+        },
+        {
+          url: "/components/featureblocks",
+          label: "Feature Blocks"
+        }
+      ]
+    }
+  ]
+})
+}}
+</div>
+{% endblock %}

@@ -1,6 +1,9 @@
 {% extends "prototype-inner.html" %}
 
-{% block pageTitle %}Standard Content - Templates - NWP Prototype Kit{% endblock %}
+{% set page_url = 'standard-content' %}
+{% set page_title = 'Standard Content' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
 
 {% block pageBreadcrumbs %}
 {{ 
@@ -15,8 +18,8 @@
             text: "Templates"
         }
     ],
-        href: "/templates/standard-content",
-        text: "Standard Content"
+        href: "/templates/"+page_url,
+        text: page_title
     }) 
 }}
 {% endblock %}
@@ -30,21 +33,21 @@
 
 {% block pageHeader %}
     <span class="nhsuk-caption-xl">Templates</span>
-    <h1>Standard Content</h1>
+    <h1>{{ page_title }}</h1>
     <p class="nhsuk-lede-text"></p>
 {% endblock %}
 
 {% block pageContent %}
 
-<h3>Example</h3>
-<a href="/templates/examples/standard-content" target="_blank">Click to preview the template [opens in new window]</a>
+<h2>Example</h2>
+<a href="/templates/examples/{{ page_url }}" target="_blank">Click to preview the template [opens in new window]</a>
 
 <hr />
 
-<h3>HTML</h3>
+<h2>HTML</h2>
 {{ highlight({
   "html" : '<article class="page page--rightbar" id="maincontent" role="main">
-  <div class="page__breadcrumbs">[ BREADCRUMBS ]</div>
+  <div class="page__breadcrumbs">[ INTEMPLATE_BREADCRUMBS ]</div>
   <div class="page__header">
     <div class="nhsuk-width-container">
       <h1>[ PAGE_TITLE ]</h1>
@@ -57,43 +60,35 @@
     <div class="page__layout">
       <div class="page__main">
         <div class="page__content">
-          [ CONTENT_BLOCKS ]
+          [ CONTENT--MAIN_BLOCKS ]
         </div>
         [ PAGE_LASTUPDATED ]
       </div>
       <aside class="page__rightbar">
-        [ SIDEBAR_BLOCKS ]
+        [ CONTENT--SIDEBAR_BLOCKS ]
       </aside>
     </div>
   </div>
   <div class="page__footer">
-    [ PAGE_BACKTOTOP ]
+    [ INTEMPLATE_BACKTOTOP ]
   </div>
   <section class="page__feature">
-    [ FEATURE_BLOCKS ]
+    [ CONTENT--FEATURED_BLOCKS ]
   </section>
 </article>'
   }) 
 }}
 
-<h3>Components</h3>
+<h2>Components</h2>
 {{ components({
     'data' : [
         {
             'type' : 'Furniture',
-            'list' : ['Micro Hero', 'Page Title', 'Page Caption', 'Page Subtitle', 'Page Summary', 'Page Last Updated', 'Table of Contents']
+            'list' : ['Page', 'Content']
         },
         {
             'type' : 'Content Blocks',
-            'list' : ['All']
-        },
-        {
-            'type' : 'Sidebar Blocks',
-            'list' : ['All']
-        },
-        {
-            'type' : 'Feature Blocks',
-            'list' : ['All']
+            'list' : ['Main', 'Sidebar', 'Featured']
         }
     ]
 }) }}
