@@ -1,6 +1,6 @@
-{% extends "template-rightbar.html" %}
+{% extends "example-template-rightbar.html" %}
 
-{% block pageTitle %}Examples - StadardContent - NWP Prototype Kit{% endblock %}
+{% block pageTitle %}Examples - Blog Item - NWP Prototype Kit{% endblock %}
 
 {% block pageBreadcrumbs %}
   {{
@@ -9,31 +9,28 @@
       {
         href: "/",
         text: "Home"
-      },
-      {
-        href: "/templates",
-        text: "Templates"
-      },
-      {
-        href: "/templates/examples",
-        text: "Examples"
       }
     ],
-    href: "/templates/rightbar/blog-single",
-    text: "BlogSingle"
+    href: "/templates/examples/blog-item",
+    text: "Blog Item"
   })
   }}
 {% endblock %}
 
-{% block pageContent %}
-  <h1>Example - BlogSingle Template</h1>
-  <p class="nhsuk-body-s nhsuk-u-secondary-text-color">Published on 25 October 2022, by Dr. Joe Soap</p>
-  <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-7">
-    <a href="#">Learning and development</a>,
-    <a href="#">Artificial intelligence and robotics</a>,
-    <a href="#">Policy and strategy</a>
-  </p>
+{% block pageHeader %}
+  <div class="nhsuk-width-container">
+    <h1>Blog Item</h1>
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color">Published on 25 October 2022, by Dr. Joe Soap</p>
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-7">
+      <a href="#">Learning and development</a>,
+      <a href="#">Artificial intelligence and robotics</a>,
+      <a href="#">Policy and strategy</a>
+    </p>
+  </div>
+{% endblock %}
 
+{% block pageContent %}
+<article>
   <p class="nhsuk-body-l">Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi.</p>
 
   <h3 id="heading1">Donec pulvinar sollicitudin</h3>
@@ -68,6 +65,7 @@
     details: "Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi. Sed vestibulum quis mi nec volutpat. Proin tristique eleifend volutpat. Maecenas eu magna a sem aliquam luctus. Donec nec metus condimentum, molestie nulla eu, auctor sem. Cras nec arcu sed lorem eleifend pellentesque nec nec ligula.",
     displayDetails: true
   }) }}
+</article>
 {% endblock %}
 
 {% block pageRightbar %}

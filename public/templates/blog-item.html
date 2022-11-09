@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Fullwidth - Templates - NWP Prototype Kit</title>
+  <title>Templates - Blog Item - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -51,9 +51,9 @@
           <ol class="nhsuk-breadcrumb__list">
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates">Templates</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates/base-fullwidth">Fullwidth</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates/blog-item">Blog Item</a></li>
           </ol>
-          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/templates/base-fullwidth">Back to Fullwidth</a></p>
+          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/templates/blog-item">Back to Blog Item</a></p>
         </div>
       </nav>
     </div>
@@ -95,43 +95,65 @@
         <div class="page__main">
           <div class="page__header">
             <span class="nhsuk-caption-xl">Templates</span>
-            <h1>Fullwidth</h1>
-            <p class="nhsuk-lede-text">Typically used for landing pages.</p>
+            <h1>Blog Item</h1>
+            <p class="nhsuk-lede-text"></p>
           </div>
-          <pre><code>&lt;main class=&quot;page page--fullwidth&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
+          <h2>Example</h2>
+          <a href="/templates/examples/blog-item" target="_blank">Click to preview the template [opens in new window]</a>
+          <hr />
+          <h2>HTML</h2>
+          <pre><code>&lt;article class=&quot;page page--rightbar&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
   &lt;div class=&quot;page__breadcrumbs&quot;&gt;[ BREADCRUMBS ]&lt;/div&gt;
   &lt;div class=&quot;page__header&quot;&gt;
-    [ PAGE_HERO | PAGE_MICROHERO ]
     &lt;div class=&quot;nhsuk-width-container&quot;&gt;
-      &lt;h1&gt;[ PAGE_TITLE ]&lt;/h1&gt;
-      &lt;span class=&quot;nhsuk-caption-xl&quot;&gt;[ PAGE_CAPTION ]&lt;/span&gt;
-      &lt;p class=&quot;nhsuk-lede-text&quot;&gt;[ PAGE_SUMMARY ]&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;page__main&quot;&gt;
-    &lt;div class=&quot;nhsuk-width-container&quot;&gt;
-      [ IF HOMEPAGE, LANDINGHUB, 404 ]
-      &lt;div class=&quot;page__content&quot;&gt;
-        [ CONTENT_BLOCKS ]
-      &lt;/div&gt;
-      [ ELSEIF SEARCH_LISTING ]
-        [ SEARCH_INPUT ]
-        [ RESULTS_TITLE | RESULTS_SORTING ]
-        [ FILTER_TAG ]
-        [ RESULTS_LISTING ]
-        [ RESULTS_PAGINATION ]
-      [ ELSEIF AZ_LISTING ]
-        [ AZLISTING_NAV ]
-        [ AZLISTING_RESULTS ]
+      [ GO_BACK ]
+      &lt;h1&gt;[ TITLE ]&lt;/h1&gt;
+      &lt;span class=&quot;nhsuk-caption-xl&quot;&gt;[ CAPTION/ SUBTITLE ]&lt;/span&gt;
+      &lt;p class=&quot;nhsuk-lede-text&quot;&gt;[ EXCERPT ]&lt;/p&gt;
+      [ PUBLISHED_BY | PUBLISHED_DATE ]
+      [ TAXONOMIES ]
+      [ IF MINIHUB ]
+        [ MINIHUB_NAV_LIST ]
       [ ENDIF ]
     &lt;/div&gt;
   &lt;/div&gt;
+  &lt;div class=&quot;nhsuk-width-container&quot;&gt;
+    &lt;div class=&quot;page__layout&quot;&gt;
+      &lt;div class=&quot;page__main&quot;&gt;
+        &lt;div class=&quot;page__content&quot;&gt;
+          [ CONTENT_BLOCKS ]
+        &lt;/div&gt;
+        [ LAST_UPDATED | REVIEWED_NEXTLAST ]
+      &lt;/div&gt;
+      &lt;aside class=&quot;page__rightbar&quot;&gt;
+        [ RIGHTBAR_BLOCKS ]
+      &lt;/aside&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
   &lt;div class=&quot;page__footer&quot;&gt;
+    [ IF MINIHUB ]
+      [ MINIHUB_NAV_PAGINATION ]
+    [ ENDIF ]
+    [ APPLIES_TO | VERSION_CONTROL ]
+    [ ANCHORLINKS--FIXED | BACK_TO_TOP ]
   &lt;/div&gt;
   &lt;section class=&quot;page__feature&quot;&gt;
     [ FEATURE_BLOCKS ]
   &lt;/section&gt;
-&lt;/main&gt;</code></pre>
+&lt;/article&gt;</code></pre>
+          <h2>Components</h2>
+          <h4>Furniture</h4>
+          <ul>
+            <li>Page</li>
+            <li>Content</li>
+          </ul>
+          <h4>Content Blocks</h4>
+          <ul>
+            <li>Main</li>
+            <li>Sidebar</li>
+            <li>Featured</li>
+          </ul>
+          <hr />
         </div>
       </div>
     </div>
