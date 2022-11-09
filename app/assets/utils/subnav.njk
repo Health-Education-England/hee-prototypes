@@ -1,3 +1,5 @@
+{%- from 'back-link/macro.njk' import backLink %}
+
 {% macro subnav(params) %}
 
 <nav class="page__subnav">
@@ -12,7 +14,6 @@
     <li>A-Z Listing</li>
     <li>Search Listing</li>
   </ul>
-
   <h3>Leftbar</h3>
   <ul>
     <li><a href="/templates/base-leftbar.html">Base</a></li>
@@ -22,7 +23,6 @@
     <li>Publication Collection</li>
     <li>Event Collection</li>
   </ul>
-
   <h3>Rightbar</h3>
   <ul>
     <li><a href="/templates/base-rightbar.html">Base</a></li>
@@ -35,127 +35,135 @@
     <li>Event Item</li>
   </ul>
 
-{% elseif params.area == 'content' %}
+{% elseif params.area == 'blocks' %}
 
-  {% if params.subarea == 'main' %}
+  {% if params.subarea == 'top' %}
+
+    <h3>Blocks</h3>
+    <ul>
+      <li><a href="/blocks/content/">Content</a></li>
+      <li><a href="/blocks/furniture/">Furniture</a></li>
+      <li><a href="/blocks/scaffolding/">Scaffolding</a></li>
+    </ul>
+
+  {% else %}
+    {{
+      backLink({
+        href: '/blocks',
+        text: 'Blocks'
+      })
+    }}
+
+  {% endif %}
+
+  {% if params.subarea == 'content' %}
     <h3>Main</h3>
-    <h4>HEE</h4>
     <ul>
-      <li><a href="/blocks/content/main/">Anchor Links</a></li>
-      <li><a href="/blocks/content/main/">Applies To</a></li>
-      <li><a href="/blocks/content/main/">Block Links</a></li>
-      <li><a href="/blocks/content/main/">Card--Author</a></li>
-      <li><a href="/blocks/content/main/">Google Map</a></li>
-      <li><a href="/blocks/content/main/">Media Embed</a></li>
-      <li><a href="/blocks/content/main/">Region Picker</a></li>
-      <li><a href="/blocks/content/main/">Tabs</a></li>
-      <li><a href="/blocks/content/main/">Text</a></li>
-      <li><a href="/blocks/content/main/">Timeline</a></li>
-      <li><a href="/blocks/content/main/">Newsletter Signup</a></li>
+      <li>Applies To</li>
+      <li>Block Links</li>
+      <li>Card--Author</li>
+      <li>Google Map</li>
+      <li>Media Embed</li>
+      <li>Newsletter Signup</li>
+      <li>Region Picker</li>
+      <li>Table of Contents</li>
+      <li>Tabs</li>
+      <li>Text</li>
+      <li>Timeline</li>
+      <li>Image</li>
+      <li>Care Card</li>
+      <li>Table</li>
     </ul>
-    <h4>NHS</h4>
-    <ul>
-      <li>Action Link</li>
-      <li>Button</li>
-      <li>Card</li>
-      <li>Card Group</li>
-      <li>Details</li>
-      <li>Expander Group</li>
-      <li>Inset Text</li>
-      <li>Summary List</li>
-    </ul>
-    <h4>NHSHEE</h4>
-    <ul>
-      <li><a href="/blocks/content/main/">Image</a></li>
-      <li><a href="/blocks/content/main/">Care Card</a></li>
-      <li><a href="/blocks/content/main/">Table</a></li>
-    </ul>
-
-  {% elseif params.subarea == 'sidebar' %}
     <h3>Sidebar</h3>
     <ul>
-      <li><a href="/blocks/content/sidebar/">Card--Department</a></li>
-      <li><a href="/blocks/content/sidebar/">Card--Downloads</a></li>
-      <li><a href="/blocks/content/sidebar/">Card--External Links</a></li>
-      <li><a href="/blocks/content/sidebar/">Card--Internal Links</a></li>
-      <li><a href="/blocks/content/sidebar/">Card--Image</a></li>
-      <li><a href="/blocks/content/sidebar/">Card--Person</a></li>
+      <li>Card--Department</li>
+      <li>Card--Downloads</li>
+      <li>Card--External Links</li>
+      <li>Card--Internal Links</li>
+      <li>Card--Image</li>
+      <li>Card--Person</li>
     </ul>
-  {% elseif params.subarea == 'featured' %}
     <h3>Featured</h3>
     <ul>
-      <li><a href="/blocks/content/featured/">Mini Listing</a></li>
+      <li>Mini Listing</li>
     </ul>
-  {% endif %}
 
-{% elseif params.area == 'furniture' %}
-  {% if params.subarea == 'all' %}
-    <h3>All</h3>
+  {% elseif params.subarea == 'furniture' %}
+
+    <h3>Page</h3>
     <ul>
-      <li><a href="/blocks/furniture/hero">Hero</a></li>
-      <li><a href="/blocks/furniture/microhero">Microhero</a></li>
-      <li><a href="/blocks/furniture/backtotop">BackToTop</a></li>
-      <li><a href="/blocks/furniture/title">Title</a></li>
-      <li><a href="/blocks/furniture/caption">Caption</a></li>
-      <li><a href="/blocks/furniture/excerpt">Excerpt</a></li>
+      <li><a href="/blocks/furniture/page-hero">Hero</a></li>
+      <li><a href="/blocks/furniture/page-microhero">Microhero</a></li>
+      <li><a href="/blocks/furniture/page-title">Title</a></li>
+      <li><a href="/blocks/furniture/page-caption">Caption</a></li>
+      <li><a href="/blocks/furniture/page-subtitle">Subtitle</a></li>
+      <li><a href="/blocks/furniture/page-summary">Summary</a></li>
+      <li><a href="/blocks/furniture/page-lastupdated">Last Updated</a></li>
     </ul>
-  {% elseif params.subarea == 'furncontent' %}
-    <h3>FurnContent</h3>
+    <h3>Content</h3>
     <ul>
-      <li><a href="/blocks/furniture/content/">AppliesTo</a></li>
-      <li><a href="/blocks/furniture/content/">AnchorLinks</a></li>
-      <li><a href="/blocks/furniture/content/">GoBack</a></li>
-      <li><a href="/blocks/furniture/content/">Taxonomies</a></li>
-      <li><a href="/blocks/furniture/content/">PublishedBy</a></li>
-      <li><a href="/blocks/furniture/content/">PublishedDate</a></li>
-      <li><a href="/blocks/furniture/content/">LastUpdated</a></li>
-      <li><a href="/blocks/furniture/content/">ReviewedNextLast</a></li>
-      <li><a href="/blocks/furniture/content/">VersionControl</a></li>
-      <li><a href="/blocks/furniture/content/">MinihubNavList</a></li>
-      <li><a href="/blocks/furniture/content/">MinihubNavPagination</a></li>
+      <li><a href="/blocks/furniture/content-goback">Go Back</a></li>
+      <li><a href="/blocks/furniture/content-publishedinfo">Published Info</a></li>
+      <li><a href="/blocks/furniture/content-reviewednextprev">Reviewed Next Prev</a></li>
+      <li><a href="/blocks/furniture/content-taxonomies">Taxonomies</a></li>
+      <li><a href="/blocks/furniture/content-version/">Version</a></li>
     </ul>
-  {% elseif params.subarea == 'furncollections' %} 
-    <h3>FurnCollections</h3>
+    <h4>Minihub</h4>
     <ul>
-      <li><a href="/blocks/furniture/collections/">FilterGroup</a></li>
-      <li><a href="/blocks/furniture/collections/">FilterClearAll</a></li>
-      <li><a href="/blocks/furniture/collections/">FilterTag</a></li>
-      <li><a href="/blocks/furniture/collections/">ResultsTitle</a></li>
-      <li><a href="/blocks/furniture/collections/">ResultsPagination</a></li>
-      <li><a href="/blocks/furniture/collections/">ResultsSorting</a></li>
-      <li><a href="/blocks/furniture/collections/">SearchInput</a></li>
-      <li><a href="/blocks/furniture/collections/">AlphaNav</a></li>
-      <li><a href="/blocks/furniture/collections/">AlphaListing</a></li>
+      <li><a href="/blocks/furniture/minihub-list/">List</a></li>
+      <li><a href="/blocks/furniture/minihub-pagination/">Pagination</a></li>
     </ul>
-  {% endif %}
-{% elseif params.area == 'scaffolding' %}
-  {% if params.subarea == 'header' %}
+    <h3>Collections</h3>
+    <h4>Filter</h4>
+    <ul>
+      <li><a href="/blocks/furniture/filter-group/">Group</a></li>
+      <li><a href="/blocks/furniture/filter-clear/">Clear</a></li>
+      <li><a href="/blocks/furniture/filter-tag/">Tag</a></li>
+    </ul>
+    <h4>Results</h4>
+    <ul>
+      <li><a href="/blocks/furniture/results-title/">Title</a></li>
+      <li><a href="/blocks/furniture/results-pagination/">Pagination</a></li>
+      <li><a href="/blocks/furniture/results-sorting/">Sorting</a></li>
+    </ul>
+    <h4>Search Listing</h4>
+    <ul>
+      <li><a href="/blocks/furniture/search-input/">Search Input</a></li>
+    </ul>
+    <h4>A-Z Listing</h4>
+    <ul>
+      <li><a href="/blocks/furniture/azlisting-nav/">Nav</a></li>
+      <li><a href="/blocks/furniture/azlisting-results/">Results</a></li>
+    </ul>
+
+  {% elseif params.subarea == 'scaffolding' %}
+
     <h3>Header</h3>
     <ul>
-      <li><a href="/blocks/scaffolding/header/cookies">Cookies</a></li>
-      <li><a href="/blocks/scaffolding/header/logos">Logos</a></li>
-      <li><a href="/blocks/scaffolding/header/search">Search</a></li>
-      <li><a href="/blocks/scaffolding/header/navigation">Navigation</a></li>
-      <li><a href="/blocks/scaffolding/header/skiplink">Skiplink</a></li>
+      <li><a href="/blocks/scaffolding/header">HEE Header</a></li>
+      <li><a href="/blocks/scaffolding/header-logos">Logos</a></li>
+      <li><a href="/blocks/scaffolding/header-navigation">Navigation</a></li>
+      <li><a href="/blocks/scaffolding/header-cookies">Cookies</a></li>
+      <li><a href="/blocks/scaffolding/header-search">Search</a></li>
+      <li><a href="/blocks/scaffolding/header-skiplink">Skip Link</a></li>
     </ul>
-  {% elseif params.subarea == 'intemplate' %}
     <h3>InTemplate</h3>
     <ul>
-      <li><a href="/blocks/scaffolding/intemplate/breadcrumbs">Breadcrumbs</a></li>
-      <li><a href="/blocks/scaffolding/intemplate/backtotop">Back to Top</a></li>
+      <li><a href="/blocks/scaffolding/intemplate-breadcrumbs">Breadcrumbs</a></li>
+      <li><a href="/blocks/scaffolding/intemplate-backtotop">Back to Top</a></li>
     </ul>
-  {% elseif params.subarea == 'notifications' %}
     <h3>Notifications</h3>
     <ul>
-      <li><a href="/blocks/scaffolding/notifications/phasebanner">Phase Banner</a></li>
-      <li><a href="/blocks/scaffolding/notifications/globalalert">Global Alert</a></li>
+      <li><a href="/blocks/scaffolding/notifications-phasebanner">Phase Banner</a></li>
+      <li><a href="/blocks/scaffolding/notifications-globalalert">Global Alert</a></li>
     </ul>
-  {% elseif params.subarea == 'footer' %}
     <h3>Footer</h3>
     <ul>
-      <li><a href="/blocks/scaffolding/footer/links">Links + copyright</a></li>
+      <li><a href="/blocks/scaffolding/footer-links">Links + copyright</a></li>
     </ul>
+
   {% endif %}
+
 {% endif %}
 </nav>
 
