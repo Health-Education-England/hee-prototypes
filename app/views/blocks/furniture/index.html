@@ -1,0 +1,44 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = '/blocks/furniture' %}
+{% set page_title = 'Furniture' %}
+
+{% block pageTitle %}{{ page_title }} - Blocks - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+  {{ breadcrumb({
+      items: [
+          {
+              href: "/",
+              text: "Home"
+          },
+          {
+              href: "/blocks",
+              text: "Blocks"
+          }
+      ],
+      href: page_url,
+      text: page_title
+  }) }}
+{% endblock %}
+
+{% block pageLeftbar %}
+  {{ subnav({
+      area: 'blocks',
+      subarea: 'furniture'
+  }) }}
+{% endblock %}
+
+{% block pageHeader %}
+  <div class="nhsuk-width-container">
+      <span class="nhsuk-caption-xl">Blocks</span>
+      <h1>{{ page_title }}</h1>
+      <p class="nhsuk-lede-text"></p>
+  </div>
+{% endblock %}
+
+{% block pageContent %}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

@@ -1,0 +1,69 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'header' %}
+{% set page_title = 'Header' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/",
+            text: "Home"
+        },
+        {
+            href: "/blocks",
+            text: "Blocks"
+        },
+        {
+            href: "/blocks/scaffolding",
+            text: "Scaffolding"
+        }
+    ],
+        href: "/blocks/scaffolding/"+page_url,
+        text: page_title
+    }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'blocks',
+    subarea: 'scaffolding'
+}) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Scaffolding</span>
+    <h1>{{ page_title }}</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+<h3>Example</h3>
+{{ example({
+    url: '/blocks/scaffolding/examples/'+page_url,
+    height: '400px'
+}) }}
+
+<hr />
+
+<h3>Macro</h3>
+{{ highlight({
+  html: ''
+}) }}
+
+<hr />
+
+<h3>HTML</h3>
+{{ highlight({
+  html : ''
+  }) 
+}}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

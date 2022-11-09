@@ -13,7 +13,6 @@
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
   <link href="/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
-  <link href="/css/highlight.css" rel="stylesheet" />
   <link href="/css/hee.css" rel="stylesheet" />
   <link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png">
@@ -64,8 +63,11 @@
             <div class="nhsuk-header__search-wrap" id="wrap-search">
               <form class="nhsuk-header__search-form" id="search" action="https://www.nhs.uk/search/" method="get" role="search">
                 <label class="nhsuk-u-visually-hidden" for="search-field">Search the NHS website</label>
-                <div class="autocomplete-container" id="autocomplete-container"></div>
-                <input class="nhsuk-search__input" id="search-field" name="q" type="search" placeholder="Search" autocomplete="off">
+                <div class="autocomplete-container" id="autocomplete-container">
+                  <div class="autocomplete__wrapper">
+                    <input class="nhsuk-search__input" id="search-field" name="q" type="search" placeholder="Search" autocomplete="off">
+                  </div>
+                </div>
                 <button class="nhsuk-search__submit" type="submit">
                   <svg class="nhsuk-icon nhsuk-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                     <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
@@ -104,7 +106,7 @@
               <a class="nhsuk-header__navigation-link" href="/templates"> Templates longer name </a>
             </li>
             <li class="nhsuk-header__navigation-item nhsuk-subnav" aria-haspopup="true" aria-expanded="false">
-              <a class="nhsuk-header__navigation-link" href="javascript:void(0);">
+              <a class="nhsuk-header__navigation-link" href="#">
                 <div class="nhsuk-subnav__wrapper">
                   <span class="nhsuk-header__link-text">Components</span>
                   <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
@@ -201,11 +203,7 @@
   </footer>
   <script src="/js/jquery-3.3.1.min.js"></script>
   <script src="/js/nhsuk.min.js"></script>
-  <script src="/js/highlight.min.js"></script>
   <script src="/js/hee.js"></script>
-  <script>
-    hljs.highlightAll();
-  </script>
 </body>
 
 </html>
