@@ -27,7 +27,7 @@ function watch(done) {
   gulp.watch(['app/assets/**/*.scss', 'app/assets*/**/*.scss'], taskAssets.compileHEEStyles);
   gulp.watch(['app/assets/styles/!*.css', 'app/assets/styles/hee.scss'], taskAssets.copyVendorStyles);
   gulp.watch(['app/assets/**/*.js'], taskAssets.compileHEEScripts);
-  gulp.watch(['app/assets/javascript/hee.js'], taskAssets.copyVendorScripts);
+  gulp.watch(['app/assets/javascript/*.js'], taskAssets.copyVendorScripts);
   gulp.watch(['app/views/**/*.njk', 'app/views/**/*.html', 'app/assets/**/*.njk'], taskTemplates.buildTemplates);
 }
 
