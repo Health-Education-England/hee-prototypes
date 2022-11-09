@@ -1,0 +1,72 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'page-hero' %}
+{% set page_title = 'Hero' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/",
+            text: "Home"
+        },
+        {
+            href: "/blocks",
+            text: "Blocks"
+        }
+    ],
+        href: "/blocks/"+page_url,
+      text: page_title
+    }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'blocks',
+    subarea: 'furniture'
+}) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Furniture</span>
+    <h1>{{ page_title }}</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+<h3>Example</h3>
+{{ example({
+    view: 'scaled',
+    url: '/blocks/furniture/examples/'+page_url,
+    height: '450'
+}) }}
+
+<hr />
+
+<h3>Macro</h3>
+{{ highlight({
+  html: '
+{{ hero({
+    "heading": "Welcome to HEEs Prototype Kit",
+    "text": "Helping you build consistent HEE websites.",
+    "imageURL": "/images/young-child-using-tablet-device.jpg"
+}) }}
+  '
+}) }}
+
+<hr />
+
+<h3>HTML</h3>
+{{ highlight({
+  html : ''
+  }) 
+}}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

@@ -1,4 +1,8 @@
 // TemplateAreas
+html {
+    background-color: #f0f4f5;
+}
+
 .page {}
 .page__breadcrumbs,
 .page__header,
@@ -9,8 +13,8 @@
 .page__feature ,
 .page__nav {
     .prototype & {
-        border: 2px dashed #CCC;
-        min-height: 20px;
+        //border: 2px dashed #CCC;
+        //min-height: 20px;
     }
 }
 
