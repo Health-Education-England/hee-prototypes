@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Rightbar - Templates - NWP Prototype Kit</title>
+  <title>Mini-hub item - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -51,9 +51,9 @@
           <ol class="nhsuk-breadcrumb__list">
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates">Templates</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates/base-rightbar">Rightbar</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates/mini-hub-item">Mini-hub item</a></li>
           </ol>
-          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/templates/base-rightbar">Back to Rightbar</a></p>
+          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/templates/mini-hub-item">Back to Mini-hub item</a></p>
         </div>
       </nav>
     </div>
@@ -95,51 +95,65 @@
         <div class="page__main">
           <div class="page__header">
             <span class="nhsuk-caption-xl">Templates</span>
-            <h1>Rightbar</h1>
-            <p class="nhsuk-lede-text">A layout with a left content area and right sidebar.</p>
+            <h1>Mini-hub item</h1>
+            <p class="nhsuk-lede-text"></p>
           </div>
-          <p>This layout is typically used for content pages with supporting sidebar content.</p>
-          <p>It will have access to the <a href="/blocks/furniture">Furniture</a> [PAGE + CONTENT] components, as well as the <a href="/blocks/content">Content Blocks</a> [MAIN, SIDEBAR + FEATURED].</p>
+          <h2>Example</h2>
+          <a href="/templates/examples/mini-hub-item" target="_blank">Click to preview the template [opens in new window]</a>
+          <hr />
+          <h2>HTML</h2>
           <pre><code>&lt;article class=&quot;page page--rightbar&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
   &lt;div class=&quot;page__breadcrumbs&quot;&gt;[ BREADCRUMBS ]&lt;/div&gt;
   &lt;div class=&quot;page__header&quot;&gt;
     &lt;div class=&quot;nhsuk-width-container&quot;&gt;
       [ GO_BACK ]
-      &lt;h1&gt;[ PAGE_TITLE ]&lt;/h1&gt;
-      &lt;span class=&quot;nhsuk-caption-xl&quot;&gt;[ PAGE_CAPTION ]&lt;/span&gt;
-      &lt;p class=&quot;nhsuk-lede-text&quot;&gt;[ PAGE_SUMMARY ]&lt;/p&gt;
-      [ PUBLISHED_INFO ]
+      &lt;h1&gt;[ TITLE ]&lt;/h1&gt;
+      &lt;span class=&quot;nhsuk-caption-xl&quot;&gt;[ CAPTION/ SUBTITLE ]&lt;/span&gt;
+      &lt;p class=&quot;nhsuk-lede-text&quot;&gt;[ EXCERPT ]&lt;/p&gt;
+      [ PUBLISHED_BY | PUBLISHED_DATE ]
       [ TAXONOMIES ]
       [ IF MINIHUB ]
-        [ MINIHUB_LIST ]
+        [ MINIHUB_NAV_LIST ]
       [ ENDIF ]
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;nhsuk-width-container&quot;&gt;
     &lt;div class=&quot;page__layout&quot;&gt;
       &lt;div class=&quot;page__main&quot;&gt;
-        [ TABLEOFCONTENTS ]
         &lt;div class=&quot;page__content&quot;&gt;
-          [ CONTENT--MAIN_BLOCKS ]
+          [ CONTENT_BLOCKS ]
         &lt;/div&gt;
-        [ PAGE_LASTUPDATED | REVIEWED_NEXTLAST ]
+        [ LAST_UPDATED | REVIEWED_NEXTLAST ]
       &lt;/div&gt;
       &lt;aside class=&quot;page__rightbar&quot;&gt;
-        [ CONTENT--SIDEBAR_BLOCKS ]
+        [ RIGHTBAR_BLOCKS ]
       &lt;/aside&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;page__footer&quot;&gt;
     [ IF MINIHUB ]
-      [ MINIHUB_PAGINATION ]
+      [ MINIHUB_NAV_PAGINATION ]
     [ ENDIF ]
-    [ VERSION_CONTROL | REVIEWED_NEXTLAST ]
-    [ TABLEOFCONTENTS--FIXED | BACK_TO_TOP ]
+    [ APPLIES_TO | VERSION_CONTROL ]
+    [ ANCHORLINKS--FIXED | BACK_TO_TOP ]
   &lt;/div&gt;
   &lt;section class=&quot;page__feature&quot;&gt;
-    [ CONTENT--FEATURED_BLOCKS ]
+    [ FEATURE_BLOCKS ]
   &lt;/section&gt;
 &lt;/article&gt;</code></pre>
+          <h2>Components</h2>
+          <h4>Furniture</h4>
+          <ul>
+            <li>Page</li>
+            <li>Content</li>
+          </ul>
+          <h4>Content Blocks</h4>
+          <ul>
+            <li>Main</li>
+            <li>Sidebar</li>
+            <li>Featured</li>
+          </ul>
+          <hr />
         </div>
       </div>
     </div>
