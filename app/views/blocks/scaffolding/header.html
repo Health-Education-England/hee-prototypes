@@ -43,7 +43,7 @@
 
 {% block pageContent %}
 
-<h3>Example</h3>
+<h2>Example</h2>
 {{ example({
     url: '/blocks/scaffolding/examples/'+page_url,
     view: 'scaled',
@@ -52,7 +52,7 @@
 
 <hr />
 
-<h3>Macro</h3>
+<h2>Macro</h2>
 {{ highlight({
   html: '{{ customHeader({
   "showNav": "true",
@@ -120,14 +120,6 @@
 })
 }}'
 }) }}
-
-<hr />
-
-<h3>HTML</h3>
-{{ highlight({
-  html : ''
-  }) 
-}}
 
 {% endblock %}
 
