@@ -8,6 +8,10 @@
   {% set preview_height = '200px' %}
 {% endif %}
 
+{% if heading %}
+<h3>{{ heading }}</h3>
+{% endif %}
+
 {# view - scaled, block #}
 {% if params.view == 'scaled' %}
   <div class="prototype__example scaled" style="height:{{ preview_height }};">
