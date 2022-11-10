@@ -85,12 +85,14 @@
         color: #4c6272;
         margin-bottom: 12px;
         padding-top: 4px;
+        padding-left: 4px;
       }
       h4 {
         font-size: 16px;
         font-weight: bold;
         color: #5e6e79;
         margin-bottom: 0.5em;
+        padding-left: 4px;
       }
       ul {
         list-style: none;
@@ -103,6 +105,12 @@
           a {
             color: #005eb8;
             text-decoration: none;
+            border-left: 4px solid transparent;
+            padding-left: 4px;
+            margin-left: -4px;
+            &.current {
+              border-left: 4px solid #005eb8;
+            }
           }
         }
       }

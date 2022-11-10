@@ -5,46 +5,145 @@
 <nav class="page__subnav">
 {% if params.area == 'templates' %}
 
-  <h3>Fullwidth</h3>
-  <ul>
-    <li><a href="/templates/base-fullwidth.html">Base</a></li>
-    <li><a href="/templates/homepage.html">Homepage</a></li>
-    <li><a href="/templates/landing-hub.html">Landing Page</a></li>
-    <li>404</li>
-    <li>A-Z Listing</li>
-    <li>Search Listing</li>
-  </ul>
-  <h3>Leftbar</h3>
-  <ul>
-    <li><a href="/templates/base-leftbar.html">Base</a></li>
-    <li>News Collection</li>
-    <li>Blog Collection</li>
-    <li>Casestudies Collection</li>
-    <li>Publication Collection</li>
-    <li>Event Collection</li>
-  </ul>
-  <h3>Rightbar</h3>
-  <ul>
-    <li><a href="/templates/base-rightbar.html">Base</a></li>
-    <li><a href="/templates/standard-content.html">Standard Content</a></li>
-    <li><a href="/templates/mini-hub-item.html">Mini-hub item</a></li>
-    <li><a href="/templates/news-item.html">News Item</a></li>
-    <li>Blog Item</li>
-    <li>Publication Landing</li>
-    <li>Publication Item</li>
-    <li>Event Item</li>
-  </ul>
+  {% set templates_array = [
+    {
+      heading: "Fullwidth",
+      links: [
+        {
+          title: 'Base',
+          url: 'base-fullwidth'
+        },
+        {
+          title: 'Homepage',
+          url: 'homepage'
+        },
+        {
+          title: 'Landing Page',
+          url: 'landing-page'
+        },
+        {
+          title: '404',
+          url: '404'
+        },
+        {
+          title: 'A-Z Listing',
+          url: 'az-listing'
+        },
+        {
+          title: 'Search Listing',
+          url: 'search-listing'
+        }
+      ]
+    },
+    {
+      heading: "Leftbar",
+      links: [
+        {
+          title: 'Base',
+          url: 'base-leftbar'
+        },
+        {
+          title: 'News Collection',
+          url: 'news-collection'
+        },
+        {
+          title: 'Blog Collection',
+          url: 'blog-collection'
+        },
+        {
+          title: 'Casestudies Collection',
+          url: 'case-studies-collection'
+        },
+        {
+          title: 'Publications Collection',
+          url: 'publications-collection'
+        },
+        {
+          title: 'Event Collection',
+          url: 'event-collection'
+        }
+      ]
+    },
+    {
+      heading: "Rightbar",
+      links: [
+        {
+          title: 'Base',
+          url: 'base-rightbar'
+        },
+        {
+          title: 'Standard Content',
+          url: 'standard-content'
+        },
+        {
+          title: 'Mini-hub Item',
+          url: 'mini-hub-item'
+        },
+        {
+          title: 'News Item',
+          url: 'news-item'
+        },
+        {
+          title: 'Blog Item',
+          url: 'blog-item'
+        },
+        {
+          title: 'Publication Landing',
+          url: 'publication-landing'
+        },
+        {
+          title: 'Publication Item',
+          url: 'publication-item'
+        },
+        {
+          title: 'Event Item',
+          url: 'event-item'
+        }
+      ]
+    }
+  ] %}
+  {% for section in templates_array %}
+    {% if section.heading %}<h3>{{ section.heading }}</h3>{% endif %}
+    {% if section.subheading %}<h4>{{ section.subheading }}</h4>{% endif %}
+    <ul>
+      {% for item in section.links %}
+      <li><a href="/templates/{{ item.url }}"{% if item.url == params.current %}class='current'{% endif %}>{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
 
 {% elseif params.area == 'blocks' %}
 
   {% if params.subarea == 'top' %}
 
-    <h3>Blocks</h3>
-    <ul>
-      <li><a href="/blocks/content/">Content</a></li>
-      <li><a href="/blocks/furniture/">Furniture</a></li>
-      <li><a href="/blocks/scaffolding/">Scaffolding</a></li>
-    </ul>
+    {% set blocks_top_array = [
+      {
+        heading: "Blocks",
+        links: [
+          {
+            title: 'Scaffolding',
+            url: 'scaffolding'
+          },
+          {
+            title: 'Furniture',
+            url: 'furniture'
+          },
+          {
+            title: 'Content',
+            url: 'content'
+          }
+        ]
+      }
+    ] %}
+    {% for section in blocks_top_array %}
+      {% if section.heading %}<h3>{{ section.heading }}</h3>{% endif %}
+      {% if section.subheading %}<h4>{{ section.subheading }}</h4>{% endif %}
+      <ul>
+        {% for item in section.links %}
+        <li><a href="/blocks/{{ item.url }}"{% if item.url == params.current %}class='current'{% endif %}>{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
 
   {% else %}
     {{
@@ -57,110 +156,327 @@
   {% endif %}
 
   {% if params.subarea == 'content' %}
-    <h3>Main</h3>
-    <ul>
-      <li>Applies To</li>
-      <li>Block Links</li>
-      <li>Card--Author</li>
-      <li>Google Map</li>
-      <li>Media Embed</li>
-      <li>Newsletter Signup</li>
-      <li>Region Picker</li>
-      <li>Table of Contents</li>
-      <li>Tabs</li>
-      <li>Text</li>
-      <li>Timeline</li>
-      <li>Image</li>
-      <li>Care Card</li>
-      <li>Table</li>
-    </ul>
-    <h3>Sidebar</h3>
-    <ul>
-      <li>Card--Department</li>
-      <li>Card--Downloads</li>
-      <li>Card--External Links</li>
-      <li>Card--Internal Links</li>
-      <li>Card--Image</li>
-      <li>Card--Person</li>
-    </ul>
-    <h3>Featured</h3>
-    <ul>
-      <li>Mini Listing</li>
-    </ul>
+
+    {% set content_array = [
+      {
+        heading: "Main",
+        links: [
+          {
+            title: 'Applies To',
+            url: 'main-applies-to'
+          },
+          {
+            title: 'Block Links',
+            url: 'main-block-links'
+          },
+          {
+            title: 'Card--Author',
+            url: 'main-card-author'
+          },
+          {
+            title: 'Care Card',
+            url: 'main-care-card'
+          },
+          {
+            title: 'Google Map',
+            url: 'main-google-map'
+          },
+          {
+            title: 'Media Embed',
+            url: 'main-media-embed'
+          },
+          {
+            title: 'Newsletter Signup',
+            url: 'main-newsltter-signup'
+          },
+          {
+            title: 'Region Picker',
+            url: 'main-region-picker'
+          },
+          {
+            title: 'Table of Contents',
+            url: 'main-table-of-contents'
+          },
+          {
+            title: 'Tabs',
+            url: 'main-tabs'
+          },
+          {
+            title: 'Text',
+            url: 'main-text'
+          },
+          {
+            title: 'Timeline',
+            url: 'main-timeline'
+          },
+          {
+            title: 'Image',
+            url: 'main-image'
+          },
+          {
+            title: 'Table',
+            url: 'main-table'
+          }
+        ]
+      },
+      {
+        heading: "Sidebar",
+        links: [
+          {
+            title: 'Card--Department',
+            url: 'sidebar-card-department'
+          },
+          {
+            title: 'Card--Downloads',
+            url: 'sidebar-card-downloads'
+          },
+          {
+            title: 'Card--External Links',
+            url: 'sidebar-card-external-links'
+          },
+          {
+            title: 'Card--Internal Links',
+            url: 'sidebar-card-'
+          },
+          {
+            title: 'Card--Image',
+            url: 'sidebar-card-image'
+          },
+          {
+            title: 'Card--Person',
+            url: 'sidebar-card-person'
+          }
+        ]
+      },
+      {
+        heading: "Featured",
+        links: [
+          {
+            title: 'Mini Listing',
+            url: 'featured-mini-listing'
+          }
+        ]
+      }
+    ] %}
+    {% for section in content_array %}
+      {% if section.heading %}<h3>{{ section.heading }}</h3>{% endif %}
+      {% if section.subheading %}<h4>{{ section.subheading }}</h4>{% endif %}
+      <ul>
+        {% for item in section.links %}
+        <li><a href="/blocks/content/{{ item.url }}"{% if item.url == params.current %}class='current'{% endif %}>{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
 
   {% elseif params.subarea == 'furniture' %}
 
-    <h3>Page</h3>
-    <ul>
-      <li><a href="/blocks/furniture/page-hero">Hero</a></li>
-      <li><a href="/blocks/furniture/page-microhero">Microhero</a></li>
-      <li><a href="/blocks/furniture/page-title">Title</a></li>
-      <li><a href="/blocks/furniture/page-caption">Caption</a></li>
-      <li><a href="/blocks/furniture/page-subtitle">Subtitle</a></li>
-      <li><a href="/blocks/furniture/page-summary">Summary</a></li>
-      <li><a href="/blocks/furniture/page-lastupdated">Last Updated</a></li>
-    </ul>
-    <h3>Content</h3>
-    <ul>
-      <li><a href="/blocks/furniture/content-goback">Go Back</a></li>
-      <li><a href="/blocks/furniture/content-publishedinfo">Published Info</a></li>
-      <li><a href="/blocks/furniture/content-reviewednextprev">Reviewed Next Prev</a></li>
-      <li><a href="/blocks/furniture/content-taxonomies">Taxonomies</a></li>
-      <li><a href="/blocks/furniture/content-version/">Version</a></li>
-    </ul>
-    <h4>Minihub</h4>
-    <ul>
-      <li><a href="/blocks/furniture/minihub-list/">List</a></li>
-      <li><a href="/blocks/furniture/minihub-pagination/">Pagination</a></li>
-    </ul>
-    <h3>Collections</h3>
-    <h4>Filter</h4>
-    <ul>
-      <li><a href="/blocks/furniture/filter-group/">Group</a></li>
-      <li><a href="/blocks/furniture/filter-clear/">Clear</a></li>
-      <li><a href="/blocks/furniture/filter-tag/">Tag</a></li>
-    </ul>
-    <h4>Results</h4>
-    <ul>
-      <li><a href="/blocks/furniture/results-title/">Title</a></li>
-      <li><a href="/blocks/furniture/results-pagination/">Pagination</a></li>
-      <li><a href="/blocks/furniture/results-sorting/">Sorting</a></li>
-    </ul>
-    <h4>Search Listing</h4>
-    <ul>
-      <li><a href="/blocks/furniture/search-input/">Search Input</a></li>
-    </ul>
-    <h4>A-Z Listing</h4>
-    <ul>
-      <li><a href="/blocks/furniture/azlisting-nav/">Nav</a></li>
-      <li><a href="/blocks/furniture/azlisting-results/">Results</a></li>
-    </ul>
+    {% set furniture_array = [
+      {
+        heading: "Page",
+        links: [
+          {
+            title: 'Hero',
+            url: 'page-hero'
+          },
+          {
+            title: 'Microhero',
+            url: 'page-microhero'
+          },
+          {
+            title: 'Title',
+            url: 'page-title'
+          },
+          {
+            title: 'Caption',
+            url: 'page-caption'
+          },
+          {
+            title: 'Subtitle',
+            url: 'page-subtitle'
+          },
+          {
+            title: 'Summary',
+            url: 'page-summary'
+          },
+          {
+            title: 'Last Updated',
+            url: 'page-last-updated'
+          }
+        ]
+      },
+      {
+        heading: "Content",
+        links: [
+          {
+            title: 'Go Back',
+            url: 'content-go-back'
+          },
+          {
+            title: 'Published Info',
+            url: 'page-published-info'
+          },
+          {
+            title: 'Reviewed',
+            url: 'page-reviewed'
+          },
+          {
+            title: 'Taxonomies',
+            url: 'page-taxonomies'
+          },
+          {
+            title: 'Version',
+            url: 'page-version'
+          }
+        ]
+      },
+      {
+        subheading: "Minihub",
+        links: [
+          {
+            title: 'List',
+            url: 'minihub-list'
+          },
+          {
+            title: 'Pagination',
+            url: 'minihub-pagination'
+          }
+        ]
+      },
+      {
+        heading: "Collections",
+        subheading: "Filter",
+        links: [
+          {
+            title: 'Group',
+            url: 'filter-group'
+          },
+          {
+            title: 'Clear',
+            url: 'filter-clear'
+          },
+          {
+            title: 'Tag',
+            url: 'filter-tag'
+          }
+        ]
+      },
+      {
+        subheading: "Results",
+        links: [
+          {
+            title: 'Title',
+            url: 'results-title'
+          },
+          {
+            title: 'Pagination',
+            url: 'results-pagination'
+          },
+          {
+            title: 'Sorting',
+            url: 'results-sorting'
+          }
+        ]
+      },
+      {
+        subheading: "Search Listing",
+        links: [
+          {
+            title: 'Input',
+            url: 'searchlisting-input'
+          }
+        ]
+      },
+      {
+        subheading: "A-Z Listing",
+        links: [
+          {
+            title: 'Nav',
+            url: 'azlisting-nav'
+          },
+          {
+            title: 'Results',
+            url: 'azlisting-results'
+          }
+        ]
+      }
+    ] %}
+
+    {% for section in furniture_array %}
+      {% if section.heading %}<h3>{{ section.heading }}</h3>{% endif %}
+      {% if section.subheading %}<h4>{{ section.subheading }}</h4>{% endif %}
+      <ul>
+        {% for item in section.links %}
+        <li><a href="/blocks/furniture/{{ item.url }}.html"{% if item.url == params.current %}class='current'{% endif %}>{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
 
   {% elseif params.subarea == 'scaffolding' %}
 
-    <h3>Header</h3>
-    <ul>
-      <li><a href="/blocks/scaffolding/header">HEE Header</a></li>
-      <li><a href="/blocks/scaffolding/header-logos">Logos</a></li>
-      <li><a href="/blocks/scaffolding/header-navigation">Navigation</a></li>
-      <li><a href="/blocks/scaffolding/header-cookies">Cookies</a></li>
-      <li><a href="/blocks/scaffolding/header-search">Search</a></li>
-      <li><a href="/blocks/scaffolding/header-skiplink">Skip Link</a></li>
-    </ul>
-    <h3>InTemplate</h3>
-    <ul>
-      <li><a href="/blocks/scaffolding/intemplate-breadcrumbs">Breadcrumbs</a></li>
-      <li><a href="/blocks/scaffolding/intemplate-backtotop">Back to Top</a></li>
-    </ul>
-    <h3>Notifications</h3>
-    <ul>
-      <li><a href="/blocks/scaffolding/notifications-phasebanner">Phase Banner</a></li>
-      <li><a href="/blocks/scaffolding/notifications-globalalert">Global Alert</a></li>
-    </ul>
-    <h3>Footer</h3>
-    <ul>
-      <li><a href="/blocks/scaffolding/footer-links">Links + copyright</a></li>
-    </ul>
+    {% set scaffolding_array = [
+      {
+        heading: "Header",
+        links: [
+          {
+            title: 'HEE Header',
+            url: 'header'
+          },
+          {
+            title: 'Cookies',
+            url: 'cookies'
+          },
+          {
+            title: 'Skip Link',
+            url: 'skip-link'
+          }
+        ]
+      },
+      {
+        heading: "InTemplate",
+        links: [
+          {
+            title: 'Breadcrumbs',
+            url: 'intemplate-breadcrumbs'
+          },
+          {
+            title: 'Back to Top',
+            url: 'intemplate-back-to-top'
+          }
+        ]
+      },
+      {
+        heading: "Notifications",
+        links: [
+          {
+            title: 'Phase Banner',
+            url: 'notifications-phase-banner'
+          },
+          {
+            title: 'Global Alert',
+            url: 'notifications-global-alerts'
+          }
+        ]
+      },
+      {
+        heading: "Footer",
+        links: [
+          {
+            title: 'Links + Copyright',
+            url: 'footer-links'
+          }
+        ]
+      }
+    ] %}
+
+    {% for section in scaffolding_array %}
+      {% if section.heading %}<h3>{{ section.heading }}</h3>{% endif %}
+      {% if section.subheading %}<h4>{{ section.subheading }}</h4>{% endif %}
+      <ul>
+        {% for item in section.links %}
+        <li><a href="/blocks/scaffolding/{{ item.url }}.html"{% if item.url == params.current %}class='current'{% endif %}>{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
 
   {% endif %}
 
