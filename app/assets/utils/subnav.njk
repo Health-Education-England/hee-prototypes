@@ -5,35 +5,112 @@
 <nav class="page__subnav">
 {% if params.area == 'templates' %}
 
-  <h3>Fullwidth</h3>
-  <ul>
-    <li><a href="/templates/base-fullwidth.html">Base</a></li>
-    <li><a href="/templates/homepage.html">Homepage</a></li>
-    <li>Landing Page</li>
-    <li>404</li>
-    <li>A-Z Listing</li>
-    <li>Search Listing</li>
-  </ul>
-  <h3>Leftbar</h3>
-  <ul>
-    <li><a href="/templates/base-leftbar.html">Base</a></li>
-    <li>News Collection</li>
-    <li>Blog Collection</li>
-    <li>Casestudies Collection</li>
-    <li>Publication Collection</li>
-    <li>Event Collection</li>
-  </ul>
-  <h3>Rightbar</h3>
-  <ul>
-    <li><a href="/templates/base-rightbar.html">Base</a></li>
-    <li><a href="/templates/standard-content.html">Standard Content</a></li>
-    <li><a href="/templates/mini-hub-item.html">Mini-hub item</a></li>
-    <li><a href="/templates/news-item.html">News Item</a></li>
-    <li><a href="/templates/blog-item.html">Blog Item</a></li>
-    <li>Publication Landing</li>
-    <li>Publication Item</li>
-    <li>Event Item</li>
-  </ul>
+  {% set templates_array = [
+    {
+      section: "Fullwidth",
+      links: [
+        {
+          title: 'Base',
+          url: 'base-fullwidth'
+        },
+        {
+          title: 'Homepage',
+          url: 'homepage'
+        },
+        {
+          title: 'Landing Page',
+          url: 'landing-page'
+        },
+        {
+          title: '404',
+          url: '404'
+        },
+        {
+          title: 'A-Z Listing',
+          url: 'az-listing'
+        },
+        {
+          title: 'Search Listing',
+          url: 'search-listing'
+        }
+      ]
+    },
+    {
+      section: "Leftbar",
+      links: [
+        {
+          title: 'Base',
+          url: 'base-leftbar'
+        },
+        {
+          title: 'News Collection',
+          url: 'news-collection'
+        },
+        {
+          title: 'Blog Collection',
+          url: 'blog-collection'
+        },
+        {
+          title: 'Casestudies Collection',
+          url: 'case-studies-collection'
+        },
+        {
+          title: 'Publications Collection',
+          url: 'publications-collection'
+        },
+        {
+          title: 'Event Collection',
+          url: 'event-collection'
+        }
+      ]
+    },
+    {
+      section: "Rightbar",
+      links: [
+        {
+          title: 'Base',
+          url: 'base-rightbar'
+        },
+        {
+          title: 'Standard Content',
+          url: 'standard-content'
+        },
+        {
+          title: 'Mini-hub Item',
+          url: 'mini-hub-item'
+        },
+        {
+          title: 'News Item',
+          url: 'news-item'
+        },
+        {
+          title: 'Blog Item',
+          url: 'blog-item'
+        },
+        {
+          title: 'Publication Landing',
+          url: 'publication-landing'
+        },
+        {
+          title: 'Publication Item',
+          url: 'publication-item'
+        },
+        {
+          title: 'Event Item',
+          url: 'event-item'
+        }
+      ]
+    }
+  ] %}
+
+  {% for section in templates_array %}
+    <h3>{{ section.section }}</h3>
+    <ul>
+      {% for item in section.links %}
+      <li><a href="{{ item.url }}"{% if item.url == params.current %}class='current'{% endif %}>{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
 
 {% elseif params.area == 'blocks' %}
 
