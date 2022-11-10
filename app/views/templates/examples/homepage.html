@@ -1,8 +1,21 @@
-{% extends "template-fullwidth.html" %}
+{% extends "example-template.html" %}
 
-{% block pageClass %}hee-page--home{% endblock %}
+{% block pageTitle %}Homepage - Examples - NWP Prototype Kit{% endblock %}
 
-{% block pageTitle %}Templates - Homepage - NWP Prototype Kit{% endblock %}
+{% block pageBreadcrumbs %}
+  {{
+  breadcrumb({
+    items: [
+      {
+        href: "/",
+        text: "Home"
+      }
+    ],
+    href: "/templates/examples/homepage",
+    text: "Homepage"
+  })
+  }}
+{% endblock %}
 
 {% block pageHeader %}
   {{ hero({
@@ -12,30 +25,8 @@
   }) }}
 {% endblock %}
 
-{% block pageBreadcrumbs %}
-  {{
-  breadcrumb({
-    items: [
-      {
-        href: "/",
-        text: "Home"
-      },
-      {
-        href: "/templates",
-        text: "Templates"
-      },
-      {
-        href: "/templates/examples",
-        text: "Examples"
-      }
-    ],
-    href: "/templates/examples/homepage",
-    text: "Homepage"
-  })
-  }}
-{% endblock %}
-
 {% block pageContent %}
+<div class="nhsuk-width-container">
   <section class="nhsuk-section__content">
     <p>Non elementum cras enim amet enim sollicitudin habitant leo erat. Leo faucibus aliquet vivamus donec ullamcorper mattis purus pharetra amet. Elit turpis odio pellentesque nibh adipiscing pellentesque.</p>
     <p>Scelerisque interdum amet, non sed ut. Diam tellus etiam aenean enim, eget quisque arcu facilisis. Facilisis sed pharetra placerat condimentum risus. Arcu urna, lorem lectus odio. Ipsum faucibus venenatis sit duis donec ac viverra nisl sem.</p>
@@ -100,10 +91,8 @@
           url: "/listing",
           label: "Case studies"
         }]
-      })
+    })
     }}
-  </section>
-  <section class="nhsuk-width-container">
     <h2>Navigation cards component</h2>
     <div class="nhsuk-grid-row">
       <ul class="nhsuk-card-group">
@@ -160,4 +149,5 @@
       </ul>
     </div>
   </section>
+</div>
 {% endblock %}
