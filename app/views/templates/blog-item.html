@@ -1,26 +1,26 @@
 {% extends "prototype-inner.html" %}
 
-{% set page_url = 'standard-content' %}
-{% set page_title = 'Standard Content' %}
+{% set page_url = 'blog-item' %}
+{% set page_title = 'Blog Item' %}
 
-{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+{% block pageTitle %}{{ page_title }} - Templates  - NWP Prototype Kit{% endblock %}
 
 {% block pageBreadcrumbs %}
-{{ 
+{{
     breadcrumb({
-    items: [
-        {
-            href: "/",
-            text: "Home"
-        },
-        {
-            href: "/templates",
-            text: "Templates"
-        }
-    ],
+        items: [
+            {
+                href: "/",
+                text: "Home"
+            },
+            {
+                href: "/templates",
+                text: "Templates"
+            }
+        ],
         href: "/templates/"+page_url,
         text: page_title
-    }) 
+    })
 }}
 {% endblock %}
 
@@ -38,22 +38,23 @@
 {% endblock %}
 
 {% block pageContent %}
+    <h2>Example</h2>
+    <a href="/templates/examples/{{ page_url }}" target="_blank">Click to preview the template [opens in new window]</a>
 
-<h2>Example</h2>
-<a href="/templates/examples/{{ page_url }}" target="_blank">Click to preview the template [opens in new window]</a>
+    <hr />
 
-<hr />
-
-<h2>HTML</h2>
+    <h2>HTML</h2>
 {{ highlight({
   "html" : '<article class="page page--rightbar" id="maincontent" role="main">
   <div class="page__breadcrumbs">[ INTEMPLATE_BREADCRUMBS ]</div>
   <div class="page__header">
     <div class="nhsuk-width-container">
+      [ PAGE_BACK ]
       <h1>[ PAGE_TITLE ]</h1>
       <span class="nhsuk-caption-xl">[ PAGE_CAPTION ]</span>
       <p class="nhsuk-lede-text">[ PAGE_SUMMARY ]</p>
       [ PUBLISHED_INFO ]
+      [ TAXONOMIES ]
     </div>
   </div>
   <div class="nhsuk-width-container">
@@ -79,22 +80,21 @@
   }) 
 }}
 
-<h2>Components</h2>
-{{ components({
-    'data' : [
-        {
-            'type' : 'Furniture',
-            'list' : ['Page', 'Content']
-        },
-        {
-            'type' : 'Content Blocks',
-            'list' : ['Main', 'Sidebar', 'Featured']
-        }
-    ]
-}) }}
+    <h2>Components</h2>
+    {{ components({
+        'data' : [
+            {
+                'type' : 'Furniture',
+                'list' : ['Page', 'Content']
+            },
+            {
+                'type' : 'Content Blocks',
+                'list' : ['Main', 'Sidebar', 'Featured']
+            }
+        ]
+    }) }}
 
-<hr />
-
+    <hr />
 
 {% endblock %}
 
