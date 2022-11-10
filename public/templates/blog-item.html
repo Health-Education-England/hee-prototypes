@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Templates - Blog Item - NWP Prototype Kit</title>
+  <title>Blog Item - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -103,42 +103,35 @@
           <hr />
           <h2>HTML</h2>
           <pre><code>&lt;article class=&quot;page page--rightbar&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
-  &lt;div class=&quot;page__breadcrumbs&quot;&gt;[ BREADCRUMBS ]&lt;/div&gt;
+  &lt;div class=&quot;page__breadcrumbs&quot;&gt;[ INTEMPLATE_BREADCRUMBS ]&lt;/div&gt;
   &lt;div class=&quot;page__header&quot;&gt;
     &lt;div class=&quot;nhsuk-width-container&quot;&gt;
-      [ GO_BACK ]
-      &lt;h1&gt;[ TITLE ]&lt;/h1&gt;
-      &lt;span class=&quot;nhsuk-caption-xl&quot;&gt;[ CAPTION/ SUBTITLE ]&lt;/span&gt;
-      &lt;p class=&quot;nhsuk-lede-text&quot;&gt;[ EXCERPT ]&lt;/p&gt;
-      [ PUBLISHED_BY | PUBLISHED_DATE ]
+      [ PAGE_BACK ]
+      &lt;h1&gt;[ PAGE_TITLE ]&lt;/h1&gt;
+      &lt;span class=&quot;nhsuk-caption-xl&quot;&gt;[ PAGE_CAPTION ]&lt;/span&gt;
+      &lt;p class=&quot;nhsuk-lede-text&quot;&gt;[ PAGE_SUMMARY ]&lt;/p&gt;
+      [ PUBLISHED_INFO ]
       [ TAXONOMIES ]
-      [ IF MINIHUB ]
-        [ MINIHUB_NAV_LIST ]
-      [ ENDIF ]
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;nhsuk-width-container&quot;&gt;
     &lt;div class=&quot;page__layout&quot;&gt;
       &lt;div class=&quot;page__main&quot;&gt;
         &lt;div class=&quot;page__content&quot;&gt;
-          [ CONTENT_BLOCKS ]
+          [ CONTENT--MAIN_BLOCKS ]
         &lt;/div&gt;
-        [ LAST_UPDATED | REVIEWED_NEXTLAST ]
+        [ PAGE_LASTUPDATED ]
       &lt;/div&gt;
       &lt;aside class=&quot;page__rightbar&quot;&gt;
-        [ RIGHTBAR_BLOCKS ]
+        [ CONTENT--SIDEBAR_BLOCKS ]
       &lt;/aside&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;page__footer&quot;&gt;
-    [ IF MINIHUB ]
-      [ MINIHUB_NAV_PAGINATION ]
-    [ ENDIF ]
-    [ APPLIES_TO | VERSION_CONTROL ]
-    [ ANCHORLINKS--FIXED | BACK_TO_TOP ]
+    [ INTEMPLATE_BACKTOTOP ]
   &lt;/div&gt;
   &lt;section class=&quot;page__feature&quot;&gt;
-    [ FEATURE_BLOCKS ]
+    [ CONTENT--FEATURED_BLOCKS ]
   &lt;/section&gt;
 &lt;/article&gt;</code></pre>
           <h2>Components</h2>

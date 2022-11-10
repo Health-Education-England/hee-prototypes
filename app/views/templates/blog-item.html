@@ -3,7 +3,7 @@
 {% set page_url = 'blog-item' %}
 {% set page_title = 'Blog Item' %}
 
-{% block pageTitle %}Templates - Blog Item - NWP Prototype Kit{% endblock %}
+{% block pageTitle %}{{ page_title }} - Templates  - NWP Prototype Kit{% endblock %}
 
 {% block pageBreadcrumbs %}
 {{
@@ -25,10 +25,10 @@
 {% endblock %}
 
 {% block pageLeftbar %}
-    {{ subnav({
-        area: 'templates',
-        current: 'standard-content'
-    }) }}
+  {{ subnav({
+      area: 'templates',
+      current: page_url
+  }) }}
 {% endblock %}
 
 {% block pageHeader %}
@@ -46,45 +46,38 @@
     <h2>HTML</h2>
 {{ highlight({
   "html" : '<article class="page page--rightbar" id="maincontent" role="main">
-  <div class="page__breadcrumbs">[ BREADCRUMBS ]</div>
+  <div class="page__breadcrumbs">[ INTEMPLATE_BREADCRUMBS ]</div>
   <div class="page__header">
     <div class="nhsuk-width-container">
-      [ GO_BACK ]
-      <h1>[ TITLE ]</h1>
-      <span class="nhsuk-caption-xl">[ CAPTION/ SUBTITLE ]</span>
-      <p class="nhsuk-lede-text">[ EXCERPT ]</p>
-      [ PUBLISHED_BY | PUBLISHED_DATE ]
+      [ PAGE_BACK ]
+      <h1>[ PAGE_TITLE ]</h1>
+      <span class="nhsuk-caption-xl">[ PAGE_CAPTION ]</span>
+      <p class="nhsuk-lede-text">[ PAGE_SUMMARY ]</p>
+      [ PUBLISHED_INFO ]
       [ TAXONOMIES ]
-      [ IF MINIHUB ]
-        [ MINIHUB_NAV_LIST ]
-      [ ENDIF ]
     </div>
   </div>
   <div class="nhsuk-width-container">
     <div class="page__layout">
       <div class="page__main">
         <div class="page__content">
-          [ CONTENT_BLOCKS ]
+          [ CONTENT--MAIN_BLOCKS ]
         </div>
-        [ LAST_UPDATED | REVIEWED_NEXTLAST ]
+        [ PAGE_LASTUPDATED ]
       </div>
       <aside class="page__rightbar">
-        [ RIGHTBAR_BLOCKS ]
+        [ CONTENT--SIDEBAR_BLOCKS ]
       </aside>
     </div>
   </div>
   <div class="page__footer">
-    [ IF MINIHUB ]
-      [ MINIHUB_NAV_PAGINATION ]
-    [ ENDIF ]
-    [ APPLIES_TO | VERSION_CONTROL ]
-    [ ANCHORLINKS--FIXED | BACK_TO_TOP ]
+    [ INTEMPLATE_BACKTOTOP ]
   </div>
   <section class="page__feature">
-    [ FEATURE_BLOCKS ]
+    [ CONTENT--FEATURED_BLOCKS ]
   </section>
 </article>'
-})
+  }) 
 }}
 
     <h2>Components</h2>
