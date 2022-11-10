@@ -102,12 +102,11 @@
       ]
     }
   ] %}
-
   {% for section in templates_array %}
-    <h3>{{ section.section }}</h3>
+    {% if section.section %}<h3>{{ section.section }}</h3>{% endif %}
     <ul>
       {% for item in section.links %}
-      <li><a href="{{ item.url }}"{% if item.url == params.current %}class='current'{% endif %}>{{ item.title }}</a></li>
+      <li><a href="/templates/{{ item.url }}"{% if item.url == params.current %}class='current'{% endif %}>{{ item.title }}</a></li>
       {% endfor %}
     </ul>
   {% endfor %}
@@ -116,12 +115,33 @@
 
   {% if params.subarea == 'top' %}
 
-    <h3>Blocks</h3>
-    <ul>
-      <li><a href="/blocks/content/">Content</a></li>
-      <li><a href="/blocks/furniture/">Furniture</a></li>
-      <li><a href="/blocks/scaffolding/">Scaffolding</a></li>
-    </ul>
+    {% set blocks_top_array = [
+        {
+          section: "Blocks",
+          links: [
+            {
+              title: 'Scaffolding',
+              url: 'scaffolding'
+            },
+            {
+              title: 'Furniture',
+              url: 'furniture'
+            },
+            {
+              title: 'Content',
+              url: 'content'
+            }
+          ]
+        }
+    ] %}
+    {% for section in blocks_top_array %}
+      {% if section.section %}<h3>{{ section.section }}</h3>{% endif %}
+      <ul>
+        {% for item in section.links %}
+        <li><a href="/blocks/{{ item.url }}"{% if item.url == params.current %}class='current'{% endif %}>{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
 
   {% else %}
     {{
@@ -215,29 +235,69 @@
 
   {% elseif params.subarea == 'scaffolding' %}
 
-    <h3>Header</h3>
-    <ul>
-      <li><a href="/blocks/scaffolding/header">HEE Header</a></li>
-      <li><a href="/blocks/scaffolding/header-logos">Logos</a></li>
-      <li><a href="/blocks/scaffolding/header-navigation">Navigation</a></li>
-      <li><a href="/blocks/scaffolding/header-cookies">Cookies</a></li>
-      <li><a href="/blocks/scaffolding/header-search">Search</a></li>
-      <li><a href="/blocks/scaffolding/header-skiplink">Skip Link</a></li>
-    </ul>
-    <h3>InTemplate</h3>
-    <ul>
-      <li><a href="/blocks/scaffolding/intemplate-breadcrumbs">Breadcrumbs</a></li>
-      <li><a href="/blocks/scaffolding/intemplate-backtotop">Back to Top</a></li>
-    </ul>
-    <h3>Notifications</h3>
-    <ul>
-      <li><a href="/blocks/scaffolding/notifications-phasebanner">Phase Banner</a></li>
-      <li><a href="/blocks/scaffolding/notifications-globalalert">Global Alert</a></li>
-    </ul>
-    <h3>Footer</h3>
-    <ul>
-      <li><a href="/blocks/scaffolding/footer-links">Links + copyright</a></li>
-    </ul>
+  {% set scaffolding_array = [
+        {
+          section: "Header",
+          links: [
+            {
+              title: 'HEE Header',
+              url: 'header'
+            },
+            {
+              title: 'Cookies',
+              url: 'cookies'
+            },
+            {
+              title: 'Skip Link',
+              url: 'skip-link'
+            }
+          ]
+        },
+        {
+          section: "InTemplate",
+          links: [
+            {
+              title: 'Breadcrumbs',
+              url: 'intemplate-breadcrumbs'
+            },
+            {
+              title: 'Back to Top',
+              url: 'intemplate-back-to-top'
+            }
+          ]
+        },
+        {
+          section: "Notifications",
+          links: [
+            {
+              title: 'Phase Banner',
+              url: 'notifications-phase-banner'
+            },
+            {
+              title: 'Global Alert',
+              url: 'notifications-global-alerts'
+            }
+          ]
+        },
+        {
+          section: "Footer",
+          links: [
+            {
+              title: 'Links + Copyright',
+              url: 'footer-links'
+            }
+          ]
+        }
+    ] %}
+
+    {% for section in scaffolding_array %}
+      {% if section.section %}<h3>{{ section.section }}</h3>{% endif %}
+      <ul>
+        {% for item in section.links %}
+        <li><a href="/blocks/scaffolding/{{ item.url }}.html"{% if item.url == params.current %}class='current'{% endif %}>{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
 
   {% endif %}
 
