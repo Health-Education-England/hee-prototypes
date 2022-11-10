@@ -1,0 +1,24 @@
+{% macro example(params) %}
+
+{% if params.data %}
+<table class="nhsuk-table">
+    <thead>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Description</th>
+    </thead>
+    <tbody>
+        {% for item in params.data %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.type }}</td>
+            <td>{{ item.required }}</td>
+            <td>{{ item.description }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endif %}
+
+{% endmacro %}
