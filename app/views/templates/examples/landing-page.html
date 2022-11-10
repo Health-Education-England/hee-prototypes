@@ -1,27 +1,30 @@
 {% extends "template-fullwidth.html" %}
 
-{% block pageTitle %}Templates - LandingHub - NWP Prototype Kit{% endblock %}
+{% set page_url = 'landing-page' %}
+{% set page_title = 'Landing Page' %}
+
+{% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
 
 {% block pageBreadcrumbs %}
   {{
-  breadcrumb({
-    items: [
-      {
-        href: "/",
-        text: "Home"
-      },
-      {
-        href: "/templates",
-        text: "Templates"
-      },
-      {
-        href: "/templates/examples",
-        text: "Examples"
-      }
-    ],
-    href: "/templates/examples/landing-hub",
-    text: "LandingHub"
-  })
+    breadcrumb({
+      items: [
+        {
+          href: "/",
+          text: "Home"
+        },
+        {
+          href: "/templates",
+          text: "Templates"
+        },
+        {
+          href: "/templates/examples",
+          text: "Examples"
+        }
+      ],
+      href: "/templates/examples/"+page_url,
+      text: page_title
+    })
   }}
 {% endblock %}
 
@@ -109,7 +112,6 @@
       </ul>
     </div>
   </section>
-
   <section class="nhsuk-width-container">
     <h2>Navigation cards component</h2>
     <div class="nhsuk-grid-row">
