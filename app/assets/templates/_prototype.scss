@@ -122,10 +122,28 @@
 .prototype--examples {
 
   .page__layout {
-    @include hee-flexgrid-row;
+    //@include hee-flexgrid-row;
     .page__col {
       @include hee-flexgrid-col(6);
+      margin-bottom: 2em;
+      padding-bottom: 2em;
     }
+  }
+
+  table {
+    padding: 0;
+  }
+  table th, 
+  table td {
+    line-height: 1em;
+    padding: 0.5em 1em;
+    vertical-align: middle;
+  }
+
+  .gap {
+    border-top: 10px solid #f0f4f5;
+    background-color: #f0f4f5;
+    padding-left: 0;
   }
 
   @include mq($until: desktop) {
