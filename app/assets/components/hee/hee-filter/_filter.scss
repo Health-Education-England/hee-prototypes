@@ -8,6 +8,15 @@
     width: 100%;
   }
 
+  .nhsuk-filter__group {
+    position: relative;
+
+    .nhsuk-filter__group__clear {
+      position: absolute;
+      right: 0;
+    }
+  }
+
   // Closed groups
   &__group--closed .nhsuk-checkboxes {
     display: none;
