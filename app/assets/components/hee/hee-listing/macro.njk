@@ -1,19 +1,23 @@
 {% macro listing(list) %}
-  {%- from 'button/macro.njk' import button %}
-{%- from 'hee/hee-filter/macro.njk' import filter %}
-{%- from 'hee/hee-filtertag/macro.njk' import filterTag %}
 {%- from 'pagination/macro.njk' import pagination %}
-{%- from 'select/macro.njk' import select %}
 {%- from 'summary-list/macro.njk' import summaryList %}
 
-<div class="nhsuk-listing hee-listing">
-  <div class="nhsuk-grid-row hee-layout">
-    {% if list.filter %}
-      <div class="nhsuk-grid-column-one-third hee-layout__leftbar">
-        {{ filter(list.filter) }}
+  <div class="hee-listing">
+    <div class="hee-listing__summary">
+      <div class="hee-listing__count">
+        <h2 class="nhsuk-listing__title nhsuk-heading-l">{{ list.results.length }} results</h2>
       </div>
-    {% endif %}
+      <div class="hee-listing__filter">
+        <form method="get" class="hee-listing__filter__sort">
+          {{ list.filter.select }}
+          {{ list.filter.submit }}
+        </form>
+      </div>
+    </div>
+  </div>
 
+{#<div class="nhsuk-listing hee-listing">
+  <div class="nhsuk-grid-row hee-layout">
     <div class="nhsuk-listing__list nhsuk-grid-column-two-thirds hee-layout__content">
       <div class="nhsuk-listing__summary o-flex@tablet">
         <h2 class="nhsuk-listing__title nhsuk-heading-l o-flex__grow">
@@ -104,6 +108,6 @@
       {% endif %}
     </div>
   </div>
-</div>
+</div>#}
 
 {% endmacro %}

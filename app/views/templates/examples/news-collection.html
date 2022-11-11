@@ -56,43 +56,61 @@
   }) }}
 {% endblock %}
 
+{% set filterSelect %}
+  {{ select({
+    id: "sort",
+    name: "sort",
+    label: {
+      text: "Sort by"
+    },
+    items: [
+      {
+        value: "newest",
+        text: "Newest"
+      },
+      {
+        value: "relevance",
+        text: "Relevance"
+      }
+    ]
+  }) }}
+{% endset %}
+
+{% set filterSubmit %}
+  {{ button({
+    text: "Update",
+    classes: "hee-listing__filter__submit"
+  }) }}
+{% endset %}
+
+{% set items = [
+    {
+      title: "News item #1"
+    },
+    {
+      title: "News item #2"
+    },
+    {
+      title: "News item #3"
+    },
+    {
+      title: "News item #4"
+    },
+    {
+      title: "News item #5"
+    },
+    {
+      title: "News item #6"
+    }
+  ]
+%}
+
 {% block pageContent %}
   {{ listing({
-      showPagination: true,
-      pageType: "bulletin",
-      items: [
-      {
-        title: "Item one",
-        summaryList: {
-          rows: [
-            {
-              key: {
-              text: "Category"
-            },
-              value: {
-              text: "Lorem ipsum dolor sit amet"
-            }
-            },
-            {
-              key: {
-              text: "Overview"
-            },
-              value: {
-              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt felis in felis pharetra, at fringilla neque auctor"
-            }
-            },
-            {
-              key: {
-              text: "Website"
-            },
-              value: {
-              html: "<a href=\"#\">Website title</a>"
-            }
-            }
-          ]
-        }
-      }
-      ]
-    })
-  }}
+    filter: {
+      select: filterSelect,
+      submit: filterSubmit
+    },
+    results: items
+  }) }}
 {% endblock %}
