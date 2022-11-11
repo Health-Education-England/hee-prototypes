@@ -1,18 +1,21 @@
-{% import 'includes/_globals.html' as globals %}
+{% import 'includes/_globals.html' as global %}
 {%- from 'back-link/macro.njk' import backLink %}
-
 
 {% macro subnav(params) %}
 
 <nav class="page__subnav">
 {% if params.area == 'templates' %}
 
-  {% for section in globals.templates_array %}
+  {% for section in global.templates_array %}
     {% if section.heading %}<h3>{{ section.heading }}</h3>{% endif %}
     {% if section.subheading %}<h4>{{ section.subheading }}</h4>{% endif %}
     <ul>
       {% for item in section.links %}
-      <li><a href="/templates/{{ item.url }}"{% if item.url == params.current %}class='current'{% endif %}>{{ item.title }}</a></li>
+        {% if item.status == 'To Do' %}
+          <li>{{ item.title }}</li>
+        {% else %}
+          <li{% if item.url == params.current %} class='current'{% endif %}><a href="/templates/{{ item.url }}">{{ item.title }}</a></li>
+        {% endif %}
       {% endfor %}
     </ul>
   {% endfor %}
@@ -21,31 +24,12 @@
 
   {% if params.subarea == 'top' %}
 
-    {% set blocks_top_array = [
-      {
-        heading: "Blocks",
-        links: [
-          {
-            title: 'Scaffolding',
-            url: 'scaffolding'
-          },
-          {
-            title: 'Furniture',
-            url: 'furniture'
-          },
-          {
-            title: 'Content',
-            url: 'content'
-          }
-        ]
-      }
-    ] %}
-    {% for section in blocks_top_array %}
+    {% for section in global.blocks_top_array %}
       {% if section.heading %}<h3>{{ section.heading }}</h3>{% endif %}
       {% if section.subheading %}<h4>{{ section.subheading }}</h4>{% endif %}
       <ul>
         {% for item in section.links %}
-        <li><a href="/blocks/{{ item.url }}"{% if item.url == params.current %}class='current'{% endif %}>{{ item.title }}</a></li>
+        <li><a href="/blocks/{{ item.url }}">{{ item.title }}</a></li>
         {% endfor %}
       </ul>
     {% endfor %}
@@ -62,36 +46,48 @@
 
   {% if params.subarea == 'content' %}
 
-    {% for section in globals.content_array %}
+    {% for section in global.content_array %}
       {% if section.heading %}<h3>{{ section.heading }}</h3>{% endif %}
       {% if section.subheading %}<h4>{{ section.subheading }}</h4>{% endif %}
       <ul>
         {% for item in section.links %}
-        <li><a href="/blocks/content/{{ item.url }}"{% if item.url == params.current %}class='current'{% endif %}>{{ item.title }}</a></li>
+          {% if item.status == 'To Do' %}
+            <li>{{ item.title }}</li>
+          {% else %}
+            <li{% if item.url == params.current %} class='current'{% endif %}><a href="/blocks/content/{{ item.url }}">{{ item.title }}</a></li>
+          {% endif %}
         {% endfor %}
       </ul>
     {% endfor %}
 
   {% elseif params.subarea == 'furniture' %}
 
-    {% for section in globals.furniture_array %}
+    {% for section in global.furniture_array %}
       {% if section.heading %}<h3>{{ section.heading }}</h3>{% endif %}
       {% if section.subheading %}<h4>{{ section.subheading }}</h4>{% endif %}
       <ul>
         {% for item in section.links %}
-        <li><a href="/blocks/furniture/{{ item.url }}.html"{% if item.url == params.current %}class='current'{% endif %}>{{ item.title }}</a></li>
+          {% if item.status == 'To Do' %}
+            <li>{{ item.title }}</li>
+          {% else %}
+            <li{% if item.url == params.current %} class='current'{% endif %}><a href="/blocks/furniture/{{ item.url }}">{{ item.title }}</a></li>
+          {% endif %}
         {% endfor %}
       </ul>
     {% endfor %}
 
   {% elseif params.subarea == 'scaffolding' %}
 
-    {% for section in globals.scaffolding_array %}
+    {% for section in global.scaffolding_array %}
       {% if section.heading %}<h3>{{ section.heading }}</h3>{% endif %}
       {% if section.subheading %}<h4>{{ section.subheading }}</h4>{% endif %}
       <ul>
         {% for item in section.links %}
-        <li><a href="/blocks/scaffolding/{{ item.url }}.html"{% if item.url == params.current %}class='current'{% endif %}>{{ item.title }}</a></li>
+          {% if item.status == 'To Do' %}
+            <li>{{ item.title }}</li>
+          {% else %}
+            <li{% if item.url == params.current %} class='current'{% endif %}><a href="/blocks/scaffolding/{{ item.url }}">{{ item.title }}</a></li>
+          {% endif %}
         {% endfor %}
       </ul>
     {% endfor %}
