@@ -101,23 +101,26 @@
           <pre><code>&lt;main class=&quot;page page--fullwidth&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
   &lt;div class=&quot;page__breadcrumbs&quot;&gt;[ BREADCRUMBS ]&lt;/div&gt;
   &lt;div class=&quot;page__header&quot;&gt;
-    [ PAGE_HERO | PAGE_MICROHERO ]
-    &lt;div class=&quot;nhsuk-width-container&quot;&gt;
-      &lt;h1&gt;[ PAGE_TITLE ]&lt;/h1&gt;
-      &lt;span class=&quot;nhsuk-caption-xl&quot;&gt;[ PAGE_CAPTION ]&lt;/span&gt;
-      &lt;p class=&quot;nhsuk-lede-text&quot;&gt;[ PAGE_SUMMARY ]&lt;/p&gt;
-    &lt;/div&gt;
+    [ PAGE_MICROHERO ]
+    [ IF PAGE_HERO ]
+      [ PAGE_HERO ]
+    [ ELSE ]
+      &lt;div class=&quot;nhsuk-width-container&quot;&gt;
+        &lt;h1&gt;[ PAGE_TITLE ]&lt;/h1&gt;
+        &lt;span class=&quot;nhsuk-caption-xl&quot;&gt;[ PAGE_CAPTION ]&lt;/span&gt;
+        &lt;p class=&quot;nhsuk-lede-text&quot;&gt;[ PAGE_SUMMARY ]&lt;/p&gt;
+      &lt;/div&gt;
+    [ ENDIF ]
   &lt;/div&gt;
   &lt;div class=&quot;page__main&quot;&gt;
     &lt;div class=&quot;nhsuk-width-container&quot;&gt;
       [ IF HOMEPAGE, LANDINGHUB, 404 ]
       &lt;div class=&quot;page__content&quot;&gt;
-        [ CONTENT_BLOCKS ]
+        [ CONTENT--MAIN_BLOCKS ]
       &lt;/div&gt;
       [ ELSEIF SEARCH_LISTING ]
         [ SEARCH_INPUT ]
         [ RESULTS_TITLE | RESULTS_SORTING ]
-        [ FILTER_TAG ]
         [ RESULTS_LISTING ]
         [ RESULTS_PAGINATION ]
       [ ELSEIF AZ_LISTING ]
@@ -129,7 +132,7 @@
   &lt;div class=&quot;page__footer&quot;&gt;
   &lt;/div&gt;
   &lt;section class=&quot;page__feature&quot;&gt;
-    [ FEATURE_BLOCKS ]
+    [ CONTENT--FEATURED_BLOCKS ]
   &lt;/section&gt;
 &lt;/main&gt;</code></pre>
         </div>
