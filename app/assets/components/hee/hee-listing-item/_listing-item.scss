@@ -7,8 +7,16 @@
   .hee-listing-item__details__row {
     margin-bottom: map-get($nhsuk-spacing-points, 2);
 
-    .hee-listing-item__details__label {
-      font-weight: $nhsuk-font-bold;
+    span {
+      display: inline-block;
+
+      &.hee-listing-item__details__label {
+        font-weight: $nhsuk-font-bold;
+
+        @include mq($from: tablet) {
+          width: 33%;
+        }
+      }
     }
   }
 }
