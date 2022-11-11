@@ -17,7 +17,7 @@
   <link href="/css/hee.css" rel="stylesheet" />
 </head>
 
-<body class="prototype prototype--examples">
+<body class="prototype prototype--inventory">
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script>
@@ -44,7 +44,7 @@
   </div>
   <div class="site-notifications">
   </div>
-  <main class="page " id="maincontent" role="main">
+  <main class="page page--fullwidth" id="maincontent" role="main">
     <div class="page__breadcrumbs">
       <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
         <div class="nhsuk-width-container">
@@ -62,11 +62,11 @@
         <p class="nhsuk-lede-text"></p>
       </div>
     </div>
-    <div class="nhsuk-width-container">
-      <div class="page__layout">
+    <div class="page__main">
+      <div class="nhsuk-width-container">
         <h2>Templates</h2>
         <h3>Fullwidth</h3>
-        <table>
+        <table class="prototype__table">
           <tbody>
             <tr>
               <td>Base</td>
@@ -89,7 +89,7 @@
               <td width="150"><a href="/templates/landing-page">Information</a></td>
               <td width="150"><a href="/templates/examples/landing-page">Preview</a></td>
               <td width="200" style="text-align:right;">
-                <strong class="nhsuk-tag nhsuk-tag--red"> Issues </strong>
+                <strong class="nhsuk-tag nhsuk-tag--blue"> Done </strong>
               </td>
             </tr>
             <tr>
@@ -105,7 +105,7 @@
               <td width="150"><a href="/templates/az-listing">Information</a></td>
               <td width="150"><a href="/templates/examples/az-listing">Preview</a></td>
               <td width="200" style="text-align:right;">
-                <strong class="nhsuk-tag nhsuk-tag--green"> To Do </strong>
+                <strong class="nhsuk-tag nhsuk-tag--white"> Started </strong>
               </td>
             </tr>
             <tr>
@@ -113,20 +113,20 @@
               <td width="150"><a href="/templates/search-listing">Information</a></td>
               <td width="150"><a href="/templates/examples/search-listing">Preview</a></td>
               <td width="200" style="text-align:right;">
-                <strong class="nhsuk-tag nhsuk-tag--green"> To Do </strong>
+                <strong class="nhsuk-tag nhsuk-tag--white"> Started </strong>
               </td>
             </tr>
           </tbody>
         </table>
         <h3>Leftbar</h3>
-        <table>
+        <table class="prototype__table">
           <tbody>
             <tr>
               <td>Base</td>
               <td width="150"><a href="/templates/base-leftbar">Information</a></td>
               <td width="150"><a href="/templates/examples/base-leftbar">Preview</a></td>
               <td width="200" style="text-align:right;">
-                <strong class="nhsuk-tag nhsuk-tag--green"> To Do </strong>
+                <strong class="nhsuk-tag nhsuk-tag--blue"> Done </strong>
               </td>
             </tr>
             <tr>
@@ -172,14 +172,14 @@
           </tbody>
         </table>
         <h3>Rightbar</h3>
-        <table>
+        <table class="prototype__table">
           <tbody>
             <tr>
               <td>Base</td>
               <td width="150"><a href="/templates/base-rightbar">Information</a></td>
               <td width="150"><a href="/templates/examples/base-rightbar">Preview</a></td>
               <td width="200" style="text-align:right;">
-                <strong class="nhsuk-tag nhsuk-tag--green"> To Do </strong>
+                <strong class="nhsuk-tag nhsuk-tag--blue"> Done </strong>
               </td>
             </tr>
             <tr>
@@ -187,7 +187,7 @@
               <td width="150"><a href="/templates/standard-content">Information</a></td>
               <td width="150"><a href="/templates/examples/standard-content">Preview</a></td>
               <td width="200" style="text-align:right;">
-                <strong class="nhsuk-tag nhsuk-tag--green"> To Do </strong>
+                <strong class="nhsuk-tag nhsuk-tag--blue"> Done </strong>
               </td>
             </tr>
             <tr>
@@ -195,7 +195,7 @@
               <td width="150"><a href="/templates/mini-hub-item">Information</a></td>
               <td width="150"><a href="/templates/examples/mini-hub-item">Preview</a></td>
               <td width="200" style="text-align:right;">
-                <strong class="nhsuk-tag nhsuk-tag--green"> To Do </strong>
+                <strong class="nhsuk-tag nhsuk-tag--blue"> Done </strong>
               </td>
             </tr>
             <tr>
@@ -203,7 +203,7 @@
               <td width="150"><a href="/templates/news-item">Information</a></td>
               <td width="150"><a href="/templates/examples/news-item">Preview</a></td>
               <td width="200" style="text-align:right;">
-                <strong class="nhsuk-tag nhsuk-tag--green"> To Do </strong>
+                <strong class="nhsuk-tag nhsuk-tag--blue"> Done </strong>
               </td>
             </tr>
             <tr>
@@ -211,7 +211,7 @@
               <td width="150"><a href="/templates/blog-item">Information</a></td>
               <td width="150"><a href="/templates/examples/blog-item">Preview</a></td>
               <td width="200" style="text-align:right;">
-                <strong class="nhsuk-tag nhsuk-tag--green"> To Do </strong>
+                <strong class="nhsuk-tag nhsuk-tag--blue"> Done </strong>
               </td>
             </tr>
             <tr>
@@ -242,7 +242,7 @@
         </table>
         <h2>Scaffolding Blocks</h2>
         <h3>Header</h3>
-        <table>
+        <table class="prototype__table">
           <tbody>
             <tr>
               <td>HEE Header</td>
@@ -271,7 +271,7 @@
           </tbody>
         </table>
         <h3>InTemplate</h3>
-        <table>
+        <table class="prototype__table">
           <tbody>
             <tr>
               <td>Breadcrumbs</td>
@@ -292,7 +292,7 @@
           </tbody>
         </table>
         <h3>Notifications</h3>
-        <table>
+        <table class="prototype__table">
           <tbody>
             <tr>
               <td>Phase Banner</td>
@@ -313,7 +313,7 @@
           </tbody>
         </table>
         <h3>Footer</h3>
-        <table>
+        <table class="prototype__table">
           <tbody>
             <tr>
               <td>Links + Copyright</td>
@@ -327,14 +327,14 @@
         </table>
         <h2>Furniture Blocks</h2>
         <h3>Page</h3>
-        <table>
+        <table class="prototype__table">
           <tbody>
             <tr>
               <td>Hero</td>
               <td width="150"><a href="/blocks/furniture/page-hero">Information</a></td>
               <td width="150"><a href="/blocks/furniture/examples/page-hero">Preview</a></td>
               <td width="200" style="text-align:right;">
-                <strong class="nhsuk-tag nhsuk-tag--green"> To Do </strong>
+                <strong class="nhsuk-tag nhsuk-tag--blue"> Done </strong>
               </td>
             </tr>
             <tr>
@@ -388,22 +388,22 @@
           </tbody>
         </table>
         <h3>Content</h3>
-        <table>
+        <table class="prototype__table">
           <tbody>
             <tr>
               <td>Go Back</td>
               <td width="150"><a href="/blocks/furniture/content-go-back">Information</a></td>
               <td width="150"><a href="/blocks/furniture/examples/content-go-back">Preview</a></td>
               <td width="200" style="text-align:right;">
-                <strong class="nhsuk-tag nhsuk-tag--green"> To Do </strong>
+                <strong class="nhsuk-tag nhsuk-tag--blue"> Done </strong>
               </td>
             </tr>
             <tr>
               <td>Published Info</td>
-              <td width="150"><a href="/blocks/furniture/page-published-info">Information</a></td>
-              <td width="150"><a href="/blocks/furniture/examples/page-published-info">Preview</a></td>
+              <td width="150"><a href="/blocks/furniture/content-published-info">Information</a></td>
+              <td width="150"><a href="/blocks/furniture/examples/content-published-info">Preview</a></td>
               <td width="200" style="text-align:right;">
-                <strong class="nhsuk-tag nhsuk-tag--green"> To Do </strong>
+                <strong class="nhsuk-tag nhsuk-tag--white"> Started </strong>
               </td>
             </tr>
             <tr>
@@ -433,7 +433,7 @@
           </tbody>
         </table>
         <h3></h3>
-        <table>
+        <table class="prototype__table">
           <tbody>
             <tr>
               <td colspan="4"><strong>Minihub</strong></td>
@@ -457,7 +457,7 @@
           </tbody>
         </table>
         <h3>Collections</h3>
-        <table>
+        <table class="prototype__table">
           <tbody>
             <tr>
               <td colspan="4"><strong>Filter</strong></td>
@@ -489,7 +489,7 @@
           </tbody>
         </table>
         <h3></h3>
-        <table>
+        <table class="prototype__table">
           <tbody>
             <tr>
               <td colspan="4"><strong>Results</strong></td>
@@ -521,7 +521,7 @@
           </tbody>
         </table>
         <h3></h3>
-        <table>
+        <table class="prototype__table">
           <tbody>
             <tr>
               <td colspan="4"><strong>Search Listing</strong></td>
@@ -537,7 +537,7 @@
           </tbody>
         </table>
         <h3></h3>
-        <table>
+        <table class="prototype__table">
           <tbody>
             <tr>
               <td colspan="4"><strong>A-Z Listing</strong></td>
@@ -562,14 +562,14 @@
         </table>
         <h2>Content Blocks</h2>
         <h3>Page</h3>
-        <table>
+        <table class="prototype__table">
           <tbody>
             <tr>
               <td>Hero</td>
               <td width="150"><a href="/blocks/content/page-hero">Information</a></td>
               <td width="150"><a href="/blocks/content/examples/page-hero">Preview</a></td>
               <td width="200" style="text-align:right;">
-                <strong class="nhsuk-tag nhsuk-tag--green"> To Do </strong>
+                <strong class="nhsuk-tag nhsuk-tag--blue"> Done </strong>
               </td>
             </tr>
             <tr>
@@ -623,22 +623,22 @@
           </tbody>
         </table>
         <h3>Content</h3>
-        <table>
+        <table class="prototype__table">
           <tbody>
             <tr>
               <td>Go Back</td>
               <td width="150"><a href="/blocks/content/content-go-back">Information</a></td>
               <td width="150"><a href="/blocks/content/examples/content-go-back">Preview</a></td>
               <td width="200" style="text-align:right;">
-                <strong class="nhsuk-tag nhsuk-tag--green"> To Do </strong>
+                <strong class="nhsuk-tag nhsuk-tag--blue"> Done </strong>
               </td>
             </tr>
             <tr>
               <td>Published Info</td>
-              <td width="150"><a href="/blocks/content/page-published-info">Information</a></td>
-              <td width="150"><a href="/blocks/content/examples/page-published-info">Preview</a></td>
+              <td width="150"><a href="/blocks/content/content-published-info">Information</a></td>
+              <td width="150"><a href="/blocks/content/examples/content-published-info">Preview</a></td>
               <td width="200" style="text-align:right;">
-                <strong class="nhsuk-tag nhsuk-tag--green"> To Do </strong>
+                <strong class="nhsuk-tag nhsuk-tag--white"> Started </strong>
               </td>
             </tr>
             <tr>
@@ -668,7 +668,7 @@
           </tbody>
         </table>
         <h3></h3>
-        <table>
+        <table class="prototype__table">
           <tbody>
             <tr>
               <td colspan="4"><strong>Minihub</strong></td>
@@ -692,7 +692,7 @@
           </tbody>
         </table>
         <h3>Collections</h3>
-        <table>
+        <table class="prototype__table">
           <tbody>
             <tr>
               <td colspan="4"><strong>Filter</strong></td>
@@ -724,7 +724,7 @@
           </tbody>
         </table>
         <h3></h3>
-        <table>
+        <table class="prototype__table">
           <tbody>
             <tr>
               <td colspan="4"><strong>Results</strong></td>
@@ -756,7 +756,7 @@
           </tbody>
         </table>
         <h3></h3>
-        <table>
+        <table class="prototype__table">
           <tbody>
             <tr>
               <td colspan="4"><strong>Search Listing</strong></td>
@@ -772,7 +772,7 @@
           </tbody>
         </table>
         <h3></h3>
-        <table>
+        <table class="prototype__table">
           <tbody>
             <tr>
               <td colspan="4"><strong>A-Z Listing</strong></td>
