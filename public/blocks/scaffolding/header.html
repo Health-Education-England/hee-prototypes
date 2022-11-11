@@ -71,25 +71,22 @@
             <h3>Header</h3>
             <ul>
               <li><a href="/blocks/scaffolding/header">HEE Header</a></li>
-              <li><a href="/blocks/scaffolding/header-logos">Logos</a></li>
-              <li><a href="/blocks/scaffolding/header-navigation">Navigation</a></li>
-              <li><a href="/blocks/scaffolding/header-cookies">Cookies</a></li>
-              <li><a href="/blocks/scaffolding/header-search">Search</a></li>
-              <li><a href="/blocks/scaffolding/header-skiplink">Skip Link</a></li>
+              <li>Cookies</li>
+              <li>Skip Link</li>
             </ul>
             <h3>InTemplate</h3>
             <ul>
-              <li><a href="/blocks/scaffolding/intemplate-breadcrumbs">Breadcrumbs</a></li>
-              <li><a href="/blocks/scaffolding/intemplate-backtotop">Back to Top</a></li>
+              <li>Breadcrumbs</li>
+              <li>Back to Top</li>
             </ul>
             <h3>Notifications</h3>
             <ul>
-              <li><a href="/blocks/scaffolding/notifications-phasebanner">Phase Banner</a></li>
-              <li><a href="/blocks/scaffolding/notifications-globalalert">Global Alert</a></li>
+              <li>Phase Banner</li>
+              <li>Global Alert</li>
             </ul>
             <h3>Footer</h3>
             <ul>
-              <li><a href="/blocks/scaffolding/footer-links">Links + copyright</a></li>
+              <li><a href="/blocks/scaffolding/footer-links">Links + Copyright</a></li>
             </ul>
           </nav>
         </div>
@@ -99,19 +96,80 @@
             <h1>Header</h1>
             <p class="nhsuk-lede-text"></p>
           </div>
-          <h3>Example</h3>
-          <div class="prototype__example block">
+          <h2>Example</h2>
+          <div class="prototype__example scaled" style="height:NaNpx;">
             <a href="/blocks/scaffolding/examples/header" target="_blank" class="prototype__example-link">Open this example in new window</a>
             <div class="thumbnail">
-              <iframe src="/blocks/scaffolding/examples/header" height="400px"></iframe>
+              <iframe src="/blocks/scaffolding/examples/header" height="200px"></iframe>
             </div>
           </div>
           <hr />
-          <h3>Macro</h3>
-          <pre><code></code></pre>
-          <hr />
-          <h3>HTML</h3>
-          <pre><code></code></pre>
+          <h2>Macro</h2>
+          <pre><code>{{ customHeader({
+  &quot;showNav&quot;: &quot;true&quot;,
+  &quot;showSearch&quot;: &quot;true&quot;,
+  &quot;showLogos&quot;: &quot;true&quot;,
+  &quot;heeHref&quot;: &quot;http://hee.nhs.uk/&quot;,
+  &quot;classes&quot;: &quot;nhsuk-header--white&quot;,
+  &quot;organisation&quot;: {
+    &quot;name&quot;: &quot;Health Education England&quot;,
+    &quot;split&quot;: &quot;&quot;,
+    &quot;descriptor&quot;: &quot;Hub Name&quot;
+  },
+  &quot;logos&quot;: [
+    {
+      &quot;href&quot;: &quot;https://www.nimdta.gov.uk/&quot;,
+      &quot;label&quot;: &quot;Northern Ireland Medical and Dental Training Agency Website (Opens in New Window)&quot;,
+      &quot;imgSrc&quot;: &quot;/images/logos/nimdta-logo.png&quot;,
+      &quot;imgAlt&quot;: &quot;Logo for Northern Ireland Medical and Dental Training Agency&quot;
+    },
+    {
+      &quot;href&quot;: &quot;https://www.nes.scot.nhs.uk/&quot;,
+      &quot;label&quot;: &quot;NHS Education for Scotland Website (Opens in New Window)&quot;,
+      &quot;imgSrc&quot;: &quot;/images/logos/nhs-scotland-logo.png&quot;,
+      &quot;imgAlt&quot;: &quot;Logo for NHS Education for Scotland&quot;
+    },
+    {
+      &quot;href&quot;: &quot;https://heiw.nhs.wales/&quot;,
+      &quot;label&quot;: &quot;Health Education and Improvement Wales Website (Opens in New Window)&quot;,
+      &quot;imgSrc&quot;: &quot;/images/logos/heiw-logo.png&quot;,
+      &quot;imgAlt&quot;: &quot;Logo for Health Education and Improvement Wales&quot;
+    }
+  ],
+  &quot;primaryLinks&quot;: [
+    {
+      url: &quot;/templates&quot;,
+      label: &quot;Templates&quot;
+    },
+    {
+      url: &quot;/components&quot;,
+      label: &quot;Components&quot;,
+      children: [
+        {
+          url: &quot;/scaffolding&quot;,
+          label: &quot;Scaffolding&quot;
+        },
+        {
+          url: &quot;/components/furniture&quot;,
+          label: &quot;Furniture&quot;
+        },
+        {
+          url: &quot;/components/contentblocks&quot;,
+          label: &quot;Content Blocks&quot;
+        },
+        {
+          url: &quot;/components/rightblocks&quot;,
+          label: &quot;Right Blocks&quot;
+        },
+        {
+          url: &quot;/components/featureblocks&quot;,
+          label: &quot;Feature Blocks&quot;
+        }
+      ]
+    }
+  ]
+})
+}}</code></pre>
         </div>
       </div>
     </div>

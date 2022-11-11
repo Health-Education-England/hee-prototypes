@@ -63,32 +63,32 @@
           <nav class="page__subnav">
             <h3>Fullwidth</h3>
             <ul>
-              <li><a href="base-fullwidth">Base</a></li>
-              <li><a href="homepage">Homepage</a></li>
-              <li><a href="landing-page">Landing Page</a></li>
-              <li><a href="404">404</a></li>
-              <li><a href="az-listing">A-Z Listing</a></li>
-              <li><a href="search-listing">Search Listing</a></li>
+              <li><a href="/templates/base-fullwidth">Base</a></li>
+              <li><a href="/templates/homepage">Homepage</a></li>
+              <li><a href="/templates/landing-page">Landing Page</a></li>
+              <li><a href="/templates/404">404</a></li>
+              <li><a href="/templates/az-listing">A-Z Listing</a></li>
+              <li><a href="/templates/search-listing">Search Listing</a></li>
             </ul>
             <h3>Leftbar</h3>
             <ul>
-              <li><a href="base-leftbar">Base</a></li>
-              <li><a href="news-collection">News Collection</a></li>
-              <li><a href="blog-collection">Blog Collection</a></li>
-              <li><a href="case-studies-collection">Casestudies Collection</a></li>
-              <li><a href="publications-collection">Publications Collection</a></li>
-              <li><a href="event-collection">Event Collection</a></li>
+              <li><a href="/templates/base-leftbar">Base</a></li>
+              <li>News Collection</li>
+              <li>Blog Collection</li>
+              <li>Casestudies Collection</li>
+              <li>Publications Collection</li>
+              <li>Event Collection</li>
             </ul>
             <h3>Rightbar</h3>
             <ul>
-              <li><a href="base-rightbar">Base</a></li>
-              <li><a href="standard-content">Standard Content</a></li>
-              <li><a href="mini-hub-item">Mini-hub Item</a></li>
-              <li><a href="news-item">News Item</a></li>
-              <li><a href="blog-item" class='current'>Blog Item</a></li>
-              <li><a href="publication-landing">Publication Landing</a></li>
-              <li><a href="publication-item">Publication Item</a></li>
-              <li><a href="event-item">Event Item</a></li>
+              <li><a href="/templates/base-rightbar">Base</a></li>
+              <li><a href="/templates/standard-content">Standard Content</a></li>
+              <li><a href="/templates/mini-hub-item">Mini-hub Item</a></li>
+              <li><a href="/templates/news-item">News Item</a></li>
+              <li class='current'><a href="/templates/blog-item">Blog Item</a></li>
+              <li>Publication Landing</li>
+              <li>Publication Item</li>
+              <li>Event Item</li>
             </ul>
           </nav>
         </div>
@@ -99,7 +99,12 @@
             <p class="nhsuk-lede-text"></p>
           </div>
           <h2>Example</h2>
-          <a href="/templates/examples/blog-item" target="_blank">Click to preview the template [opens in new window]</a>
+          <div class="prototype__example scaled" style="height:400px;overflow:hidden;">
+            <a href="/templates/examples/blog-item" target="_blank" class="prototype__example-link">Open this example in new window</a>
+            <div class="thumbnail">
+              <iframe src="/templates/examples/blog-item" height="780"></iframe>
+            </div>
+          </div>
           <hr />
           <h2>HTML</h2>
           <pre><code>&lt;article class=&quot;page page--rightbar&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
@@ -134,6 +139,7 @@
     [ CONTENT--FEATURED_BLOCKS ]
   &lt;/section&gt;
 &lt;/article&gt;</code></pre>
+          <hr />
           <h2>Components</h2>
           <h4>Furniture</h4>
           <ul>
@@ -146,7 +152,6 @@
             <li>Sidebar</li>
             <li>Featured</li>
           </ul>
-          <hr />
         </div>
       </div>
     </div>

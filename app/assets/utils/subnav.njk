@@ -1,3 +1,4 @@
+{% import 'includes/_globals.html' as global %}
 {%- from 'back-link/macro.njk' import backLink %}
 
 {% macro subnav(params) %}
@@ -5,109 +6,16 @@
 <nav class="page__subnav">
 {% if params.area == 'templates' %}
 
-  {% set templates_array = [
-    {
-      heading: "Fullwidth",
-      links: [
-        {
-          title: 'Base',
-          url: 'base-fullwidth'
-        },
-        {
-          title: 'Homepage',
-          url: 'homepage'
-        },
-        {
-          title: 'Landing Page',
-          url: 'landing-page'
-        },
-        {
-          title: '404',
-          url: '404'
-        },
-        {
-          title: 'A-Z Listing',
-          url: 'az-listing'
-        },
-        {
-          title: 'Search Listing',
-          url: 'search-listing'
-        }
-      ]
-    },
-    {
-      heading: "Leftbar",
-      links: [
-        {
-          title: 'Base',
-          url: 'base-leftbar'
-        },
-        {
-          title: 'News Collection',
-          url: 'news-collection'
-        },
-        {
-          title: 'Blog Collection',
-          url: 'blog-collection'
-        },
-        {
-          title: 'Casestudies Collection',
-          url: 'case-studies-collection'
-        },
-        {
-          title: 'Publications Collection',
-          url: 'publications-collection'
-        },
-        {
-          title: 'Event Collection',
-          url: 'event-collection'
-        }
-      ]
-    },
-    {
-      heading: "Rightbar",
-      links: [
-        {
-          title: 'Base',
-          url: 'base-rightbar'
-        },
-        {
-          title: 'Standard Content',
-          url: 'standard-content'
-        },
-        {
-          title: 'Mini-hub Item',
-          url: 'mini-hub-item'
-        },
-        {
-          title: 'News Item',
-          url: 'news-item'
-        },
-        {
-          title: 'Blog Item',
-          url: 'blog-item'
-        },
-        {
-          title: 'Publication Landing',
-          url: 'publication-landing'
-        },
-        {
-          title: 'Publication Item',
-          url: 'publication-item'
-        },
-        {
-          title: 'Event Item',
-          url: 'event-item'
-        }
-      ]
-    }
-  ] %}
-  {% for section in templates_array %}
+  {% for section in global.templates_array %}
     {% if section.heading %}<h3>{{ section.heading }}</h3>{% endif %}
     {% if section.subheading %}<h4>{{ section.subheading }}</h4>{% endif %}
     <ul>
       {% for item in section.links %}
-      <li><a href="/templates/{{ item.url }}"{% if item.url == params.current %}class='current'{% endif %}>{{ item.title }}</a></li>
+        {% if item.status == 'To Do' %}
+          <li>{{ item.title }}</li>
+        {% else %}
+          <li{% if item.url == params.current %} class='current'{% endif %}><a href="/templates/{{ item.url }}">{{ item.title }}</a></li>
+        {% endif %}
       {% endfor %}
     </ul>
   {% endfor %}
@@ -116,31 +24,12 @@
 
   {% if params.subarea == 'top' %}
 
-    {% set blocks_top_array = [
-      {
-        heading: "Blocks",
-        links: [
-          {
-            title: 'Scaffolding',
-            url: 'scaffolding'
-          },
-          {
-            title: 'Furniture',
-            url: 'furniture'
-          },
-          {
-            title: 'Content',
-            url: 'content'
-          }
-        ]
-      }
-    ] %}
-    {% for section in blocks_top_array %}
+    {% for section in global.blocks_top_array %}
       {% if section.heading %}<h3>{{ section.heading }}</h3>{% endif %}
       {% if section.subheading %}<h4>{{ section.subheading }}</h4>{% endif %}
       <ul>
         {% for item in section.links %}
-        <li><a href="/blocks/{{ item.url }}"{% if item.url == params.current %}class='current'{% endif %}>{{ item.title }}</a></li>
+        <li><a href="/blocks/{{ item.url }}">{{ item.title }}</a></li>
         {% endfor %}
       </ul>
     {% endfor %}
@@ -157,323 +46,48 @@
 
   {% if params.subarea == 'content' %}
 
-    {% set content_array = [
-      {
-        heading: "Main",
-        links: [
-          {
-            title: 'Applies To',
-            url: 'main-applies-to'
-          },
-          {
-            title: 'Block Links',
-            url: 'main-block-links'
-          },
-          {
-            title: 'Card--Author',
-            url: 'main-card-author'
-          },
-          {
-            title: 'Care Card',
-            url: 'main-care-card'
-          },
-          {
-            title: 'Google Map',
-            url: 'main-google-map'
-          },
-          {
-            title: 'Media Embed',
-            url: 'main-media-embed'
-          },
-          {
-            title: 'Newsletter Signup',
-            url: 'main-newsltter-signup'
-          },
-          {
-            title: 'Region Picker',
-            url: 'main-region-picker'
-          },
-          {
-            title: 'Table of Contents',
-            url: 'main-table-of-contents'
-          },
-          {
-            title: 'Tabs',
-            url: 'main-tabs'
-          },
-          {
-            title: 'Text',
-            url: 'main-text'
-          },
-          {
-            title: 'Timeline',
-            url: 'main-timeline'
-          },
-          {
-            title: 'Image',
-            url: 'main-image'
-          },
-          {
-            title: 'Table',
-            url: 'main-table'
-          }
-        ]
-      },
-      {
-        heading: "Sidebar",
-        links: [
-          {
-            title: 'Card--Department',
-            url: 'sidebar-card-department'
-          },
-          {
-            title: 'Card--Downloads',
-            url: 'sidebar-card-downloads'
-          },
-          {
-            title: 'Card--External Links',
-            url: 'sidebar-card-external-links'
-          },
-          {
-            title: 'Card--Internal Links',
-            url: 'sidebar-card-'
-          },
-          {
-            title: 'Card--Image',
-            url: 'sidebar-card-image'
-          },
-          {
-            title: 'Card--Person',
-            url: 'sidebar-card-person'
-          }
-        ]
-      },
-      {
-        heading: "Featured",
-        links: [
-          {
-            title: 'Mini Listing',
-            url: 'featured-mini-listing'
-          }
-        ]
-      }
-    ] %}
-    {% for section in content_array %}
+    {% for section in global.content_array %}
       {% if section.heading %}<h3>{{ section.heading }}</h3>{% endif %}
       {% if section.subheading %}<h4>{{ section.subheading }}</h4>{% endif %}
       <ul>
         {% for item in section.links %}
-        <li><a href="/blocks/content/{{ item.url }}"{% if item.url == params.current %}class='current'{% endif %}>{{ item.title }}</a></li>
+          {% if item.status == 'To Do' %}
+            <li>{{ item.title }}</li>
+          {% else %}
+            <li{% if item.url == params.current %} class='current'{% endif %}><a href="/blocks/content/{{ item.url }}">{{ item.title }}</a></li>
+          {% endif %}
         {% endfor %}
       </ul>
     {% endfor %}
 
   {% elseif params.subarea == 'furniture' %}
 
-    {% set furniture_array = [
-      {
-        heading: "Page",
-        links: [
-          {
-            title: 'Hero',
-            url: 'page-hero'
-          },
-          {
-            title: 'Microhero',
-            url: 'page-microhero'
-          },
-          {
-            title: 'Title',
-            url: 'page-title'
-          },
-          {
-            title: 'Caption',
-            url: 'page-caption'
-          },
-          {
-            title: 'Subtitle',
-            url: 'page-subtitle'
-          },
-          {
-            title: 'Summary',
-            url: 'page-summary'
-          },
-          {
-            title: 'Last Updated',
-            url: 'page-last-updated'
-          }
-        ]
-      },
-      {
-        heading: "Content",
-        links: [
-          {
-            title: 'Go Back',
-            url: 'content-go-back'
-          },
-          {
-            title: 'Published Info',
-            url: 'page-published-info'
-          },
-          {
-            title: 'Reviewed',
-            url: 'page-reviewed'
-          },
-          {
-            title: 'Taxonomies',
-            url: 'page-taxonomies'
-          },
-          {
-            title: 'Version',
-            url: 'page-version'
-          }
-        ]
-      },
-      {
-        subheading: "Minihub",
-        links: [
-          {
-            title: 'List',
-            url: 'minihub-list'
-          },
-          {
-            title: 'Pagination',
-            url: 'minihub-pagination'
-          }
-        ]
-      },
-      {
-        heading: "Collections",
-        subheading: "Filter",
-        links: [
-          {
-            title: 'Group',
-            url: 'filter-group'
-          },
-          {
-            title: 'Clear',
-            url: 'filter-clear'
-          },
-          {
-            title: 'Tag',
-            url: 'filter-tag'
-          }
-        ]
-      },
-      {
-        subheading: "Results",
-        links: [
-          {
-            title: 'Title',
-            url: 'results-title'
-          },
-          {
-            title: 'Pagination',
-            url: 'results-pagination'
-          },
-          {
-            title: 'Sorting',
-            url: 'results-sorting'
-          }
-        ]
-      },
-      {
-        subheading: "Search Listing",
-        links: [
-          {
-            title: 'Input',
-            url: 'searchlisting-input'
-          }
-        ]
-      },
-      {
-        subheading: "A-Z Listing",
-        links: [
-          {
-            title: 'Nav',
-            url: 'azlisting-nav'
-          },
-          {
-            title: 'Results',
-            url: 'azlisting-results'
-          }
-        ]
-      }
-    ] %}
-
-    {% for section in furniture_array %}
+    {% for section in global.furniture_array %}
       {% if section.heading %}<h3>{{ section.heading }}</h3>{% endif %}
       {% if section.subheading %}<h4>{{ section.subheading }}</h4>{% endif %}
       <ul>
         {% for item in section.links %}
-        <li><a href="/blocks/furniture/{{ item.url }}.html"{% if item.url == params.current %}class='current'{% endif %}>{{ item.title }}</a></li>
+          {% if item.status == 'To Do' %}
+            <li>{{ item.title }}</li>
+          {% else %}
+            <li{% if item.url == params.current %} class='current'{% endif %}><a href="/blocks/furniture/{{ item.url }}">{{ item.title }}</a></li>
+          {% endif %}
         {% endfor %}
       </ul>
     {% endfor %}
 
   {% elseif params.subarea == 'scaffolding' %}
 
-    {% set scaffolding_array = [
-      {
-        heading: "Header",
-        links: [
-          {
-            title: 'HEE Header',
-            url: 'header'
-          },
-          {
-            title: 'Cookies',
-            url: 'cookies'
-          },
-          {
-            title: 'Skip Link',
-            url: 'skip-link'
-          }
-        ]
-      },
-      {
-        heading: "InTemplate",
-        links: [
-          {
-            title: 'Breadcrumbs',
-            url: 'intemplate-breadcrumbs'
-          },
-          {
-            title: 'Back to Top',
-            url: 'intemplate-back-to-top'
-          }
-        ]
-      },
-      {
-        heading: "Notifications",
-        links: [
-          {
-            title: 'Phase Banner',
-            url: 'notifications-phase-banner'
-          },
-          {
-            title: 'Global Alert',
-            url: 'notifications-global-alerts'
-          }
-        ]
-      },
-      {
-        heading: "Footer",
-        links: [
-          {
-            title: 'Links + Copyright',
-            url: 'footer-links'
-          }
-        ]
-      }
-    ] %}
-
-    {% for section in scaffolding_array %}
+    {% for section in global.scaffolding_array %}
       {% if section.heading %}<h3>{{ section.heading }}</h3>{% endif %}
       {% if section.subheading %}<h4>{{ section.subheading }}</h4>{% endif %}
       <ul>
         {% for item in section.links %}
-        <li><a href="/blocks/scaffolding/{{ item.url }}.html"{% if item.url == params.current %}class='current'{% endif %}>{{ item.title }}</a></li>
+          {% if item.status == 'To Do' %}
+            <li>{{ item.title }}</li>
+          {% else %}
+            <li{% if item.url == params.current %} class='current'{% endif %}><a href="/blocks/scaffolding/{{ item.url }}">{{ item.title }}</a></li>
+          {% endif %}
         {% endfor %}
       </ul>
     {% endfor %}

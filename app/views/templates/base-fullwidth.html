@@ -43,23 +43,26 @@
   "html" : '<main class="page page--fullwidth" id="maincontent" role="main">
   <div class="page__breadcrumbs">[ BREADCRUMBS ]</div>
   <div class="page__header">
-    [ PAGE_HERO | PAGE_MICROHERO ]
-    <div class="nhsuk-width-container">
-      <h1>[ PAGE_TITLE ]</h1>
-      <span class="nhsuk-caption-xl">[ PAGE_CAPTION ]</span>
-      <p class="nhsuk-lede-text">[ PAGE_SUMMARY ]</p>
-    </div>
+    [ PAGE_MICROHERO ]
+    [ IF PAGE_HERO ]
+      [ PAGE_HERO ]
+    [ ELSE ]
+      <div class="nhsuk-width-container">
+        <h1>[ PAGE_TITLE ]</h1>
+        <span class="nhsuk-caption-xl">[ PAGE_CAPTION ]</span>
+        <p class="nhsuk-lede-text">[ PAGE_SUMMARY ]</p>
+      </div>
+    [ ENDIF ]
   </div>
   <div class="page__main">
     <div class="nhsuk-width-container">
       [ IF HOMEPAGE, LANDINGHUB, 404 ]
       <div class="page__content">
-        [ CONTENT_BLOCKS ]
+        [ CONTENT--MAIN_BLOCKS ]
       </div>
       [ ELSEIF SEARCH_LISTING ]
         [ SEARCH_INPUT ]
         [ RESULTS_TITLE | RESULTS_SORTING ]
-        [ FILTER_TAG ]
         [ RESULTS_LISTING ]
         [ RESULTS_PAGINATION ]
       [ ELSEIF AZ_LISTING ]
@@ -71,7 +74,7 @@
   <div class="page__footer">
   </div>
   <section class="page__feature">
-    [ FEATURE_BLOCKS ]
+    [ CONTENT--FEATURED_BLOCKS ]
   </section>
 </main>'
   }) 

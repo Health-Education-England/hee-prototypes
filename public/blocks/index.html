@@ -17,7 +17,7 @@
   <link href="/css/hee.css" rel="stylesheet" />
 </head>
 
-<body class="prototype prototype--inner">
+<body class="prototype prototype--examples">
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script>
@@ -44,7 +44,7 @@
   </div>
   <div class="site-notifications">
   </div>
-  <main class="page " id="maincontent" role="main">
+  <main class="page page--fullwidth" id="maincontent" role="main">
     <div class="page__breadcrumbs">
       <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
         <div class="nhsuk-width-container">
@@ -56,26 +56,43 @@
         </div>
       </nav>
     </div>
-    <div class="nhsuk-width-container">
-      <div class="page__layout">
-        <div class="page__leftbar">
-          <nav class="page__subnav">
-            <h3>Blocks</h3>
-            <ul>
-              <li><a href="/blocks/content/">Content</a></li>
-              <li><a href="/blocks/furniture/">Furniture</a></li>
-              <li><a href="/blocks/scaffolding/">Scaffolding</a></li>
-            </ul>
-          </nav>
-        </div>
-        <div class="page__main">
-          <div class="page__header">
-            <div class="nhsuk-width-container">
-              <h1>Blocks</h1>
-              <p class="nhsuk-lede-text"></p>
+    <div class="page__header">
+      <div class="nhsuk-width-container">
+        <h1>Blocks</h1>
+        <p class="nhsuk-lede-text"></p>
+      </div>
+    </div>
+    <div class="page__main">
+      <div class="nhsuk-width-container">
+        <ul class="nhsuk-grid-row nhsuk-card-group">
+          <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+            <div class="nhsuk-card nhsuk-card--clickable">
+              <div class="nhsuk-card__content">
+                <h3 class="nhsuk-card__heading nhsuk-heading-m">
+                  <a class="nhsuk-card__link" href="/blocks/scaffolding">Scaffolding</a>
+                </h3>
+              </div>
             </div>
-          </div>
-        </div>
+          </li>
+          <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+            <div class="nhsuk-card nhsuk-card--clickable">
+              <div class="nhsuk-card__content">
+                <h3 class="nhsuk-card__heading nhsuk-heading-m">
+                  <a class="nhsuk-card__link" href="/blocks/furniture">Furniture</a>
+                </h3>
+              </div>
+            </div>
+          </li>
+          <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+            <div class="nhsuk-card nhsuk-card--clickable">
+              <div class="nhsuk-card__content">
+                <h3 class="nhsuk-card__heading nhsuk-heading-m">
+                  <a class="nhsuk-card__link" href="/blocks/content">Content</a>
+                </h3>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
     <div class="page__footer">

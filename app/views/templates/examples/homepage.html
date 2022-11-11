@@ -1,19 +1,30 @@
 {% extends "example-template.html" %}
 
-{% block pageTitle %}Homepage - Examples - NWP Prototype Kit{% endblock %}
+{% set page_url = 'homepage' %}
+{% set page_title = 'Homepage' %}
+
+{% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
 
 {% block pageBreadcrumbs %}
   {{
-  breadcrumb({
-    items: [
-      {
-        href: "/",
-        text: "Home"
-      }
-    ],
-    href: "/templates/examples/homepage",
-    text: "Homepage"
-  })
+    breadcrumb({
+      items: [
+        {
+          href: "/",
+          text: "Home"
+        },
+        {
+          href: "/templates",
+          text: "Templates"
+        },
+        {
+          href: "/templates/examples",
+          text: "Examples"
+        }
+      ],
+      href: "/templates/examples/"+page_url,
+      text: page_title
+    })
   }}
 {% endblock %}
 
@@ -25,7 +36,7 @@
   }) }}
 {% endblock %}
 
-{% block pageContent %}
+{% block pageMain %}
 <div class="nhsuk-width-container">
   <section class="nhsuk-section__content">
     <p>Non elementum cras enim amet enim sollicitudin habitant leo erat. Leo faucibus aliquet vivamus donec ullamcorper mattis purus pharetra amet. Elit turpis odio pellentesque nibh adipiscing pellentesque.</p>
