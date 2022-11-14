@@ -1,7 +1,7 @@
 # DETAILSCARD/PERSON
 
 ## Guidance
-The personCard is a details card variation for a person. 
+The personCard is a card variation for a person. 
 
 ## Quick start examples
 
@@ -15,10 +15,10 @@ Main content contact for a person. Can include an image with alt text.
     name: "Bobby Smith", 
     initials: "BS",
     pronouns: "They/them",
-    jobRole: "Content Editor",
+    jobTitle: "Content Editor",
     department: "National Website Platform",
     organisation: "NHS UK",
-    address: {
+    workAddress: {
       line1: "2 Stephenson St",
       line2: "",
       line3: "",
@@ -26,12 +26,12 @@ Main content contact for a person. Can include an image with alt text.
       county: "West Midlands",
       postcode: "B1 2SE"
     },
+    image: '',
     email: "bobby.smithandthelongestemail@hee.co.uk",
     telephone: "01162344444",
     website: "http://nhs.uk/",
     twitter: "nhsengland",
-    linkedIn: "nhs",
-    description: "Lorem upsum blah blah"
+    linkedIn: "nhs"
 }) }}
 ```
 

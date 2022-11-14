@@ -5,10 +5,10 @@
     name: "Bobby Smith", 
     initials: "BS",
     pronouns: "They/them",
-    jobRole: "Content Editor",
+    jobTitle: "Content Editor",
     department: "National Website Platform",
     organisation: "NHS UK",
-    address: {
+    workAddress: {
       line1: "2 Stephenson St",
       line2: "",
       line3: "",
@@ -16,27 +16,27 @@
       county: "West Midlands",
       postcode: "B1 2SE"
     },
+    image: '',
     email: "bobby.smithandthelongestemail@hee.co.uk",
     telephone: "01162344444",
     website: "http://nhs.uk/",
     twitter: "nhsengland",
-    linkedIn: "nhs",
-    description: "Lorem upsum blah blah"
+    linkedIn: "nhs"
 }) }#}
   
 {%- if params.gridCol %}<div class="{{ params.gridCol }}">{% endif %}
   
-<div class="hee-detailscard hee-detailscard--person{%- if params.classes %} {{ params.classes }}{% endif %}">
+<div class="hee-card hee-card--person{%- if params.classes %} {{ params.classes }}{% endif %}">
 
   {% if params.heading %}
-    <h2 class="hee-detailscard__heading">{{ params.heading | safe }}</h2>
+    <h2 class="hee-card__heading">{{ params.heading | safe }}</h2>
   {% endif %}
 
-  <div class="hee-detailscard__image">
+  <div class="hee-card__image">
   {% if params.imgURL %}
-    <img class="hee-detailscard__img" src="{{ params.imgURL }}" alt="{{ params.imgALT }}">
+    <img class="hee-card__img" src="{{ params.imgURL }}" alt="{{ params.imgALT }}">
   {% else %}
-    <div class="hee-detailscard__initials">
+    <div class="hee-card__initials">
       {% if params.initials %}
         <span>{{ params.initials}}</span>
       {% endif %}
@@ -44,48 +44,48 @@
   {% endif %}
   </div>
 
-  <h2 class="hee-detailscard__name" aria-label="Name">
+  <h2 class="hee-card__name" aria-label="Name">
     {{ params.title | safe }} {{ params.name | safe }}
   </h2>
 
   {% if params.pronouns %}
-      <span class="hee-detailscard__pronouns">{{ params.pronouns | safe }}</span>
+      <span class="hee-card__pronouns">{{ params.pronouns | safe }}</span>
   {% endif %}
 
   {%- if params.jobRole %}
-    <h3 class="nhsuk-heading-m hee-detailscard__jobrole" aria-label="Job Role" >{{ params.jobRole | safe }}</h3>
+    <h3 class="nhsuk-heading-m hee-card__jobtitle" aria-label="Job Title" >{{ params.jobTitle | safe }}</h3>
   {%- endif %}
 
   {%- if params.department %}
-    <p class="hee-detailscard__department" aria-label="Department" >{{ params.department | safe }}</p>
+    <p class="hee-card__department" aria-label="Department" >{{ params.department | safe }}</p>
   {%- endif %}
 
   {%- if params.organisation %}
-    <p class="hee-detailscard__organisation" aria-label="Organisation" >{{ params.organisation | safe }}</p>
+    <p class="hee-card__organisation" aria-label="Organisation" >{{ params.organisation | safe }}</p>
   {%- endif %}
 
   <hr />
 
-  <ul class="hee-detailscard__contact">
+  <ul class="hee-card__contact">
     {%- if params.telephone %}
-      <li class="hee-detailscard__telephone" aria-label="Telephone"><a href="tel:{{ params.telephone | safe }};">{{ params.telephone | safe }}</a></li>
+      <li class="hee-card__telephone" aria-label="Telephone"><a href="tel:{{ params.telephone | safe }};">{{ params.telephone | safe }}</a></li>
     {%- endif %}
     {%- if params.email %}
-      <li class="hee-detailscard__email" aria-label="Email"><a href="mailto:{{ params.email | safe }};">{{ params.email | safe }}</a></li>
+      <li class="hee-card__email" aria-label="Email"><a href="mailto:{{ params.email | safe }};">{{ params.email | safe }}</a></li>
     {%- endif %}
     {%- if params.website %}
-      <li class="hee-detailscard__website" aria-label="Website"><a href="{{ params.website | safe }}">{{ params.website | safe }}</a></li>
+      <li class="hee-card__website" aria-label="Website"><a href="{{ params.website | safe }}">{{ params.website | safe }}</a></li>
     {%- endif %}
     {%- if params.twitter %}
-      <li class="hee-detailscard__twitter" aria-label="Twitter"><a href="https://twitter.com/{{ params.twitter | safe }}">@{{ params.twitter | safe }}</a></li>
+      <li class="hee-card__twitter" aria-label="Twitter"><a href="https://twitter.com/{{ params.twitter | safe }}">@{{ params.twitter | safe }}</a></li>
     {%- endif %}
     {%- if params.linkedin %}
-      <li class="hee-detailscard__linkedin" aria-label="Linkedin"><a href="https://www.linkedin.com/company/{{ params.linkedin | safe }}">{{ params.linkedin | safe }}</a></li>
+      <li class="hee-card__linkedin" aria-label="Linkedin"><a href="https://www.linkedin.com/company/{{ params.linkedin | safe }}">{{ params.linkedin | safe }}</a></li>
     {%- endif %}
   </ul>
 
-  {% if params.address %}
-    <p class="hee-detailscard__address" aria-label="Address">
+  {% if params.workAddress %}
+    <p class="hee-card__address" aria-label="Address">
       {% if params.address.line1 %}
         {{ params.address.line1 | safe }}<br>
       {% endif %}
@@ -113,7 +113,7 @@
   {% endif %}
 
   {%- if params.description %}
-    <p class="hee-detailscard__description" aria-label="Description" >{{ params.description | safe }}</p>
+    <p class="hee-card__description" aria-label="Description" >{{ params.description | safe }}</p>
   {%- endif %}
 
 </div>
