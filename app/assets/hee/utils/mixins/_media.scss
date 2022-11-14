@@ -1,0 +1,22 @@
+// Media
+$tablet: 767px;
+$desktop: 1024px;
+$mac: 1281px;
+@mixin media($media) {
+    @if $media == mobile {
+        @media only screen and (max-width: $tablet) { @content; }
+    }
+    @if $media == tablet-down {
+        @media only screen and (max-width: $desktop - 0.001) { @content; }
+    }
+    @if $media == tablet {
+        @media only screen and (min-width: $tablet + 0.001) and (max-width: $desktop - 0.001) { @content; }
+    }
+    @if $media == desktop {
+        @media only screen and (min-width: $desktop) and (max-width: $mac + 0.001){ @content; }
+    }
+    
+    @if $media == mac { // this is the norm
+        @media only screen and (min-width: $mac) { @content; }
+    }
+}
