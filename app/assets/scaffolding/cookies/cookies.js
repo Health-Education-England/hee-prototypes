@@ -60,16 +60,22 @@ export default () => {
     setCookies() {
         if (this.useCookies === '') {
           this.bannerShow()
-          document.querySelector('#nhsuk-cookie-banner__link_accept_analytics').addEventListener('click', evt => {
-            evt.preventDefault()
-            this.bannerHide()
-            this.useCookie()
-          })
-          document.querySelector('#nhsuk-cookie-banner__link_decline_analytics').addEventListener('click', evt => {
-            evt.preventDefault()
-            this.bannerHide()
-            this.noCookie()
-          })
+          const analyticsAccept = document.querySelector('#nhsuk-cookie-banner__link_accept_analytics')
+          if (analyticsAccept) {
+            analyticsAccept.addEventListener('click', evt => {
+              evt.preventDefault()
+              this.bannerHide()
+              this.useCookie()
+            })
+          }
+          const analyticsDecline = document.querySelector('#nhsuk-cookie-banner__link_decline_analytics')
+          if (analyticsDecline) {
+            analyticsDecline.addEventListener('click', evt => {
+              evt.preventDefault()
+              this.bannerHide()
+              this.noCookie()
+            })
+          }
         }
     }
 
