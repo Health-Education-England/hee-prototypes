@@ -60,15 +60,17 @@ export default () => {
     setCookies() {
         if (this.useCookies === '') {
           this.bannerShow()
-          if (document.querySelector('#nhsuk-cookie-banner__link_accept_analytics')) {
-            document.querySelector('#nhsuk-cookie-banner__link_accept_analytics').addEventListener('click', evt => {
+          const analyticsAccept = document.querySelector('#nhsuk-cookie-banner__link_accept_analytics')
+          if (analyticsAccept) {
+            analyticsAccept.addEventListener('click', evt => {
               evt.preventDefault()
               this.bannerHide()
               this.useCookie()
             })
           }
-          if (document.querySelector('#nhsuk-cookie-banner__link_decline_analytics')) {
-            document.querySelector('#nhsuk-cookie-banner__link_decline_analytics').addEventListener('click', evt => {
+          const analyticsDecline = document.querySelector('#nhsuk-cookie-banner__link_decline_analytics')
+          if (analyticsDecline) {
+            analyticsDecline.addEventListener('click', evt => {
               evt.preventDefault()
               this.bannerHide()
               this.noCookie()
