@@ -1,13 +1,13 @@
 {# UTILS #}
-{%- from 'utils/highlight.njk' import highlight %}
-{%- from 'utils/subnav.njk' import subnav %}
-{%- from 'utils/example.njk' import example %}
-{%- from 'utils/components.njk' import components %}
-{%- from 'utils/status-tag.njk' import statusTag %}
+{%- from 'prototype/highlight/highlight.njk' import highlight %}
+{%- from 'prototype/subnav/subnav.njk' import subnav %}
+{%- from 'prototype/example/example.njk' import example %}
+{%- from 'prototype/components/components.njk' import components %}
+{%- from 'prototype/status-tag/status-tag.njk' import statusTag %}
 
 {# SCAFFOLDING #}
-{%- from 'scaffolding/header/macro.njk' import customHeader %}
-{%- from 'scaffolding/footer/macro.njk' import siteFooter %}
+{%- from 'hee/scaffolding/header/macro.njk' import customHeader %}
+{%- from 'hee/scaffolding/footer/macro.njk' import siteFooter %}
 {%- from 'breadcrumb/macro.njk' import breadcrumb %}
 
 {# GLOBAL #}
@@ -33,6 +33,7 @@
     {% block headCSS %}
       <link href="/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
       <link href="/css/highlight.css" rel="stylesheet" />
+      <link href="/css/prototype.css" rel="stylesheet" />
       <link href="/css/hee.css" rel="stylesheet" />
     {% endblock %}
 
@@ -132,6 +133,7 @@
       <script src="/js/jquery-3.3.1.min.js"></script>
       <script src="/js/nhsuk.min.js"></script>
       <script src="/js/highlight.min.js"></script>
+      <script src="/js/prototype.min.js"></script>
       <script src="/js/hee.js"></script>
     {% endblock %}
     {% block bodyEnd %}
