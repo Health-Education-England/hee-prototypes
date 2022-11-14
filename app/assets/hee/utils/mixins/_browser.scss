@@ -1,0 +1,7 @@
+@mixin browser($browser) {
+    
+  @if $browser == ie {
+      @media screen\0 { @content; }
+  }
+  
+}
