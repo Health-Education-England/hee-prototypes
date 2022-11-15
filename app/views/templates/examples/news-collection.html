@@ -1,13 +1,70 @@
-# Listing
-Custom component to display a list of results, sort by and pagination (if required).
+{% extends "example-template-leftbar.html" %}
 
-The listing component uses the listingItem() macro to display each result.
+{% block pageTitle %}News Collection - Examples - NWP Prototype Kit{% endblock %}
 
-## Nunjucks macro
+{% block pageBreadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/",
+            text: "Home"
+        }
+    ],
+        href: "/templates/examples/news-collection",
+        text: "News Collection"
+    }) 
+}}
+{% endblock %}
 
-```
-{%- from 'hee-listing/macro.njk' import listingLayout %}
+{% block pageHeader %}
+  <div class="nhsuk-width-container">
+    <h1>News Collection</h1>
+    <p class="nhsuk-lede-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum sit sed porta viverra. Amet, tincidunt cras augue justo, proin mollis sapien. Sed cursus quam suspendisse.</p>
+  </div>
+{% endblock %}
 
+{% block pageLeftbar %}
+  {{ filter({
+    groups: [
+      {
+        title: "Category",
+        showClearToggle: true,
+        items: [
+        {
+          text: "Item one",
+          value: "item_one",
+          checked: true
+        },
+        {
+          text: "Item two",
+          value: "item_two",
+          checked: true
+        }
+      ]
+      },
+      {
+        title: "Organisation",
+        items: [
+        {
+          text: "Item one",
+          value: "item_one"
+        },
+        {
+          text: "Item two",
+          value: "item_two"
+        },
+        {
+          text: "Item three",
+          value: "item_three"
+        }
+      ]
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block pageContent %}
   {% set selectAttributes = {
     id: "sort",
     name: "sort",
@@ -134,17 +191,4 @@ The listing component uses the listingItem() macro to display each result.
     emptyMessage: "No results",
     showPagination: true
   }) }}
-```
-
----
-
-### Nunjucks arguments
-
-The filter macro takes the following arguments:
-
-| Name               | Type    | Required | Description                                               |
-|--------------------|---------|----------|-----------------------------------------------------------|
-| **filter**         | array   | No       | An array of sort form attributes (select and submit)      
-| **results**        | array   | Yes      | An array of results; see listingItem for more information |
-| **showPagination** | boolean | No       | Display pagination for this example?                      |
-| **emptyMessage**   | string  | Yes      | String which is displayed when no results found           |
+{% endblock %}

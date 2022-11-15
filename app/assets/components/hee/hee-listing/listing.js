@@ -6,7 +6,7 @@ export default () => {
   class Listing {
     constructor(container) {
       this.container = container;
-      this.sort = this.container.querySelector('.nhsuk-listing__sort');
+      this.sort = this.container.querySelector('.hee-listing__filter__sort');
 
       this.addEventListeners();
       this.toggleJavascriptElements();
@@ -20,7 +20,7 @@ export default () => {
 
     toggleJavascriptElements() {
       if (this.sort) {
-        const submit = this.sort.querySelector('.nhsuk-listing__sort__submit');
+        const submit = this.sort.querySelector('.hee-listing__filter__submit');
         if (submit) {
           submit.hidden = true;
         }
@@ -32,5 +32,5 @@ export default () => {
     }
   }
 
-  [...document.getElementsByClassName('nhsuk-listing')].forEach(listing => new Listing(listing));
+  [...document.getElementsByClassName('hee-listing')].forEach(listing => new Listing(listing));
 }
