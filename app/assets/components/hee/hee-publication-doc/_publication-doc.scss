@@ -3,6 +3,10 @@
   display: flex;
   margin-bottom: map-get($nhsuk-spacing-points, 4);
 
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
   .hee-publication-doc__wrapper {
     position: relative;
     width: 60px;

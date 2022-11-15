@@ -1,0 +1,15 @@
+.hee-featured-content {
+  @include mq($from: desktop) {
+    column-gap: map-get($nhsuk-spacing-points, 4);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hee-listing-item {
+    span.hee-listing-item__details__label {
+      @include mq($from: tablet) {
+        width: auto;
+      }
+    }
+  }
+}
