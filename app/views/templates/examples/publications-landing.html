@@ -1,0 +1,67 @@
+{% extends "example-template-rightbar.html" %}
+
+{% set page_url = 'publications-landing' %}
+{% set page_title = 'Publication Landing' %}
+
+{% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+  {{
+    breadcrumb({
+      items: [
+        {
+          href: "/",
+          text: "Home"
+        },
+        {
+          href: "/templates",
+          text: "Templates"
+        }
+      ],
+      href: "/templates/examples/"+page_url,
+      text: page_title
+    })
+  }}
+{% endblock %}
+
+{% block pageHeader %}
+  <div class="nhsuk-width-container">
+    <h1>Publication title</h1>
+  </div>
+{% endblock %}
+
+{% block pageContent %}
+  <p class="nhsuk-body-l">Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi.</p>
+
+  <h2>Documents</h2>
+  {{ publicationDoc({
+      type: {
+        extension: "web",
+        label: "Web"
+      },
+      title: "Publication title - Web version",
+      href: "#",
+      published: "24th June 2022",
+      updated: "24th June 2022"
+  }) }}
+{% endblock %}
+
+{% block pageRightbar %}
+  {{ relatedLinksCard({
+    heading: "Curabitur sit amet",
+    links: [
+      {
+        label: "Donec pulvinar",
+        url: "#"
+      },
+      {
+        label: "Duis consequat",
+        url: "#"
+      },
+      {
+        label: "Fusce at neque",
+        url: "#"
+      }
+    ]
+  })}}
+{% endblock %}

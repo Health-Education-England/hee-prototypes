@@ -1,0 +1,40 @@
+.hee-publication-doc {
+
+  .hee-publication-doc__wrapper {
+    position: relative;
+    width: 59px;
+
+    .hee-publication-doc__icon {
+      padding: 4px;
+      position: relative;
+      width: 56px;
+
+      .hee-publication-doc__icon__page {
+        border: 3px solid $color_nhsuk-black;
+        border-radius: 2px;
+        height: 86px;
+        width: 52px;
+      }
+
+      .hee-publication-doc__icon__corner {
+        border-bottom: 16px solid $color_nhsuk-black;
+        border-right: 16px solid $color_nhsuk-grey-5;
+        height: 0;
+        position: absolute;
+        right: 0;
+        top: 4px;
+        width: 0;
+      }
+    }
+
+    .hee-publication-doc__icon__title {
+      @include nhsuk-font(16);
+      background-color: $color_nhsuk-black;
+      color: $color_nhsuk-white;
+      position: absolute;
+      text-align: center;
+      top: map-get($nhsuk-spacing-points, 5);
+      width: 100%;
+    }
+  }
+}
