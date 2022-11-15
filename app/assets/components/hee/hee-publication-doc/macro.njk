@@ -1,0 +1,17 @@
+{% macro publicationDoc(item) %}
+  <div class="hee-publication-doc">
+    <div class="hee-publication-doc__wrapper">
+      <div class="hee-publication-doc__icon">
+        <div class="hee-publication-doc__icon__page"></div>
+        <div class="hee-publication-doc__icon__corner"></div>
+      </div>
+      <div class="hee-publication-doc__icon__title">{{ item.type.extension|upper }}</div>
+    </div>
+    <div class="hee-publication-doc__details">
+      <h3><a href="{{ item.href }}">{{ item.title }}</a></h3>
+      <span>Published: {{ item.published }}</span>
+      <span>Updated: {{ item.updated }}</span>
+      <span>{{ item.type.label }}</span>
+    </div>
+  </div>
+{% endmacro %}
