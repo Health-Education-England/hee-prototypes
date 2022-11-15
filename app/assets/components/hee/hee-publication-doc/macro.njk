@@ -5,13 +5,18 @@
         <div class="hee-publication-doc__icon__page"></div>
         <div class="hee-publication-doc__icon__corner"></div>
       </div>
-      <div class="hee-publication-doc__icon__title">{{ item.type.extension|upper }}</div>
+      <div class="hee-publication-doc__icon__title">{{ item.type|upper }}</div>
     </div>
     <div class="hee-publication-doc__details">
       <h3><a href="{{ item.href }}">{{ item.title }}</a></h3>
-      <span>Published: {{ item.published }}</span>
-      <span>Updated: {{ item.updated }}</span>
-      <span>{{ item.type.label }}</span>
+      {% for detail in item.details %}
+        <span>
+          {% if detail.label %}
+            {{ detail.label }}:
+          {% endif %}
+          {{ detail.value }}
+        </span>
+      {% endfor %}
     </div>
   </div>
 {% endmacro %}
