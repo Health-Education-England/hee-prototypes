@@ -31,19 +31,99 @@
 {% endblock %}
 
 {% block pageContent %}
+  {% set docs = [
+    {
+      type: "web",
+      title: "Publication title - Web version",
+      href: "#",
+      details: [
+        {
+          label: "Published",
+          value: "24th June 2022"
+        },
+        {
+          label: "Updated",
+          value: "24th June 2022"
+        },
+        {
+          value: "WEB"
+        },
+        {
+          value: "20 min read"
+        }
+      ]
+    },
+    {
+      type: "pdf",
+      title: "Publication title - PDF version",
+      href: "#",
+      details: [
+        {
+          label: "Published",
+          value: "24th June 2022"
+        },
+        {
+          label: "Updated",
+          value: "24th June 2022"
+        },
+        {
+          value: "PDF, 16.9 MB, 92 pages"
+        },
+        {
+          value: "20 min read"
+        }
+      ]
+    },
+    {
+      type: "odt",
+      title: "Publication title - Open Document version",
+      href: "#",
+      details: [
+        {
+          label: "Published",
+          value: "24th June 2022"
+        },
+        {
+          label: "Updated",
+          value: "24th June 2022"
+        },
+        {
+          value: "Open Document Format, 16.9 MB, 92 pages"
+        },
+        {
+          value: "20 min read"
+        }
+      ]
+    },
+    {
+      type: "xlsx",
+      title: "Publication title - Open Document version",
+      href: "#",
+      details: [
+        {
+          label: "Published",
+          value: "24th June 2022"
+        },
+        {
+          label: "Updated",
+          value: "24th June 2022"
+        },
+        {
+          value: "Open Document Format, 16.9 MB, 92 pages"
+        },
+        {
+          value: "20 min read"
+        }
+      ]
+    }
+  ] %}
+
   <p class="nhsuk-body-l">Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi.</p>
 
   <h2>Documents</h2>
-  {{ publicationDoc({
-      type: {
-        extension: "web",
-        label: "Web"
-      },
-      title: "Publication title - Web version",
-      href: "#",
-      published: "24th June 2022",
-      updated: "24th June 2022"
-  }) }}
+  {% for item in docs %}
+    {{ publicationDoc(item) }}
+  {% endfor %}
 {% endblock %}
 
 {% block pageRightbar %}
