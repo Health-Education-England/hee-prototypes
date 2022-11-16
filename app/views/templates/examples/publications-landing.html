@@ -26,7 +26,13 @@
 
 {% block pageHeader %}
   <div class="nhsuk-width-container">
+    {{ backLink({
+      href: "#",
+      text: "Go back"
+    }) }}
+
     <h1>Publication title</h1>
+    <span class="nhsuk-caption-xl">Caption</span>
   </div>
 {% endblock %}
 
@@ -200,6 +206,6 @@
     <h2>Related publications</h2>
     <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet. Nunc turpis vel aliquam lacus arcu. Sodales nullam id lectus orci quis sed. dsf</p>
 
-    {{ featuredContent(items) }}
+    {{ miniListing(items) }}
   </div>
 {% endblock %}
