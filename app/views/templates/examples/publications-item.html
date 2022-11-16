@@ -66,34 +66,67 @@
 {% endblock %}
 
 {% block pageRightbar %}
-  {{ relatedLinksCard({
-    heading: "Curabitur sit amet",
-    links: [
+  {{ anchorLinks({
+    title: "On this page",
+    headings: "h2,h3,h4,h5,h6",
+    items: [
       {
-        label: "Donec pulvinar",
-        url: "#"
+        title: "Introduction",
+        href: "#"
       },
       {
-        label: "Duis consequat",
-        url: "#"
+        title: "Foreword",
+        href: "#",
+        children: [
+          {
+            title: "Executive summary",
+            href: "#"
+          }
+        ]
       },
       {
-        label: "Fusce at neque",
-        url: "#"
+        title: "Acknowledgments",
+        href: "#"
+      },
+      {
+        title: "Notes to the reader",
+        href: "#",
+        children: [
+          {
+            title: "1. Initial analysis and profiling",
+            href: "#"
+          },
+          {
+            title: "2. Creation and population of the database",
+            href: "#"
+          },
+          {
+            title: "3. Case studies",
+            href: "#"
+          }
+        ]
+      },
+      {
+        title: "Limitations and recommendations",
+        href: "#"
+      },
+      {
+        title: "Conclusion",
+        href: "#"
       }
     ]
-  })}}
+    })
+  }}
 
-  {{ imageCard({
-    imgURL: "https://1000logos.net/wp-content/uploads/2017/09/NHS-logo-500x229.png",
-    imgALT: "Donec pulvinar sollicitudin massa",
-    imgCaption: "Donec pulvinar sollicitudin massa"
-  }) }}
-
-  {{ card({
-    heading: "Manage your GP application",
-    descriptionHtml: "<a class=\"nhsuk-button\" href=\"https://oriel.nhs.uk/Web/\" draggable=\"false\">Go to Oriel</a>"
-  }) }}
+  {#{{ resources({
+    card: "card",
+    description: "Alternative versions",
+    title: "Alternative versions",
+    text: "Alternative versions",
+    url: "#",
+    docType: "PDF",
+    tagColor: "pdf"
+  }) }}#}
 {% endblock %}
 
 {% block pageFeature %}

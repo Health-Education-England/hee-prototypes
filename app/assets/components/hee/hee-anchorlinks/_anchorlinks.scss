@@ -16,6 +16,7 @@
         list-style-type: none;
         margin-top: 0;
         padding-left: 0;
+
         li {
             @include nhsuk-typography-responsive(16);
             display: block;
@@ -24,6 +25,44 @@
             //a {
                 //text-decoration: none;
             //}
+
+            &.has-children {
+                margin-bottom: 0;
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        ul {
+            @include nhsuk-responsive-margin(2, 'top');
+
+            li {
+                align-items: center;
+                display: flex;
+                @include nhsuk-responsive-margin(2, 'bottom');
+                padding-left: map-get($nhsuk-spacing-points, 2);
+
+                span {
+                    display: block;
+                    height: 17px;
+                    width: 7px;
+                }
+
+                svg {
+                    fill: $color_nhsuk-black;
+                    height: 17px;
+                    width: 7px;
+                }
+
+                a {
+                    display: inline-block;
+                    margin-left: map-get($nhsuk-spacing-points, 1);
+                    padding-left: map-get($nhsuk-spacing-points, 1);
+                    position: relative;
+                }
+            }
         }
     }
 }
