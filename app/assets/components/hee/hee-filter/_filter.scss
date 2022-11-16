@@ -1,11 +1,22 @@
 /* Filter */
 .nhsuk-filter {
   .nhsuk-fieldset__legend {
-    border-bottom: 1px solid $color_nhsuk-grey-4;
     display: block;
-    margin-bottom: 1em;
-    padding-bottom: 1em;
+    margin-bottom: map-get($nhsuk-spacing-points, 3);
     width: 100%;
+  }
+
+  .nhsuk-filter__group {
+    position: relative;
+
+    .nhsuk-filter__group__clear {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  .nhsuk-form-group {
+    margin-bottom: map-get($nhsuk-spacing-points, 5);
   }
 
   // Closed groups

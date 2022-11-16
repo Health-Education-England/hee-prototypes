@@ -10,6 +10,7 @@ export default () => {
       this.checkboxes = [...this.container.getElementsByClassName('nhsuk-checkboxes__input')];
       this.groups = [...this.container.getElementsByClassName('nhsuk-filter__group')];
       this.submit = this.container.querySelector('.nhsuk-filter__submit');
+      this.clearToggle = [...this.container.getElementsByClassName('nhsuk-filter__group__clear')];
 
       this.setUp();
       this.addEventListeners();
@@ -25,6 +26,10 @@ export default () => {
         if (legend) {
           legend.addEventListener('click', evt => this.toggleGroup(evt));
         }
+      });
+
+      this.clearToggle.forEach(toggle => {
+        toggle.addEventListener('click', evt => this.clearCheckboxes(evt));
       });
     }
 
@@ -47,6 +52,19 @@ export default () => {
 
     updateResults(evt) {
       this.container.submit();
+    }
+
+    clearCheckboxes(evt) {
+      evt.preventDefault();
+
+      const toggleLink = evt.target;
+      const checkboxes = [...toggleLink.parentElement.querySelectorAll('.nhsuk-checkboxes__input')];
+
+      checkboxes.forEach(cb => {
+        cb.removeAttribute('checked');
+      });
+
+      this.updateResults(evt);
     }
   }
 

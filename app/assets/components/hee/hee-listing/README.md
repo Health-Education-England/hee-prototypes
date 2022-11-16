@@ -1,80 +1,139 @@
 # Listing
-Custom component to display a list of results, containing filters (if provided), results, sort by and pagination (if required).
+Custom component to display a list of results, sort by and pagination (if required).
 
-The listing component uses the summaryList() macro to display each result.
+The listing component uses the listingItem() macro to display each result.
 
 ## Nunjucks macro
 
 ```
-{%- from 'listing/macro.njk' import listing %}
+{%- from 'hee-listing/macro.njk' import listingLayout %}
 
-{{ listing({
-  showPagination: true,
-  pageType: "bulletin",
-  items: [
-    {
-      title: "Item one",
-      summaryList: {
-        rows: [
-          {
-            key: {
-              text: "Category"
-            },
-            value: {
-              text: "Lorem ipsum dolor sit amet"
-            }
-          },
-          {
-            key: {
-              text: "Overview"
-            },
-            value: {
-              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt felis in felis pharetra, at fringilla neque auctor"
-            }
-          },
-          {
-            key: {
-              text: "Website"
-            },
-            value: {
-              html: "<a href=\"#\">Website title</a>"
-            }
-          }
-        ]
-      }
+  {% set selectAttributes = {
+    id: "sort",
+    name: "sort",
+    label: {
+      text: "Sort by"
     },
-    ...
-  ],
-  filter: {
-    groups: [
+    items: [
       {
-        title: "Category",
-        items: [
-          {
-            text: "Item one"
-          },
-          {
-            text: "Item two"
-          }
-        ]
+        value: "newest",
+        text: "Newest"
       },
       {
-        title: "Organisation",
-        items: [
-          {
-            text: "Item one"
-          },
-          {
-            text: "Item two"
-          },
-          {
-            text: "Item three"
-          }
-        ]
+        value: "relevance",
+        text: "Relevance"
       }
     ]
-  }
-}) }}
+  } %}
+
+  {% set submitAttributes = {
+    text: "Update",
+    classes: "hee-listing__filter__submit"
+  } %}
+
+  {% set items = [
+    {
+      title: "News item #1",
+      href: "#",
+      details: [
+        {
+          label: "Publication type:",
+          value: "Briefing"
+        },
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+    },
+    {
+      title: "News item #2",
+      href: "#",
+      details: [
+        {
+          label: "Publication type:",
+          value: "Briefing"
+        },
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+    },
+    {
+      title: "News item #3",
+      href: "#",
+      details: [
+        {
+          label: "Publication type:",
+          value: "Briefing"
+        },
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+    },
+    {
+      title: "News item #4",
+      href: "#",
+      details: [
+        {
+          label: "Publication type:",
+          value: "Briefing"
+        },
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+    },
+    {
+      title: "News item #5",
+      href: "#",
+      details: [
+        {
+          label: "Publication type:",
+          value: "Briefing"
+        },
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+    },
+    {
+      title: "News item #6",
+      href: "#",
+      details: [
+        {
+          label: "Publication type:",
+          value: "Briefing"
+        },
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+    }
+  ]
+  %}
+
+  {{ listingLayout({
+    filter: {
+      select: selectAttributes,
+      submit: submitAttributes
+    },
+    results: items,
+    emptyMessage: "No results",
+    showPagination: true
+  }) }}
 ```
 
 ---
@@ -83,9 +142,9 @@ The listing component uses the summaryList() macro to display each result.
 
 The filter macro takes the following arguments:
 
-| Name                       | Type     | Required  | Description  |
-| ---------------------------|----------|-----------|--------------|
-| **filter**                 | array    | No        | An array of filter types; see filter component for more information
-| **items**                  | array    | Yes       | An array of results; see summaryList for more information |
-| **showPagination**         | boolean  | No        | Display pagination for this example? |
-| **pageType**               | string   | No        | The list item display will be varied based on the page type. It can be "search", "bulletin" |
+| Name               | Type    | Required | Description                                               |
+|--------------------|---------|----------|-----------------------------------------------------------|
+| **filter**         | array   | No       | An array of sort form attributes (select and submit)      
+| **results**        | array   | Yes      | An array of results; see listingItem for more information |
+| **showPagination** | boolean | No       | Display pagination for this example?                      |
+| **emptyMessage**   | string  | Yes      | String which is displayed when no results found           |
