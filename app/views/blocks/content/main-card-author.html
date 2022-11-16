@@ -1,0 +1,103 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'main-card-author' %}
+{% set page_title = 'Card--Author' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/",
+            text: "Home"
+        },
+        {
+            href: "/blocks",
+            text: "Blocks"
+        },
+        {
+            href: "/blocks/content",
+            text: "Content"
+        }
+    ],
+        href: "/blocks/"+page_url,
+      text: page_title
+    }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'blocks',
+    subarea: 'content'
+}) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Main</span>
+    <h1>{{ page_title }}</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+<h3>Example</h3>
+{{ example({
+    view: 'block',
+    url: '/blocks/content/examples/'+page_url,
+    height: '600'
+}) }}
+
+<hr />
+
+<h3>Macro</h3>
+{{ highlight({
+  html: '
+{{ authorCard({
+    title: "Dr",
+    name: "Jo Blogs", 
+    pronouns: "She/her",
+    jobRole: "Department Head",
+    department: "HEE",
+    organisation: "NHS UK",
+    email: "jo.bloggs@hee.co.uk",
+    website: "http://nhs.uk/",
+    twitter: "nhsengland",
+    linkedIn: "nhs",
+    bio: "Lorem ipsum dolor sit amet",
+    authorURL: "/author/jo-blogs"
+}) }}
+  '
+}) }}
+
+<hr />
+
+<h3>HTML</h3>
+{{ highlight({
+  html : '
+ <div class="hee-card hee-card--author">
+  <div class="hee-card__image">
+    <div class="hee-card__initials"></div>
+  </div>
+  <h2 class="hee-card__name" aria-label="Name"> Dr Jo Blogs </h2>
+  <span class="hee-card__pronouns">She/her</span>
+  <p class="hee-card__department" aria-label="Department">HEE</p>
+  <p class="hee-card__organisation" aria-label="Organisation">NHS UK</p>
+  <hr>
+  <ul class="hee-card__contact">
+    <li class="hee-card__email" aria-label="Email"><a href="mailto:http://nhs.uk/;">jo.bloggs@hee.co.uk</a></li>
+    <li class="hee-card__website" aria-label="Website"><a href="http://nhs.uk/">http://nhs.uk/</a></li>
+    <li class="hee-card__twitter" aria-label="Twitter"><a href="https://twitter.com/nhsengland">@nhsengland</a></li>
+  </ul>
+  <p class="hee-card__bio" aria-label="Bio">Lorem ipsum dolor sit amet</p>
+  <p class="hee-card__authorurl" aria-label="Author URL"><a href="/author/jo-blogs">View more about Dr Jo Blogs</a></p>
+</div> 
+  '
+  }) 
+}}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}
