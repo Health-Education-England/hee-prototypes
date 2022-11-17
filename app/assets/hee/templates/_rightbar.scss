@@ -1,0 +1,52 @@
+// MAIN+RIGHTBAR
+.page--rightbar {
+  padding-bottom: nhsuk-spacing(6);
+  .page__header {
+      padding-top: nhsuk-spacing(7);
+      h1, p, span {
+        max-width: 66.6667%;
+      }
+  }
+  .page__layout {
+      @include hee-flexgrid-row;
+      .page__rightbar {
+          @include hee-flexgrid-col(3.75,$col-offset:0.25);
+
+          /* ADD CALL SIDEBAR BLOCKS TO THIS CODE */
+        .hee-sidebarlinks,
+        .hee-sidebarimage,
+        .nhsuk-card,
+        .hee-card {
+            margin-bottom: 24px!important;
+        }
+
+      }
+      .page__main {
+          @include hee-flexgrid-col(8);
+      }
+  }
+
+  @include mq($until: desktop) {
+    .page__header {
+        h1, p, span {
+            max-width: 100%;
+        }
+    }
+    .page__layout {
+      .page__rightbar, 
+      .page__main {
+          @include hee-flexgrid-col(12,$col-offset:0);
+      }
+    }
+}
+
+}
+
+.page--template-standard {}
+.page--template-minihub {}
+.page--template-sectionhome {}
+.page--single-news {}
+.page--single-blog {}
+.page--single-publication {}
+.page--single-event {}
+.page--template-legal {}
