@@ -1,0 +1,115 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'sidebar-card-person' %}
+{% set page_title = 'Card--Person' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/",
+            text: "Home"
+        },
+        {
+            href: "/blocks",
+            text: "Blocks"
+        },
+        {
+            href: "/blocks/content",
+            text: "Content"
+        }
+    ],
+        href: "/blocks/"+page_url,
+      text: page_title
+    }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'blocks',
+    subarea: 'content'
+}) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Main</span>
+    <h1>{{ page_title }}</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+<h3>Example</h3>
+{{ example({
+    view: 'block',
+    url: '/blocks/content/examples/'+page_url,
+    height: '640'
+}) }}
+
+<hr />
+
+<h3>Macro</h3>
+{{ highlight({
+  html: '
+{{ personCard({
+  title: "Dr",
+  name: "Bobby Smith", 
+  initials: "BS",
+  pronouns: "They/them",
+  jobTitle: "Content Editor",
+  department: "National Website Platform",
+  organisation: "NHS UK",
+  workAddress: {
+    line1: "2 Stephenson St",
+    line2: "",
+    line3: "",
+    city: "Birmingham",
+    county: "West Midlands",
+    postcode: "B1 2SE"
+  },
+  image: "",
+  email: "bobby.smithandthelongestemail@hee.co.uk",
+  telephone: "01162344444",
+  website: "http://nhs.uk/",
+  twitter: "nhsengland",
+  linkedIn: "nhs"
+}) }}
+  '
+}) }}
+
+<hr />
+
+<h3>HTML</h3>
+{{ highlight({
+  html : '
+<div class="hee-card hee-card--person">
+    <div class="hee-card__image">
+      <div class="hee-card__initials">
+        <span>BS</span>
+      </div>
+    </div>
+    <h2 class="hee-card__name" aria-label="Name"> Dr Bobby Smith </h2>
+    <span class="hee-card__pronouns">They/them</span>
+    <p class="hee-card__department" aria-label="Department">National Website Platform</p>
+    <p class="hee-card__organisation" aria-label="Organisation">NHS UK</p>
+    <hr>
+    <ul class="hee-card__contact">
+      <li class="hee-card__telephone" aria-label="Telephone"><a href="tel:01162344444;">01162344444</a></li>
+      <li class="hee-card__email" aria-label="Email"><a href="mailto:bobby.smithandthelongestemail@hee.co.uk;">bobby.smithandthelongestemail@hee.co.uk</a></li>
+      <li class="hee-card__website" aria-label="Website"><a href="http://nhs.uk/">http://nhs.uk/</a></li>
+      <li class="hee-card__twitter" aria-label="Twitter"><a href="https://twitter.com/nhsengland">@nhsengland</a></li>
+    </ul>
+    <p class="hee-card__address" aria-label="Address">
+    </p>
+  </div>
+  '
+  }) 
+}}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}
