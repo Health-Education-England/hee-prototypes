@@ -106,14 +106,6 @@
     {% block headCSS %}
       <link href="{{ basePath }}/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
       <link href="{{ basePath }}/css/hee.css" rel="stylesheet" />
-      <style>
-      .example {}
-      .example--template {}
-      .example--blocks {
-        padding: 1em;
-        background-color: #f0f4f5;
-      }
-      </style>
     {% endblock %}
 
     {% block headIcons %}
@@ -130,7 +122,7 @@
     {% endblock %}
   </head>
 
-  <body class="{{ bodyClasses }}">
+  <body>
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
     {% block bodyStart %}
     {% endblock %}
