@@ -46,8 +46,8 @@
 @import '../components/hee/hee-filter/filter';
 @import '../components/hee/hee-filtertag/filtertag';
 @import '../components/image-card';
-@import '../components/hee/hee-listing/listing';
-@import '../components/hee/hee-listing-item/listing-item';
+@import 'blocks/content/main/hee-listing/listing';
+@import 'blocks/content/main/hee-listing-item/listing-item';
 @import '../components/related-nav';
 //@import '../components/header';
 //@import '../components/navigation';
