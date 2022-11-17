@@ -1,8 +1,8 @@
-{% extends "template-fullwidth.html" %}
+{% extends "example-template.html" %}
 
 {% set page_url = 'landing-page' %}
 {% set page_title = 'Landing Page' %}
-
+{% block pageClass %}page--fullwidth{% endblock %}
 {% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
 
 {% block breadcrumbs %}
@@ -28,14 +28,20 @@
   }}
 {% endblock %}
 
-{% block pageMain %}
-<div class="page__main">
+{% block pageHeader %}
   <section class="nhsuk-width-container">
+    {{ backLink({
+      "href": "#",
+      "text": "Go back"
+    }) }}
     <h1>Example - LandingHub Template</h1>
-    <p class="nhsuk-body-l">Caption</p>
+    <span class="nhsuk-caption-xl">Caption</span>
     <p>Amet, gravida tortor elementum lectus pharetra non lectus fermentum nunc. Venenatis tellus lorem eget dictum penatibus turpis curabitur. Eget nisl, turpis mollis bibendum.</p>
     <p>Proin tristique purus ornare sed est dictum montes.</p>
   </section>
+{% endblock %}
+
+{% block pageMain %}
   <section class="nhsuk-width-container">
     <div class="nhsuk-grid-row">
       <ul class="nhsuk-card-group">
@@ -169,5 +175,4 @@
       </ul>
     </div>
   </section>
-</div>
 {% endblock %}
