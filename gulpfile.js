@@ -30,7 +30,7 @@ const PATHS = {
 };
 
 function watch(done) {
-  gulp.watch(['app/assets/hee/hee.scss', 'app/assets/hee/**/*.scss', 'app/assets/components/**/*.scss'], taskAssets.compileHEEStyles);
+  gulp.watch(['app/assets/hee/hee.scss', 'app/assets/hee/**/*.scss', 'app/assets/hee/**/**/*.scss', 'app/assets/components/**/*.scss'], taskAssets.compileHEEStyles);
   gulp.watch(['app/assets/hee/hee.js', 'app/assets/hee/**/*.js'], taskAssets.compileHEEScripts);
   gulp.watch(['app/assets/prototype/prototype.scss', 'app/assets/prototype/**/*.scss'], taskAssets.compilePrototypeStyles);
   gulp.watch(['app/assets/prototype/prototype.js', 'app/assets/prototype/**/*.js'], taskAssets.compilePrototypeScripts);
