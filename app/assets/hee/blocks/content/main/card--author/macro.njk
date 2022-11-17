@@ -1,18 +1,19 @@
 {% macro authorCard(params) %}
 
 {#{ authorCard({
-    title: "Dr",
-    name: "Jo Blogs", 
-    pronouns: "She/her",
-    jobRole: "Department Head",
-    department: "HEE",
-    organisation: "NHS UK",
-    email: "jo.bloggs@hee.co.uk",
-    website: "http://nhs.uk/",
-    twitter: "nhsengland",
-    linkedIn: "nhs",
-    bio: "Lorem ipsum dolor sit amet",
-    authorURL: "/author/jo-blogs"
+  title: "Dr",
+  name: "Jo Blogs", 
+  initials: "JB",
+  pronouns: "She/her",
+  jobRole: "Department Head",
+  department: "HEE",
+  organisation: "NHS UK",
+  email: "jo.bloggs@hee.co.uk",
+  website: "http://nhs.uk/",
+  twitter: "nhsengland",
+  linkedIn: "nhs",
+  bio: "Lorem ipsum dolor sit amet",
+  authorURL: "/author/jo-blogs"
 }) }#}
   
 {%- if params.gridCol %}<div class="{{ params.gridCol }}">{% endif %}

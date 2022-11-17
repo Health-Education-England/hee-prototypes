@@ -43,11 +43,13 @@
 
 {% block pageContent %}
 
+<p>You can find the content type data model in the <a href="https://hee-tis.atlassian.net/wiki/spaces/NWPK/pages/3615719497/Author">Author specification</a>.</p>
+
 <h3>Example</h3>
 {{ example({
     view: 'block',
     url: '/blocks/content/examples/'+page_url,
-    height: '600'
+    height: '620'
 }) }}
 
 <hr />
@@ -56,18 +58,19 @@
 {{ highlight({
   html: '
 {{ authorCard({
-    title: "Dr",
-    name: "Jo Blogs", 
-    pronouns: "She/her",
-    jobRole: "Department Head",
-    department: "HEE",
-    organisation: "NHS UK",
-    email: "jo.bloggs@hee.co.uk",
-    website: "http://nhs.uk/",
-    twitter: "nhsengland",
-    linkedIn: "nhs",
-    bio: "Lorem ipsum dolor sit amet",
-    authorURL: "/author/jo-blogs"
+  title: "Dr",
+  name: "Jo Blogs", 
+  initials: "JB",
+  pronouns: "She/her",
+  jobRole: "Department Head",
+  department: "HEE",
+  organisation: "NHS UK",
+  email: "jo.bloggs@hee.co.uk",
+  website: "http://nhs.uk/",
+  twitter: "nhsengland",
+  linkedIn: "nhs",
+  bio: "Lorem ipsum dolor sit amet",
+  authorURL: "/author/jo-blogs"
 }) }}
   '
 }) }}
@@ -79,7 +82,7 @@
   html : '
  <div class="hee-card hee-card--author">
   <div class="hee-card__image">
-    <div class="hee-card__initials"></div>
+    <div class="hee-card__initials">JB</div>
   </div>
   <h2 class="hee-card__name" aria-label="Name"> Dr Jo Blogs </h2>
   <span class="hee-card__pronouns">She/her</span>
