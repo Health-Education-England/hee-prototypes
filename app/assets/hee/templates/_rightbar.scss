@@ -11,6 +11,15 @@
       @include hee-flexgrid-row;
       .page__rightbar {
           @include hee-flexgrid-col(3.75,$col-offset:0.25);
+
+          /* ADD CALL SIDEBAR BLOCKS TO THIS CODE */
+        .hee-sidebarlinks,
+        .hee-sidebarimage,
+        .nhsuk-card,
+        .hee-card {
+            margin-bottom: 24px!important;
+        }
+
       }
       .page__main {
           @include hee-flexgrid-col(8);
