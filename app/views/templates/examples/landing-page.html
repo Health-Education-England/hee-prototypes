@@ -2,7 +2,7 @@
 
 {% set page_url = 'landing-page' %}
 {% set page_title = 'Landing Page' %}
-{% block pageClass %}page--fullwidth{% endblock %}
+{% block pageClass %}page--fullwidth has-microhero{% endblock %}
 {% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
 
 {% block breadcrumbs %}
@@ -29,16 +29,19 @@
 {% endblock %}
 
 {% block pageHeader %}
-  <section class="nhsuk-width-container">
-    {{ backLink({
+  {{ microHero({
+    "imgURL": "/images/young-child-using-tablet-device.jpg"
+  }) }}
+  <div class="nhsuk-width-container">
+    {#{ backLink({
       "href": "#",
       "text": "Go back"
-    }) }}
+    }) }#}
     <h1>Example - LandingHub Template</h1>
     <span class="nhsuk-caption-xl">Caption</span>
-    <p>Amet, gravida tortor elementum lectus pharetra non lectus fermentum nunc. Venenatis tellus lorem eget dictum penatibus turpis curabitur. Eget nisl, turpis mollis bibendum.</p>
+    <p class="nhsuk-lede-text">Amet, gravida tortor elementum lectus pharetra non lectus fermentum nunc. Venenatis tellus lorem eget dictum penatibus turpis curabitur. Eget nisl, turpis mollis bibendum.</p>
     <p>Proin tristique purus ornare sed est dictum montes.</p>
-  </section>
+  </div>
 {% endblock %}
 
 {% block pageMain %}
