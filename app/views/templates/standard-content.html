@@ -39,10 +39,12 @@
 
 {% block pageContent %}
 
-<h2>Example</h2>
-<a href="/templates/examples/{{ page_url }}" target="_blank">Click to preview the template [opens in new window]</a>
-
-<hr />
+    <h2>Example</h2>
+    {{ example({
+        url: '/templates/examples/'+page_url,
+        view: 'template'
+    }) }}
+    <hr />
 
 <h2>HTML</h2>
 {{ highlight({
