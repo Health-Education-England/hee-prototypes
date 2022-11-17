@@ -56,25 +56,21 @@
   <h3 id="heading2">Pellentesque sit amet nulla</h3>
   <p>Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus, semper ligula quis, eleifend ante. Pellentesque non malesuada tellus. Donec porta faucibus lacus at elementum. Pellentesque tempus magna vulputate felis ultricies porta. Cras condimentum imperdiet lobortis. Suspendisse aliquam nisl ut augue ultrices, sit amet tristique enim placerat. Nunc augue sapien, rhoncus scelerisque urna quis, posuere semper enim.</p>
 
-  {{ contact({
-    imgURL: "/images/headshot.jpg",
-    imgALT: "This Person",
-    title: "Dr",
-    name: "Joe Soap",
-    displayName: true,
-    departmentName: "HEE",
-    displayDepartmentName: true,
-    jobTitle: "Department Head",
-    displayJobTitle: true,
-    phoneNumber: "01234 567890",
-    displayPhoneNumber: true,
-    email: "jo.bloggs@hee.co.uk",
-    displayEmail: true,
-    address: "123 Fake Street, Fake Town, Fake City, UK, AB1 2CD",
-    displayAddress: true,
-    details: "Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi. Sed vestibulum quis mi nec volutpat. Proin tristique eleifend volutpat. Maecenas eu magna a sem aliquam luctus. Donec nec metus condimentum, molestie nulla eu, auctor sem. Cras nec arcu sed lorem eleifend pellentesque nec nec ligula.",
-    displayDetails: true
-  }) }}
+{{ authorCard({
+  title: "Dr",
+  name: "Jo Blogs", 
+  initials: "JB",
+  pronouns: "She/her",
+  jobRole: "Department Head",
+  department: "HEE",
+  organisation: "NHS UK",
+  email: "jo.bloggs@hee.co.uk",
+  website: "http://nhs.uk/",
+  twitter: "nhsengland",
+  linkedIn: "nhs",
+  bio: "Lorem ipsum dolor sit amet",
+  authorURL: "/author/jo-blogs"
+}) }}
 {% endblock %}
 
 {% block pageRightbar %}
