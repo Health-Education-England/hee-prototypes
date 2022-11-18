@@ -67,7 +67,8 @@
 @import '../components/hee/hee-sidebarimage/sidebarimage';
 @import '../components/hee/hee-sidebarlinks/sidebarlinks';
 
-@import '../hee/blocks/content/hee-card';
+@import 'blocks/content/hee-card';
+@import 'blocks/content/main/card--author/author';
 @import '../hee/blocks/content/main/card--author/author';
 //@import '../hee/blocks/content/sidebar/card--department/department';
 //@import '../hee/blocks/content/sidebar/card--contact/contact';
