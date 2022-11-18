@@ -20,7 +20,7 @@
 @import 'templates/page';
 
 ///////////////////////////////////////////
-// NHSUK-HEE Components (Overrides)
+// BLOCKS
 ///////////////////////////////////////////
 @import '../components/nhsuk-hee/nhsuk-hee-blocklinks/blocklinks';
 @import '../components/nhsuk-hee/nhsuk-hee-breadcrumb/breadcrumb';
@@ -43,18 +43,9 @@
 @import '../components/hee/hee-microhero/microhero';
 @import '../components/hee/hee-timeline/timeline';
 @import '../components/timeline';
-@import '../components/hee/hee-filter/filter';
-@import '../components/hee/hee-filtertag/filtertag';
 @import '../components/image-card';
-@import '../hee/blocks/furniture/collections/hee-listing/listing';
-@import '../hee/blocks/furniture/collections/hee-listing-item/listing-item';
-@import 'blocks/content/main/hee-mini-listing/mini-listing';
-@import 'blocks/content/main/hee-publication-doc/publication-doc';
-@import 'blocks/content/sidebar/card--details/details';
+
 @import '../components/related-nav';
-//@import '../components/header';
-//@import '../components/navigation';
-//@import '../components/subheader';
 @import '../components/media';
 //@import '../components/hee/hee-media/media';
 @import '../components/hee/hee-navmap/navmap';
@@ -70,10 +61,23 @@
 @import '../components/nhsuk-hee/nhsuk-hee-tables/tables2'; //?
 
 @import 'scaffolding/notifications/globalalert/globalalert';
-//@import '../components/hee/hee-detailscard/detailscard';
-//@import '../components/hee/hee-detailscard/authorcard/authorcard';
-//@import '../components/hee/hee-detailscard/personcard/personcard';
-//@import '../components/hee/hee-detailscard/departmentcard/departmentcard';
+@import '../components/hee/hee-sidebarimage/sidebarimage';
+@import '../components/hee/hee-sidebarlinks/sidebarlinks';
+
+///// FURNITURE
+// -- Collections
+@import '../hee/blocks/furniture/collections/hee-listing/listing';
+@import '../hee/blocks/furniture/collections/hee-listing-item/listing-item';
+@import '../hee/blocks/furniture/collections/hee-filter/filter';
+@import '../hee/blocks/furniture/collections/hee-filtertag/filtertag';
+
+///// CONTENT
+//
+@import '../hee/blocks/content/hee-card';
+@import '../hee/blocks/content/main/card--author/author';
+//@import '../hee/blocks/content/sidebar/card--department/department';
+//@import '../hee/blocks/content/sidebar/card--contact/contact';
+
 //@import '../components/nhsuk-hee/nhsuk-hee-reviewdate/reviewdate';
 //@import '../components/nhsuk-hee/nhsuk-hee-summarylist/summarylist';
 //@import '../components/hee/hee-homesection/homesection';
