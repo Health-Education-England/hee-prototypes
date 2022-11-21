@@ -49,7 +49,7 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: assets
-          path: dist/
+          path: docs/
 
       # Debugging step to display ./dist directory contents in GitHub action logs.
       - name: Display structure of downloaded files

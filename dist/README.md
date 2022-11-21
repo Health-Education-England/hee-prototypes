@@ -1,1 +1,0 @@
-Output directory for pipeline builds.
