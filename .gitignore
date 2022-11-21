@@ -3,6 +3,7 @@
 # compiled output
 /dist
 /tmp
+/public
 
 # Runtime data
 pids
