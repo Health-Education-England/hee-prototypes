@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>NWP Prototype Kit</title>
+  <title>Header - Scaffolding - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -150,16 +150,38 @@
       </div>
     </div>
   </div>
-  <main class="page page--leftbar" id="maincontent" role="main">
+  <main class="page page--fullwidth" id="maincontent" role="main">
     <div class="page__breadcrumbs">
+      <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+        <div class="nhsuk-width-container">
+          <ol class="nhsuk-breadcrumb__list">
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/scaffolding">Scaffolding</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/scaffolding/footer">Footer</a></li>
+          </ol>
+          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/scaffolding/footer">Back to Footer</a></p>
+        </div>
+      </nav>
     </div>
     <div class="page__header">
+      <div class="nhsuk-width-container">
+        <h1>Footer</h1>
+        <p class="nhsuk-lede-text"></p>
+      </div>
     </div>
     <div class="nhsuk-width-container">
-      <div class="page__layout">
-        <div class="page__leftbar"> Leftbar... </div>
-        <div class="page__main"> Content... </div>
-      </div>
+      <pre><code>&lt;footer class=&quot;nhsuk-footer site-footer&quot; id=&quot;nhsuk-footer&quot; role=&quot;contentinfo&quot;&gt;
+  &lt;div class=&quot;nhsuk-width-container&quot;&gt;
+    &lt;h2 class=&quot;nhsuk-u-visually-hidden&quot;&gt;Support links&lt;/h2&gt;
+    &lt;ul class=&quot;nhsuk-footer__list nhsuk-footer__list--three-columns&quot;&gt;
+      &lt;li class=&quot;nhsuk-footer__list-item&quot;&gt;&lt;a class=&quot;nhsuk-footer__list-item-link&quot; href=&quot;/blog&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;nhsuk-footer__list-item&quot;&gt;&lt;a class=&quot;nhsuk-footer__list-item-link&quot; href=&quot;/about&quot;&gt;About us&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;nhsuk-footer__list-item&quot;&gt;&lt;a class=&quot;nhsuk-footer__list-item-link&quot; href=&quot;/contact&quot;&gt;Contact us&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p class=&quot;nhsuk-footer__copyright&quot;&gt;© Crown copyright&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
+</code></pre>
     </div>
     <div class="page__footer">
     </div>
