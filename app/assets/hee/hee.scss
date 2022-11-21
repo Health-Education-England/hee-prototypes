@@ -44,10 +44,7 @@
 @import '../components/hee/hee-timeline/timeline';
 @import '../components/timeline';
 @import '../components/image-card';
-@import 'blocks/content/main/hee-listing/listing';
-@import 'blocks/content/main/hee-listing-item/listing-item';
-@import 'blocks/content/main/hee-mini-listing/mini-listing';
-@import 'blocks/content/main/hee-publication-doc/publication-doc';
+
 @import '../components/related-nav';
 @import '../components/media';
 @import '../components/hee/hee-media/media';
@@ -76,6 +73,7 @@
 ///// CONTENT
 @import 'blocks/content/hee-card';
 @import 'blocks/content/main/card--author/author';
+@import 'blocks/content/main/hee-publication-doc/publication-doc';
 //@import '../hee/blocks/content/sidebar/card--department/department';
 //@import '../hee/blocks/content/sidebar/card--contact/contact';
 
