@@ -15,26 +15,26 @@
 {# view - scaled, block #}
 {% if params.view == 'scaled' %}
   <div class="prototype__example scaled" style="height:{{ preview_height }};">
-      <a href="{{ params.url }}" target="_blank" class="prototype__example-link">Open this example in new window</a>
+      <a href="{{ params.url }}.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
       <div class="thumbnail">
-        <iframe src="{{ params.url }}" height="{{ height }}"></iframe>
+        <iframe src="{{ params.url }}.html" height="{{ height }}"></iframe>
       </div>
   </div>
 
 {% elseif params.view == 'template' %}
   <div class="prototype__example scaled" style="height:400px;overflow:hidden;">
-      <a href="{{ params.url }}" target="_blank" class="prototype__example-link">Open this example in new window</a>
+      <a href="{{ params.url }}.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
       <div class="thumbnail">
-        <iframe src="{{ params.url }}" height="780"></iframe>
+        <iframe src="{{ params.url }}.html" height="780"></iframe>
       </div>
   </div>
 
 
 {% else %}
   <div class="prototype__example block">
-    <a href="{{ params.url }}" target="_blank" class="prototype__example-link">Open this example in new window</a>
+    <a href="{{ params.url }}.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
     <div class="thumbnail">
-      <iframe src="{{ params.url }}" height="{{ height }}"></iframe>
+      <iframe src="{{ params.url }}.html" height="{{ height }}"></iframe>
     </div>
   </div>
 {% endif %}
