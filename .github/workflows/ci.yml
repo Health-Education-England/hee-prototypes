@@ -6,7 +6,8 @@ on:
       - "Enhancement/NWPS-1233-NPM-assets-pipeline-build"
 
 jobs:
-  npm:
+  # Build prototype dependencies, assets and templates.
+  build:
     name: Build
     runs-on: ubuntu-latest
 
@@ -23,9 +24,34 @@ jobs:
       - name: Install dependencies
         run: npm install --no-optional
 
-      - name: Build assets and templates
+      - name: Build assets
         run: npm run build
 
-      # Tests are not yet ready.
-      #- name: Lint and test
-      #run: npm test -- --runInBand
+      # Share built assets between jobs.
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: assets
+          path: public/**
+          retention-days: 1
+
+  # Prepare the "dist" directory use by GitHub pages to serve prototype.
+  bundle:
+    name: Bundle
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout repo from GitHub and use current branch.
+      - uses: actions/checkout@v3
+
+      # Copy assets from "Build" step into "dist/" directory.
+      - uses: actions/download-artifact@v3
+        with:
+          name: assets
+          path: dist/
+
+      - name: Display structure of downloaded files
+        run: ls -R
+        working-directory: dist/
+
+
