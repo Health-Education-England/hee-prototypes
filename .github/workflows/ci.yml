@@ -40,6 +40,8 @@ jobs:
     name: Bundle
     needs: build
     runs-on: ubuntu-latest
+    env:
+      WORKFLOW_ID: '#${{ github.run_number }}'
 
     steps:
       # Checkout repo from GitHub and use current branch.
@@ -51,8 +53,13 @@ jobs:
           name: assets
           path: dist/
 
+      # Debugging step to display ./dist directory contents in GitHub action logs.
       - name: Display structure of downloaded files
         run: ls -R
         working-directory: dist/
 
+      # Commit any changes to ./dist directory updating the GitHub pages.
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "[Github Actions] - Bundled assets for build #$WORKFLOW_ID"
 
