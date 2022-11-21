@@ -37,7 +37,7 @@ jobs:
 
   # Prepare the "dist" directory use by GitHub pages to serve prototype.
   bundle:
-    name: Bundle
+    name: Bundle and Deploy
     needs: build
     runs-on: ubuntu-latest
 
@@ -49,7 +49,7 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: assets
-          path: docs/
+          path: dist/
 
       # Debugging step to display ./dist directory contents in GitHub action logs.
       - name: Display structure of downloaded files
@@ -61,3 +61,8 @@ jobs:
         with:
           commit_message: "[Github Actions] - Bundled assets for build number: ${{ github.run_number }}"
 
+      # Deploys and updates GitHub Pages.
+      - name: Deploy GitHub pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist/
