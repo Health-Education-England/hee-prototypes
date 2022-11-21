@@ -1,0 +1,31 @@
+name: Build and Test
+
+on:
+  push:
+    branches:
+      - "Enhancement/NWPS-1233-NPM-assets-pipeline-build"
+
+jobs:
+  npm:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout repo from GitHub and use current branch.
+      - uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install --no-optional
+
+      - name: Build assets and templates
+        run: npm run build
+
+      # Tests are not yet ready.
+      #- name: Lint and test
+      #run: npm test -- --runInBand
