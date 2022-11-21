@@ -1,18 +1,18 @@
 {# HEE/Scaffolding #}
 
 {# Cookies #}
-{%- from 'hee/scaffolding/cookies/macro.njk' import cookies %}
+{%- from 'hee/blocks/scaffolding/cookies/macro.njk' import cookies %}
 
 {# Header #}
-{%- from 'hee/scaffolding/header/macro.njk' import customHeader %}
+{%- from 'hee/blocks/scaffolding/header/macro.njk' import customHeader %}
 {%- from 'skip-link/macro.njk' import skipLink %}
 
 {# Notifications #}
-{%- from 'hee/scaffolding/notifications/globalalert/macro.njk' import globalAlert %}
-{%- from 'hee/scaffolding/notifications/phasebanner/macro.njk' import phaseBanner %}
+{%- from 'hee/blocks/scaffolding/notifications/globalalert/macro.njk' import globalAlert %}
+{%- from 'hee/blocks/scaffolding/notifications/phasebanner/macro.njk' import phaseBanner %}
 
 {# Footer #}
-{%- from 'hee/scaffolding/footer/macro.njk' import siteFooter %}
+{%- from 'hee/blocks/scaffolding/footer/macro.njk' import siteFooter %}
 
 {# Main #}
 {%- from 'breadcrumb/macro.njk' import breadcrumb %}
@@ -24,6 +24,8 @@
 {%- from 'hee/blocks/content/main/hee-listing/macro.njk' import listingLayout %}
 {%- from 'hee/blocks/content/main/hee-mini-listing/macro.njk' import miniListing %}
 {%- from 'components/hee/hee-filter/macro.njk' import filter %}
+{%- from 'hee/blocks/furniture/collections/hee-listing/macro.njk' import listingLayout %}
+{%- from 'hee/blocks/furniture/collections/hee-filter/macro.njk' import filter %}
 {%- from 'pagination/macro.njk' import pagination %}
 
 {# CONTENT BLOCKS #}
@@ -39,7 +41,7 @@
 {# To Sort #}
 {# HEE Components #}
 {%- from 'components/hee/hee-anchorlinks/macro.njk' import anchorLinks %}
-{%- from 'hee/blocks/content/main/hee-listing-item/macro.njk' import listingItem %}
+{%- from 'hee/blocks/furniture/collections/hee-listing-item/macro.njk' import listingItem %}
 {%- from 'components/hee/hee-media/macro.njk' import media %}
 {%- from 'components/hee/hee-navmap/macro.njk' import navMap %}
 {%- from 'hee/blocks/content/main/hee-publication-doc/macro.njk' import publicationDoc %}

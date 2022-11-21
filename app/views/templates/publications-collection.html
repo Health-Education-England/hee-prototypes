@@ -1,0 +1,83 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'publications-collection' %}
+{% set page_title = 'Publications Collection' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+  breadcrumb({
+  items: [
+      {
+        href: "/",
+        text: "Home"
+      },
+      {
+        href: "/templates",
+        text: "Templates"
+      }
+  ],
+      href: "/templates/"+page_url,
+      text: page_title
+  }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+  {{ subnav({
+    area: 'templates',
+    current: page_url
+  }) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Templates</span>
+    <h1>{{ page_title }}</h1>
+    <p class="nhsuk-lede-text">A layout with a left sidebar and right content area. Used for listing publication items.</p>
+{% endblock %}
+
+{% block pageContent %}
+
+  <h2>Example</h2>
+  {{ example({
+    url: '/templates/examples/'+page_url,
+    view: 'template'
+  }) }}
+  <hr />
+
+{{ highlight({
+  "html" : '<main class="page page--leftbar" id="maincontent" role="main">
+  <div class="page__breadcrumbs">[ BREADCRUMBS ]</div>
+  <div class="page__header">
+    [ PAGE_MICROHERO ]
+    <div class="nhsuk-width-container">
+      <h1>[ PAGE_TITLE ]</h1>
+      <span class="nhsuk-caption-xl">[ PAGE_CAPTION ]</span>
+      <p class="nhsuk-lede-text">[ PAGE_SUMMARY ]</p>
+    </div>
+  </div>
+  <div class="nhsuk-width-container">
+    <div class="page__layout">
+      <aside class="page__leftbar">
+        [ FILTER_GROUP | FILTER_CLEAR ]
+      </aside>
+      <div class="page__main">
+        [ RESULTS_TITLE | RESULTS_SORTING ]
+        [ FILTER_TAG ]
+        [ RESULTS_LISTING ]
+        [ RESULTS_PAGINATION ]
+      </div>
+    </div>
+  </div>
+  <div class="page__footer">
+  </div>
+  <section class="page__feature">
+  </section>
+</main>'
+})
+}}
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}
+{% block pageFeature %}{% endblock %}
