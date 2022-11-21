@@ -1,9 +1,7 @@
 name: Build and Test
 
 on:
-  push:
-    branches:
-      - "Enhancement/NWPS-1233-NPM-assets-github-actions"
+  push
 
 jobs:
   # Build prototype dependencies, assets and templates.
