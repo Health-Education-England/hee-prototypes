@@ -69,5 +69,4 @@ jobs:
       - name: Deploy GitHub pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist/
-          branch: "Enhancement/NWPS-1233-NPM-assets-pipeline-build"
+          folder: dist
