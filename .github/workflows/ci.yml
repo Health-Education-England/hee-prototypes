@@ -52,12 +52,12 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: assets
-          path: docs/
+          path: dist/
 
       # Debugging step to display ./dist directory contents in GitHub action logs.
       - name: Display structure of downloaded files
         run: ls -R
-        working-directory: docs/
+        working-directory: dist/
 
       # Commit any changes to ./dist directory updating the GitHub pages.
       - name: Commit bundled dist changes
@@ -66,7 +66,7 @@ jobs:
           commit_message: "[Github Actions] - Bundled assets for build number: ${{ github.run_number }}"
 
       # Deploys and updates GitHub Pages.
-#      - name: Deploy GitHub pages
-#        uses: JamesIves/github-pages-deploy-action@v4.4.1
-#        with:
-#          folder: dist
+      - name: Deploy GitHub pages
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
+        with:
+          folder: dist
