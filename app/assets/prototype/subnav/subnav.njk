@@ -14,7 +14,7 @@
         {% if item.status == 'To Do' %}
           <li>{{ item.title }}</li>
         {% else %}
-          <li{% if item.url == params.current %} class='current'{% endif %}><a href="/templates/{{ item.url }}">{{ item.title }}</a></li>
+          <li{% if item.url == params.current %} class='current'{% endif %}><a href="/templates/{{ item.url }}.html">{{ item.title }}</a></li>
         {% endif %}
       {% endfor %}
     </ul>
@@ -54,7 +54,7 @@
           {% if item.status == 'To Do' %}
             <li>{{ item.title }}</li>
           {% else %}
-            <li{% if item.url == params.current %} class='current'{% endif %}><a href="/blocks/content/{{ item.url }}">{{ item.title }}</a></li>
+            <li{% if item.url == params.current %} class='current'{% endif %}><a href="/blocks/content/{{ item.url }}.html">{{ item.title }}</a></li>
           {% endif %}
         {% endfor %}
       </ul>
@@ -70,7 +70,7 @@
           {% if item.status == 'To Do' %}
             <li>{{ item.title }}</li>
           {% else %}
-            <li{% if item.url == params.current %} class='current'{% endif %}><a href="/blocks/furniture/{{ item.url }}">{{ item.title }}</a></li>
+            <li{% if item.url == params.current %} class='current'{% endif %}><a href="/blocks/furniture/{{ item.url }}.html">{{ item.title }}</a></li>
           {% endif %}
         {% endfor %}
       </ul>
@@ -86,7 +86,7 @@
           {% if item.status == 'To Do' %}
             <li>{{ item.title }}</li>
           {% else %}
-            <li{% if item.url == params.current %} class='current'{% endif %}><a href="/blocks/scaffolding/{{ item.url }}">{{ item.title }}</a></li>
+            <li{% if item.url == params.current %} class='current'{% endif %}><a href="/blocks/scaffolding/{{ item.url }}.html">{{ item.title }}</a></li>
           {% endif %}
         {% endfor %}
       </ul>
