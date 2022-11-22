@@ -24,7 +24,7 @@ jobs:
         run: npm install --no-optional
 
       - name: Build assets
-        run: npm run build
+        run: npm run build --prod
 
       # Share built assets between jobs.
       - name: Upload build artifacts
