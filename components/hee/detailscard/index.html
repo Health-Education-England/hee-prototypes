@@ -7,13 +7,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
+  <base href="/hee-prototypes/">
   <title> DetailsCard - HEE - Components - HEE Prototype </title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
   <link href="/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
-  <link href="/css/highlight.css" rel="stylesheet" />
   <link href="/css/hee.css" rel="stylesheet" />
   <link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png">
@@ -179,65 +179,63 @@
       <div class="hee-flexgrid-row">
         <div class="hee-flexgrid-column-one-third">
           <h3>AuthorCard</h3>
-          <div class="hee-detailscard hee-detailscard--author">
-            <div class="hee-detailscard__image">
-              <div class="hee-detailscard__initials">
+          <div class="hee-card hee-card--author">
+            <div class="hee-card__image">
+              <div class="hee-card__initials">
                 <span>JB</span>
               </div>
             </div>
-            <h2 class="hee-detailscard__name" aria-label="Name"> Dr Jo Blogs </h2>
-            <span class="hee-detailscard__pronouns">She/her</span>
-            <h3 class="nhsuk-heading-m hee-detailscard__jobrole" aria-label="Job Role">Head of Digital</h3>
-            <p class="hee-detailscard__department" aria-label="Department">Genomics</p>
-            <p class="hee-detailscard__organisation" aria-label="Organisation">HEE</p>
+            <h2 class="hee-card__name" aria-label="Name"> Dr Jo Blogs </h2>
+            <span class="hee-card__pronouns">She/her</span>
+            <p class="hee-card__department" aria-label="Department">Genomics</p>
+            <p class="hee-card__organisation" aria-label="Organisation">HEE</p>
             <hr />
-            <ul class="hee-detailscard__contact">
-              <li class="hee-detailscard__email" aria-label="Email"><a href="mailto:http://nhs.uk/;">jo.bloggs@hee.co.uk</a></li>
-              <li class="hee-detailscard__website" aria-label="Website"><a href="http://nhs.uk/">http://nhs.uk/</a></li>
-              <li class="hee-detailscard__twitter" aria-label="Twitter"><a href="https://twitter.com/nhsengland">@nhsengland</a></li>
+            <ul class="hee-card__contact">
+              <li class="hee-card__email" aria-label="Email"><a href="mailto:http://nhs.uk/;">jo.bloggs@hee.co.uk</a></li>
+              <li class="hee-card__website" aria-label="Website"><a href="http://nhs.uk/">http://nhs.uk/</a></li>
+              <li class="hee-card__twitter" aria-label="Twitter"><a href="https://twitter.com/nhsengland">@nhsengland</a></li>
             </ul>
-            <p class="hee-detailscard__bio" aria-label="Bio">Lorem ipsum dolor sit amet</p>
-            <p class="hee-detailscard__authorurl" aria-label="Author URL"><a href="/author/jo-blogs">View more about Dr Jo Blogs</a></p>
+            <p class="hee-card__bio" aria-label="Bio">Lorem ipsum dolor sit amet</p>
+            <p class="hee-card__authorurl" aria-label="Author URL"><a href="/author/jo-blogs">View more about Dr Jo Blogs</a></p>
           </div>
           <p><a href="/components/hee/detailscard/author">View AuthorCard component</a></p>
         </div>
         <div class="hee-flexgrid-column-one-third">
           <h3>PersonCard</h3>
-          <div class="hee-detailscard hee-detailscard--person">
-            <div class="hee-detailscard__image">
-              <div class="hee-detailscard__initials">
+          <div class="hee-card hee-card--person">
+            <div class="hee-card__image">
+              <div class="hee-card__initials">
                 <span>BS</span>
               </div>
             </div>
-            <h2 class="hee-detailscard__name" aria-label="Name"> Dr Bobby Smith </h2>
-            <span class="hee-detailscard__pronouns">They/them</span>
-            <h3 class="nhsuk-heading-m hee-detailscard__jobrole" aria-label="Job Role">Content Editor</h3>
-            <p class="hee-detailscard__department" aria-label="Department">National Website Platform</p>
-            <p class="hee-detailscard__organisation" aria-label="Organisation">NHS UK</p>
+            <h2 class="hee-card__name" aria-label="Name"> Dr Bobby Smith </h2>
+            <span class="hee-card__pronouns">They/them</span>
+            <h3 class="nhsuk-heading-m hee-card__jobtitle" aria-label="Job Title"></h3>
+            <p class="hee-card__department" aria-label="Department">National Website Platform</p>
+            <p class="hee-card__organisation" aria-label="Organisation">NHS UK</p>
             <hr />
-            <ul class="hee-detailscard__contact">
-              <li class="hee-detailscard__telephone" aria-label="Telephone"><a href="tel:01162344444;">01162344444</a></li>
-              <li class="hee-detailscard__email" aria-label="Email"><a href="mailto:bobby.smithandthelongestemail@hee.co.uk;">bobby.smithandthelongestemail@hee.co.uk</a></li>
-              <li class="hee-detailscard__website" aria-label="Website"><a href="http://nhs.uk/">http://nhs.uk/</a></li>
-              <li class="hee-detailscard__twitter" aria-label="Twitter"><a href="https://twitter.com/nhsengland">@nhsengland</a></li>
+            <ul class="hee-card__contact">
+              <li class="hee-card__telephone" aria-label="Telephone"><a href="tel:01162344444;">01162344444</a></li>
+              <li class="hee-card__email" aria-label="Email"><a href="mailto:bobby.smithandthelongestemail@hee.co.uk;">bobby.smithandthelongestemail@hee.co.uk</a></li>
+              <li class="hee-card__website" aria-label="Website"><a href="http://nhs.uk/">http://nhs.uk/</a></li>
+              <li class="hee-card__twitter" aria-label="Twitter"><a href="https://twitter.com/nhsengland">@nhsengland</a></li>
             </ul>
-            <p class="hee-detailscard__address" aria-label="Address"> 2 Stephenson St<br> Birmingham<br> West Midlands<br> B1 2SE </p>
-            <p class="hee-detailscard__description" aria-label="Description">Lorem upsum blah blah</p>
+            <p class="hee-card__description" aria-label="Description">Lorem upsum blah blah</p>
           </div>
           <p><a href="/components/hee/detailscard/person">View PersonCard component</a></p>
         </div>
         <div class="hee-flexgrid-column-one-third">
           <h3>DepartmentCard</h3>
-          <div class="hee-detailscard hee-detailscard--author">
-            <h2 class="nhsuk-heading-m hee-detailscard__jobrole" aria-label="Department name"> National Website Platform </h2>
-            <p class="hee-detailscard__organisation" aria-label="Organisation">NHS UK</p>
+          <div class="hee-card hee-card--department">
+            <h2 class="nhsuk-heading-m hee-card__jobtitle" aria-label="Department name"> National Website Platform </h2>
+            <p class="hee-card__organisation" aria-label="Organisation">NHS UK</p>
             <hr />
-            <ul class="hee-detailscard__contact">
-              <li class="hee-detailscard__telephone" aria-label="Telephone"><a href="tel:01162344444;"></a></li>
-              <li class="hee-detailscard__email" aria-label="Email"><a href="mailto:http://nwp.nhs.uk/;">nwp@hee.co.uk</a></li>
-              <li class="hee-detailscard__website" aria-label="Website"><a href="http://nwp.nhs.uk/">http://nwp.nhs.uk/</a></li>
+            <ul class="hee-card__contact">
+              <li class="hee-card__telephone" aria-label="Telephone"><a href="tel:01162344444;"></a></li>
+              <li class="hee-card__email" aria-label="Email"><a href="mailto:http://nwp.nhs.uk/;">nwp@hee.co.uk</a></li>
+              <li class="hee-card__website" aria-label="Website"><a href="http://nwp.nhs.uk/">http://nwp.nhs.uk/</a></li>
             </ul>
-            <p class="hee-detailscard__description" aria-label="Description">Lorem upsum blah blah</p>
+            <p class="hee-card__description" aria-label="Description">Lorem upsum blah blah</p>
           </div>
           <p><a href="/components/hee/detailscard/department">View DepartmentCard component</a></p>
         </div>
@@ -295,11 +293,7 @@
   </footer>
   <script src="/js/jquery-3.3.1.min.js"></script>
   <script src="/js/nhsuk.min.js"></script>
-  <script src="/js/highlight.min.js"></script>
   <script src="/js/hee.js"></script>
-  <script>
-    hljs.highlightAll();
-  </script>
 </body>
 
 </html>
