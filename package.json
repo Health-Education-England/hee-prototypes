@@ -6,11 +6,7 @@
   "scripts": {
     "serve": "gulp",
     "build": "gulp build",
-    "bundle": "gulp bundle",
-    "postinstall": "npm run build",
-    "start": "node app.js",
     "test": "",
-    "prewatch": "gulp build",
     "watch": "gulp"
   },
   "author": "https://github.com/nhsuk/",
