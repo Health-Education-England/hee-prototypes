@@ -1,0 +1,64 @@
+name: Build and Test
+
+on:
+  push
+
+jobs:
+  # Build prototype dependencies, assets and templates.
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout repo from GitHub and use current branch.
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install --no-optional
+
+      - name: Build assets
+        run: npm run build:prod
+
+      # Share built assets between jobs.
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: assets
+          path: public/**
+          retention-days: 1
+
+  # Prepare the "dist" directory use by GitHub pages to serve prototype.
+  bundle:
+    name: Bundle and Deploy
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout repo from GitHub and use current branch.
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Copy assets from "Build" step into "dist/" directory.
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: assets
+          path: dist/
+
+      # Debugging step to display ./dist directory contents in GitHub action logs.
+      - name: Display structure of downloaded files
+        run: ls -R
+        working-directory: dist/
+
+      # Commit any changes to ./dist directory..
+      - name: Commit bundled dist changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "[Github Actions] - Bundled assets for build number: ${{ github.run_number }}"

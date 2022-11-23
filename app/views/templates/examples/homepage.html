@@ -10,19 +10,19 @@
     breadcrumb({
       items: [
         {
-          href: "/",
+          href: basePath + "/",
           text: "Home"
         },
         {
-          href: "/templates",
+          href: basePath + "/templates",
           text: "Templates"
         },
         {
-          href: "/templates/examples",
+          href: basePath + "/templates/examples",
           text: "Examples"
         }
       ],
-      href: "/templates/examples/"+page_url,
+      href: basePath + "/templates/examples/"+page_url,
       text: page_title
     })
   }}
@@ -32,7 +32,7 @@
   {{ hero({
     "heading": "Page Title",
     "text": "Pretium morbi mauris est purus tortor. Enim nec blandit rutrum diam nisl scelerisque.",
-    "imageURL": "/images/young-child-using-tablet-device.jpg"
+    "imageURL": basePath + "/images/young-child-using-tablet-device.jpg"
   }) }}
 {% endblock %}
 
@@ -44,7 +44,7 @@
     <p>Felis pellentesque proin id gravida morbi condimentum mi, ac non. Pulvinar ullamcorper orci risus felis. Elit feugiat pulvinar ac aliquet egestas ullamcorper. Vel.</p>
 
     {% set tabOneContent %}
-      <img src="/images/young-child-using-tablet-device.jpg" alt="" />
+      <img src="{{ basePath }}/images/young-child-using-tablet-device.jpg" alt="" />
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     {% endset -%}
 
@@ -95,11 +95,11 @@
           label: "Equality, Diversity and Inclusion"
         },
         {
-          url: "/listing",
+          url: basePath + "/listing",
           label: "Talent Management Toolkit"
         },
         {
-          url: "/listing",
+          url: basePath + "/listing",
           label: "Case studies"
         }]
     })
