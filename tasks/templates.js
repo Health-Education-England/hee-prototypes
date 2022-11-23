@@ -16,14 +16,29 @@ const config = {
   ],
 };
 
+// Add base path for GitHub Pages if not local environment.
+function getBasePath() {
+  let basePath = '';
+
+  if(process.argv.indexOf("--prod") > -1) {
+    basePath = '/hee-prototypes';
+  }
+
+  return basePath;
+}
+
 function buildTemplates() {
+  const basePath = getBasePath();
+  const environment = new nunjucks.Environment(
+      new nunjucks.FileSystemLoader(config.templates)
+  );
+  environment.addGlobal('basePath', basePath)
+
   return gulp.src(['app/views/**/*.html', 'app/assets/**/*.njk', '!app/views/lks/*.html'])
     .pipe(gulpNunjucks.compile({
       baseUrl: config.baseUrl,
     }, {
-      env: new nunjucks.Environment(
-        new nunjucks.FileSystemLoader(config.templates)
-      ),
+      env: environment,
     }))
     .pipe(rename({
       extname: '.html',
