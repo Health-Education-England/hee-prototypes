@@ -22,9 +22,6 @@
             display: block;
             margin-top: 0;
             @include nhsuk-responsive-margin(2, 'bottom');
-            //a {
-                //text-decoration: none;
-            //}
 
             &.has-children {
                 margin-bottom: 0;
@@ -33,28 +30,12 @@
             a {
                 text-decoration: none;
             }
-        }
 
-        ul {
-            @include nhsuk-responsive-margin(2, 'top');
-
-            li {
-                align-items: center;
+            .hee-anchorlinks__wrapper {
+                align-items: start;
                 display: flex;
                 @include nhsuk-responsive-margin(2, 'bottom');
                 padding-left: map-get($nhsuk-spacing-points, 2);
-
-                span {
-                    display: block;
-                    height: 17px;
-                    width: 7px;
-                }
-
-                svg {
-                    fill: $color_nhsuk-black;
-                    height: 17px;
-                    width: 7px;
-                }
 
                 a {
                     display: inline-block;
@@ -62,7 +43,47 @@
                     padding-left: map-get($nhsuk-spacing-points, 1);
                     position: relative;
                 }
+
+                svg {
+                    fill: $color_nhsuk-black;
+                }
+
+                &.chevron {
+                    span {
+                        display: block;
+                        height: 17px;
+                        padding-left: 3px;
+                        width: 7px;
+                        transform: rotate(90deg);
+                    }
+
+                    svg {
+                        height: 17px;
+                        width: 7px;
+                    }
+                }
+
+                &.circle {
+                    align-items: center;
+
+                    span {
+                        display: flex;
+                        justify-content: center;
+                        padding-left: 2px;
+                        width: 8px;
+                    }
+
+                    svg {
+                        height: 3px;
+                        width: 3px;
+                    }
+                }
             }
+        }
+
+        ul {
+            @include nhsuk-responsive-margin(2, 'top');
+            @include nhsuk-responsive-margin(5, 'left');
         }
     }
 }
