@@ -10,19 +10,19 @@
     breadcrumb({
     items: [
         {
-            href: "/",
+            href: basePath + "/",
             text: "Home"
         },
         {
-            href: "/blocks",
+            href: basePath + "/blocks",
             text: "Blocks"
         },
         {
-            href: "/blocks/scaffolding",
+            href: basePath + "/blocks/scaffolding",
             text: "Scaffolding"
         }
     ],
-        href: "/blocks/scaffolding/"+page_url,
+        href: basePath + "/blocks/scaffolding/"+page_url,
         text: page_title
     }) 
 }}
@@ -48,7 +48,7 @@
 <h3>Examples</h3>
 {{ example({
     heading: 'Desktop',
-    url: '/blocks/scaffolding/examples/' + page_url,
+    url: basePath + '/blocks/scaffolding/examples/' + page_url,
     view: 'scaled',
     height: '100px'
 }) }}
@@ -57,7 +57,7 @@
 
 {{ example({
     heading: 'Mobile',
-    url: '/blocks/scaffolding/examples/' + page_url,
+    url: basePath + '/blocks/scaffolding/examples/' + page_url,
     height: '300px'
 }) }}
 
