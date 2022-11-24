@@ -1,0 +1,141 @@
+{% extends "prototype.html" %}
+
+{% import 'includes/_globals.html' as globals %}
+
+{% set bodyClasses = 'prototype prototype--inventory' %}
+{% set page_url = '/inventory' %}
+{% set page_title = 'Inventory' %}
+
+{% block pageClass %}page--fullwidth{% endblock %}
+{% block pageTitle %}{{ page_title }} - HEE Prototype{% endblock %}
+
+{% block pageBreadcrumbs %}
+    {{ breadcrumb({
+        items: [
+            {
+                href: "/",
+                text: "Home"
+            }
+        ],
+        href: page_url,
+        text: page_title
+    }) }}
+{% endblock %}
+
+{% block pageMain %}
+  <div class="page__header">
+    <div class="nhsuk-width-container">
+      <h1>{{ page_title }}</h1>
+      <p class="nhsuk-lede-text"></p>
+    </div>
+  </div>
+  <div class="page__main">
+    <div class="nhsuk-width-container">
+      <h2>Templates</h2>
+      {% for section in globals.templates_array %}
+        <h3>{{ section.heading }}</h3>
+        <table class="prototype__table">
+          <tbody>
+            {% if section.subheading %}
+            <tr><td colspan="4"><strong>{{ section.subheading }}</strong></td></tr>
+            {% endif %}
+            {% for item in section.links %}
+            <tr>
+              <td>{{ item.title }}</td>
+              <td width="150">
+                <a href="/templates/{{ item.url }}">Information</a>
+              </td>
+              <td width="150">
+                {% set regExp = r/^base.*/g %}
+                {% if regExp.test(item.url) %}
+                {% else %}
+                  <a href="/templates/examples/{{ item.url }}">Preview</a>
+                {% endif %}
+              </td>
+              <td width="200" style="text-align:right;">
+                {{ statusTag({
+                  status: item.status
+                })}}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      {% endfor %}
+
+      <h2>Scaffolding Blocks</h2>
+      {% for section in globals.scaffolding_array %}
+        <h3>{{ section.heading }}</h3>
+        <table class="prototype__table">
+          <tbody>
+            {% if section.subheading %}
+            <tr><td colspan="4"><strong>{{ section.subheading }}</strong></td></tr>
+            {% endif %}
+            {% for item in section.links %}
+            <tr>
+              <td>{{ item.title }}</td>
+              <td width="150"><a href="/blocks/scaffolding/{{ item.url }}">Information</a></td>
+              <td width="150"><a href="/blocks/scaffolding/examples/{{ item.url }}">Preview</a></td>
+              <td width="200" style="text-align:right;">
+                {{ statusTag({
+                  status: item.status
+                })}}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      {% endfor %}
+
+      <h2>Furniture Blocks</h2>
+      {% for section in globals.furniture_array %}
+        <h3>{{ section.heading }}</h3>
+        <table class="prototype__table">
+          <tbody>
+            {% if section.subheading %}
+            <tr><td colspan="4"><strong>{{ section.subheading }}</strong></td></tr>
+            {% endif %}
+            {% for item in section.links %}
+            <tr>
+              <td>{{ item.title }}</td>
+              <td width="150"><a href="/blocks/furniture/{{ item.url }}">Information</a></td>
+              <td width="150"><a href="/blocks/furniture/examples/{{ item.url }}">Preview</a></td>
+              <td width="200" style="text-align:right;">
+                {{ statusTag({
+                  status: item.status
+                })}}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      {% endfor %}
+
+      <h2>Content Blocks</h2>
+      {% for section in globals.furniture_array %}
+        <h3>{{ section.heading }}</h3>
+        <table class="prototype__table">
+          <tbody>
+            {% if section.subheading %}
+            <tr><td colspan="4"><strong>{{ section.subheading }}</strong></td></tr>
+            {% endif %}
+            {% for item in section.links %}
+            <tr>
+              <td>{{ item.title }}</td>
+              <td width="150"><a href="/blocks/content/{{ item.url }}">Information</a></td>
+              <td width="150"><a href="/blocks/content/examples/{{ item.url }}">Preview</a></td>
+              <td width="200" style="text-align:right;">
+                {{ statusTag({
+                  status: item.status
+                })}}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

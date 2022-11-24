@@ -1,0 +1,199 @@
+{# UTILS #}
+{%- from 'prototype/highlight/highlight.njk' import highlight %}
+
+{# SCAFFOLDING #}
+
+{# Header #}
+{%- from 'hee/blocks/scaffolding/header/macro.njk' import customHeader %}
+{%- from 'skip-link/macro.njk' import skipLink %}
+
+{# Notifications #}
+{%- from 'hee/blocks/scaffolding/notifications/globalalert/macro.njk' import globalAlert %}
+{%- from 'hee/blocks/scaffolding/notifications/phasebanner/macro.njk' import phaseBanner %}
+
+{# Footer #}
+{%- from 'hee/blocks/scaffolding/footer/macro.njk' import siteFooter %}
+
+{# Main #}
+{%- from 'breadcrumb/macro.njk' import breadcrumb %}
+
+{# GLOBAL #}
+
+{%- from 'back-link/macro.njk' import backLink %}
+
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="ie8" lang="en"><![endif]--><!--[if IE 9]><html class="ie9" lang="en"><![endif]--><!--[if gt IE 9]><!--><html lang="en" style="{{ html_style }}"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>{% block pageTitle %}NWP Prototype Kit{% endblock %}</title>
+    <link href="https://www.nhs.uk/" rel="preconnect">
+    <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
+    <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
+    <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
+
+    {% block headCSS %}
+      <link href="{{ basePath }}/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
+      <link href="{{ basePath }}/css/highlight.css" rel="stylesheet" />
+      <link href="{{ basePath }}/css/hee.css" rel="stylesheet" />
+    {% endblock %}
+
+  </head>
+
+  <body class="{{ bodyClasses }}">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    {% block headerStart %}
+      {{ skipLink({
+        href: '#maincontent',
+        text: 'Skip to main content'
+      }) }}
+    {% endblock %}
+
+    {% block header %}
+    <div class="site-header">
+      {{ customHeader({
+          showNav: true,
+          showSearch: false,
+          organisation: {
+            name: "Health Education England",
+            descriptor: "NWP Prototype Kit"
+          },
+          logos: {
+            en: false,
+            ni: false,
+            scot: false,
+            wales: false,
+            fpo: false
+          },
+          primaryLinks: [
+            {
+              url: basePath + "/",
+              label: "Home"
+            },
+            {
+              url: basePath + "/scaffolding",
+              label: "Scaffolding"
+            },
+            {
+              url: basePath + "/templates",
+              label: "Templates"
+            },
+            {
+              url: basePath + "/components",
+              label: "Components",
+              children: [
+                {
+                  url: basePath + "/components/furniture",
+                  label: "Furniture"
+                },
+                {
+                  url: basePath + "/components/contentblocks",
+                  label: "Content Blocks"
+                },
+                {
+                  url: basePath + "/components/rightblocks",
+                  label: "Right Blocks"
+                },
+                {
+                  url: basePath + "/components/featureblocks",
+                  label: "Feature Blocks"
+                }
+              ]
+            }
+          ]
+        })
+      }}
+    </div>
+    {% endblock %}
+
+    {% block headerEnd %}
+    <div class="site-notifications">
+    </div>
+    {% endblock %}
+
+    <main class="page {% block pageClass %}{% endblock %}" id="maincontent" role="main">
+      <div class="page__breadcrumbs">
+        {% block pageBreadcrumbs %}
+          {# Breadcrumbs... #}
+        {% endblock %}
+      </div>
+      {% block pageMain %}
+        <div class="nhsuk-width-container">
+          <div class="page__layout">
+            <div class="page__leftbar">
+              {% block pageLeftbar %}Leftbar...{% endblock %}
+            </div>
+            <div class="page__main">
+              <div class="page__header">
+                {% block pageHeader %}Header...{% endblock %}
+              </div>
+              {% block pageContent %}Content...{% endblock %}
+            </div>
+          </div>
+        </div>
+      {% endblock %}
+      <div class="page__footer">
+        {% block pageFooter %}
+          {# Last updated... Tags... Page created... #}
+        {% endblock %}
+      </div>
+      <section class="page__feature">
+        {% block pageFeature %}
+        {% endblock %}
+      </section>
+    </main>
+
+    {% block footer %}
+      {{ siteFooter({
+        "classes" : '',
+        "list": "nhsuk-footer__list--three-columns",
+        "links": [
+          {
+            "URL": basePath + "/blog",
+            "label": "Blog"
+          },
+          {
+            "URL": basePath + "/about",
+            "label": "About us"
+          },
+          {
+            "URL": basePath + "/contact",
+            "label": "Contact us"
+          }
+        ]
+      }) }}
+    {% endblock %}
+
+    {% block scripts %}
+      <script src="{{ basePath }}/js/jquery-3.3.1.min.js"></script>
+      <script src="{{ basePath }}/js/nhsuk.min.js"></script>
+      <script src="{{ basePath }}/js/highlight.min.js"></script>
+      <script src="{{ basePath }}/js/hee.js"></script>
+    {% endblock %}
+    {% block bodyEnd %}
+      {% block pageScripts %}
+        <script>hljs.highlightAll();</script>
+      {% endblock %}
+    {% endblock %}
+  </body>
+</html>
+
+{#%- from 'action-link/macro.njk' import actionLink %}
+{%- from 'back-link/macro.njk' import backLink %}
+{%- from 'care-card/macro.njk' import careCard %}
+{%- from 'date-input/macro.njk' import dateInput %}
+{%- from 'details/macro.njk' import details %}
+{%- from 'error-message/macro.njk' import errorMessage %}
+{%- from 'error-summary/macro.njk' import errorSummary %}
+{%- from 'fieldset/macro.njk' import fieldset %}
+{%- from 'hint/macro.njk' import hint %}
+{%- from 'input/macro.njk' import input %}
+{%- from 'label/macro.njk' import label %}
+{%- from 'list-panel/macro.njk' import listPanel %}
+{%- from 'nav-a-z/macro.njk' import azNav %}
+{%- from 'radios/macro.njk' import radios %}
+{%- from 'tag/macro.njk' import tag %}
+{%- from 'textarea/macro.njk' import textarea %#}

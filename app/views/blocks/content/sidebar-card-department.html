@@ -1,0 +1,91 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'sidebar-card-department' %}
+{% set page_title = 'Card--Department' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/",
+            text: "Home"
+        },
+        {
+            href: "/blocks",
+            text: "Blocks"
+        },
+        {
+            href: "/blocks/content",
+            text: "Content"
+        }
+    ],
+        href: "/blocks/"+page_url,
+      text: page_title
+    }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'blocks',
+    subarea: 'content'
+}) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Main</span>
+    <h1>{{ page_title }}</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+<p>You can find the content type data model in the <a href="https://hee-tis.atlassian.net/wiki/spaces/NWPK/pages/3611721734/Department">Department specification</a>.</p>
+
+<h3>Example</h3>
+{{ example({
+    view: 'block',
+    url: '/blocks/content/examples/' + page_url,
+    height: '380'
+}) }}
+
+<hr />
+
+<h3>Macro</h3>
+{{ highlight({
+  html: '
+{{ departmentCard({
+  name: "Paediatrics", 
+  organisation: "University Hospitals Birmingham NHS Foundation Trust ",
+  email: "email@hee.co.uk",
+  website: "http://nhs.uk/",
+  description: "Lorem ipsum dolor sit amet"
+}) }}
+  '
+}) }}
+
+<hr />
+
+<h3>HTML</h3>
+{{ highlight({
+  html : '
+<div class="hee-card hee-card--department">
+  <h2 class="nhsuk-heading-m hee-card__jobtitle" aria-label="Department name">Paediatrics</h2>
+  <p class="hee-card__organisation" aria-label="Organisation">University Hospitals Birmingham NHS Foundation Trust </p>
+  <hr>
+  <ul class="hee-card__contact">
+    <li class="hee-card__email" aria-label="Email"><a href="mailto:http://nhs.uk/;">email@hee.co.uk</a></li>
+    <li class="hee-card__website" aria-label="Website"><a href="http://nhs.uk/">http://nhs.uk/</a></li>
+  </ul>
+  <p class="hee-card__description" aria-label="Description">Lorem ipsum dolor sit amet</p>
+</div>
+  '
+  }) 
+}}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

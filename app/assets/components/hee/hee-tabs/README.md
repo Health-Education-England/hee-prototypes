@@ -33,7 +33,7 @@
       
         <div class="nhsuk-tabs__panel" id="tabsone-panel-1" role="tabpanel" tabindex="0" aria-labelledby="tabsone-tab-1">
           
-              <img src="/images/young-child-using-tablet-device.jpg" alt="">
+              <img src="{{ basePath }}/images/young-child-using-tablet-device.jpg" alt="">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>        
             
         </div>
@@ -65,7 +65,7 @@
           </button>
           <div class="nhsuk-tabs__panel" id="tabsone-panel-mobile-1" role="tabpanel" tabindex="0" aria-labelledby="tabsone-tab-mobile-1" hidden="">
             
-              <img src="/images/young-child-using-tablet-device.jpg" alt="">
+              <img src="{{ basePath }}/images/young-child-using-tablet-device.jpg" alt="">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>        
             
           </div>
@@ -104,7 +104,7 @@
 {% from 'components/tabs/macro.njk' import tabs %}
 
 {% set tabOneContent %}
-  <img src="/images/young-child-using-tablet-device.jpg" alt="" />
+  <img src="{{ basePath }}/images/young-child-using-tablet-device.jpg" alt="" />
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>        
 {% endset -%}
 

@@ -1,0 +1,116 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'footer-links' %}
+{% set page_title = 'Footer Links' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/",
+            text: "Home"
+        },
+        {
+            href: "/blocks",
+            text: "Blocks"
+        },
+        {
+            href: "/blocks/scaffolding",
+            text: "Scaffolding"
+        }
+    ],
+        href: "/blocks/scaffolding/"+page_url,
+        text: page_title
+    }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'blocks',
+    subarea: 'scaffolding'
+}) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Scaffolding</span>
+    <h1>{{ page_title }}</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+{#<p><a href="https://nhsuk.github.io/nhsuk-frontend/components/footer/index.html">Preview the footer component</a></p>#}
+
+<h3>Examples</h3>
+{{ example({
+    heading: 'Desktop',
+    url: '/blocks/scaffolding/examples/' + page_url,
+    view: 'scaled',
+    height: '100px'
+}) }}
+
+<hr />
+
+{{ example({
+    heading: 'Mobile',
+    url: '/blocks/scaffolding/examples/' + page_url,
+    height: '300px'
+}) }}
+
+<hr />
+
+<h3>Macro</h3>
+{{ highlight({
+  html: '{% from "scaffolding/footer/macro.njk" import footer %}
+
+{{ siteFooter({
+  "links": [
+    {
+      "URL": "https://www.nhs.uk/nhs-sites/",
+      "label": "NHS sites"
+    },
+    {
+      "URL": "https://www.nhs.uk/about-us/",
+      "label": "About us"
+    },
+    {
+      "URL": "https://www.nhs.uk/contact-us/",
+      "label": "Contact us"
+    },
+    {
+      "URL": "https://www.nhs.uk/about-us/sitemap/",
+      "label": "Sitemap"
+    },
+    {
+      "URL": "https://www.nhs.uk/our-policies/",
+      "label": "Our policies"
+    }
+  ]
+})}}'
+}) }}
+
+<hr />
+
+<h3>HTML</h3>
+{{ highlight({
+  html : '<footer class="nhsuk-footer site-footer" id="nhsuk-footer" role="contentinfo">
+  <div class="nhsuk-width-container">
+    <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+    <ul class="nhsuk-footer__list nhsuk-footer__list--three-columns">
+      <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/blog">Blog</a></li>
+      <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/about">About us</a></li>
+      <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/contact">Contact us</a></li>
+    </ul>
+    <p class="nhsuk-footer__copyright">© Crown copyright</p>
+  </div>
+</footer>'
+  }) 
+}}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

@@ -1,0 +1,22 @@
+{% macro publicationDoc(item) %}
+  <div class="hee-publication-doc">
+    <div class="hee-publication-doc__wrapper">
+      <div class="hee-publication-doc__icon">
+        <div class="hee-publication-doc__icon__page"></div>
+        <div class="hee-publication-doc__icon__corner"></div>
+      </div>
+      <div class="hee-publication-doc__icon__title">{{ item.type|upper }}</div>
+    </div>
+    <div class="hee-publication-doc__details">
+      <h3><a href="{{ item.href }}">{{ item.title }}</a></h3>
+      {% for detail in item.details %}
+        <span>
+          {% if detail.label %}
+            {{ detail.label }}:
+          {% endif %}
+          {{ detail.value }}
+        </span>
+      {% endfor %}
+    </div>
+  </div>
+{% endmacro %}

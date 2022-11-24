@@ -8,8 +8,13 @@ export default () => {
       this.anchorLinks = anchorLinks;
       this.anchorLinks.hidden = true;
       this.foundHeadings = this.findHeadings(anchorLinks.dataset.headings);
+
       if (this.foundHeadings?.length) {
-        this.addAnchorsToPage();
+        if (!this.anchorLinks.hasAttribute('data-disable-js')) {
+          this.addAnchorsToPage();
+        } else {
+          this.anchorLinks.hidden = false;
+        }
       }
     }
 

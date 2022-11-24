@@ -6,10 +6,16 @@
 {% block pageBreadcrumbs %}
 {% endblock %}
 
-{% block pageHeader %}
-{% endblock %}
+{% block pageHeader %}{% endblock %}
 
 {% block pageMain %}
+  <div class="nhsuk-width-container">
+    <div class="page__layout">
+      <div class="page__main">
+        {% block pageContent %}Content...{% endblock %}
+      </div>
+    </div>
+  </div>
 {% endblock %}
 
 {% block pageFooter %}

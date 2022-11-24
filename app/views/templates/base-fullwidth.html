@@ -1,0 +1,86 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'base-fullwidth' %}
+{% set page_title = 'Fullwidth' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+  breadcrumb({
+  items: [
+      {
+        href: basePath + "/",
+        text: "Home"
+      },
+      {
+        href: basePath + "/templates",
+        text: "Templates"
+      }
+  ],
+      href: basePath + "/templates/"+page_url,
+      text: page_title
+  }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+  {{ subnav({
+    area: 'templates',
+    current: page_url
+  }) }}
+{% endblock %}
+
+{% block pageHeader %}
+  <span class="nhsuk-caption-xl">Templates</span>
+  <h1>{{ page_title }}</h1>
+  <p class="nhsuk-lede-text">Typically used for landing pages.</p>
+{% endblock %}
+
+{% block pageContent %}
+
+{{ highlight({
+  "html" : '<main class="page page--fullwidth" id="maincontent" role="main">
+  <div class="page__breadcrumbs">[ BREADCRUMBS ]</div>
+  <div class="page__header">
+    [ PAGE_MICROHERO ]
+    [ IF PAGE_HERO ]
+      [ PAGE_HERO ]
+    [ ELSE ]
+      <div class="nhsuk-width-container">
+        <h1>[ PAGE_TITLE ]</h1>
+        <span class="nhsuk-caption-xl">[ PAGE_CAPTION ]</span>
+        <p class="nhsuk-lede-text">[ PAGE_SUMMARY ]</p>
+      </div>
+    [ ENDIF ]
+  </div>
+  <div class="page__main">
+    <div class="nhsuk-width-container">
+      [ IF HOMEPAGE, LANDINGHUB, 404 ]
+      <div class="page__content">
+        [ CONTENT--MAIN_BLOCKS ]
+      </div>
+      [ ELSEIF SEARCH_LISTING ]
+        [ SEARCH_INPUT ]
+        [ RESULTS_TITLE | RESULTS_SORTING ]
+        [ RESULTS_LISTING ]
+        [ RESULTS_PAGINATION ]
+      [ ELSEIF AZ_LISTING ]
+        [ AZLISTING_NAV ]
+        [ AZLISTING_RESULTS ]
+      [ ENDIF ]
+    </div>
+  </div>
+  <div class="page__footer">
+  </div>
+  <section class="page__feature">
+    [ CONTENT--FEATURED_BLOCKS ]
+  </section>
+</main>'
+  }) 
+}}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}
+{% block pageFeature %}{% endblock %}

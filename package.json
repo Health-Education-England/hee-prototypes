@@ -6,6 +6,7 @@
   "scripts": {
     "serve": "gulp",
     "build": "gulp build",
+    "build:prod": "gulp build --prod",
     "test": "",
     "watch": "gulp"
   },

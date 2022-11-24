@@ -1,0 +1,100 @@
+{% import 'includes/_globals.html' as global %}
+{%- from 'back-link/macro.njk' import backLink %}
+
+{% macro subnav(params) %}
+
+<nav class="prototype__subnav">
+{% if params.area == 'templates' %}
+
+  {% for section in global.templates_array %}
+    {% if section.heading %}<h3>{{ section.heading }}</h3>{% endif %}
+    {% if section.subheading %}<h4>{{ section.subheading }}</h4>{% endif %}
+    <ul>
+      {% for item in section.links %}
+        {% if item.status == 'To Do' %}
+          <li>{{ item.title }}</li>
+        {% else %}
+          <li{% if item.url == params.current %} class='current'{% endif %}><a href="{{ basePath }}/templates/{{ item.url }}.html">{{ item.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endfor %}
+
+{% elseif params.area == 'blocks' %}
+
+  {% if params.subarea == 'top' %}
+
+    {% for section in global.blocks_top_array %}
+      {% if section.heading %}<h3>{{ section.heading }}</h3>{% endif %}
+      {% if section.subheading %}<h4>{{ section.subheading }}</h4>{% endif %}
+      <ul>
+        {% for item in section.links %}
+        <li><a href="{{ basePath }}/blocks/{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+
+  {% else %}
+    {{
+      backLink({
+        href: basePath + '/blocks',
+        text: 'Blocks'
+      })
+    }}
+
+  {% endif %}
+
+  {% if params.subarea == 'content' %}
+
+    {% for section in global.content_array %}
+      {% if section.heading %}<h3>{{ section.heading }}</h3>{% endif %}
+      {% if section.subheading %}<h4>{{ section.subheading }}</h4>{% endif %}
+      <ul>
+        {% for item in section.links %}
+          {% if item.status == 'To Do' %}
+            <li>{{ item.title }}</li>
+          {% else %}
+            <li{% if item.url == params.current %} class='current'{% endif %}><a href="{{ basePath }}/blocks/content/{{ item.url }}.html">{{ item.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endfor %}
+
+  {% elseif params.subarea == 'furniture' %}
+
+    {% for section in global.furniture_array %}
+      {% if section.heading %}<h3>{{ section.heading }}</h3>{% endif %}
+      {% if section.subheading %}<h4>{{ section.subheading }}</h4>{% endif %}
+      <ul>
+        {% for item in section.links %}
+          {% if item.status == 'To Do' %}
+            <li>{{ item.title }}</li>
+          {% else %}
+            <li{% if item.url == params.current %} class='current'{% endif %}><a href="{{ basePath }}/blocks/furniture/{{ item.url }}.html">{{ item.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endfor %}
+
+  {% elseif params.subarea == 'scaffolding' %}
+
+    {% for section in global.scaffolding_array %}
+      {% if section.heading %}<h3>{{ section.heading }}</h3>{% endif %}
+      {% if section.subheading %}<h4>{{ section.subheading }}</h4>{% endif %}
+      <ul>
+        {% for item in section.links %}
+          {% if item.status == 'To Do' %}
+            <li>{{ item.title }}</li>
+          {% else %}
+            <li{% if item.url == params.current %} class='current'{% endif %}><a href="{{ basePath }}/blocks/scaffolding/{{ item.url }}.html">{{ item.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endfor %}
+
+  {% endif %}
+
+{% endif %}
+</nav>
+
+{% endmacro %}

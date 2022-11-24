@@ -1,0 +1,45 @@
+/* Filter */
+.nhsuk-filter {
+  .nhsuk-fieldset__legend {
+    display: block;
+    margin-bottom: map-get($nhsuk-spacing-points, 3);
+    width: 100%;
+  }
+
+  .nhsuk-filter__group {
+    position: relative;
+
+    .nhsuk-filter__group__clear {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  .nhsuk-form-group {
+    margin-bottom: map-get($nhsuk-spacing-points, 5);
+  }
+
+  // Closed groups
+  &__group--closed .nhsuk-checkboxes {
+    display: none;
+  }
+
+  &__group--closed .nhsuk-fieldset__legend {
+    margin-bottom: 0;
+  }
+
+  // JS enabled (variant)
+  &--js .nhsuk-fieldset__legend {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 448 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000' d='m240.97 130.52 194.34 194.34c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901 0.04l-154.75-154.02-154.74 154.02c-9.379 9.335-24.544 9.317-33.901-0.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941l194.34-194.34c9.372-9.373 24.568-9.373 33.941-1e-3z'/%3E%3C/svg%3E%0A");
+    background-position: .3em .3em;
+    background-repeat: no-repeat;
+    background-size: .75em;
+    color: $color_nhsuk-blue;
+    cursor: pointer;
+    padding-left: 1.6em;
+  }
+
+  &--js &__group--closed .nhsuk-fieldset__legend {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23000' d='M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z'/%3E%3C/svg%3E");
+  }
+}

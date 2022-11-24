@@ -1,5 +1,36 @@
 {% macro anchorLinks(params) %}
-<div class="nhsuk-anchor-links hee-anchorlinks" data-headings="{{ params.headings }}">
+<div class="nhsuk-anchor-links hee-anchorlinks" {{ 'data-disable-js=true' if params.items.length > 0 }} data-headings="{{ params.headings }}">
     <h2 data-anchorlinksignore="true">{{ params.title }}</h2>
+    {% if params.items %}
+        <ul>
+        {% for item in params.items %}
+            <li {{ 'class=has-children' if item.children.length > 0 }}>
+                <div class="hee-anchorlinks__wrapper {{ 'chevron' if item.children.length > 0 else 'circle' }}">
+                  {% if item.children.length > 0 %}
+                    <span>
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.00019 6.99994C8.00095 7.13155 7.97572 7.26201 7.92596 7.38385C7.87619 7.50569 7.80287 7.6165 7.71019 7.70994L2.71019 12.7099C2.61695 12.8032 2.50626 12.8771 2.38443 12.9276C2.26261 12.9781 2.13204 13.004 2.00019 13.004C1.86833 13.004 1.73776 12.9781 1.61594 12.9276C1.49411 12.8771 1.38342 12.8032 1.29018 12.7099C1.19695 12.6167 1.12299 12.506 1.07253 12.3842C1.02206 12.2624 0.996094 12.1318 0.996094 11.9999C0.996094 11.8681 1.02206 11.7375 1.07253 11.6157C1.12299 11.4939 1.19695 11.3832 1.29018 11.2899L5.59019 6.99994L1.29018 2.70994C1.10188 2.52164 0.996094 2.26624 0.996094 1.99994C0.996094 1.73364 1.10188 1.47825 1.29018 1.28994C1.47849 1.10164 1.73388 0.99585 2.00019 0.99585C2.26649 0.99585 2.52188 1.10164 2.71019 1.28994L7.71019 6.28994C7.80287 6.38338 7.87619 6.4942 7.92596 6.61603C7.97572 6.73787 8.00095 6.86833 8.00019 6.99994Z" fill="black"/>
+                        </svg>
+                    </span>
+                  {% else %}
+                    <span>
+                      <svg width="3" height="3" viewBox="0 0 3 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="1.5" cy="1.5" r="1.5" fill="black"/>
+                      </svg>
+                   </span>
+                  {% endif %}
+                    <a href="{{ item.href }}">{{ item.title }}</a>
+                </div>
+                {% if item.children %}
+                    <ul>
+                    {% for child in item.children %}
+                        <li><a href="{{ child.href }}">{{ child.title }}</a></li>
+                    {% endfor%}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
 </div>
 {% endmacro %}

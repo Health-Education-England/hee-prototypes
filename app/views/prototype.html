@@ -1,26 +1,20 @@
 {# UTILS #}
-{%- from 'utils/highlight.njk' import highlight %}
-{%- from 'utils/subnav.njk' import subnav %}
+{%- from 'prototype/highlight/highlight.njk' import highlight %}
+{%- from 'prototype/subnav/subnav.njk' import subnav %}
+{%- from 'prototype/example/example.njk' import example %}
+{%- from 'prototype/components/components.njk' import components %}
+{%- from 'prototype/status-tag/status-tag.njk' import statusTag %}
 
 {# SCAFFOLDING #}
-
-{# Header #}
-{%- from 'scaffolding/header/macro.njk' import customHeader %}
-{%- from 'skip-link/macro.njk' import skipLink %}
-
-{# Notifications #}
-{%- from 'scaffolding/notifications/globalalert/macro.njk' import globalAlert %}
-{%- from 'scaffolding/notifications/phasebanner/macro.njk' import phaseBanner %}
-
-{# Footer #}
-{%- from 'scaffolding/footer/macro.njk' import siteFooter %}
-
-{# Main #}
+{%- from 'hee/blocks/scaffolding/header/macro.njk' import customHeader %}
+{%- from 'hee/blocks/scaffolding/footer/macro.njk' import siteFooter %}
 {%- from 'breadcrumb/macro.njk' import breadcrumb %}
 
 {# GLOBAL #}
 {%- from 'hero/macro.njk' import hero %}
+{%- from 'components/hee/hee-microhero/macro.njk' import microHero %}
 {%- from 'components/hee/hee-homesection/macro.njk' import homepageSection %}
+{%- from 'back-link/macro.njk' import backLink %}
 {%- from 'card/macro.njk' import card %}
 
 <!DOCTYPE html>
@@ -37,31 +31,27 @@
     <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
 
     {% block headCSS %}
-      <link href="/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
-      <link href="/css/highlight.css" rel="stylesheet" />
-      <link href="/css/hee.css" rel="stylesheet" />
+      <link href="{{ basePath }}/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
+      <link href="{{ basePath }}/css/highlight.css" rel="stylesheet" />
+      <link href="{{ basePath }}/css/prototype.css" rel="stylesheet" />
+      <link href="{{ basePath }}/css/hee.css" rel="stylesheet" />
     {% endblock %}
-
   </head>
 
   <body class="{{ bodyClasses }}">
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
     {% block headerStart %}
-      {{ skipLink({
-        href: '#maincontent',
-        text: 'Skip to main content'
-      }) }}
     {% endblock %}
 
     {% block header %}
     <div class="site-header">
       {{ customHeader({
-          "showNav": "true",
+          "showNav": "false",
           "showSearch": "false",
           "showLogos": "false",
           "heeHref": "http://hee.nhs.uk/",
-          "classes": "nhsuk-header--white",
+          "classes": "",
           "organisation": {
             "name": "Health Education England",
             "split": "",
@@ -69,26 +59,30 @@
           },
           "primaryLinks": [
             {
-              url: "/templates",
+              url: basePath + "/templates",
               label: "Templates"
             },
             {
-              url: "/blocks",
+              url: basePath + "/blocks",
               label: "Blocks",
               children: [
                 {
-                  url: "/blocks/scaffolding",
+                  url: basePath + "/blocks/scaffolding",
                   label: "Scaffolding"
                 },
                 {
-                  url: "/blocks/furniture",
+                  url: basePath + "/blocks/furniture",
                   label: "Furniture"
                 },
                 {
-                  url: "/blocks/content",
+                  url: basePath + "/blocks/content",
                   label: "Content"
                 }
               ]
+            },
+            {
+              url: basePath + "/examples",
+              label: "Examples"
             }
           ]
         })
@@ -106,15 +100,10 @@
       <div class="page__breadcrumbs">
         {% block pageBreadcrumbs %}{% endblock %}
       </div>
-      {% block pageHeader %}{% endblock %}
       {% block pageMain %}{% endblock %}
       <div class="page__footer">
         {% block pageFooter %}{% endblock %}
       </div>
-      <section class="page__feature">
-        {% block pageFeature %}
-        {% endblock %}
-      </section>
     </main>
     {% endblock %}
     
@@ -124,15 +113,15 @@
         "list": "nhsuk-footer__list--three-columns",
         "links": [
           {
-            "URL": "/blog",
+            "URL": basePath + "/blog",
             "label": "Blog"
           },
           {
-            "URL": "/about",
+            "URL": basePath + "/about",
             "label": "About us"
           },
           {
-            "URL": "/contact",
+            "URL": basePath + "/contact",
             "label": "Contact us"
           }
         ]
@@ -140,10 +129,11 @@
     {% endblock %}
 
     {% block scripts %}
-      <script src="/js/jquery-3.3.1.min.js"></script>
-      <script src="/js/nhsuk.min.js"></script>
-      <script src="/js/highlight.min.js"></script>
-      <script src="/js/hee.js"></script>
+      <script src="{{ basePath }}/js/jquery-3.3.1.min.js"></script>
+      <script src="{{ basePath }}/js/nhsuk.min.js"></script>
+      <script src="{{ basePath }}/js/highlight.min.js"></script>
+      <script src="{{ basePath }}/js/prototype.min.js"></script>
+      <script src="{{ basePath }}/js/hee.js"></script>
     {% endblock %}
     {% block bodyEnd %}
       {% block pageScripts %}

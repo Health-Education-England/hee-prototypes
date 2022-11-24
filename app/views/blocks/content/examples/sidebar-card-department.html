@@ -1,0 +1,11 @@
+{% extends "example-blocks.html" %}
+
+{% block main %}
+  {{ departmentCard({
+    name: "Paediatrics", 
+    organisation: "University Hospitals Birmingham NHS Foundation Trust ",
+    email: "email@hee.co.uk",
+    website: "http://nhs.uk/",
+    description: "Lorem ipsum dolor sit amet"
+  }) }}
+{% endblock %}

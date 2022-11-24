@@ -8,15 +8,21 @@ const taskTemplates = require('./tasks/templates');
 const taskServe = require('./tasks/serve');
 
 const PATHS = {
-  heeCSS: './app/assets/styles/hee.scss',
-  heeJS: './app/assets/javascript/hee.js',
+  heeCSS: './app/assets/hee/hee.scss',
+  heeJS: './app/assets/hee/hee.js',
+  prototypeCSS: [
+    './app/assets/prototype/prototype.scss'
+  ],
+  prototypeJS: [
+    './app/assets/prototype/prototype.js'
+  ],
   vendorCSS: [
-    './app/assets/styles/highlight.css',
+    './app/assets/prototype/highlight/highlight.css',
     'node_modules/nhsuk-frontend/dist/nhsuk-4.1.0.min.css'
   ],
   vendorJS: [
     './app/assets/javascript/jquery-3.3.1.min.js',
-    './app/assets/javascript/highlight.min.js',
+    './app/assets/prototype/highlight/highlight.min.js',
     'node_modules/nhsuk-frontend/dist/nhsuk.min.js'
   ],
   public: 'public',
@@ -24,10 +30,11 @@ const PATHS = {
 };
 
 function watch(done) {
-  gulp.watch(['app/assets/**/*.scss', 'app/assets*/**/*.scss'], taskAssets.compileHEEStyles);
-  gulp.watch(['app/assets/styles/!*.css', 'app/assets/styles/hee.scss'], taskAssets.copyVendorStyles);
+  gulp.watch(['app/assets/**/*.scss'], taskAssets.compileHEEStyles);
   gulp.watch(['app/assets/**/*.js'], taskAssets.compileHEEScripts);
-  gulp.watch(['app/assets/javascript/hee.js'], taskAssets.copyVendorScripts);
+  gulp.watch(['app/assets/prototype/prototype.scss', 'app/assets/prototype/**/*.scss'], taskAssets.compilePrototypeStyles);
+  gulp.watch(['app/assets/prototype/prototype.js', 'app/assets/prototype/**/*.js'], taskAssets.compilePrototypeScripts);
+  gulp.watch(['app/assets/javascript/*.js'], taskAssets.copyVendorScripts);
   gulp.watch(['app/views/**/*.njk', 'app/views/**/*.html', 'app/assets/**/*.njk'], taskTemplates.buildTemplates);
 }
 

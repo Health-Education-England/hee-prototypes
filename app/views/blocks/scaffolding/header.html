@@ -1,0 +1,126 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'header' %}
+{% set page_title = 'Header' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/",
+            text: "Home"
+        },
+        {
+            href: "/blocks",
+            text: "Blocks"
+        },
+        {
+            href: "/blocks/scaffolding",
+            text: "Scaffolding"
+        }
+    ],
+        href: "/blocks/scaffolding/"+page_url,
+        text: page_title
+    }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'blocks',
+    subarea: 'scaffolding'
+}) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Scaffolding</span>
+    <h1>{{ page_title }}</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+<h2>Example</h2>
+{{ example({
+    url: '/blocks/scaffolding/examples/' + page_url,
+    view: 'scaled',
+    height: '200px'
+}) }}
+
+<hr />
+
+<h2>Macro</h2>
+{{ highlight({
+  html: '{{ customHeader({
+  "showNav": "true",
+  "showSearch": "true",
+  "showLogos": "true",
+  "heeHref": "http://hee.nhs.uk/",
+  "classes": "nhsuk-header--white",
+  "organisation": {
+    "name": "Health Education England",
+    "split": "",
+    "descriptor": "Hub Name"
+  },
+  "logos": [
+    {
+      "href": "https://www.nimdta.gov.uk/",
+      "label": "Northern Ireland Medical and Dental Training Agency Website (Opens in New Window)",
+      "imgSrc": "/images/logos/nimdta-logo.png",
+      "imgAlt": "Logo for Northern Ireland Medical and Dental Training Agency"
+    },
+    {
+      "href": "https://www.nes.scot.nhs.uk/",
+      "label": "NHS Education for Scotland Website (Opens in New Window)",
+      "imgSrc": "/images/logos/nhs-scotland-logo.png",
+      "imgAlt": "Logo for NHS Education for Scotland"
+    },
+    {
+      "href": "https://heiw.nhs.wales/",
+      "label": "Health Education and Improvement Wales Website (Opens in New Window)",
+      "imgSrc": "/images/logos/heiw-logo.png",
+      "imgAlt": "Logo for Health Education and Improvement Wales"
+    }
+  ],
+  "primaryLinks": [
+    {
+      url: "/templates",
+      label: "Templates"
+    },
+    {
+      url: "/components",
+      label: "Components",
+      children: [
+        {
+          url: "/scaffolding",
+          label: "Scaffolding"
+        },
+        {
+          url: "/components/furniture",
+          label: "Furniture"
+        },
+        {
+          url: "/components/contentblocks",
+          label: "Content Blocks"
+        },
+        {
+          url: "/components/rightblocks",
+          label: "Right Blocks"
+        },
+        {
+          url: "/components/featureblocks",
+          label: "Feature Blocks"
+        }
+      ]
+    }
+  ]
+})
+}}'
+}) }}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}
