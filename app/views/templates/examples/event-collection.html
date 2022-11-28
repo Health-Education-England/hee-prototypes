@@ -1,0 +1,120 @@
+{% extends "example-template-leftbar.html" %}
+
+{% block pageTitle %}Event Collection - Examples - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+  {{
+  breadcrumb({
+    items: [
+      {
+        href: basePath + "/",
+        text: "Home"
+      }
+    ],
+    href: basePath + "/templates/examples/event-collection",
+    text: "Event Collection"
+  })
+  }}
+{% endblock %}
+
+{% block pageHeader %}
+  <div class="nhsuk-width-container">
+    <h1>Events Collection</h1>
+    <p class="nhsuk-lede-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum sit sed porta viverra. Amet, tincidunt cras augue justo, proin mollis sapien. Sed cursus quam suspendisse.</p>
+  </div>
+{% endblock %}
+
+{% block pageLeftbar %}
+  {{ filter({
+    groups: [
+      {
+        title: "Topic",
+        showClearToggle: true,
+        items: [
+        {
+          text: "Item one",
+          value: "item_one",
+          checked: true
+        },
+        {
+          text: "Item two",
+          value: "item_two",
+          checked: true
+        }
+      ]
+      },
+      {
+        title: "Event type",
+        items: [
+        {
+          text: "Item one",
+          value: "item_one"
+        },
+        {
+          text: "Item two",
+          value: "item_two"
+        },
+        {
+          text: "Item three",
+          value: "item_three"
+        }
+      ]
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block pageContent %}
+  {% set selectAttributes = {
+    id: "sort",
+    name: "sort",
+    label: {
+      text: "Sort by"
+    },
+    items: [
+      {
+        value: "newest",
+        text: "Newest"
+      },
+      {
+        value: "relevance",
+        text: "Relevance"
+      }
+    ]
+  } %}
+
+  {% set submitAttributes = {
+    text: "Update",
+    classes: "hee-listing__filter__submit"
+  } %}
+
+  {% set items = [] %}
+  {% for i in range(0, 10) -%}
+    {% set item = {
+      title: "Event item #" + loop.index,
+      href: "#",
+      details: [
+        {
+          label: "Event type:",
+          value: "Briefing"
+        },
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+    } %}
+    {% set items = (items.push(item), items) %}
+  {% endfor %}
+
+  {{ listingLayout({
+    filter: {
+      select: selectAttributes,
+      submit: submitAttributes
+    },
+    results: items,
+    emptyMessage: "No results",
+    showPagination: true
+  }) }}
+{% endblock %}
