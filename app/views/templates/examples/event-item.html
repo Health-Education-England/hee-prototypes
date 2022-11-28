@@ -109,14 +109,16 @@
     ]
   }) }}
 
-  {{ imageCard({
-    imgURL: "https://1000logos.net/wp-content/uploads/2017/09/NHS-logo-500x229.png",
-    imgALT: "Donec pulvinar sollicitudin massa",
-    imgCaption: "Donec pulvinar sollicitudin massa"
+  {{ ctaCard({
+    title: "Book this event",
+    text: "Book on Eventbrite",
+    href: "#"
   }) }}
 
-  {{ card({
-    heading: "Manage your GP application",
-    descriptionHtml: "<a class=\"nhsuk-button\" href=\"https://oriel.nhs.uk/Web/\" draggable=\"false\">Go to Oriel</a>"
+  {{ ctaCard({
+    title: "Add to calendar",
+    text: "Add to calendar",
+    href: "#",
+    secondary: true
   }) }}
 {% endblock %}
