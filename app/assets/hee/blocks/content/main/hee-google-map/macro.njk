@@ -1,0 +1,23 @@
+{% macro googleMap(params) %}
+<div class="hee-google-map">
+    <div class="hee-google-map__wrapper">
+        {{ params.embedCode|safe }}
+    </div>
+
+  {% if params.caption or params.title %}
+    <figcaption class="hee-google-map__caption">
+      {% if params.title %}
+        <h3>{{ params.title }}</h3>
+      {% endif %}
+
+      {% if params.caption %}
+        {{ params.caption }}
+      {% endif %}
+
+      {% if params.link %}
+        <a href="{{ params.link.href }}">{{ params.link.text }}</a>
+      {% endif %}
+    </figcaption>
+  {% endif %}
+</div>
+{% endmacro %}
