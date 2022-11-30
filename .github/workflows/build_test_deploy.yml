@@ -36,7 +36,7 @@ jobs:
 
   # Prepare the "dist" directory use by GitHub pages to serve prototype.
   bundle:
-    name: Bundle and Deploy
+    name: Bundle and Commit
     needs: build
     runs-on: ubuntu-latest
 
@@ -62,3 +62,21 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[Github Actions] - Bundled assets for build number: ${{ github.run_number }}"
+
+  # Runs the release job if we're on "develop" to deploy our latest build to GitHub Pages.
+  deploy:
+    if: github.ref == 'refs/heads/develop'
+    name: Deploy
+    needs: bundle
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout repo from GitHub and use current branch.
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Deploys and updates GitHub Pages.
+      - name: Deploy GitHub pages
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
+        with:
+          folder: dist
