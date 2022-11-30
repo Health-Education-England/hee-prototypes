@@ -5,7 +5,7 @@ on:
     workflows:
       - "Build and Commit"
     branches:
-      - develop
+      - "develop"
     types:
       - completed
 
