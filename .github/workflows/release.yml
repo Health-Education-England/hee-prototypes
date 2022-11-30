@@ -5,7 +5,7 @@ on:
     workflows:
       - "Build and Test"
     branches:
-      - master
+      - develop
     types:
       - completed
 

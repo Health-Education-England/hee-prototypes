@@ -36,7 +36,7 @@ jobs:
 
   # Prepare the "dist" directory use by GitHub pages to serve prototype.
   bundle:
-    name: Bundle and Deploy
+    name: Bundle and Commit
     needs: build
     runs-on: ubuntu-latest
 
