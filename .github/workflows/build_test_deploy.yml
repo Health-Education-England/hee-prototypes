@@ -67,6 +67,7 @@ jobs:
   deploy:
     if: github.ref == 'refs/heads/develop'
     name: Deploy
+    needs: bundle
     runs-on: ubuntu-latest
 
     steps:
