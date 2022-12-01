@@ -1,0 +1,13 @@
+.hee-card--details {
+  h3 {
+    margin-bottom: nhsuk-spacing(3);
+  }
+
+  .hee-card--details__item {
+    margin-bottom: nhsuk-spacing(3);
+
+    span {
+      font-weight: $nhsuk-font-bold;
+    }
+  }
+}
