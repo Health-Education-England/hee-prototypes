@@ -140,15 +140,51 @@
     ]
   }) }}
 
-  {#{{ resources({
-    card: "card",
-    description: "Alternative versions",
+  {% set pdf %}
+    {{ resources({
+      title: "Publication title - PDF version",
+      text: "Publication title - PDF version",
+      url: "#",
+      docType: "PDF",
+      tagColor: "pdf"
+    }) }}
+  {% endset %}
+
+  {% set odf %}
+    {{ resources({
+      title: "Publication title - Open Document version",
+      text: "Publication title - Open Document version",
+      url: "#",
+      docType: "ODF",
+      tagColor: "odf"
+    }) }}
+  {% endset %}
+
+  {% set xls %}
+    {{ resources({
+      title: "Publication title - Excel",
+      text: "Publication title - Excel",
+      url: "#",
+      docType: "XLS",
+      tagColor: "xls"
+    }) }}
+  {% endset %}
+
+  {{ detailsCard({
     title: "Alternative versions",
-    text: "Alternative versions",
-    url: "#",
-    docType: "PDF",
-    tagColor: "pdf"
-  }) }}#}
+    items: [
+      {
+        value: pdf
+      },
+      {
+        value: odf
+      },
+      {
+        value: xls
+      }
+    ]
+  }) }}
+
 {% endblock %}
 
 {% block pageFeature %}
