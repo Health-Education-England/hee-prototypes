@@ -118,6 +118,28 @@
     })
   }}
 
+  {{ detailsCard({
+    title: "Publication Info",
+    items: [
+      {
+        label: "Published:",
+        value: "24 June 2022"
+      },
+      {
+        label: "Updated:",
+        value: "24 July 2022"
+      },
+      {
+        label: "Topic:",
+        value: "<a href=\"#\">Profession 1</a>, <a href=\"#\">Topic 1</a>"
+      },
+      {
+        label: "Estimated reading time:",
+        value: "2 mins"
+      }
+    ]
+  }) }}
+
   {#{{ resources({
     card: "card",
     description: "Alternative versions",
