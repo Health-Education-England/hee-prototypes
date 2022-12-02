@@ -1,0 +1,8 @@
+- name: "Component: Hero"
+  url: "http://localhost:3000/blocks/furniture/examples/page-hero.html"
+
+- name: "Component: Card Author"
+  url: "http://localhost:3000/blocks/content/examples/main-card-author.html"
+
+- name: "Component: Card Department"
+  url: "http://localhost:3000/blocks/content/examples/sidebar-card-department.html"

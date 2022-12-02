@@ -15,6 +15,7 @@
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
+    "@percy/cli": "^1.16.0",
     "babel-loader": "^8.2.5",
     "basic-auth": "^2.0.1",
     "body-parser": "^1.20.0",
