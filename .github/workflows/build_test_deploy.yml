@@ -54,12 +54,8 @@ jobs:
         - name: Install dependencies
           run: npm install --no-optional
 
-        # Copy assets from "Build" step into "dist/" directory.
-        - name: Download build artifacts
-          uses: actions/download-artifact@v3
-          with:
-            name: assets
-            path: public/
+        - name: Build assets
+          run: npm run build
 
         # Upload snapshot to Percy.
         - name: Percy snapshot
