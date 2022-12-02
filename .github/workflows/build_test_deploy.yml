@@ -55,7 +55,7 @@ jobs:
           run: npm install --no-optional
 
         - name: Build assets
-          run: npm run build:prod
+          run: npm run build
 
         # Upload snapshot to Percy.
         - name: Percy snapshot
