@@ -59,6 +59,8 @@ jobs:
 
         # Upload snapshot to Percy.
         - name: Percy snapshot
+          env:
+            PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
           run: npm run test:percy
 
   # Prepare the "dist" directory use by GitHub pages to serve prototype.
