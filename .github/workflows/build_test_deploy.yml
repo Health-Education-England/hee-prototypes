@@ -59,7 +59,7 @@ jobs:
           uses: actions/download-artifact@v3
           with:
             name: assets
-            path: dist/
+            path: public/
 
         # Upload snapshot to Percy.
         - name: Percy snapshot
