@@ -34,10 +34,22 @@ jobs:
           path: public/**
           retention-days: 1
 
+  # Run tests.
+  test:
+      name: Test
+      needs: build
+      runs-on: ubuntu-latest
+
+      steps:
+
+        # Upload snapshot to Percy.
+        - name: Percy snapshot
+          run: npm run test:percy
+
   # Prepare the "dist" directory use by GitHub pages to serve prototype.
   bundle:
     name: Bundle and Commit
-    needs: build
+    needs: test
     runs-on: ubuntu-latest
 
     steps:

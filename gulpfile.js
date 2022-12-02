@@ -6,6 +6,7 @@ const gulp = require('gulp');
 const taskAssets = require('./tasks/assets');
 const taskTemplates = require('./tasks/templates');
 const taskServe = require('./tasks/serve');
+const taskTest = require('./tasks/test');
 
 const PATHS = {
   heeCSS: './app/assets/hee/hee.scss',
@@ -51,6 +52,10 @@ gulp.task('build', gulp.series(
 
 gulp.task('serve', gulp.series(
   gulp.parallel(taskServe.serve)
+));
+
+gulp.task('test', gulp.series(
+  'test:percy'
 ));
 
 gulp.task('default', gulp.series([

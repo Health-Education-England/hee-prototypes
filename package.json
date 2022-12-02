@@ -7,7 +7,8 @@
     "serve": "gulp",
     "build": "gulp build",
     "build:prod": "gulp build --prod",
-    "test": "",
+    "test": "gulp test",
+    "test:percy": "gulp test:percy",
     "watch": "gulp"
   },
   "author": "https://github.com/nhsuk/",
@@ -35,6 +36,7 @@
     "gulp-nodemon": "^2.5.0",
     "gulp-nunjucks": "^5.1.0",
     "gulp-rename": "^1.4.0",
+    "gulp-run": "^1.7.1",
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
