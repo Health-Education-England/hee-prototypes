@@ -41,6 +41,9 @@ jobs:
       runs-on: ubuntu-latest
 
       steps:
+        # Checkout repo from GitHub and use current branch.
+        - name: Checkout code
+          uses: actions/checkout@v3
 
         # Upload snapshot to Percy.
         - name: Percy snapshot
