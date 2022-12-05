@@ -2533,7 +2533,46 @@ table caption {
   max-width: 640px; }
   .hee-card--author .hee-card__name {
     color: #7C2855; }
+  .hee-card--author .hee-card__image.has-bg .hee-card__initials {
+    background-size: contain;
+    background-position: center center; }
+  .hee-card--author .hee-card__image.has-bg span {
+    display: none; }
+  .hee-card--author .hee-card__contact__item {
+    align-items: center;
+    display: flex; }
+    .hee-card--author .hee-card__contact__item:before {
+      display: block;
+      content: ""; }
+    .hee-card--author .hee-card__contact__item a {
+      display: block;
+      padding-left: 8px; }
+  .hee-card--author .hee-card__email:before {
+    background: url("/images/icons/email.svg");
+    height: 18px;
+    width: 24px; }
+  .hee-card--author .hee-card__website:before {
+    background: url("/images/icons/web.svg");
+    height: 24px;
+    width: 24px; }
+  .hee-card--author .hee-card__twitter:before {
+    background: url("/images/icons/twitter.svg");
+    height: 20px;
+    width: 24px; }
+  .hee-card--author .hee-card__linkedin:before {
+    background: url("/images/icons/linkedin.svg");
+    height: 21px;
+    width: 22px; }
 
+@media (min-width: 40.0625em) {
+  .hee-card--author__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; } }
+
+@media (min-width: 40.0625em) {
+  .hee-card--author__container .hee-card--author {
+    width: 48%; } }
 .hee-publication-doc {
   align-items: center;
   display: flex;

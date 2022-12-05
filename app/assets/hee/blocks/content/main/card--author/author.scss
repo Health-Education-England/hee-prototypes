@@ -2,7 +2,7 @@
 .hee-card--author {
     width: 100%;
     max-width: 640px;
-
+    
     .hee-card__title {}
     .hee-card__name {
         color: $color_nhsuk-dark-pink;
@@ -20,5 +20,78 @@
     .hee-card__linkedin {}
     .hee-card__bio {}
     .hee-card__authorurl {}
+    .hee-card__image {
+        &.has-bg {
+            .hee-card__initials {
+                background-size: contain;
+                background-position: center center;
+            }
 
+            span {
+                display: none;
+            }
+        }
+    }
+
+    .hee-card__contact__item {
+        align-items: center;
+        display: flex;
+
+        &:before {
+            display: block;
+            content: "";
+        }
+
+        a {
+            display: block;
+            padding-left: 8px;
+        }
+    }
+
+    .hee-card__email {
+        &:before {
+            background: url("/images/icons/email.svg");
+            height: 18px;
+            width: 24px;
+        }
+    }
+
+    .hee-card__website {
+        &:before {
+            background: url("/images/icons/web.svg");
+            height: 24px;
+            width: 24px;
+        }
+    }
+
+    .hee-card__twitter {
+        &:before {
+            background: url("/images/icons/twitter.svg");
+            height: 20px;
+            width: 24px;
+        }
+    }
+
+    .hee-card__linkedin {
+        &:before {
+            background: url("/images/icons/linkedin.svg");
+            height: 21px;
+            width: 22px;
+        }
+    }
+
+}
+
+.hee-card--author__container {
+    @include mq($from: tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .hee-card--author {
+        @include mq($from: tablet) {
+            width: 48%
+        }
+    }
 }
