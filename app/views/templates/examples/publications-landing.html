@@ -130,26 +130,77 @@
   {% for item in docs %}
     {{ publicationDoc(item) }}
   {% endfor %}
+
+  {% set languages = [
+    {
+      type: "pdf",
+      title: "Teitl y cyhoeddiad - Fersiwn PDF",
+      href: "#",
+      details: [
+        {
+          value: "Cyhoeddwyd ar 24 Mehefin 2022, gan yr Awdur"
+        },
+        {
+          label: "Wedi'i ddiweddaru",
+          value: "24 Gorffennaf 2022"
+        },
+        {
+          value: "Darllen 20 munud"
+        }
+      ]
+    },
+    {
+      type: "pdf",
+      title: "Tytuł publikacji - wersja PDF",
+      href: "#",
+      details: [
+        {
+          label: "Opublikowane 24 czerwca 2022, autor",
+          value: "Autor"
+        },
+        {
+          label: "Zaktualizowano",
+          value: "24 lipca 2022 r."
+        },
+        {
+          value: "PDF, 16,9 MB, 92 strony"
+        },
+        {
+          value: "20 minut czytania"
+        }
+      ]
+    }
+  ] %}
+
+  <h2>Languages</h2>
+  {% for item in languages %}
+    {{ publicationDoc(item) }}
+  {% endfor %}
+
 {% endblock %}
 
 {% block pageRightbar %}
-  {{ relatedLinksCard({
-    heading: "Curabitur sit amet",
-    links: [
+  {{ detailsCard({
+    title: "Publication Info",
+    items: [
       {
-        label: "Donec pulvinar",
-        url: "#"
+        label: "Published:",
+        value: "24 June 2022"
       },
       {
-        label: "Duis consequat",
-        url: "#"
+        label: "Updated:",
+        value: "24 July 2022"
       },
       {
-        label: "Fusce at neque",
-        url: "#"
+        label: "Topic:",
+        value: "<a href=\"#\">Profession 1</a>, <a href=\"#\">Topic 1</a>"
+      },
+      {
+        label: "Estimated reading time:",
+        value: "2 mins"
       }
     ]
-  })}}
+  }) }}
 {% endblock %}
 
 {% block pageFeature %}
