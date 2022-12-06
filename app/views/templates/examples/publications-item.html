@@ -185,6 +185,38 @@
     ]
   }) }}
 
+  {% set firstLang %}
+    {{ resources({
+      title: "Teitl y cyhoeddiad - Fersiwn PDF",
+      text: "Teitl y cyhoeddiad - Fersiwn PDF",
+      url: "#",
+      docType: "PDF",
+      tagColor: "pdf"
+    }) }}
+  {% endset %}
+
+  {% set secondLang %}
+    {{ resources({
+      title: "Tytuł publikacji - wersja PDF",
+      text: "Tytuł publikacji - wersja PDF",
+      url: "#",
+      docType: "PDF",
+      tagColor: "pdf"
+    }) }}
+  {% endset %}
+
+  {{ detailsCard({
+    title: "Languages",
+    items: [
+      {
+        value: firstLang
+      },
+      {
+        value: secondLang
+      }
+    ]
+  }) }}
+
 {% endblock %}
 
 {% block pageFeature %}
