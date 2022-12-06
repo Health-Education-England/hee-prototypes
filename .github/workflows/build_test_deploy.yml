@@ -99,7 +99,7 @@ jobs:
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
           PERCY_COMMIT: ${{ env.GITHUB_SHA_SHORT }}
-        run: 'echo PERCY_COMMIT'
+        run: 'echo $PERCY_COMMIT'
 
       # Upload snapshot to Percy.
       - name: Percy snapshot
