@@ -98,14 +98,14 @@ jobs:
       - name: Debug SHA
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-          PERCY_TARGET_COMMIT: ${{ GITHUB_SHA_SHORT }}
+          PERCY_TARGET_COMMIT: ${{ env.GITHUB_SHA_SHORT }}
         run: 'echo $PERCY_TARGET_COMMIT'
 
       # Upload snapshot to Percy.
       - name: Percy snapshot
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-          PERCY_TARGET_COMMIT: ${{ GITHUB_SHA_SHORT }}
+          PERCY_TARGET_COMMIT: ${{ env.GITHUB_SHA_SHORT }}
         run: npm run test:percy
 
   # Runs the release job if we're on "develop" to deploy our latest build to GitHub Pages.
