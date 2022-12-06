@@ -23,7 +23,7 @@ export default () => {
     cookieStatus(){
       const cookies = document.cookie.split(";")
       cookies.forEach(c => {
-        const match = c.match(new RegExp('(^| )analyticsCookie([^;]+)'))
+        const match = c.match(new RegExp('(^| )cookie_consent([^;]+)'))
         if(match) {
           const status = c.split("=")[1]
           this.useCookies = status
@@ -80,12 +80,12 @@ export default () => {
     }
 
     useCookie() {
-      document.cookie = `analyticsCookie=true; domain=${this.host}; max-age=7776000`
+      document.cookie = `cookie_consent=true; domain=${this.host}; max-age=7776000`
       location.reload()
     }
 
     noCookie() {
-      document.cookie = `analyticsCookie=false; domain=${this.host}; max-age=7776000`
+      document.cookie = `cookie_consent=false; domain=${this.host}; max-age=7776000`
       location.reload()
     }
 
@@ -130,7 +130,7 @@ export default () => {
     }
     
     removeCookie() {
-      document.cookie = "analyticsCookie=false; max-age=0"
+      document.cookie = "cookie_consent=false; max-age=0"
       location.reload()
     }
 
