@@ -81,7 +81,7 @@ jobs:
         run: git pull --no-rebase
 
       - name: Set latest commit SHA env var for Percy CLI
-        run: 'echo "GITHUB_SHA_SHORT=$(git log -n 1 --pretty=format:\"%H\")" >> $GITHUB_ENV'
+        run: 'echo "GITHUB_SHA_SHORT=$(git log -n 1 --pretty=format:%H)" >> $GITHUB_ENV'
 
       - name: Setup node
         uses: actions/setup-node@v3
