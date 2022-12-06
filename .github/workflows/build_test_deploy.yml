@@ -74,6 +74,8 @@ jobs:
       # Checkout repo from GitHub and use current branch.
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       # Deploys and updates GitHub Pages.
       - name: Deploy GitHub pages
