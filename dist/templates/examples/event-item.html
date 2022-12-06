@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="ie8" lang="en"><![endif]--><!--[if IE 9]><html class="ie9" lang="en"><![endif]--><!--[if gt IE 9]><!-->
+<html lang="en" style=""><!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title>Event Item - Examples - NWP Prototype Kit</title>
+  <link href="https://www.nhs.uk/" rel="preconnect">
+  <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
+  <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
+  <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
+  <link href="/hee-prototypes/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
+  <link href="/hee-prototypes/css/hee.css" rel="stylesheet" />
+  <style>
+    .example {}
+
+    .example--template {}
+
+    .example--blocks {
+      padding: 1em;
+      background-color: #f0f4f5;
+    }
+  </style>
+  <link rel="shortcut icon" href="/hee-prototypes/nhsuk-frontend/assets/favicons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/hee-prototypes/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png">
+  <link rel="mask-icon" href="/hee-prototypes/nhsuk-frontend/assets/favicons/favicon.svg" color="#005eb8">
+  <link rel="icon" sizes="192x192" href="/hee-prototypes/nhsuk-frontend/assets/favicons/favicon-192x192.png">
+  <meta name="msapplication-TileImage" content="/hee-prototypes/nhsuk-frontend/assets/favicons/mediumtile-144x144.png">
+  <meta name="msapplication-TileColor" content="#005eb8">
+  <meta name="msapplication-square70x70logo" content="/hee-prototypes/nhsuk-frontend/assets/favicons/smalltile-70x70.png">
+  <meta name="msapplication-square150x150logo" content="/hee-prototypes/nhsuk-frontend/assets/favicons/mediumtile-150x150.png">
+  <meta name="msapplication-wide310x150logo" content="/hee-prototypes/nhsuk-frontend/assets/favicons/widetile-310x150.png">
+  <meta name="msapplication-square310x310logo" content="/hee-prototypes/nhsuk-frontend/assets/favicons/largetile-310x310.png">
+</head>
+
+<body class="example example--template">
+  <script>
+    document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+  </script>
+  <a class="nhsuk-skip-link" href="#maincontent">Skip to main content</a>
+  <div class="site-header">
+    <header class="nhsuk-header nhsuk-header--organisation nhsuk-header--white" role="banner">
+      <div class="nhsuk-width-container nhsuk-header__container">
+        <div class="nhsuk-header__multilogo">
+          <span class="nhsuk-header__logo nhsuk-header__logo-home">
+            <a class="nhsuk-header__link" href="http://hee.nhs.uk/" aria-label="Health Education England  Dental Education Hub homepage">
+              <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="presentation" focusable="false" viewBox="0 0 40 16">
+                <path class="nhsuk-logo__background" d="M0 0h40v16H0z"></path>
+                <path class="nhsuk-logo__text" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+                <image src="https://assets.nhs.uk/images/nhs-logo.png" xlink:href=""></image>
+              </svg>
+              <span class="nhsuk-organisation-name">Health Education England</span>
+            </a>
+            <a class="nhsuk-header__link" href="/" aria-label="Health Education England  Dental Education Hub homepage">
+              <span class="nhsuk-organisation-descriptor">Dental Education Hub</span>
+            </a>
+          </span>
+        </div>
+        <div class="nhsuk-header__content" id="content-header">
+          <div class="nhsuk-header__menu">
+            <button class="nhsuk-header__menu-toggle" id="toggle-menu" aria-controls="header-navigation" aria-label="Open menu">Menu</button>
+          </div>
+          <div class="nhsuk-header__search">
+            <button class="nhsuk-header__search-toggle" id="toggle-search" aria-controls="search" aria-label="Open search">
+              <svg class="nhsuk-icon nhsuk-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+              </svg>
+              <span class="nhsuk-u-visually-hidden">Search</span>
+            </button>
+            <div class="nhsuk-header__search-wrap" id="wrap-search">
+              <form class="nhsuk-header__search-form" id="search" action="https://www.nhs.uk/search/" method="get" role="search">
+                <label class="nhsuk-u-visually-hidden" for="search-field">Search the NHS website</label>
+                <div class="autocomplete-container" id="autocomplete-container">
+                  <div class="autocomplete__wrapper">
+                    <input class="nhsuk-search__input" id="search-field" name="q" type="search" placeholder="Search" autocomplete="off">
+                  </div>
+                </div>
+                <button class="nhsuk-search__submit" type="submit">
+                  <svg class="nhsuk-icon nhsuk-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+                  </svg>
+                  <span class="nhsuk-u-visually-hidden">Search</span>
+                </button>
+                <button class="nhsuk-search__close" id="close-search">
+                  <svg class="nhsuk-icon nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
+                  </svg>
+                  <span class="nhsuk-u-visually-hidden">Close search</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="nhsuk-header__navigation nhsuk-header__navigation--more-items" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
+        <div class="nhsuk-width-container">
+          <p class="nhsuk-header__navigation-title"><span id="label-navigation">Menu</span>
+            <button class="nhsuk-header__navigation-close" id="close-menu">
+              <svg class="nhsuk-icon nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
+              </svg>
+              <span class="nhsuk-u-visually-hidden">Close menu</span>
+            </button>
+          </p>
+          <ul class="nhsuk-header__navigation-list">
+            <li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--for-mobile">
+              <a class="nhsuk-header__navigation-link" href="/"> Home </a>
+            </li>
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link" href="/hee-prototypes/templates"> Templates </a>
+            </li>
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link" href="/hee-prototypes/templates"> Templates longer name </a>
+            </li>
+            <li class="nhsuk-header__navigation-item nhsuk-subnav" aria-haspopup="true" aria-expanded="false">
+              <a class="nhsuk-header__navigation-link" href="#">
+                <div class="nhsuk-subnav__wrapper">
+                  <span class="nhsuk-header__link-text">Components</span>
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+                  </svg>
+                </div>
+              </a>
+              <ul class="nhsuk-subnav__list">
+                <li class="nhsuk-subnav__list-item">
+                  <a class="nhsuk-subnav__list-link" href="/hee-prototypes/components"> Components </a>
+                </li>
+                <li class="nhsuk-subnav__list-item">
+                  <a class="nhsuk-subnav__list-link" href="/hee-prototypes/scaffolding"> Scaffolding </a>
+                </li>
+                <li class="nhsuk-subnav__list-item">
+                  <a class="nhsuk-subnav__list-link" href="/hee-prototypes/components/furniture"> Furniture </a>
+                </li>
+                <li class="nhsuk-subnav__list-item">
+                  <a class="nhsuk-subnav__list-link" href="/hee-prototypes/components/contentblocks"> Content Blocks </a>
+                </li>
+                <li class="nhsuk-subnav__list-item">
+                  <a class="nhsuk-subnav__list-link" href="/hee-prototypes/components/rightblocks"> Right Blocks </a>
+                </li>
+                <li class="nhsuk-subnav__list-item">
+                  <a class="nhsuk-subnav__list-link" href="/hee-prototypes/components/featureblocks"> Feature Blocks </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  </div>
+  <div class="site-notifications">
+  </div>
+  <main class="page page--rightbar" id="maincontent" role="main">
+    <div class="page__breadcrumbs">
+      <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+        <div class="nhsuk-width-container">
+          <ol class="nhsuk-breadcrumb__list">
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates/examples/event-item">Event Item</a></li>
+          </ol>
+          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/templates/examples/event-item">Back to Event Item</a></p>
+        </div>
+      </nav>
+    </div>
+    <div class="page__header">
+      <div class="nhsuk-width-container">
+        <div class="nhsuk-back-link">
+          <a class="nhsuk-back-link__link" href="#">
+            <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+            </svg> Go back</a>
+        </div>
+        <h1>Dignissim suspendisse blandit ut sit ultricies.</h1>
+        <span class="nhsuk-caption-xl">HEE Yorkshire and the Humber is pleased to offer one day training to all trainees focusing on Resilience.</span>
+        <p class="nhsuk-lede-text">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+      </div>
+    </div>
+    <div class="nhsuk-width-container">
+      <div class="page__layout">
+        <div class="page__main">
+          <h2>About this event</h2>
+          <p>Working in the NHS can be stressful. According to a 2016 ‘Guardian’ survey of NHS staff, 43% of NHS health care workers surveyed identified feeling unreasonably stressed at work ‘most’ or ‘all of the time’. In 2013 the ONS found that the NHS had higher sickness absence rates than any other large public sector organisation, with 3.4% of worker hours lost to sickness. Sickness absence costs the NHS £2.4bn a year - accounting for around £1 in every £40 of the total budget. </p>
+          <p>NHS Employers estimate 30% of this sickness time is caused by stress. It’s important to frame this in the context of what is currently the biggest sustained fall in NHS spending in any period since 1951. While NHS funding is getting tighter, demand for NHS services and costs for new medical treatments are increasing and other cut backs that impact the NHS have been deepening.</p>
+          <p>The NHS could be characterised as an increasingly unworkable system that relies on the good will of staff who accept over-work as the price to pay for survival – and that is innately stressful. There is now significant evidence to show that when staff are feeling persistently threatened with overwhelming workloads their ability to meet patients’ care needs – as well as their own needs for self-care – with empathy and compassion is compromised. If the ‘threat’ mode is maintained for long enough it becomes the norm and part of the team and/or organisational culture and this can have a significant negative impact on personal resilience.</p>
+          <figure class="nhsuk-image">
+            <img class="nhsuk-image__img" src="https://digital-transformation.hee.nhs.uk/binaries/content/gallery/digital-transformation/blogs/vr-headsets.jpg" alt="Nulla vitae est vel metus aliquam pharetra">
+            <figcaption class="nhsuk-image__caption"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nec tellus auctor viverra egestas leo. Morbi eu elit diam fusce. </figcaption>
+          </figure>
+          <p>Resilience training is seen as one of the solutions to this very difficult situation. One of the dangers of this is that such training could be viewed (and even used) as a way to avoid the obvious organisational and structural issues and locate the problem of stress in the individual.</p>
+          <p>This one-day course – ‘Resilience for trainee doctors’ – seeks to address the multifaceted problem of stress in the NHS workplace head-on, using the concept of ‘relational intelligence’ to help course participants see more clearly the causes of stress – the ways in which they relate to them¬selves, their colleagues and their teams/ organisations. The objective of the day is to develop a comprehensive ‘resilience plan’ to equip participants with the tools and practices necessary to survive and thrive in the NHS today.</p>
+          <div class="hee-google-map">
+            <div class="hee-google-map__wrapper">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38876.46420375777!2d-1.945322588878691!3d52.48313681174725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bdaa5d4e3383%3A0xc9d525245d0b1f47!2sHealth%20Education%20England!5e0!3m2!1sen!2suk!4v1669730967510!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <figcaption class="hee-google-map__caption">
+              <h3>Location</h3> HEE Yorkshire and the Humber, Dental Street, Yorkshire, YA1 1AA. <a href="#">Get Directions</a>
+            </figcaption>
+          </div>
+        </div>
+        <aside class="page__rightbar">
+          <div class="hee-card hee-card--details">
+            <h3>Event info</h3>
+            <div class="hee-card--details__item">
+              <span>Event type:</span> Webinar
+            </div>
+            <div class="hee-card--details__item">
+              <span>Category:</span> Dental
+            </div>
+            <div class="hee-card--details__item">
+              <span>Date:</span> Webinar
+            </div>
+            <div class="hee-card--details__item">
+              <span>Time:</span> 14:00 - 20:00
+            </div>
+            <div class="hee-card--details__item">
+              <span>Delivery:</span> Online
+            </div>
+            <div class="hee-card--details__item">
+              <span>Website:</span>
+              <a href="#">www.website.com</a>
+            </div>
+          </div>
+          <div class="hee-card hee-card--cta">
+            <h3>Book this event</h3>
+            <div class="hee-card--cta__button">
+              <a class="nhsuk-button" href="#" draggable="false"> Book on Eventbrite </a>
+            </div>
+          </div>
+          <div class="hee-card hee-card--cta">
+            <h3>Add to calendar</h3>
+            <div class="hee-card--cta__button">
+              <a class="nhsuk-button nhsuk-button--secondary" href="#" draggable="false"> Add to calendar </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+    <div class="page__footer">
+    </div>
+    <section class="page__feature">
+      <div class="nhsuk-width-container">
+        <h2>Related Events</h2>
+        <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet. Nunc turpis vel aliquam lacus arcu. Sodales nullam id lectus orci quis sed. dsf</p>
+        <div class="hee-mini-listing">
+          <div class="hee-mini-listing__item">
+            <div class="hee-listing-item">
+              <h3><a href="#">Event item #1</a></h3>
+              <div class="hee-listing-item__details">
+                <div class="hee-listing-item__details__row">
+                  <span class="hee-listing-item__details__label">Event type:</span>
+                  <span>Briefing</span>
+                </div>
+                <div class="hee-listing-item__details__row">
+                  <span class="hee-listing-item__details__label">Date:</span>
+                  <span>07 September 2022</span>
+                </div>
+                <div class="hee-listing-item__details__row">
+                  <span class="hee-listing-item__details__label">Time:</span>
+                  <span>14:00 - 20:00</span>
+                </div>
+              </div>
+              <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
+            </div>
+          </div>
+          <div class="hee-mini-listing__item">
+            <div class="hee-listing-item">
+              <h3><a href="#">Event item #2</a></h3>
+              <div class="hee-listing-item__details">
+                <div class="hee-listing-item__details__row">
+                  <span class="hee-listing-item__details__label">Event type:</span>
+                  <span>Briefing</span>
+                </div>
+                <div class="hee-listing-item__details__row">
+                  <span class="hee-listing-item__details__label">Date:</span>
+                  <span>07 September 2022</span>
+                </div>
+                <div class="hee-listing-item__details__row">
+                  <span class="hee-listing-item__details__label">Time:</span>
+                  <span>14:00 - 20:00</span>
+                </div>
+              </div>
+              <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
+            </div>
+          </div>
+          <div class="hee-mini-listing__item">
+            <div class="hee-listing-item">
+              <h3><a href="#">Event item #3</a></h3>
+              <div class="hee-listing-item__details">
+                <div class="hee-listing-item__details__row">
+                  <span class="hee-listing-item__details__label">Event type:</span>
+                  <span>Briefing</span>
+                </div>
+                <div class="hee-listing-item__details__row">
+                  <span class="hee-listing-item__details__label">Date:</span>
+                  <span>07 September 2022</span>
+                </div>
+                <div class="hee-listing-item__details__row">
+                  <span class="hee-listing-item__details__label">Time:</span>
+                  <span>14:00 - 20:00</span>
+                </div>
+              </div>
+              <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="nhsuk-footer site-footer" id="nhsuk-footer" role="contentinfo">
+    <div class="nhsuk-width-container">
+      <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+      <ul class="nhsuk-footer__list nhsuk-footer__list--three-columns">
+        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/hee-prototypes/blog">Blog</a></li>
+        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/hee-prototypes/about">About us</a></li>
+        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/hee-prototypes/contact">Contact us</a></li>
+      </ul>
+      <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+    </div>
+  </footer>
+  <script src="/hee-prototypes/js/jquery-3.3.1.min.js"></script>
+  <script src="/hee-prototypes/js/nhsuk.min.js"></script>
+  <script src="/hee-prototypes/js/hee.js"></script>
+</body>
+
+</html>

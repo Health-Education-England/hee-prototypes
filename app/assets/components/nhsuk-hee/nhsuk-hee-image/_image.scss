@@ -1,4 +1,10 @@
 /* NHSUK-HEE-Image */
+.page__main {
+  .nhsuk-image {
+    width: 100%;
 
-
-// Add layout classes here too
+    .nhsuk-image__caption {
+      @include nhsuk-typography-responsive(19);
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.hee-google-map {
+  margin-bottom: nhsuk-spacing(4);
+  padding-top: nhsuk-spacing(4);
+
+
+  .hee-google-map__wrapper {
+    border: 1px solid $color_nhsuk-grey-4;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 66%; // This is the aspect ratio
+
+    iframe {
+      height: 100% !important;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100% !important;
+    }
+  }
+
+  .hee-google-map__caption {
+    @include nhsuk-typography-responsive(19);
+
+    background-color: $color_nhsuk-white;
+    padding: nhsuk-spacing(5);
+  }
+}
