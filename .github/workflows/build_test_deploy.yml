@@ -34,78 +34,84 @@ jobs:
           path: public/**
           retention-days: 1
 
-  # Run tests.
-  test:
-      name: Test
-      needs: build
-      runs-on: ubuntu-latest
-
-      steps:
-        # Checkout repo from GitHub and use current branch.
-        - name: Checkout code
-          uses: actions/checkout@v3
-
-        - name: Setup node
-          uses: actions/setup-node@v3
-          with:
-            node-version-file: '.nvmrc'
-            cache: 'npm'
-
-        - name: Install dependencies
-          run: npm install --no-optional
-
-        - name: Build assets
-          run: npm run build
-
-        # Upload snapshot to Percy.
-        - name: Percy snapshot
-          env:
-            PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-          run: npm run test:percy
-
   # Prepare the "dist" directory use by GitHub pages to serve prototype.
-#  bundle:
-#    name: Bundle and Commit
-#    needs: test
-#    runs-on: ubuntu-latest
-#
-#    steps:
-#      # Checkout repo from GitHub and use current branch.
-#      - name: Checkout code
-#        uses: actions/checkout@v3
-#
-#      # Copy assets from "Build" step into "dist/" directory.
-#      - name: Download build artifacts
-#        uses: actions/download-artifact@v3
-#        with:
-#          name: assets
-#          path: dist/
-#
-#      # Debugging step to display ./dist directory contents in GitHub action logs.
-#      - name: Display structure of downloaded files
-#        run: ls -R
-#        working-directory: dist/
-#
-#      # Commit any changes to ./dist directory..
-#      - name: Commit bundled dist changes
-#        uses: stefanzweifel/git-auto-commit-action@v4
-#        with:
-#          commit_message: "[Github Actions] - Bundled assets for build number: ${{ github.run_number }}"
-#
-#  # Runs the release job if we're on "develop" to deploy our latest build to GitHub Pages.
-#  deploy:
-#    if: github.ref == 'refs/heads/develop'
-#    name: Deploy
-#    needs: bundle
-#    runs-on: ubuntu-latest
-#
-#    steps:
-#      # Checkout repo from GitHub and use current branch.
-#      - name: Checkout code
-#        uses: actions/checkout@v3
-#
-#      # Deploys and updates GitHub Pages.
-#      - name: Deploy GitHub pages
-#        uses: JamesIves/github-pages-deploy-action@v4.4.1
-#        with:
-#          folder: dist
+  bundle:
+    name: Bundle and Commit
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout repo from GitHub and use current branch.
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Copy assets from "Build" step into "dist/" directory.
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: assets
+          path: dist/
+
+      # Debugging step to display ./dist directory contents in GitHub action logs.
+      - name: Display structure of downloaded files
+        run: ls -R
+        working-directory: dist/
+
+      # Commit any changes to ./dist directory..
+      - name: Commit bundled dist changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "[Github Actions] - Bundled assets for build number: ${{ github.run_number }}"
+
+  # Execute Percy snapshots.
+  percy:
+    name: Percy snapshot
+    needs: bundle
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout repo from GitHub and use current branch.
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      #  Ensures that we use the latest commit from step: "Commit bundled dist changes" above.
+      - name: Fetch latest commit from bundle step
+        run: git pull --no-rebase
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install --no-optional
+
+      - name: Build assets
+        run: npm run build
+
+      # Upload snapshot to Percy.
+      - name: Percy snapshot
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+        run: npm run test:percy
+
+  # Runs the release job if we're on "develop" to deploy our latest build to GitHub Pages.
+  deploy:
+    if: github.ref == 'refs/heads/develop'
+    name: Deploy
+    needs: percy
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout repo from GitHub and use current branch.
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Deploys and updates GitHub Pages.
+      - name: Deploy GitHub pages
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
+        with:
+          folder: dist
