@@ -80,6 +80,9 @@ jobs:
       - name: Fetch latest commit from bundle step
         run: git pull --no-rebase
 
+      - name: Set latest commit SHA env var for Percy CLI
+        run: 'echo "GITHUB_SHA_SHORT=$(git log -n 1 --pretty=format:\"%H\")" >> $GITHUB_ENV'
+
       - name: Setup node
         uses: actions/setup-node@v3
         with:
@@ -92,10 +95,17 @@ jobs:
       - name: Build assets
         run: npm run build
 
+      - name: Debug SHA
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+          PERCY_TARGET_COMMIT: $GITHUB_SHA_SHORT
+        run: 'echo $PERCY_TARGET_COMMIT'
+
       # Upload snapshot to Percy.
       - name: Percy snapshot
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+          PERCY_TARGET_COMMIT: $GITHUB_SHA_SHORT
         run: npm run test:percy
 
   # Runs the release job if we're on "develop" to deploy our latest build to GitHub Pages.
