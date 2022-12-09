@@ -75,7 +75,7 @@
 
         .hee-card__email {
             &:before {
-                background: url("/images/icons/email.svg");
+                background: url("../images/icons/email.svg");
                 height: 18px;
                 width: 24px;
             }
@@ -83,7 +83,7 @@
 
         .hee-card__website {
             &:before {
-                background: url("/images/icons/web.svg");
+                background: url("../images/icons/web.svg");
                 height: 24px;
                 width: 24px;
             }
@@ -91,7 +91,7 @@
 
         .hee-card__twitter {
             &:before {
-                background: url("/images/icons/twitter.svg");
+                background: url("../images/icons/twitter.svg");
                 height: 20px;
                 width: 24px;
             }
@@ -99,7 +99,7 @@
 
         .hee-card__linkedin {
             &:before {
-                background: url("/images/icons/linkedin.svg");
+                background: url("../images/icons/linkedin.svg");
                 height: 21px;
                 width: 22px;
             }

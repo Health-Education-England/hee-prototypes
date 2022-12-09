@@ -41,17 +41,20 @@
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script>
   <div class="hee-card hee-card--author">
-    <div class="hee-card__image has-bg">
-      <div class="hee-card__initials" style="background: url('/hee-prototypes/images/doctor-headshot.png')">
-        <span>JB</span>
+    <div class="hee-card--author__header">
+      <div class="hee-card__image has-bg">
+        <div class="hee-card__initials" style="background: url('/hee-prototypes/images/doctor-headshot.png')">
+          <span>JB</span>
+        </div>
+      </div>
+      <div class="hee-card--author__details">
+        <h2 class="hee-card__name" aria-label="Name"> Mr First Last </h2>
+        <span class="hee-card__pronouns">Pronoun</span>
+        <h3 class="nhsuk-heading-m hee-card__jobtitle" aria-label="Job Title">Job title</h3>
+        <p class="hee-card__department" aria-label="Department">Department</p>
+        <p class="hee-card__organisation" aria-label="Organisation">Organisation</p>
       </div>
     </div>
-    <h2 class="hee-card__name" aria-label="Name"> Mr First Last </h2>
-    <span class="hee-card__pronouns">Pronoun</span>
-    <h3 class="nhsuk-heading-m hee-card__jobtitle" aria-label="Job Title">Job title</h3>
-    <p class="hee-card__department" aria-label="Department">Department</p>
-    <p class="hee-card__organisation" aria-label="Organisation">Organisation</p>
-    <hr />
     <ul class="hee-card__contact">
       <li class="hee-card__email hee-card__contact__item" aria-label="Email"><a href="mailto:jo.bloggs@hee.co.uk;">jo.bloggs@hee.co.uk</a></li>
       <li class="hee-card__website hee-card__contact__item" aria-label="Website"><a href="http://nhs.uk/">http://nhs.uk/</a></li>
