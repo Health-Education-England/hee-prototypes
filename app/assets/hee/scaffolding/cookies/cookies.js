@@ -60,16 +60,20 @@ export default () => {
     setCookies() {
         if (this.useCookies === '') {
           this.bannerShow()
-          document.querySelector('#nhsuk-cookie-banner__link_accept_analytics').addEventListener('click', evt => {
-            evt.preventDefault()
-            this.bannerHide()
-            this.useCookie()
-          })
-          document.querySelector('#nhsuk-cookie-banner__link_decline_analytics').addEventListener('click', evt => {
-            evt.preventDefault()
-            this.bannerHide()
-            this.noCookie()
-          })
+          if (document.querySelector('#nhsuk-cookie-banner__link_accept_analytics')) {
+            document.querySelector('#nhsuk-cookie-banner__link_accept_analytics').addEventListener('click', evt => {
+              evt.preventDefault()
+              this.bannerHide()
+              this.useCookie()
+            })
+          }
+          if (document.querySelector('#nhsuk-cookie-banner__link_decline_analytics')) {
+            document.querySelector('#nhsuk-cookie-banner__link_decline_analytics').addEventListener('click', evt => {
+              evt.preventDefault()
+              this.bannerHide()
+              this.noCookie()
+            })
+          }
         }
     }
 
