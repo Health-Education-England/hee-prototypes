@@ -1,0 +1,90 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'base-rightbar' %}
+{% set page_title = 'Rightbar' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+  breadcrumb({
+  items: [
+      {
+        href: "/",
+        text: "Home"
+      },
+      {
+        href: "/templates",
+        text: "Templates"
+      }
+  ],
+      href: "/templates/"+page_url,
+      text: page_title
+  }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+  {{ subnav({
+      area: 'templates'
+  }) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Templates</span>
+    <h1>{{ page_title }}</h1>
+    <p class="nhsuk-lede-text">A layout with a left content area and right sidebar.</p>
+{% endblock %}
+
+{% block pageContent %}
+
+<p>This layout is typically used for content pages with supporting sidebar content.</p>
+<p>It will have access to the <a href="/blocks/furniture">Furniture</a> [PAGE + CONTENT] components, as well as the <a href="/blocks/content">Content Blocks</a> [MAIN, SIDEBAR + FEATURED].</p>
+
+{{ highlight({
+  "html" : '<article class="page page--rightbar" id="maincontent" role="main">
+  <div class="page__breadcrumbs">[ BREADCRUMBS ]</div>
+  <div class="page__header">
+    <div class="nhsuk-width-container">
+      [ GO_BACK ]
+      <h1>[ PAGE_TITLE ]</h1>
+      <span class="nhsuk-caption-xl">[ PAGE_CAPTION ]</span>
+      <p class="nhsuk-lede-text">[ PAGE_SUMMARY ]</p>
+      [ PUBLISHED_INFO ]
+      [ TAXONOMIES ]
+      [ IF MINIHUB ]
+        [ MINIHUB_LIST ]
+      [ ENDIF ]
+    </div>
+  </div>
+  <div class="nhsuk-width-container">
+    <div class="page__layout">
+      <div class="page__main">
+        [ TABLEOFCONTENTS ]
+        <div class="page__content">
+          [ CONTENT--MAIN_BLOCKS ]
+        </div>
+        [ PAGE_LASTUPDATED | REVIEWED_NEXTLAST ]
+      </div>
+      <aside class="page__rightbar">
+        [ CONTENT--SIDEBAR_BLOCKS ]
+      </aside>
+    </div>
+  </div>
+  <div class="page__footer">
+    [ IF MINIHUB ]
+      [ MINIHUB_PAGINATION ]
+    [ ENDIF ]
+    [ VERSION_CONTROL | REVIEWED_NEXTLAST ]
+    [ TABLEOFCONTENTS--FIXED | BACK_TO_TOP ]
+  </div>
+  <section class="page__feature">
+    [ CONTENT--FEATURED_BLOCKS ]
+  </section>
+</article>'
+  }) 
+}}
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}
+{% block pageFeature %}{% endblock %}

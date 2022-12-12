@@ -1,6 +1,5 @@
-{% extends "template-fullwidth.html" %}
+{% extends "scaffolding/template.html" %}
 
-{% block pageClass %}page--fullwidth{% endblock %}
 {% block pageTitle %}Header - Scaffolding - NWP Prototype Kit{% endblock %}
 
 {% block pageBreadcrumbs %}
@@ -23,18 +22,37 @@
 {% endblock %}
 
 {% block pageHeader %}
-    <div class="nhsuk-width-container">
-        <h1>Header</h1>
-        <p class="nhsuk-lede-text"></p>
-    </div>
+    <span class="nhsuk-caption-xl">Scaffolding</span>
+    <h1>Header</h1>
+    <p class="nhsuk-lede-text">The global header area</p>
 {% endblock %}
 
-{% block pageMain %}
-<div class="nhsuk-width-container">
+{% block pageContent %}
+<h3>Macro</h3>
+{{ highlight({
+    "html" : '
+  '}) }}
+<h3>Params</h3>
+<table class="nhsuk-table">
+    <thead>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<h3>HTML</h3>
 {{ highlight({
   "html" : '
 '}) }}
-</div>
 {% endblock %}
 
 {% block pageFooter %}{% endblock %}
