@@ -25,10 +25,10 @@
 {% endblock %}
 
 {% block pageLeftbar %}
-{{ subnav({
-    area: 'templates',
-    current: 'standard-content'
-}) }}
+  {{ subnav({
+      area: 'templates',
+      current: page_url
+  }) }}
 {% endblock %}
 
 {% block pageHeader %}

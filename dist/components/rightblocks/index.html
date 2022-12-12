@@ -7,13 +7,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Content Blocks - Components - NWP Prototype Kit</title>
+  <title>Examples</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
   <link href="/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
   <link href="/css/hee.css" rel="stylesheet" />
+  <style>
+    .example {}
+
+    .example--template {}
+
+    .example--blocks {
+      padding: 1em;
+      background-color: #f0f4f5;
+    }
+  </style>
   <link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png">
   <link rel="mask-icon" href="/nhsuk-frontend/assets/favicons/favicon.svg" color="#005eb8">
@@ -26,7 +36,7 @@
   <meta name="msapplication-square310x310logo" content="/nhsuk-frontend/assets/favicons/largetile-310x310.png">
 </head>
 
-<body class="">
+<body class="example example--template">
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script>
@@ -106,7 +116,7 @@
               <a class="nhsuk-header__navigation-link" href="/templates"> Templates longer name </a>
             </li>
             <li class="nhsuk-header__navigation-item nhsuk-subnav" aria-haspopup="true" aria-expanded="false">
-              <a class="nhsuk-header__navigation-link" href="javascript:void(0);">
+              <a class="nhsuk-header__navigation-link" href="#">
                 <div class="nhsuk-subnav__wrapper">
                   <span class="nhsuk-header__link-text">Components</span>
                   <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
@@ -141,49 +151,17 @@
     </header>
   </div>
   <div class="site-notifications">
-    <div class="nhsuk-hee-phasebanner">
-      <div class="nhsuk-width-container">
-        <p class="nhsuk-hee-phasebanner__content">
-          <span class="nhsuk-hee-phasebanner__tag"> Alpha </span> This is a new service – your <a class="nhsuk-link" href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.
-        </p>
-      </div>
-    </div>
   </div>
-  <main class="page page--fullwidth page--template-landinghub" id="maincontent" role="main">
+  <main class="page page--leftbar" id="maincontent" role="main">
     <div class="page__breadcrumbs">
-      <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-        <div class="nhsuk-width-container">
-          <ol class="nhsuk-breadcrumb__list">
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/components/">Components</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/components/rightblocks">Right Blocks</a></li>
-          </ol>
-          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/components/rightblocks">Back to Right Blocks</a></p>
-        </div>
-      </nav>
     </div>
     <div class="page__header">
-      <div class="nhsuk-width-container">
-        <h1>Right Blocks</h1>
-        <p class="nhsuk-lede-text"></p>
-      </div>
     </div>
-    <div class="page__main">
-      <section class="nhsuk-width-container">
-        <div class="nhsuk-grid-row">
-          <ul class="nhsuk-card-group">
-            <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-              <div class="nhsuk-card nhsuk-card--clickable">
-                <div class="nhsuk-card__content">
-                  <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                    <a class="nhsuk-card__link" href="/components/rightblocks/"></a>
-                  </h2>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
+    <div class="nhsuk-width-container">
+      <div class="page__layout">
+        <aside class="page__leftbar"> Leftbar... </aside>
+        <div class="page__main"> Content... </div>
+      </div>
     </div>
     <div class="page__footer">
     </div>

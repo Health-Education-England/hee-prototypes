@@ -1,0 +1,139 @@
+{% extends "example-template-rightbar.html" %}
+
+{% block pageTitle %}Mini-hub Item - Examples - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+  {{
+  breadcrumb({
+    items: [
+      {
+        href: "/",
+        text: "Home"
+      }
+    ],
+    href: "/templates/examples/mini-hub-item",
+    text: "Mini-hub Item"
+  })
+  }}
+{% endblock %}
+
+{% block pageHeader %}
+  <div class="nhsuk-width-container">
+    <h1>Mini-hub Item</h1>
+    <p class="nhsuk-lede-text">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+  </div>
+{% endblock %}
+
+{% block pageContent %}
+  {{ contentsList({
+    items: [
+      {
+        href: "https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/",
+        text: "What is AMD?",
+        current: "true"
+      },
+      {
+        href: "https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/symptoms/",
+        text: "Symptoms"
+      },
+      {
+        href: "https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/getting-diagnosed/",
+        text: "Getting diagnosed"
+      }
+      ,
+      {
+        href: "https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/treatment/",
+        text: "Treatments"
+      }
+      ,
+      {
+        href: "https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/living-with-amd/",
+        text: "Living with AMD"
+      }
+    ]
+  }) }}
+
+  {{ warningCallout({
+    heading: "Important",
+    HTML: "<p>Maecenas eu magna a sem aliquam luctus. Donec nec metus condimentum, molestie nulla eu, auctor sem.</p>"
+  }) }}
+
+  {{ media({
+    title: "Pellentesque sit amet nulla",
+    description: "Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus.",
+    type: "youtube",
+    transcript: ["Donec pulvinar sollicitudin massa, nec pulvinar turpis dictum maximus."],
+    mediaId: "C0DPdy98e4c",
+    lastReview: "09/05/2022",
+    reviewDue: "09/05/2023"
+  }) }}
+
+  <h3>Donec pulvinar sollicitudin</h3>
+  <p>Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi. Sed vestibulum quis mi nec volutpat. Proin tristique eleifend volutpat. Maecenas eu magna a sem aliquam luctus. Donec nec metus condimentum, molestie nulla eu, auctor sem. Cras nec arcu sed lorem eleifend pellentesque nec nec ligula.</p>
+  <p>Nulla sodales dictum auctor. Donec pulvinar sollicitudin massa, nec pulvinar turpis dictum maximus. Duis consequat sem pretium purus vehicula ultricies. Maecenas sed turpis sed eros euismod consectetur.</p>
+
+  {{ card({
+    feature: "true",
+    heading: "Feature card heading",
+    headingClasses: "nhsuk-heading-m",
+    description: "Ipsum commodo condimentum at tincidunt urna. Pulvinar ultrices sollicitudin volutpat bibendum ultricies. Dui hac at risus."
+  }) }}
+
+  <h3>Pellentesque sit amet nulla</h3>
+  <p>Ligula sed mattis donec tempor amet a elementum sit pharetra. Tincidunt ipsum ac tristique scelerisque quis.</p>
+  {{ actionLink({
+    text: "Donec pulvinar sollicitudin",
+    href: "#"
+  }) }}
+  {{ actionLink({
+    text: "Duis consequat",
+    href: "#"
+  }) }}
+  {{ actionLink({
+    text: "Sodales dictum auctor",
+    href: "#"
+  }) }}
+  {{ actionLink({
+    text: "Laoreet mauris consectetur",
+    href: "#"
+  }) }}
+
+  {{ pagination({
+    previousUrl: "#",
+    previousPage: "Laoreet",
+    nextUrl: "#",
+    nextPage: "Sodales"
+  }) }}
+
+{% endblock %}
+
+{% block pageRightbar %}
+  {{ relatedLinksCard({
+    heading: "Curabitur sit amet",
+    links: [
+      {
+        label: "Donec pulvinar",
+        url: "#"
+      },
+      {
+        label: "Duis consequat",
+        url: "#"
+      },
+      {
+        label: "Fusce at neque",
+        url: "#"
+      }
+    ]
+  })}}
+
+  {{ imageCard({
+    imgURL: "https://1000logos.net/wp-content/uploads/2017/09/NHS-logo-500x229.png",
+    imgALT: "Donec pulvinar sollicitudin massa",
+    imgCaption: "Donec pulvinar sollicitudin massa"
+  }) }}
+
+  {{ card({
+    heading: "Manage your GP application",
+    descriptionHtml: "<a class=\"nhsuk-button\" href=\"https://oriel.nhs.uk/Web/\" draggable=\"false\">Go to Oriel</a>"
+  }) }}
+{% endblock %}

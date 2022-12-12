@@ -1,0 +1,24 @@
+{% from 'tag/macro.njk' import tag %}
+
+{% macro statusTag(params) %}
+
+  {% if params.status == 'To Do' %}
+    {% set color = 'nhsuk-tag--green' %}
+  {% elseif params.status == 'Started' %}
+    {% set color = 'nhsuk-tag--white' %}
+  {% elseif params.status == 'Issues' %}
+    {% set color = 'nhsuk-tag--red' %}
+  {% elseif params.status == 'In Progress' %}
+    {% set color = 'nhsuk-tag--yellow' %}
+  {% elseif params.status == 'Done' %}
+    {% set color = 'nhsuk-tag--blue' %}
+  {% else %}
+    {% set color = 'nhsuk-tag--grey' %}
+  {% endif %}
+
+  {{ tag({
+    text: params.status,
+    classes: color
+  })}}
+
+{% endmacro %}

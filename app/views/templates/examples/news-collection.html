@@ -1,0 +1,98 @@
+{% extends "example-template-leftbar.html" %}
+
+{% block pageTitle %}News Collection - Examples - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/",
+            text: "Home"
+        }
+    ],
+        href: "/templates/examples/news-collection",
+        text: "News Collection"
+    }) 
+}}
+{% endblock %}
+
+{% block pageHeader %}
+  <div class="nhsuk-width-container">
+    <h1>News Collection</h1>
+    <p class="nhsuk-lede-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum sit sed porta viverra. Amet, tincidunt cras augue justo, proin mollis sapien. Sed cursus quam suspendisse.</p>
+  </div>
+{% endblock %}
+
+{% block pageLeftbar %}
+  {{ filter({
+    groups: [
+      {
+        title: "Category",
+        items: [
+        {
+          text: "Item one"
+        },
+        {
+          text: "Item two"
+        }
+      ]
+      },
+      {
+        title: "Organisation",
+        items: [
+        {
+          text: "Item one"
+        },
+        {
+          text: "Item two"
+        },
+        {
+          text: "Item three"
+        }
+      ]
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block pageContent %}
+  {{ listing({
+      showPagination: true,
+      pageType: "bulletin",
+      items: [
+      {
+        title: "Item one",
+        summaryList: {
+          rows: [
+            {
+              key: {
+              text: "Category"
+            },
+              value: {
+              text: "Lorem ipsum dolor sit amet"
+            }
+            },
+            {
+              key: {
+              text: "Overview"
+            },
+              value: {
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt felis in felis pharetra, at fringilla neque auctor"
+            }
+            },
+            {
+              key: {
+              text: "Website"
+            },
+              value: {
+              html: "<a href=\"#\">Website title</a>"
+            }
+            }
+          ]
+        }
+      }
+      ]
+    })
+  }}
+{% endblock %}

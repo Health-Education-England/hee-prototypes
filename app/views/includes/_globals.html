@@ -1,0 +1,484 @@
+{# Status options - To Do, Started, In Progress, Issues, Done #}
+
+{# Subnav - Templates #}
+{% set templates_array = [
+  {
+    heading: "Fullwidth",
+    links: [
+      {
+        title: 'Base',
+        url: 'base-fullwidth',
+        status: 'Done'
+      },
+      {
+        title: 'Homepage',
+        url: 'homepage',
+        status: 'In Progress'
+      },
+      {
+        title: 'Landing Page',
+        url: 'landing-page',
+        status: 'Done'
+      },
+      {
+        title: '404',
+        url: '404',
+        status: 'Started'
+      },
+      {
+        title: 'A-Z Listing',
+        url: 'az-listing',
+        status: 'Started'
+      },
+      {
+        title: 'Search Listing',
+        url: 'search-listing',
+        status: 'Started'
+      }
+    ]
+  },
+  {
+    heading: "Leftbar",
+    links: [
+      {
+        title: 'Base',
+        url: 'base-leftbar',
+        status: 'Done'
+      },
+      {
+        title: 'News Collection',
+        url: 'news-collection',
+        status: 'To Do'
+      },
+      {
+        title: 'Blog Collection',
+        url: 'blog-collection',
+        status: 'To Do'
+      },
+      {
+        title: 'Casestudies Collection',
+        url: 'case-studies-collection',
+        status: 'To Do'
+      },
+      {
+        title: 'Publications Collection',
+        url: 'publications-collection',
+        status: 'To Do'
+      },
+      {
+        title: 'Event Collection',
+        url: 'event-collection',
+        status: 'To Do'
+      }
+    ]
+  },
+  {
+    heading: "Rightbar",
+    links: [
+      {
+        title: 'Base',
+        url: 'base-rightbar',
+        status: 'Done'
+      },
+      {
+        title: 'Standard Content',
+        url: 'standard-content',
+        status: 'Done'
+      },
+      {
+        title: 'Mini-hub Item',
+        url: 'mini-hub-item',
+        status: 'Done'
+      },
+      {
+        title: 'News Item',
+        url: 'news-item',
+        status: 'Done'
+      },
+      {
+        title: 'Blog Item',
+        url: 'blog-item',
+        status: 'Done'
+      },
+      {
+        title: 'Publication Landing',
+        url: 'publication-landing',
+        status: 'To Do'
+      },
+      {
+        title: 'Publication Item',
+        url: 'publication-item',
+        status: 'To Do'
+      },
+      {
+        title: 'Event Item',
+        url: 'event-item',
+        status: 'To Do'
+      }
+    ]
+  }
+] %}
+
+{# Subnav - Blocks/Content #}
+{% set content_array = [
+  {
+    heading: "Main",
+    links: [
+      {
+        title: 'Applies To',
+        url: 'main-applies-to',
+        status: 'To Do'
+      },
+      {
+        title: 'Block Links',
+        url: 'main-block-links',
+        status: 'To Do'
+      },
+      {
+        title: 'Card--Author',
+        url: 'main-card-author',
+        status: 'To Do'
+      },
+      {
+        title: 'Care Card',
+        url: 'main-care-card',
+        status: 'To Do'
+      },
+      {
+        title: 'Google Map',
+        url: 'main-google-map',
+        status: 'To Do'
+      },
+      {
+        title: 'Media Embed',
+        url: 'main-media-embed',
+        status: 'To Do'
+      },
+      {
+        title: 'Newsletter Signup',
+        url: 'main-newsltter-signup',
+        status: 'To Do'
+      },
+      {
+        title: 'Region Picker',
+        url: 'main-region-picker',
+        status: 'To Do'
+      },
+      {
+        title: 'Table of Contents',
+        url: 'main-table-of-contents',
+        status: 'To Do'
+      },
+      {
+        title: 'Tabs',
+        url: 'main-tabs',
+        status: 'To Do'
+      },
+      {
+        title: 'Text',
+        url: 'main-text',
+        status: 'To Do'
+      },
+      {
+        title: 'Timeline',
+        url: 'main-timeline',
+        status: 'To Do'
+      },
+      {
+        title: 'Image',
+        url: 'main-image',
+        status: 'To Do'
+      },
+      {
+        title: 'Table',
+        url: 'main-table',
+        status: 'To Do'
+      }
+    ]
+  },
+  {
+    heading: "Sidebar",
+    links: [
+      {
+        title: 'Card--Department',
+        url: 'sidebar-card-department',
+        status: 'To Do'
+      },
+      {
+        title: 'Card--Downloads',
+        url: 'sidebar-card-downloads',
+        status: 'To Do'
+      },
+      {
+        title: 'Card--External Links',
+        url: 'sidebar-card-external-links',
+        status: 'To Do'
+      },
+      {
+        title: 'Card--Internal Links',
+        url: 'sidebar-card-internal-links',
+        status: 'To Do'
+      },
+      {
+        title: 'Card--Image',
+        url: 'sidebar-card-image',
+        status: 'To Do'
+      },
+      {
+        title: 'Card--Person',
+        url: 'sidebar-card-person',
+        status: 'To Do'
+      }
+    ]
+  },
+  {
+    heading: "Featured",
+    links: [
+      {
+        title: 'Mini Listing',
+        url: 'featured-mini-listing',
+        status: 'To Do'
+      }
+    ]
+  }
+] %}
+
+{# Subnav - Blocks/Furniture #}
+{% set furniture_array = [
+  {
+    heading: "Page",
+    links: [
+      {
+        title: 'Hero',
+        url: 'page-hero',
+        status: 'Done'
+      },
+      {
+        title: 'Microhero',
+        url: 'page-microhero',
+        status: 'Done'
+      },
+      {
+        title: 'Title',
+        url: 'page-title',
+        status: 'To Do'
+      },
+      {
+        title: 'Caption',
+        url: 'page-caption',
+        status: 'To Do'
+      },
+      {
+        title: 'Subtitle',
+        url: 'page-subtitle',
+        status: 'To Do'
+      },
+      {
+        title: 'Summary',
+        url: 'page-summary',
+        status: 'To Do'
+      },
+      {
+        title: 'Last Updated',
+        url: 'page-last-updated',
+        status: 'To Do'
+      }
+    ]
+  },
+  {
+    heading: "Content",
+    links: [
+      {
+        title: 'Go Back',
+        url: 'content-go-back',
+        status: 'Done'
+      },
+      {
+        title: 'Published Info',
+        url: 'content-published-info',
+        status: 'Started'
+      },
+      {
+        title: 'Reviewed',
+        url: 'page-reviewed',
+        status: 'To Do'
+      },
+      {
+        title: 'Taxonomies',
+        url: 'page-taxonomies',
+        status: 'To Do'
+      },
+      {
+        title: 'Version',
+        url: 'page-version',
+        status: 'To Do'
+      }
+    ]
+  },
+  {
+    subheading: "Minihub",
+    links: [
+      {
+        title: 'List',
+        url: 'minihub-list',
+        status: 'To Do'
+      },
+      {
+        title: 'Pagination',
+        url: 'minihub-pagination',
+        status: 'To Do'
+      }
+    ]
+  },
+  {
+    heading: "Collections",
+    subheading: "Filter",
+    links: [
+      {
+        title: 'Group',
+        url: 'filter-group',
+        status: 'To Do'
+      },
+      {
+        title: 'Clear',
+        url: 'filter-clear',
+        status: 'To Do'
+      },
+      {
+        title: 'Tag',
+        url: 'filter-tag',
+        status: 'To Do'
+      }
+    ]
+  },
+  {
+    subheading: "Results",
+    links: [
+      {
+        title: 'Title',
+        url: 'results-title',
+        status: 'To Do'
+      },
+      {
+        title: 'Pagination',
+        url: 'results-pagination',
+        status: 'To Do'
+      },
+      {
+        title: 'Sorting',
+        url: 'results-sorting',
+        status: 'To Do'
+      }
+    ]
+  },
+  {
+    subheading: "Search Listing",
+    links: [
+      {
+        title: 'Input',
+        url: 'searchlisting-input',
+        status: 'To Do'
+      }
+    ]
+  },
+  {
+    subheading: "A-Z Listing",
+    links: [
+      {
+        title: 'Nav',
+        url: 'azlisting-nav',
+        status: 'To Do'
+      },
+      {
+        title: 'Results',
+        url: 'azlisting-results',
+        status: 'To Do'
+      }
+    ]
+  }
+] %}
+
+{# Content - Blocks/Scaffolding #}
+{% set scaffolding_array = [
+  {
+    heading: "Header",
+    links: [
+      {
+        title: 'HEE Header',
+        url: 'header',
+        status: 'In Progress'
+      },
+      {
+        title: 'Cookies',
+        url: 'cookies',
+        status: 'To Do'
+      },
+      {
+        title: 'Skip Link',
+        url: 'skip-link',
+        status: 'To Do'
+      }
+    ]
+  },
+  {
+    heading: "InTemplate",
+    links: [
+      {
+        title: 'Breadcrumbs',
+        url: 'intemplate-breadcrumbs',
+        status: 'To Do'
+      },
+      {
+        title: 'Back to Top',
+        url: 'intemplate-back-to-top',
+        status: 'To Do'
+      }
+    ]
+  },
+  {
+    heading: "Notifications",
+    links: [
+      {
+        title: 'Phase Banner',
+        url: 'notifications-phase-banner',
+        status: 'To Do'
+      },
+      {
+        title: 'Global Alert',
+        url: 'notifications-global-alerts',
+        status: 'To Do'
+      }
+    ]
+  },
+  {
+    heading: "Footer",
+    links: [
+      {
+        title: 'Links + Copyright',
+        url: 'footer-links',
+        status: 'Done'
+      }
+    ]
+  }
+] %}
+
+{# Blocks Nav #}
+{% set blocks_top_array = [
+  {
+    heading: "Blocks",
+    links: [
+      {
+        title: 'Scaffolding',
+        url: 'scaffolding'
+      },
+      {
+        title: 'Furniture',
+        url: 'furniture'
+      },
+      {
+        title: 'Content',
+        url: 'content'
+      }
+    ]
+  }
+] %}

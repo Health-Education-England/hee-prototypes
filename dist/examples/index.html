@@ -7,17 +7,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Examples - HEE Prototype</title>
+  <title>Search Listing - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
   <link href="/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
   <link href="/css/highlight.css" rel="stylesheet" />
+  <link href="/css/prototype.css" rel="stylesheet" />
   <link href="/css/hee.css" rel="stylesheet" />
 </head>
 
-<body class="prototype prototype--examples">
+<body class="prototype prototype--inner">
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script>
@@ -50,30 +51,73 @@
         <div class="nhsuk-width-container">
           <ol class="nhsuk-breadcrumb__list">
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/examples">Examples</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates">Templates</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates/search-listing">Search Listing</a></li>
           </ol>
-          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/examples">Back to Examples</a></p>
+          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/templates/search-listing">Back to Search Listing</a></p>
         </div>
       </nav>
     </div>
-    <div class="page__header">
-      <div class="nhsuk-width-container">
-        <h1>Examples</h1>
-        <p class="nhsuk-lede-text"></p>
-      </div>
-    </div>
     <div class="nhsuk-width-container">
       <div class="page__layout">
-        <div class="page__col">
-          <h2>Templates</h2>
-          <ul>
-            <li></li>
-          </ul>
+        <div class="page__leftbar">
+          <nav class="prototype__subnav">
+            <h3>Fullwidth</h3>
+            <ul>
+              <li><a href="/templates/base-fullwidth">Base</a></li>
+              <li><a href="/templates/homepage">Homepage</a></li>
+              <li><a href="/templates/landing-page">Landing Page</a></li>
+              <li><a href="/templates/404">404</a></li>
+              <li><a href="/templates/az-listing">A-Z Listing</a></li>
+              <li class='current'><a href="/templates/search-listing">Search Listing</a></li>
+            </ul>
+            <h3>Leftbar</h3>
+            <ul>
+              <li><a href="/templates/base-leftbar">Base</a></li>
+              <li>News Collection</li>
+              <li>Blog Collection</li>
+              <li>Casestudies Collection</li>
+              <li>Publications Collection</li>
+              <li>Event Collection</li>
+            </ul>
+            <h3>Rightbar</h3>
+            <ul>
+              <li><a href="/templates/base-rightbar">Base</a></li>
+              <li><a href="/templates/standard-content">Standard Content</a></li>
+              <li><a href="/templates/mini-hub-item">Mini-hub Item</a></li>
+              <li><a href="/templates/news-item">News Item</a></li>
+              <li><a href="/templates/blog-item">Blog Item</a></li>
+              <li>Publication Landing</li>
+              <li>Publication Item</li>
+              <li>Event Item</li>
+            </ul>
+          </nav>
         </div>
-        <div class="page__col">
-          <h2>Blocks</h2>
+        <div class="page__main">
+          <div class="page__header">
+            <span class="nhsuk-caption-xl">Templates</span>
+            <h1>Search Listing</h1>
+            <p class="nhsuk-lede-text"></p>
+          </div>
+          <h2>Example</h2>
+          <div class="prototype__example scaled" style="height:400px;overflow:hidden;">
+            <a href="/templates/examples/search-listing" target="_blank" class="prototype__example-link">Open this example in new window</a>
+            <div class="thumbnail">
+              <iframe src="/templates/examples/search-listing" height="780"></iframe>
+            </div>
+          </div>
+          <hr />
+          <h2>HTML</h2>
+          <pre><code></code></pre>
+          <hr />
+          <h2>Components</h2>
+          <h4>Furniture</h4>
           <ul>
-            <li></li>
+            <li>Page</li>
+          </ul>
+          <h4>Content Blocks</h4>
+          <ul>
+            <li>Main</li>
           </ul>
         </div>
       </div>
@@ -95,6 +139,7 @@
   <script src="/js/jquery-3.3.1.min.js"></script>
   <script src="/js/nhsuk.min.js"></script>
   <script src="/js/highlight.min.js"></script>
+  <script src="/js/prototype.min.js"></script>
   <script src="/js/hee.js"></script>
   <script>
     hljs.highlightAll();

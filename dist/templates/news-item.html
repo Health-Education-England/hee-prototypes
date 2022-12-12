@@ -14,6 +14,7 @@
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
   <link href="/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
   <link href="/css/highlight.css" rel="stylesheet" />
+  <link href="/css/prototype.css" rel="stylesheet" />
   <link href="/css/hee.css" rel="stylesheet" />
 </head>
 
@@ -60,32 +61,32 @@
     <div class="nhsuk-width-container">
       <div class="page__layout">
         <div class="page__leftbar">
-          <nav class="page__subnav">
+          <nav class="prototype__subnav">
             <h3>Fullwidth</h3>
             <ul>
-              <li><a href="/templates/base-fullwidth.html">Base</a></li>
-              <li>Homepage</li>
-              <li>Landing Page</li>
-              <li>404</li>
-              <li>A-Z Listing</li>
-              <li>Search Listing</li>
+              <li><a href="/templates/base-fullwidth">Base</a></li>
+              <li><a href="/templates/homepage">Homepage</a></li>
+              <li><a href="/templates/landing-page">Landing Page</a></li>
+              <li><a href="/templates/404">404</a></li>
+              <li><a href="/templates/az-listing">A-Z Listing</a></li>
+              <li><a href="/templates/search-listing">Search Listing</a></li>
             </ul>
             <h3>Leftbar</h3>
             <ul>
-              <li><a href="/templates/base-leftbar.html">Base</a></li>
+              <li><a href="/templates/base-leftbar">Base</a></li>
               <li>News Collection</li>
               <li>Blog Collection</li>
               <li>Casestudies Collection</li>
-              <li>Publication Collection</li>
+              <li>Publications Collection</li>
               <li>Event Collection</li>
             </ul>
             <h3>Rightbar</h3>
             <ul>
-              <li><a href="/templates/base-rightbar.html">Base</a></li>
-              <li><a href="/templates/standard-content.html">Standard Content</a></li>
-              <li>Mini-hub</li>
-              <li><a href="/templates/news-item.html">News Item</a></li>
-              <li>Blog Item</li>
+              <li><a href="/templates/base-rightbar">Base</a></li>
+              <li><a href="/templates/standard-content">Standard Content</a></li>
+              <li><a href="/templates/mini-hub-item">Mini-hub Item</a></li>
+              <li class='current'><a href="/templates/news-item">News Item</a></li>
+              <li><a href="/templates/blog-item">Blog Item</a></li>
               <li>Publication Landing</li>
               <li>Publication Item</li>
               <li>Event Item</li>
@@ -98,45 +99,43 @@
             <h1>News Item</h1>
             <p class="nhsuk-lede-text"></p>
           </div>
-          <h3>Example</h3>
+          <h2>Example</h2>
           <a href="/templates/examples/news-item" target="_blank">Click to preview the template [opens in new window]</a>
           <hr />
-          <h3>HTML</h3>
-          <pre><code>
-    &lt;article class=&quot;page page--rightbar&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
-      &lt;div class=&quot;page__breadcrumbs&quot;&gt;[ INTEMPLATE_BREADCRUMBS ]&lt;/div&gt;
-      &lt;div class=&quot;page__header&quot;&gt;
-        &lt;div class=&quot;nhsuk-width-container&quot;&gt;
-          [ GO_BACK ]
-          &lt;h1&gt;[ PAGE_TITLE ]&lt;/h1&gt;
-          &lt;span class=&quot;nhsuk-caption-xl&quot;&gt;[ PAGE_CAPTION ]&lt;/span&gt;
-          &lt;p class=&quot;nhsuk-lede-text&quot;&gt;[ PAGE_SUMMARY ]&lt;/p&gt;
-          [ PUBLISHED_INFO ]
-          [ TAXONOMIES ]
+          <h2>HTML</h2>
+          <pre><code>&lt;article class=&quot;page page--rightbar&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
+  &lt;div class=&quot;page__breadcrumbs&quot;&gt;[ INTEMPLATE_BREADCRUMBS ]&lt;/div&gt;
+  &lt;div class=&quot;page__header&quot;&gt;
+    &lt;div class=&quot;nhsuk-width-container&quot;&gt;
+      [ PAGE_BACK ]
+      &lt;h1&gt;[ PAGE_TITLE ]&lt;/h1&gt;
+      &lt;span class=&quot;nhsuk-caption-xl&quot;&gt;[ PAGE_CAPTION ]&lt;/span&gt;
+      &lt;p class=&quot;nhsuk-lede-text&quot;&gt;[ PAGE_SUMMARY ]&lt;/p&gt;
+      [ PUBLISHED_INFO ]
+      [ TAXONOMIES ]
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;nhsuk-width-container&quot;&gt;
+    &lt;div class=&quot;page__layout&quot;&gt;
+      &lt;div class=&quot;page__main&quot;&gt;
+        &lt;div class=&quot;page__content&quot;&gt;
+          [ CONTENT--MAIN_BLOCKS ]
         &lt;/div&gt;
+        [ PAGE_LASTUPDATED ]
       &lt;/div&gt;
-      &lt;div class=&quot;nhsuk-width-container&quot;&gt;
-        &lt;div class=&quot;page__layout&quot;&gt;
-          &lt;div class=&quot;page__main&quot;&gt;
-            &lt;div class=&quot;page__content&quot;&gt;
-              [ CONTENT--MAIN_BLOCKS ]
-            &lt;/div&gt;
-            [ PAGE_LASTUPDATED ]
-          &lt;/div&gt;
-          &lt;aside class=&quot;page__rightbar&quot;&gt;
-            [ CONTENT--SIDEBAR_BLOCKS ]
-          &lt;/aside&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;page__footer&quot;&gt;
-        [ INTEMPLATE_BACKTOTOP ]
-      &lt;/div&gt;
-      &lt;section class=&quot;page__feature&quot;&gt;
-        [ CONTENT--FEATURED_BLOCKS ]
-      &lt;/section&gt;
-    &lt;/article&gt;</code></pre>
-          <hr />
-          <h3>Components</h3>
+      &lt;aside class=&quot;page__rightbar&quot;&gt;
+        [ CONTENT--SIDEBAR_BLOCKS ]
+      &lt;/aside&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;page__footer&quot;&gt;
+    [ INTEMPLATE_BACKTOTOP ]
+  &lt;/div&gt;
+  &lt;section class=&quot;page__feature&quot;&gt;
+    [ CONTENT--FEATURED_BLOCKS ]
+  &lt;/section&gt;
+&lt;/article&gt;</code></pre>
+          <h2>Components</h2>
           <h4>Furniture</h4>
           <ul>
             <li>Page</li>
@@ -169,6 +168,7 @@
   <script src="/js/jquery-3.3.1.min.js"></script>
   <script src="/js/nhsuk.min.js"></script>
   <script src="/js/highlight.min.js"></script>
+  <script src="/js/prototype.min.js"></script>
   <script src="/js/hee.js"></script>
   <script>
     hljs.highlightAll();
