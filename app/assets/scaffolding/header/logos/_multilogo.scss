@@ -15,6 +15,7 @@
 
     @include mq($from: desktop) {
       margin-bottom: 0;
+      margin-top: 0 !important;
       order: 0;
     }
   }
@@ -25,6 +26,7 @@
     @include mq($from: desktop) {
       display: inline-block;
       margin-bottom: 0;
+      margin-top: 5px;
       margin-right: 16px;
       vertical-align: top;
     }
