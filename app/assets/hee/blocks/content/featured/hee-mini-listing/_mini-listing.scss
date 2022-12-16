@@ -1,4 +1,10 @@
 .hee-mini-listing {
+  padding-bottom: nhsuk-spacing(4);
+
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+
   @include mq($from: desktop) {
     column-gap: map-get($nhsuk-spacing-points, 4);
     display: flex;
