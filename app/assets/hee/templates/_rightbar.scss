@@ -3,8 +3,17 @@
   padding-bottom: nhsuk-spacing(6);
   .page__header {
       padding-top: nhsuk-spacing(7);
+
       h1, p, span {
-        max-width: 66.6667%;
+        @include mq($from: tablet) {
+          max-width: 66.6667%;
+        }
+      }
+
+      .nhsuk-hero {
+        h1, p, span {
+          max-width: 100%;
+        }
       }
   }
   .page__layout {
@@ -42,11 +51,18 @@
 
 }
 
-.page--template-standard {}
-.page--template-minihub {}
-.page--template-sectionhome {}
-.page--single-news {}
-.page--single-blog {}
-.page--single-publication {}
-.page--single-event {}
-.page--template-legal {}
+.page--specialty-homepage {
+  .page__header {
+    padding-top: 0;
+  }
+
+  .page__rightbar {
+    @include mq($from: tablet) {
+      @include nhsuk-responsive-margin(9, 'top');
+    }
+  }
+
+  .nhsuk-section__content {
+    padding-bottom: 0;
+  }
+}
