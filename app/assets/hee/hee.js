@@ -5,6 +5,7 @@ import SubNav from './scaffolding/header/navigation/subnav';
 // HEE Components
 import AnchorLinks from '../components/hee/hee-anchorlinks/anchorlinks';
 import Listing from '../components/hee/hee-listing/listing';
+import TableContents from '../components/hee/hee-anchorlinks/toc';
 import Media from '../components/hee/hee-media/media';
 import NavMap from '../components/hee/hee-navmap/navmap';
 import Newsletter from '../components/hee/hee-newsletter/newsletter';
@@ -30,4 +31,5 @@ document.addEventListener('DOMContentLoaded', () => {
   NavMap();
   SubNav();
   Newsletter();
+  TableContents();
 });

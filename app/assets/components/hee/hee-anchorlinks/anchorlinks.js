@@ -6,15 +6,18 @@ export default () => {
   class AnchorLinks {
     constructor(anchorLinks) {
       this.anchorLinks = anchorLinks;
+
+      if (this.anchorLinks.hasAttribute('data-toc-js')) {
+        return;
+      }
+
       this.anchorLinks.hidden = true;
       this.foundHeadings = this.findHeadings(anchorLinks.dataset.headings);
 
-      if (this.foundHeadings?.length) {
-        if (!this.anchorLinks.hasAttribute('data-disable-js')) {
-          this.addAnchorsToPage();
-        } else {
-          this.anchorLinks.hidden = false;
-        }
+      if (this.foundHeadings.length) {
+        this.addAnchorsToPage();
+      } else {
+        this.anchorLinks.hidden = false;
       }
     }
 
