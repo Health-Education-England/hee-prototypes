@@ -8,7 +8,7 @@ export default () => {
       this.tableContents = tableContents;
 
       this.containerSelector = '.page__main';
-      this.headingSelector = 'h2.hee-toc-anchor';
+      this.headingSelector = 'h2.toc_h2';
       this.headingPrefix = 'hee-toc-heading';
 
       // Anchor links macro sets this data attribute when TOC is flagged as true.
@@ -22,14 +22,13 @@ export default () => {
         return;
       }
 
-      console.log(headings);
-
+      // Build link structure from DOM and append generated markup to component.
       const links = this.buildLinks(headings);
-      this.generateMarkup(links);
+      this.setListMarkup(links);
     }
 
     /**
-     * Builds array of heading links and their children.
+     * Builds array of heading link attributes and their children.
      *
      * @param {NodeList}      headings
      *
@@ -45,7 +44,7 @@ export default () => {
         heading.setAttribute('id', headingId)
 
         let link = {
-          title: heading.innerText,
+          title: this.getHeadingTitle(heading),
           anchor: headingId,
           children: []
         };
@@ -56,14 +55,14 @@ export default () => {
         // Traverse DOM for H3 elements after current H2 heading and append to
         // children links array.
         while (sibling && sibling.tagName !== 'H2') {
-          if (sibling.tagName === 'H3') {
+          if (sibling.tagName === 'H3' && sibling.classList.contains('toc_h3')) {
 
             // Set unique id for current heading H3 element.
             const subHeadingId = headingId + '-' + count;
             sibling.setAttribute('id', subHeadingId)
 
             link.children.push({
-              title: sibling.innerText,
+              title: this.getHeadingTitle(sibling),
               anchor: subHeadingId,
             });
 
@@ -79,11 +78,30 @@ export default () => {
     }
 
     /**
+     * Gets either the short or long title of the heading based on data attr.
+     *
+     * @param {Object}  heading
+     *
+     * @returns Object
+     */
+    getHeadingTitle(heading) {
+      let title;
+
+      if (heading.hasAttribute('data-short-title')) {
+        title = heading.dataset.shortTitle;
+      } else {
+        title = heading.innerText;
+      }
+
+      return title;
+    }
+
+    /**
      * Creates TOC markup and appends to component.
      *
      * @returns void
      */
-    generateMarkup(links) {
+    setListMarkup(links) {
       let list = document.createElement('ul');
 
       links.forEach((link) => {
