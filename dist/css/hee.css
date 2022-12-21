@@ -375,6 +375,7 @@
     @media (min-width: 48.0625em) {
       .nhsuk-header__multilogo .nhsuk-header__logo-home {
         margin-bottom: 0;
+        margin-top: 0 !important;
         order: 0; } }
   .nhsuk-header__multilogo .nhsuk-header__logo {
     margin-bottom: 8px; }
@@ -382,6 +383,7 @@
       .nhsuk-header__multilogo .nhsuk-header__logo {
         display: inline-block;
         margin-bottom: 0;
+        margin-top: 8px;
         margin-right: 16px;
         vertical-align: top; } }
 
