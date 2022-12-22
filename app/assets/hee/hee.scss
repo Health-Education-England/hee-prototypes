@@ -20,7 +20,7 @@
 @import 'templates/page';
 
 ///////////////////////////////////////////
-// NHSUK-HEE Components (Overrides)
+// BLOCKS
 ///////////////////////////////////////////
 @import '../components/nhsuk-hee/nhsuk-hee-blocklinks/blocklinks';
 @import '../components/nhsuk-hee/nhsuk-hee-breadcrumb/breadcrumb';
@@ -43,14 +43,8 @@
 @import '../components/hee/hee-microhero/microhero';
 @import '../components/hee/hee-timeline/timeline';
 @import '../components/timeline';
-@import '../components/hee/hee-filter/filter';
-@import '../components/hee/hee-filtertag/filtertag';
 @import '../components/image-card';
-@import '../hee/blocks/furniture/collections/hee-listing/listing';
-@import '../hee/blocks/furniture/collections/hee-listing-item/listing-item';
-@import 'blocks/content/main/hee-mini-listing/mini-listing';
-@import 'blocks/content/main/hee-publication-doc/publication-doc';
-@import 'blocks/content/sidebar/card--details/details';
+@import '../hee/blocks/content/sidebar/card--details/details';
 @import '../components/related-nav';
 //@import '../components/header';
 //@import '../components/navigation';
