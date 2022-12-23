@@ -31,7 +31,20 @@
 		}
 
 		a {
-			@include nhsuk-link-style-inverted; 
+			@include nhsuk-link-style-inverted;
+		}
+	}
+
+	&.hee-globalalert--dark-pink {
+		background-color: $color_nhsuk-dark-pink;
+		color: $color_nhsuk-white;
+
+		p {
+			@include nhsuk-typography-responsive(24);
+
+			a{
+				@include nhsuk-link-style-white;
+			}
 		}
 	}
 }
@@ -60,4 +73,8 @@
 			color: #FFF;
 		}
 	}
+}
+
+.hee-globalalert--dark-pink {
+
 }
