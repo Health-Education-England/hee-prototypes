@@ -86,26 +86,29 @@
 {{ highlight({
   html : '
 <div class="hee-card hee-card--author">
-    <div class="hee-card__image has-bg">
-      <div class="hee-card__initials" style="background: url(\'/images/doctor-headshot.png\')">
-        <span>JB</span>
+    <div class="hee-card--author__header">
+      <div class="hee-card__image has-bg">
+        <div class="hee-card__initials" style="background-image: url(\'/images/MicrosoftTeams-image.png\')">
+          <span>JB</span>
+        </div>
+      </div>
+      <div class="hee-card--author__details">
+        <h2 class="hee-card__name" aria-label="Name"> Mr First Last </h2>
+        <span class="hee-card__pronouns" aria-label="Pronouns">Pronoun</span>
+        <h3 class="nhsuk-heading-m hee-card__jobtitle" aria-label="Job Title">Job title</h3>
+        <p class="hee-card__department" aria-label="Department">Department</p>
+        <p class="hee-card__organisation" aria-label="Organisation">Organisation</p>
       </div>
     </div>
-    <h2 class="hee-card__name" aria-label="Name"> Mr First Last </h2>
-    <span class="hee-card__pronouns">Pronoun</span>
-    <h3 class="nhsuk-heading-m hee-card__jobtitle" aria-label="Job Title">Job title</h3>
-    <p class="hee-card__department" aria-label="Department">Department</p>
-    <p class="hee-card__organisation" aria-label="Organisation">Organisation</p>
-    <hr>
     <ul class="hee-card__contact">
-      <li class="hee-card__email hee-card__contact__item" aria-label="Email"><a href="mailto:jo.bloggs@hee.co.uk;">jo.bloggs@hee.co.uk</a></li>
-      <li class="hee-card__website hee-card__contact__item" aria-label="Website"><a href="http://nhs.uk/">http://nhs.uk/</a></li>
-      <li class="hee-card__linkedin hee-card__contact__item" aria-label="Linkedin"><a href="https://www.linkedin.com/company/nhs">nhs</a></li>
-      <li class="hee-card__twitter hee-card__contact__item" aria-label="Twitter"><a href="https://twitter.com/nhsengland">@nhsengland</a></li>
+      <li class="hee-card__email hee-card__contact__item" aria-label="Email"><a href="mailto:jo.bloggs@hee.co.uk;" title="Opens email">jo.bloggs@hee.co.uk</a></li>
+      <li class="hee-card__website hee-card__contact__item" aria-label="Website"><a href="http://nhs.uk/" title="Opens website">http://nhs.uk/</a></li>
+      <li class="hee-card__linkedin hee-card__contact__item" aria-label="Linkedin"><a href="https://www.linkedin.com/company//nhs" title="Opens LinkedIn">/nhs</a></li>
+      <li class="hee-card__twitter hee-card__contact__item" aria-label="Twitter"><a href="https://twitter.com/nhsengland" title="Opens Twitter">@nhsengland</a></li>
     </ul>
-    <p class="hee-card__address" aria-label="Bio">Health Education England<br> 3 Piccadilly<br> Manchester<br> M1 3BN</p>
+    <p class="hee-card__address" aria-label="Address">Health Education England<br> 3 Piccadilly<br> Manchester<br> M1 3BN</p>
     <p class="hee-card__bio" aria-label="Bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque ac pellentesque in sapien. Amet in ante libero a lobortis. Blandit sed pulvinar ultrices gravida vulputate at. Ipsum dolor condimentum habitasse aliquam risus risus consectetur.</p>
-    <p class="hee-card__authorurl" aria-label="Author URL"><a href="/author/jo-blogs">View more about Mr First Last</a></p>
+    <p class="hee-card__authorurl" aria-label="Author URL"><a href="/author/jo-blogs" title="Opens author\'s website">View more about Mr First Last</a></p>
 </div>
   '
   }) 
