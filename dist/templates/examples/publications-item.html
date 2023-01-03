@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="ie8" lang="en"><![endif]--><!--[if IE 9]><html class="ie9" lang="en"><![endif]--><!--[if gt IE 9]><!-->
+<html lang="en" style=""><!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title>Publication Item - Examples - NWP Prototype Kit</title>
+  <link href="https://www.nhs.uk/" rel="preconnect">
+  <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
+  <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
+  <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
+  <link href="/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
+  <link href="/css/hee.css" rel="stylesheet" />
+  <style>
+    .example {}
+
+    .example--template {}
+
+    .example--blocks {
+      padding: 1em;
+      background-color: #f0f4f5;
+    }
+  </style>
+  <link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png">
+  <link rel="mask-icon" href="/nhsuk-frontend/assets/favicons/favicon.svg" color="#005eb8">
+  <link rel="icon" sizes="192x192" href="/nhsuk-frontend/assets/favicons/favicon-192x192.png">
+  <meta name="msapplication-TileImage" content="/nhsuk-frontend/assets/favicons/mediumtile-144x144.png">
+  <meta name="msapplication-TileColor" content="#005eb8">
+  <meta name="msapplication-square70x70logo" content="/nhsuk-frontend/assets/favicons/smalltile-70x70.png">
+  <meta name="msapplication-square150x150logo" content="/nhsuk-frontend/assets/favicons/mediumtile-150x150.png">
+  <meta name="msapplication-wide310x150logo" content="/nhsuk-frontend/assets/favicons/widetile-310x150.png">
+  <meta name="msapplication-square310x310logo" content="/nhsuk-frontend/assets/favicons/largetile-310x310.png">
+</head>
+
+<body class="example example--template">
+  <script>
+    document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+  </script>
+  <a class="nhsuk-skip-link" href="#maincontent">Skip to main content</a>
+  <div class="site-header">
+    <header class="nhsuk-header nhsuk-header--organisation nhsuk-header--white" role="banner">
+      <div class="nhsuk-width-container nhsuk-header__container">
+        <div class="nhsuk-header__multilogo">
+          <span class="nhsuk-header__logo nhsuk-header__logo-home">
+            <a class="nhsuk-header__link" href="http://hee.nhs.uk/" aria-label="Health Education England  Dental Education Hub homepage">
+              <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="presentation" focusable="false" viewBox="0 0 40 16">
+                <path class="nhsuk-logo__background" d="M0 0h40v16H0z"></path>
+                <path class="nhsuk-logo__text" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+                <image src="https://assets.nhs.uk/images/nhs-logo.png" xlink:href=""></image>
+              </svg>
+              <span class="nhsuk-organisation-name">Health Education England</span>
+            </a>
+            <a class="nhsuk-header__link" href="/" aria-label="Health Education England  Dental Education Hub homepage">
+              <span class="nhsuk-organisation-descriptor">Dental Education Hub</span>
+            </a>
+          </span>
+        </div>
+        <div class="nhsuk-header__content" id="content-header">
+          <div class="nhsuk-header__menu">
+            <button class="nhsuk-header__menu-toggle" id="toggle-menu" aria-controls="header-navigation" aria-label="Open menu">Menu</button>
+          </div>
+          <div class="nhsuk-header__search">
+            <button class="nhsuk-header__search-toggle" id="toggle-search" aria-controls="search" aria-label="Open search">
+              <svg class="nhsuk-icon nhsuk-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+              </svg>
+              <span class="nhsuk-u-visually-hidden">Search</span>
+            </button>
+            <div class="nhsuk-header__search-wrap" id="wrap-search">
+              <form class="nhsuk-header__search-form" id="search" action="https://www.nhs.uk/search/" method="get" role="search">
+                <label class="nhsuk-u-visually-hidden" for="search-field">Search the NHS website</label>
+                <div class="autocomplete-container" id="autocomplete-container">
+                  <div class="autocomplete__wrapper">
+                    <input class="nhsuk-search__input" id="search-field" name="q" type="search" placeholder="Search" autocomplete="off">
+                  </div>
+                </div>
+                <button class="nhsuk-search__submit" type="submit">
+                  <svg class="nhsuk-icon nhsuk-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+                  </svg>
+                  <span class="nhsuk-u-visually-hidden">Search</span>
+                </button>
+                <button class="nhsuk-search__close" id="close-search">
+                  <svg class="nhsuk-icon nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
+                  </svg>
+                  <span class="nhsuk-u-visually-hidden">Close search</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="nhsuk-header__navigation nhsuk-header__navigation--more-items" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
+        <div class="nhsuk-width-container">
+          <p class="nhsuk-header__navigation-title"><span id="label-navigation">Menu</span>
+            <button class="nhsuk-header__navigation-close" id="close-menu">
+              <svg class="nhsuk-icon nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
+              </svg>
+              <span class="nhsuk-u-visually-hidden">Close menu</span>
+            </button>
+          </p>
+          <ul class="nhsuk-header__navigation-list">
+            <li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--for-mobile">
+              <a class="nhsuk-header__navigation-link" href="/"> Home </a>
+            </li>
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link" href="/templates"> Templates </a>
+            </li>
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link" href="/templates"> Templates longer name </a>
+            </li>
+            <li class="nhsuk-header__navigation-item nhsuk-subnav" aria-haspopup="true" aria-expanded="false">
+              <a class="nhsuk-header__navigation-link" href="#">
+                <div class="nhsuk-subnav__wrapper">
+                  <span class="nhsuk-header__link-text">Components</span>
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+                  </svg>
+                </div>
+              </a>
+              <ul class="nhsuk-subnav__list">
+                <li class="nhsuk-subnav__list-item">
+                  <a class="nhsuk-subnav__list-link" href="/components"> Components </a>
+                </li>
+                <li class="nhsuk-subnav__list-item">
+                  <a class="nhsuk-subnav__list-link" href="/scaffolding"> Scaffolding </a>
+                </li>
+                <li class="nhsuk-subnav__list-item">
+                  <a class="nhsuk-subnav__list-link" href="/components/furniture"> Furniture </a>
+                </li>
+                <li class="nhsuk-subnav__list-item">
+                  <a class="nhsuk-subnav__list-link" href="/components/contentblocks"> Content Blocks </a>
+                </li>
+                <li class="nhsuk-subnav__list-item">
+                  <a class="nhsuk-subnav__list-link" href="/components/rightblocks"> Right Blocks </a>
+                </li>
+                <li class="nhsuk-subnav__list-item">
+                  <a class="nhsuk-subnav__list-link" href="/components/featureblocks"> Feature Blocks </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  </div>
+  <div class="site-notifications">
+  </div>
+  <main class="page page--rightbar" id="maincontent" role="main">
+    <div class="page__breadcrumbs">
+      <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+        <div class="nhsuk-width-container">
+          <ol class="nhsuk-breadcrumb__list">
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates">Templates</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates/examples/publications-item">Publication Item</a></li>
+          </ol>
+          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/templates/examples/publications-item">Back to Publication Item</a></p>
+        </div>
+      </nav>
+    </div>
+    <div class="page__header">
+      <div class="nhsuk-width-container">
+        <div class="nhsuk-back-link">
+          <a class="nhsuk-back-link__link" href="#">
+            <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+            </svg> Go back</a>
+        </div>
+        <h1>Publication title</h1>
+        <span class="nhsuk-caption-xl">Caption</span>
+      </div>
+    </div>
+    <div class="nhsuk-width-container">
+      <div class="page__layout">
+        <div class="page__main">
+          <p class="nhsuk-body-l">This report has been produced in partnership between Health Education England (HEE) and Unity Insights.</p>
+          <h2 class="toc_h2" data-short-title="Overview">Overview</h2>
+          <p>Working with The Royal College of Surgeons, Health Education England provides world-class education, assessment and development to 30,000 surgeons.</p>
+          <p>As your career progresses from medical school student through to surgeon, you will go through a number of stages that all have a level of competitive entry.</p>
+          <h2 class="toc_h2" data-short-title="Path">Pathways</h2>
+          <p>The training pathway is the most direct route through surgical training. Following each training stage, particularly in the early years, you will need to be selected into the next stage.</p>
+          <h3 class="toc_h3" data-short-title="Run-through">Run-through and uncoupled</h3>
+          <p>Sollicitudin eu at arcu aliquam, non dui aliquet. Massa urna ultrices ullamcorper imperdiet velit ut a. Integer scelerisque nulla rhoncus nunc et. Et quis dui aliquam sapien nulla lobortis dictumst sapien, dolor. Est lectus volutpat lacus lorem. Semper duis dictumst ipsum diam. Sapien, leo amet erat arcu blandit. Varius viverra sit luctus viverra. Bibendum sed at penatibus odio erat</p>
+          <h3 class="toc_h3" data-short-title="ST1-ST7">Run-through posts (ST1-ST7)</h3>
+          <p>For some specialties training is through a run-through programme. You only have to apply once, at the beginning of the programme, and are recruited for the full duration of the specialty training.</p>
+          <h3 class="toc_h3" data-short-title="Uncoupled posts">Uncoupled posts (CT1, CT2, ST3-ST7)</h3>
+          <p>For some specialties training is ran as an uncoupled programme, meaning once you have completed your core training (CT1, CT2) you will be required to re-apply for ST3 onwards.</p>
+          <h2 class="toc_h2" data-short-title="Training routes">Training routes</h2>
+          <h3 class="toc_h3">Core specialty Training (CT1, CT2 (CT3))</h3>
+          <p>Felis vel aliquet in metus fermentum. Sit morbi fusce interdum luctus sodales. Amet platea sapien magna id. Dignissim volutpat nec odio platea consequat cras consequat euismod. Egestas in aliquam sed pellentesque. Sapien, varius consectetur donec habitant sed pellentesque sed. Adipiscing tortor, nibh ut mauris nibh phasellus augue volutpat aliquet.</p>
+          <div class="nhsuk-action-link">
+            <a class="nhsuk-action-link__link" href="#">
+              <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+              </svg>
+              <span class="nhsuk-action-link__text">Core surgery</span>
+            </a>
+          </div>
+          <h3 class="toc_h3">Higher specialty Training (ST3-ST7 (ST8))</h3>
+          <p>Felis vel aliquet in metus fermentum. Sit morbi fusce interdum luctus sodales. Amet platea sapien magna id. Dignissim volutpat nec odio platea consequat cras consequat euismod. Egestas in aliquam sed pellentesque. Sapien, varius consectetur donec habitant sed pellentesque sed. Adipiscing tortor, nibh ut mauris nibh phasellus augue volutpat aliquet.</p>
+          <div class="nhsuk-action-link">
+            <a class="nhsuk-action-link__link" href="#">
+              <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+              </svg>
+              <span class="nhsuk-action-link__text">Higher surgery</span>
+            </a>
+          </div>
+          <h4>Types of higher specialty training</h4>
+          <div class="nhsuk-blocklinks">
+            <div class="nhsuk-u-reading-width">
+            </div>
+            <ul class="nhsuk-list-blocklinks nhsuk-list-blocklinks--one-column">
+              <li>
+                <a href="#">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+                    </path>
+                  </svg> Cardiothoracic Surgery </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+                    </path>
+                  </svg> General Surgery </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+                    </path>
+                  </svg> Neurosurgery </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+                    </path>
+                  </svg> Oral &amp; Maxillofacial Surgery </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+                    </path>
+                  </svg> Otolaryngology Surgery </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+                    </path>
+                  </svg> Paediatric Surgery </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+                    </path>
+                  </svg> Plastic Surgery </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+                    </path>
+                  </svg> Trauma &amp; Orthopaedics </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+                    </path>
+                  </svg> Urology </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+                    </path>
+                  </svg> Vascular Surgery </a>
+              </li>
+            </ul>
+          </div>
+          <h2 class="toc_h2">Support</h2>
+          <p>Lorem ipsum dolor sit amet consectetur. Velit arcu consectetur enim eget eget. Pellentesque eget sem feugiat ut erat. Commodo ante ultrices dui etiam et cras velit euismod diam. Aliquam risus scelerisque.</p>
+          <h3 class="toc_h3">In-training support</h3>
+          <p>Felis vel aliquet in metus fermentum. Sit morbi fusce interdum luctus sodales. Amet platea sapien magna id. Dignissim volutpat nec odio platea consequat cras consequat euismod. Egestas in aliquam sed pellentesque. Sapien, varius consectetur donec habitant sed pellentesque sed. Adipiscing tortor, nibh ut mauris nibh phasellus augue volutpat aliquet.</p>
+          <div class="nhsuk-action-link">
+            <a class="nhsuk-action-link__link" href="#">
+              <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+              </svg>
+              <span class="nhsuk-action-link__text">In-training support</span>
+            </a>
+          </div>
+          <h3 class="toc_h3">Professional Support and Wellbeing (PSW)</h3>
+          <p>Felis vel aliquet in metus fermentum. Sit morbi fusce interdum luctus sodales. Amet platea sapien magna id. Dignissim volutpat nec odio platea consequat cras consequat euismod. Egestas in aliquam sed pellentesque. Sapien, varius consectetur donec habitant sed pellentesque sed. Adipiscing tortor, nibh ut mauris nibh phasellus augue volutpat aliquet.</p>
+          <div class="nhsuk-action-link">
+            <a class="nhsuk-action-link__link" href="#">
+              <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+              </svg>
+              <span class="nhsuk-action-link__text">Professional Support and Wellbeing (PSW)</span>
+            </a>
+          </div>
+          <h2 class="toc_h2">Regions</h2>
+          <p>Pellentesque id posuere sapien vestibulum, quam pellentesque at libero. Aliquam at id fames hendrerit in vulputate orci aliquet augue. Massa penatibus sociis et nisl. Enim aliquam mauris suscipit turpis non hendrerit felis.</p>
+          <figure class="nhsuk-map">
+            <figcaption class="nhsuk-map__caption">
+              <ul id="regionList">
+                <li>
+                  <a id="lk" href="#"> London and Kent, Surrey and Sussex (KSS) </a>
+                </li>
+                <li>
+                  <a id="me" href="#"> Midlands and the East </a>
+                </li>
+                <li>
+                  <a id="nenc" href="#"> North East and North Cumbria </a>
+                </li>
+                <li>
+                  <a id="nw" href="#"> North West </a>
+                </li>
+                <li>
+                  <a id="sw" href="#"> South West </a>
+                </li>
+                <li>
+                  <a id="tvw" href="#"> Thames Valley and Wessex </a>
+                </li>
+                <li>
+                  <a id="yh" href="#"> Yorkshire and the Humber </a>
+                </li>
+              </ul>
+            </figcaption>
+            <object class="nhsuk-map__image" data="/images/nav-maps/dental-regions.svg" type="image/svg+xml" tabindex="-1">
+            </object>
+          </figure>
+        </div>
+        <aside class="page__rightbar">
+          <div class="nhsuk-anchor-links hee-anchorlinks" data-toc-js=true data-headings="">
+            <h2 data-anchorlinksignore="true">Table of Contents</h2>
+          </div>
+          <div class="hee-card hee-card--details">
+            <h3>Publication Info</h3>
+            <div class="hee-card--details__item">
+              <span>Published:</span> 24 June 2022
+            </div>
+            <div class="hee-card--details__item">
+              <span>Updated:</span> 24 July 2022
+            </div>
+            <div class="hee-card--details__item">
+              <span>Topic:</span>
+              <a href="#">Profession 1</a>, <a href="#">Topic 1</a>
+            </div>
+            <div class="hee-card--details__item">
+              <span>Estimated reading time:</span> 2 mins
+            </div>
+          </div>
+          <div class="hee-card hee-card--details">
+            <h3>Alternative versions</h3>
+            <div class="hee-card--details__item">
+              <a class="hee-resources__link" href="#" title="Publication title - PDF version">
+                <span class="hee-resources__text">Publication title - PDF version</span><span class="hee-resources__tag
+          hee-resources__pdf"> PDF </span></a>
+            </div>
+            <div class="hee-card--details__item">
+              <a class="hee-resources__link" href="#" title="Publication title - Open Document version">
+                <span class="hee-resources__text">Publication title - Open Document version</span><span class="hee-resources__tag
+          hee-resources__odf"> ODF </span></a>
+            </div>
+            <div class="hee-card--details__item">
+              <a class="hee-resources__link" href="#" title="Publication title - Excel">
+                <span class="hee-resources__text">Publication title - Excel</span><span class="hee-resources__tag
+          hee-resources__xls"> XLS </span></a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+    <div class="page__footer">
+    </div>
+    <section class="page__feature">
+    </section>
+  </main>
+  <footer class="nhsuk-footer site-footer" id="nhsuk-footer" role="contentinfo">
+    <div class="nhsuk-width-container">
+      <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+      <ul class="nhsuk-footer__list nhsuk-footer__list--three-columns">
+        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/blog">Blog</a></li>
+        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/about">About us</a></li>
+        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/contact">Contact us</a></li>
+      </ul>
+      <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+    </div>
+  </footer>
+  <script src="/js/jquery-3.3.1.min.js"></script>
+  <script src="/js/nhsuk.min.js"></script>
+  <script src="/js/hee.js"></script>
+</body>
+
+</html>
