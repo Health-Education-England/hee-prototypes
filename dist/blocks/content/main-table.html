@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Card--Author - Templates - NWP Prototype Kit</title>
+  <title>Table - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -63,9 +63,9 @@
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks">Blocks</a></li>
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/content">Content</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/main-card-author">Card--Author</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/main-table">Table</a></li>
           </ol>
-          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/main-card-author">Back to Card--Author</a></p>
+          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/main-table">Back to Table</a></p>
         </div>
       </nav>
     </div>
@@ -116,66 +116,131 @@
         <div class="page__main">
           <div class="page__header">
             <span class="nhsuk-caption-xl">Main</span>
-            <h1>Card--Author</h1>
+            <h1>Table</h1>
             <p class="nhsuk-lede-text"></p>
           </div>
-          <p>You can find the content type data model in the <a href="https://hee-tis.atlassian.net/wiki/spaces/NWPK/pages/3615719497/Author">Author specification</a>.</p>
+          <p>Responsive tables used within page content.</p>
           <h3>Example</h3>
           <div class="prototype__example block">
-            <a href="/hee-prototypes/blocks/content/examples/main-card-author.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
+            <a href="/hee-prototypes/blocks/content/examples/main-table.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
             <div class="thumbnail">
-              <iframe src="/hee-prototypes/blocks/content/examples/main-card-author.html" height="620"></iframe>
+              <iframe src="/hee-prototypes/blocks/content/examples/main-table.html" height="620"></iframe>
             </div>
           </div>
           <hr />
           <h3>Macro</h3>
           <pre><code>
-{{ authorCard({
-  imgURL: &quot;/images/doctor-headshot.png&quot;,
-  title: &quot;Mr&quot;,
-  name: &quot;First Last&quot;,
-  initials: &quot;JB&quot;,
-  pronouns: &quot;Pronoun&quot;,
-  jobTitle: &quot;Job title&quot;,
-  department: &quot;Department&quot;,
-  organisation: &quot;Organisation&quot;,
-  email: &quot;jo.bloggs@hee.co.uk&quot;,
-  website: &quot;http://nhs.uk/&quot;,
-  twitter: &quot;nhsengland&quot;,
-  linkedin: &quot;nhs&quot;,
-  address: &quot;Health Education England&lt;br&gt;
-            3 Piccadilly&lt;br&gt;
-            Manchester&lt;br&gt;
-            M1 3BN&quot;,
-  bio: &quot;Lorem ipsum dolor sit amet...&quot;,
-  authorURL: &quot;/author/jo-blogs&quot;
-}) }}
+{{ table({
+    tableClasses: &#39;nhsuk-hee-table&#39;,
+    responsive: true,
+    panel: false,
+    caption: &quot;Ibuprofen tablet dosages for children&quot;,
+    firstCellIsHeader: false,
+    head: [
+      {
+        text: &quot;Age&quot;
+      },
+      {
+        text: &quot;How much?&quot;
+      },
+      {
+        text: &quot;How often&quot;
+      }
+    ],
+    rows: [
+      [
+        {
+          header: &quot;Age&quot;,
+          text: &quot;7 to 9 years&quot;
+        },
+        {
+          header: &quot;How much?&quot;,
+          text: &quot;200mg&quot;
+        },
+        {
+          header: &quot;How often?&quot;,
+          text: &quot;Max 3 times in 24 hours&quot;
+        }
+      ],
+      [
+        {
+          header: &quot;Age&quot;,
+          text: &quot;10 to 11 years&quot;
+        },
+        {
+          header: &quot;How much?&quot;,
+          text: &quot;200mg to 300mg&quot;
+        },
+        {
+          header: &quot;How often?&quot;,
+          text: &quot;Max 3 times in 24 hours&quot;
+        }
+      ],
+      [
+        {
+          header: &quot;Age&quot;,
+          text: &quot;12 to 17 years&quot;
+        },
+        {
+          header: &quot;How much?&quot;,
+          text: &quot;200mg to 400mg&quot;
+        },
+        {
+          header: &quot;How often?&quot;,
+          text: &quot;Max 3 times in 24 hours&quot;
+        }
+      ]
+    ]
+})  }}
   </code></pre>
           <hr />
           <h3>HTML</h3>
           <pre><code>
-&lt;div class=&quot;hee-card hee-card--author&quot;&gt;
-    &lt;div class=&quot;hee-card__image has-bg&quot;&gt;
-      &lt;div class=&quot;hee-card__initials&quot; style=&quot;background: url(&#39;/images/doctor-headshot.png&#39;)&quot;&gt;
-        &lt;span&gt;JB&lt;/span&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;h2 class=&quot;hee-card__name&quot; aria-label=&quot;Name&quot;&gt; Mr First Last &lt;/h2&gt;
-    &lt;span class=&quot;hee-card__pronouns&quot;&gt;Pronoun&lt;/span&gt;
-    &lt;h3 class=&quot;nhsuk-heading-m hee-card__jobtitle&quot; aria-label=&quot;Job Title&quot;&gt;Job title&lt;/h3&gt;
-    &lt;p class=&quot;hee-card__department&quot; aria-label=&quot;Department&quot;&gt;Department&lt;/p&gt;
-    &lt;p class=&quot;hee-card__organisation&quot; aria-label=&quot;Organisation&quot;&gt;Organisation&lt;/p&gt;
-    &lt;hr&gt;
-    &lt;ul class=&quot;hee-card__contact&quot;&gt;
-      &lt;li class=&quot;hee-card__email hee-card__contact__item&quot; aria-label=&quot;Email&quot;&gt;&lt;a href=&quot;mailto:jo.bloggs@hee.co.uk;&quot;&gt;jo.bloggs@hee.co.uk&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&quot;hee-card__website hee-card__contact__item&quot; aria-label=&quot;Website&quot;&gt;&lt;a href=&quot;http://nhs.uk/&quot;&gt;http://nhs.uk/&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&quot;hee-card__linkedin hee-card__contact__item&quot; aria-label=&quot;Linkedin&quot;&gt;&lt;a href=&quot;https://www.linkedin.com/company/nhs&quot;&gt;nhs&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&quot;hee-card__twitter hee-card__contact__item&quot; aria-label=&quot;Twitter&quot;&gt;&lt;a href=&quot;https://twitter.com/nhsengland&quot;&gt;@nhsengland&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;p class=&quot;hee-card__address&quot; aria-label=&quot;Bio&quot;&gt;Health Education England&lt;br&gt; 3 Piccadilly&lt;br&gt; Manchester&lt;br&gt; M1 3BN&lt;/p&gt;
-    &lt;p class=&quot;hee-card__bio&quot; aria-label=&quot;Bio&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque ac pellentesque in sapien. Amet in ante libero a lobortis. Blandit sed pulvinar ultrices gravida vulputate at. Ipsum dolor condimentum habitasse aliquam risus risus consectetur.&lt;/p&gt;
-    &lt;p class=&quot;hee-card__authorurl&quot; aria-label=&quot;Author URL&quot;&gt;&lt;a href=&quot;/author/jo-blogs&quot;&gt;View more about Mr First Last&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
+&lt;table role=&quot;table&quot; class=&quot;nhsuk-table-responsive nhsuk-hee-table&quot;&gt;
+    &lt;caption class=&quot;nhsuk-table__caption&quot;&gt;Ibuprofen tablet dosages for children&lt;/caption&gt;
+    &lt;thead role=&quot;rowgroup&quot; class=&quot;nhsuk-table__head&quot;&gt;
+      &lt;tr role=&quot;row&quot;&gt;
+        &lt;th role=&quot;columnheader&quot; class=&quot;&quot; scope=&quot;col&quot;&gt; Age &lt;/th&gt;
+        &lt;th role=&quot;columnheader&quot; class=&quot;&quot; scope=&quot;col&quot;&gt; How much? &lt;/th&gt;
+        &lt;th role=&quot;columnheader&quot; class=&quot;&quot; scope=&quot;col&quot;&gt; How often &lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody class=&quot;nhsuk-table__body&quot;&gt;
+      &lt;tr role=&quot;row&quot; class=&quot;nhsuk-table__row&quot;&gt;
+        &lt;td role=&quot;cell&quot; class=&quot;nhsuk-table__cell&quot;&gt;
+          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;Age &lt;/span&gt;7 to 9 years
+        &lt;/td&gt;
+        &lt;td role=&quot;cell&quot; class=&quot;nhsuk-table__cell&quot;&gt;
+          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;How much? &lt;/span&gt;200mg
+        &lt;/td&gt;
+        &lt;td role=&quot;cell&quot; class=&quot;nhsuk-table__cell&quot;&gt;
+          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;How often? &lt;/span&gt;Max 3 times in 24 hours
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr role=&quot;row&quot; class=&quot;nhsuk-table__row&quot;&gt;
+        &lt;td role=&quot;cell&quot; class=&quot;nhsuk-table__cell&quot;&gt;
+          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;Age &lt;/span&gt;10 to 11 years
+        &lt;/td&gt;
+        &lt;td role=&quot;cell&quot; class=&quot;nhsuk-table__cell&quot;&gt;
+          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;How much? &lt;/span&gt;200mg to 300mg
+        &lt;/td&gt;
+        &lt;td role=&quot;cell&quot; class=&quot;nhsuk-table__cell&quot;&gt;
+          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;How often? &lt;/span&gt;Max 3 times in 24 hours
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr role=&quot;row&quot; class=&quot;nhsuk-table__row&quot;&gt;
+        &lt;td role=&quot;cell&quot; class=&quot;nhsuk-table__cell&quot;&gt;
+          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;Age &lt;/span&gt;12 to 17 years
+        &lt;/td&gt;
+        &lt;td role=&quot;cell&quot; class=&quot;nhsuk-table__cell&quot;&gt;
+          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;How much? &lt;/span&gt;200mg to 400mg
+        &lt;/td&gt;
+        &lt;td role=&quot;cell&quot; class=&quot;nhsuk-table__cell&quot;&gt;
+          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;How often? &lt;/span&gt;Max 3 times in 24 hours
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
   </code></pre>
         </div>
       </div>
