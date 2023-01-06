@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Microhero - Templates - NWP Prototype Kit</title>
+  <title>Reviewed - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -62,9 +62,9 @@
           <ol class="nhsuk-breadcrumb__list">
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks">Blocks</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/page-microhero">Microhero</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/content-reviewed">Reviewed</a></li>
           </ol>
-          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/page-microhero">Back to Microhero</a></p>
+          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/content-reviewed">Back to Reviewed</a></p>
         </div>
       </nav>
     </div>
@@ -128,26 +128,29 @@
         <div class="page__main">
           <div class="page__header">
             <span class="nhsuk-caption-xl">Furniture</span>
-            <h1>Microhero</h1>
+            <h1>Reviewed</h1>
             <p class="nhsuk-lede-text"></p>
           </div>
           <h3>Example</h3>
-          <div class="prototype__example scaled" style="height:264.70588235294116px;">
-            <a href="/hee-prototypes/blocks/furniture/examples/page-microhero.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
+          <div class="prototype__example block">
+            <a href="/hee-prototypes/blocks/furniture/examples/content-reviewed.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
             <div class="thumbnail">
-              <iframe src="/hee-prototypes/blocks/furniture/examples/page-microhero.html" height="450"></iframe>
+              <iframe src="/hee-prototypes/blocks/furniture/examples/content-reviewed.html" height="170"></iframe>
             </div>
           </div>
           <hr />
           <h3>Macro</h3>
           <pre><code>
-{{ microhero({
-    &quot;imgURL&quot;: basePath + &quot;/images/young-child-using-tablet-device.jpg&quot;
+{{ reviewDate({
+    lastReview: &quot;12 February 2016&quot;,
+    nextReview: &quot;1 February 2019&quot;
 }) }}
   </code></pre>
           <hr />
           <h3>HTML</h3>
-          <pre><code>&lt;div class=&quot;hee-microhero&quot; style=&quot;background-image:url({{ imgUrl }});&quot;&gt;&lt;/div&gt;</code></pre>
+          <pre><code>&lt;div class=&quot;nhsuk-review-date&quot;&gt;
+    &lt;p class=&quot;nhsuk-body-s&quot;&gt; Page last reviewed: 12 February 2016&lt;br&gt; Next review due: 1 February 2019 &lt;/p&gt;
+&lt;/div&gt;</code></pre>
         </div>
       </div>
     </div>
