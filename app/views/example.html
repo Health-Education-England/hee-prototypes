@@ -17,7 +17,7 @@
 {# Main #}
 {%- from 'breadcrumb/macro.njk' import breadcrumb %}
 
-{# TEMPLATE COMPONENTS #}
+{# TEMPLATE BLOCKS #}
 {%- from 'hero/macro.njk' import hero %}
 {%- from 'components/hee/hee-microhero/macro.njk' import microHero %}
 {%- from 'components/hee/hee-homesection/macro.njk' import homepageSection %}
@@ -25,14 +25,19 @@
 {%- from 'components/hee/hee-filter/macro.njk' import filter %}
 {%- from 'pagination/macro.njk' import pagination %}
 
-{# CONTENT (BLOCKS) COMPONENTS #}
+{# CONTENT BLOCKS #}
 
+{# Main #}
+{%- from 'hee/blocks/content/main/card--author/macro.njk' import authorCard %}
+{#{%- from 'hee/blocks/content/sidebar/card--person/macro.njk' import personCard %}
+{%- from 'hee/blocks/content/sidebar/card--department/macro.njk' import departmentCard %}#}
+{%- from 'components/hee/hee-detailscard/contact.njk' import contact %}
+
+{# Sidebar #}
+
+{# To Sort #}
 {# HEE Components #}
 {%- from 'components/hee/hee-anchorlinks/macro.njk' import anchorLinks %}
-{%- from 'components/hee/hee-detailscard/authorcard/macro.njk' import authorCard %}
-{%- from 'components/hee/hee-detailscard/personcard/macro.njk' import personCard %}
-{%- from 'components/hee/hee-detailscard/departmentcard/macro.njk' import departmentCard %}
-{%- from 'components/hee/hee-detailscard/contact.njk' import contact %}
 {%- from 'components/hee/hee-media/macro.njk' import media %}
 {%- from 'components/hee/hee-navmap/macro.njk' import navMap %}
 {%- from 'components/hee/hee-relatednav/macro.njk' import relatedNav %}
@@ -41,8 +46,6 @@
 {%- from 'components/hee/hee-sidebarlinks/macro.njk' import relatedLinksCard %}
 {%- from 'components/hee/hee-tabs/macro.njk' import tabs %}
 {%- from 'components/hee/hee-timeline/macro.njk' import timeline %}
-
-{# NHSUK-HEE Components #}
 {%- from 'components/nhsuk-hee/nhsuk-hee-blocklinks/macro.njk' import blocklinks %}
 
 {# NHSUK Components #}

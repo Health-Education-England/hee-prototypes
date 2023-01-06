@@ -1,0 +1,83 @@
+/* HEE-Card */
+.hee-card {
+  background-color: #FFF;
+  padding: 24px;
+  max-width: 300px;
+  margin-bottom: nhsuk-spacing(4);
+  
+  .hee-flexgrid-row & {
+      max-width: none;
+  }
+
+  &__image {
+      width: 134px;
+      height: 134px;
+      display: block;
+      margin-bottom: 24px;
+  }
+  &__initials {
+      display: block;
+      background:$color_nhsuk-grey-4;
+      width: 100%;
+      height: 100%;
+      border-radius: 134px;
+
+      span {
+          text-align: center;
+          line-height: 134px;
+          font-size: 48px;
+          font-weight: bold;
+          display: block;
+          color: $nhsuk-secondary-text-color;
+      }
+  }
+  &__name {
+      margin-bottom: 0.5em;
+  }
+
+  &__pronouns {
+      @include nhsuk-font(16);
+      display: block;
+      color: $nhsuk-secondary-text-color;
+      margin-bottom: 1em;
+      margin-top: -0.75em;
+  }
+
+  &__jobtitle {
+      @include nhsuk-responsive-margin(2, 'bottom');
+  }
+  &__department, 
+  &__organisation {
+      @include nhsuk-typography-responsive(19);
+      @include nhsuk-responsive-margin(2, 'bottom');
+  }
+
+  &__contact {
+      list-style: none;
+      padding: 0;
+      @include nhsuk-responsive-margin(4, 'bottom');
+      @include nhsuk-typography-responsive(16);
+      li {
+          word-wrap: break-word;
+      }
+  }
+
+  &__bio,
+  &__description 
+  {
+      color: $color_nhsuk-grey-1;
+      @include nhsuk-typography-responsive(16);
+      margin-bottom: 0;
+  }
+
+  &__authorurl {
+      @include nhsuk-typography-responsive(16);
+      margin-bottom: 0;
+      @include nhsuk-responsive-margin(3, 'top');
+  }
+
+  hr {
+      margin: 24px 0;
+  }
+
+}

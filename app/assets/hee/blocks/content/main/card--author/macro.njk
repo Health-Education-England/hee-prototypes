@@ -1,0 +1,98 @@
+{% macro authorCard(params) %}
+
+  {#{{ authorCard({
+    imgURL: basePath + "/images/doctor-headshot.png",
+    title: "Mr",
+    name: "First Last",
+    initials: "JB",
+    pronouns: "Pronoun",
+    jobTitle: "Job title",
+    department: "Department",
+    organisation: "Organisation",
+    email: "jo.bloggs@hee.co.uk",
+    website: "http://nhs.uk/",
+    twitter: "nhsengland",
+    linkedin: "nhs",
+    address: "Health Education England<br>
+              3 Piccadilly<br>
+              Manchester<br>
+              M1 3BN",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque ac pellentesque in sapien. Amet in ante libero a lobortis. Blandit sed pulvinar ultrices gravida vulputate at. Ipsum dolor condimentum habitasse aliquam risus risus consectetur.",
+    authorURL: "/author/jo-blogs"
+  }) }}#}
+
+{%- if params.gridCol %}<div class="{{ params.gridCol }}">{% endif %}
+
+<div class="hee-card hee-card--author{%- if params.classes %} {{ params.classes }}{% endif %}">
+
+  {% if params.heading %}
+    <h2 class="hee-card__heading">{{ params.heading | safe }}</h2>
+  {% endif %}
+
+  <div class="hee-card--author__header">
+    <div class="hee-card__image {{ 'has-bg' if params.imgURL }}">
+      <div class="hee-card__initials" {%- if params.imgURL %} style="background-image: url('{{ params.imgURL }}')" {% endif %}>
+        {% if params.initials %}
+          <span>{{ params.initials}}</span>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="hee-card--author__details">
+      <h2 class="hee-card__name" aria-label="Name">
+        {{ params.title | safe }} {{ params.name | safe }}
+      </h2>
+
+      {% if params.pronouns %}
+          <span class="hee-card__pronouns" aria-label="Pronouns">{{ params.pronouns | safe }}</span>
+      {% endif %}
+
+      {%- if params.jobTitle %}
+        <h3 class="nhsuk-heading-m hee-card__jobtitle" aria-label="Job Title">{{ params.jobTitle | safe }}</h3>
+      {%- endif %}
+
+      {%- if params.department %}
+        <p class="hee-card__department" aria-label="Department">{{ params.department | safe }}</p>
+      {%- endif %}
+
+      {%- if params.organisation %}
+        <p class="hee-card__organisation" aria-label="Organisation">{{ params.organisation | safe }}</p>
+      {%- endif %}
+    </div>
+  </div>
+
+  <ul class="hee-card__contact">
+    {%- if params.email %}
+      <li class="hee-card__email hee-card__contact__item" aria-label="Email"><a href="mailto:{{ params.email | safe }};" title="Opens email">{{ params.email | safe }}</a></li>
+    {%- endif %}
+
+    {%- if params.website %}
+      <li class="hee-card__website hee-card__contact__item" aria-label="Website"><a href="{{ params.website | safe }}" title="Opens website">{{ params.website | safe }}</a></li>
+    {%- endif %}
+
+    {%- if params.linkedin %}
+      <li class="hee-card__linkedin hee-card__contact__item" aria-label="Linkedin"><a href="https://www.linkedin.com/company/{{ params.linkedin | safe }}" title="Opens LinkedIn">{{ params.linkedin | safe }}</a></li>
+    {%- endif %}
+
+    {%- if params.twitter %}
+      <li class="hee-card__twitter hee-card__contact__item" aria-label="Twitter"><a href="https://twitter.com/{{ params.twitter | safe }}" title="Opens Twitter">@{{ params.twitter | safe }}</a></li>
+    {%- endif %}
+  </ul>
+
+  {%- if params.address %}
+    <p class="hee-card__address" aria-label="Address">{{ params.address | safe }}</p>
+  {%- endif %}
+
+  {%- if params.bio %}
+    <p class="hee-card__bio" aria-label="Bio">{{ params.bio | safe }}</p>
+  {%- endif %}
+
+  {%- if params.authorURL %}
+    <p class="hee-card__authorurl" aria-label="Author URL"><a href="{{ params.authorURL | safe }}" title="Opens author's website">View more about {{ params.title | safe }} {{ params.name | safe }}</a></p>
+  {%- endif %}
+
+</div>
+
+{%- if params.gridCol %}</div>{% endif %}
+
+{% endmacro %}
