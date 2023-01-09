@@ -1,0 +1,61 @@
+{% extends "prototype.html" %}
+
+{% import 'includes/_globals.html' as global %}
+
+{% set bodyClasses = 'prototype prototype--examples' %}
+{% set page_url = '/blocks' %}
+{% set page_title = 'Blocks' %}
+
+{% block pageClass %}page--fullwidth{% endblock %}
+{% block pageTitle %}{{ page_title }} - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+    {{ breadcrumb({
+        items: [
+            {
+                href: "/",
+                text: "Home"
+            }
+        ],
+        href: page_url,
+        text: page_title
+    }) }}
+{% endblock %}
+
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'blocks',
+    subarea: 'top'
+}) }}
+{% endblock %}
+
+{% block pageMain %}
+    <div class="page__header">
+        <div class="nhsuk-width-container">
+            <h1>{{ page_title }}</h1>
+            <p class="nhsuk-lede-text"></p>
+        </div>
+    </div>
+    <div class="page__main">
+        <div class="nhsuk-width-container">
+            {% for section in global.blocks_top_array %}
+                <ul class="nhsuk-grid-row nhsuk-card-group">
+                    {% for item in section.links %}
+                    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                    {{ card({
+                        "href": "/blocks/"+item.url,
+                        "clickable": "true",
+                        "heading": item.title,
+                        "headingLevel": "3",
+                        "headingClasses": "nhsuk-heading-m",
+                        "description": ""
+                    }) }}
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

@@ -1,22 +1,18 @@
-{# UTILS #}
-{%- from 'utils/highlight.njk' import highlight %}
-{%- from 'utils/subnav.njk' import subnav %}
-
 {# SCAFFOLDING #}
 
 {# Cookies #}
-{%- from 'scaffolding/cookies/macro.njk' import cookies %}
+{%- from 'hee/scaffolding/cookies/macro.njk' import cookies %}
 
 {# Header #}
-{%- from 'scaffolding/header/macro.njk' import customHeader %}
+{%- from 'hee/scaffolding/header/macro.njk' import customHeader %}
 {%- from 'skip-link/macro.njk' import skipLink %}
 
 {# Notifications #}
-{%- from 'scaffolding/notifications/globalalert/macro.njk' import globalAlert %}
-{%- from 'scaffolding/notifications/phasebanner/macro.njk' import phaseBanner %}
+{%- from 'hee/scaffolding/notifications/globalalert/macro.njk' import globalAlert %}
+{%- from 'hee/scaffolding/notifications/phasebanner/macro.njk' import phaseBanner %}
 
 {# Footer #}
-{%- from 'scaffolding/footer/macro.njk' import siteFooter %}
+{%- from 'hee/scaffolding/footer/macro.njk' import siteFooter %}
 
 {# Main #}
 {%- from 'breadcrumb/macro.njk' import breadcrumb %}
@@ -50,6 +46,7 @@
 {%- from 'components/nhsuk-hee/nhsuk-hee-blocklinks/macro.njk' import blocklinks %}
 
 {# NHSUK Components #}
+{%- from 'action-link/macro.njk' import actionLink %}
 {%- from 'button/macro.njk' import button %}
 {%- from 'card/macro.njk' import card %}
 {%- from 'checkboxes/macro.njk' import checkboxes %}
@@ -71,7 +68,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <title>{% block pageTitle %}NWP Prototype Kit{% endblock %}</title>
+    <title>{% block pageTitle %}Examples{% endblock %}</title>
     <link href="https://www.nhs.uk/" rel="preconnect">
     <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
     <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -79,7 +76,6 @@
 
     {% block headCSS %}
       <link href="/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
-      <link href="/css/highlight.css" rel="stylesheet" />
       <link href="/css/hee.css" rel="stylesheet" />
     {% endblock %}
 
@@ -100,7 +96,7 @@
   <body class="{{ bodyClasses }}">
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
     {% block bodyStart %}
-      {{ cookies() }}
+      {#{ cookies() }#}
     {% endblock %}
 
     {% block headerStart %}
@@ -152,6 +148,10 @@
             {
               url: "/templates",
               label: "Templates"
+            },
+            {
+              url: "/templates",
+              label: "Templates longer name"
             },
             {
               url: "/components",
@@ -250,12 +250,10 @@
     {% block scripts %}
       <script src="/js/jquery-3.3.1.min.js"></script>
       <script src="/js/nhsuk.min.js"></script>
-      <script src="/js/highlight.min.js"></script>
       <script src="/js/hee.js"></script>
     {% endblock %}
     {% block bodyEnd %}
       {% block pageScripts %}
-        <script>hljs.highlightAll();</script>
       {% endblock %}
     {% endblock %}
   </body>

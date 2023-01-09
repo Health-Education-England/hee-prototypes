@@ -1,0 +1,54 @@
+{% extends "example-blocks.html" %}
+
+{% block main %}
+{{ customHeader({
+    "showNav": "true",
+    "showSearch": "false",
+    "showLogos": "false",
+    "heeHref": "http://hee.nhs.uk/",
+    "classes": "nhsuk-header--white",
+    "organisation": {
+      "name": "Health Education England",
+      "split": "",
+      "descriptor": "Dental Education Hub"
+    },
+    "logos": [],
+    "primaryLinks": [
+      {
+        url: "/templates",
+        label: "Templates"
+      },
+      {
+        url: "/templates",
+        label: "Templates longer name"
+      },
+      {
+        url: "/components",
+        label: "Components",
+        children: [
+          {
+            url: "/scaffolding",
+            label: "Scaffolding"
+          },
+          {
+            url: "/components/furniture",
+            label: "Furniture"
+          },
+          {
+            url: "/components/contentblocks",
+            label: "Content Blocks"
+          },
+          {
+            url: "/components/rightblocks",
+            label: "Right Blocks"
+          },
+          {
+            url: "/components/featureblocks",
+            label: "Feature Blocks"
+          }
+        ]
+      }
+      ]
+  })
+}}
+{% endblock %}

@@ -1,26 +1,20 @@
 {# UTILS #}
-{%- from 'utils/highlight.njk' import highlight %}
-{%- from 'utils/subnav.njk' import subnav %}
+{%- from 'prototype/highlight/highlight.njk' import highlight %}
+{%- from 'prototype/subnav/subnav.njk' import subnav %}
+{%- from 'prototype/example/example.njk' import example %}
+{%- from 'prototype/components/components.njk' import components %}
+{%- from 'prototype/status-tag/status-tag.njk' import statusTag %}
 
 {# SCAFFOLDING #}
-
-{# Header #}
-{%- from 'scaffolding/header/macro.njk' import customHeader %}
-{%- from 'skip-link/macro.njk' import skipLink %}
-
-{# Notifications #}
-{%- from 'scaffolding/notifications/globalalert/macro.njk' import globalAlert %}
-{%- from 'scaffolding/notifications/phasebanner/macro.njk' import phaseBanner %}
-
-{# Footer #}
-{%- from 'scaffolding/footer/macro.njk' import siteFooter %}
-
-{# Main #}
+{%- from 'hee/scaffolding/header/macro.njk' import customHeader %}
+{%- from 'hee/scaffolding/footer/macro.njk' import siteFooter %}
 {%- from 'breadcrumb/macro.njk' import breadcrumb %}
 
 {# GLOBAL #}
 {%- from 'hero/macro.njk' import hero %}
+{%- from 'components/hee/hee-microhero/macro.njk' import microHero %}
 {%- from 'components/hee/hee-homesection/macro.njk' import homepageSection %}
+{%- from 'back-link/macro.njk' import backLink %}
 {%- from 'card/macro.njk' import card %}
 
 <!DOCTYPE html>
@@ -39,6 +33,7 @@
     {% block headCSS %}
       <link href="/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
       <link href="/css/highlight.css" rel="stylesheet" />
+      <link href="/css/prototype.css" rel="stylesheet" />
       <link href="/css/hee.css" rel="stylesheet" />
     {% endblock %}
 
@@ -48,20 +43,16 @@
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
     {% block headerStart %}
-      {{ skipLink({
-        href: '#maincontent',
-        text: 'Skip to main content'
-      }) }}
     {% endblock %}
 
     {% block header %}
     <div class="site-header">
       {{ customHeader({
-          "showNav": "true",
+          "showNav": "false",
           "showSearch": "false",
           "showLogos": "false",
           "heeHref": "http://hee.nhs.uk/",
-          "classes": "nhsuk-header--white",
+          "classes": "",
           "organisation": {
             "name": "Health Education England",
             "split": "",
@@ -89,6 +80,10 @@
                   label: "Content"
                 }
               ]
+            },
+            {
+              url: "/examples",
+              label: "Examples"
             }
           ]
         })
@@ -106,15 +101,10 @@
       <div class="page__breadcrumbs">
         {% block pageBreadcrumbs %}{% endblock %}
       </div>
-      {% block pageHeader %}{% endblock %}
       {% block pageMain %}{% endblock %}
       <div class="page__footer">
         {% block pageFooter %}{% endblock %}
       </div>
-      <section class="page__feature">
-        {% block pageFeature %}
-        {% endblock %}
-      </section>
     </main>
     {% endblock %}
     
@@ -143,6 +133,7 @@
       <script src="/js/jquery-3.3.1.min.js"></script>
       <script src="/js/nhsuk.min.js"></script>
       <script src="/js/highlight.min.js"></script>
+      <script src="/js/prototype.min.js"></script>
       <script src="/js/hee.js"></script>
     {% endblock %}
     {% block bodyEnd %}

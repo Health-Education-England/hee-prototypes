@@ -13,7 +13,6 @@
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
   <link href="/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
-  <link href="/css/highlight.css" rel="stylesheet" />
   <link href="/css/hee.css" rel="stylesheet" />
   <link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png">
@@ -31,16 +30,6 @@
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script>
-  <div class="nhsuk-cookie-banner">
-    <div class="nhsuk-width-container">
-      <h2>Cookies</h2>
-      <p> We use some essential cookies to make this website work. We’d like to set some additional cookies to understand how you use the website and to improve it. We also use cookies set by other sites to help us deliver content from their services. <a href="/lks/cookie-policy" title="Cookie Policy">You can read more about our cookies</a> before you choose. </p>
-      <ul>
-        <li><button class="nhsuk-button" id="nhsuk-cookie-banner__link_accept_analytics" tabindex="2">Accept additional cookies</button></li>
-        <li><button class="nhsuk-button" id="nhsuk-cookie-banner__link_decline_analytics" tabindex="3">Reject additional cookies</button></li>
-      </ul>
-    </div>
-  </div>
   <a class="nhsuk-skip-link" href="#maincontent">Skip to main content</a>
   <div class="site-header">
     <header class="nhsuk-header nhsuk-header--organisation nhsuk-header--white" role="banner">
@@ -96,7 +85,7 @@
           </div>
         </div>
       </div>
-      <nav class="nhsuk-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
+      <nav class="nhsuk-header__navigation nhsuk-header__navigation--more-items" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
         <div class="nhsuk-width-container">
           <p class="nhsuk-header__navigation-title"><span id="label-navigation">Menu</span>
             <button class="nhsuk-header__navigation-close" id="close-menu">
@@ -112,6 +101,9 @@
             </li>
             <li class="nhsuk-header__navigation-item">
               <a class="nhsuk-header__navigation-link" href="/templates"> Templates </a>
+            </li>
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link" href="/templates"> Templates longer name </a>
             </li>
             <li class="nhsuk-header__navigation-item nhsuk-subnav" aria-haspopup="true" aria-expanded="false">
               <a class="nhsuk-header__navigation-link" href="#">
@@ -330,11 +322,7 @@
   </footer>
   <script src="/js/jquery-3.3.1.min.js"></script>
   <script src="/js/nhsuk.min.js"></script>
-  <script src="/js/highlight.min.js"></script>
   <script src="/js/hee.js"></script>
-  <script>
-    hljs.highlightAll();
-  </script>
 </body>
 
 </html>
