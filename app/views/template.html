@@ -31,9 +31,9 @@
 
 {# HEE Components #}
 {%- from 'components/hee/hee-anchorlinks/macro.njk' import anchorLinks %}
-{%- from 'components/hee/hee-detailscard/authorcard/macro.njk' import authorCard %}
-{%- from 'components/hee/hee-detailscard/personcard/macro.njk' import personCard %}
-{%- from 'components/hee/hee-detailscard/departmentcard/macro.njk' import departmentCard %}
+{%- from 'hee/blocks/content/main/card--author/macro.njk' import authorCard %}
+{#{%- from 'hee/blocks/content/sidebar/card--person/macro.njk' import personCard %}
+{%- from 'hee/blocks/content/sidebar/card--department/macro.njk' import departmentCard %}#}
 {%- from 'components/hee/hee-detailscard/contact.njk' import contact %}
 {%- from 'components/hee/hee-media/macro.njk' import media %}
 {%- from 'components/hee/hee-navmap/macro.njk' import navMap %}

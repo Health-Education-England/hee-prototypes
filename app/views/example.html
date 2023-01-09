@@ -31,9 +31,9 @@
 {# CONTENT BLOCKS #}
 
 {# Main #}
-{#{%- from 'hee/blocks/content/main/card--author/macro.njk' import authorCard %}#}
-{#{%- from 'hee/blocks/content/sidebar/card--person/macro.njk' import personCard %}#}
-{#{%- from 'hee/blocks/content/sidebar/card--department/macro.njk' import departmentCard %}#}
+{%- from 'hee/blocks/content/main/card--author/macro.njk' import authorCard %}
+{#{%- from 'hee/blocks/content/sidebar/card--person/macro.njk' import personCard %}
+{%- from 'hee/blocks/content/sidebar/card--department/macro.njk' import departmentCard %}#}
 {%- from 'components/hee/hee-detailscard/contact.njk' import contact %}
 
 {# Sidebar #}
