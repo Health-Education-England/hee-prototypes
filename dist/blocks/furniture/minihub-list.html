@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Summary - Templates - NWP Prototype Kit</title>
+  <title>List - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -62,10 +62,9 @@
           <ol class="nhsuk-breadcrumb__list">
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks">Blocks</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/furniture">Furniture</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/furniture/page-summary">Summary</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/minihub-list">List</a></li>
           </ol>
-          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/furniture/page-summary">Back to Summary</a></p>
+          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/minihub-list">Back to List</a></p>
         </div>
       </nav>
     </div>
@@ -126,19 +125,69 @@
         <div class="page__main">
           <div class="page__header">
             <span class="nhsuk-caption-xl">Furniture</span>
-            <h1>Summary</h1>
+            <h1>List</h1>
             <p class="nhsuk-lede-text"></p>
           </div>
           <h3>Example</h3>
           <div class="prototype__example block">
-            <a href="/hee-prototypes/blocks/furniture/examples/page-summary.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
+            <a href="/hee-prototypes/blocks/furniture/examples/minihub-list.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
             <div class="thumbnail">
-              <iframe src="/hee-prototypes/blocks/furniture/examples/page-summary.html" height="200px"></iframe>
+              <iframe src="/hee-prototypes/blocks/furniture/examples/minihub-list.html" height="270"></iframe>
             </div>
           </div>
           <hr />
+          <h3>Macro</h3>
+          <pre><code>
+{{ contentsList({
+    items: [
+      {
+        href: &quot;https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/&quot;,
+        text: &quot;What is AMD?&quot;,
+        current: &quot;true&quot;
+      },
+      {
+        href: &quot;https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/symptoms/&quot;,
+        text: &quot;Symptoms&quot;
+      },
+      {
+        href: &quot;https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/getting-diagnosed/&quot;,
+        text: &quot;Getting diagnosed&quot;
+      }
+      ,
+      {
+        href: &quot;https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/treatment/&quot;,
+        text: &quot;Treatments&quot;
+      }
+      ,
+      {
+        href: &quot;https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/living-with-amd/&quot;,
+        text: &quot;Living with AMD&quot;
+      }
+    ]
+}) }}
+  </code></pre>
+          <hr />
           <h3>HTML</h3>
-          <pre><code>&lt;p class=&quot;nhsuk-body-l&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel tortor auctor, aliquet velit vel, mollis ex. Proin quis dapibus purus. Curabitur efficitur luctus laoreet.&lt;/p&gt;</code></pre>
+          <pre><code>&lt;nav class=&quot;nhsuk-contents-list&quot; role=&quot;navigation&quot; aria-label=&quot;Pages in this guide&quot;&gt;
+    &lt;h2 class=&quot;nhsuk-u-visually-hidden&quot;&gt;Contents&lt;/h2&gt;
+    &lt;ol class=&quot;nhsuk-contents-list__list&quot;&gt;
+      &lt;li class=&quot;nhsuk-contents-list__item&quot; aria-current=&quot;page&quot;&gt;
+        &lt;span class=&quot;nhsuk-contents-list__current&quot;&gt;What is AMD?&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nhsuk-contents-list__item&quot;&gt;
+        &lt;a class=&quot;nhsuk-contents-list__link&quot; href=&quot;https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/symptoms/&quot;&gt;Symptoms&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nhsuk-contents-list__item&quot;&gt;
+        &lt;a class=&quot;nhsuk-contents-list__link&quot; href=&quot;https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/getting-diagnosed/&quot;&gt;Getting diagnosed&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nhsuk-contents-list__item&quot;&gt;
+        &lt;a class=&quot;nhsuk-contents-list__link&quot; href=&quot;https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/treatment/&quot;&gt;Treatments&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nhsuk-contents-list__item&quot;&gt;
+        &lt;a class=&quot;nhsuk-contents-list__link&quot; href=&quot;https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/living-with-amd/&quot;&gt;Living with AMD&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
         </div>
       </div>
     </div>
