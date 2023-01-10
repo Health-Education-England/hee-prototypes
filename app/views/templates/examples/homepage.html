@@ -62,6 +62,15 @@
   }) }}
 {% endblock %}
 
+{% block headerStart %}
+  <div class="site-notifications">
+    {{ globalAlert({
+      customClass: "hee-globalalert--dark-pink",
+      HTML: "<p><strong>Alert message:</strong> This is a <a href=\"#\">link</a>.</p>"
+    })}}
+  </div>
+{% endblock %}
+
 {% block pageMain %}
 <div class="nhsuk-width-container">
   <section class="nhsuk-section__content">

@@ -1,0 +1,145 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'main-region-picker' %}
+{% set page_title = 'Region Picker' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: basePath + "/",
+            text: "Home"
+        },
+        {
+            href: basePath + "/blocks",
+            text: "Blocks"
+        },
+        {
+            href: basePath + "/blocks/content",
+            text: "Content"
+        }
+    ],
+        href: basePath + "/blocks/" + page_url,
+      text: page_title
+    }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'blocks',
+    subarea: 'content'
+}) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Main</span>
+    <h1>{{ page_title }}</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+<p>Allows visitors to view region based content by clicking an area an SVG based map.</p>
+
+<h3>Example</h3>
+{{ example({
+    view: 'block',
+    url: basePath + '/blocks/content/examples/' + page_url,
+    height: '620'
+}) }}
+
+<hr />
+
+<h3>Macro</h3>
+{{ highlight({
+  html: '
+{{ navMap({
+    src: "/images/nav-maps/dental-regions.svg",
+    caption: {
+      items: [
+        {
+          id: "lk",
+          url: "#",
+          text: "London and Kent, Surrey and Sussex (KSS)"
+        },
+        {
+          id: "me",
+          url: "#",
+          text: "Midlands and the East"
+        },
+        {
+          id: "nenc",
+          url: "#",
+          text: "North East and North Cumbria"
+        },
+        {
+          id: "nw",
+          url: "#",
+          text: "North West"
+        },
+        {
+          id: "sw",
+          url: "#",
+          text: "South West"
+        },
+        {
+          id: "tvw",
+          url: "#",
+          text: "Thames Valley and Wessex"
+        },
+        {
+          id: "yh",
+          url: "#",
+          text: "Yorkshire and the Humber"
+        }
+      ]
+    }
+}) }}
+  '
+}) }}
+
+<hr />
+
+<h3>HTML</h3>
+{{ highlight({
+  html : '
+<figure class="nhsuk-map">
+    <figcaption class="nhsuk-map__caption">
+      <ul id="regionList">
+        <li>
+          <a id="lk" href="#"> London and Kent, Surrey and Sussex (KSS) </a>
+        </li>
+        <li>
+          <a id="me" href="#"> Midlands and the East </a>
+        </li>
+        <li>
+          <a id="nenc" href="#" class=""> North East and North Cumbria </a>
+        </li>
+        <li>
+          <a id="nw" href="#"> North West </a>
+        </li>
+        <li>
+          <a id="sw" href="#"> South West </a>
+        </li>
+        <li>
+          <a id="tvw" href="#"> Thames Valley and Wessex </a>
+        </li>
+        <li>
+          <a id="yh" href="#"> Yorkshire and the Humber </a>
+        </li>
+      </ul>
+    </figcaption>
+    <object class="nhsuk-map__image" data="/images/nav-maps/dental-regions.svg" type="image/svg+xml" tabindex="-1">
+    </object>
+</figure>
+  '
+  }) 
+}}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}
