@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Card--Person - Templates - NWP Prototype Kit</title>
+  <title>Tabs - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -63,9 +63,9 @@
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks">Blocks</a></li>
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/content">Content</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/sidebar-card-person">Card--Person</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/main-tabs">Tabs</a></li>
           </ol>
-          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/sidebar-card-person">Back to Card--Person</a></p>
+          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/main-tabs">Back to Tabs</a></p>
         </div>
       </nav>
     </div>
@@ -117,67 +117,98 @@
         <div class="page__main">
           <div class="page__header">
             <span class="nhsuk-caption-xl">Main</span>
-            <h1>Card--Person</h1>
+            <h1>Tabs</h1>
             <p class="nhsuk-lede-text"></p>
           </div>
-          <p>You can find the content type data model in the <a href="https://hee-tis.atlassian.net/wiki/spaces/NWPK/pages/3615719425/Person">Person specification</a>.</p>
+          <p>Provides content contained within blocks controlled by tabbed navigation.</p>
           <h3>Example</h3>
           <div class="prototype__example block">
-            <a href="/hee-prototypes/blocks/content/examples/sidebar-card-person.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
+            <a href="/hee-prototypes/blocks/content/examples/main-tabs.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
             <div class="thumbnail">
-              <iframe src="/hee-prototypes/blocks/content/examples/sidebar-card-person.html" height="640"></iframe>
+              <iframe src="/hee-prototypes/blocks/content/examples/main-tabs.html" height="620"></iframe>
             </div>
           </div>
           <hr />
           <h3>Macro</h3>
           <pre><code>
-{{ personCard({
-  title: &quot;Dr&quot;,
-  name: &quot;Bobby Smith&quot;, 
-  initials: &quot;BS&quot;,
-  pronouns: &quot;They/them&quot;,
-  jobTitle: &quot;Content Editor&quot;,
-  department: &quot;National Website Platform&quot;,
-  organisation: &quot;NHS UK&quot;,
-  workAddress: {
-    line1: &quot;2 Stephenson St&quot;,
-    line2: &quot;&quot;,
-    line3: &quot;&quot;,
-    city: &quot;Birmingham&quot;,
-    county: &quot;West Midlands&quot;,
-    postcode: &quot;B1 2SE&quot;
-  },
-  image: &quot;&quot;,
-  email: &quot;bobby.smithandthelongestemail@hee.co.uk&quot;,
-  telephone: &quot;01162344444&quot;,
-  website: &quot;http://nhs.uk/&quot;,
-  twitter: &quot;nhsengland&quot;,
-  linkedIn: &quot;nhs&quot;
+{% set tabOneContent %}
+    &lt;img src=&quot;{{ basePath }}/images/young-child-using-tablet-device.jpg&quot; alt=&quot;&quot; /&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+{% endset -%}
+
+{% set tabTwoContent %}
+    &lt;p&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.&lt;/p&gt;
+{% endset -%}
+
+{% set tabThreeContent %}
+    &lt;p&gt;Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?&lt;/p&gt;
+{% endset -%}
+
+{{ tabs({
+    uniqueId: &quot;tabsone&quot;,
+    title: &quot;Tab component&quot;,
+    items: [
+      {
+        label: &quot;Tab one&quot;,
+        panel: {
+        html: tabOneContent
+      }
+      },
+      {
+        label: &quot;Tab two&quot;,
+        panel: {
+        html: tabTwoContent
+      }
+      },
+      {
+        label: &quot;Tab three&quot;,
+        panel: {
+        html: tabThreeContent
+      }
+      }
+    ]
 }) }}
   </code></pre>
           <hr />
           <h3>HTML</h3>
           <pre><code>
-&lt;div class=&quot;hee-card hee-card--person&quot;&gt;
-    &lt;div class=&quot;hee-card__image&quot;&gt;
-      &lt;div class=&quot;hee-card__initials&quot;&gt;
-        &lt;span&gt;BS&lt;/span&gt;
+&lt;div class=&quot;nhsuk-tabs hee-tabs&quot;&gt;
+    &lt;h2 class=&quot;nhsuk-tabs__title&quot;&gt;Tab component&lt;/h2&gt;
+    &lt;div class=&quot;nhsuk-tabs__desktop&quot;&gt;
+      &lt;div class=&quot;nhsuk-tabs__list&quot; role=&quot;tablist&quot; aria-label=&quot;Tab component&quot; data-module=&quot;nhsuk-tabs&quot;&gt;
+        &lt;button class=&quot;nhsuk-tabs__list-item nhsuk-tabs__list-item--selected&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot; aria-controls=&quot;tabsone-panel-1&quot; id=&quot;tabsone-tab-1&quot; tabindex=&quot;0&quot;&gt; Tab one &lt;/button&gt;
+        &lt;button class=&quot;nhsuk-tabs__list-item&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot; aria-controls=&quot;tabsone-panel-2&quot; id=&quot;tabsone-tab-2&quot; tabindex=&quot;0&quot;&gt; Tab two &lt;/button&gt;
+        &lt;button class=&quot;nhsuk-tabs__list-item&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot; aria-controls=&quot;tabsone-panel-3&quot; id=&quot;tabsone-tab-3&quot; tabindex=&quot;0&quot;&gt; Tab three &lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;nhsuk-tabs__panel&quot; id=&quot;tabsone-panel-1&quot; role=&quot;tabpanel&quot; tabindex=&quot;0&quot; aria-labelledby=&quot;tabsone-tab-1&quot;&gt;
+        &lt;img src=&quot;/images/young-child-using-tablet-device.jpg&quot; alt=&quot;&quot;&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;nhsuk-tabs__panel&quot; id=&quot;tabsone-panel-2&quot; role=&quot;tabpanel&quot; tabindex=&quot;0&quot; aria-labelledby=&quot;tabsone-tab-2&quot; hidden=&quot;&quot;&gt;
+        &lt;p&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;nhsuk-tabs__panel&quot; id=&quot;tabsone-panel-3&quot; role=&quot;tabpanel&quot; tabindex=&quot;0&quot; aria-labelledby=&quot;tabsone-tab-3&quot; hidden=&quot;&quot;&gt;
+        &lt;p&gt;Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?&lt;/p&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-    &lt;h2 class=&quot;hee-card__name&quot; aria-label=&quot;Name&quot;&gt; Dr Bobby Smith &lt;/h2&gt;
-    &lt;span class=&quot;hee-card__pronouns&quot;&gt;They/them&lt;/span&gt;
-    &lt;p class=&quot;hee-card__department&quot; aria-label=&quot;Department&quot;&gt;National Website Platform&lt;/p&gt;
-    &lt;p class=&quot;hee-card__organisation&quot; aria-label=&quot;Organisation&quot;&gt;NHS UK&lt;/p&gt;
-    &lt;hr&gt;
-    &lt;ul class=&quot;hee-card__contact&quot;&gt;
-      &lt;li class=&quot;hee-card__telephone&quot; aria-label=&quot;Telephone&quot;&gt;&lt;a href=&quot;tel:01162344444;&quot;&gt;01162344444&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&quot;hee-card__email&quot; aria-label=&quot;Email&quot;&gt;&lt;a href=&quot;mailto:bobby.smithandthelongestemail@hee.co.uk;&quot;&gt;bobby.smithandthelongestemail@hee.co.uk&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&quot;hee-card__website&quot; aria-label=&quot;Website&quot;&gt;&lt;a href=&quot;http://nhs.uk/&quot;&gt;http://nhs.uk/&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&quot;hee-card__twitter&quot; aria-label=&quot;Twitter&quot;&gt;&lt;a href=&quot;https://twitter.com/nhsengland&quot;&gt;@nhsengland&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;p class=&quot;hee-card__address&quot; aria-label=&quot;Address&quot;&gt;
-    &lt;/p&gt;
-  &lt;/div&gt;
+    &lt;div class=&quot;nhsuk-tabs__mobile&quot;&gt;
+      &lt;div class=&quot;nhsuk-tabs__list&quot; role=&quot;tablist&quot; aria-label=&quot;Tab component&quot; data-module=&quot;nhsuk-tabs&quot;&gt;
+        &lt;button class=&quot;nhsuk-tabs__list-item&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot; aria-controls=&quot;tabsone-panel-mobile-1&quot; id=&quot;tabsone-tab-mobile-1&quot; tabindex=&quot;0&quot;&gt; Tab one &lt;/button&gt;
+        &lt;div class=&quot;nhsuk-tabs__panel&quot; id=&quot;tabsone-panel-mobile-1&quot; role=&quot;tabpanel&quot; tabindex=&quot;0&quot; aria-labelledby=&quot;tabsone-tab-mobile-1&quot; hidden=&quot;&quot;&gt;
+          &lt;img src=&quot;/images/young-child-using-tablet-device.jpg&quot; alt=&quot;&quot;&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;button class=&quot;nhsuk-tabs__list-item&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot; aria-controls=&quot;tabsone-panel-mobile-2&quot; id=&quot;tabsone-tab-mobile-2&quot; tabindex=&quot;0&quot;&gt; Tab two &lt;/button&gt;
+        &lt;div class=&quot;nhsuk-tabs__panel&quot; id=&quot;tabsone-panel-mobile-2&quot; role=&quot;tabpanel&quot; tabindex=&quot;0&quot; aria-labelledby=&quot;tabsone-tab-mobile-2&quot; hidden=&quot;&quot;&gt;
+          &lt;p&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;button class=&quot;nhsuk-tabs__list-item&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot; aria-controls=&quot;tabsone-panel-mobile-3&quot; id=&quot;tabsone-tab-mobile-3&quot; tabindex=&quot;0&quot;&gt; Tab three &lt;/button&gt;
+        &lt;div class=&quot;nhsuk-tabs__panel&quot; id=&quot;tabsone-panel-mobile-3&quot; role=&quot;tabpanel&quot; tabindex=&quot;0&quot; aria-labelledby=&quot;tabsone-tab-mobile-3&quot; hidden=&quot;&quot;&gt;
+          &lt;p&gt;Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
   </code></pre>
         </div>
       </div>

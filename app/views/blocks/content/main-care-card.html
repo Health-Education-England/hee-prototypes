@@ -1,0 +1,198 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'main-care-card' %}
+{% set page_title = 'Care Card' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: basePath + "/",
+            text: "Home"
+        },
+        {
+            href: basePath + "/blocks",
+            text: "Blocks"
+        },
+        {
+            href: basePath + "/blocks/content",
+            text: "Content"
+        }
+    ],
+        href: basePath + "/blocks/" + page_url,
+      text: page_title
+    }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'blocks',
+    subarea: 'content'
+}) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Main</span>
+    <h1>{{ page_title }}</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+<p>Card used to describe care instructions to visitors. Comes in three variants:</p>
+
+<ul>
+    <li><strong>non-urgent</strong></li>
+    <li><strong>urgent</strong></li>
+    <li><strong>immediate</strong></li>
+</ul>
+
+<h3>Example</h3>
+{{ example({
+    view: 'block',
+    url: basePath + '/blocks/content/examples/' + page_url,
+    height: '620'
+}) }}
+
+<hr />
+
+<h3>Macro - Non-urgent</h3>
+{{ highlight({
+  html: '
+  {{ careCard({
+    type: "non-urgent",
+    heading: "Speak to a GP if:",
+    HTML: "
+            <ul>
+              <li>You\'re not sure it\'s chickenpox</li>
+              <li>The skin around the blisters is red, hot or painful (signs of infection)</li>
+              <li>Your child is <a href=\"https://www.nhs.uk/conditions/dehydration\">dehydrated</a></li>
+              <li>You\'re concerned about your child or they get worse</li>
+            </ul>
+            <p>Tell the receptionist you think it\'s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.</p>
+          "
+  }) }}
+  '
+}) }}
+
+<hr />
+
+<h3>HTML - Non-urgent</h3>
+{{ highlight({
+  html : '
+<div class="nhsuk-care-card nhsuk-care-card--non-urgent">
+    <div class="nhsuk-care-card__heading-container">
+      <h3 class="nhsuk-care-card__heading"><span role="text"><span class="nhsuk-u-visually-hidden">Non-urgent advice: </span>Speak to a GP if:</span></h3>
+      <span class="nhsuk-care-card__arrow" aria-hidden="true"></span>
+    </div>
+    <div class="nhsuk-care-card__content">
+      <ul>
+        <li>You\'re not sure it\'s chickenpox</li>
+        <li>The skin around the blisters is red, hot or painful (signs of infection)</li>
+        <li>Your child is <a href="https://www.nhs.uk/conditions/dehydration">dehydrated</a></li>
+        <li>You\'re concerned about your child or they get worse</li>
+    </ul>
+    <p>Tell the receptionist you think it\'s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.</p>
+    </div>
+</div>
+  '
+  }) 
+}}
+
+<hr />
+
+<h3>Macro - Urgent</h3>
+{{ highlight({
+    html:
+    '{{ careCard({
+    type: "Urgent",
+    heading: "Speak to a GP if:",
+    HTML: "
+            <ul>
+              <li>You\'re not sure it\'s chickenpox</li>
+              <li>The skin around the blisters is red, hot or painful (signs of infection)</li>
+              <li>Your child is <a href=\"https://www.nhs.uk/conditions/dehydration\">dehydrated</a></li>
+              <li>You\'re concerned about your child or they get worse</li>
+            </ul>
+            <p>Tell the receptionist you think it\'s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.</p>
+          "
+}) }}
+'
+}) }}
+
+<hr />
+
+<h3>HTML - Urgent</h3>
+{{ highlight({
+    html : '
+<div class="nhsuk-care-card nhsuk-care-card--urgent">
+    <div class="nhsuk-care-card__heading-container">
+      <h3 class="nhsuk-care-card__heading"><span role="text"><span class="nhsuk-u-visually-hidden">Non-urgent advice: </span>Speak to a GP if:</span></h3>
+      <span class="nhsuk-care-card__arrow" aria-hidden="true"></span>
+    </div>
+    <div class="nhsuk-care-card__content">
+      <ul>
+        <li>You\'re not sure it\'s chickenpox</li>
+        <li>The skin around the blisters is red, hot or painful (signs of infection)</li>
+        <li>Your child is <a href="https://www.nhs.uk/conditions/dehydration">dehydrated</a></li>
+        <li>You\'re concerned about your child or they get worse</li>
+    </ul>
+    <p>Tell the receptionist you think it\'s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.</p>
+    </div>
+</div>
+'
+})
+}}
+
+<hr />
+
+<h3>Macro - Immediate</h3>
+{{ highlight({
+    html: '
+{{ careCard({
+    type: "immediate",
+    heading: "Speak to a GP if:",
+    HTML: "
+            <ul>
+              <li>You\'re not sure it\'s chickenpox</li>
+              <li>The skin around the blisters is red, hot or painful (signs of infection)</li>
+              <li>Your child is <a href=\"https://www.nhs.uk/conditions/dehydration\">dehydrated</a></li>
+              <li>You\'re concerned about your child or they get worse</li>
+            </ul>
+            <p>Tell the receptionist you think it\'s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.</p>
+          "
+}) }}
+'
+}) }}
+
+<hr />
+
+<h3>HTML - Immediate</h3>
+{{ highlight({
+    html : '
+<div class="nhsuk-care-card nhsuk-care-card--immediate">
+    <div class="nhsuk-care-card__heading-container">
+      <h3 class="nhsuk-care-card__heading"><span role="text"><span class="nhsuk-u-visually-hidden">Non-urgent advice: </span>Speak to a GP if:</span></h3>
+      <span class="nhsuk-care-card__arrow" aria-hidden="true"></span>
+    </div>
+    <div class="nhsuk-care-card__content">
+      <ul>
+        <li>You\'re not sure it\'s chickenpox</li>
+        <li>The skin around the blisters is red, hot or painful (signs of infection)</li>
+        <li>Your child is <a href="https://www.nhs.uk/conditions/dehydration">dehydrated</a></li>
+        <li>You\'re concerned about your child or they get worse</li>
+    </ul>
+    <p>Tell the receptionist you think it\'s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.</p>
+    </div>
+</div>
+'
+})
+}}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Card--Person - Templates - NWP Prototype Kit</title>
+  <title>Care Card - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -63,9 +63,9 @@
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks">Blocks</a></li>
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/content">Content</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/sidebar-card-person">Card--Person</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/main-care-card">Care Card</a></li>
           </ol>
-          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/sidebar-card-person">Back to Card--Person</a></p>
+          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/main-care-card">Back to Care Card</a></p>
         </div>
       </nav>
     </div>
@@ -117,68 +117,129 @@
         <div class="page__main">
           <div class="page__header">
             <span class="nhsuk-caption-xl">Main</span>
-            <h1>Card--Person</h1>
+            <h1>Care Card</h1>
             <p class="nhsuk-lede-text"></p>
           </div>
-          <p>You can find the content type data model in the <a href="https://hee-tis.atlassian.net/wiki/spaces/NWPK/pages/3615719425/Person">Person specification</a>.</p>
+          <p>Card used to describe care instructions to visitors. Comes in three variants:</p>
+          <ul>
+            <li><strong>non-urgent</strong></li>
+            <li><strong>urgent</strong></li>
+            <li><strong>immediate</strong></li>
+          </ul>
           <h3>Example</h3>
           <div class="prototype__example block">
-            <a href="/hee-prototypes/blocks/content/examples/sidebar-card-person.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
+            <a href="/hee-prototypes/blocks/content/examples/main-care-card.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
             <div class="thumbnail">
-              <iframe src="/hee-prototypes/blocks/content/examples/sidebar-card-person.html" height="640"></iframe>
+              <iframe src="/hee-prototypes/blocks/content/examples/main-care-card.html" height="620"></iframe>
             </div>
           </div>
           <hr />
-          <h3>Macro</h3>
+          <h3>Macro - Non-urgent</h3>
           <pre><code>
-{{ personCard({
-  title: &quot;Dr&quot;,
-  name: &quot;Bobby Smith&quot;, 
-  initials: &quot;BS&quot;,
-  pronouns: &quot;They/them&quot;,
-  jobTitle: &quot;Content Editor&quot;,
-  department: &quot;National Website Platform&quot;,
-  organisation: &quot;NHS UK&quot;,
-  workAddress: {
-    line1: &quot;2 Stephenson St&quot;,
-    line2: &quot;&quot;,
-    line3: &quot;&quot;,
-    city: &quot;Birmingham&quot;,
-    county: &quot;West Midlands&quot;,
-    postcode: &quot;B1 2SE&quot;
-  },
-  image: &quot;&quot;,
-  email: &quot;bobby.smithandthelongestemail@hee.co.uk&quot;,
-  telephone: &quot;01162344444&quot;,
-  website: &quot;http://nhs.uk/&quot;,
-  twitter: &quot;nhsengland&quot;,
-  linkedIn: &quot;nhs&quot;
-}) }}
+  {{ careCard({
+    type: &quot;non-urgent&quot;,
+    heading: &quot;Speak to a GP if:&quot;,
+    HTML: &quot;
+            &lt;ul&gt;
+              &lt;li&gt;You&#39;re not sure it&#39;s chickenpox&lt;/li&gt;
+              &lt;li&gt;The skin around the blisters is red, hot or painful (signs of infection)&lt;/li&gt;
+              &lt;li&gt;Your child is &lt;a href=&quot;https://www.nhs.uk/conditions/dehydration&quot;&gt;dehydrated&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;You&#39;re concerned about your child or they get worse&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;p&gt;Tell the receptionist you think it&#39;s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.&lt;/p&gt;
+          &quot;
+  }) }}
   </code></pre>
           <hr />
-          <h3>HTML</h3>
+          <h3>HTML - Non-urgent</h3>
           <pre><code>
-&lt;div class=&quot;hee-card hee-card--person&quot;&gt;
-    &lt;div class=&quot;hee-card__image&quot;&gt;
-      &lt;div class=&quot;hee-card__initials&quot;&gt;
-        &lt;span&gt;BS&lt;/span&gt;
-      &lt;/div&gt;
+&lt;div class=&quot;nhsuk-care-card nhsuk-care-card--non-urgent&quot;&gt;
+    &lt;div class=&quot;nhsuk-care-card__heading-container&quot;&gt;
+      &lt;h3 class=&quot;nhsuk-care-card__heading&quot;&gt;&lt;span role=&quot;text&quot;&gt;&lt;span class=&quot;nhsuk-u-visually-hidden&quot;&gt;Non-urgent advice: &lt;/span&gt;Speak to a GP if:&lt;/span&gt;&lt;/h3&gt;
+      &lt;span class=&quot;nhsuk-care-card__arrow&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
     &lt;/div&gt;
-    &lt;h2 class=&quot;hee-card__name&quot; aria-label=&quot;Name&quot;&gt; Dr Bobby Smith &lt;/h2&gt;
-    &lt;span class=&quot;hee-card__pronouns&quot;&gt;They/them&lt;/span&gt;
-    &lt;p class=&quot;hee-card__department&quot; aria-label=&quot;Department&quot;&gt;National Website Platform&lt;/p&gt;
-    &lt;p class=&quot;hee-card__organisation&quot; aria-label=&quot;Organisation&quot;&gt;NHS UK&lt;/p&gt;
-    &lt;hr&gt;
-    &lt;ul class=&quot;hee-card__contact&quot;&gt;
-      &lt;li class=&quot;hee-card__telephone&quot; aria-label=&quot;Telephone&quot;&gt;&lt;a href=&quot;tel:01162344444;&quot;&gt;01162344444&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&quot;hee-card__email&quot; aria-label=&quot;Email&quot;&gt;&lt;a href=&quot;mailto:bobby.smithandthelongestemail@hee.co.uk;&quot;&gt;bobby.smithandthelongestemail@hee.co.uk&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&quot;hee-card__website&quot; aria-label=&quot;Website&quot;&gt;&lt;a href=&quot;http://nhs.uk/&quot;&gt;http://nhs.uk/&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&quot;hee-card__twitter&quot; aria-label=&quot;Twitter&quot;&gt;&lt;a href=&quot;https://twitter.com/nhsengland&quot;&gt;@nhsengland&lt;/a&gt;&lt;/li&gt;
+    &lt;div class=&quot;nhsuk-care-card__content&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;You&#39;re not sure it&#39;s chickenpox&lt;/li&gt;
+        &lt;li&gt;The skin around the blisters is red, hot or painful (signs of infection)&lt;/li&gt;
+        &lt;li&gt;Your child is &lt;a href=&quot;https://www.nhs.uk/conditions/dehydration&quot;&gt;dehydrated&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;You&#39;re concerned about your child or they get worse&lt;/li&gt;
     &lt;/ul&gt;
-    &lt;p class=&quot;hee-card__address&quot; aria-label=&quot;Address&quot;&gt;
-    &lt;/p&gt;
-  &lt;/div&gt;
+    &lt;p&gt;Tell the receptionist you think it&#39;s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
   </code></pre>
+          <hr />
+          <h3>Macro - Urgent</h3>
+          <pre><code>{{ careCard({
+    type: &quot;Urgent&quot;,
+    heading: &quot;Speak to a GP if:&quot;,
+    HTML: &quot;
+            &lt;ul&gt;
+              &lt;li&gt;You&#39;re not sure it&#39;s chickenpox&lt;/li&gt;
+              &lt;li&gt;The skin around the blisters is red, hot or painful (signs of infection)&lt;/li&gt;
+              &lt;li&gt;Your child is &lt;a href=&quot;https://www.nhs.uk/conditions/dehydration&quot;&gt;dehydrated&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;You&#39;re concerned about your child or they get worse&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;p&gt;Tell the receptionist you think it&#39;s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.&lt;/p&gt;
+          &quot;
+}) }}
+</code></pre>
+          <hr />
+          <h3>HTML - Urgent</h3>
+          <pre><code>
+&lt;div class=&quot;nhsuk-care-card nhsuk-care-card--urgent&quot;&gt;
+    &lt;div class=&quot;nhsuk-care-card__heading-container&quot;&gt;
+      &lt;h3 class=&quot;nhsuk-care-card__heading&quot;&gt;&lt;span role=&quot;text&quot;&gt;&lt;span class=&quot;nhsuk-u-visually-hidden&quot;&gt;Non-urgent advice: &lt;/span&gt;Speak to a GP if:&lt;/span&gt;&lt;/h3&gt;
+      &lt;span class=&quot;nhsuk-care-card__arrow&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;nhsuk-care-card__content&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;You&#39;re not sure it&#39;s chickenpox&lt;/li&gt;
+        &lt;li&gt;The skin around the blisters is red, hot or painful (signs of infection)&lt;/li&gt;
+        &lt;li&gt;Your child is &lt;a href=&quot;https://www.nhs.uk/conditions/dehydration&quot;&gt;dehydrated&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;You&#39;re concerned about your child or they get worse&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;Tell the receptionist you think it&#39;s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+          <hr />
+          <h3>Macro - Immediate</h3>
+          <pre><code>
+{{ careCard({
+    type: &quot;immediate&quot;,
+    heading: &quot;Speak to a GP if:&quot;,
+    HTML: &quot;
+            &lt;ul&gt;
+              &lt;li&gt;You&#39;re not sure it&#39;s chickenpox&lt;/li&gt;
+              &lt;li&gt;The skin around the blisters is red, hot or painful (signs of infection)&lt;/li&gt;
+              &lt;li&gt;Your child is &lt;a href=&quot;https://www.nhs.uk/conditions/dehydration&quot;&gt;dehydrated&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;You&#39;re concerned about your child or they get worse&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;p&gt;Tell the receptionist you think it&#39;s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.&lt;/p&gt;
+          &quot;
+}) }}
+</code></pre>
+          <hr />
+          <h3>HTML - Immediate</h3>
+          <pre><code>
+&lt;div class=&quot;nhsuk-care-card nhsuk-care-card--immediate&quot;&gt;
+    &lt;div class=&quot;nhsuk-care-card__heading-container&quot;&gt;
+      &lt;h3 class=&quot;nhsuk-care-card__heading&quot;&gt;&lt;span role=&quot;text&quot;&gt;&lt;span class=&quot;nhsuk-u-visually-hidden&quot;&gt;Non-urgent advice: &lt;/span&gt;Speak to a GP if:&lt;/span&gt;&lt;/h3&gt;
+      &lt;span class=&quot;nhsuk-care-card__arrow&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;nhsuk-care-card__content&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;You&#39;re not sure it&#39;s chickenpox&lt;/li&gt;
+        &lt;li&gt;The skin around the blisters is red, hot or painful (signs of infection)&lt;/li&gt;
+        &lt;li&gt;Your child is &lt;a href=&quot;https://www.nhs.uk/conditions/dehydration&quot;&gt;dehydrated&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;You&#39;re concerned about your child or they get worse&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;Tell the receptionist you think it&#39;s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
         </div>
       </div>
     </div>

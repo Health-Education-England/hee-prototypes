@@ -1,0 +1,46 @@
+{% extends "example-blocks.html" %}
+
+{% block main %}
+  {{ navMap({
+    src: "/images/nav-maps/dental-regions.svg",
+    caption: {
+      items: [
+        {
+          id: "lk",
+          url: "#",
+          text: "London and Kent, Surrey and Sussex (KSS)"
+        },
+        {
+          id: "me",
+          url: "#",
+          text: "Midlands and the East"
+        },
+        {
+          id: "nenc",
+          url: "#",
+          text: "North East and North Cumbria"
+        },
+        {
+          id: "nw",
+          url: "#",
+          text: "North West"
+        },
+        {
+          id: "sw",
+          url: "#",
+          text: "South West"
+        },
+        {
+          id: "tvw",
+          url: "#",
+          text: "Thames Valley and Wessex"
+        },
+        {
+          id: "yh",
+          url: "#",
+          text: "Yorkshire and the Humber"
+        }
+      ]
+    }
+  }) }}
+{% endblock %}
