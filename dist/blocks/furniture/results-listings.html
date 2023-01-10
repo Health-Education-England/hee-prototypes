@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Go Back - Templates - NWP Prototype Kit</title>
+  <title>Results listings - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -62,10 +62,9 @@
           <ol class="nhsuk-breadcrumb__list">
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks">Blocks</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/furniture">Furniture</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/furniture/content-goback">Go Back</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/results-listings">Results listings</a></li>
           </ol>
-          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/furniture/content-goback">Back to Go Back</a></p>
+          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/results-listings">Back to Results listings</a></p>
         </div>
       </nav>
     </div>
@@ -126,38 +125,104 @@
         <div class="page__main">
           <div class="page__header">
             <span class="nhsuk-caption-xl">Furniture</span>
-            <h1>Go Back</h1>
+            <h1>Results listings</h1>
             <p class="nhsuk-lede-text"></p>
           </div>
           <h3>Example</h3>
           <div class="prototype__example block">
-            <a href="/hee-prototypes/blocks/furniture/examples/content-goback.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
+            <a href="/hee-prototypes/blocks/furniture/examples/results-listings.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
             <div class="thumbnail">
-              <iframe src="/hee-prototypes/blocks/furniture/examples/content-goback.html" height="100px"></iframe>
+              <iframe src="/hee-prototypes/blocks/furniture/examples/results-listings.html" height="500"></iframe>
             </div>
           </div>
           <hr />
           <h3>Macro</h3>
           <pre><code>
-{%- from &quot;back-link/macro.njk&quot; import backLink %}
-
-{{ backLink({
-    href: basePath + &quot;/publications&quot;,
-    text: &quot;Publications&quot;
-}) }}
+{{ filter({
+    groups: [
+      {
+        title: &quot;Topic&quot;,
+        showClearToggle: true,
+        items: [
+        {
+          text: &quot;Item one&quot;,
+          value: &quot;item_one&quot;,
+          checked: true
+        },
+        {
+          text: &quot;Item two&quot;,
+          value: &quot;item_two&quot;,
+          checked: true
+        }
+      ]
+      },
+      {
+        title: &quot;Publication type&quot;,
+        items: [
+        {
+          text: &quot;Item one&quot;,
+          value: &quot;item_one&quot;
+        },
+        {
+          text: &quot;Item two&quot;,
+          value: &quot;item_two&quot;
+        },
+        {
+          text: &quot;Item three&quot;,
+          value: &quot;item_three&quot;
+        }
+      ]
+      }
+    ]
+  }) }}
   </code></pre>
           <hr />
           <h3>HTML</h3>
-          <pre><code>
-&lt;div class=&quot;nhsuk-back-link&quot;&gt;
-    &lt;a class=&quot;nhsuk-back-link__link&quot; href=&quot;/publications&quot;&gt;
-        &lt;svg class=&quot;nhsuk-icon nhsuk-icon__chevron-left&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot;&gt;
-            &lt;path d=&quot;M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z&quot;&gt;&lt;/path&gt;
-        &lt;/svg&gt; 
-        Publications
-    &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
+          <pre><code>&lt;form class=&quot;nhsuk-filter nhsuk-filter--js&quot; method=&quot;get&quot;&gt;
+    &lt;p class=&quot;nhsuk-filter__title nhsuk-heading-l&quot;&gt;Filters&lt;/p&gt;
+    &lt;div class=&quot;nhsuk-filter__groups&quot;&gt;
+      &lt;div class=&quot;nhsuk-filter__group&quot;&gt;
+        &lt;a class=&quot;nhsuk-filter__group__clear&quot; href=&quot;#&quot;&gt;Clear&lt;/a&gt;
+        &lt;div class=&quot;nhsuk-form-group&quot;&gt;
+          &lt;fieldset class=&quot;nhsuk-fieldset&quot;&gt;
+            &lt;legend class=&quot;nhsuk-fieldset__legend&quot;&gt; Topic &lt;/legend&gt;
+            &lt;div class=&quot;nhsuk-checkboxes&quot;&gt;
+              &lt;div class=&quot;nhsuk-checkboxes__item&quot;&gt;
+                &lt;input class=&quot;nhsuk-checkboxes__input&quot; id=&quot;filter_Topic-1&quot; name=&quot;filter&quot; type=&quot;checkbox&quot; value=&quot;item_one&quot; checked=&quot;&quot;&gt;
+                &lt;label class=&quot;nhsuk-label nhsuk-checkboxes__label&quot; for=&quot;filter_Topic-1&quot;&gt; Item one &lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;nhsuk-checkboxes__item&quot;&gt;
+                &lt;input class=&quot;nhsuk-checkboxes__input&quot; id=&quot;filter_Topic-2&quot; name=&quot;filter&quot; type=&quot;checkbox&quot; value=&quot;item_two&quot; checked=&quot;&quot;&gt;
+                &lt;label class=&quot;nhsuk-label nhsuk-checkboxes__label&quot; for=&quot;filter_Topic-2&quot;&gt; Item two &lt;/label&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/fieldset&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;nhsuk-filter__group&quot;&gt;
+        &lt;div class=&quot;nhsuk-form-group&quot;&gt;
+          &lt;fieldset class=&quot;nhsuk-fieldset&quot;&gt;
+            &lt;legend class=&quot;nhsuk-fieldset__legend&quot;&gt; Publication type &lt;/legend&gt;
+            &lt;div class=&quot;nhsuk-checkboxes&quot;&gt;
+              &lt;div class=&quot;nhsuk-checkboxes__item&quot;&gt;
+                &lt;input class=&quot;nhsuk-checkboxes__input&quot; id=&quot;filter_Publication type-1&quot; name=&quot;filter&quot; type=&quot;checkbox&quot; value=&quot;item_one&quot;&gt;
+                &lt;label class=&quot;nhsuk-label nhsuk-checkboxes__label&quot; for=&quot;filter_Publication type-1&quot;&gt; Item one &lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;nhsuk-checkboxes__item&quot;&gt;
+                &lt;input class=&quot;nhsuk-checkboxes__input&quot; id=&quot;filter_Publication type-2&quot; name=&quot;filter&quot; type=&quot;checkbox&quot; value=&quot;item_two&quot;&gt;
+                &lt;label class=&quot;nhsuk-label nhsuk-checkboxes__label&quot; for=&quot;filter_Publication type-2&quot;&gt; Item two &lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;nhsuk-checkboxes__item&quot;&gt;
+                &lt;input class=&quot;nhsuk-checkboxes__input&quot; id=&quot;filter_Publication type-3&quot; name=&quot;filter&quot; type=&quot;checkbox&quot; value=&quot;item_three&quot;&gt;
+                &lt;label class=&quot;nhsuk-label nhsuk-checkboxes__label&quot; for=&quot;filter_Publication type-3&quot;&gt; Item three &lt;/label&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/fieldset&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button class=&quot;nhsuk-button nhsuk-filter__submit&quot; type=&quot;submit&quot; hidden=&quot;&quot;&gt; Update results &lt;/button&gt;
+&lt;/form&gt;</code></pre>
         </div>
       </div>
     </div>
