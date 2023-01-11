@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Fullwidth - Templates - NWP Prototype Kit</title>
+  <title>Training Programmes Homepage - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -62,9 +62,10 @@
           <ol class="nhsuk-breadcrumb__list">
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates">Templates</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates/base-fullwidth">Fullwidth</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates/examples">Examples</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates/examples/training-programmes-homepage">Training Programmes Homepage</a></li>
           </ol>
-          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/templates/base-fullwidth">Back to Fullwidth</a></p>
+          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/templates/examples/training-programmes-homepage">Back to Training Programmes Homepage</a></p>
         </div>
       </nav>
     </div>
@@ -74,7 +75,7 @@
           <nav class="prototype__subnav">
             <h3>Fullwidth</h3>
             <ul>
-              <li class='current'><a href="/hee-prototypes/templates/base-fullwidth.html">Base</a></li>
+              <li><a href="/hee-prototypes/templates/base-fullwidth.html">Base</a></li>
               <li><a href="/hee-prototypes/templates/homepage.html">Homepage</a></li>
               <li><a href="/hee-prototypes/templates/landing-page.html">Landing Page</a></li>
               <li>404</li>
@@ -100,53 +101,70 @@
               <li><a href="/hee-prototypes/templates/publications-landing.html">Publication Landing</a></li>
               <li><a href="/hee-prototypes/templates/publications-item.html">Publication Item</a></li>
               <li><a href="/hee-prototypes/templates/event-item.html">Event Item</a></li>
-              <li><a href="/hee-prototypes/templates/training-programmes-homepage.html">Training Programmes Homepage</a></li>
+              <li class='current'><a href="/hee-prototypes/templates/training-programmes-homepage.html">Training Programmes Homepage</a></li>
             </ul>
           </nav>
         </div>
         <div class="page__main">
           <div class="page__header">
             <span class="nhsuk-caption-xl">Templates</span>
-            <h1>Fullwidth</h1>
-            <p class="nhsuk-lede-text">Typically used for landing pages.</p>
+            <h1>Training Programmes Homepage</h1>
+            <p class="nhsuk-lede-text">Typically used for the Training Programmes homepage.</p>
           </div>
-          <pre><code>&lt;main class=&quot;page page--fullwidth&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
-  &lt;div class=&quot;page__breadcrumbs&quot;&gt;[ BREADCRUMBS ]&lt;/div&gt;
+          <h2>Example</h2>
+          <div class="prototype__example scaled" style="height:400px;overflow:hidden;">
+            <a href="/hee-prototypes/templates/examples/training-programmes-homepage.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
+            <div class="thumbnail">
+              <iframe src="/hee-prototypes/templates/examples/training-programmes-homepage.html" height="780"></iframe>
+            </div>
+          </div>
+          <hr />
+          <h2>HTML</h2>
+          <pre><code>&lt;article class=&quot;page page--rightbar&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
+  &lt;div class=&quot;page__breadcrumbs&quot;&gt;[ INTEMPLATE_BREADCRUMBS ]&lt;/div&gt;
   &lt;div class=&quot;page__header&quot;&gt;
-    [ PAGE_MICROHERO ]
-    [ IF PAGE_HERO ]
-      [ PAGE_HERO ]
-    [ ELSE ]
-      &lt;div class=&quot;nhsuk-width-container&quot;&gt;
-        &lt;h1&gt;[ PAGE_TITLE ]&lt;/h1&gt;
-        &lt;span class=&quot;nhsuk-caption-xl&quot;&gt;[ PAGE_CAPTION ]&lt;/span&gt;
-        &lt;p class=&quot;nhsuk-lede-text&quot;&gt;[ PAGE_SUMMARY ]&lt;/p&gt;
-      &lt;/div&gt;
-    [ ENDIF ]
+  &lt;div class=&quot;nhsuk-width-container&quot;&gt;
+    [ PAGE_BACK ]
+    &lt;h1&gt;[ PAGE_TITLE ]&lt;/h1&gt;
+    &lt;span class=&quot;nhsuk-caption-xl&quot;&gt;[ PAGE_CAPTION ]&lt;/span&gt;
+    &lt;p class=&quot;nhsuk-lede-text&quot;&gt;[ PAGE_SUMMARY ]&lt;/p&gt;
+    [ PUBLISHED_INFO ]
+    [ TAXONOMIES ]
   &lt;/div&gt;
-  &lt;div class=&quot;page__main&quot;&gt;
-    &lt;div class=&quot;nhsuk-width-container&quot;&gt;
-      [ IF HOMEPAGE, LANDINGHUB, 404 ]
+  &lt;/div&gt;
+  &lt;div class=&quot;nhsuk-width-container&quot;&gt;
+  &lt;div class=&quot;page__layout&quot;&gt;
+    &lt;div class=&quot;page__main&quot;&gt;
       &lt;div class=&quot;page__content&quot;&gt;
         [ CONTENT--MAIN_BLOCKS ]
       &lt;/div&gt;
-      [ ELSEIF SEARCH_LISTING ]
-        [ SEARCH_INPUT ]
-        [ RESULTS_TITLE | RESULTS_SORTING ]
-        [ RESULTS_LISTING ]
-        [ RESULTS_PAGINATION ]
-      [ ELSEIF AZ_LISTING ]
-        [ AZLISTING_NAV ]
-        [ AZLISTING_RESULTS ]
-      [ ENDIF ]
+      [ PAGE_LASTUPDATED ]
     &lt;/div&gt;
+    &lt;aside class=&quot;page__rightbar&quot;&gt;
+      [ CONTENT--SIDEBAR_BLOCKS ]
+    &lt;/aside&gt;
+  &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;page__footer&quot;&gt;
+  [ INTEMPLATE_BACKTOTOP ]
   &lt;/div&gt;
   &lt;section class=&quot;page__feature&quot;&gt;
-    [ CONTENT--FEATURED_BLOCKS ]
+  [ CONTENT--FEATURED_BLOCKS ]
   &lt;/section&gt;
-&lt;/main&gt;</code></pre>
+  &lt;/article&gt;</code></pre>
+          <hr />
+          <h2>Components</h2>
+          <h4>Furniture</h4>
+          <ul>
+            <li>Page</li>
+            <li>Content</li>
+          </ul>
+          <h4>Content Blocks</h4>
+          <ul>
+            <li>Main</li>
+            <li>Sidebar</li>
+            <li>Featured</li>
+          </ul>
         </div>
       </div>
     </div>
