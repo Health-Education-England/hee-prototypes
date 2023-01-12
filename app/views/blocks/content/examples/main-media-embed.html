@@ -1,0 +1,23 @@
+{% extends "example-blocks.html" %}
+
+{% block main %}
+  {{ media({
+    title: "Pellentesque sit amet nulla",
+    description: "Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus.",
+    type: "youtube",
+    transcript: ["Donec pulvinar sollicitudin massa, nec pulvinar turpis dictum maximus."],
+    mediaId: "C0DPdy98e4c",
+    lastReview: "09/05/2022",
+    reviewDue: "09/05/2023"
+  }) }}
+
+  {{ media({
+    title: "Pellentesque sit amet nulla",
+    description: "Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus.",
+    type: "vimeo",
+    transcript: ["Donec pulvinar sollicitudin massa, nec pulvinar turpis dictum maximus."],
+    mediaId: "226053498",
+    lastReview: "09/05/2022",
+    reviewDue: "09/05/2023"
+  }) }}
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'filter-tag' %}
+{% set page_title = 'Filter Tag' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: basePath + "/",
+            text: "Home"
+        },
+        {
+            href: basePath + "/blocks",
+            text: "Blocks"
+        }
+    ],
+        href: basePath + "/blocks/"+page_url,
+      text: page_title
+    }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'blocks',
+    subarea: 'furniture'
+}) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Furniture</span>
+    <h1>{{ page_title }}</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+<h3>Example</h3>
+{{ example({
+    url: basePath + '/blocks/furniture/examples/' + page_url,
+    height: '200'
+}) }}
+
+<hr />
+
+<h3>Macro</h3>
+{{ highlight({
+  html: '{{ filterTag({
+  text: \'Text to appear on the tag\',
+  value: \'value-of-associated-filter\'
+}) }}'
+}) }}
+
+<hr />
+
+<h3>HTML</h3>
+{{ highlight({
+  html : '<div class="nhsuk-filter-tag nhsuk-tag nhsuk-filter-tag--js" data-filter="value-of-associated-filter">
+  <span>Text to appear on the tag</span>
+  <img class="nhsuk-filter-tag__icon" src="/images/icons/close.svg" alt="Remove">
+</div>'
+  }) 
+}}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

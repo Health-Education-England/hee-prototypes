@@ -1,0 +1,102 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'intemplate-breadcrumbs' %}
+{% set page_title = 'Breadcrumbs' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: basePath + "/",
+            text: "Home"
+        },
+        {
+            href: basePath + "/blocks",
+            text: "Blocks"
+        },
+        {
+            href: basePath + "/blocks/scaffolding",
+            text: "Scaffolding"
+        }
+    ],
+        href: basePath + "/blocks/scaffolding/"+page_url,
+        text: page_title
+    }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'blocks',
+    subarea: 'scaffolding'
+}) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Scaffolding</span>
+    <h1>{{ page_title }}</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+<p>Navigation trail displayed at the top of pages.</p>
+
+<h2>Example</h2>
+{{ example({
+    url: basePath + '/blocks/scaffolding/examples/' + page_url,
+    height: '400px'
+}) }}
+
+<hr />
+
+<h2>Macro</h2>
+{{ highlight({
+  html: '{{
+    breadcrumb({
+      items: [
+        {
+          href: basePath + "/",
+          text: "Home"
+        },
+        {
+          href: basePath + "/blocks",
+          text: "Blocks"
+        },
+        {
+          href: basePath + "/blocks/scaffolding",
+          text: "Scaffolding"
+        }
+      ],
+      href: "#",
+      text: "Breadcrumbs"
+    })
+}}'
+}) }}
+
+<hr />
+
+<h3>HTML</h3>
+{{ highlight({
+    html : '
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    <div class="nhsuk-width-container">
+      <ol class="nhsuk-breadcrumb__list">
+        <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
+        <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/blocks">Blocks</a></li>
+        <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/blocks/scaffolding">Scaffolding</a></li>
+        <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="#">Breadcrumbs</a></li>
+      </ol>
+      <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="#">Back to Breadcrumbs</a></p>
+    </div>
+</nav>
+'
+})
+}}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

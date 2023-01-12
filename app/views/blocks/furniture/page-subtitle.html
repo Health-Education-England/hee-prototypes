@@ -1,0 +1,65 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'page-subtitle' %}
+{% set page_title = 'Subtitle' %}
+{% set page_tag = 'NHS' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: basePath + "/",
+            text: "Home"
+        },
+        {
+            href: basePath + "/blocks",
+            text: "Blocks"
+        },
+        {
+            href: basePath + "/blocks/furniture",
+            text: "Furniture"
+        }
+    ],
+        href: basePath + "/blocks/furniture/"+page_url,
+        text: page_title
+    }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'blocks',
+    subarea: 'furniture'
+}) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Furniture</span>
+    <h1>{{ page_title }}</h1>
+    
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+<h3>Example</h3>
+{{ example({
+    view: 'block',
+    url: basePath + '/blocks/furniture/examples/' + page_url,
+    height: '100px'
+}) }}
+
+<hr />
+
+<h3>HTML</h3>
+{{ highlight({
+  html : '<h2>Page subtitle</h2>'
+  }) 
+}}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

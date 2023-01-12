@@ -1,0 +1,72 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'content-reviewed' %}
+{% set page_title = 'Reviewed' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: basePath + "/",
+            text: "Home"
+        },
+        {
+            href: basePath + "/blocks",
+            text: "Blocks"
+        }
+    ],
+        href: basePath + "/blocks/"+page_url,
+      text: page_title
+    }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'blocks',
+    subarea: 'furniture'
+}) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Furniture</span>
+    <h1>{{ page_title }}</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+<h3>Example</h3>
+{{ example({
+    url: basePath + '/blocks/furniture/examples/' + page_url,
+    height: '170'
+}) }}
+
+<hr />
+
+<h3>Macro</h3>
+{{ highlight({
+  html: '
+{{ reviewDate({
+    lastReview: "12 February 2016",
+    nextReview: "1 February 2019"
+}) }}
+  '
+}) }}
+
+<hr />
+
+<h3>HTML</h3>
+{{ highlight({
+  html : '<div class="nhsuk-review-date">
+    <p class="nhsuk-body-s"> Page last reviewed: 12 February 2016<br> Next review due: 1 February 2019 </p>
+</div>'
+  }) 
+}}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}
