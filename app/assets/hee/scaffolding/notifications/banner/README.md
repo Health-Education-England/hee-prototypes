@@ -64,7 +64,7 @@ This version of the banner is a black banner that sits underneath the breadcrumb
 })}}
 ```
 
-### Banner with heading and content - Announcment version
+### Banner with heading and content - Announcement version
 This version of the banner is a maroon banner that sits above the header and below the cookie consent
 
 #### HTML markup
