@@ -1,11 +1,11 @@
 /* HEE-GlobalAlert */
-.hee-globalalert {
+.hee-banner {
 	@include print-hide();
 	background-color: $color_nhsuk-yellow;
 	padding-bottom: nhsuk-spacing(4);
 	padding-top: nhsuk-spacing(4);
 
-	.hee-globalalert__message {
+	.hee-banner__message {
 		@include top-and-bottom;
 		position: relative;
 
@@ -52,15 +52,15 @@
 		}
 	}
 
-	&.hee-globalalert--dark-pink {
+	&.hee-banner--announcement {
 		background-color: $color_nhsuk-dark-pink;
 	}
 
-	&.hee-globalalert--black {
+	&.hee-banner--mourning {
 		background-color: $color_nhsuk-black;
 	}
 
-	&.hee-globalalert--dark-pink, &.hee-globalalert--black {
+	&.hee-banner--announcement, &.hee-banner--mourning {
 		color: $color_nhsuk-white;
 
 		a {
