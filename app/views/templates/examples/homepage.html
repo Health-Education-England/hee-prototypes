@@ -26,7 +26,9 @@
       text: page_title
     })
   }}
+{% endblock %}
 
+{% block pageBanners %}
   {{ banner({
     customClass: "hee-banner--mourning",
     HTML: "<h2>H2 - Her Majesty Queen Elizabeth II</h2>
@@ -41,7 +43,6 @@
              <p><strong>Body</strong> - This is banner body copy <a href=\"#\">this is the link</a></p>
             "
   })}}
-
 {% endblock %}
 
 {% block headerStart %}

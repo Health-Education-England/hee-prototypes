@@ -84,8 +84,6 @@
 {% endblock %}
 
 {% block headerEnd %}
-  <div class="site-notifications">
-  </div>
 {% endblock %}
 
 {% block main %}
@@ -93,6 +91,11 @@
     <div class="page__breadcrumbs">
       {% block pageBreadcrumbs %}
         {# Breadcrumbs... #}
+      {% endblock %}
+    </div>
+    <div class="page__banners">
+      {% block pageBanners %}
+        {# Mourning and Alert banners #}
       {% endblock %}
     </div>
     <div class="page__header">

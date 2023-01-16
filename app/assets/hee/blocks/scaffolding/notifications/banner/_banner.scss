@@ -68,7 +68,8 @@
 			@include nhsuk-link-style-white;
 
 			&:focus {
-				color: $color_nhsuk-white;
+				background: $nhsuk-focus-color;
+				box-shadow: 0 0 0 $nhsuk-focus-width $nhsuk-focus-color, 0 $nhsuk-focus-width 0 $nhsuk-focus-width $nhsuk-focus-text-color;
 			}
 		}
 	}
