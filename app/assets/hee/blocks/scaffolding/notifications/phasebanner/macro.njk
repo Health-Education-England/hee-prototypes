@@ -1,12 +1,14 @@
 {% macro phaseBanner(params) %}
-  <div class="nhsuk-hee-phasebanner{% if params.tag == '' %} nhsuk-hee-phasebanner--notag{% endif %}">
+  <div class="hee-phasebanner{% if params.tag == '' %} hee-phasebanner--notag{% endif %}">
     <div class="nhsuk-width-container">
-      <p class="nhsuk-hee-phasebanner__content">
-        <span class="nhsuk-hee-phasebanner__tag">
+      <div class="hee-phasebanner__wrapper">
+        <span class="hee-phasebanner__tag">
           {{ params.tag }}
         </span>
-        {{ params.description | safe }}
-      </p>
+        <div class="hee-phasebanner__content">
+          <p>{{ params.description | safe }}</p>
+        </div>
+      </div>
     </div>
   </div>
 {% endmacro %}

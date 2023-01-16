@@ -1,0 +1,110 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'notifications-phase-banner' %}
+{% set page_title = 'Phase Banner' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: basePath + "/",
+            text: "Home"
+        },
+        {
+            href: basePath + "/blocks",
+            text: "Blocks"
+        },
+        {
+            href: basePath + "/blocks/scaffolding",
+            text: "Scaffolding"
+        }
+    ],
+        href: basePath + "/blocks/scaffolding/"+page_url,
+        text: page_title
+    }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'blocks',
+    subarea: 'scaffolding'
+}) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Scaffolding</span>
+    <h1>{{ page_title }}</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+<p>Phase banner component to shows users your service is still being worked on.</p>
+
+<h2>Example</h2>
+{{ example({
+    url: basePath + '/blocks/scaffolding/examples/' + page_url,
+    height: '400px'
+}) }}
+
+<hr />
+
+<h2>Macro - with tag</h2>
+{{ highlight({
+  html: '{{ phaseBanner({
+    tag: "Alpha",
+    description: \'This is a new service – your <a class="nhsuk-link" href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.\'
+}) }}'
+}) }}
+
+<hr />
+
+<h3>HTML - with tag</h3>
+{{ highlight({
+    html : '<div class="hee-phasebanner">
+    <div class="nhsuk-width-container">
+      <p class="hee-phasebanner__content">
+        <span class="hee-phasebanner__tag"> Alpha </span> This is a new service – your <a class="nhsuk-link" href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.
+      </p>
+    </div>
+</div>
+'
+})
+}}
+
+<hr />
+
+<h2>Macro - without tag</h2>
+{{ highlight({
+    html: '{{ phaseBanner({
+      tag: "",
+      description: \'This is a new service – your <a class="nhsuk-link" href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.\'
+}) }}'
+}) }}
+
+<hr />
+
+<h3>HTML - without tag</h3>
+{{ highlight({
+    html : '<div class="hee-phasebanner hee-phasebanner--notag">
+    <div class="nhsuk-width-container">
+      <div class="hee-phasebanner__wrapper">
+        <span class="hee-phasebanner__tag">
+        </span>
+        <div class="hee-phasebanner__content">
+          <p>This is a new service – your <a class="nhsuk-link" href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.</p>
+        </div>
+      </div>
+    </div>
+</div>
+'
+})
+}}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}
