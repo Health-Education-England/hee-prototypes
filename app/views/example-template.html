@@ -84,17 +84,13 @@
 {% endblock %}
 
 {% block headerEnd %}
-  <div class="site-notifications">
-  </div>
+{% endblock %}
+
+{% block pageBreadcrumbs %}
 {% endblock %}
 
 {% block main %}
   <main class="page {% block pageClass %}{% endblock %}" id="maincontent" role="main">
-    <div class="page__breadcrumbs">
-      {% block pageBreadcrumbs %}
-        {# Breadcrumbs... #}
-      {% endblock %}
-    </div>
     <div class="page__header">
       {% block pageHeader %}
         {# Hero... Microhero... Title #}
