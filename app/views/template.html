@@ -185,6 +185,12 @@
     </div>
     {% endblock %}
 
+    <div class="breadcrumbs">
+      {% block breadcrumbs %}
+        {# Breadcrumbs... #}
+      {% endblock %}
+    </div>
+
     {% block headerEnd %}
     <div class="site-notifications">
       {{ phaseBanner({
@@ -201,11 +207,6 @@
 
     {% block main %}
     <main class="page {% block pageClass %}{% endblock %}" id="maincontent" role="main">
-      <div class="page__breadcrumbs">
-        {% block pageBreadcrumbs %}
-          {# Breadcrumbs... #}
-        {% endblock %}
-      </div>
       <div class="page__header">
         {% block pageHeader %}
           {# Hero... Microhero... Title #}
