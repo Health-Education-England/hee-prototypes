@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Header - Templates - NWP Prototype Kit</title>
+  <title>Phase Banner - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -53,9 +53,9 @@
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/blocks">Blocks</a></li>
             <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/blocks/scaffolding">Scaffolding</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/blocks/scaffolding/header">Header</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/blocks/scaffolding/notifications-phase-banner">Phase Banner</a></li>
           </ol>
-          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/blocks/scaffolding/header">Back to Header</a></p>
+          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/blocks/scaffolding/notifications-phase-banner">Back to Phase Banner</a></p>
         </div>
       </nav>
     </div>
@@ -94,83 +94,56 @@
         <div class="page__main">
           <div class="page__header">
             <span class="nhsuk-caption-xl">Scaffolding</span>
-            <h1>Header</h1>
+            <h1>Phase Banner</h1>
             <p class="nhsuk-lede-text"></p>
           </div>
+          <p>Phase banner component to shows users your service is still being worked on.</p>
           <h2>Example</h2>
-          <div class="prototype__example scaled" style="height:NaNpx;">
-            <a href="/blocks/scaffolding/examples/header" target="_blank" class="prototype__example-link">Open this example in new window</a>
+          <div class="prototype__example block">
+            <a href="/blocks/scaffolding/examples/notifications-phase-banner" target="_blank" class="prototype__example-link">Open this example in new window</a>
             <div class="thumbnail">
-              <iframe src="/blocks/scaffolding/examples/header" height="200px"></iframe>
+              <iframe src="/blocks/scaffolding/examples/notifications-phase-banner" height="400px"></iframe>
             </div>
           </div>
           <hr />
-          <h2>Macro</h2>
-          <pre><code>{{ customHeader({
-  &quot;showNav&quot;: &quot;true&quot;,
-  &quot;showSearch&quot;: &quot;true&quot;,
-  &quot;showLogos&quot;: &quot;true&quot;,
-  &quot;heeHref&quot;: &quot;http://hee.nhs.uk/&quot;,
-  &quot;classes&quot;: &quot;nhsuk-header--white&quot;,
-  &quot;organisation&quot;: {
-    &quot;name&quot;: &quot;Health Education England&quot;,
-    &quot;split&quot;: &quot;&quot;,
-    &quot;descriptor&quot;: &quot;Hub Name&quot;
-  },
-  &quot;logos&quot;: [
-    {
-      &quot;href&quot;: &quot;https://www.nimdta.gov.uk/&quot;,
-      &quot;label&quot;: &quot;Northern Ireland Medical and Dental Training Agency Website (Opens in New Window)&quot;,
-      &quot;imgSrc&quot;: &quot;/images/logos/nimdta-logo.png&quot;,
-      &quot;imgAlt&quot;: &quot;Logo for Northern Ireland Medical and Dental Training Agency&quot;
-    },
-    {
-      &quot;href&quot;: &quot;https://www.nes.scot.nhs.uk/&quot;,
-      &quot;label&quot;: &quot;NHS Education for Scotland Website (Opens in New Window)&quot;,
-      &quot;imgSrc&quot;: &quot;/images/logos/nhs-scotland-logo.png&quot;,
-      &quot;imgAlt&quot;: &quot;Logo for NHS Education for Scotland&quot;
-    },
-    {
-      &quot;href&quot;: &quot;https://heiw.nhs.wales/&quot;,
-      &quot;label&quot;: &quot;Health Education and Improvement Wales Website (Opens in New Window)&quot;,
-      &quot;imgSrc&quot;: &quot;/images/logos/heiw-logo.png&quot;,
-      &quot;imgAlt&quot;: &quot;Logo for Health Education and Improvement Wales&quot;
-    }
-  ],
-  &quot;primaryLinks&quot;: [
-    {
-      url: &quot;/templates&quot;,
-      label: &quot;Templates&quot;
-    },
-    {
-      url: &quot;/components&quot;,
-      label: &quot;Components&quot;,
-      children: [
-        {
-          url: &quot;/scaffolding&quot;,
-          label: &quot;Scaffolding&quot;
-        },
-        {
-          url: &quot;/components/furniture&quot;,
-          label: &quot;Furniture&quot;
-        },
-        {
-          url: &quot;/components/contentblocks&quot;,
-          label: &quot;Content Blocks&quot;
-        },
-        {
-          url: &quot;/components/rightblocks&quot;,
-          label: &quot;Right Blocks&quot;
-        },
-        {
-          url: &quot;/components/featureblocks&quot;,
-          label: &quot;Feature Blocks&quot;
-        }
-      ]
-    }
-  ]
-})
-}}</code></pre>
+          <h2>Macro - with tag</h2>
+          <pre><code>{{ phaseBanner({
+    tag: &quot;Alpha&quot;,
+    description: &#39;This is a new service – your &lt;a class=&quot;nhsuk-link&quot; href=&quot;https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu&quot; target=&quot;_blank&quot; title=&quot;Opens in New Window&quot;&gt;feedback&lt;/a&gt; will help us to improve it.&#39;
+}) }}</code></pre>
+          <hr />
+          <h3>HTML - with tag</h3>
+          <pre><code>&lt;div class=&quot;hee-phasebanner&quot;&gt;
+    &lt;div class=&quot;nhsuk-width-container&quot;&gt;
+      &lt;div class=&quot;hee-phasebanner__wrapper&quot;&gt;
+        &lt;span class=&quot;hee-phasebanner__tag&quot;&gt; Alpha &lt;/span&gt;
+        &lt;div class=&quot;hee-phasebanner__content&quot;&gt;
+          &lt;p&gt;This is a new service – your &lt;a href=&quot;https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu&quot; target=&quot;_blank&quot; title=&quot;Opens in New Window&quot;&gt;feedback&lt;/a&gt; will help us to improve it.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+          <hr />
+          <h2>Macro - without tag</h2>
+          <pre><code>{{ phaseBanner({
+      tag: &quot;&quot;,
+      description: &#39;This is a new service – your &lt;a class=&quot;nhsuk-link&quot; href=&quot;https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu&quot; target=&quot;_blank&quot; title=&quot;Opens in New Window&quot;&gt;feedback&lt;/a&gt; will help us to improve it.&#39;
+}) }}</code></pre>
+          <hr />
+          <h3>HTML - without tag</h3>
+          <pre><code>&lt;div class=&quot;hee-phasebanner hee-phasebanner--notag&quot;&gt;
+    &lt;div class=&quot;nhsuk-width-container&quot;&gt;
+      &lt;div class=&quot;hee-phasebanner__wrapper&quot;&gt;
+        &lt;span class=&quot;hee-phasebanner__tag&quot;&gt;
+        &lt;/span&gt;
+        &lt;div class=&quot;hee-phasebanner__content&quot;&gt;
+          &lt;p&gt;This is a new service – your &lt;a class=&quot;nhsuk-link&quot; href=&quot;https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu&quot; target=&quot;_blank&quot; title=&quot;Opens in New Window&quot;&gt;feedback&lt;/a&gt; will help us to improve it.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
         </div>
       </div>
     </div>
