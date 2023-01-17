@@ -103,6 +103,10 @@
     </div>
     {% endblock %}
 
+    <div class="page__breadcrumbs">
+      {% block breadcrumbs %}{% endblock %}
+    </div>
+
     <div class="site-notifications">
     {% block headerEnd %}
     {% endblock %}
@@ -110,9 +114,6 @@
 
     {% block main %}
     <main class="page {% block pageClass %}{% endblock %}" id="maincontent" role="main">
-      <div class="page__breadcrumbs">
-        {% block pageBreadcrumbs %}{% endblock %}
-      </div>
       {% block pageMain %}{% endblock %}
       <div class="page__footer">
         {% block pageFooter %}{% endblock %}
