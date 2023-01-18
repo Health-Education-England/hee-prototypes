@@ -9,6 +9,28 @@ const minify = require("gulp-minify");
 const config = require('../gulpfile')
 const taskServe = require('./serve')
 
+// Define default webpack options for JS compilation.
+const webpackOpts = {
+  mode: 'production',
+  devtool: 'inline-source-map',
+  module: {
+    rules: [
+      {
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+    ],
+  },
+  output: {
+    filename: 'hee.js',
+  },
+  target: 'web'
+};
+
 function compileHEEStyles() {
   return gulp.src(config.PATHS.heeCSS)
     .pipe(sourcemaps.init())
@@ -41,80 +63,34 @@ function compilePrototypeStyles() {
     });
 }
 
-function compileHEEScripts() {
-  return gulp.src(config.PATHS.heeJS)
-    .pipe(webpack({
-      mode: 'production',
-      devtool: 'inline-source-map',
-      module: {
-        rules: [
-          {
-            use: {
-              loader: 'babel-loader',
-              options: {
-                presets: ['@babel/preset-env'],
-              },
-            },
-          },
-        ],
-      },
-      output: {
-        filename: 'hee.js',
-      },
-      target: 'web',
-    }))
-    .pipe(gulp.dest(config.PATHS.public+'/js'))
-    .pipe(minify({
-      noSource: true,
-      ext:{
-        src:'.js',
-        min:'.min.js'
-      }
-    }))
-    .pipe(gulp.dest(config.PATHS.public+'/js'))
-    .pipe(taskServe.connect.reload())
-    .on('error', (err) => {
-      console.log(err)
-      process.exit(1)
-    });
+// Compiles HEE JS into minified version for production usage.
+function compileHEEScriptsProd() {
+  return webpackBuild(
+    config.PATHS.heeJS,
+    'production',
+    'hee.min.js',
+    config.PATHS.public + '/js'
+  );
 }
 
+// Compiles HEE JS into non-minified version for development debugging.
+function compileHEEScriptsDev() {
+  return webpackBuild(
+    config.PATHS.heeJS,
+    'development',
+    'hee.js',
+    config.PATHS.public + '/js'
+  );
+}
+
+// Compiles JS only associated with Prototype.
 function compilePrototypeScripts() {
-  return gulp.src(config.PATHS.prototypeJS)
-    .pipe(webpack({
-      mode: 'production',
-      devtool: 'inline-source-map',
-      module: {
-        rules: [
-          {
-            use: {
-              loader: 'babel-loader',
-              options: {
-                presets: ['@babel/preset-env'],
-              },
-            },
-          },
-        ],
-      },
-      output: {
-        filename: 'prototype.js',
-      },
-      target: 'web',
-    }))
-    .pipe(gulp.dest(config.PATHS.public+'/js'))
-    .pipe(minify({
-      noSource: true,
-      ext:{
-        src:'.js',
-        min:'.min.js'
-      }
-    }))
-    .pipe(gulp.dest(config.PATHS.public+'/js'))
-    .pipe(taskServe.connect.reload())
-    .on('error', (err) => {
-      console.log(err)
-      process.exit(1)
-    });
+  return webpackBuild(
+    config.PATHS.prototypeJS,
+    'production',
+    'prototype.min.js',
+    config.PATHS.public + '/js'
+  );
 }
 
 function copyVendorScripts() {
@@ -143,10 +119,51 @@ function copyImages() {
     .pipe(gulp.dest(config.PATHS.public + '/images'));
 }
 
+/**
+ * Executes webpack build for Javascript assets.
+ *
+ * @param {string} src        Source JS file.
+ * @param {string} mode       Webpack mode (production or development).
+ * @param {string} filename   Compiled filename.
+ * @param {string} dest       Destination directory.
+ *
+ * @returns {Object}
+ */
+function webpackBuild(src, mode, filename, dest) {
+  return gulp.src(src)
+    .pipe(webpack({
+      mode: mode,
+      devtool: 'inline-source-map',
+      module: {
+        rules: [
+          {
+            use: {
+              loader: 'babel-loader',
+              options: {
+                presets: ['@babel/preset-env'],
+              },
+            },
+          },
+        ],
+      },
+      output: {
+        filename: filename,
+      },
+      target: 'web'
+    }))
+    .pipe(gulp.dest(dest))
+    .pipe(taskServe.connect.reload())
+    .on('error', (err) => {
+      console.log(err)
+      process.exit(1)
+    });
+}
+
 gulp.task('build:assets', gulp.parallel(
   compileHEEAssets,
   compileHEEStyles,
-  compileHEEScripts,
+  compileHEEScriptsDev,
+  compileHEEScriptsProd,
   compilePrototypeStyles,
   compilePrototypeScripts,
   copyVendorStyles,
@@ -156,7 +173,8 @@ gulp.task('build:assets', gulp.parallel(
 
 exports.compileHEEAssets = compileHEEAssets
 exports.compileHEEStyles = compileHEEStyles
-exports.compileHEEScripts = compileHEEScripts
+exports.compileHEEScriptsDev = compileHEEScriptsDev
+exports.compileHEEScriptsProd = compileHEEScriptsProd
 exports.compilePrototypeStyles = compilePrototypeStyles
 exports.compilePrototypeScripts = compilePrototypeScripts
 exports.copyVendorStyles = copyVendorStyles
