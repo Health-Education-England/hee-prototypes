@@ -9,28 +9,6 @@ const minify = require("gulp-minify");
 const config = require('../gulpfile')
 const taskServe = require('./serve')
 
-// Define default webpack options for JS compilation.
-const webpackOpts = {
-  mode: 'production',
-  devtool: 'inline-source-map',
-  module: {
-    rules: [
-      {
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-          },
-        },
-      },
-    ],
-  },
-  output: {
-    filename: 'hee.js',
-  },
-  target: 'web'
-};
-
 function compileHEEStyles() {
   return gulp.src(config.PATHS.heeCSS)
     .pipe(sourcemaps.init())
