@@ -65,7 +65,7 @@ function compileHEEScriptsDev() {
 function compilePrototypeScripts() {
   return webpackBuild(
     config.PATHS.prototypeJS,
-    'production',
+    'development',
     'prototype.min.js',
     config.PATHS.public + '/js'
   );
