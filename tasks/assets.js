@@ -111,7 +111,7 @@ function webpackBuild(src, mode, filename, dest) {
   return gulp.src(src)
     .pipe(webpack({
       mode: mode,
-      devtool: 'inline-source-map',
+      devtool: mode === 'development' ? 'inline-source-map' : false,
       module: {
         rules: [
           {
