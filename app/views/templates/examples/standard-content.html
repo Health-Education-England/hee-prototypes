@@ -93,6 +93,130 @@
     ]
   }) }}
 
+  <h2>Responsive table within details expander</h2>
+
+  {% set responsiveTable %}
+  {{ table({
+    tableClasses: 'nhsuk-hee-table',
+    responsive: true,
+    panel: false,
+    firstCellIsHeader: false,
+    head: [
+      {
+        text: "Descriptors and scores"
+      },
+      {
+        text: "Comments"
+      },
+      {
+        text: "Evidence required"
+      },
+      {
+        text: "Maximum number of evidence"
+      }
+    ],
+    rows: [
+      [
+        {
+          header: "Descriptors and scores",
+          html: "<div class=\"nhsuk-table__cell__container\"><p>Score: 5</p><p>By December 2022, I have completed a quality improvement project (QIP) or complete audit cycle (for example,&nbsp;first audit/project, action plan and re-audit/assessment to quantify impact of intervention) which has resulted in national change</p></div>"
+        },
+        {
+          header: "Comments",
+          text: "None"
+        },
+        {
+          header: "Evidence required",
+          html: "<div class=\"nhsuk-table__cell__container\"><p>A summary (e.g PowerPoint presentation) covering first QIP/audit, action plan, evaluations/re-audit/assessment to quantify impact of intervention, led by yourself and dates QIP/audit undertaken.</p><p>Involvement in the QIP/audit, for example,&nbsp;email acknowledgement of registration of QIP/audit with Clinical Governance team or response from QIP/audit lead.</p><p>Written confirmation (signed headed letter) from Educational supervisor or Audit lead for local, regional or national change.</p></div>"
+        },
+        {
+          header: "Maximum number of evidence",
+          text: "3"
+        }
+      ],
+      [
+        {
+          header: "Descriptors and scores",
+          html: "<div class=\"nhsuk-table__cell__container\"><p>Score: 4</p><p>By December 2022, I have completed a quality improvement project (QIP) or complete audit cycle (for example,&nbsp;first audit/project, action plan and re-audit/assessment to quantify impact of intervention) which has resulted in regional change</p></div>"
+        },
+        {
+          header: "Comments",
+          text: "None"
+        },
+        {
+          header: "Evidence required",
+          text: "As above"
+        },
+        {
+          header: "Maximum number of evidence",
+          text: "As above"
+        }
+      ],
+      [
+        {
+          header: "Descriptors and scores",
+          html: "<div class=\"nhsuk-table__cell__container\"><p>Score: 3</p><p>By December 2022, I have completed a quality improvement project (QIP) or complete audit cycle (for example,&nbsp;first audit/project, action plan and re-audit/assessment to quantify impact of intervention) which has resulted in local change</p></div>"
+        },
+        {
+          header: "Comments",
+          text: "None"
+        },
+        {
+          header: "Evidence required",
+          text: "As above"
+        },
+        {
+          header: "Maximum number of evidence",
+          text: "As above"
+        }
+      ],
+      [
+        {
+          header: "Descriptors and scores",
+          html: "<div class=\"nhsuk-table__cell__container\"><p>Score: 2</p><p>By December 2022, I have completed a quality improvement project (QIP) or complete audit cycle (for example,&nbsp;first audit/project, action plan and re-audit/assessment to quantify impact of intervention) but I cannot evidence any resultant change</p></div>"
+        },
+        {
+          header: "Comments",
+          text: "None"
+        },
+        {
+          header: "Evidence required",
+          text: "As above"
+        },
+        {
+          header: "Maximum number of evidence",
+          text: "2"
+        }
+      ],
+      [
+        {
+          header: "Descriptors and scores",
+          html: "<div class=\"nhsuk-table__cell__container\"><p>Score: 0</p><p>I have not participated in an audit or Quality Improvement project</p></div>"
+        },
+        {
+          header: "Comments",
+          text: "None"
+        },
+        {
+          header: "Evidence required",
+          text: "As above"
+        },
+        {
+          header: "Maximum number of evidence",
+          text: "0"
+        }
+      ]
+    ]
+  })  }}
+  {% endset %}
+
+  {{ details({
+    classes: "nhsuk-expander",
+    text: "Where can I find my NHS number?",
+    HTML: responsiveTable
+  }) }}
+
+</article>
 {% endblock %}
 
 {% block pageRightbar %}

@@ -6,3 +6,50 @@
   background-color: #fff;
   padding: 16px 16px 0 16px;
 }
+
+// Temp POC for responsive tables in expanders.
+.nhsuk-expander {
+  .nhsuk-hee-table.nhsuk-table-responsive {
+    padding: 0;
+
+    thead {
+      @include visually-hidden;
+    }
+
+    .nhsuk-table__body {
+      .nhsuk-table-responsive__heading {
+        font-weight: $nhsuk-font-bold;
+        padding-right: nhsuk-spacing(3);
+        text-align: left; /* [8] */
+        display: inline-block;
+        float: left;
+      }
+
+      .nhsuk-table__row {
+        display: block; /* [3] */
+        margin-bottom: nhsuk-spacing(4);
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        th {
+          text-align: right;
+        }
+
+        td {
+          display: block; // For browsers that don't support flexbox
+          display: flex; // sass-lint:disable-line no-duplicate-properties
+          justify-content: space-between; /* [5] */
+          min-width: 1px; /* [6] */
+          padding-right: 0;
+          text-align: right; /* [7] */
+
+          &:last-child {
+            border-bottom: 3px solid $color_nhsuk-grey-4;
+          }
+        }
+      }
+    }
+  }
+}

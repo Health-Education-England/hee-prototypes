@@ -63,4 +63,211 @@
       ]
     ]
   })  }}
+
+  <hr />
+  {% set responsiveTbl %}
+    {{ table({
+      tableClasses: 'nhsuk-hee-table',
+      responsive: true,
+      panel: false,
+      firstCellIsHeader: false,
+      head: [
+        {
+          text: "Descriptors and scores"
+        },
+        {
+          text: "Comments"
+        },
+        {
+          text: "Evidence required"
+        },
+        {
+          text: "Maximum number of evidence"
+        }
+      ],
+      rows: [
+        [
+          {
+            header: "Descriptors and scores",
+            html: "<div class=\"nhsuk-table__cell__container\"><p>Score: 5</p><p>By December 2022, I have completed a quality improvement project (QIP) or complete audit cycle (for example,&nbsp;first audit/project, action plan and re-audit/assessment to quantify impact of intervention) which has resulted in national change</p></div>"
+          },
+          {
+            header: "Comments",
+            text: "None"
+          },
+          {
+            header: "Evidence required",
+            html: "<div class=\"nhsuk-table__cell__container\"><p>A summary (e.g PowerPoint presentation) covering first QIP/audit, action plan, evaluations/re-audit/assessment to quantify impact of intervention, led by yourself and dates QIP/audit undertaken.</p><p>Involvement in the QIP/audit, for example,&nbsp;email acknowledgement of registration of QIP/audit with Clinical Governance team or response from QIP/audit lead.</p><p>Written confirmation (signed headed letter) from Educational supervisor or Audit lead for local, regional or national change.</p></div>"
+          },
+          {
+            header: "Maximum number of evidence",
+            text: "3"
+          }
+        ],
+        [
+          {
+            header: "Descriptors and scores",
+            html: "<div class=\"nhsuk-table__cell__container\"><p>Score: 4</p><p>By December 2022, I have completed a quality improvement project (QIP) or complete audit cycle (for example,&nbsp;first audit/project, action plan and re-audit/assessment to quantify impact of intervention) which has resulted in regional change</p></div>"
+          },
+          {
+            header: "Comments",
+            text: "None"
+          },
+          {
+            header: "Evidence required",
+            text: "As above"
+          },
+          {
+            header: "Maximum number of evidence",
+            text: "As above"
+          }
+        ],
+        [
+          {
+            header: "Descriptors and scores",
+            html: "<div class=\"nhsuk-table__cell__container\"><p>Score: 3</p><p>By December 2022, I have completed a quality improvement project (QIP) or complete audit cycle (for example,&nbsp;first audit/project, action plan and re-audit/assessment to quantify impact of intervention) which has resulted in local change</p></div>"
+          },
+          {
+            header: "Comments",
+            text: "None"
+          },
+          {
+            header: "Evidence required",
+            text: "As above"
+          },
+          {
+            header: "Maximum number of evidence",
+            text: "As above"
+          }
+        ],
+        [
+          {
+            header: "Descriptors and scores",
+            html: "<div class=\"nhsuk-table__cell__container\"><p>Score: 2</p><p>By December 2022, I have completed a quality improvement project (QIP) or complete audit cycle (for example,&nbsp;first audit/project, action plan and re-audit/assessment to quantify impact of intervention) but I cannot evidence any resultant change</p></div>"
+          },
+          {
+            header: "Comments",
+            text: "None"
+          },
+          {
+            header: "Evidence required",
+            text: "As above"
+          },
+          {
+            header: "Maximum number of evidence",
+            text: "2"
+          }
+        ],
+        [
+          {
+            header: "Descriptors and scores",
+            html: "<div class=\"nhsuk-table__cell__container\"><p>Score: 0</p><p>I have not participated in an audit or Quality Improvement project</p></div>"
+          },
+          {
+            header: "Comments",
+            text: "None"
+          },
+          {
+            header: "Evidence required",
+            text: "As above"
+          },
+          {
+            header: "Maximum number of evidence",
+            text: "0"
+          }
+        ]
+      ]
+    })  }}
+  {% endset %}
+
+  <div style="width: 629px">
+    <h2>Responsive table within details expander</h2>
+
+    {{ details({
+      classes: "nhsuk-expander",
+      text: "Where can I find my NHS number?",
+      HTML: responsiveTbl
+    }) }}
+
+    <h2>Non-responsive table within details expander</h2>
+
+    {{ details({
+      classes: "nhsuk-expander",
+      text: "Where can I find my NHS number?",
+      HTML: '
+        <table border="0.5" summary="Self-assessment information for domain 7" cellspacing="1" cellpadding="7">
+          <thead>
+          <tr>
+            <th scope="row">Descriptors and scores</th>
+            <th scope="col">Comments</th>
+            <th scope="col">Evidence required</th>
+            <th scope="col">Maximum number of evidence</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">
+              <p>Score: 6</p>
+              <p>Completion of a PhD with original research</p>
+            </th>
+            <td>
+              <p>PhD/MD and other higher degrees: must be awarded to get full marks (for example,&nbsp;completed, examined and results awarded).</p>
+              <p>MDs will not count if they are a standard part of higher training, for example,&nbsp;an MD is standard in some overseas training programmes. You must evidence this by a letter of confirmation or screen shot from the university website.</p>
+            </td>
+            <td>PhD certificate</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <p>Score: 5</p>
+              <p>Significant involvement in research (for example,&nbsp;2-year MD with original research) or&nbsp;Chief Investigator of a peer review grant funded multicentre research project</p>
+            </th>
+            <td>As above</td>
+            <td>
+              <p>Signed headed letter from research supervisor/project sponsor confirming your role in the research project and copy of research project summary/abstract</p>
+              <p>If applicable evidence of your MD is not part of a standard training programme</p>
+            </td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <p>Score: 4</p>
+              <p>I have had personal and direct involvement of leading a postgraduate research project</p>
+            </th>
+            <td>As above</td>
+            <td>As above</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <p>Score: 3</p>
+              <p>I have had ongoing commitment to research as a co-investigator or recruited a significant amount of patients during the period of study</p>
+            </th>
+            <td>As above</td>
+            <td>As above</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <p>Score: 1</p>
+              <p>I have been involved with recruitment of participants to research projects or assisted with data collection</p>
+            </th>
+            <td>As above</td>
+            <td>As above</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <p>Score: 0</p>
+              <p>I have not participated in research</p>
+            </th>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>0</td>
+          </tr>
+          </tbody>
+        </table>
+        '
+    }) }}
+  </div>
 {% endblock %}
