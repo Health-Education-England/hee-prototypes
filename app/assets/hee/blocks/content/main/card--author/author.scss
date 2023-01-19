@@ -65,11 +65,14 @@
             &:before {
                 display: block;
                 content: "";
+                min-width: 24px;
+                width: 24px;
             }
 
             a {
                 display: block;
                 padding-left: 8px;
+                word-break: break-word;
             }
         }
 
@@ -81,7 +84,6 @@
             &:before {
                 background: url("../images/icons/email.svg");
                 height: 18px;
-                width: 24px;
             }
         }
 
@@ -93,7 +95,6 @@
             &:before {
                 background: url("../images/icons/web.svg");
                 height: 24px;
-                width: 24px;
             }
         }
 
@@ -105,7 +106,6 @@
             &:before {
                 background: url("../images/icons/twitter.svg");
                 height: 20px;
-                width: 24px;
             }
         }
 
@@ -117,6 +117,7 @@
             &:before {
                 background: url("../images/icons/linkedin.svg");
                 height: 21px;
+                min-width: 22px;
                 width: 22px;
             }
         }
