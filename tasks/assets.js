@@ -65,7 +65,7 @@ function compileHEEScriptsDev() {
 function compilePrototypeScripts() {
   return webpackBuild(
     config.PATHS.prototypeJS,
-    'production',
+    'development',
     'prototype.min.js',
     config.PATHS.public + '/js'
   );
@@ -111,7 +111,7 @@ function webpackBuild(src, mode, filename, dest) {
   return gulp.src(src)
     .pipe(webpack({
       mode: mode,
-      devtool: 'inline-source-map',
+      devtool: mode === 'development' ? 'inline-source-map' : false,
       module: {
         rules: [
           {
