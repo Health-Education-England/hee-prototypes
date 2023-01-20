@@ -17,7 +17,7 @@ const config = {
 };
 
 function buildTemplates() {
-  return gulp.src(['app/views/**/*.html', '!app/views/lks/*.html'])
+  return gulp.src(['app/views/**/*.html', 'app/assets/**/*.njk', '!app/views/lks/*.html'])
     .pipe(gulpNunjucks.compile({
       baseUrl: config.baseUrl,
     }, {

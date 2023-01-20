@@ -1,0 +1,266 @@
+{% extends "example-template-rightbar.html" %}
+
+{% set page_url = 'publications-landing' %}
+{% set page_title = 'Publication Landing' %}
+
+{% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+  {{
+    breadcrumb({
+      items: [
+        {
+          href: "/",
+          text: "Home"
+        },
+        {
+          href: "/templates",
+          text: "Templates"
+        }
+      ],
+      href: "/templates/examples/"+page_url,
+      text: page_title
+    })
+  }}
+{% endblock %}
+
+{% block pageHeader %}
+  <div class="nhsuk-width-container">
+    {{ backLink({
+      href: "#",
+      text: "Go back"
+    }) }}
+
+    <h1>Publication title</h1>
+    <span class="nhsuk-caption-xl">Caption</span>
+  </div>
+{% endblock %}
+
+{% block pageContent %}
+  {% set docs = [
+    {
+      type: "web",
+      title: "Publication title - Web version",
+      href: "#",
+      details: [
+        {
+          label: "Published",
+          value: "24th June 2022"
+        },
+        {
+          label: "Updated",
+          value: "24th June 2022"
+        },
+        {
+          value: "WEB"
+        },
+        {
+          value: "20 min read"
+        }
+      ]
+    },
+    {
+      type: "pdf",
+      title: "Publication title - PDF version",
+      href: "#",
+      details: [
+        {
+          label: "Published",
+          value: "24th June 2022"
+        },
+        {
+          label: "Updated",
+          value: "24th June 2022"
+        },
+        {
+          value: "PDF, 16 MB, 92 pages"
+        },
+        {
+          value: "20 min read"
+        }
+      ]
+    },
+    {
+      type: "odt",
+      title: "Publication title - Open Document version",
+      href: "#",
+      details: [
+        {
+          label: "Published",
+          value: "24th June 2022"
+        },
+        {
+          label: "Updated",
+          value: "24th June 2022"
+        },
+        {
+          value: "Open Document Format, 16.9 MB, 92 pages"
+        },
+        {
+          value: "20 min read"
+        }
+      ]
+    },
+    {
+      type: "xlsx",
+      title: "Publication title - Open Document version",
+      href: "#",
+      details: [
+        {
+          label: "Published",
+          value: "24th June 2022"
+        },
+        {
+          label: "Updated",
+          value: "24th June 2022"
+        },
+        {
+          value: "Open Document Format, 16 MB, 92 pages"
+        },
+        {
+          value: "20 min read"
+        }
+      ]
+    }
+  ] %}
+
+  <p class="nhsuk-body-l">Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi.</p>
+
+  <h2>Documents</h2>
+  {% for item in docs %}
+    {{ publicationDoc(item) }}
+  {% endfor %}
+
+  {% set languages = [
+    {
+      type: "pdf",
+      title: "Teitl y cyhoeddiad - Fersiwn PDF",
+      href: "#",
+      details: [
+        {
+          value: "Cyhoeddwyd ar 24 Mehefin 2022, gan yr Awdur"
+        },
+        {
+          label: "Wedi'i ddiweddaru",
+          value: "24 Gorffennaf 2022"
+        },
+        {
+          value: "Darllen 20 munud"
+        }
+      ]
+    },
+    {
+      type: "pdf",
+      title: "Tytuł publikacji - wersja PDF",
+      href: "#",
+      details: [
+        {
+          label: "Opublikowane 24 czerwca 2022, autor",
+          value: "Autor"
+        },
+        {
+          label: "Zaktualizowano",
+          value: "24 lipca 2022 r."
+        },
+        {
+          value: "PDF, 16 MB, 92 strony"
+        },
+        {
+          value: "20 minut czytania"
+        }
+      ]
+    }
+  ] %}
+
+  <h2>Languages</h2>
+  {% for item in languages %}
+    {{ publicationDoc(item) }}
+  {% endfor %}
+
+{% endblock %}
+
+{% block pageRightbar %}
+  {{ detailsCard({
+    title: "Publication Info",
+    items: [
+      {
+        label: "Published:",
+        value: "24 June 2022"
+      },
+      {
+        label: "Updated:",
+        value: "24 July 2022"
+      },
+      {
+        label: "Professions:",
+        value: "<a href=\"#\">Profession 1</a>, <a href=\"#\">Profession 2</a>"
+      },
+      {
+        label: "Topics:",
+        value: "<a href=\"#\">Topic 1</a>, <a href=\"#\">Topic 2</a>"
+      },
+      {
+        label: "Estimated reading time:",
+        value: "2 mins"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block pageFeature %}
+  {% set items = [
+      {
+        title: "Publication item #1",
+        href: "#",
+        details: [
+        {
+          label: "Publication type:",
+          value: "Briefing"
+        },
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+        summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+      },
+      {
+        title: "Publication item #2",
+        href: "#",
+        details: [
+        {
+          label: "Publication type:",
+          value: "Briefing"
+        },
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+        summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+      },
+      {
+        title: "Publication item #3",
+        href: "#",
+        details: [
+        {
+          label: "Publication type:",
+          value: "Briefing"
+        },
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+        summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+      }
+    ]
+  %}
+
+  <div class="nhsuk-width-container">
+    <h2>Related publications</h2>
+    <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet. Nunc turpis vel aliquam lacus arcu. Sodales nullam id lectus orci quis sed. dsf</p>
+
+    {{ miniListing(items) }}
+  </div>
+{% endblock %}

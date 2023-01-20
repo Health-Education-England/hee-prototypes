@@ -4,7 +4,7 @@
   {% set card = true if params.card === "card" %}
 
   {%- if params.description %}
-    <p 
+    <p
       {%- if card -%}
         class="nhsuk-card__description"
       {%- endif -%}
@@ -13,21 +13,21 @@
     </p>
   {%- endif %}
 
-  <a  class="nhsuk-resources__link"
-    href="{{ params.url }}"
-    title="{{ params.title }}"
+  <a class="hee-resources__link"
+     href="{{ params.url }}"
+     title="{{ params.title }}"
     {%- if params.newTab === true %}
       target="_blank"
     {%- endif %}
   >
     {%- if params.text %}
-      {{ params.text | safe }}
+      <span class="hee-resources__text">{{ params.text | safe }}</span>
     {%- endif -%}
     {%- if params.docType -%}
       <span
-        class=" nhsuk-resources__tag 
+        class="hee-resources__tag
           {% if params.tagColor -%}
-            nhsuk-resources__{{- params.tagColor -}}
+            hee-resources__{{- params.tagColor -}}
           {% endif -%}
         "
       >
@@ -36,7 +36,7 @@
     {%- endif -%}
 
     {%- if params.docSize -%}
-      <span class="nhsuk-resources__docSize" >{{ params.docSize | safe }}<span>
+    <span class="hee-resources__docSize">{{ params.docSize | safe }}<span>
     {%- endif -%}
   </a>
 
