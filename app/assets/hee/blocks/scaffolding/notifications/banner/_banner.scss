@@ -1,9 +1,9 @@
-/* HEE-GlobalAlert */
+/* HEE-Banner */
 .hee-banner {
 	@include print-hide();
 	background-color: $color_nhsuk-yellow;
-	padding-bottom: nhsuk-spacing(4);
-	padding-top: nhsuk-spacing(4);
+	padding-bottom: nhsuk-spacing(5);
+	padding-top: nhsuk-spacing(5);
 
 	.hee-banner__message {
 		@include top-and-bottom;
@@ -68,7 +68,8 @@
 			@include nhsuk-link-style-white;
 
 			&:focus {
-				color: $color_nhsuk-white;
+				background: $nhsuk-focus-color;
+				box-shadow: 0 0 0 $nhsuk-focus-width $nhsuk-focus-color, 0 $nhsuk-focus-width 0 $nhsuk-focus-width $nhsuk-focus-text-color;
 			}
 		}
 	}

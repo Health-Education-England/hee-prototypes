@@ -1,4 +1,22 @@
 // TemplateAreas
+html {
+    background-color: #f0f4f5;
+}
+
+.page {}
+.page__header,
+.page__main,
+.page__leftbar,
+.page__rightbar,
+.page__footer,
+.page__feature ,
+.page__nav {
+    .prototype & {
+        //border: 2px dashed #CCC;
+        //min-height: 20px;
+    }
+}
+
 .page {
     &.has-microhero {
         .page__header {

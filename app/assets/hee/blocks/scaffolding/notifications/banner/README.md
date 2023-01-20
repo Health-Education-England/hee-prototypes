@@ -23,7 +23,7 @@ Main version of the banner is a yellow banner that sits underneath the breadcrum
 #### Nunjucks macro
 
 ```
-{%- from 'hee/scaffolding/notifications/banner/macro.njk' import banner %}
+{%- from 'hee/blocks/scaffolding/notifications/banner/macro.njk' import banner %}
 
 {{ banner({
     HTML: "<h2>H2 - This is an alert</h2>

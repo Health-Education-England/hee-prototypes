@@ -8,7 +8,7 @@
 {%- from 'skip-link/macro.njk' import skipLink %}
 
 {# Notifications #}
-{%- from 'hee/blocks/scaffolding/notifications/banner/macro.njk' import globalAlert %}
+{%- from 'hee/blocks/scaffolding/notifications/banner/macro.njk' import banner %}
 {%- from 'hee/blocks/scaffolding/notifications/phasebanner/macro.njk' import phaseBanner %}
 
 {# Footer #}
@@ -137,6 +137,17 @@
 
     {% block headerEnd %}
     {% endblock %}
+
+    <div class="breadcrumbs">
+      {% block breadcrumbs %}
+      {% endblock %}
+    </div>
+
+    <div class="banners">
+      {% block banners %}
+        {# Mourning and Alert banners #}
+      {% endblock %}
+    </div>
 
     {% block main %}
     {% endblock %}
