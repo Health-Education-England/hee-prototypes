@@ -1,0 +1,121 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'sidebar-card-downloads' %}
+{% set page_title = 'Card--Downloads' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block breadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: basePath + "/",
+            text: "Home"
+        },
+        {
+            href: basePath + "/blocks",
+            text: "Blocks"
+        },
+        {
+            href: basePath + "/blocks/content",
+            text: "Content"
+        }
+    ],
+        href: basePath + "/blocks/"+page_url,
+      text: page_title
+    }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'blocks',
+    subarea: 'content'
+}) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Main</span>
+    <h1>{{ page_title }}</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+<p>Card displaying link of download resource links including their file types.</p>
+
+<h3>Example</h3>
+{{ example({
+    view: 'block',
+    url: basePath + '/blocks/content/examples/' + page_url,
+    height: '380'
+}) }}
+
+<hr />
+
+<h3>Macro</h3>
+{{ highlight({
+  html: '
+{{ downloadsCard({
+  title: "Alternative versions",
+  items: [
+    {
+      title: "Publication title - PDF version",
+      text: "Publication title - PDF version",
+      url: "https://www.google.com",
+      docType: "PDF",
+      tagColor: "pdf",
+    },
+    {
+      title: "Publication title - Open Document",
+      text: "Publication title - Open Document",
+      url: "https://www.google.com",
+      docType: "ODF",
+      tagColor: "odf",
+    },
+    {
+      title: "Publication title - Excel",
+      text: "Publication title - Excel",
+      url: "https://www.google.com",
+      docType: "XLS",
+      tagColor: "xls",
+    }
+  ]
+}) }}
+  '
+}) }}
+
+<hr />
+
+<h3>HTML</h3>
+{{ highlight({
+  html : '
+<div class="hee-card hee-card--details hee-card--downloads">
+    <h3>Alternative versions</h3>
+    <div class="hee-card--details__item">
+      <a class="hee-resources__link" href="#" title="Publication title - PDF version">
+        <span class="hee-resources__text">Publication title - PDF version</span>
+        <span class="hee-resources__tag hee-resources__pdf">PDF</span>
+      </a>
+    </div>
+    <div class="hee-card--details__item">
+      <a class="hee-resources__link" href="#" title="Publication title - Open Document">
+        <span class="hee-resources__text">Publication title - Open Document</span>
+        <span class="hee-resources__tag hee-resources__odf">ODF</span>
+      </a>
+    </div>
+    <div class="hee-card--details__item">
+      <a class="hee-resources__link" href="#" title="Publication title - Excel">
+        <span class="hee-resources__text">Publication title - Excel</span>
+        <span class="hee-resources__tag hee-resources__xls">XLS</span>
+      </a>
+    </div>
+</div>
+  '
+  }) 
+}}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "example-blocks.html" %}
+
+{% block main %}
+  {{ downloadsCard({
+    title: "Alternative versions",
+    items: [
+      {
+        title: "Publication title - PDF version",
+        text: "Publication title - PDF version",
+        url: "#",
+        docType: "PDF",
+        tagColor: "pdf"
+      },
+      {
+        title: "Publication title - Open Document",
+        text: "Publication title - Open Document",
+        url: "#",
+        docType: "ODF",
+        tagColor: "odf"
+      },
+      {
+        title: "Publication title - Excel",
+        text: "Publication title - Excel",
+        url: "#",
+        docType: "XLS",
+        tagColor: "xls"
+      }
+    ]
+  }) }}
+{% endblock %}

@@ -211,79 +211,49 @@
     ]
   }) }}
 
-  {% set pdf %}
-    {{ resources({
-      title: "Publication title - PDF version",
-      text: "Publication title - PDF version",
-      url: "#",
-      docType: "PDF",
-      tagColor: "pdf"
-    }) }}
-  {% endset %}
-
-  {% set odf %}
-    {{ resources({
-      title: "Publication title - Open Document",
-      text: "Publication title - Open Document",
-      url: "#",
-      docType: "ODF",
-      tagColor: "odf"
-    }) }}
-  {% endset %}
-
-  {% set xls %}
-    {{ resources({
-      title: "Publication title - Excel",
-      text: "Publication title - Excel",
-      url: "#",
-      docType: "XLS",
-      tagColor: "xls"
-    }) }}
-  {% endset %}
-
-  {{ detailsCard({
+  {{ downloadsCard({
     title: "Alternative versions",
     items: [
       {
-        value: pdf
+        title: "Publication title - PDF version",
+        text: "Publication title - PDF version",
+        url: "#",
+        docType: "PDF",
+        tagColor: "pdf"
       },
       {
-        value: odf
+        title: "Publication title - Open Document",
+        text: "Publication title - Open Document",
+        url: "#",
+        docType: "ODF",
+        tagColor: "odf"
       },
       {
-        value: xls
+        title: "Publication title - Excel",
+        text: "Publication title - Excel",
+        url: "#",
+        docType: "XLS",
+        tagColor: "xls"
       }
     ]
   }) }}
 
-  {% set firstLang %}
-    {{ resources({
-      title: "Teitl y cyhoeddiad - Fersiwn PDF",
-      text: "Teitl y cyhoeddiad - Fersiwn PDF",
-      url: "#",
-      docType: "PDF",
-      tagColor: "pdf"
-    }) }}
-  {% endset %}
-
-  {% set secondLang %}
-    {{ resources({
-      title: "Tytuł publikacji - wersja PDF",
-      text: "Tytuł publikacji - wersja PDF",
-      url: "#",
-      docType: "PDF",
-      tagColor: "pdf"
-    }) }}
-  {% endset %}
-
-  {{ detailsCard({
+  {{ downloadsCard({
     title: "Languages",
     items: [
       {
-        value: firstLang
+        title: "Teitl y cyhoeddiad - Fersiwn PDF",
+        text: "Teitl y cyhoeddiad - Fersiwn PDF",
+        url: "#",
+        docType: "PDF",
+        tagColor: "pdf"
       },
       {
-        value: secondLang
+        title: "Tytuł publikacji - wersja PDF",
+        text: "Tytuł publikacji - wersja PDF",
+        url: "#",
+        docType: "PDF",
+        tagColor: "pdf"
       }
     ]
   }) }}
