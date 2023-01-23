@@ -2,8 +2,8 @@
 .hee-banner {
 	@include print-hide();
 	background-color: $color_nhsuk-yellow;
-	padding-bottom: nhsuk-spacing(5);
-	padding-top: nhsuk-spacing(5);
+	padding-bottom: nhsuk-spacing(4);
+	padding-top: nhsuk-spacing(4);
 
 	.hee-banner__message {
 		@include top-and-bottom;
@@ -57,7 +57,7 @@
 	}
 
 	&.hee-banner--mourning {
-		background-color: $color_nhsuk-black;
+		background-color: #000000;
 	}
 
 	&.hee-banner--announcement, &.hee-banner--mourning {
