@@ -9,6 +9,7 @@ export default () => {
 
       this.containerSelector = '.page__main';
       this.headingSelector = 'h2.toc_h2';
+      this.subHeadingSelector = 'h3.toc_h3';
       this.headingPrefix = 'hee-toc-heading';
 
       // Anchor links macro sets this data attribute when TOC is flagged as true.
@@ -27,9 +28,15 @@ export default () => {
       const links = this.createTocLinks(headings);
       this.setTocListMarkup(links);
 
+
+
       // Build back to top links and append to each TOC heading within page
       // content.
       this.setBackToTopLinks(headings);
+      const subHeadings = document.querySelectorAll(this.containerSelector + ' ' + this.subHeadingSelector);
+      if (headings.length > 0) {
+        this.setBackToTopLinks(subHeadings);
+      }
     }
 
     /**
