@@ -33,7 +33,7 @@ export default () => {
       headings = [].slice.call(headings, 1);
       this.setBackToTopLinks(headings);
       const subHeadings = document.querySelectorAll(this.containerSelector + ' ' + this.subHeadingSelector);
-      if (headings.length > 0) {
+      if (subHeadings.length > 0) {
         this.setBackToTopLinks(subHeadings);
       }
     }
