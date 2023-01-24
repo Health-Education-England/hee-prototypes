@@ -1,0 +1,5 @@
+.hee-back-to-top {
+  @include nhsuk-responsive-margin(7, 'bottom');
+  @include nhsuk-typography-responsive(19);
+  @include nhsuk-typography-weight-normal;
+}

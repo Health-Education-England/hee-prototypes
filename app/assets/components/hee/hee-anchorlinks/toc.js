@@ -22,9 +22,14 @@ export default () => {
         return;
       }
 
-      // Build link structure from DOM and append generated markup to component.
-      const links = this.buildLinks(headings);
-      this.setListMarkup(links);
+      // Build link structure from DOM and append generated markup to TOC
+      // component.
+      const links = this.createTocLinks(headings);
+      this.setTocListMarkup(links);
+
+      // Build back to top links and append to each TOC heading within page
+      // content.
+      this.setBackToTopLinks(headings);
     }
 
     /**
@@ -34,7 +39,7 @@ export default () => {
      *
      * @returns {Object[]}
      */
-    buildLinks(headings) {
+    createTocLinks(headings) {
       let links = [];
 
       headings.forEach((heading, index) => {
@@ -101,7 +106,7 @@ export default () => {
      *
      * @returns void
      */
-    setListMarkup(links) {
+    setTocListMarkup(links) {
       let list = document.createElement('ul');
 
       links.forEach((link) => {
@@ -155,6 +160,39 @@ export default () => {
       });
 
       this.tableContents.append(list);
+    }
+
+    /**
+     * Builds back to top link component.
+     *
+     * @returns Object
+     */
+    createBackToTopLink() {
+      let container = document.createElement('div');
+      container.classList.add('hee-back-to-top');
+
+      let anchor = document.createElement('a');
+      anchor.setAttribute('href', '#publication-title');
+      anchor.setAttribute('title', 'Back to top');
+      anchor.innerText = 'Back to top';
+
+      container.append(anchor);
+
+      return container;
+    }
+
+    /**
+     * Injects back to top links above TOC headings within content.
+     *
+     * @param {NodeList}      headings
+     *
+     * @returns void
+     */
+    setBackToTopLinks(headings) {
+      headings.forEach((heading, index) => {
+        const link = this.createBackToTopLink();
+        heading.parentNode.insertBefore(link, heading);
+      });
     }
 
     /**
