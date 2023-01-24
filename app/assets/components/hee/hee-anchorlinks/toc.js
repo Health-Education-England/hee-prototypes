@@ -18,7 +18,7 @@ export default () => {
       }
 
       // Only attempt to build TOC links if H2 anchors found on page.
-      const headings = document.querySelectorAll(this.containerSelector + ' ' + this.headingSelector);
+      let headings = document.querySelectorAll(this.containerSelector + ' ' + this.headingSelector);
       if (headings.length === 0) {
         return;
       }
@@ -28,10 +28,9 @@ export default () => {
       const links = this.createTocLinks(headings);
       this.setTocListMarkup(links);
 
-
-
       // Build back to top links and append to each TOC heading within page
-      // content.
+      // content. We skip the first heading on the page.
+      headings = [].slice.call(headings, 1);
       this.setBackToTopLinks(headings);
       const subHeadings = document.querySelectorAll(this.containerSelector + ' ' + this.subHeadingSelector);
       if (headings.length > 0) {
