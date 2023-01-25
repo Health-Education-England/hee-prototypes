@@ -143,7 +143,7 @@
     <h2>Regions</h2>
     <p>Pellentesque id posuere sapien vestibulum, quam pellentesque at libero. Aliquam at id fames hendrerit in vulputate orci aliquet augue. Massa penatibus sociis et nisl. Enim aliquam mauris suscipit turpis non hendrerit felis.</p>
     {{ navMap({
-      src: "/images/nav-maps/dental-regions.svg",
+      src: basePath + "/images/nav-maps/dental-regions.svg",
       caption: {
         items: [
           {
@@ -328,62 +328,111 @@
 {% endblock %}
 
 {% block pageFeature %}
-  {% set items = [
+  {% set blogNewsItems = [
     {
-      title: "Publication item #1",
+      title: "Blog/News Title",
       href: "#",
       details: [
-      {
-        label: "Publication type:",
-        value: "Briefing"
-      },
-      {
-        label: "Publish date:",
-        value: "07 September 2022"
-      }
-    ],
-      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. "
     },
     {
-      title: "Publication item #2",
+      title: "Blog/News Title",
       href: "#",
       details: [
-      {
-        label: "Publication type:",
-        value: "Briefing"
-      },
-      {
-        label: "Publish date:",
-        value: "07 September 2022"
-      }
-    ],
-      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. "
     },
     {
-      title: "Publication item #3",
+      title: "Blog/News Title",
       href: "#",
       details: [
-      {
-        label: "Publication type:",
-        value: "Briefing"
-      },
-      {
-        label: "Publish date:",
-        value: "07 September 2022"
-      }
-    ],
-      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. "
+    }
+  ]
+  %}
+
+  {% set eventItems = [
+    {
+      title: "Event Title",
+      href: "#",
+      details: [
+        {
+          label: "Event type:",
+          value: "Webinar"
+        },
+        {
+          label: "Date:",
+          value: "07 September 2022"
+        },
+        {
+          label: "Time:",
+          value: "14:00 - 20:00"
+        }
+      ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. "
+    },
+    {
+      title: "Event Title",
+      href: "#",
+      details: [
+        {
+          label: "Event type:",
+          value: "Webinar"
+        },
+        {
+          label: "Date:",
+          value: "07 September 2022"
+        },
+        {
+          label: "Time:",
+          value: "14:00 - 20:00"
+        }
+      ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. "
+    },
+    {
+      title: "Event Title",
+      href: "#",
+      details: [
+        {
+          label: "Event type:",
+          value: "Webinar"
+        },
+        {
+          label: "Date:",
+          value: "07 September 2022"
+        },
+        {
+          label: "Time:",
+          value: "14:00 - 20:00"
+        }
+      ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. "
     }
   ]
   %}
 
   <div class="nhsuk-width-container">
-    <h2>News</h2>
+    <h2>Related content type [Blog/news]</h2>
     <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet.</p>
-    {{ miniListing(items) }}
+    {{ miniListing(blogNewsItems) }}
 
-    <h2>Events</h2>
+    <h2>Related content type [Events]</h2>
     <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet.</p>
-    {{ miniListing(items) }}
+    {{ miniListing(eventItems) }}
   </div>
 {% endblock %}
