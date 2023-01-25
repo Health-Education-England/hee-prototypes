@@ -31,7 +31,7 @@
       text: "Go back"
     }) }}
 
-    <h1>Publication title</h1>
+    <h1 id="publication-title">Publication title</h1>
     <span class="nhsuk-caption-xl">Caption</span>
   </div>
 {% endblock %}
@@ -241,6 +241,16 @@
     }) }}
   {% endset %}
 
+  {% set ppt %}
+    {{ resources({
+      title: "Publication title - Powerpoint",
+      text: "Publication title - Powerpoint",
+      url: "#",
+      docType: "PPT",
+      tagColor: "ppt"
+    }) }}
+  {% endset %}
+
   {{ detailsCard({
     title: "Alternative versions",
     items: [
@@ -252,6 +262,9 @@
       },
       {
         value: xls
+      },
+      {
+        value: ppt
       }
     ]
   }) }}
