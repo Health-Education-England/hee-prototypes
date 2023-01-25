@@ -1,0 +1,13 @@
+{% macro searchListingItem(params) %}
+<div class="hee-search-listing-item">
+  <h2><a href="{{ params.href }}" title="{{ params.title }}">{{ params.title }}</a></h2>
+  <span class="hee-search-listing-item__subtitle">{{ params.subtitle }}</span>
+  <div class="hee-search-listing-item__summary">
+    {{ params.summary }}
+  </div>
+  <div class="hee-search-listing-item__url">
+    <a href="{{ params.href }}">{{ params.url }}</a>
+  </div>
+  <span class="hee-search-listing-item__updated">{{ params.lastUpdated }}</span>
+</div>
+{% endmacro %}
