@@ -1,0 +1,55 @@
+{% extends "example-template.html" %}
+
+{% set page_url = 'search-listing' %}
+{% set page_title = 'Search results' %}
+
+{% block pageClass %}page--search{% endblock %}
+
+{% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
+
+{% block breadcrumbs %}
+  {{
+    breadcrumb({
+      items: [
+        {
+          href: basePath + "/",
+          text: "Home"
+        },
+        {
+          href: basePath + "/templates",
+          text: "Templates"
+        },
+        {
+          href: basePath + "/templates/examples",
+          text: "Examples"
+        }
+      ],
+      href: basePath + "/templates/examples/"+page_url,
+      text: page_title
+    })
+  }}
+{% endblock %}
+
+{% block pageHeader %}
+<div class="nhsuk-width-container">
+  <h1>Search results</h1>
+  {{ searchForm({
+    label: "Enter a search term",
+    inputVal: "Type search here",
+    submitLabel: "Submit"
+  }) }}
+</div>
+{% endblock %}
+
+{% block pageMain %}
+<div class="nhsuk-width-container">
+  <div class="page__main">
+    {{ searchListing({
+      count: "187",
+      results: [],
+      emptyMessage: "No results",
+      showPagination: true
+    }) }}
+  </div>
+</div>
+{% endblock %}
