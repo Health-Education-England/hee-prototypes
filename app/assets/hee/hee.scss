@@ -57,7 +57,6 @@
 @import '../components/related-nav'; //?
 @import '../components/resources-link';
 @import '../components/hee/hee-resources/resources';
-@import '../components/header-search';
 @import '../components/hee-table-2';
 @import '../components/hee/hee-appliesto/appliesto';
 @import '../components/hee/hee-anchorlinks/anchorlinks';
@@ -75,6 +74,8 @@
 @import 'blocks/furniture/collections/hee-listing-item/listing-item';
 @import 'blocks/furniture/collections/hee-filter/filter';
 @import 'blocks/furniture/collections/hee-filtertag/filtertag';
+// -- Search
+@import 'blocks/furniture/search/form/search-form';
 
 ///// CONTENT
 @import 'blocks/content/hee-card';
