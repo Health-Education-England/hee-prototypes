@@ -1,15 +1,103 @@
-# Search: Listing
+{% extends "prototype-inner.html" %}
 
-Layout for the search listing results.
+{% set page_url = 'search-listing' %}
+{% set page_title = 'Search Listing' %}
+{% set page_tag = 'NHS' %}
 
-## Quick start example
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
 
-[Preview this component](https://health-education-england.github.io/hee-prototypes/blocks/furniture/search-listing.html)
+{% block breadcrumbs %}
+  {{
+  breadcrumb({
+    items: [
+      {
+        href: basePath + "/",
+        text: "Home"
+      },
+      {
+        href: basePath + "/blocks",
+        text: "Blocks"
+      },
+      {
+        href: basePath + "/blocks/furniture",
+        text: "Furniture"
+      }
+    ],
+    href: basePath + "/blocks/furniture/"+page_url,
+    text: page_title
+  })
+  }}
+{% endblock %}
 
-### HTML markup
+{% block pageLeftbar %}
+  {{ subnav({
+    area: 'blocks',
+    subarea: 'furniture'
+  }) }}
+{% endblock %}
 
-````html
-<div class="hee-search-listing">
+{% block pageHeader %}
+  <span class="nhsuk-caption-xl">Furniture</span>
+  <h1>{{ page_title }}</h1>
+
+  <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+  <h3>Example</h3>
+  {{ example({
+    view: 'block',
+    url: basePath + '/blocks/furniture/examples/' + page_url,
+    height: '500px'
+  }) }}
+
+  <hr />
+
+  <h3>Macro</h3>
+  {{ highlight({
+    html: '
+{% set items = [
+  {
+    title: "Assessment of Dental Core competency #1",
+    subtitle: "Dental and Maxillofacial Radiology recruitment",
+    href: "#",
+    url: "https://dental.hee.nhs.uk/dental-trainee-recruitment/dental-specialty-training/oral-medicine/overview-of-oral-medicine/assessment-of-dental-core-competency",
+    summary: "Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1)",
+    lastUpdated: "Page last updated: 17 January 2023"
+  },
+  {
+    title: "Assessment of Dental Core competency #2",
+    subtitle: "Dental and Maxillofacial Radiology recruitment",
+    href: "#",
+    url: "https://dental.hee.nhs.uk/dental-trainee-recruitment/dental-specialty-training/oral-medicine/overview-of-oral-medicine/assessment-of-dental-core-competency",
+    summary: "Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1)",
+    lastUpdated: "Page last updated: 17 January 2023"
+  },
+  {
+    title: "Assessment of Dental Core competency #3",
+    subtitle: "Dental and Maxillofacial Radiology recruitment",
+    href: "#",
+    url: "https://dental.hee.nhs.uk/dental-trainee-recruitment/dental-specialty-training/oral-medicine/overview-of-oral-medicine/assessment-of-dental-core-competency",
+    summary: "Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1)",
+    lastUpdated: "Page last updated: 17 January 2023"
+  }
+] %}
+
+{{ searchListing({
+  count: "3",
+  results: items,
+  emptyMessage: "No results",
+  showPagination: true
+}) }}
+  '
+  }) }}
+
+  <hr />
+
+  <h3>HTML</h3>
+  {{ highlight({
+    html : '<div class="hee-search-listing">
   <h2>3 results</h2>
   <div class="hee-search-listing__items">
     <div class="hee-search-listing-item">
@@ -65,59 +153,10 @@ Layout for the search listing results.
     </ul>
   </nav>
 </div>
-````
+'
+  })
+  }}
 
-### Nunjucks macro
+{% endblock %}
 
-````
-{% set items = [
-  {
-    title: "Assessment of Dental Core competency #1",
-    subtitle: "Dental and Maxillofacial Radiology recruitment",
-    href: "#",
-    url: "https://dental.hee.nhs.uk/dental-trainee-recruitment/dental-specialty-training/oral-medicine/overview-of-oral-medicine/assessment-of-dental-core-competency",
-    summary: "Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1)",
-    lastUpdated: "Page last updated: 17 January 2023"
-  },
-  {
-    title: "Assessment of Dental Core competency #2",
-    subtitle: "Dental and Maxillofacial Radiology recruitment",
-    href: "#",
-    url: "https://dental.hee.nhs.uk/dental-trainee-recruitment/dental-specialty-training/oral-medicine/overview-of-oral-medicine/assessment-of-dental-core-competency",
-    summary: "Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1)",
-    lastUpdated: "Page last updated: 17 January 2023"
-  },
-  {
-    title: "Assessment of Dental Core competency #3",
-    subtitle: "Dental and Maxillofacial Radiology recruitment",
-    href: "#",
-    url: "https://dental.hee.nhs.uk/dental-trainee-recruitment/dental-specialty-training/oral-medicine/overview-of-oral-medicine/assessment-of-dental-core-competency",
-    summary: "Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1)",
-    lastUpdated: "Page last updated: 17 January 2023"
-  }    
-] %}
-
-{{ searchListing({
-  count: "3",
-  results: items,
-  emptyMessage: "No results",
-  showPagination: true
-}) }}
-````
-
-### Nunjucks arguments
-
-Macro takes the following arguments:
-
-| Name                  | Type    | Required  | Description                                          |
-|-----------------------|---------|-----------|------------------------------------------------------|
-| count                 | string  | Yes       | Total number of results returned.                    |
-| emptyMessage          | string  | Yes       | Message displayed when no results returned.          |
-| showPagination        | boolean | Yes       | Flag to display pagination or not.                   |
-| results               | array   | Yes       | Array containing search results details.             |
-| results[].title       | string  | Yes       | Title of the search result.                          |
-| results[].subtitle    | string  | Yes       | Subtitle of the search result displayed below title. |
-| results[].href        | string  | Yes       | Result link href attribute.                          |
-| results[].url         | string  | Yes       | URL displayed within result details.                 |
-| results[].summary     | string  | Yes       | Summary text describing the result.                  |
-| results[].lastUpdated | string  | Yes       | Last date of update.                                 |
+{% block pageFooter %}{% endblock %}
