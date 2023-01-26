@@ -3,6 +3,8 @@
 {% set page_url = 'search-listing' %}
 {% set page_title = 'Search results' %}
 
+{% block pageClass %}page--search{% endblock %}
+
 {% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
 
 {% block breadcrumbs %}
@@ -31,11 +33,18 @@
 {% block pageHeader %}
 <div class="nhsuk-width-container">
   <h1>Search results</h1>
+  {{ searchForm({
+    label: "Enter a search term",
+    inputVal: "Type search here",
+    submitLabel: "Submit"
+  }) }}
 </div>
 {% endblock %}
 
 {% block pageMain %}
 <div class="nhsuk-width-container">
-  {{ searchForm() }}
+  <div class="page__main">
+
+  </div>
 </div>
 {% endblock %}
