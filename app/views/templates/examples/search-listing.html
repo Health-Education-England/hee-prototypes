@@ -44,7 +44,12 @@
 {% block pageMain %}
 <div class="nhsuk-width-container">
   <div class="page__main">
-
+    {{ searchListing({
+      count: "187",
+      results: [],
+      emptyMessage: "No results",
+      showPagination: true
+    }) }}
   </div>
 </div>
 {% endblock %}
