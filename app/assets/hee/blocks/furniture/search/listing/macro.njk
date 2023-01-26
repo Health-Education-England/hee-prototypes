@@ -1,4 +1,5 @@
 {% macro searchListing(params) %}
+{%- from 'hee/blocks/furniture/search/listing-item/macro.njk' import searchListingItem %}
 {%- from 'pagination/macro.njk' import pagination %}
 
 <div class="hee-search-listing">
@@ -7,7 +8,7 @@
   {% if params.results.length > 0 %}
     <div class="hee-search-listing__items">
       {% for result in params.results %}
-        {#{{ listingItem(result) }}#}
+        {{ searchListingItem(result) }}
       {% endfor %}
     </div>
   {% else %}

@@ -44,9 +44,22 @@
 {% block pageMain %}
 <div class="nhsuk-width-container">
   <div class="page__main">
+    {% set items = [] %}
+    {% for i in range(0, 10) -%}
+      {% set item = {
+        title: "Assessment of Dental Core competency #" + loop.index,
+        subtitle: "Dental and Maxillofacial Radiology recruitment",
+        href: "#",
+        url: "https://dental.hee.nhs.uk/dental-trainee-recruitment/dental-specialty-training/oral-medicine/overview-of-oral-medicine/assessment-of-dental-core-competency",
+        summary: "Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1)",
+        lastUpdated: "Page last updated: 17 January 2023"
+      } %}
+      {% set items = (items.push(item), items) %}
+    {% endfor %}
+
     {{ searchListing({
       count: "187",
-      results: [],
+      results: items,
       emptyMessage: "No results",
       showPagination: true
     }) }}
