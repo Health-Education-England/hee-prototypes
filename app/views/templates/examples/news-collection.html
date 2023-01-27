@@ -2,7 +2,7 @@
 
 {% block pageTitle %}News Collection - Examples - NWP Prototype Kit{% endblock %}
 
-{% block pageBreadcrumbs %}
+{% block breadcrumbs %}
 {{ 
     breadcrumb({
     items: [
@@ -57,7 +57,7 @@
 {% endblock %}
 
 {% block pageContent %}
-  {{ listing({
+  {{ listingLayout({
       showPagination: true,
       pageType: "bulletin",
       items: [

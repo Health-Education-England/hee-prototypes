@@ -1,0 +1,13 @@
+{% macro detailsCard(params) %}
+<div class="hee-card hee-card--details">
+  <h3>{{ params.title }}</h3>
+  {% for item in params.items %}
+    <div class="hee-card--details__item">
+      {% if item.label %}
+        <span>{{ item.label }}</span>
+      {% endif %}
+      {{ item.value | safe }}
+    </div>
+  {% endfor %}
+</div>
+{% endmacro %}

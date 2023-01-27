@@ -1,0 +1,119 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'main-card-author' %}
+{% set page_title = 'Card--Author' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block breadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/",
+            text: "Home"
+        },
+        {
+            href: "/blocks",
+            text: "Blocks"
+        },
+        {
+            href: "/blocks/content",
+            text: "Content"
+        }
+    ],
+        href: "/blocks/"+page_url,
+      text: page_title
+    }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'blocks',
+    subarea: 'content'
+}) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Main</span>
+    <h1>{{ page_title }}</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+<p>You can find the content type data model in the <a href="https://hee-tis.atlassian.net/wiki/spaces/NWPK/pages/3615719497/Author">Author specification</a>.</p>
+
+<h3>Example</h3>
+{{ example({
+    view: 'block',
+    url: '/blocks/content/examples/' + page_url,
+    height: '620'
+}) }}
+
+<hr />
+
+<h3>Macro</h3>
+{{ highlight({
+  html: '
+{{ authorCard({
+  imgURL: "/images/doctor-headshot.png",
+  title: "Mr",
+  name: "First Last",
+  initials: "JB",
+  pronouns: "Pronoun",
+  jobTitle: "Job title",
+  department: "Department",
+  organisation: "Organisation",
+  email: "jo.bloggs@hee.co.uk",
+  website: "http://nhs.uk/",
+  twitter: "nhsengland",
+  linkedin: "nhs",
+  address: "Health Education England<br>
+            3 Piccadilly<br>
+            Manchester<br>
+            M1 3BN",
+  bio: "Lorem ipsum dolor sit amet...",
+  authorURL: "/author/jo-blogs"
+}) }}
+  '
+}) }}
+
+<hr />
+
+<h3>HTML</h3>
+{{ highlight({
+  html : '
+<div class="hee-card hee-card--author">
+    <div class="hee-card--author__header">
+      <div class="hee-card__image has-bg">
+        <div class="hee-card__initials" style="background-image: url(\'/images/MicrosoftTeams-image.png\')">
+          <span>JB</span>
+        </div>
+      </div>
+      <div class="hee-card--author__details">
+        <h2 class="hee-card__name" aria-label="Name"> Mr First Last </h2>
+        <span class="hee-card__pronouns" aria-label="Pronouns">Pronoun</span>
+        <h3 class="nhsuk-heading-m hee-card__jobtitle" aria-label="Job Title">Job title</h3>
+        <p class="hee-card__department" aria-label="Department">Department</p>
+        <p class="hee-card__organisation" aria-label="Organisation">Organisation</p>
+      </div>
+    </div>
+    <ul class="hee-card__contact">
+      <li class="hee-card__email hee-card__contact__item" aria-label="Email"><a href="mailto:jo.bloggs@hee.co.uk;" title="Opens email">jo.bloggs@hee.co.uk</a></li>
+      <li class="hee-card__website hee-card__contact__item" aria-label="Website"><a href="http://nhs.uk/" title="Opens website">http://nhs.uk/</a></li>
+      <li class="hee-card__linkedin hee-card__contact__item" aria-label="Linkedin"><a href="https://www.linkedin.com/company//nhs" title="Opens LinkedIn">/nhs</a></li>
+      <li class="hee-card__twitter hee-card__contact__item" aria-label="Twitter"><a href="https://twitter.com/nhsengland" title="Opens Twitter">@nhsengland</a></li>
+    </ul>
+    <p class="hee-card__address" aria-label="Address">Health Education England<br> 3 Piccadilly<br> Manchester<br> M1 3BN</p>
+    <p class="hee-card__bio" aria-label="Bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque ac pellentesque in sapien. Amet in ante libero a lobortis. Blandit sed pulvinar ultrices gravida vulputate at. Ipsum dolor condimentum habitasse aliquam risus risus consectetur.</p>
+    <p class="hee-card__authorurl" aria-label="Author URL"><a href="/author/jo-blogs" title="Opens author\'s website">View more about Mr First Last</a></p>
+</div>
+  '
+  }) 
+}}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

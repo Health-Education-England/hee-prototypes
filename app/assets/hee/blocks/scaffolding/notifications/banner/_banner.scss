@@ -1,0 +1,76 @@
+/* HEE-Banner */
+.hee-banner {
+	@include print-hide();
+	background-color: $color_nhsuk-yellow;
+	padding-bottom: nhsuk-spacing(4);
+	padding-top: nhsuk-spacing(4);
+
+	.hee-banner__message {
+		@include top-and-bottom;
+		position: relative;
+
+		h1 {
+			margin-bottom: 24px;
+			line-height: 56px;
+		}
+
+		h2 {
+			@include nhsuk-typography-responsive(32);
+			@include nhsuk-responsive-margin(3, 'bottom');
+			line-height: 40px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		h3 {
+			@include nhsuk-typography-responsive(24);
+			@include nhsuk-responsive-margin(3, 'bottom');
+			@include nhsuk-typography-weight-normal();
+			line-height: 32px;
+			margin: 0;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	
+		p {
+			@include nhsuk-responsive-margin(2, 'top');
+			@include nhsuk-typography-responsive(19);
+			line-height: 1.5;
+			display: block;
+			margin-bottom: 16px;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+
+		a {
+			@include nhsuk-link-style-inverted;
+		}
+	}
+
+	&.hee-banner--announcement {
+		background-color: $color_nhsuk-dark-pink;
+	}
+
+	&.hee-banner--mourning {
+		background-color: #000000;
+	}
+
+	&.hee-banner--announcement, &.hee-banner--mourning {
+		color: $color_nhsuk-white;
+
+		a {
+			@include nhsuk-link-style-inverted;
+			@include nhsuk-link-style-white;
+
+			&:focus {
+				background: $nhsuk-focus-color;
+				box-shadow: 0 0 0 $nhsuk-focus-width $nhsuk-focus-color, 0 $nhsuk-focus-width 0 $nhsuk-focus-width $nhsuk-focus-text-color;
+			}
+		}
+	}
+}

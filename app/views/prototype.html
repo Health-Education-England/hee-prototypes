@@ -6,8 +6,8 @@
 {%- from 'prototype/status-tag/status-tag.njk' import statusTag %}
 
 {# SCAFFOLDING #}
-{%- from 'hee/scaffolding/header/macro.njk' import customHeader %}
-{%- from 'hee/scaffolding/footer/macro.njk' import siteFooter %}
+{%- from 'hee/blocks/scaffolding/header/macro.njk' import customHeader %}
+{%- from 'hee/blocks/scaffolding/footer/macro.njk' import siteFooter %}
 {%- from 'breadcrumb/macro.njk' import breadcrumb %}
 
 {# GLOBAL #}
@@ -91,6 +91,11 @@
     </div>
     {% endblock %}
 
+    <div class="breadcrumbs">
+      {% block breadcrumbs %}
+      {% endblock %}
+    </div>
+
     <div class="site-notifications">
     {% block headerEnd %}
     {% endblock %}
@@ -98,9 +103,6 @@
 
     {% block main %}
     <main class="page {% block pageClass %}{% endblock %}" id="maincontent" role="main">
-      <div class="page__breadcrumbs">
-        {% block pageBreadcrumbs %}{% endblock %}
-      </div>
       {% block pageMain %}{% endblock %}
       <div class="page__footer">
         {% block pageFooter %}{% endblock %}

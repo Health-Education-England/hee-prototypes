@@ -1,18 +1,18 @@
 {# SCAFFOLDING #}
 
 {# Cookies #}
-{%- from 'hee/scaffolding/cookies/macro.njk' import cookies %}
+{%- from 'hee/blocks/scaffolding/cookies/macro.njk' import cookies %}
 
 {# Header #}
-{%- from 'hee/scaffolding/header/macro.njk' import customHeader %}
+{%- from 'hee/blocks/scaffolding/header/macro.njk' import customHeader %}
 {%- from 'skip-link/macro.njk' import skipLink %}
 
 {# Notifications #}
-{%- from 'hee/scaffolding/notifications/globalalert/macro.njk' import globalAlert %}
-{%- from 'hee/scaffolding/notifications/phasebanner/macro.njk' import phaseBanner %}
+{%- from 'hee/blocks/scaffolding/notifications/banner/macro.njk' import banner %}
+{%- from 'hee/blocks/scaffolding/notifications/phasebanner/macro.njk' import phaseBanner %}
 
 {# Footer #}
-{%- from 'hee/scaffolding/footer/macro.njk' import siteFooter %}
+{%- from 'hee/blocks/scaffolding/footer/macro.njk' import siteFooter %}
 
 {# Main #}
 {%- from 'breadcrumb/macro.njk' import breadcrumb %}
@@ -21,17 +21,19 @@
 {%- from 'hero/macro.njk' import hero %}
 {%- from 'components/hee/hee-microhero/macro.njk' import microHero %}
 {%- from 'components/hee/hee-homesection/macro.njk' import homepageSection %}
-{%- from 'components/hee/hee-listing/macro.njk' import listing %}
-{%- from 'components/hee/hee-filter/macro.njk' import filter %}
+{%- from 'hee/blocks/content/featured/hee-mini-listing/macro.njk' import miniListing %}
+{%- from 'hee/blocks/furniture/collections/hee-listing/macro.njk' import listingLayout %}
+{%- from 'hee/blocks/furniture/collections/hee-listing-item/macro.njk' import listingItem %}
+{%- from 'hee/blocks/furniture/collections/hee-filter/macro.njk' import filter %}
 {%- from 'pagination/macro.njk' import pagination %}
 
 {# CONTENT (BLOCKS) COMPONENTS #}
 
 {# HEE Components #}
 {%- from 'components/hee/hee-anchorlinks/macro.njk' import anchorLinks %}
-{%- from 'components/hee/hee-detailscard/authorcard/macro.njk' import authorCard %}
-{%- from 'components/hee/hee-detailscard/personcard/macro.njk' import personCard %}
-{%- from 'components/hee/hee-detailscard/departmentcard/macro.njk' import departmentCard %}
+{%- from 'hee/blocks/content/main/card--author/macro.njk' import authorCard %}
+{#{%- from 'hee/blocks/content/sidebar/card--person/macro.njk' import personCard %}
+{%- from 'hee/blocks/content/sidebar/card--department/macro.njk' import departmentCard %}#}
 {%- from 'components/hee/hee-detailscard/contact.njk' import contact %}
 {%- from 'components/hee/hee-media/macro.njk' import media %}
 {%- from 'components/hee/hee-navmap/macro.njk' import navMap %}
@@ -104,7 +106,7 @@
         href: '#maincontent',
         text: 'Skip to main content'
       }) }}
-      {#{ globalAlert({
+      {#{ banner({
         customClass: 'hee-globalalert--black',
         heading: "Her Majesty Queen Elizabeth II",
         HTML: "<p>21 April 1926 to 8 September 2022</p><p><a href='https://www.hee.nhs.uk/news-blogs-events/news/her-majesty-queen-elizabeth-ii'>We join with the people across HEE and the NHS in mourning the death of Queen Elizabeth II</a></p>"
@@ -185,13 +187,19 @@
     </div>
     {% endblock %}
 
+    <div class="breadcrumbs">
+      {% block breadcrumbs %}
+        {# Breadcrumbs... #}
+      {% endblock %}
+    </div>
+
     {% block headerEnd %}
     <div class="site-notifications">
       {{ phaseBanner({
         tag: "Alpha",
         description: 'This is a new service – your <a class="nhsuk-link" href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.'
       }) }}
-      {#{ globalAlert({
+      {#{ banner({
         customClass: '',
         heading: "Coronavirus (COVID-19)",
         HTML: "<p><a href='https://www.nhs.uk/conditions/coronavirus-covid-19/'>Get the latest advice about coronavirus</a></p>"
@@ -201,11 +209,6 @@
 
     {% block main %}
     <main class="page {% block pageClass %}{% endblock %}" id="maincontent" role="main">
-      <div class="page__breadcrumbs">
-        {% block pageBreadcrumbs %}
-          {# Breadcrumbs... #}
-        {% endblock %}
-      </div>
       <div class="page__header">
         {% block pageHeader %}
           {# Hero... Microhero... Title #}

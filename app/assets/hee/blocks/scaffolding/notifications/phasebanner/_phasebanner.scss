@@ -1,0 +1,43 @@
+/* HEE-PhaseBanner */
+.hee-phasebanner {
+  border-bottom: 1px solid $nhsuk-border-color;
+  padding-top: nhsuk-spacing(2);
+  padding-bottom: nhsuk-spacing(2);
+
+  .hee-phasebanner__wrapper {
+    align-items: center;
+    display: flex;
+
+    .hee-phasebanner__tag {
+      background-color: $color_nhsuk-blue;
+      color: $color_nhsuk-white;
+      font-weight: bold;
+      line-height: 1em;
+      margin-right: nhsuk-spacing(3);
+      padding: 8px 16px;
+      text-transform: uppercase;
+
+      @include mq($until: desktop) {
+        line-height: 1.5;
+      }
+    }
+
+    .hee-phasebanner__content {
+      p {
+        @include nhsuk-font(16);
+        margin: 0;
+        margin-bottom: nhsuk-spacing(2);
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.hee-phasebanner--notag {
+  .hee-phasebanner__tag {
+    display: none!important;
+  }
+}

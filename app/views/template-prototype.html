@@ -4,15 +4,15 @@
 {# SCAFFOLDING #}
 
 {# Header #}
-{%- from 'hee/scaffolding/header/macro.njk' import customHeader %}
+{%- from 'hee/blocks/scaffolding/header/macro.njk' import customHeader %}
 {%- from 'skip-link/macro.njk' import skipLink %}
 
 {# Notifications #}
-{%- from 'hee/scaffolding/notifications/globalalert/macro.njk' import globalAlert %}
-{%- from 'hee/scaffolding/notifications/phasebanner/macro.njk' import phaseBanner %}
+{%- from 'hee/blocks/scaffolding/notifications/banner/macro.njk' import banner %}
+{%- from 'hee/blocks/scaffolding/notifications/phasebanner/macro.njk' import phaseBanner %}
 
 {# Footer #}
-{%- from 'hee/scaffolding/footer/macro.njk' import siteFooter %}
+{%- from 'hee/blocks/scaffolding/footer/macro.njk' import siteFooter %}
 
 {# Main #}
 {%- from 'breadcrumb/macro.njk' import breadcrumb %}
@@ -109,17 +109,16 @@
     </div>
     {% endblock %}
 
+    <div class="breadcrumbs">
+      {% block breadcrumbs %}{% endblock %}
+    </div>
+
     {% block headerEnd %}
     <div class="site-notifications">
     </div>
     {% endblock %}
 
     <main class="page {% block pageClass %}{% endblock %}" id="maincontent" role="main">
-      <div class="page__breadcrumbs">
-        {% block pageBreadcrumbs %}
-          {# Breadcrumbs... #}
-        {% endblock %}
-      </div>
       {% block pageMain %}
         <div class="nhsuk-width-container">
           <div class="page__layout">

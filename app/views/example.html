@@ -1,38 +1,48 @@
 {# HEE/Scaffolding #}
 
 {# Cookies #}
-{%- from 'hee/scaffolding/cookies/macro.njk' import cookies %}
+{%- from 'hee/blocks/scaffolding/cookies/macro.njk' import cookies %}
 
 {# Header #}
-{%- from 'hee/scaffolding/header/macro.njk' import customHeader %}
+{%- from 'hee/blocks/scaffolding/header/macro.njk' import customHeader %}
 {%- from 'skip-link/macro.njk' import skipLink %}
 
 {# Notifications #}
-{%- from 'hee/scaffolding/notifications/globalalert/macro.njk' import globalAlert %}
-{%- from 'hee/scaffolding/notifications/phasebanner/macro.njk' import phaseBanner %}
+{%- from 'hee/blocks/scaffolding/notifications/banner/macro.njk' import banner %}
+{%- from 'hee/blocks/scaffolding/notifications/phasebanner/macro.njk' import phaseBanner %}
 
 {# Footer #}
-{%- from 'hee/scaffolding/footer/macro.njk' import siteFooter %}
+{%- from 'hee/blocks/scaffolding/footer/macro.njk' import siteFooter %}
 
 {# Main #}
 {%- from 'breadcrumb/macro.njk' import breadcrumb %}
 
-{# TEMPLATE COMPONENTS #}
+{# TEMPLATE BLOCKS #}
 {%- from 'hero/macro.njk' import hero %}
 {%- from 'components/hee/hee-microhero/macro.njk' import microHero %}
 {%- from 'components/hee/hee-homesection/macro.njk' import homepageSection %}
-{%- from 'components/hee/hee-listing/macro.njk' import listing %}
-{%- from 'components/hee/hee-filter/macro.njk' import filter %}
+{%- from 'hee/blocks/content/main/hee-publication-doc/macro.njk' import publicationDoc %}
+{%- from 'hee/blocks/content/featured/hee-mini-listing/macro.njk' import miniListing %}
+{%- from 'hee/blocks/furniture/collections/hee-listing/macro.njk' import listingLayout %}
+{%- from 'hee/blocks/furniture/collections/hee-listing-item/macro.njk' import listingItem %}
+{%- from 'hee/blocks/furniture/collections/hee-filter/macro.njk' import filter %}
 {%- from 'pagination/macro.njk' import pagination %}
 
-{# CONTENT (BLOCKS) COMPONENTS #}
+{# CONTENT BLOCKS #}
 
+{# Main #}
+{%- from 'hee/blocks/content/main/card--author/macro.njk' import authorCard %}
+{#{%- from 'hee/blocks/content/sidebar/card--person/macro.njk' import personCard %}
+{%- from 'hee/blocks/content/sidebar/card--department/macro.njk' import departmentCard %}#}
+{%- from 'components/hee/hee-detailscard/contact.njk' import contact %}
+
+{# Sidebar #}
+{%- from 'hee/blocks/content/sidebar/card--details/macro.njk' import detailsCard %}
+
+{# To Sort #}
 {# HEE Components #}
 {%- from 'components/hee/hee-anchorlinks/macro.njk' import anchorLinks %}
-{%- from 'components/hee/hee-detailscard/authorcard/macro.njk' import authorCard %}
-{%- from 'components/hee/hee-detailscard/personcard/macro.njk' import personCard %}
-{%- from 'components/hee/hee-detailscard/departmentcard/macro.njk' import departmentCard %}
-{%- from 'components/hee/hee-detailscard/contact.njk' import contact %}
+{%- from 'hee/blocks/furniture/collections/hee-listing-item/macro.njk' import listingItem %}
 {%- from 'components/hee/hee-media/macro.njk' import media %}
 {%- from 'components/hee/hee-navmap/macro.njk' import navMap %}
 {%- from 'components/hee/hee-relatednav/macro.njk' import relatedNav %}
@@ -41,9 +51,8 @@
 {%- from 'components/hee/hee-sidebarlinks/macro.njk' import relatedLinksCard %}
 {%- from 'components/hee/hee-tabs/macro.njk' import tabs %}
 {%- from 'components/hee/hee-timeline/macro.njk' import timeline %}
-
-{# NHSUK-HEE Components #}
 {%- from 'components/nhsuk-hee/nhsuk-hee-blocklinks/macro.njk' import blocklinks %}
+{%- from 'hee/blocks/scaffolding/back-to-top/macro.njk' import backToTop %}
 
 {# NHSUK Components #}
 {%- from 'action-link/macro.njk' import actionLink %}
@@ -129,6 +138,17 @@
 
     {% block headerEnd %}
     {% endblock %}
+
+    <div class="breadcrumbs">
+      {% block breadcrumbs %}
+      {% endblock %}
+    </div>
+
+    <div class="banners">
+      {% block banners %}
+        {# Mourning and Alert banners #}
+      {% endblock %}
+    </div>
 
     {% block main %}
     {% endblock %}

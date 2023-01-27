@@ -1,10 +1,11 @@
 // NHSUK-HEE Components
-import Cookies from './scaffolding/cookies/cookies';
-import SubNav from './scaffolding/header/navigation/subnav';
+import Cookies from './blocks/scaffolding/cookies/cookies';
+import SubNav from './blocks/scaffolding/header/navigation/subnav';
 
 // HEE Components
 import AnchorLinks from '../components/hee/hee-anchorlinks/anchorlinks';
-import Listing from '../components/hee/hee-listing/listing';
+import TableContents from '../components/hee/hee-anchorlinks/toc';
+import Listing from './blocks/furniture/collections/hee-listing/listing';
 import Media from '../components/hee/hee-media/media';
 import NavMap from '../components/hee/hee-navmap/navmap';
 import Newsletter from '../components/hee/hee-newsletter/newsletter';
@@ -13,8 +14,8 @@ import Tabs from '../components/hee/hee-tabs/tabs';
 //import Timeline from '../components/hee/hee-timeline/timeline';
 
 // Unsorted components
-import Filter from '../components/hee/hee-filter/filter';
-import FilterTag from '../components/hee/hee-filtertag/filtertag';
+import Filter from './blocks/furniture/collections/hee-filter/filter';
+import FilterTag from './blocks/furniture/collections/hee-filtertag/filtertag';
 
 //import './polyfills';
 
@@ -30,4 +31,5 @@ document.addEventListener('DOMContentLoaded', () => {
   NavMap();
   SubNav();
   Newsletter();
+  TableContents();
 });

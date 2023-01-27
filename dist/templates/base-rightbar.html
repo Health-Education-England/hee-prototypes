@@ -43,21 +43,21 @@
       </div>
     </header>
   </div>
+  <div class="breadcrumbs">
+    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+      <div class="nhsuk-width-container">
+        <ol class="nhsuk-breadcrumb__list">
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates">Templates</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates/base-rightbar">Rightbar</a></li>
+        </ol>
+        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/templates/base-rightbar">Back to Rightbar</a></p>
+      </div>
+    </nav>
+  </div>
   <div class="site-notifications">
   </div>
   <main class="page " id="maincontent" role="main">
-    <div class="page__breadcrumbs">
-      <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-        <div class="nhsuk-width-container">
-          <ol class="nhsuk-breadcrumb__list">
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates">Templates</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates/base-rightbar">Rightbar</a></li>
-          </ol>
-          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/templates/base-rightbar">Back to Rightbar</a></p>
-        </div>
-      </nav>
-    </div>
     <div class="nhsuk-width-container">
       <div class="page__layout">
         <div class="page__leftbar">
@@ -87,8 +87,8 @@
               <li><a href="/templates/mini-hub-item">Mini-hub Item</a></li>
               <li><a href="/templates/news-item">News Item</a></li>
               <li><a href="/templates/blog-item">Blog Item</a></li>
-              <li>Publication Landing</li>
-              <li>Publication Item</li>
+              <li><a href="/templates/publications-landing">Publication Landing</a></li>
+              <li><a href="/templates/publications-item">Publication Item</a></li>
               <li>Event Item</li>
             </ul>
           </nav>
@@ -102,7 +102,6 @@
           <p>This layout is typically used for content pages with supporting sidebar content.</p>
           <p>It will have access to the <a href="/blocks/furniture">Furniture</a> [PAGE + CONTENT] components, as well as the <a href="/blocks/content">Content Blocks</a> [MAIN, SIDEBAR + FEATURED].</p>
           <pre><code>&lt;article class=&quot;page page--rightbar&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
-  &lt;div class=&quot;page__breadcrumbs&quot;&gt;[ BREADCRUMBS ]&lt;/div&gt;
   &lt;div class=&quot;page__header&quot;&gt;
     &lt;div class=&quot;nhsuk-width-container&quot;&gt;
       [ GO_BACK ]

@@ -1,0 +1,12 @@
+{% macro banner(params) %}
+<div class="hee-banner {{ params.customClass }}" role="complementary">
+  <div class="nhsuk-width-container">
+    <div class="hee-banner__message">
+        {%- if params.heading %}
+          <h2 class='{{ params.headingClass }}'>{{ params.heading }}</h2>
+        {% endif -%}
+        {{ params.HTML | safe }}
+    </div>
+  </div>
+</div>
+{% endmacro %}

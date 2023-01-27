@@ -150,20 +150,20 @@
       </nav>
     </header>
   </div>
-  <div class="site-notifications">
+  <div class="breadcrumbs">
+    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+      <div class="nhsuk-width-container">
+        <ol class="nhsuk-breadcrumb__list">
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates/examples/news-collection">News Collection</a></li>
+        </ol>
+        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/templates/examples/news-collection">Back to News Collection</a></p>
+      </div>
+    </nav>
+  </div>
+  <div class="banners">
   </div>
   <main class="page page--leftbar" id="maincontent" role="main">
-    <div class="page__breadcrumbs">
-      <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-        <div class="nhsuk-width-container">
-          <ol class="nhsuk-breadcrumb__list">
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates/examples/news-collection">News Collection</a></li>
-          </ol>
-          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/templates/examples/news-collection">Back to News Collection</a></p>
-        </div>
-      </nav>
-    </div>
     <div class="page__header">
       <div class="nhsuk-width-container">
         <h1>News Collection</h1>
@@ -219,70 +219,50 @@
           </form>
         </aside>
         <div class="page__main">
-          <div class="nhsuk-listing hee-listing">
-            <div class="nhsuk-grid-row hee-layout">
-              <div class="nhsuk-listing__list nhsuk-grid-column-two-thirds hee-layout__content">
-                <div class="nhsuk-listing__summary o-flex@tablet">
-                  <h2 class="nhsuk-listing__title nhsuk-heading-l o-flex__grow"> 1 results </h2>
-                  <form method="get" class="nhsuk-listing__sort o-flex o-flex--align-center">
-                    <div class="o-flex__grow">
-                      <div class="nhsuk-form-group">
-                        <label class="nhsuk-label" for="sort"> Sort by </label>
-                        <select class="nhsuk-select" id="sort" name="sort">
-                          <option value="newest">Newest</option>
-                          <option value="relevance">Relevance</option>
-                        </select>
-                      </div>
-                    </div>
-                    <button class="nhsuk-button nhsuk-listing__sort__submit" type="submit"> Update </button>
-                  </form>
-                </div>
-                <hr />
-                <div class="nhsuk-listing__item">
-                  <h3><a href="#">Item one</a></h3>
-                  <dl class="nhsuk-summary-list">
-                    <div class="nhsuk-summary-list__row">
-                      <dt class="nhsuk-summary-list__key"> Category </dt>
-                      <dd class="nhsuk-summary-list__value"> Lorem ipsum dolor sit amet </dd>
-                    </div>
-                    <div class="nhsuk-summary-list__row">
-                      <dt class="nhsuk-summary-list__key"> Overview </dt>
-                      <dd class="nhsuk-summary-list__value"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt felis in felis pharetra, at fringilla neque auctor </dd>
-                    </div>
-                    <div class="nhsuk-summary-list__row">
-                      <dt class="nhsuk-summary-list__key"> Website </dt>
-                      <dd class="nhsuk-summary-list__value">
-                        <a href="#">Website title</a>
-                      </dd>
-                    </div>
-                  </dl>
-                </div>
-                <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
-                  <ul class="nhsuk-list nhsuk-pagination__list">
-                    <li class="nhsuk-pagination-item--previous">
-                      <a class="nhsuk-pagination__link nhsuk-pagination__link--prev" href="#">
-                        <span class="nhsuk-pagination__title">Previous</span>
-                        <span class="nhsuk-u-visually-hidden">:</span>
-                        <span class="nhsuk-pagination__page">Page 1 of 3</span>
-                        <svg class="nhsuk-icon nhsuk-icon__arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                          <path d="M4.1 12.3l2.7 3c.2.2.5.2.7 0 .1-.1.1-.2.1-.3v-2h11c.6 0 1-.4 1-1s-.4-1-1-1h-11V9c0-.2-.1-.4-.3-.5h-.2c-.1 0-.3.1-.4.2l-2.7 3c0 .2 0 .4.1.6z"></path>
-                        </svg>
-                      </a>
-                    </li>
-                    <li class="nhsuk-pagination-item--next">
-                      <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="#">
-                        <span class="nhsuk-pagination__title">Next</span>
-                        <span class="nhsuk-u-visually-hidden">:</span>
-                        <span class="nhsuk-pagination__page">Page 3 of 3</span>
-                        <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                          <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
-                        </svg>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
+          <div class="hee-listing">
+            <div class="hee-listing__summary">
+              <div class="hee-listing__count">
+                <h2 class="hee-listing__title nhsuk-heading-l"> results</h2>
+              </div>
+              <div class="hee-listing__filter">
+                <form method="get" class="hee-listing__filter__sort">
+                  <div class="nhsuk-form-group">
+                    <select class="nhsuk-select" id="" name="">
+                    </select>
+                  </div>
+                  <button class="nhsuk-button" type="submit">
+                  </button>
+                </form>
               </div>
             </div>
+            <div class="hee-listing__results">
+              <div class="hee-listings__results__no-items">
+              </div>
+            </div>
+            <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
+              <ul class="nhsuk-list nhsuk-pagination__list">
+                <li class="nhsuk-pagination-item--previous">
+                  <a class="nhsuk-pagination__link nhsuk-pagination__link--prev" href="#">
+                    <span class="nhsuk-pagination__title">Previous</span>
+                    <span class="nhsuk-u-visually-hidden">:</span>
+                    <span class="nhsuk-pagination__page">Page X of Y</span>
+                    <svg class="nhsuk-icon nhsuk-icon__arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M4.1 12.3l2.7 3c.2.2.5.2.7 0 .1-.1.1-.2.1-.3v-2h11c.6 0 1-.4 1-1s-.4-1-1-1h-11V9c0-.2-.1-.4-.3-.5h-.2c-.1 0-.3.1-.4.2l-2.7 3c0 .2 0 .4.1.6z"></path>
+                    </svg>
+                  </a>
+                </li>
+                <li class="nhsuk-pagination-item--next">
+                  <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="#">
+                    <span class="nhsuk-pagination__title">Next</span>
+                    <span class="nhsuk-u-visually-hidden">:</span>
+                    <span class="nhsuk-pagination__page">Page X of Y</span>
+                    <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>

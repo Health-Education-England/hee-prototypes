@@ -1,0 +1,20 @@
+{% macro listingItem(item) %}
+  <div class="hee-listing-item">
+    <h3><a href="{{ item.href }}">{{ item.title }}</a></h3>
+    {% if item.details.length > 0 %}
+      <div class="hee-listing-item__details">
+        {% for detail in item.details %}
+          <div class="hee-listing-item__details__row">
+            <span class="hee-listing-item__details__label">{{ detail.label }}</span>
+            <span>{{ detail.value }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if item.summary %}
+      <div class="hee-listing-item__summary">
+        {{ item.summary }}
+      </div>
+    {% endif %}
+  </div>
+{% endmacro %}

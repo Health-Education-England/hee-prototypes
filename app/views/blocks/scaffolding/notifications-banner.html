@@ -1,0 +1,153 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'notifications-banner' %}
+{% set page_title = 'Banners' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+  {{
+  breadcrumb({
+    items: [
+      {
+        href: basePath + "/",
+        text: "Home"
+      },
+      {
+        href: basePath + "/blocks",
+        text: "Blocks"
+      },
+      {
+        href: basePath + "/blocks/scaffolding",
+        text: "Scaffolding"
+      }
+    ],
+    href: basePath + "/blocks/scaffolding/"+page_url,
+    text: page_title
+  })
+  }}
+{% endblock %}
+
+{% block pageLeftbar %}
+  {{ subnav({
+    area: 'blocks',
+    subarea: 'scaffolding'
+  }) }}
+{% endblock %}
+
+{% block pageHeader %}
+  <span class="nhsuk-caption-xl">Scaffolding</span>
+  <h1>{{ page_title }}</h1>
+  <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+  <p>Displays banners notifying website visitors of an event or notice. Comes in three variants:</p>
+  <ul>
+    <li>Alert</li>
+    <li>Announcement</li>
+    <li>Mourning</li>
+  </ul>
+
+  <h2>Example</h2>
+  {{ example({
+    url: '/blocks/scaffolding/examples/' + page_url,
+    height: '400px'
+  }) }}
+
+  <hr />
+
+  <h2>Macro - Alert</h2>
+  {{ highlight({
+    html: '{{ banner({
+    HTML: "<h2>H2 - This is an alert</h2>
+     <h3>H3 - This is the alert text and <a href=\"#\">this is the link</a></h3>
+     <p><strong>Body</strong> - This is banner body copy <a href=\"#\">this is the link</a></p>
+    "
+})}}'
+  }) }}
+
+  <hr />
+
+  <h3>HTML - Alert</h3>
+  {{ highlight({
+    html : '
+<div class="hee-banner " role="complementary">
+  <div class="nhsuk-width-container">
+    <div class="hee-banner__message">
+      <h2>H2 - This is an alert</h2>
+      <h3>H3 - This is the alert text and <a href="#">this is the link</a></h3>
+      <p><strong>Body</strong> - This is banner body copy <a href="#">this is the link</a></p>
+    </div>
+  </div>
+</div>
+'
+  })
+  }}
+
+  <hr />
+
+  <h2>Macro - Mourning</h2>
+  {{ highlight({
+    html: '{{ banner({
+    customClass: "hee-banner--mourning",
+    HTML: "<h2>H2 - Her Majesty Queen Elizabeth II</h2>
+     <h3>H3 - 21 April 1926 to 8 September 2022</h3>
+     <p><a href=\"#\">We join with the people across HEE and the NHS in mourning the death of Queen Elizabeth II</a></p>
+    "
+})}}'
+  }) }}
+
+  <hr />
+
+  <h3>HTML - Mourning</h3>
+  {{ highlight({
+    html : '
+<div class="hee-banner hee-banner--mourning" role="complementary">
+  <div class="nhsuk-width-container">
+    <div class="hee-banner__message">
+      <h2>H2 - Her Majesty Queen Elizabeth II</h2>
+      <h3>H3 - 21 April 1926 to 8 September 2022</h3>
+      <p><a href="#">We join with the people across HEE and the NHS in mourning the death of Queen Elizabeth II</a></p>
+    </div>
+  </div>
+</div>
+'
+  })
+  }}
+
+<hr />
+
+<h2>Macro - Announcement</h2>
+{{ highlight({
+  html: '{{ banner({
+    customClass: "hee-banner--announcement",
+    HTML: "<h2>H2 - This is an alert</h2>
+     <h3>H3 - This is the alert text and <a href=\"#\">this is the link</a></h3>
+     <p><strong>Body</strong> - This is banner body copy <a href=\"#\">this is the link</a></p>
+    "
+})}}'
+}) }}
+
+<hr />
+
+<h3>HTML - Announcement</h3>
+{{ highlight({
+  html : '
+<div class="hee-banner hee-banner--announcement" role="complementary">
+  <div class="nhsuk-width-container">
+    <div class="hee-banner__message">
+      <h2>H2 - This is an alert</h2>
+      <h3>H3 - This is the alert text and <a href="#">this is the link</a></h3>
+      <p><strong>Body</strong> - This is banner body copy <a href="#">this is the link</a></p>
+    </div>
+  </div>
+</div>
+'
+})
+}}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}
