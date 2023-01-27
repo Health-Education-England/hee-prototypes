@@ -9,6 +9,7 @@ export default () => {
 
       this.containerSelector = '.page__main';
       this.headingSelector = 'h2.toc_h2';
+      this.subHeadingSelector = 'h3.toc_h3';
       this.headingPrefix = 'hee-toc-heading';
 
       // Anchor links macro sets this data attribute when TOC is flagged as true.
@@ -17,14 +18,24 @@ export default () => {
       }
 
       // Only attempt to build TOC links if H2 anchors found on page.
-      const headings = document.querySelectorAll(this.containerSelector + ' ' + this.headingSelector);
+      let headings = document.querySelectorAll(this.containerSelector + ' ' + this.headingSelector);
       if (headings.length === 0) {
         return;
       }
 
-      // Build link structure from DOM and append generated markup to component.
-      const links = this.buildLinks(headings);
-      this.setListMarkup(links);
+      // Build link structure from DOM and append generated markup to TOC
+      // component.
+      const links = this.createTocLinks(headings);
+      this.setTocListMarkup(links);
+
+      // Build back to top links and append to each TOC heading within page
+      // content. We skip the first heading on the page.
+      headings = [].slice.call(headings, 1);
+      this.setBackToTopLinks(headings);
+      const subHeadings = document.querySelectorAll(this.containerSelector + ' ' + this.subHeadingSelector);
+      if (subHeadings.length > 0) {
+        this.setBackToTopLinks(subHeadings);
+      }
     }
 
     /**
@@ -34,7 +45,7 @@ export default () => {
      *
      * @returns {Object[]}
      */
-    buildLinks(headings) {
+    createTocLinks(headings) {
       let links = [];
 
       headings.forEach((heading, index) => {
@@ -54,7 +65,7 @@ export default () => {
 
         // Traverse DOM for H3 elements after current H2 heading and append to
         // children links array.
-        while (sibling && !sibling.classList.contains('toc_h2')) {
+        while (sibling && sibling.tagName !== 'H2') {
           if (sibling.tagName === 'H3' && sibling.classList.contains('toc_h3')) {
 
             // Set unique id for current heading H3 element.
@@ -101,7 +112,7 @@ export default () => {
      *
      * @returns void
      */
-    setListMarkup(links) {
+    setTocListMarkup(links) {
       let list = document.createElement('ul');
 
       links.forEach((link) => {
@@ -155,6 +166,39 @@ export default () => {
       });
 
       this.tableContents.append(list);
+    }
+
+    /**
+     * Builds back to top link component.
+     *
+     * @returns Object
+     */
+    createBackToTopLink() {
+      let container = document.createElement('div');
+      container.classList.add('hee-back-to-top');
+
+      let anchor = document.createElement('a');
+      anchor.setAttribute('href', '#publication-title');
+      anchor.setAttribute('title', 'Back to top');
+      anchor.innerText = 'Back to top';
+
+      container.append(anchor);
+
+      return container;
+    }
+
+    /**
+     * Injects back to top links above TOC headings within content.
+     *
+     * @param {NodeList}      headings
+     *
+     * @returns void
+     */
+    setBackToTopLinks(headings) {
+      headings.forEach((heading, index) => {
+        const link = this.createBackToTopLink();
+        heading.parentNode.insertBefore(link, heading);
+      });
     }
 
     /**

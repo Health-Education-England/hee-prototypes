@@ -5,7 +5,7 @@
 
 {% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
 
-{% block pageBreadcrumbs %}
+{% block breadcrumbs %}
   {{
     breadcrumb({
       items: [
@@ -31,7 +31,7 @@
       text: "Go back"
     }) }}
 
-    <h1>Publication title</h1>
+    <h1 id="publication-title">Publication title</h1>
     <span class="nhsuk-caption-xl">Caption</span>
   </div>
 {% endblock %}
@@ -39,82 +39,153 @@
 {% block pageContent %}
   <p class="nhsuk-body-l">This report has been produced in partnership between Health Education England (HEE) and Unity Insights.</p>
 
-  <h2>Introduction</h2>
-  <p>This report has been produced in partnership between Health Education England (HEE) and Unity Insights.</p>
+  <h2 class="toc_h2" data-short-title="Overview">Overview</h2>
+  <p>Working with The Royal College of Surgeons, Health Education England provides world-class education, assessment and development to 30,000 surgeons.</p>
+  <p>As your career progresses from medical school student through to surgeon, you will go through a number of stages that all have a level of competitive entry.</p>
 
-  <h3>Health Education England</h3>
-  <p>Health Education England (HEE) exists for one reason only: to support the delivery of excellent healthcare and health improvement to the patients and public of England by ensuring that the workforce of today and tomorrow has the right numbers, skills, values and behaviours, at the right time and in the right place.</p>
-  <p>At any one time HEE supports more than 160,000 students and trainees whilst working closely with partners across the NHS locally, regionally and nationally on shared priorities.</p>
-  <p>In 2019, HEE were commissioned by the then Secretary of State to deliver the Topol Review recommendations looking at the impact of leading edge digital technologies on the workforce. The Digital, Artificial Intelligence and Robotics Technologies in Education (DART-Ed) programme picks up from this in 2021 to explore the linkage between mature evidenced AI and its workforce impact and required training and education.</p>
+  <h2 class="toc_h2" data-short-title="Path">Pathways</h2>
+  <p>The training pathway is the most direct route through surgical training. Following each training stage, particularly in the early years, you will need to be selected into the next stage.</p>
 
-  <h3>Unity Insights</h3>
-  <p>Unity Insights offer bespoke analytics and evaluation services to the NHS, the AHSN Network, academia, innovators, and industry. It was formed in 2021 following several years of sustained growth as the analytics and evaluation function within Kent Surrey Sussex Academic Health Science Network (KSS AHSN).</p>
-  <p>Unity Insights has extensive experience of working with the NHS, from supporting measurement capture of small-scale local programmes to providing analytics</p>
-  <p>KSS AHSN, in collaboration with the AHSN Network, originally conducted a survey and developed a report in 2018 entitled:</p>
-  <p>“Accelerating Artificial Intelligence in health and care: results from a state of the nation survey” at the request of the Department of Health and Social Care (DHSC) and NHS England (NHSE) to help map out and define the state of the AI landscape in the UK, its definition and various forms. This new roadmap in 2021 picks up on the earlier version and work done since by NHSX to update and capture the latest progress in this area and present it in an easy, readable and user-friendly format.</p>
+  <h3 class="toc_h3" data-short-title="Run-through">Run-through and uncoupled</h3>
+  <p>Sollicitudin eu at arcu aliquam, non dui aliquet. Massa urna ultrices ullamcorper imperdiet velit ut a. Integer scelerisque nulla rhoncus nunc et. Et quis dui aliquam sapien nulla lobortis dictumst sapien, dolor. Est lectus volutpat lacus lorem. Semper duis dictumst ipsum diam. Sapien, leo amet erat arcu blandit. Varius viverra sit luctus viverra. Bibendum sed at penatibus odio erat</p>
 
-  <h3>Health Education England</h3>
-  <p>Health Education England (HEE) exists for one reason only: to support the delivery of excellent healthcare and health improvement to the patients and public of England by ensuring that the workforce of today and tomorrow has the right numbers, skills, values and behaviours, at the right time and in the right place.</p>
-  <p>At any one time HEE supports more than 160,000 students and trainees whilst working closely with partners across the NHS locally, regionally and nationally on shared priorities.</p>
-  <p>In 2019, HEE were commissioned by the then Secretary of State to deliver the Topol Review recommendations looking at the impact of leading edge digital technologies on the workforce. The Digital, Artificial Intelligence and Robotics Technologies in Education (DART-Ed) programme picks up from this in 2021 to explore the linkage between mature evidenced AI and its workforce impact and required training and education.</p>
+  <h3 class="toc_h3" data-short-title="ST1-ST7">Run-through posts (ST1-ST7)</h3>
+  <p>For some specialties training is through a run-through programme. You only have to apply once, at the beginning of the programme, and are recruited for the full duration of the specialty training.</p>
 
-  <h3>Unity Insights</h3>
-  <p>Unity Insights offer bespoke analytics and evaluation services to the NHS, the AHSN Network, academia, innovators, and industry. It was formed in 2021 following several years of sustained growth as the analytics and evaluation function within Kent Surrey Sussex Academic Health Science Network (KSS AHSN).</p>
-  <p>Unity Insights has extensive experience of working with the NHS, from supporting measurement capture of small-scale local programmes to providing analytics</p>
-  <p>KSS AHSN, in collaboration with the AHSN Network, originally conducted a survey and developed a report in 2018 entitled:</p>
-  <p>“Accelerating Artificial Intelligence in health and care: results from a state of the nation survey” at the request of the Department of Health and Social Care (DHSC) and NHS England (NHSE) to help map out and define the state of the AI landscape in the UK, its definition and various forms. This new roadmap in 2021 picks up on the earlier version and work done since by NHSX to update and capture the latest progress in this area and present it in an easy, readable and user-friendly format.</p>
+  <h3 class="toc_h3" data-short-title="Uncoupled posts">Uncoupled posts (CT1, CT2, ST3-ST7)</h3>
+  <p>For some specialties training is ran as an uncoupled programme, meaning once you have completed your core training (CT1, CT2) you will be required to re-apply for ST3 onwards.</p>
+
+  <h2 class="toc_h2" data-short-title="Training routes">Training routes</h2>
+  <h3 class="toc_h3">Core specialty Training (CT1, CT2 (CT3))</h3>
+  <p>Felis vel aliquet in metus fermentum. Sit morbi fusce interdum luctus sodales. Amet platea sapien magna id. Dignissim volutpat nec odio platea consequat cras consequat euismod. Egestas in aliquam sed pellentesque. Sapien, varius consectetur donec habitant sed pellentesque sed. Adipiscing tortor, nibh ut mauris nibh phasellus augue volutpat aliquet.</p>
+  {{ actionLink({
+    text: "Core surgery",
+    href: "#"
+  }) }}
+
+  <h3 class="toc_h3">Higher specialty Training (ST3-ST7 (ST8))</h3>
+  <p>Felis vel aliquet in metus fermentum. Sit morbi fusce interdum luctus sodales. Amet platea sapien magna id. Dignissim volutpat nec odio platea consequat cras consequat euismod. Egestas in aliquam sed pellentesque. Sapien, varius consectetur donec habitant sed pellentesque sed. Adipiscing tortor, nibh ut mauris nibh phasellus augue volutpat aliquet.</p>
+  {{ actionLink({
+    text: "Higher surgery",
+    href: "#"
+  }) }}
+
+  <h4>Types of higher specialty training</h4>
+  {{ blocklinks({
+    columns: "1",
+    links: [
+      {
+        url: "#",
+        label: "Cardiothoracic Surgery"
+      },
+      {
+        url: "#",
+        label: "General Surgery"
+      },
+      {
+        url: "#",
+        label: "Neurosurgery"
+      },
+      {
+        url: "#",
+        label: "Oral & Maxillofacial Surgery"
+      },
+      {
+        url: "#",
+        label: "Otolaryngology Surgery"
+      },
+      {
+        url: "#",
+        label: "Paediatric Surgery"
+      },
+      {
+        url: "#",
+        label: "Plastic Surgery"
+      },
+      {
+        url: "#",
+        label: "Trauma & Orthopaedics"
+      },
+      {
+        url: "#",
+        label: "Urology"
+      },
+      {
+        url: "#",
+        label: "Vascular Surgery"
+      }
+    ]
+  })
+  }}
+
+  <h2 class="toc_h2">Support</h2>
+  <p>Lorem ipsum dolor sit amet consectetur. Velit arcu consectetur enim eget eget. Pellentesque eget sem feugiat ut erat. Commodo ante ultrices dui etiam et cras velit euismod diam. Aliquam risus scelerisque.</p>
+
+  <h3 class="toc_h3">In-training support</h3>
+  <p>Felis vel aliquet in metus fermentum. Sit morbi fusce interdum luctus sodales. Amet platea sapien magna id. Dignissim volutpat nec odio platea consequat cras consequat euismod. Egestas in aliquam sed pellentesque. Sapien, varius consectetur donec habitant sed pellentesque sed. Adipiscing tortor, nibh ut mauris nibh phasellus augue volutpat aliquet.</p>
+  {{ actionLink({
+    text: "In-training support",
+    href: "#"
+  }) }}
+
+  <h3 class="toc_h3">Professional Support and Wellbeing (PSW)</h3>
+  <p>Felis vel aliquet in metus fermentum. Sit morbi fusce interdum luctus sodales. Amet platea sapien magna id. Dignissim volutpat nec odio platea consequat cras consequat euismod. Egestas in aliquam sed pellentesque. Sapien, varius consectetur donec habitant sed pellentesque sed. Adipiscing tortor, nibh ut mauris nibh phasellus augue volutpat aliquet.</p>
+  {{ actionLink({
+    text: "Professional Support and Wellbeing (PSW)",
+    href: "#"
+  }) }}
+
+  <h2 class="toc_h2">Regions</h2>
+  <p>Pellentesque id posuere sapien vestibulum, quam pellentesque at libero. Aliquam at id fames hendrerit in vulputate orci aliquet augue. Massa penatibus sociis et nisl. Enim aliquam mauris suscipit turpis non hendrerit felis.</p>
+  {{ navMap({
+    src: "/images/nav-maps/dental-regions.svg",
+    caption: {
+      items: [
+        {
+          id: "lk",
+          url: "#",
+          text: "London and Kent, Surrey and Sussex (KSS)"
+        },
+        {
+          id: "me",
+          url: "#",
+          text: "Midlands and the East"
+        },
+        {
+          id: "nenc",
+          url: "#",
+          text: "North East and North Cumbria"
+        },
+        {
+          id: "nw",
+          url: "#",
+          text: "North West"
+        },
+        {
+          id: "sw",
+          url: "#",
+          text: "South West"
+        },
+        {
+          id: "tvw",
+          url: "#",
+          text: "Thames Valley and Wessex"
+        },
+        {
+          id: "yh",
+          url: "#",
+          text: "Yorkshire and the Humber"
+        }
+      ]
+    }
+  }) }}
+
 {% endblock %}
 
 {% block pageRightbar %}
   {{ anchorLinks({
     title: "Table of Contents",
-    headings: "h2,h3,h4,h5,h6",
-    items: [
-      {
-        title: "Introduction",
-        href: "#"
-      },
-      {
-        title: "Foreword",
-        href: "#",
-        children: [
-          {
-            title: "Executive summary",
-            href: "#"
-          }
-        ]
-      },
-      {
-        title: "Acknowledgments",
-        href: "#"
-      },
-      {
-        title: "Notes to the reader",
-        href: "#",
-        children: [
-          {
-            title: "1. Initial analysis and profiling",
-            href: "#"
-          },
-          {
-            title: "2. Creation and population of the database",
-            href: "#"
-          },
-          {
-            title: "3. Case studies",
-            href: "#"
-          }
-        ]
-      },
-      {
-        title: "Limitations and recommendations",
-        href: "#"
-      },
-      {
-        title: "Conclusion",
-        href: "#"
-      }
-    ]
+    toc: true
     })
   }}
 
@@ -170,6 +241,16 @@
     }) }}
   {% endset %}
 
+  {% set ppt %}
+    {{ resources({
+      title: "Publication title - Powerpoint",
+      text: "Publication title - Powerpoint",
+      url: "#",
+      docType: "PPT",
+      tagColor: "ppt"
+    }) }}
+  {% endset %}
+
   {{ detailsCard({
     title: "Alternative versions",
     items: [
@@ -181,6 +262,9 @@
       },
       {
         value: xls
+      },
+      {
+        value: ppt
       }
     ]
   }) }}

@@ -1,0 +1,25 @@
+{% extends "example-blocks.html" %}
+
+{% block main %}
+  {{ publicationDoc({
+    type: "web",
+    title: "Publication title - Web version",
+    href: "#",
+    details: [
+      {
+        label: "Published",
+        value: "24th June 2022"
+      },
+      {
+        label: "Updated",
+        value: "24th June 2022"
+      },
+      {
+        value: "WEB"
+      },
+      {
+        value: "20 min read"
+      }
+    ]
+  }) }}
+{% endblock %}

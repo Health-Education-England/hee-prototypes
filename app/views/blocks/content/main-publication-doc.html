@@ -1,0 +1,111 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'main-publication-doc' %}
+{% set page_title = 'Publication Document' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block breadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: basePath + "/",
+            text: "Home"
+        },
+        {
+            href: basePath + "/blocks",
+            text: "Blocks"
+        },
+        {
+            href: basePath + "/blocks/content",
+            text: "Content"
+        }
+    ],
+        href: basePath + "/blocks/" + page_url,
+      text: page_title
+    }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'blocks',
+    subarea: 'content'
+}) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Main</span>
+    <h1>{{ page_title }}</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+<p>Displays a link, icon and description pertaining to a publication's uploaded document.</p>
+
+<h3>Example</h3>
+{{ example({
+    view: 'block',
+    url: basePath + '/blocks/content/examples/' + page_url,
+    height: '620'
+}) }}
+
+<hr />
+
+<h3>Macro</h3>
+{{ highlight({
+  html: '
+{{ publicationDoc({
+    type: "web",
+    title: "Publication title - Web version",
+    href: "#",
+    details: [
+      {
+        label: "Published",
+        value: "24th June 2022"
+      },
+      {
+        label: "Updated",
+        value: "24th June 2022"
+      },
+      {
+        value: "WEB"
+      },
+      {
+        value: "20 min read"
+      }
+    ]
+}) }}
+  '
+}) }}
+
+<hr />
+
+<h3>HTML</h3>
+{{ highlight({
+  html : '
+<div class="hee-publication-doc">
+    <div class="hee-publication-doc__wrapper">
+      <div class="hee-publication-doc__icon">
+        <div class="hee-publication-doc__icon__page"></div>
+        <div class="hee-publication-doc__icon__corner"></div>
+      </div>
+      <div class="hee-publication-doc__icon__title">WEB</div>
+    </div>
+    <div class="hee-publication-doc__details">
+      <h3><a href="#">Publication title - Web version</a></h3>
+      <span> Published: 24th June 2022 </span>
+      <span> Updated: 24th June 2022 </span>
+      <span> WEB </span>
+      <span> 20 min read </span>
+    </div>
+</div>
+  '
+  }) 
+}}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

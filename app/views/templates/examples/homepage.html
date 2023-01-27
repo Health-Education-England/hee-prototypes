@@ -5,7 +5,7 @@
 
 {% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
 
-{% block pageBreadcrumbs %}
+{% block breadcrumbs %}
   {{
     breadcrumb({
       items: [
@@ -28,21 +28,45 @@
   }}
 {% endblock %}
 
+{% block banners %}
+  {{ phaseBanner({
+    tag: "Alpha",
+    description: 'This is a new service – your <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.'
+  }) }}
+
+  {{ banner({
+    customClass: "hee-banner--mourning",
+    HTML: "<h2>H2 - Her Majesty Queen Elizabeth II</h2>
+             <h3>H3 - 21 April 1926 to 8 September 2022</h3>
+             <p><a href=\"#\">We join with the people across HEE and the NHS in mourning the death of Queen Elizabeth II</a></p>
+            "
+  })}}
+
+  {{ banner({
+    HTML: "<h2>H2 - This is an alert</h2>
+             <h3>H3 - This is the alert text and <a href=\"#\">this is the link</a></h3>
+             <p><strong>Body</strong> - This is banner body copy <a href=\"#\">this is the link</a></p>
+            "
+  })}}
+
+{% endblock %}
+
+{% block headerStart %}
+  {{ banner({
+    customClass: "hee-banner--announcement",
+    HTML: "<h2>H2 - This is an alert</h2>
+             <h3>H3 - This is the alert text and <a href=\"#\">this is the link</a></h3>
+             <p><strong>Body</strong> - This is banner body copy <a href=\"#\">this is the link</a></p>
+            "
+  })}}
+{% endblock %}
+
 {% block pageHeader %}
   {{ hero({
     "heading": "Page Title",
     "text": "Pretium morbi mauris est purus tortor. Enim nec blandit rutrum diam nisl scelerisque.",
     "imageURL": basePath + "/images/young-child-using-tablet-device.jpg"
   }) }}
-{% endblock %}
-
-{% block headerStart %}
-  <div class="site-notifications">
-    {{ globalAlert({
-      customClass: "hee-globalalert--dark-pink",
-      HTML: "<p><strong>Alert message:</strong> This is a <a href=\"#\">link</a>.</p>"
-    })}}
-  </div>
 {% endblock %}
 
 {% block pageMain %}
