@@ -9,6 +9,9 @@
       <div class="nhsuk-filter__groups">
         {% for group in filter.groups %}
           <div class="nhsuk-filter__group">
+            {% if group.showClearToggle %}
+              <a class="nhsuk-filter__group__clear" href="#">Clear</a>
+            {% endif %}
             {{ checkboxes({
               "idPrefix": "filter_" + group.title,
               "name": "filter",
