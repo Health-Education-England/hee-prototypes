@@ -48,38 +48,22 @@
   <hr />
 
   <h2>HTML</h2>
-{{ highlight({
-  "html" : '<article class="page page--rightbar" id="maincontent" role="main">
+  {{ highlight({
+    "html" : '<main class="page page--fullwidth" id="maincontent" role="main">
   <div class="page__header">
-    [ PAGE_MICROHERO | PAGE_HERO ]
-    <div class="nhsuk-width-container">
-      <h1>[ PAGE_TITLE ]</h1>
-      <span class="nhsuk-caption-xl">[ PAGE_CAPTION ]</span>
-      <p class="nhsuk-lede-text">[ PAGE_SUMMARY ]</p>
-      [ PUBLISHED_INFO ]
-    </div>
+    [ PAGE_HERO ]
   </div>
-  <div class="nhsuk-width-container">
-    <div class="page__layout">
-      <div class="page__main">
-        <div class="page__content">
-          [ CONTENT--MAIN_BLOCKS ]
-        </div>
-        [ PAGE_LASTUPDATED ]
+  <div class="page__main">
+    <div class="page__content">
+      <div class="nhsuk-width-container">
+        [ CONTENT--MAIN_BLOCKS ]
       </div>
-      <aside class="page__rightbar">
-        [ CONTENT--SIDEBAR_BLOCKS ]
-      </aside>
     </div>
   </div>
   <div class="page__footer">
-    [ INTEMPLATE_BACKTOTOP ]
   </div>
-  <section class="page__feature">
-    [ CONTENT--FEATURED_BLOCKS ]
-  </section>
-</article>'
-  }) 
+</main>'
+  })
 }}
 
   <hr />
