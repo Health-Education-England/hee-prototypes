@@ -19,7 +19,7 @@ To ignore a heading on the page for the anchor links add ```data-anchorlinksigno
 
 #### HTML markup
 ```html
-<div class="nhsuk-anchor-links" data-headings="h2,h3,h4,h5,h6">
+<div class="hee-anchorlinks" data-headings="h2,h3,h4,h5,h6">
     <h2 data-anchorlinksignore="true">On this page</h2>
 </div>
 ```
@@ -57,6 +57,8 @@ Javascript will build the table of contents list of links, based on the existenc
 
 You are able to configure custom anchor link text for a particular heading, but making use of the `data-short-title` attribute.
 
+The Javascript logic will also automatically inject the "Back to Top" component above every heading.
+
 #### HTML markup
 ```html
 <div class="hee-anchorlinks" data-toc-js="true">
@@ -82,5 +84,5 @@ The anchorlinks macro takes the following arguments:
 | Name         | Type   | Required | Description                                                                           |
 |--------------|--------|----------|---------------------------------------------------------------------------------------|
 | **title**    | string | Yes      | Text heading of the anchorlinks component.                                            |
-| **toc**      | string | No       | If this argument is included, TOC variant is enabled.                                 |
+| **toc**      | string | No       | If this argument is included, the TOC variant is enabled.                             |
 | **headings** | string | Yes      | Comma delimited list of target heading element types (used only for default variant). |
