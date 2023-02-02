@@ -88,7 +88,7 @@
 
 {% block main %}
   <main class="page {% block pageClass %}{% endblock %}" id="maincontent" role="main">
-    <div class="page__header">
+    <div class="page__header {% block pageHeaderClass %}{% endblock %}">
       {% block pageHeader %}
         {# Hero... Microhero... Title #}
       {% endblock %}

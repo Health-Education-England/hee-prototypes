@@ -18,12 +18,10 @@ html {
 }
 
 .page {
-    &.has-microhero {
-        .page__header {
-            padding-top: 0;
-            .hee-microhero {
-                margin-bottom: nhsuk-spacing(7);
-            }
+    .page__header.has-microhero {
+        padding-top: 0;
+        .hee-microhero {
+            margin-bottom: nhsuk-spacing(7);
         }
     }
 }
