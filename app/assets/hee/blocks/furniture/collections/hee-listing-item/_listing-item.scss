@@ -1,4 +1,5 @@
 .hee-listing-item {
+  @include nhsuk-typography-responsive(19);
   background-color: $color_nhsuk-white;
   border: 1px solid $color_nhsuk-grey-4;
   padding: map-get($nhsuk-spacing-points, 3);
