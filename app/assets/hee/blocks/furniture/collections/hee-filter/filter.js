@@ -39,6 +39,10 @@ export default () => {
       // Close groups
       // this.groups.forEach(group => group.classList.add('nhsuk-filter__group--closed'));
 
+      this.clearToggle.forEach(toggle => {
+        this.toggleClearLinkVisibility(toggle);
+      });
+
       // Hide submit button
       if (this.submit) {
         this.submit.hidden = true;
@@ -65,6 +69,17 @@ export default () => {
       });
 
       this.updateResults(evt);
+    }
+
+    toggleClearLinkVisibility(toggleLink) {
+      const checkboxes = [...toggleLink.parentElement.querySelectorAll('.nhsuk-checkboxes__input')];
+
+      for (let i = 0; i <= checkboxes.length; i++ ) {
+        if (checkboxes[i].hasAttribute('checked')) {
+          toggleLink.classList.add('visible');
+        }
+        break;
+      }
     }
   }
 
