@@ -49,7 +49,7 @@
 
   <h2>HTML</h2>
 {{ highlight({
-  "html" : '<article class="page page--rightbar" id="maincontent" role="main">
+  "html" : '<main class="page page--rightbar" id="maincontent" role="main">
   <div class="page__header">
     <div class="nhsuk-width-container">
       [ PAGE_GOBACK ]
@@ -67,7 +67,6 @@
         <div class="page__content">
           [ CONTENT--MAIN_BLOCKS ]
         </div>
-        [ PAGE_LASTUPDATED ]
       </div>
       <aside class="page__rightbar">
         [ CONTENT--SIDEBAR_BLOCKS ]
@@ -75,12 +74,13 @@
     </div>
   </div>
   <div class="page__footer">
+    [ PAGE_LASTUPDATED ]
     [ MINIHUB_PAGINATION ]
   </div>
   <section class="page__feature">
     [ CONTENT--FEATURED_BLOCKS ]
   </section>
-</article>'
+</main>'
 })
 }}
 

@@ -48,13 +48,12 @@
 
 <h2>HTML</h2>
 {{ highlight({
-  "html" : '<article class="page page--rightbar" id="maincontent" role="main">
+  "html" : '<main class="page page--rightbar" id="maincontent" role="main">
   <div class="page__header">
     <div class="nhsuk-width-container">
       <h1>[ PAGE_TITLE ]</h1>
       <span class="nhsuk-caption-xl">[ PAGE_CAPTION ]</span>
       <p class="nhsuk-lede-text">[ PAGE_SUMMARY ]</p>
-      [ PUBLISHED_INFO ]
     </div>
   </div>
   <div class="nhsuk-width-container">
@@ -71,12 +70,13 @@
     </div>
   </div>
   <div class="page__footer">
+    [ PUBLISHED_INFO ]
     [ INTEMPLATE_BACKTOTOP ]
   </div>
   <section class="page__feature">
     [ CONTENT--FEATURED_BLOCKS ]
   </section>
-</article>'
+</main>'
   }) 
 }}
 
