@@ -20,17 +20,13 @@
 {% block pageHeader %}
   <div class="nhsuk-width-container">
     <h1>Standard Content</h1>
+    <span class="nhsuk-caption-xl">Caption</span>
     <p class="nhsuk-lede-text"></p>
   </div>
 {% endblock %}
 
 {% block pageContent %}
-  <p>NHS library staff in England may copy and share extracts from most printed and digital work in the following ways.</p>
-  {{ reviewDate({
-    "lastReview": "12 February 2017",
-    "nextReview": "1 February 2020"
-  }) }}
-  
+  <p class="nhsuk-lede-text">Pulvinar id lorem tincidunt porttitor non commodo in eu massa. Eget tempor vel sollicitudin aliquam euismod. Scelerisque nisl, vel eros, nunc condimentum donec.</p>
   {{ anchorLinks({
     "title": "On this page",
     "headings": "h2,h3,h4,h5,h6"  
@@ -158,4 +154,13 @@
     })
   }}
 
+{% endblock %}
+
+{% block pageFooter %}
+  <div class="nhsuk-width-container">
+    {{ reviewDate({
+      "lastReview": "12 February 2017",
+      "nextReview": "1 February 2020"
+    }) }}
+  </div>
 {% endblock %}

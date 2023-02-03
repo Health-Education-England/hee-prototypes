@@ -31,6 +31,7 @@
 {% block pageHeader %}
   <div class="nhsuk-width-container">
     <h1>Blog Item</h1>
+    <span class="nhsuk-caption-xl">Caption</span>
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color">Published on 25 October 2022, by Dr. Joe Soap</p>
     <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-7">
       <a href="#">Learning and development</a>,
@@ -193,4 +194,13 @@
     </div>
   </div>
 
+{% endblock %}
+
+{% block pageFooter %}
+  <div class="nhsuk-width-container">
+    {{ reviewDate({
+      "lastReview": "12 February 2017",
+      "nextReview": "1 February 2020"
+    }) }}
+  </div>
 {% endblock %}
