@@ -93,13 +93,9 @@
         {# Hero... Microhero... Title #}
       {% endblock %}
     </div>
-    <div class="page__main">
-      <div class="page__content">
-        {% block pageMain %}
-            {# Template... #}
-        {% endblock %}
-      </div>
-    </div>
+    {% block pageMain %}
+      {# Template... #}
+    {% endblock %}
     <div class="page__footer">
       {% block pageFooter %}
         {# Last updated... Tags... Page created... #}

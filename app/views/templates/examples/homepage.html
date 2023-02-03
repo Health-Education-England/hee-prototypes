@@ -1,4 +1,4 @@
-{% extends "example-template.html" %}
+{% extends "example-template-fullwidth.html" %}
 
 {% set page_url = 'homepage' %}
 {% set page_title = 'Homepage' %}
@@ -71,8 +71,7 @@
   }) }}
 {% endblock %}
 
-{% block pageMain %}
-<div class="nhsuk-width-container">
+{% block pageContent %}
   <section class="nhsuk-section__content">
     <p>Non elementum cras enim amet enim sollicitudin habitant leo erat. Leo faucibus aliquet vivamus donec ullamcorper mattis purus pharetra amet. Elit turpis odio pellentesque nibh adipiscing pellentesque.</p>
     <p>Scelerisque interdum amet, non sed ut. Diam tellus etiam aenean enim, eget quisque arcu facilisis. Facilisis sed pharetra placerat condimentum risus. Arcu urna, lorem lectus odio. Ipsum faucibus venenatis sit duis donec ac viverra nisl sem.</p>
@@ -195,5 +194,4 @@
       </ul>
     </div>
   </section>
-</div>
 {% endblock %}
