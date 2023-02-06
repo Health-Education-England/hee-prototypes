@@ -13,16 +13,20 @@ export default () => {
     }
 
     addEventListeners() {
-      if (this.toggleBtn) {
-        this.toggleBtn.addEventListener('mousedown', event => this.toggleStickyAnchorLinks())
-        this.toggleBtn.addEventListener('keyup', event => {
-          if (event.keyCode === 13) {
-            this.toggleStickyAnchorLinks()
-          }
-        })
-      }
+      this.toggleBtn.addEventListener('mousedown', () => this.toggleStickyAnchorLinks());
+      this.toggleBtn.addEventListener('keyup', event => {
+        if (event.keyCode === 13) {
+          this.toggleStickyAnchorLinks()
+        }
+      })
 
-      window.addEventListener('scroll', event => {
+      this.stickyAnchorLinks.addEventListener('click', (event) => {
+        if (event.target.tagName === 'A') {
+          this.toggleStickyAnchorLinks();
+        }
+      });
+
+      window.addEventListener('scroll', () => {
         this.toggleStickyToolbar();
       })
     }
