@@ -1,0 +1,16 @@
+{%- from 'components/hee/hee-anchorlinks/macro.njk' import anchorLinks %}
+
+{% macro anchorLinksSticky(params) %}
+  <div class="hee-anchorlinks__sticky">
+    <div class="hee-anchorlinks__sticky__wrapper">
+      <button aria-haspopup="true" aria-label="Open table of contents" class="hee-anchorlinks__sticky__btn">
+        <span>Table of Contents</span>
+      </button>
+      <a aria-label="Back to top of page" class="hee-anchorlinks__sticky__top-link" href="#publication-title">Back to top</a>
+      {{ anchorLinks({
+        title: "Table of Contents",
+        toc: true
+      })}}
+    </div>
+  </div>
+{% endmacro %}

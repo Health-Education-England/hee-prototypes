@@ -138,7 +138,7 @@
   <h2 class="toc_h2">Regions</h2>
   <p>Pellentesque id posuere sapien vestibulum, quam pellentesque at libero. Aliquam at id fames hendrerit in vulputate orci aliquet augue. Massa penatibus sociis et nisl. Enim aliquam mauris suscipit turpis non hendrerit felis.</p>
   {{ navMap({
-    src: "/images/nav-maps/dental-regions.svg",
+    src: basePath + "/images/nav-maps/dental-regions.svg",
     caption: {
       items: [
         {
@@ -307,12 +307,5 @@
 {% endblock %}
 
 {% block pageFooter %}
-  <div class="hee-anchorlinks__sticky">
-    <div class="hee-anchorlinks__sticky__wrapper">
-      <button aria-haspopup="true" aria-label="Open table of contents" class="hee-anchorlinks__sticky__btn">
-        <span>Table of Contents</span>
-      </button>
-      <a aria-label="Back to top of page" class="hee-anchorlinks__sticky__top-link" href="#publication-title">Back to top</a>
-    </div>
-  </div>
+  {{ anchorLinksSticky() }}
 {% endblock %}
