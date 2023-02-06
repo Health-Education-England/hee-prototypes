@@ -4,6 +4,7 @@
   border-top: 1px solid $color_nhsuk-grey-4;
   bottom: 0;
   background-color: $color_nhsuk-grey-5;
+  display: none;
   height: 91px;
   position: fixed;
   min-height: 91px;
@@ -11,6 +12,10 @@
 
   @include mq($from: desktop) {
     min-height: 107px;
+  }
+
+  &.active {
+    display: block;
   }
 
   .hee-anchorlinks__sticky__wrapper {

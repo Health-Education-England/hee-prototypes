@@ -1,7 +1,7 @@
 {%- from 'components/hee/hee-anchorlinks/macro.njk' import anchorLinks %}
 
 {% macro anchorLinksSticky(params) %}
-  <div class="hee-anchorlinks__sticky">
+  <div aria-expanded="false" class="hee-anchorlinks__sticky" id="hee-anchorlinks-sticky">
     <div class="hee-anchorlinks__sticky__wrapper">
       <button aria-haspopup="true" aria-label="Open table of contents" class="hee-anchorlinks__sticky__btn">
         <span>Table of Contents</span>
