@@ -1,23 +1,20 @@
-# Contribution guidelines
+# Contributing
 
-Thank you for your interest in contributing to NHS.UK prototype kit, we really appreciate it. There are a number of ways that you can contribute – reporting bugs, fixing bugs, suggesting new features or writing documentation.
+Before contributing to the HEE prototype as a team member, please ensure to familiarise yourself with our [branching strategy document](https://www.figma.com/file/wp7I4wS6OAvLzcUkDxePXE/HEE-frontend-protoype%3A-Branching-strategy?node-id=0%3A1&t=0P5nLy2hjh32DglY-0)
 
-## Contributing
+## Branches
+`master`: Frontend work which has been implemented and deployed into Bloomreach production by the backend team.
 
-If you’ve got an idea or suggestion you can:
+`develop`: Frontend work which has been approved and signed off by the design team.
 
-* email [service-manual@nhs.net](mailto:service-manual@nhs.net)
-* get in touch on the [NHS digital service manual Slack workspace](https://nhs-service-manual.slack.com/messages/CFYL2GDGW)
-* [create a GitHub issue](https://github.com/nhsuk/nhsuk-prototype-kit/issues/new)   
+`WIP/*`: Frontend work for _**the current sprint**_ which has been peer reviewed, awaiting review by the design team
 
-## Raising bugs
+`feature/*`: Isolated work associated with a particular feature and Jira ticket.
 
-When raising bugs please explain the issue in good detail and provide a guide to how to replicate it.
+`release/*`: Features for _**the current sprint**_ being prepped for release / deployment into Bloomreach production at the end of sprint.
 
-[Raise a bug](https://github.com/nhsuk/nhsuk-prototype-kit/issues/new?template=BUG_REPORT.md) 
+`hotfix/*`: Fixes made directly on production to amend small / urgent issues.
 
-## Suggesting features
 
-Please raise feature requests as issues before contributing any code.
 
-This ensures they are discussed properly before any time is spent on them.
+
