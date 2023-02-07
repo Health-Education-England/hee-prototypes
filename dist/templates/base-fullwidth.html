@@ -74,8 +74,8 @@
             <h3>Leftbar</h3>
             <ul>
               <li><a href="/templates/base-leftbar">Base</a></li>
-              <li>News Collection</li>
-              <li>Blog Collection</li>
+              <li><a href="/templates/news-collection">News Collection</a></li>
+              <li><a href="/templates/blog-collection">Blog Collection</a></li>
               <li>Casestudies Collection</li>
               <li><a href="/templates/publications-collection">Publications Collection</a></li>
               <li>Event Collection</li>
@@ -112,22 +112,20 @@
       &lt;/div&gt;
     [ ENDIF ]
   &lt;/div&gt;
-  &lt;div class=&quot;page__main&quot;&gt;
-    &lt;div class=&quot;nhsuk-width-container&quot;&gt;
-      [ IF HOMEPAGE, LANDINGHUB, 404 ]
-      &lt;div class=&quot;page__content&quot;&gt;
-        [ CONTENT--MAIN_BLOCKS ]
-      &lt;/div&gt;
-      [ ELSEIF SEARCH_LISTING ]
-        [ SEARCH_INPUT ]
-        [ RESULTS_TITLE | RESULTS_SORTING ]
-        [ RESULTS_LISTING ]
-        [ RESULTS_PAGINATION ]
-      [ ELSEIF AZ_LISTING ]
-        [ AZLISTING_NAV ]
-        [ AZLISTING_RESULTS ]
-      [ ENDIF ]
+  &lt;div class=&quot;page__main nhsuk-width-container&quot;&gt;
+    [ IF HOMEPAGE, LANDINGHUB, 404 ]
+    &lt;div class=&quot;page__content&quot;&gt;
+      [ CONTENT--MAIN_BLOCKS ]
     &lt;/div&gt;
+    [ ELSEIF SEARCH_LISTING ]
+      [ SEARCH_INPUT ]
+      [ RESULTS_TITLE | RESULTS_SORTING ]
+      [ RESULTS_LISTING ]
+      [ RESULTS_PAGINATION ]
+    [ ELSEIF AZ_LISTING ]
+      [ AZLISTING_NAV ]
+      [ AZLISTING_RESULTS ]
+    [ ENDIF ]
   &lt;/div&gt;
   &lt;div class=&quot;page__footer&quot;&gt;
   &lt;/div&gt;
