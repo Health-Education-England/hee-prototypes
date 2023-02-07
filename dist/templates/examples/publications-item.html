@@ -410,13 +410,15 @@
     <div class="page__footer">
       <div aria-expanded="false" class="hee-anchorlinks__sticky" id="hee-anchorlinks-sticky">
         <div class="hee-anchorlinks__sticky__wrapper">
-          <button aria-haspopup="true" aria-label="Open table of contents" class="hee-anchorlinks__sticky__btn">
+          <button aria-haspopup="true" aria-label="Open table of contents" class="hee-anchorlinks__sticky__btn" tabindex="1">
             <span>Table of Contents</span>
           </button>
-          <a aria-label="Back to top of page" class="hee-anchorlinks__sticky__top-link" href="#publication-title">Back to top</a>
-          <div class="nhsuk-anchor-links hee-anchorlinks" data-toc-js=true data-headings="">
-            <h2 data-anchorlinksignore="true">Table of Contents</h2>
+          <div class="hee-anchorlinks__sticky__container">
+            <div class="nhsuk-anchor-links hee-anchorlinks" data-toc-js=true data-headings="">
+              <h2 data-anchorlinksignore="true">Table of Contents</h2>
+            </div>
           </div>
+          <a aria-label="Back to top of page" class="hee-anchorlinks__sticky__top-link" href="#publication-title" tabindex="2">Back to top</a>
         </div>
       </div>
     </div>
