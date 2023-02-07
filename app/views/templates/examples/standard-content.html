@@ -2,6 +2,8 @@
 
 {% block pageTitle %}Standard Content - Examples - NWP Prototype Kit{% endblock %}
 
+{% block pageHeaderClass %}has-microhero{% endblock %}
+
 {% block breadcrumbs %}
 {{ 
     breadcrumb({
@@ -18,6 +20,9 @@
 {% endblock %}
 
 {% block pageHeader %}
+  {{ microHero({
+    "imgURL": "/images/young-child-using-tablet-device.jpg"
+  }) }}
   <div class="nhsuk-width-container">
     <h1>Standard Content</h1>
     <span class="nhsuk-caption-xl">Caption</span>
@@ -163,4 +168,7 @@
       "nextReview": "1 February 2020"
     }) }}
   </div>
+{% endblock %}
+
+{% block pageFeature %}
 {% endblock %}

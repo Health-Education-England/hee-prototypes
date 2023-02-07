@@ -5,6 +5,8 @@
 
 {% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
 
+{% block pageHeaderClass %}has-microhero{% endblock %}
+
 {% block breadcrumbs %}
   {{
     breadcrumb({
@@ -29,19 +31,23 @@
 {% endblock %}
 
 {% block pageHeader %}
+  {{ microHero({
+    "imgURL": "/images/young-child-using-tablet-device.jpg"
+  }) }}
   <div class="nhsuk-width-container">
     <h1>Blog Item</h1>
     <span class="nhsuk-caption-xl">Caption</span>
-    <p class="nhsuk-body-s nhsuk-u-secondary-text-color">Published on 25 October 2022, by Dr. Joe Soap</p>
-    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-7">
-      <a href="#">Learning and development</a>,
-      <a href="#">Artificial intelligence and robotics</a>,
-      <a href="#">Policy and strategy</a>
-    </p>
   </div>
 {% endblock %}
 
 {% block pageContent %}
+  <p class="nhsuk-body-s nhsuk-u-secondary-text-color">Published on 25 October 2022, by Dr. Joe Soap</p>
+  <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-7">
+    <a href="#">Learning and development</a>,
+    <a href="#">Artificial intelligence and robotics</a>,
+    <a href="#">Policy and strategy</a>
+  </p>
+
   <p class="nhsuk-body-l">Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi.</p>
   <h3 id="heading1">Donec pulvinar sollicitudin</h3>
   <p>Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi. Sed vestibulum quis mi nec volutpat. Proin tristique eleifend volutpat. Maecenas eu magna a sem aliquam luctus. Donec nec metus condimentum, molestie nulla eu, auctor sem. Cras nec arcu sed lorem eleifend pellentesque nec nec ligula.</p>

@@ -9,17 +9,15 @@
 {% endblock %}
 
 {% block pageMain %}
-  <div class="nhsuk-width-container">
-    <div class="page__layout">
-      <div class="page__main">
-        <div class="page__content">
-          {% block pageContent %}{% endblock %}
-        </div>
+  <div class="page__layout nhsuk-width-container">
+    <div class="page__main">
+      <div class="page__content">
+        {% block pageContent %}{% endblock %}
       </div>
-      <aside class="page__rightbar">
-        {% block pageRightbar %}{% endblock %}
-      </aside>
     </div>
+    <aside class="page__rightbar">
+      {% block pageRightbar %}{% endblock %}
+    </aside>
   </div>
 {% endblock %}
 

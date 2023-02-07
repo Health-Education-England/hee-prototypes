@@ -53,22 +53,20 @@
       </div>
     [ ENDIF ]
   </div>
-  <div class="page__main">
-    <div class="nhsuk-width-container">
-      [ IF HOMEPAGE, LANDINGHUB, 404 ]
-      <div class="page__content">
-        [ CONTENT--MAIN_BLOCKS ]
-      </div>
-      [ ELSEIF SEARCH_LISTING ]
-        [ SEARCH_INPUT ]
-        [ RESULTS_TITLE | RESULTS_SORTING ]
-        [ RESULTS_LISTING ]
-        [ RESULTS_PAGINATION ]
-      [ ELSEIF AZ_LISTING ]
-        [ AZLISTING_NAV ]
-        [ AZLISTING_RESULTS ]
-      [ ENDIF ]
+  <div class="page__main nhsuk-width-container">
+    [ IF HOMEPAGE, LANDINGHUB, 404 ]
+    <div class="page__content">
+      [ CONTENT--MAIN_BLOCKS ]
     </div>
+    [ ELSEIF SEARCH_LISTING ]
+      [ SEARCH_INPUT ]
+      [ RESULTS_TITLE | RESULTS_SORTING ]
+      [ RESULTS_LISTING ]
+      [ RESULTS_PAGINATION ]
+    [ ELSEIF AZ_LISTING ]
+      [ AZLISTING_NAV ]
+      [ AZLISTING_RESULTS ]
+    [ ENDIF ]
   </div>
   <div class="page__footer">
   </div>
