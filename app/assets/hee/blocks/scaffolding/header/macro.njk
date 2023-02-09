@@ -104,11 +104,11 @@
           </button>
         </p>
         <ul class="nhsuk-header__navigation-list">
-          <li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--for-mobile">
+          {#<li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--for-mobile">
             <a class="nhsuk-header__navigation-link" href="{% if params.homeHref %}{{ params.homeHref }}{% else %}/{% endif %}">
               {% if params.homeText %}{{ params.homeText }}{% else %}Home{% endif %}
             </a>
-          </li>
+          </li>#}
           {%- for item in params.primaryLinks %}
 
             {% if item.children %}

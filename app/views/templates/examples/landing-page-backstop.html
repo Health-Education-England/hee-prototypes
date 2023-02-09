@@ -1,0 +1,165 @@
+{% extends "example-template-fullwidth.html" %}
+
+{% set page_url = 'landing-page' %}
+{% set page_title = 'Landing Page' %}
+
+{% block pageClass %}page--fullwidth{% endblock %}
+{% block pageHeaderClass %}has-microhero{% endblock %}
+
+{% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
+
+{% block breadcrumbs %}
+  {{ phaseBanner({
+    tag: "Beta",
+    description: '<p>This is a new website&nbsp;– your&nbsp;<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu">feedback</a>&nbsp;will help us to improve it.</p>
+                  <p>Donec <strong>sollicitudin</strong> molestie malesuada. <em>Praesent</em> sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada. Nulla quis lorem ut libero malesuada feugiat.</p>'
+  }) }}
+
+  {{
+    breadcrumb({
+      items: [
+        {
+          href: "/",
+          text: "Home"
+        }
+      ],
+      href: "/templates",
+      text: "Visual regression"
+    })
+  }}
+{% endblock %}
+
+{% block headerStart %}
+  {{ banner({
+    customClass: "hee-banner--announcement",
+    HTML: "<h2>H2 - This is an Announcement. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</h2>
+             <h3>H3 - This is the alert text and&nbsp;<a href=\"https://www.hee.nhs.uk/\">this is the link</a></h3>
+             <p>Body&nbsp;- This is banner body copy&nbsp;<a href=\"/site/knowledge-staff\">this is the link</a></p>
+            "
+  })}}
+{% endblock %}
+
+{% block banners %}
+  {{ banner({
+    customClass: "hee-banner--mourning",
+    HTML: "<h2>H2 - This is a Mourning. Nulla quis lorem ut libero malesuada feugiat.</h2>
+             <h3>H3 - This is the alert text and&nbsp;<a href=\"http://www.hee.nhs.uk/\">this is the link</a></h3>
+             <p>Body&nbsp;- This is banner body copy&nbsp;<a href=\"https://www.hee.nhs.uk/\">this is the link</a></p>
+            "
+  })}}
+
+  {{ banner({
+    HTML: "<h2>H2 - This is an Alert. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</h2>
+             <h3>H3 - This is the alert text and&nbsp;<a href=\"https://www.hee.nhs.uk/\">this is the link</a></h3>
+             <p>Body&nbsp;- This is banner body copy&nbsp;<a href=\"https://www.hee.nhs.uk/\">this is the link</a></p>
+            "
+  })}}
+{% endblock %}
+
+{% block pageHeader %}
+  {{ microHero({
+    "imgURL": "/images/young-child-using-tablet-device.jpg"
+  }) }}
+  <div class="nhsuk-width-container">
+    {#{ backLink({
+      "href": "#",
+      "text": "Go back"
+    }) }#}
+    <h1>[VR] Landing page</h1>
+    <p class="nhsuk-lede-text">Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
+  </div>
+{% endblock %}
+
+{% block pageContent %}
+  <div class="nhsuk-u-reading-width">
+    <h2>[CG] Cras ultricies</h2>
+  </div>
+  <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Cras ultricies ligula sed magna dictum porta. Nulla quis lorem ut libero malesuada feugiat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
+    <br>
+    <br>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit.</p>
+  <ul class="nhsuk-grid-row nhsuk-card-group">
+
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+      <div class="nhsuk-card nhsuk-card--clickable">
+        <div class="nhsuk-card__content">
+          <h3 class="nhsuk-card__heading nhsuk-heading-m">
+            <a class="nhsuk-card__link" href="https://development.hee.bloomreach.cloud/">                                        Essential Sites Update
+            </a>
+          </h3>
+          <p class="nhsuk-card__description">Duis aute irure dolor in reprehenderit in voluptate.</p>
+        </div>
+      </div>
+    </li>
+
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+      <div class="nhsuk-card nhsuk-card--clickable">
+        <div class="nhsuk-card__content">
+          <h3 class="nhsuk-card__heading nhsuk-heading-m">
+            <a class="nhsuk-card__link" href="https://development.hee.bloomreach.cloud/">                                        Expert searching
+            </a>
+          </h3>
+          <p class="nhsuk-card__description">Duis aute irure dolor in reprehenderit in voluptate.</p>
+        </div>
+      </div>
+    </li>
+
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+      <div class="nhsuk-card nhsuk-card--clickable">
+        <div class="nhsuk-card__content">
+          <h3 class="nhsuk-card__heading nhsuk-heading-m">
+            <a class="nhsuk-card__link" href="https://development.hee.bloomreach.cloud/">                                        Inter–lending and document supply (ILDS)
+            </a>
+          </h3>
+          <p class="nhsuk-card__description">Duis aute irure dolor in reprehenderit in voluptate.</p>
+        </div>
+      </div>
+    </li>
+
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+      <div class="nhsuk-card nhsuk-card--clickable">
+        <div class="nhsuk-card__content">
+          <h3 class="nhsuk-card__heading nhsuk-heading-m">
+            <a class="nhsuk-card__link" href="https://development.hee.bloomreach.cloud/">                                        HLISD
+            </a>
+          </h3>
+          <p class="nhsuk-card__description">Duis aute irure dolor in reprehenderit in voluptate.</p>
+        </div>
+      </div>
+    </li>
+
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+      <div class="nhsuk-card nhsuk-card--clickable">
+        <div class="nhsuk-card__content">
+          <h3 class="nhsuk-card__heading nhsuk-heading-m">
+            <a class="nhsuk-card__link" href="https://development.hee.bloomreach.cloud/">                                        Blog
+            </a>
+          </h3>
+          <p class="nhsuk-card__description">Posts and comments about current and future KLS developments</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+{% endblock %}
+
+{% block footer %}
+  <footer>
+    <div class="nhsuk-footer has-edit-button">
+      <div class="nhsuk-width-container">
+        <ul class="nhsuk-footer__list nhsuk-footer__list--three-columns">
+          <li class="nhsuk-footer__list-item">
+            <a class="nhsuk-footer__list-item-link" href="/site/">Blog</a>
+          </li>
+          <li class="nhsuk-footer__list-item">
+            <a class="nhsuk-footer__list-item-link" href="/site/">About us</a>
+          </li>
+          <li class="nhsuk-footer__list-item">
+            <a class="nhsuk-footer__list-item-link" href="/site/">Contact us</a>
+          </li>
+          <li class="nhsuk-footer__list-item">
+            <a class="nhsuk-footer__list-item-link" href="/site/cookies">Cookies</a>
+          </li>
+        </ul>
+        <p class="nhsuk-footer__copyright">© Crown copyright</p></div>
+    </div>
+  </footer>
+{% endblock %}
