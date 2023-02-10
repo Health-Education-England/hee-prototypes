@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Examples</title>
+  <title>Landing Page - Examples - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -30,7 +30,25 @@
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script>
-  <a class="nhsuk-skip-link" href="#maincontent">Skip to main content</a>
+  <div class="nhsuk-cookie-banner">
+    <div class="nhsuk-width-container">
+      <h2>Cookies</h2>
+      <p> We use some essential cookies to make this website work. We’d like to set some additional cookies to understand how you use the website and to improve it. We also use cookies set by other sites to help us deliver content from their services. <a href="/lks/cookie-policy" title="Cookie Policy">You can read more about our cookies</a> before you choose. </p>
+      <ul>
+        <li><button class="nhsuk-button" id="nhsuk-cookie-banner__link_accept_analytics" tabindex="2">Accept additional cookies</button></li>
+        <li><button class="nhsuk-button" id="nhsuk-cookie-banner__link_decline_analytics" tabindex="3">Reject additional cookies</button></li>
+      </ul>
+    </div>
+  </div>
+  <div class="hee-banner hee-banner--announcement" role="complementary">
+    <div class="nhsuk-width-container">
+      <div class="hee-banner__message">
+        <h2>H2 - This is an Announcement. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</h2>
+        <h3>H3 - This is the alert text and&nbsp;<a href="https://www.hee.nhs.uk/">this is the link</a></h3>
+        <p>Body&nbsp;- This is banner body copy&nbsp;<a href="/site/knowledge-staff">this is the link</a></p>
+      </div>
+    </div>
+  </div>
   <header class="nhsuk-header nhsuk-header--organisation nhsuk-header--white" role="banner">
     <div class="nhsuk-width-container nhsuk-header__container">
       <div class="nhsuk-header__multilogo">
@@ -176,34 +194,141 @@
     </nav>
   </header>
   <div class="breadcrumbs">
-  </div>
-  <div class="banners">
-  </div>
-  <main class="page page--rightbar" id="maincontent" role="main">
-    <div class="page__header ">
-    </div>
-    <div class="page__layout nhsuk-width-container">
-      <div class="page__main">
-        <div class="page__content">
+    <div class="hee-phasebanner">
+      <div class="nhsuk-width-container">
+        <div class="hee-phasebanner__wrapper">
+          <span class="hee-phasebanner__tag"> Beta </span>
+          <div class="hee-phasebanner__content">
+            <p>This is a new website&nbsp;– your&nbsp;<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu">feedback</a>&nbsp;will help us to improve it.</p>
+            <p>Donec <strong>sollicitudin</strong> molestie malesuada. <em>Praesent</em> sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada. Nulla quis lorem ut libero malesuada feugiat.</p>
+          </div>
         </div>
       </div>
-      <aside class="page__rightbar">
-      </aside>
+    </div>
+    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+      <div class="nhsuk-width-container">
+        <ol class="nhsuk-breadcrumb__list">
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates">Visual regression</a></li>
+        </ol>
+        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/templates">Back to Visual regression</a></p>
+      </div>
+    </nav>
+  </div>
+  <div class="banners">
+    <div class="hee-banner hee-banner--mourning" role="complementary">
+      <div class="nhsuk-width-container">
+        <div class="hee-banner__message">
+          <h2>H2 - This is a Mourning. Nulla quis lorem ut libero malesuada feugiat.</h2>
+          <h3>H3 - This is the alert text and&nbsp;<a href="http://www.hee.nhs.uk/">this is the link</a></h3>
+          <p>Body&nbsp;- This is banner body copy&nbsp;<a href="https://www.hee.nhs.uk/">this is the link</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="hee-banner " role="complementary">
+      <div class="nhsuk-width-container">
+        <div class="hee-banner__message">
+          <h2>H2 - This is an Alert. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</h2>
+          <h3>H3 - This is the alert text and&nbsp;<a href="https://www.hee.nhs.uk/">this is the link</a></h3>
+          <p>Body&nbsp;- This is banner body copy&nbsp;<a href="https://www.hee.nhs.uk/">this is the link</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main class="page page--fullwidth" id="maincontent" role="main">
+    <div class="page__header has-microhero">
+      <div class="hee-microhero" style="background-image:url(/images/young-child-using-tablet-device.jpg);"></div>
+      <div class="nhsuk-width-container">
+        <h1>[VR] Landing page</h1>
+        <p class="nhsuk-lede-text">Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
+      </div>
+    </div>
+    <div class="page__main nhsuk-width-container">
+      <div class="page__content">
+        <div class="nhsuk-u-reading-width">
+          <h2>[CG] Cras ultricies</h2>
+        </div>
+        <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Cras ultricies ligula sed magna dictum porta. Nulla quis lorem ut libero malesuada feugiat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. <br>
+          <br>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit.
+        </p>
+        <ul class="nhsuk-grid-row nhsuk-card-group">
+          <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+            <div class="nhsuk-card nhsuk-card--clickable">
+              <div class="nhsuk-card__content">
+                <h3 class="nhsuk-card__heading nhsuk-heading-m">
+                  <a class="nhsuk-card__link" href="https://development.hee.bloomreach.cloud/"> Essential Sites Update </a>
+                </h3>
+                <p class="nhsuk-card__description">Duis aute irure dolor in reprehenderit in voluptate.</p>
+              </div>
+            </div>
+          </li>
+          <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+            <div class="nhsuk-card nhsuk-card--clickable">
+              <div class="nhsuk-card__content">
+                <h3 class="nhsuk-card__heading nhsuk-heading-m">
+                  <a class="nhsuk-card__link" href="https://development.hee.bloomreach.cloud/"> Expert searching </a>
+                </h3>
+                <p class="nhsuk-card__description">Duis aute irure dolor in reprehenderit in voluptate.</p>
+              </div>
+            </div>
+          </li>
+          <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+            <div class="nhsuk-card nhsuk-card--clickable">
+              <div class="nhsuk-card__content">
+                <h3 class="nhsuk-card__heading nhsuk-heading-m">
+                  <a class="nhsuk-card__link" href="https://development.hee.bloomreach.cloud/"> Inter–lending and document supply (ILDS) </a>
+                </h3>
+                <p class="nhsuk-card__description">Duis aute irure dolor in reprehenderit in voluptate.</p>
+              </div>
+            </div>
+          </li>
+          <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+            <div class="nhsuk-card nhsuk-card--clickable">
+              <div class="nhsuk-card__content">
+                <h3 class="nhsuk-card__heading nhsuk-heading-m">
+                  <a class="nhsuk-card__link" href="https://development.hee.bloomreach.cloud/"> HLISD </a>
+                </h3>
+                <p class="nhsuk-card__description">Duis aute irure dolor in reprehenderit in voluptate.</p>
+              </div>
+            </div>
+          </li>
+          <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+            <div class="nhsuk-card nhsuk-card--clickable">
+              <div class="nhsuk-card__content">
+                <h3 class="nhsuk-card__heading nhsuk-heading-m">
+                  <a class="nhsuk-card__link" href="https://development.hee.bloomreach.cloud/"> Blog </a>
+                </h3>
+                <p class="nhsuk-card__description">Posts and comments about current and future KLS developments</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="page__footer">
     </div>
     <section class="page__feature">
     </section>
   </main>
-  <footer class="nhsuk-footer site-footer" id="nhsuk-footer" role="contentinfo">
-    <div class="nhsuk-width-container">
-      <h2 class="nhsuk-u-visually-hidden">Support links</h2>
-      <ul class="nhsuk-footer__list nhsuk-footer__list--three-columns">
-        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/blog">Blog</a></li>
-        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/about">About us</a></li>
-        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/contact">Contact us</a></li>
-      </ul>
-      <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+  <footer>
+    <div class="nhsuk-footer has-edit-button">
+      <div class="nhsuk-width-container">
+        <ul class="nhsuk-footer__list nhsuk-footer__list--three-columns">
+          <li class="nhsuk-footer__list-item">
+            <a class="nhsuk-footer__list-item-link" href="/site/">Blog</a>
+          </li>
+          <li class="nhsuk-footer__list-item">
+            <a class="nhsuk-footer__list-item-link" href="/site/">About us</a>
+          </li>
+          <li class="nhsuk-footer__list-item">
+            <a class="nhsuk-footer__list-item-link" href="/site/">Contact us</a>
+          </li>
+          <li class="nhsuk-footer__list-item">
+            <a class="nhsuk-footer__list-item-link" href="/site/cookies">Cookies</a>
+          </li>
+        </ul>
+        <p class="nhsuk-footer__copyright">© Crown copyright</p>
+      </div>
     </div>
   </footer>
   <script src="/js/jquery-3.3.1.min.js"></script>
