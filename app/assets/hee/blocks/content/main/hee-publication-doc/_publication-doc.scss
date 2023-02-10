@@ -9,6 +9,7 @@
 
   .hee-publication-doc__wrapper {
     position: relative;
+    min-width: 60px;
     width: 60px;
 
     .hee-publication-doc__icon {
@@ -37,6 +38,8 @@
     .hee-publication-doc__icon__title {
       @include nhsuk-font(16);
       background-color: $color_nhsuk-black;
+      border: 1px solid $color_nhsuk-white;
+      border-radius: 2px;
       color: $color_nhsuk-white;
       position: absolute;
       text-align: center;
