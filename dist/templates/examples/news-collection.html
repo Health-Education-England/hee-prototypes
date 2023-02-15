@@ -179,10 +179,10 @@
     <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
       <div class="nhsuk-width-container">
         <ol class="nhsuk-breadcrumb__list">
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates/examples/news-collection">News Collection</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="undefined/">Home</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="undefined/templates/examples/news-collection">News Collection</a></li>
         </ol>
-        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/templates/examples/news-collection">Back to News Collection</a></p>
+        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="undefined/templates/examples/news-collection">Back to News Collection</a></p>
       </div>
     </nav>
   </div>
@@ -201,16 +201,17 @@
           <p class="nhsuk-filter__title nhsuk-heading-l">Filters</p>
           <div class="nhsuk-filter__groups">
             <div class="nhsuk-filter__group">
+              <a class="nhsuk-filter__group__clear" href="#">Clear</a>
               <div class="nhsuk-form-group">
                 <fieldset class="nhsuk-fieldset">
                   <legend class="nhsuk-fieldset__legend"> Category </legend>
                   <div class="nhsuk-checkboxes">
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Category-1" name="filter" type="checkbox" value="">
+                      <input class="nhsuk-checkboxes__input" id="filter_Category-1" name="filter" type="checkbox" value="item_one" checked>
                       <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-1"> Item one </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Category-2" name="filter" type="checkbox" value="">
+                      <input class="nhsuk-checkboxes__input" id="filter_Category-2" name="filter" type="checkbox" value="item_two" checked>
                       <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-2"> Item two </label>
                     </div>
                   </div>
@@ -223,15 +224,15 @@
                   <legend class="nhsuk-fieldset__legend"> Organisation </legend>
                   <div class="nhsuk-checkboxes">
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Organisation-1" name="filter" type="checkbox" value="">
+                      <input class="nhsuk-checkboxes__input" id="filter_Organisation-1" name="filter" type="checkbox" value="item_one">
                       <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Organisation-1"> Item one </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Organisation-2" name="filter" type="checkbox" value="">
+                      <input class="nhsuk-checkboxes__input" id="filter_Organisation-2" name="filter" type="checkbox" value="item_two">
                       <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Organisation-2"> Item two </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Organisation-3" name="filter" type="checkbox" value="">
+                      <input class="nhsuk-checkboxes__input" id="filter_Organisation-3" name="filter" type="checkbox" value="item_three">
                       <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Organisation-3"> Item three </label>
                     </div>
                   </div>
@@ -247,21 +248,161 @@
           <div class="hee-listing">
             <div class="hee-listing__summary">
               <div class="hee-listing__count">
-                <h2 class="hee-listing__title nhsuk-heading-l"> results</h2>
+                <h2 class="hee-listing__title nhsuk-heading-l">10 results</h2>
               </div>
               <div class="hee-listing__filter">
                 <form method="get" class="hee-listing__filter__sort">
                   <div class="nhsuk-form-group">
-                    <select class="nhsuk-select" id="" name="">
+                    <label class="nhsuk-label" for="sort"> Sort by </label>
+                    <select class="nhsuk-select" id="sort" name="sort">
+                      <option value="newest">Newest</option>
+                      <option value="relevance">Relevance</option>
                     </select>
                   </div>
-                  <button class="nhsuk-button" type="submit">
-                  </button>
+                  <button class="nhsuk-button hee-listing__filter__submit" type="submit"> Update </button>
                 </form>
               </div>
             </div>
             <div class="hee-listing__results">
-              <div class="hee-listings__results__no-items">
+              <div class="hee-listing-item">
+                <h3><a href="#">News item #1</a></h3>
+                <div class="hee-listing-item__details">
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">News type:</span>
+                    <span>Briefing</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Publish date:</span>
+                    <span>07 September 2022</span>
+                  </div>
+                </div>
+                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
+              </div>
+              <div class="hee-listing-item">
+                <h3><a href="#">News item #2</a></h3>
+                <div class="hee-listing-item__details">
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">News type:</span>
+                    <span>Briefing</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Publish date:</span>
+                    <span>07 September 2022</span>
+                  </div>
+                </div>
+                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
+              </div>
+              <div class="hee-listing-item">
+                <h3><a href="#">News item #3</a></h3>
+                <div class="hee-listing-item__details">
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">News type:</span>
+                    <span>Briefing</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Publish date:</span>
+                    <span>07 September 2022</span>
+                  </div>
+                </div>
+                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
+              </div>
+              <div class="hee-listing-item">
+                <h3><a href="#">News item #4</a></h3>
+                <div class="hee-listing-item__details">
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">News type:</span>
+                    <span>Briefing</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Publish date:</span>
+                    <span>07 September 2022</span>
+                  </div>
+                </div>
+                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
+              </div>
+              <div class="hee-listing-item">
+                <h3><a href="#">News item #5</a></h3>
+                <div class="hee-listing-item__details">
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">News type:</span>
+                    <span>Briefing</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Publish date:</span>
+                    <span>07 September 2022</span>
+                  </div>
+                </div>
+                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
+              </div>
+              <div class="hee-listing-item">
+                <h3><a href="#">News item #6</a></h3>
+                <div class="hee-listing-item__details">
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">News type:</span>
+                    <span>Briefing</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Publish date:</span>
+                    <span>07 September 2022</span>
+                  </div>
+                </div>
+                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
+              </div>
+              <div class="hee-listing-item">
+                <h3><a href="#">News item #7</a></h3>
+                <div class="hee-listing-item__details">
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">News type:</span>
+                    <span>Briefing</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Publish date:</span>
+                    <span>07 September 2022</span>
+                  </div>
+                </div>
+                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
+              </div>
+              <div class="hee-listing-item">
+                <h3><a href="#">News item #8</a></h3>
+                <div class="hee-listing-item__details">
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">News type:</span>
+                    <span>Briefing</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Publish date:</span>
+                    <span>07 September 2022</span>
+                  </div>
+                </div>
+                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
+              </div>
+              <div class="hee-listing-item">
+                <h3><a href="#">News item #9</a></h3>
+                <div class="hee-listing-item__details">
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">News type:</span>
+                    <span>Briefing</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Publish date:</span>
+                    <span>07 September 2022</span>
+                  </div>
+                </div>
+                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
+              </div>
+              <div class="hee-listing-item">
+                <h3><a href="#">News item #10</a></h3>
+                <div class="hee-listing-item__details">
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">News type:</span>
+                    <span>Briefing</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Publish date:</span>
+                    <span>07 September 2022</span>
+                  </div>
+                </div>
+                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
             </div>
             <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
