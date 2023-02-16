@@ -21,7 +21,11 @@
   "scenarios": [
     {
       "label": "landing_page",
-      "url": "http://localhost:3000/templates/examples/landing-page-backstop.html"
+      "url": "http://localhost:3000/templates/examples/landing-page--backstop.html"
+    },
+    {
+      "label": "blog_post_page",
+      "url": "http://localhost:3000/templates/examples/blog-item--backstop.html"
     }
   ],
   "paths": {
