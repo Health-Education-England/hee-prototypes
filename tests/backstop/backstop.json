@@ -26,6 +26,10 @@
     {
       "label": "blog_post_page",
       "url": "http://localhost:3000/templates/examples/blog-item--backstop.html"
+    },
+    {
+      "label": "mini_hub_page",
+      "url": "http://localhost:3000/templates/examples/mini-hub-item--backstop.html"
     }
   ],
   "paths": {
