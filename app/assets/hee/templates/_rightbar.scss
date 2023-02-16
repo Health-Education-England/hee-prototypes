@@ -29,15 +29,17 @@
         }
     }
     .page__layout {
-      .page__rightbar, 
+      .page__rightbar,
       .page__main {
           @include hee-flexgrid-col(12,$col-offset:0);
       }
     }
   }
 
-  .nhsuk-card:last-of-type, .nhsuk-contact:last-of-type {
-    margin-bottom: 0;
+  aside.page__rightbar {
+    .nhsuk-card:last-of-type, .nhsuk-contact:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
 
