@@ -10,10 +10,10 @@
   .page__layout {
       @include hee-flexgrid-row;
       .page__rightbar {
-          @include hee-flexgrid-col(3.75,$col-offset:0.25);
+          @include hee-flexgrid-col(3.75,$col-offset:0.5);
       }
       .page__main {
-          @include hee-flexgrid-col(8);
+          @include hee-flexgrid-col(7.75);
       }
   }
 
@@ -29,7 +29,7 @@
           @include hee-flexgrid-col(12,$col-offset:0);
       }
     }
-}
+  }
 
 }
 

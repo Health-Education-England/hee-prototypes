@@ -21,7 +21,11 @@ html {
     .page__header.has-microhero {
         padding-top: 0;
         .hee-microhero {
-            margin-bottom: nhsuk-spacing(7);
+            margin-bottom: nhsuk-spacing(6);
+
+            @include mq($from: tablet) {
+                margin-bottom: nhsuk-spacing(7);
+            }
         }
     }
 }
