@@ -2,7 +2,12 @@
 .page--rightbar {
   padding-bottom: nhsuk-spacing(6);
   .page__header {
-      padding-top: nhsuk-spacing(7);
+      padding-top: nhsuk-spacing(6);
+
+      @include mq($from: tablet) {
+        padding-top: nhsuk-spacing(7);
+      }
+
       h1, p, span {
         max-width: 66.6667%;
       }
