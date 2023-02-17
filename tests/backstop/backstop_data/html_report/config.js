@@ -4,7 +4,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/back_end_visual_regression_default_landing_page_0_document_0_desktop.png",
-        "test": "../bitmaps_test/20230217-090202/back_end_visual_regression_default_landing_page_0_document_0_desktop.png",
+        "test": "../bitmaps_test/20230217-113846/back_end_visual_regression_default_landing_page_0_document_0_desktop.png",
         "selector": "document",
         "fileName": "back_end_visual_regression_default_landing_page_0_document_0_desktop.png",
         "label": "landing_page",
@@ -26,7 +26,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/back_end_visual_regression_default_landing_page_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20230217-090202/back_end_visual_regression_default_landing_page_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20230217-113846/back_end_visual_regression_default_landing_page_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "back_end_visual_regression_default_landing_page_0_document_1_tablet.png",
         "label": "landing_page",
@@ -35,20 +35,23 @@ report({
         "expect": 0,
         "viewportLabel": "tablet",
         "diff": {
-          "isSameDimensions": true,
+          "isSameDimensions": false,
           "dimensionDifference": {
             "width": 0,
-            "height": 0
+            "height": -28
           },
-          "misMatchPercentage": "0.00"
-        }
+          "rawMisMatchPercentage": 7.16634521823742,
+          "misMatchPercentage": "7.17",
+          "analysisTime": 566
+        },
+        "diffImage": "../bitmaps_test/20230217-113846/failed_diff_back_end_visual_regression_default_landing_page_0_document_1_tablet.png"
       },
-      "status": "pass"
+      "status": "fail"
     },
     {
       "pair": {
         "reference": "../bitmaps_reference/back_end_visual_regression_default_landing_page_0_document_2_mobile.png",
-        "test": "../bitmaps_test/20230217-090202/back_end_visual_regression_default_landing_page_0_document_2_mobile.png",
+        "test": "../bitmaps_test/20230217-113846/back_end_visual_regression_default_landing_page_0_document_2_mobile.png",
         "selector": "document",
         "fileName": "back_end_visual_regression_default_landing_page_0_document_2_mobile.png",
         "label": "landing_page",
@@ -57,20 +60,23 @@ report({
         "expect": 0,
         "viewportLabel": "mobile",
         "diff": {
-          "isSameDimensions": true,
+          "isSameDimensions": false,
           "dimensionDifference": {
             "width": 0,
-            "height": 0
+            "height": -52
           },
-          "misMatchPercentage": "0.00"
-        }
+          "rawMisMatchPercentage": 9.187115384615385,
+          "misMatchPercentage": "9.19",
+          "analysisTime": 203
+        },
+        "diffImage": "../bitmaps_test/20230217-113846/failed_diff_back_end_visual_regression_default_landing_page_0_document_2_mobile.png"
       },
-      "status": "pass"
+      "status": "fail"
     },
     {
       "pair": {
         "reference": "../bitmaps_reference/back_end_visual_regression_default_blog_post_page_0_document_0_desktop.png",
-        "test": "../bitmaps_test/20230217-090202/back_end_visual_regression_default_blog_post_page_0_document_0_desktop.png",
+        "test": "../bitmaps_test/20230217-113846/back_end_visual_regression_default_blog_post_page_0_document_0_desktop.png",
         "selector": "document",
         "fileName": "back_end_visual_regression_default_blog_post_page_0_document_0_desktop.png",
         "label": "blog_post_page",
@@ -86,16 +92,16 @@ report({
           },
           "rawMisMatchPercentage": 5.831835752068358,
           "misMatchPercentage": "5.83",
-          "analysisTime": 682
+          "analysisTime": 920
         },
-        "diffImage": "../bitmaps_test/20230217-090202/failed_diff_back_end_visual_regression_default_blog_post_page_0_document_0_desktop.png"
+        "diffImage": "../bitmaps_test/20230217-113846/failed_diff_back_end_visual_regression_default_blog_post_page_0_document_0_desktop.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "../bitmaps_reference/back_end_visual_regression_default_blog_post_page_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20230217-090202/back_end_visual_regression_default_blog_post_page_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20230217-113846/back_end_visual_regression_default_blog_post_page_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "back_end_visual_regression_default_blog_post_page_0_document_1_tablet.png",
         "label": "blog_post_page",
@@ -107,20 +113,20 @@ report({
           "isSameDimensions": false,
           "dimensionDifference": {
             "width": 0,
-            "height": 168
+            "height": -139
           },
-          "rawMisMatchPercentage": 3.6181460907036915,
-          "misMatchPercentage": "3.62",
-          "analysisTime": 548
+          "rawMisMatchPercentage": 10.475671098903101,
+          "misMatchPercentage": "10.48",
+          "analysisTime": 842
         },
-        "diffImage": "../bitmaps_test/20230217-090202/failed_diff_back_end_visual_regression_default_blog_post_page_0_document_1_tablet.png"
+        "diffImage": "../bitmaps_test/20230217-113846/failed_diff_back_end_visual_regression_default_blog_post_page_0_document_1_tablet.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "../bitmaps_reference/back_end_visual_regression_default_blog_post_page_0_document_2_mobile.png",
-        "test": "../bitmaps_test/20230217-090202/back_end_visual_regression_default_blog_post_page_0_document_2_mobile.png",
+        "test": "../bitmaps_test/20230217-113846/back_end_visual_regression_default_blog_post_page_0_document_2_mobile.png",
         "selector": "document",
         "fileName": "back_end_visual_regression_default_blog_post_page_0_document_2_mobile.png",
         "label": "blog_post_page",
@@ -132,20 +138,20 @@ report({
           "isSameDimensions": false,
           "dimensionDifference": {
             "width": 0,
-            "height": 112
+            "height": 65
           },
-          "rawMisMatchPercentage": 3.9162721579450164,
-          "misMatchPercentage": "3.92",
-          "analysisTime": 249
+          "rawMisMatchPercentage": 17.461128680863027,
+          "misMatchPercentage": "17.46",
+          "analysisTime": 623
         },
-        "diffImage": "../bitmaps_test/20230217-090202/failed_diff_back_end_visual_regression_default_blog_post_page_0_document_2_mobile.png"
+        "diffImage": "../bitmaps_test/20230217-113846/failed_diff_back_end_visual_regression_default_blog_post_page_0_document_2_mobile.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "../bitmaps_reference/back_end_visual_regression_default_mini_hub_page_0_document_0_desktop.png",
-        "test": "../bitmaps_test/20230217-090202/back_end_visual_regression_default_mini_hub_page_0_document_0_desktop.png",
+        "test": "../bitmaps_test/20230217-113846/back_end_visual_regression_default_mini_hub_page_0_document_0_desktop.png",
         "selector": "document",
         "fileName": "back_end_visual_regression_default_mini_hub_page_0_document_0_desktop.png",
         "label": "mini_hub_page",
@@ -161,16 +167,16 @@ report({
           },
           "rawMisMatchPercentage": 7.636413512279278,
           "misMatchPercentage": "7.64",
-          "analysisTime": 503
+          "analysisTime": 805
         },
-        "diffImage": "../bitmaps_test/20230217-090202/failed_diff_back_end_visual_regression_default_mini_hub_page_0_document_0_desktop.png"
+        "diffImage": "../bitmaps_test/20230217-113846/failed_diff_back_end_visual_regression_default_mini_hub_page_0_document_0_desktop.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "../bitmaps_reference/back_end_visual_regression_default_mini_hub_page_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20230217-090202/back_end_visual_regression_default_mini_hub_page_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20230217-113846/back_end_visual_regression_default_mini_hub_page_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "back_end_visual_regression_default_mini_hub_page_0_document_1_tablet.png",
         "label": "mini_hub_page",
@@ -182,20 +188,20 @@ report({
           "isSameDimensions": false,
           "dimensionDifference": {
             "width": 0,
-            "height": 183
+            "height": -124
           },
-          "rawMisMatchPercentage": 17.999473525872443,
-          "misMatchPercentage": "18.00",
-          "analysisTime": 550
+          "rawMisMatchPercentage": 14.691674187725631,
+          "misMatchPercentage": "14.69",
+          "analysisTime": 919
         },
-        "diffImage": "../bitmaps_test/20230217-090202/failed_diff_back_end_visual_regression_default_mini_hub_page_0_document_1_tablet.png"
+        "diffImage": "../bitmaps_test/20230217-113846/failed_diff_back_end_visual_regression_default_mini_hub_page_0_document_1_tablet.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "../bitmaps_reference/back_end_visual_regression_default_mini_hub_page_0_document_2_mobile.png",
-        "test": "../bitmaps_test/20230217-090202/back_end_visual_regression_default_mini_hub_page_0_document_2_mobile.png",
+        "test": "../bitmaps_test/20230217-113846/back_end_visual_regression_default_mini_hub_page_0_document_2_mobile.png",
         "selector": "document",
         "fileName": "back_end_visual_regression_default_mini_hub_page_0_document_2_mobile.png",
         "label": "mini_hub_page",
@@ -207,20 +213,20 @@ report({
           "isSameDimensions": false,
           "dimensionDifference": {
             "width": 0,
-            "height": 230
+            "height": -100
           },
-          "rawMisMatchPercentage": 18.04820773355913,
-          "misMatchPercentage": "18.05",
-          "analysisTime": 380
+          "rawMisMatchPercentage": 12.70083733182802,
+          "misMatchPercentage": "12.70",
+          "analysisTime": 387
         },
-        "diffImage": "../bitmaps_test/20230217-090202/failed_diff_back_end_visual_regression_default_mini_hub_page_0_document_2_mobile.png"
+        "diffImage": "../bitmaps_test/20230217-113846/failed_diff_back_end_visual_regression_default_mini_hub_page_0_document_2_mobile.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "../bitmaps_reference/back_end_visual_regression_default_scp_page_0_document_0_desktop.png",
-        "test": "../bitmaps_test/20230217-090202/back_end_visual_regression_default_scp_page_0_document_0_desktop.png",
+        "test": "../bitmaps_test/20230217-113846/back_end_visual_regression_default_scp_page_0_document_0_desktop.png",
         "selector": "document",
         "fileName": "back_end_visual_regression_default_scp_page_0_document_0_desktop.png",
         "label": "scp_page",
@@ -236,16 +242,16 @@ report({
           },
           "rawMisMatchPercentage": 8.703256226469737,
           "misMatchPercentage": "8.70",
-          "analysisTime": 1050
+          "analysisTime": 1155
         },
-        "diffImage": "../bitmaps_test/20230217-090202/failed_diff_back_end_visual_regression_default_scp_page_0_document_0_desktop.png"
+        "diffImage": "../bitmaps_test/20230217-113846/failed_diff_back_end_visual_regression_default_scp_page_0_document_0_desktop.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "../bitmaps_reference/back_end_visual_regression_default_scp_page_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20230217-090202/back_end_visual_regression_default_scp_page_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20230217-113846/back_end_visual_regression_default_scp_page_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "back_end_visual_regression_default_scp_page_0_document_1_tablet.png",
         "label": "scp_page",
@@ -257,20 +263,20 @@ report({
           "isSameDimensions": false,
           "dimensionDifference": {
             "width": 0,
-            "height": 15
+            "height": -16
           },
-          "rawMisMatchPercentage": 36.102862270574306,
-          "misMatchPercentage": "36.10",
-          "analysisTime": 1169
+          "rawMisMatchPercentage": 34.58871501904289,
+          "misMatchPercentage": "34.59",
+          "analysisTime": 1388
         },
-        "diffImage": "../bitmaps_test/20230217-090202/failed_diff_back_end_visual_regression_default_scp_page_0_document_1_tablet.png"
+        "diffImage": "../bitmaps_test/20230217-113846/failed_diff_back_end_visual_regression_default_scp_page_0_document_1_tablet.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "../bitmaps_reference/back_end_visual_regression_default_scp_page_0_document_2_mobile.png",
-        "test": "../bitmaps_test/20230217-090202/back_end_visual_regression_default_scp_page_0_document_2_mobile.png",
+        "test": "../bitmaps_test/20230217-113846/back_end_visual_regression_default_scp_page_0_document_2_mobile.png",
         "selector": "document",
         "fileName": "back_end_visual_regression_default_scp_page_0_document_2_mobile.png",
         "label": "scp_page",
@@ -282,13 +288,88 @@ report({
           "isSameDimensions": false,
           "dimensionDifference": {
             "width": 0,
-            "height": 247
+            "height": -40
           },
-          "rawMisMatchPercentage": 31.217901144387632,
-          "misMatchPercentage": "31.22",
-          "analysisTime": 676
+          "rawMisMatchPercentage": 30.335207574654042,
+          "misMatchPercentage": "30.34",
+          "analysisTime": 1116
         },
-        "diffImage": "../bitmaps_test/20230217-090202/failed_diff_back_end_visual_regression_default_scp_page_0_document_2_mobile.png"
+        "diffImage": "../bitmaps_test/20230217-113846/failed_diff_back_end_visual_regression_default_scp_page_0_document_2_mobile.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/back_end_visual_regression_default_news_article_page_0_document_0_desktop.png",
+        "test": "../bitmaps_test/20230217-113846/back_end_visual_regression_default_news_article_page_0_document_0_desktop.png",
+        "selector": "document",
+        "fileName": "back_end_visual_regression_default_news_article_page_0_document_0_desktop.png",
+        "label": "news_article_page",
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/templates/examples/news-item--backstop.html",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": false,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 37
+          },
+          "rawMisMatchPercentage": 6.647889967186726,
+          "misMatchPercentage": "6.65",
+          "analysisTime": 857
+        },
+        "diffImage": "../bitmaps_test/20230217-113846/failed_diff_back_end_visual_regression_default_news_article_page_0_document_0_desktop.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/back_end_visual_regression_default_news_article_page_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20230217-113846/back_end_visual_regression_default_news_article_page_0_document_1_tablet.png",
+        "selector": "document",
+        "fileName": "back_end_visual_regression_default_news_article_page_0_document_1_tablet.png",
+        "label": "news_article_page",
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/templates/examples/news-item--backstop.html",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": false,
+          "dimensionDifference": {
+            "width": 0,
+            "height": -136
+          },
+          "rawMisMatchPercentage": 13.080564170043822,
+          "misMatchPercentage": "13.08",
+          "analysisTime": 1171
+        },
+        "diffImage": "../bitmaps_test/20230217-113846/failed_diff_back_end_visual_regression_default_news_article_page_0_document_1_tablet.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/back_end_visual_regression_default_news_article_page_0_document_2_mobile.png",
+        "test": "../bitmaps_test/20230217-113846/back_end_visual_regression_default_news_article_page_0_document_2_mobile.png",
+        "selector": "document",
+        "fileName": "back_end_visual_regression_default_news_article_page_0_document_2_mobile.png",
+        "label": "news_article_page",
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/templates/examples/news-item--backstop.html",
+        "expect": 0,
+        "viewportLabel": "mobile",
+        "diff": {
+          "isSameDimensions": false,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 196
+          },
+          "rawMisMatchPercentage": 24.659346888478126,
+          "misMatchPercentage": "24.66",
+          "analysisTime": 999
+        },
+        "diffImage": "../bitmaps_test/20230217-113846/failed_diff_back_end_visual_regression_default_news_article_page_0_document_2_mobile.png"
       },
       "status": "fail"
     }

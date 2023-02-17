@@ -34,6 +34,10 @@
     {
       "label": "scp_page",
       "url": "http://localhost:3000/templates/examples/standard-content--backstop.html"
+    },
+    {
+      "label": "news_article_page",
+      "url": "http://localhost:3000/templates/examples/news-item--backstop.html"
     }
   ],
   "paths": {

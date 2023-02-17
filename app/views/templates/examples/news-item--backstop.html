@@ -1,0 +1,605 @@
+{% extends "example-template-rightbar.html" %}
+
+{% set page_url = 'blog-item' %}
+{% set page_title = 'News item' %}
+
+{% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
+
+{% block pageHeaderClass %}has-microhero{% endblock %}
+
+{% block breadcrumbs %}
+  {{ phaseBanner({
+    tag: "Beta",
+    description: '<p>This is a new website&nbsp;– your&nbsp;<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu">feedback</a>&nbsp;will help us to improve it.</p>
+                  <p>Donec <strong>sollicitudin</strong> molestie malesuada. <em>Praesent</em> sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada. Nulla quis lorem ut libero malesuada feugiat.</p>'
+  }) }}
+
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/",
+        text: "Home"
+      }
+    ],
+    href: "/templates",
+    text: "Visual regression"
+  }) }}
+{% endblock %}
+
+{% block headerStart %}
+  {{ banner({
+    customClass: "hee-banner--announcement",
+    HTML: "<h2>H2 - This is an Announcement. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</h2>
+             <h3>H3 - This is the alert text and&nbsp;<a href=\"https://www.hee.nhs.uk/\">this is the link</a></h3>
+             <p>Body&nbsp;- This is banner body copy&nbsp;<a href=\"/site/knowledge-staff\">this is the link</a></p>
+            "
+  }) }}
+{% endblock %}
+
+{% block banners %}
+  {{ banner({
+    customClass: "hee-banner--mourning",
+    HTML: "<h2>H2 - This is a Mourning. Nulla quis lorem ut libero malesuada feugiat.</h2>
+             <h3>H3 - This is the alert text and&nbsp;<a href=\"http://www.hee.nhs.uk/\">this is the link</a></h3>
+             <p>Body&nbsp;- This is banner body copy&nbsp;<a href=\"https://www.hee.nhs.uk/\">this is the link</a></p>
+            "
+  }) }}
+
+  {{ banner({
+    HTML: "<h2>H2 - This is an Alert. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</h2>
+             <h3>H3 - This is the alert text and&nbsp;<a href=\"https://www.hee.nhs.uk/\">this is the link</a></h3>
+             <p>Body&nbsp;- This is banner body copy&nbsp;<a href=\"https://www.hee.nhs.uk/\">this is the link</a></p>
+            "
+  }) }}
+{% endblock %}
+
+{% block pageHeader %}
+  {{ microHero({
+    "imgURL": "/images/young-child-using-tablet-device.jpg"
+  }) }}
+
+  <div class="nhsuk-width-container">
+    <h1>[VR] News article page</h1>
+  </div>
+{% endblock %}
+
+{% block pageContent %}
+  <p class="nhsuk-body-s nhsuk-u-secondary-text-color">
+
+
+    Published on 06 February 2023, by James Smith, John Doe
+  </p>
+  <p class="nhsuk-body-l">
+    Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.                        </p>
+
+  <div class="nhsuk-anchor-links hee-anchorlinks" data-headings="h2,h3">
+    <h2 data-anchorlinksignore="true" id="on7">On this page</h2>
+  </div>
+
+  <p>Pellentesque in ipsum id orci porta dapibus. Curabitur aliquet quam id dui posuere blandit. Proin eget tortor risus. Donec sollicitudin molestie malesuada.</p>
+
+  <p>Sed porttitor lectus nibh. Nulla porttitor accumsan tincidunt. Nulla quis lorem ut libero malesuada feugiat. Curabitur aliquet quam id dui posuere blandit.</p>
+
+  <p>Pellentesque in ipsum id orci porta dapibus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+
+  <p>Cras ultricies ligula sed magna dictum porta. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed magna dictum porta. Nulla porttitor accumsan tincidunt.</p>            <div class="nhsuk-blocklinks">
+  <div class="nhsuk-u-reading-width">
+    <h2 id="block8">Block Links 2 Column Example</h2>
+    <p>Block Links Example <u><strong>Description..</strong></u></p>                </div>
+  <ul class="nhsuk-list-blocklinks nhsuk-list-blocklinks--two-columns">
+    <li>
+      <a href="/site/knowledge-staff">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+          </path>
+        </svg>
+        Bradford
+      </a>
+    </li>
+    <li>
+      <a href="/site/knowledge-staff">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+          </path>
+        </svg>
+        Rotherham
+      </a>
+    </li>
+    <li>
+      <a href="/site/knowledge-staff">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+          </path>
+        </svg>
+        Harrowgate
+      </a>
+    </li>
+    <li>
+      <a href="/site/knowledge-staff">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+          </path>
+        </svg>
+        Scarborough
+      </a>
+    </li>
+    <li>
+      <a href="/site/knowledge-staff">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+          </path>
+        </svg>
+        Hull
+      </a>
+    </li>
+    <li>
+      <a href="/site/knowledge-staff">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+          </path>
+        </svg>
+        Sheffield
+      </a>
+    </li>
+    <li>
+      <a href="/site/knowledge-staff">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+          </path>
+        </svg>
+        Leeds
+      </a>
+    </li>
+    <li>
+      <a href="/site/about">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+          </path>
+        </svg>
+        Wakefield
+      </a>
+    </li>
+    <li>
+      <a href="/site/knowledge-staff">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+          </path>
+        </svg>
+        Northallerton
+      </a>
+    </li>
+    <li>
+      <a href="/site/knowledge-staff">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+          </path>
+        </svg>
+        York
+      </a>
+    </li>
+  </ul>
+</div>
+  <div class="nhsuk-u-reading-width">
+    <h2 id="[cg]9">[CG] Sed porttitor lectus</h2>
+  </div>
+  <p>Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
+    <br>
+    <br>Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+    <br>
+    <br>Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum porta.
+    <br>
+    <br>Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Nulla porttitor accumsan tincidunt.</p>
+  <ul class="nhsuk-grid-row nhsuk-card-group">
+
+    <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+      <div class="nhsuk-card nhsuk-card--clickable">
+        <div class="nhsuk-card__content">
+          <h3 class="nhsuk-card__heading nhsuk-heading-m" id="discovery10">
+            <a class="nhsuk-card__link" href="/">                                        Discovery and delivery infrastructure
+            </a>
+          </h3>
+          <p class="nhsuk-card__description">Duis aute irure dolor in reprehenderit in voluptate.</p>
+        </div>
+      </div>
+    </li>
+
+    <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+      <div class="nhsuk-card nhsuk-card--clickable">
+        <div class="nhsuk-card__content">
+          <h3 class="nhsuk-card__heading nhsuk-heading-m" id="open11">
+            <a class="nhsuk-card__link" href="/">                                        Open access and repositories
+            </a>
+          </h3>
+          <p class="nhsuk-card__description">Duis aute irure dolor in reprehenderit in voluptate.</p>
+        </div>
+      </div>
+    </li>
+
+    <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+      <div class="nhsuk-card nhsuk-card--clickable">
+        <img class="nhsuk-card__img" src="/images/placeholders/broadband-modem-in-a-modern-home.jpg" alt="">
+        <div class="nhsuk-card__content">
+          <h3 class="nhsuk-card__heading nhsuk-heading-m" id="resource12">
+            <a class="nhsuk-card__link" href="/">                                        Resource Discovery Groups
+            </a>
+          </h3>
+          <p class="nhsuk-card__description">Duis aute irure dolor in reprehenderit in voluptate.</p>
+        </div>
+      </div>
+    </li>
+
+    <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+      <div class="nhsuk-card nhsuk-card--clickable">
+        <div class="nhsuk-card__content">
+          <h3 class="nhsuk-card__heading nhsuk-heading-m" id="bulletins13">
+            <a class="nhsuk-card__link" href="/">                                        Bulletins
+            </a>
+          </h3>
+          <p class="nhsuk-card__description">Guidance on finding evidence sources from external sites.</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <figure class="nhsuk-image" style="width: 100%">
+    <img class="nhsuk-image__img" src="/images/placeholders/mountain.png" alt="Nulla porttitor accumsan tincidunt. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt">
+    <figcaption class="nhsuk-image__caption">
+      Image caption
+    </figcaption>
+  </figure>
+  <section class="nhsuk-page-content__section-one">
+    <div class="nhsuk-media">
+      <h2 id="test14">Test Anchor FM</h2>
+      <iframe src="https://anchor.fm/health-education-england/embed/episodes/Peer-to-Peer-conversation-with-GP-Elvis-Martinez-and-Physician-Associate-Eunice-Ashley-e161oaj" height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+      <div class="nhsuk-media__info">
+        <div class="nhsuk-media__transcript">
+          <a href="javascript:void(0);">
+            <span class="nhsuk-media__show-text">Show P2P transcript</span>
+            <span class="nhsuk-media__hide-text">Hide P2P transcript</span>
+          </a>
+          <div class="nhsuk-media__transcript-text">
+            <p>Sit sem aliquam tristique consectetur tincidunt proin molestie nisl rutrum felis lacus facilisis nec elit bibendum vivamus consectetur arcu elit leo varius a nunc adipiscing.</p>
+
+            <p>Rutrum mi suspendisse ipsum rutrum nisi tincidunt scelerisque gravida dolor amet nisl rutrum phasellus euismod magna amet maximus condimentum sit mi elementum purus vel rutrum.</p>
+
+            <p>Vivamus ex fusce interdum ex gravida erat ipsum commodo adipiscing quam magna ipsum interdum consectetur fusce pellentesque condimentum vivamus dolor eu sem cursus elit placerat.</p>
+
+            <p>Placerat vel nulla leo gravida magna gravida erat accumsan ac nisi phasellus sollicitudin sollicitudin placerat congue ac metus urna ipsum eros varius massa maximus diam.</p>
+
+            <p>Interdum a sem placerat ut felis elementum enim aliquam purus cursus urna euismod diam lorem morbi euismod dolor leo proin massa adipiscing erat ipsum felis.</p>
+
+            <p>Tortor facilisis enim ut leo accumsan pellentesque urna maximus felis hendrerit erat purus dolor ut sollicitudin leo eu scelerisque portaest metus massa erat placerat interdum.</p>                                </div>
+        </div>
+
+
+
+        <div class="nhsuk-media__reviews">
+          <p class="nhsuk-body-s">
+            Media last reviewed: 8 October 2021
+            <br>
+            Media next review due: 29 October 2021
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <p>This is <strong>reusable </strong>RichTextBlock</p>    <table role="table" class="nhsuk-table nhsuk-hee-table nhsuk-table-responsive nhsuk-hee-table--multicols">
+  <caption class="nhsuk-table__caption">I am a table</caption>
+  <thead role="rowgroup" class="nhsuk-table__head">
+  <tr role="row">
+    <th scope="col" role="columnheader">Age</th>
+    <th scope="col" role="columnheader">test</th>
+    <th scope="col" role="columnheader">How much</th>
+    <th scope="col" role="columnheader">How often</th>
+  </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+  <tr role="row" class="nhsuk-table__row">
+    <td role="cell" class="nhsuk-table__cell">
+      <span class="nhsuk-table-responsive__heading">Age</span>
+      7 to 9 years
+    </td>
+    <td role="cell" class="nhsuk-table__cell">
+      <span class="nhsuk-table-responsive__heading">test</span>
+      conten1
+    </td>
+    <td role="cell" class="nhsuk-table__cell">
+      <span class="nhsuk-table-responsive__heading">How much</span>
+      200mg
+    </td>
+    <td role="cell" class="nhsuk-table__cell">
+      <span class="nhsuk-table-responsive__heading">How often</span>
+      Max 3 times in 24 hours
+    </td>
+  </tr>
+  <tr role="row" class="nhsuk-table__row">
+    <td role="cell" class="nhsuk-table__cell">
+      <span class="nhsuk-table-responsive__heading">Age</span>
+      <a href="/site/patient-and-public-information/introduction">7 to 9 years</a>&nbsp;hello this is the test content
+    </td>
+    <td role="cell" class="nhsuk-table__cell">
+      <span class="nhsuk-table-responsive__heading">test</span>
+      <a href="/site/patient-and-public-information/introduction">7 to 9 years</a>&nbsp;hello this is the test content2 column
+    </td>
+    <td role="cell" class="nhsuk-table__cell">
+      <span class="nhsuk-table-responsive__heading">How much</span>
+      200mg
+    </td>
+    <td role="cell" class="nhsuk-table__cell">
+      <span class="nhsuk-table-responsive__heading">How often</span>
+      Max 3 times in 24 hours
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+  <div class="nhsuk-tabs">
+    <h2 class="nhsuk-tabs__title" id="tabs15">Tabs Example</h2>
+
+    <div class="nhsuk-tabs__desktop">
+      <div class="nhsuk-tabs__list" role="tablist" aria-label="Tabs Example" data-module="nhsuk-tabs">
+        <button class="nhsuk-tabs__list-item nhsuk-tabs__list-item--selected" role="tab" aria-selected="true" aria-controls="td2035126e-panel-0" id="td2035126e-tab-0" tabindex="0">
+          Tab Title One
+        </button>
+        <button class="nhsuk-tabs__list-item" role="tab" aria-selected="false" aria-controls="td2035126e-panel-1" id="td2035126e-tab-1" tabindex="0">
+          Tab Title Two
+        </button>
+        <button class="nhsuk-tabs__list-item" role="tab" aria-selected="false" aria-controls="td2035126e-panel-2" id="td2035126e-tab-2" tabindex="0">
+          Tab Title Three
+        </button>
+      </div>
+      <div class="nhsuk-tabs__panel" id="td2035126e-panel-0" role="tabpanel" tabindex="0" aria-labelledby="td2035126e-tab-0">
+        <p>Consectetur elementum amet tristique massa proin erat hendrerit eros phasellus a diam mi sit phasellus amet tortor purus leo sed amet tincidunt pellentesque quisque nisi.</p>
+
+        <p>Ex portaest lacus vel dolor sit molestie scelerisque maecenas a quam leo nulla ac massa eros interdum nec rutrum leo orci sollicitudin diam placerat quam.</p>                        </div>
+      <div class="nhsuk-tabs__panel" id="td2035126e-panel-1" role="tabpanel" tabindex="0" aria-labelledby="td2035126e-tab-1" hidden="">
+        <p>Id lacus elit interdum elit maecenas quisque quisque arcu massa varius accumsan scelerisque et leo quis morbi adipiscing fusce nulla elementum placerat commodo facilisis lacus.</p>
+
+        <p>Urna euismod commodo proin nec lacus quam facilisis felis phasellus orci ac a sem nunc condimentum rutrum sem id quam sed lorem suspendisse varius maecenas.</p>                        </div>
+      <div class="nhsuk-tabs__panel" id="td2035126e-panel-2" role="tabpanel" tabindex="0" aria-labelledby="td2035126e-tab-2" hidden="">
+        <p>Felis suspendisse ex enim rutrum ex sit morbi elementum rutrum scelerisque suspendisse quisque leo amet nunc sem commodo amet a accumsan morbi tortor sem urna.</p>
+
+        <p>Maecenas eros leo leo lorem pellentesque rutrum varius suspendisse eget euismod eget vivamus massa cursus a enim tempus elit lacus tincidunt nec tempus portaest nec.</p>                        </div>
+    </div>
+
+    <div class="nhsuk-tabs__mobile">
+      <div class="nhsuk-tabs__list" role="tablist" aria-label="Tabs Example" data-module="nhsuk-tabs">
+        <button class="nhsuk-tabs__list-item" role="tab" aria-selected="true" aria-controls="tm2035126e-panel-0" id="tm2035126e-tab-0" tabindex="0">
+          Tab Title One
+        </button>
+        <div class="nhsuk-tabs__panel" id="tm2035126e-panel-0" role="tabpanel" tabindex="0" aria-labelledby="tm2035126e-tab-0" hidden="">
+          <p>Consectetur elementum amet tristique massa proin erat hendrerit eros phasellus a diam mi sit phasellus amet tortor purus leo sed amet tincidunt pellentesque quisque nisi.</p>
+
+          <p>Ex portaest lacus vel dolor sit molestie scelerisque maecenas a quam leo nulla ac massa eros interdum nec rutrum leo orci sollicitudin diam placerat quam.</p>                            </div>
+        <button class="nhsuk-tabs__list-item" role="tab" aria-selected="false" aria-controls="tm2035126e-panel-1" id="tm2035126e-tab-1" tabindex="0">
+          Tab Title Two
+        </button>
+        <div class="nhsuk-tabs__panel" id="tm2035126e-panel-1" role="tabpanel" tabindex="0" aria-labelledby="tm2035126e-tab-1" hidden="">
+          <p>Id lacus elit interdum elit maecenas quisque quisque arcu massa varius accumsan scelerisque et leo quis morbi adipiscing fusce nulla elementum placerat commodo facilisis lacus.</p>
+
+          <p>Urna euismod commodo proin nec lacus quam facilisis felis phasellus orci ac a sem nunc condimentum rutrum sem id quam sed lorem suspendisse varius maecenas.</p>                            </div>
+        <button class="nhsuk-tabs__list-item" role="tab" aria-selected="false" aria-controls="tm2035126e-panel-2" id="tm2035126e-tab-2" tabindex="0">
+          Tab Title Three
+        </button>
+        <div class="nhsuk-tabs__panel" id="tm2035126e-panel-2" role="tabpanel" tabindex="0" aria-labelledby="tm2035126e-tab-2" hidden="">
+          <p>Felis suspendisse ex enim rutrum ex sit morbi elementum rutrum scelerisque suspendisse quisque leo amet nunc sem commodo amet a accumsan morbi tortor sem urna.</p>
+
+          <p>Maecenas eros leo leo lorem pellentesque rutrum varius suspendisse eget euismod eget vivamus massa cursus a enim tempus elit lacus tincidunt nec tempus portaest nec.</p>                            </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="hee-card--author__container">
+    <div class="hee-card hee-card--author">
+
+      <div class="hee-card--author__header">
+        <div class="hee-card__image has-bg">
+          <div class="hee-card__initials" style="background-image: url('/images/placeholders/mountain.png')">
+            <span>JS</span>
+          </div>
+        </div>
+
+        <div class="hee-card--author__details">
+          <h2 data-anchorlinksignore="true" class="hee-card__name" aria-label="Name" id="mr16"> Mr James Smith </h2>
+
+          <span class="hee-card__pronouns" aria-label="Pronouns">he/him</span>
+
+          <h3 class="nhsuk-heading-m hee-card__jobtitle" aria-label="Job Title" id="developer17">Developer</h3>
+
+          <p class="hee-card__department" aria-label="Department">Development</p>
+
+        </div>
+      </div>
+
+      <ul class="hee-card__contact">
+
+
+
+        <li class="hee-card__twitter hee-card__contact__item" aria-label="Twitter">
+          <a href="https://twitter.com/itsleepeart" title="Opens Twitter">@itsleepeart</a>
+        </li>
+      </ul>
+
+
+      <p class="hee-card__bio" aria-label="Bio">This is the bio test content for author. Nulla porttitor accumsan tincidunt. Sed porttito lectus nibh. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt. Sed portti</p>
+    </div>
+    <div class="hee-card hee-card--author">
+
+      <div class="hee-card--author__header">
+        <div class="hee-card__image">
+          <div class="hee-card__initials">
+            <span>JD</span>
+          </div>
+        </div>
+
+        <div class="hee-card--author__details">
+          <h2 data-anchorlinksignore="true" class="hee-card__name" aria-label="Name" id="prof18"> Prof John Doe </h2>
+
+          <span class="hee-card__pronouns" aria-label="Pronouns">he/him</span>
+
+          <h3 class="nhsuk-heading-m hee-card__jobtitle" aria-label="Job Title" id="head19">Head of Department</h3>
+
+          <p class="hee-card__department" aria-label="Department">Development</p>
+
+          <p class="hee-card__organisation" aria-label="Organisation">HEE Dental Organisation</p>
+        </div>
+      </div>
+
+      <ul class="hee-card__contact">
+
+        <li class="hee-card__website hee-card__contact__item" aria-label="Website">
+          <a href="http://hee.dental" title="Opens website">http://hee.dental</a>
+        </li>
+
+        <li class="hee-card__linkedin hee-card__contact__item" aria-label="Linkedin">
+          <a href="https://www.linkedin.com/in/john-doeds" title="Opens LinkedIn">/john-doeds</a>
+        </li>
+
+        <li class="hee-card__twitter hee-card__contact__item" aria-label="Twitter">
+          <a href="https://twitter.com/mypage" title="Opens Twitter">@mypage</a>
+        </li>
+      </ul>
+
+
+      <p class="hee-card__bio" aria-label="Bio">Nulla porttitor accumsan tincidunt. Sed porttito lectus nibh. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt. Sed portti . Nulla porttitor accumsan tinc</p>
+    </div>
+  </div>
+{% endblock %}
+
+{% block pageRightbar %}
+  <div class="nhsuk-contact nhsuk-contact__card">
+    <div class="nhsuk-contact__content">
+      <h3 data-anchorlinksignore="true" class="nhsuk-contact__name" aria-label="Name" id="development20">Development</h3>
+      <p aria-label="Organisation">
+        HEE Development Organisation
+      </p>
+
+      <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+
+      <div class="nhsuk-contact__secondary-info">
+        <p aria-label="Telephone">
+          <a href="tel:+441138871725" title="Opens call">+44 113 887 1725</a>
+
+        </p>
+
+        <p aria-label="Email">
+          <a href="mailto:development@gmail.com" title="Opens email">development@gmail.com</a>
+        </p>
+
+        <p aria-label="Website">
+          <a href="http://hee.development.org">
+            http://hee.development.org
+          </a>
+        </p>
+
+        <p aria-label="Address">Address Line 1
+          <br>Address Line 2
+          <br>City
+          <br>Postcode</p>
+
+        <p class="nhsuk-u-secondary-text-color" aria-label="Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque ac pellentesque in sapien.</p>
+      </div>
+    </div>
+  </div>
+  <div class="nhsuk-card nhsuk-card--clickable">
+    <div class="nhsuk-card__content">
+      <h3 class="nhsuk-card__heading" id="apply21">
+        Apply for DC3T
+      </h3>
+      <p class="nhsuk-card__description"></p>
+      <a class="nhsuk-button" href="https://www.oriel.nhs.uk/Web/" draggable="false">
+        Apply in Oriel
+      </a>
+    </div>
+  </div>
+  <div class="nhsuk-card">
+    <div class="nhsuk-card__content">
+      <h3 class="nhsuk-card__heading" id="resources22">Resources</h3>
+
+      <ul class="nhsuk-related-links-card__list">
+
+        <li>
+          <a class="nhsuk-related-links-card__link" href="https://kss.hee.nhs.uk/">
+            London and KSS Support Portal
+          </a>
+        </li>
+
+        <li>
+          <a class="nhsuk-related-links-card__link" href="https://lonkssfoundation.hee.nhs.uk/gmc">
+            General Medical Council (GMC): Statement on LTFT
+          </a>
+        </li>
+
+        <li>
+          <a class="nhsuk-related-links-card__link" href="https://www.copmed.org.uk/gold-guide-8th-edition/">
+            Gold Guide 8th Edition
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="nhsuk-card">
+    <div class="nhsuk-card__content">
+      <h3 class="nhsuk-card__heading" id="annual23">Annual reports &amp; accounts</h3>
+
+      <ul class="nhsuk-resources__list">
+
+
+        <li>
+          <a class="nhsuk-resources__link" href="/site/binaries/content/documents/lks/common/file-links-cards/annual-reports-and-accounts-2020-21/annual-reports-and-accounts-2020-21/hee%3AfileLinks/hee%3Afile?forceDownload=true" title="Health Education England annual report and accounts 2020 to 2021">
+            Health Education England annual report and accounts 2020 to 2021
+            <span class="nhsuk-resources__tag nhsuk-resources__pdf">PDF</span><span class="nhsuk-resources__docSize">3,688.125kB</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="nhsuk-card">
+    <div class="nhsuk-card__content">
+      <h3 class="nhsuk-card__heading" id="[ql]24">[QL] Related links</h3>
+
+      <ul class="nhsuk-related-links-card__list">
+        <li>
+          <a class="nhsuk-related-links-card__link" href="/site/copyright">                                    Copyright [internal]
+          </a>
+        </li>
+        <li>
+          <a class="nhsuk-related-links-card__link" href="https://nhs.uk">                                    NHS [external]
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+{% endblock %}
+
+{% block pageFooter %}
+  <div class="nhsuk-width-container">
+    {{ reviewDate({
+      "lastReview": "6 February 2023",
+      "nextReview": "28 February 2023"
+    }) }}
+  </div>
+{% endblock %}
+
+{% block footer %}
+  <footer>
+    <div class="nhsuk-footer has-edit-button">
+      <div class="nhsuk-width-container">
+        <ul class="nhsuk-footer__list nhsuk-footer__list--three-columns">
+          <li class="nhsuk-footer__list-item">
+            <a class="nhsuk-footer__list-item-link" href="/site/">Blog</a>
+          </li>
+          <li class="nhsuk-footer__list-item">
+            <a class="nhsuk-footer__list-item-link" href="/site/">About us</a>
+          </li>
+          <li class="nhsuk-footer__list-item">
+            <a class="nhsuk-footer__list-item-link" href="/site/">Contact us</a>
+          </li>
+          <li class="nhsuk-footer__list-item">
+            <a class="nhsuk-footer__list-item-link"
+               href="/site/cookies">Cookies</a>
+          </li>
+        </ul>
+        <p class="nhsuk-footer__copyright">© Crown copyright</p></div>
+    </div>
+  </footer>
+{% endblock %}
