@@ -44,7 +44,9 @@
     }
   }
 
-  aside.page__rightbar {
+  .page__rightbar {
+    margin-bottom: 24px;
+
     .nhsuk-card:last-of-type, .nhsuk-contact:last-of-type {
       margin-bottom: 0;
     }
