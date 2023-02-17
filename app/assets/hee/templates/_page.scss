@@ -37,6 +37,10 @@ html {
     }
 }
 
+.page__feature {
+    @include nhsuk-responsive-margin(8, 'top');
+}
+
 @import '../templates/fullwidth';
 @import '../templates/leftbar';
 @import '../templates/rightbar';

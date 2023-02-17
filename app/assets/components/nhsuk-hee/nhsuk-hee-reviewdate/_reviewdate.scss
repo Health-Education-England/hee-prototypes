@@ -1,2 +1,3 @@
-.nhsuk-hee-reviewdate {
+.nhsuk-review-date {
+  @include nhsuk-responsive-margin(2, 'top');
 }
