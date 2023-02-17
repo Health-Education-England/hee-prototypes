@@ -30,6 +30,10 @@
     {
       "label": "mini_hub_page",
       "url": "http://localhost:3000/templates/examples/mini-hub-item--backstop.html"
+    },
+    {
+      "label": "scp_page",
+      "url": "http://localhost:3000/templates/examples/standard-content--backstop.html"
     }
   ],
   "paths": {
