@@ -41,6 +41,18 @@ html {
                 width: 100%;
             }
         }
+
+        .nhsuk-hero {
+            margin-left: -16px;
+            margin-right: -16px;
+            width: auto;
+
+            @include mq($from: desktop) {
+                margin-left: 0;
+                margin-right: 0;
+                width: 100%;
+            }
+        }
     }
 }
 

@@ -11,6 +11,10 @@
 
 .nhsuk-hero--image-description {
   margin-bottom: 80px;
+
+  @include mq($from: tablet) {
+    margin-bottom: 100px;
+  }
 }
 
 .nhsuk-hee-hero {
