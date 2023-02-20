@@ -42,7 +42,12 @@
     {
       "label": "scp_newsletter_signup_page",
       "url": "http://localhost:3000/templates/examples/standard-content-newsletter--backstop.html"
+    },
+    {
+      "label": "scp_cookies_page",
+      "url": "http://localhost:3000/templates/examples/standard-content-cookies--backstop.html"
     }
+
   ],
   "paths": {
     "bitmaps_reference": "tests/backstop/backstop_data/bitmaps_reference",

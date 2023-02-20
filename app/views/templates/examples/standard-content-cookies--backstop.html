@@ -1,0 +1,163 @@
+{% extends "example-template-rightbar.html" %}
+
+{% set page_url = 'blog-item' %}
+{% set page_title = 'Standard content cookies -- Backstop' %}
+
+{% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
+
+{% block breadcrumbs %}
+  {{ phaseBanner({
+    tag: "Beta",
+    description: '<p>This is a new website&nbsp;– your&nbsp;<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu">feedback</a>&nbsp;will help us to improve it.</p>
+                  <p>Donec <strong>sollicitudin</strong> molestie malesuada. <em>Praesent</em> sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada. Nulla quis lorem ut libero malesuada feugiat.</p>'
+  }) }}
+
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/",
+        text: "Home"
+      }
+    ],
+    href: "/templates",
+    text: "Visual regression"
+  }) }}
+{% endblock %}
+
+{% block headerStart %}
+  {{ banner({
+    customClass: "hee-banner--announcement",
+    HTML: "<h2>H2 - This is an Announcement. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</h2>
+             <h3>H3 - This is the alert text and&nbsp;<a href=\"https://www.hee.nhs.uk/\">this is the link</a></h3>
+             <p>Body&nbsp;- This is banner body copy&nbsp;<a href=\"/site/knowledge-staff\">this is the link</a></p>
+            "
+  }) }}
+{% endblock %}
+
+{% block banners %}
+  {{ banner({
+    customClass: "hee-banner--mourning",
+    HTML: "<h2>H2 - This is a Mourning. Nulla quis lorem ut libero malesuada feugiat.</h2>
+             <h3>H3 - This is the alert text and&nbsp;<a href=\"http://www.hee.nhs.uk/\">this is the link</a></h3>
+             <p>Body&nbsp;- This is banner body copy&nbsp;<a href=\"https://www.hee.nhs.uk/\">this is the link</a></p>
+            "
+  }) }}
+
+  {{ banner({
+    HTML: "<h2>H2 - This is an Alert. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</h2>
+             <h3>H3 - This is the alert text and&nbsp;<a href=\"https://www.hee.nhs.uk/\">this is the link</a></h3>
+             <p>Body&nbsp;- This is banner body copy&nbsp;<a href=\"https://www.hee.nhs.uk/\">this is the link</a></p>
+            "
+  }) }}
+{% endblock %}
+
+{% block pageHeader %}
+  <div class="nhsuk-width-container">
+    <h1>[VR] [SCP] Cookies page</h1>
+  </div>
+{% endblock %}
+
+{% block pageContent %}
+  <p class="nhsuk-lede-text">Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+
+  <p>This includes small files known as cookies. We cannot use them to identify you personally.&nbsp;</p>
+
+  <p>We use cookies to:</p>
+
+  <ul>
+    <li>recognise your device so you do not have to give the same information several times during one task</li>
+    <li>keep any preferences you've chosen so they're the same when you return to our website</li>
+    <li>make sure you do not have to keep logging in when you've already done so</li>
+    <li>see how many people are using our services</li>
+    <li>measure our website's speed</li>
+    <li>analyse anonymised data to understand how people use our services</li>
+  </ul>
+
+  <p>We use this information to improve services for you.</p><h3>Which cookies we use</h3>
+
+  <h4>SERVERID</h4>
+
+  <p>This is a Bloomreach Experience Manager cookie. It's an essential cookie that's required for the website to function. It expires after 30 minutes.</p>
+
+  <h4>_hjAbsoluteSessionInProgress</h4>
+
+  <p>This is a Hotjar cookie used to count how many times different users visit the site. It assigns the users an ID, so the user does not get registered twice.&nbsp;It expires after 30 minutes.</p>
+
+  <h4>_hjFirstSeen</h4>
+
+  <p>This is a Hotjar cookie that tells us if this is the first time you've visited the site. It expires at the&nbsp;end of your session.</p>
+
+  <h4>_hjid</h4>
+
+  <p>This is a Hotjar cookie that's set when the user first lands on a page with the Hotjar script. It creates a unique ID for your session to help tell us how you use our site. It expires after&nbsp;1 year.</p>
+
+  <h4>_hjIncludedInPageviewSample</h4>
+
+  <p>This cookie lets Hotjar know if you're part of a group of users we're sampling for information about how the site is being used.&nbsp; It expires after 30 minutes.</p>
+
+  <h4>_hjSession_944417</h4>
+
+  <p>This is a Hotjar cookie that holds the current session data. This makes sure that subsequent requests within the session window will be attributed to the same Hotjar session.&nbsp;It expires after 30 minutes.</p>
+
+  <h4>_hjSessionUser_944417</h4>
+
+  <p>This is a Hotjar cookie that's set when a user first lands on a page with the Hotjar script. It's used to persist the Hotjar User ID, unique to that site on the browser. This ensures that behavior in subsequent visits to the same site will be attributed to the same user ID. It expires after&nbsp;1 year.</p>
+
+  <h4>_hjTLDTest</h4>
+
+  <p>When the Hotjar script executes we try to determine the most generic cookie path we should use, instead of the page hostname. This is done so that cookies can be shared across subdomains (where applicable). To determine this, we try to store the cookie for different URL substring alternatives until it fails. After this check, the cookie is removed. It expires at the&nbsp;end of your session.</p>
+
+  <h4>_ga</h4>
+
+  <p>This is a Google Analytics cookie used to tell users apart. This then gives us data about how people are using the site.&nbsp;It expires after 2 years.</p>
+
+  <h4>_ga_#</h4>
+
+  <p>This is a Google Analytics cookie used to collect data on the number of times a user has visited the site, as well as dates for the first and most recent visit.&nbsp;It expires after 2 years.</p>
+
+  <h4>Other cookies</h4>
+
+  <p>These are the cookies we use on the homepage. Other cookies from Hotjar and Google Analytics may be used on other parts of the site. For full descriptions of these cookies, visit <a rel="noopener noreferrer" href="https://help.hotjar.com/hc/en-us/articles/115011789248-Hotjar-Cookie-Information">Hotjar</a> and <a rel="noopener noreferrer" href="https://developers.google.com/analytics/devguides/collection/gajs/cookie-usage#gtagjs_google_analytics_4_-_cookie_usage%5D">Google Analytics</a>.</p>
+  <div class="nhsuk__cookieStatus">
+    <h2>
+      You are currently opted <span class="nhsuk__cookiesIn" style="display: none;">in to</span><span class="nhsuk__cookiesOut" style="display: inline-block;">out of</span> using additional cookies.    </h2>
+    <button id="acceptCookies" class="nhsuk-button nhsuk__cookiesOut" style="display: inline-block;">Accept additional cookies</button>
+    <button id="rejectCookies" class="nhsuk-button nhsuk__cookiesIn" style="display: none;">Reject additional cookies</button>
+  </div>
+{% endblock %}
+
+{% block pageRightbar %}
+{% endblock %}
+
+{% block pageFooter %}
+  <div class="nhsuk-width-container">
+    {{ reviewDate({
+      "lastReview": "6 February 2023",
+      "nextReview": "28 February 2023"
+    }) }}
+  </div>
+{% endblock %}
+
+{% block footer %}
+  <footer>
+    <div class="nhsuk-footer has-edit-button">
+      <div class="nhsuk-width-container">
+        <ul class="nhsuk-footer__list nhsuk-footer__list--three-columns">
+          <li class="nhsuk-footer__list-item">
+            <a class="nhsuk-footer__list-item-link" href="/site/">Blog</a>
+          </li>
+          <li class="nhsuk-footer__list-item">
+            <a class="nhsuk-footer__list-item-link" href="/site/">About us</a>
+          </li>
+          <li class="nhsuk-footer__list-item">
+            <a class="nhsuk-footer__list-item-link" href="/site/">Contact us</a>
+          </li>
+          <li class="nhsuk-footer__list-item">
+            <a class="nhsuk-footer__list-item-link"
+               href="/site/cookies">Cookies</a>
+          </li>
+        </ul>
+        <p class="nhsuk-footer__copyright">© Crown copyright</p></div>
+    </div>
+  </footer>
+{% endblock %}
