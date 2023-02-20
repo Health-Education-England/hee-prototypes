@@ -20,6 +20,10 @@
   ],
   "scenarios": [
     {
+      "label": "home_page",
+      "url": "http://localhost:3000/templates/examples/homepage--backstop.html"
+    },
+    {
       "label": "landing_page",
       "url": "http://localhost:3000/templates/examples/landing-page--backstop.html"
     },
