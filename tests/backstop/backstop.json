@@ -38,6 +38,10 @@
     {
       "label": "news_article_page",
       "url": "http://localhost:3000/templates/examples/news-item--backstop.html"
+    },
+    {
+      "label": "scp_newsletter_signup_page",
+      "url": "http://localhost:3000/templates/examples/standard-content-newsletter--backstop.html"
     }
   ],
   "paths": {
