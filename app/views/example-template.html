@@ -325,10 +325,10 @@
         {# Last updated... Tags... Page created... #}
       {% endblock %}
     </div>
-    <section class="page__feature">
-      {% block pageFeature %}
-      {% endblock %}
-    </section>
+    {% block pageFeature %}
+      <section class="page__feature">
+      </section>
+    {% endblock %}
   </main>
 {% endblock %}
 
