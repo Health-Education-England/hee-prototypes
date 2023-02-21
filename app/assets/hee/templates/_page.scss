@@ -18,7 +18,7 @@ html {
 }
 
 .page {
-    padding: 0 16px;
+    padding: 0;
 
     @include mq($from: desktop) {
         padding: 0;
@@ -28,9 +28,8 @@ html {
         padding-top: 0;
 
         .hee-microhero {
-            margin: 0 -16px;
             margin-bottom: nhsuk-spacing(6);
-            width: auto;
+            width: 100%;
 
             @include mq($from: tablet) {
                 margin-bottom: nhsuk-spacing(7);
@@ -38,19 +37,6 @@ html {
 
             @include mq($from: desktop) {
                 margin: 0 0 nhsuk-spacing(7) 0;
-                width: 100%;
-            }
-        }
-
-        .nhsuk-hero {
-            margin-left: -16px;
-            margin-right: -16px;
-            width: auto;
-
-            @include mq($from: desktop) {
-                margin-left: 0;
-                margin-right: 0;
-                width: 100%;
             }
         }
     }
