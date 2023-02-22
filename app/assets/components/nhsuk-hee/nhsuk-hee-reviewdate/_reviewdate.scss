@@ -1,3 +1,14 @@
 .nhsuk-review-date {
   @include nhsuk-responsive-margin(2, 'top');
 }
+
+.page__feature {
+  .nhsuk-review-date {
+    margin-top: -20px;
+    margin-bottom: 48px;
+
+    @include mq($from: desktop) {
+      margin-top: -60px;
+    }
+  }
+}
