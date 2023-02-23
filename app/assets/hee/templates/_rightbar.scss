@@ -15,7 +15,7 @@
   .page__layout {
       @include hee-flexgrid-row;
       .page__rightbar {
-          @include hee-flexgrid-col(3.75,$col-offset:0.5);
+          @include hee-flexgrid-col(3.75,$col-offset:0.4);
 
           .hee-sidebarlinks,
           .hee-sidebarimage,
@@ -26,7 +26,7 @@
           }
       }
       .page__main {
-          @include hee-flexgrid-col(7.75);
+          @include hee-flexgrid-col(7.85);
       }
   }
 
