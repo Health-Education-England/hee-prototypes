@@ -52,22 +52,26 @@
   <h3 id="heading2">Pellentesque sit amet nulla</h3>
   <p>Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus, semper ligula quis, eleifend ante. Pellentesque non malesuada tellus. Donec porta faucibus lacus at elementum. Pellentesque tempus magna vulputate felis ultricies porta. Cras condimentum imperdiet lobortis. Suspendisse aliquam nisl ut augue ultrices, sit amet tristique enim placerat. Nunc augue sapien, rhoncus scelerisque urna quis, posuere semper enim.</p>
 
-{{ authorCard({
-  title: "Dr",
-  name: "Jo Blogs", 
-  initials: "JB",
-  pronouns: "She/her",
-  jobRole: "Department Head",
-  department: "HEE",
-  organisation: "NHS UK",
-  email: "jo.bloggs@hee.co.uk",
-  website: "http://nhs.uk/",
-  twitter: "nhsengland",
-  linkedIn: "nhs",
-  bio: "Lorem ipsum dolor sit amet",
-  authorURL: "/author/jo-blogs"
-}) }}
+  {{ authorCard({
+    title: "Dr",
+    name: "Jo Blogs",
+    initials: "JB",
+    pronouns: "She/her",
+    jobRole: "Department Head",
+    department: "HEE",
+    organisation: "NHS UK",
+    email: "jo.bloggs@hee.co.uk",
+    website: "http://nhs.uk/",
+    twitter: "nhsengland",
+    linkedIn: "nhs",
+    bio: "Lorem ipsum dolor sit amet",
+    authorURL: "/author/jo-blogs"
+  }) }}
 
+  {{ reviewDate({
+    "lastReview": "12 February 2017",
+    "nextReview": "1 February 2020"
+  }) }}
 {% endblock %}
 
 {% block pageRightbar %}
@@ -88,15 +92,6 @@
       }
     ]
   })}}
-{% endblock %}
-
-{% block pageFooter %}
-  <div class="nhsuk-width-container">
-    {{ reviewDate({
-      "lastReview": "12 February 2017",
-      "nextReview": "1 February 2020"
-    }) }}
-  </div>
 {% endblock %}
 
 {% block pageFeature %}
