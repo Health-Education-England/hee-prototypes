@@ -6,7 +6,7 @@
       <br />
       <h2>Details block examples</h2>
 
-      {% set content %}
+      {% set insetContent %}
         {{ insetText({
           HTML: "<p>You can report any suspected side effect to the <a href=\"https://yellowcard.mhra.gov.uk/\" title=\"External website\">UK safety scheme</a>.</p>"
         }) }}
@@ -14,10 +14,10 @@
 
       {{ details({
         text: "Click here to view Inset example",
-        HTML: content
+        HTML: insetContent
       }) }}
 
-      {% set content %}
+      {% set imageContent %}
         {{ image({
           src: "https://digital-transformation.hee.nhs.uk/binaries/content/gallery/digital-transformation/blogs/vr-headsets.jpg",
           alt: "Nulla vitae est vel metus aliquam pharetra",
@@ -27,10 +27,10 @@
 
       {{ details({
         text: "Click here to view Image example",
-        HTML: content
+        HTML: imageContent
       }) }}
 
-      {% set content %}
+      {% set mediaContent %}
         {{ media({
           title: "Pellentesque sit amet nulla",
           description: "Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus.",
@@ -44,7 +44,7 @@
 
       {{ details({
         text: "Click here to view Media example",
-        HTML: content
+        HTML: mediaContent
       }) }}
 
       {% set content %}
@@ -75,8 +75,6 @@
 
       <hr />
 
-      <h2>Tabs examples</h2>
-
       {% set textContent %}
         <p class="nhsuk-body-l">Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi.</p>
         <h2>Donec pulvinar sollicitudin</h2>
@@ -101,6 +99,9 @@
             },
             {
               text: "How often"
+            },
+            {
+              text: "Extra long column"
             }
           ],
           rows: [
@@ -115,7 +116,11 @@
               },
               {
                 header: "How often?",
-                text: "Max 3 times in 24 hours"
+                text: "Max 3 times in 24 hoursMax 3 times in 24 hoursMax 3 times in 24 hoursMax 3 times in 24 hoursMax 3 times in 24 hours"
+              },
+              {
+                header: "Extra long column",
+                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed mattis odio. Mauris gravida ipsum sit amet enim volutpat, accumsan dictum quam ornare. "
               }
             ],
             [
@@ -130,6 +135,10 @@
               {
                 header: "How often?",
                 text: "Max 3 times in 24 hours"
+              },
+              {
+                header: "Extra long column",
+                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed mattis odio. Mauris gravida ipsum sit amet enim volutpat, accumsan dictum quam ornare. "
               }
             ],
             [
@@ -144,6 +153,10 @@
               {
                 header: "How often?",
                 text: "Max 3 times in 24 hours"
+              },
+              {
+                header: "Extra long column",
+                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed mattis odio. Mauris gravida ipsum sit amet enim volutpat, accumsan dictum quam ornare. "
               }
             ]
           ]
@@ -152,7 +165,7 @@
 
       {{ tabs({
         uniqueId: "tabsone",
-        title: "Tab component",
+        title: "Tabs examples",
         items: [
           {
             label: "Rich Text example",
@@ -173,6 +186,46 @@
             }
           }
         ]
+      }) }}
+
+      <hr />
+
+      <h2>Expander examples</h2>
+
+      {{ details({
+        classes: "nhsuk-expander",
+        text: "Click here to view Inset example",
+        HTML: insetContent
+      }) }}
+
+      {{ details({
+        classes: "nhsuk-expander",
+        text: "Click here to view Image example",
+        HTML: imageContent
+      }) }}
+
+      {{ details({
+        classes: "nhsuk-expander",
+        text: "Click here to view Media example",
+        HTML: mediaContent
+      }) }}
+
+      {{ details({
+        classes: "nhsuk-expander",
+        text: "Click here to view Rich Text example",
+        HTML: textContent
+      }) }}
+
+      {{ details({
+        classes: "nhsuk-expander",
+        text: "Click here to view Table example",
+        HTML: tableContent
+      }) }}
+
+      {{ details({
+        classes: "nhsuk-expander",
+        text: "Click here to view Action Link example",
+        HTML: actionLinkContent
       }) }}
 
     </div>
