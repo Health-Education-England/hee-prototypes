@@ -127,37 +127,10 @@
     }) }}
   </div>
 
-  <div class="nhsuk-contact">
-    <div class="nhsuk-contact__content">
-
-
-      <div class="nhsuk-contact__img-container">
-        SG
-      </div>
-
-      <h2 data-anchorlinksignore="true" class="nhsuk-contact__name" aria-label="Name"> Simon Gaffney </h2>
-
-
-      <h3 class="nhsuk-contact__job-title" aria-label="Job Title" id="senior5">Senior Physiotherapist and AHP Specialist in Digital Health</h3>
-
-
-      <p aria-label="Organisation">
-        Newcastle upon Tyne Hospitals NHS Foundation Trust
-      </p>
-
-      <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
-
-      <div class="nhsuk-contact__secondary-info">
-
-
-
-
-
-
-        <p class="nhsuk-u-secondary-text-color" aria-label="Description">Simon is a Senior Physiotherapist and AHP Specialist in Digital Health at Newcastle upon Tyne Hospitals NHS Foundation Trust. In his digital health capacity, Simon works as part of a clinical multi-disciplinary team alongside IT and project teams to promote and develop the digital maturity of the Trust. His work spans from the optimisation of electronic documentation to supporting clinical teams in digital innovation.</p>
-      </div>
-    </div>
-  </div>
+  {{ reviewDate({
+    "lastReview": "12 February 2017",
+    "nextReview": "1 February 2020"
+  }) }}
 {% endblock %}
 
 {% block pageRightbar %}
@@ -198,16 +171,6 @@
 
       </div>
     </div>
-  </div>
-
-{% endblock %}
-
-{% block pageFooter %}
-  <div class="nhsuk-width-container">
-    {{ reviewDate({
-      "lastReview": "12 February 2017",
-      "nextReview": "1 February 2020"
-    }) }}
   </div>
 {% endblock %}
 

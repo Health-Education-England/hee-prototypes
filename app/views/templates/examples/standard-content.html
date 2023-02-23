@@ -92,6 +92,11 @@
     ]
   }) }}
 
+  {{ reviewDate({
+    "lastReview": "12 February 2017",
+    "nextReview": "1 February 2020"
+  }) }}
+
 {% endblock %}
 
 {% block pageRightbar %}
@@ -158,16 +163,6 @@
       ]
     })
   }}
-
-{% endblock %}
-
-{% block pageFooter %}
-  <div class="nhsuk-width-container">
-    {{ reviewDate({
-      "lastReview": "12 February 2017",
-      "nextReview": "1 February 2020"
-    }) }}
-  </div>
 {% endblock %}
 
 {% block pageFeature %}
