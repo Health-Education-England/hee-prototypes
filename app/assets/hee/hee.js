@@ -3,8 +3,8 @@ import Cookies from './blocks/scaffolding/cookies/cookies';
 import SubNav from './blocks/scaffolding/header/navigation/subnav';
 
 // HEE Components
-import AnchorLinks from '../components/hee/hee-anchorlinks/anchorlinks';
-import TableContents from '../components/hee/hee-anchorlinks/toc';
+import AnchorLinks from './blocks/content/sidebar/anchorlinks/anchorlinks';
+import TableContents from './blocks/content/sidebar/anchorlinks/toc';
 import Listing from './blocks/furniture/collections/hee-listing/listing';
 import Media from '../components/hee/hee-media/media';
 import NavMap from '../components/hee/hee-navmap/navmap';
