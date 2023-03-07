@@ -60,19 +60,3 @@
     }
   }
 }
-
-.page--specialty-homepage {
-  .page__header {
-    padding-top: 0;
-  }
-
-  .page__rightbar {
-    @include mq($from: tablet) {
-      @include nhsuk-responsive-margin(9, 'top');
-    }
-  }
-
-  .nhsuk-section__content {
-    padding-bottom: 0;
-  }
-}
