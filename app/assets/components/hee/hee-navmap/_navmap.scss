@@ -9,7 +9,6 @@
   margin-left: 0; 
   margin-right: 0;
   padding: nhsuk-spacing(6) 0;
-  padding-top: 0;
 
   & + .nhsuk-map {
     @include nhsuk-responsive-margin(0, 'top');
