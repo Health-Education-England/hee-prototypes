@@ -4,6 +4,7 @@
   display: flex;
 
   @include nhsuk-responsive-margin(6, 'bottom');
+  @include nhsuk-responsive-margin(6, 'top');
 
   margin-left: 0; 
   margin-right: 0;
