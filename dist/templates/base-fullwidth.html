@@ -53,21 +53,21 @@
       </div>
     </header>
   </div>
+  <div class="breadcrumbs">
+    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+      <div class="nhsuk-width-container">
+        <ol class="nhsuk-breadcrumb__list">
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates">Templates</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates/base-fullwidth">Fullwidth</a></li>
+        </ol>
+        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/templates/base-fullwidth">Back to Fullwidth</a></p>
+      </div>
+    </nav>
+  </div>
   <div class="site-notifications">
   </div>
   <main class="page " id="maincontent" role="main">
-    <div class="page__breadcrumbs">
-      <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-        <div class="nhsuk-width-container">
-          <ol class="nhsuk-breadcrumb__list">
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates">Templates</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates/base-fullwidth">Fullwidth</a></li>
-          </ol>
-          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/templates/base-fullwidth">Back to Fullwidth</a></p>
-        </div>
-      </nav>
-    </div>
     <div class="nhsuk-width-container">
       <div class="page__layout">
         <div class="page__leftbar">
@@ -111,7 +111,6 @@
             <p class="nhsuk-lede-text">Typically used for landing pages.</p>
           </div>
           <pre><code>&lt;main class=&quot;page page--fullwidth&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
-  &lt;div class=&quot;page__breadcrumbs&quot;&gt;[ BREADCRUMBS ]&lt;/div&gt;
   &lt;div class=&quot;page__header&quot;&gt;
     [ PAGE_MICROHERO ]
     [ IF PAGE_HERO ]
@@ -124,22 +123,20 @@
       &lt;/div&gt;
     [ ENDIF ]
   &lt;/div&gt;
-  &lt;div class=&quot;page__main&quot;&gt;
-    &lt;div class=&quot;nhsuk-width-container&quot;&gt;
-      [ IF HOMEPAGE, LANDINGHUB, 404 ]
-      &lt;div class=&quot;page__content&quot;&gt;
-        [ CONTENT--MAIN_BLOCKS ]
-      &lt;/div&gt;
-      [ ELSEIF SEARCH_LISTING ]
-        [ SEARCH_INPUT ]
-        [ RESULTS_TITLE | RESULTS_SORTING ]
-        [ RESULTS_LISTING ]
-        [ RESULTS_PAGINATION ]
-      [ ELSEIF AZ_LISTING ]
-        [ AZLISTING_NAV ]
-        [ AZLISTING_RESULTS ]
-      [ ENDIF ]
+  &lt;div class=&quot;page__main nhsuk-width-container&quot;&gt;
+    [ IF HOMEPAGE, LANDINGHUB, 404 ]
+    &lt;div class=&quot;page__content&quot;&gt;
+      [ CONTENT--MAIN_BLOCKS ]
     &lt;/div&gt;
+    [ ELSEIF SEARCH_LISTING ]
+      [ SEARCH_INPUT ]
+      [ RESULTS_TITLE | RESULTS_SORTING ]
+      [ RESULTS_LISTING ]
+      [ RESULTS_PAGINATION ]
+    [ ELSEIF AZ_LISTING ]
+      [ AZLISTING_NAV ]
+      [ AZLISTING_RESULTS ]
+    [ ENDIF ]
   &lt;/div&gt;
   &lt;div class=&quot;page__footer&quot;&gt;
   &lt;/div&gt;

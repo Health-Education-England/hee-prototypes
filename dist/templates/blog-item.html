@@ -53,21 +53,21 @@
       </div>
     </header>
   </div>
+  <div class="breadcrumbs">
+    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+      <div class="nhsuk-width-container">
+        <ol class="nhsuk-breadcrumb__list">
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates">Templates</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates/blog-item">Blog Item</a></li>
+        </ol>
+        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/templates/blog-item">Back to Blog Item</a></p>
+      </div>
+    </nav>
+  </div>
   <div class="site-notifications">
   </div>
   <main class="page " id="maincontent" role="main">
-    <div class="page__breadcrumbs">
-      <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-        <div class="nhsuk-width-container">
-          <ol class="nhsuk-breadcrumb__list">
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates">Templates</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates/blog-item">Blog Item</a></li>
-          </ol>
-          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/templates/blog-item">Back to Blog Item</a></p>
-        </div>
-      </nav>
-    </div>
     <div class="nhsuk-width-container">
       <div class="page__layout">
         <div class="page__leftbar">
@@ -119,8 +119,7 @@
           </div>
           <hr />
           <h2>HTML</h2>
-          <pre><code>&lt;article class=&quot;page page--rightbar&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
-  &lt;div class=&quot;page__breadcrumbs&quot;&gt;[ INTEMPLATE_BREADCRUMBS ]&lt;/div&gt;
+          <pre><code>&lt;main class=&quot;page page--rightbar&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
   &lt;div class=&quot;page__header&quot;&gt;
     &lt;div class=&quot;nhsuk-width-container&quot;&gt;
       [ PAGE_BACK ]
@@ -131,18 +130,16 @@
       [ TAXONOMIES ]
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;nhsuk-width-container&quot;&gt;
-    &lt;div class=&quot;page__layout&quot;&gt;
-      &lt;div class=&quot;page__main&quot;&gt;
-        &lt;div class=&quot;page__content&quot;&gt;
-          [ CONTENT--MAIN_BLOCKS ]
-        &lt;/div&gt;
-        [ PAGE_LASTUPDATED ]
+  &lt;div class=&quot;page__layout nhsuk-width-container&quot;&gt;
+    &lt;div class=&quot;page__main&quot;&gt;
+      &lt;div class=&quot;page__content&quot;&gt;
+        [ CONTENT--MAIN_BLOCKS ]
       &lt;/div&gt;
-      &lt;aside class=&quot;page__rightbar&quot;&gt;
-        [ CONTENT--SIDEBAR_BLOCKS ]
-      &lt;/aside&gt;
+      [ PAGE_LASTUPDATED ]
     &lt;/div&gt;
+    &lt;aside class=&quot;page__rightbar&quot;&gt;
+      [ CONTENT--SIDEBAR_BLOCKS ]
+    &lt;/aside&gt;
   &lt;/div&gt;
   &lt;div class=&quot;page__footer&quot;&gt;
     [ INTEMPLATE_BACKTOTOP ]
@@ -150,7 +147,7 @@
   &lt;section class=&quot;page__feature&quot;&gt;
     [ CONTENT--FEATURED_BLOCKS ]
   &lt;/section&gt;
-&lt;/article&gt;</code></pre>
+&lt;/main&gt;</code></pre>
           <hr />
           <h2>Components</h2>
           <h4>Furniture</h4>

@@ -1,0 +1,181 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'main-table' %}
+{% set page_title = 'Table' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block breadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: basePath + "/",
+            text: "Home"
+        },
+        {
+            href: basePath + "/blocks",
+            text: "Blocks"
+        },
+        {
+            href: basePath + "/blocks/content",
+            text: "Content"
+        }
+    ],
+        href: basePath + "/blocks/" + page_url,
+      text: page_title
+    }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'blocks',
+    subarea: 'content'
+}) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Main</span>
+    <h1>{{ page_title }}</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+<p>Responsive tables used within page content.</p>
+
+<h3>Example</h3>
+{{ example({
+    view: 'block',
+    url: basePath + '/blocks/content/examples/' + page_url,
+    height: '620'
+}) }}
+
+<hr />
+
+<h3>Macro</h3>
+{{ highlight({
+  html: '
+{{ table({
+    tableClasses: \'nhsuk-hee-table\',
+    responsive: true,
+    panel: false,
+    caption: "Ibuprofen tablet dosages for children",
+    firstCellIsHeader: false,
+    head: [
+      {
+        text: "Age"
+      },
+      {
+        text: "How much?"
+      },
+      {
+        text: "How often"
+      }
+    ],
+    rows: [
+      [
+        {
+          header: "Age",
+          text: "7 to 9 years"
+        },
+        {
+          header: "How much?",
+          text: "200mg"
+        },
+        {
+          header: "How often?",
+          text: "Max 3 times in 24 hours"
+        }
+      ],
+      [
+        {
+          header: "Age",
+          text: "10 to 11 years"
+        },
+        {
+          header: "How much?",
+          text: "200mg to 300mg"
+        },
+        {
+          header: "How often?",
+          text: "Max 3 times in 24 hours"
+        }
+      ],
+      [
+        {
+          header: "Age",
+          text: "12 to 17 years"
+        },
+        {
+          header: "How much?",
+          text: "200mg to 400mg"
+        },
+        {
+          header: "How often?",
+          text: "Max 3 times in 24 hours"
+        }
+      ]
+    ]
+})  }}
+  '
+}) }}
+
+<hr />
+
+<h3>HTML</h3>
+{{ highlight({
+  html : '
+<table role="table" class="nhsuk-table-responsive nhsuk-hee-table">
+    <caption class="nhsuk-table__caption">Ibuprofen tablet dosages for children</caption>
+    <thead role="rowgroup" class="nhsuk-table__head">
+      <tr role="row">
+        <th role="columnheader" class="" scope="col"> Age </th>
+        <th role="columnheader" class="" scope="col"> How much? </th>
+        <th role="columnheader" class="" scope="col"> How often </th>
+      </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Age </span>7 to 9 years
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">How much? </span>200mg
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">How often? </span>Max 3 times in 24 hours
+        </td>
+      </tr>
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Age </span>10 to 11 years
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">How much? </span>200mg to 300mg
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">How often? </span>Max 3 times in 24 hours
+        </td>
+      </tr>
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Age </span>12 to 17 years
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">How much? </span>200mg to 400mg
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">How often? </span>Max 3 times in 24 hours
+        </td>
+      </tr>
+    </tbody>
+</table>
+  '
+  }) 
+}}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

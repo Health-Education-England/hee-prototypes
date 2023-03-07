@@ -14,16 +14,6 @@
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
   <link href="/hee-prototypes/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
   <link href="/hee-prototypes/css/hee.css" rel="stylesheet" />
-  <style>
-    .example {}
-
-    .example--template {}
-
-    .example--blocks {
-      padding: 1em;
-      background-color: #f0f4f5;
-    }
-  </style>
   <link rel="shortcut icon" href="/hee-prototypes/favicons/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/hee-prototypes/favicons/apple-touch-icon-180x180.png">
   <link rel="mask-icon" href="/hee-prototypes/favicons/favicon.svg" color="#005eb8">
@@ -36,7 +26,7 @@
   <meta name="msapplication-square310x310logo" content="/hee-prototypes/favicons/largetile-310x310.png">
 </head>
 
-<body class="example example--template">
+<body>
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script>
@@ -150,22 +140,22 @@
       </nav>
     </header>
   </div>
-  <div class="site-notifications">
+  <div class="breadcrumbs">
+    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+      <div class="nhsuk-width-container">
+        <ol class="nhsuk-breadcrumb__list">
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates">Templates</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates/examples/publications-item">Publication Item</a></li>
+        </ol>
+        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/templates/examples/publications-item">Back to Publication Item</a></p>
+      </div>
+    </nav>
+  </div>
+  <div class="banners">
   </div>
   <main class="page page--rightbar" id="maincontent" role="main">
-    <div class="page__breadcrumbs">
-      <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-        <div class="nhsuk-width-container">
-          <ol class="nhsuk-breadcrumb__list">
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates">Templates</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates/examples/publications-item">Publication Item</a></li>
-          </ol>
-          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/templates/examples/publications-item">Back to Publication Item</a></p>
-        </div>
-      </nav>
-    </div>
-    <div class="page__header">
+    <div class="page__header ">
       <div class="nhsuk-width-container">
         <div class="nhsuk-back-link">
           <a class="nhsuk-back-link__link" href="#">
@@ -173,158 +163,239 @@
               <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
             </svg> Go back</a>
         </div>
-        <h1>Publication title</h1>
+        <h1 id="publication-title">Publication title</h1>
         <span class="nhsuk-caption-xl">Caption</span>
       </div>
     </div>
-    <div class="nhsuk-width-container">
-      <div class="page__layout">
-        <div class="page__main">
+    <div class="page__layout nhsuk-width-container">
+      <div class="page__main">
+        <div class="page__content">
           <p class="nhsuk-body-l">This report has been produced in partnership between Health Education England (HEE) and Unity Insights.</p>
-          <h2>Introduction</h2>
-          <p>This report has been produced in partnership between Health Education England (HEE) and Unity Insights.</p>
-          <h3>Health Education England</h3>
-          <p>Health Education England (HEE) exists for one reason only: to support the delivery of excellent healthcare and health improvement to the patients and public of England by ensuring that the workforce of today and tomorrow has the right numbers, skills, values and behaviours, at the right time and in the right place.</p>
-          <p>At any one time HEE supports more than 160,000 students and trainees whilst working closely with partners across the NHS locally, regionally and nationally on shared priorities.</p>
-          <p>In 2019, HEE were commissioned by the then Secretary of State to deliver the Topol Review recommendations looking at the impact of leading edge digital technologies on the workforce. The Digital, Artificial Intelligence and Robotics Technologies in Education (DART-Ed) programme picks up from this in 2021 to explore the linkage between mature evidenced AI and its workforce impact and required training and education.</p>
-          <h3>Unity Insights</h3>
-          <p>Unity Insights offer bespoke analytics and evaluation services to the NHS, the AHSN Network, academia, innovators, and industry. It was formed in 2021 following several years of sustained growth as the analytics and evaluation function within Kent Surrey Sussex Academic Health Science Network (KSS AHSN).</p>
-          <p>Unity Insights has extensive experience of working with the NHS, from supporting measurement capture of small-scale local programmes to providing analytics</p>
-          <p>KSS AHSN, in collaboration with the AHSN Network, originally conducted a survey and developed a report in 2018 entitled:</p>
-          <p>“Accelerating Artificial Intelligence in health and care: results from a state of the nation survey” at the request of the Department of Health and Social Care (DHSC) and NHS England (NHSE) to help map out and define the state of the AI landscape in the UK, its definition and various forms. This new roadmap in 2021 picks up on the earlier version and work done since by NHSX to update and capture the latest progress in this area and present it in an easy, readable and user-friendly format.</p>
-          <h3>Health Education England</h3>
-          <p>Health Education England (HEE) exists for one reason only: to support the delivery of excellent healthcare and health improvement to the patients and public of England by ensuring that the workforce of today and tomorrow has the right numbers, skills, values and behaviours, at the right time and in the right place.</p>
-          <p>At any one time HEE supports more than 160,000 students and trainees whilst working closely with partners across the NHS locally, regionally and nationally on shared priorities.</p>
-          <p>In 2019, HEE were commissioned by the then Secretary of State to deliver the Topol Review recommendations looking at the impact of leading edge digital technologies on the workforce. The Digital, Artificial Intelligence and Robotics Technologies in Education (DART-Ed) programme picks up from this in 2021 to explore the linkage between mature evidenced AI and its workforce impact and required training and education.</p>
-          <h3>Unity Insights</h3>
-          <p>Unity Insights offer bespoke analytics and evaluation services to the NHS, the AHSN Network, academia, innovators, and industry. It was formed in 2021 following several years of sustained growth as the analytics and evaluation function within Kent Surrey Sussex Academic Health Science Network (KSS AHSN).</p>
-          <p>Unity Insights has extensive experience of working with the NHS, from supporting measurement capture of small-scale local programmes to providing analytics</p>
-          <p>KSS AHSN, in collaboration with the AHSN Network, originally conducted a survey and developed a report in 2018 entitled:</p>
-          <p>“Accelerating Artificial Intelligence in health and care: results from a state of the nation survey” at the request of the Department of Health and Social Care (DHSC) and NHS England (NHSE) to help map out and define the state of the AI landscape in the UK, its definition and various forms. This new roadmap in 2021 picks up on the earlier version and work done since by NHSX to update and capture the latest progress in this area and present it in an easy, readable and user-friendly format.</p>
-        </div>
-        <aside class="page__rightbar">
-          <div class="nhsuk-anchor-links hee-anchorlinks" data-disable-js=true data-headings="h2,h3,h4,h5,h6">
-            <h2 data-anchorlinksignore="true">Table of Contents</h2>
-            <ul>
+          <h2 class="toc_h2" data-short-title="Overview">Overview</h2>
+          <p>Working with The Royal College of Surgeons, Health Education England provides world-class education, assessment and development to 30,000 surgeons.</p>
+          <p>As your career progresses from medical school student through to surgeon, you will go through a number of stages that all have a level of competitive entry.</p>
+          <h2 class="toc_h2" data-short-title="Path">Pathways</h2>
+          <p>The training pathway is the most direct route through surgical training. Following each training stage, particularly in the early years, you will need to be selected into the next stage.</p>
+          <h3 class="toc_h3" data-short-title="Run-through">Run-through and uncoupled</h3>
+          <p>Sollicitudin eu at arcu aliquam, non dui aliquet. Massa urna ultrices ullamcorper imperdiet velit ut a. Integer scelerisque nulla rhoncus nunc et. Et quis dui aliquam sapien nulla lobortis dictumst sapien, dolor. Est lectus volutpat lacus lorem. Semper duis dictumst ipsum diam. Sapien, leo amet erat arcu blandit. Varius viverra sit luctus viverra. Bibendum sed at penatibus odio erat</p>
+          <h3 class="toc_h3" data-short-title="ST1-ST7">Run-through posts (ST1-ST7)</h3>
+          <p>For some specialties training is through a run-through programme. You only have to apply once, at the beginning of the programme, and are recruited for the full duration of the specialty training.</p>
+          <h3 class="toc_h3" data-short-title="Uncoupled posts">Uncoupled posts (CT1, CT2, ST3-ST7)</h3>
+          <p>For some specialties training is ran as an uncoupled programme, meaning once you have completed your core training (CT1, CT2) you will be required to re-apply for ST3 onwards.</p>
+          <h2 class="toc_h2" data-short-title="Training routes">Training routes</h2>
+          <h3 class="toc_h3">Core specialty Training (CT1, CT2 (CT3))</h3>
+          <p>Felis vel aliquet in metus fermentum. Sit morbi fusce interdum luctus sodales. Amet platea sapien magna id. Dignissim volutpat nec odio platea consequat cras consequat euismod. Egestas in aliquam sed pellentesque. Sapien, varius consectetur donec habitant sed pellentesque sed. Adipiscing tortor, nibh ut mauris nibh phasellus augue volutpat aliquet.</p>
+          <div class="nhsuk-action-link">
+            <a class="nhsuk-action-link__link" href="#">
+              <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+              </svg>
+              <span class="nhsuk-action-link__text">Core surgery</span>
+            </a>
+          </div>
+          <h3 class="toc_h3">Higher specialty Training (ST3-ST7 (ST8))</h3>
+          <p>Felis vel aliquet in metus fermentum. Sit morbi fusce interdum luctus sodales. Amet platea sapien magna id. Dignissim volutpat nec odio platea consequat cras consequat euismod. Egestas in aliquam sed pellentesque. Sapien, varius consectetur donec habitant sed pellentesque sed. Adipiscing tortor, nibh ut mauris nibh phasellus augue volutpat aliquet.</p>
+          <div class="nhsuk-action-link">
+            <a class="nhsuk-action-link__link" href="#">
+              <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+              </svg>
+              <span class="nhsuk-action-link__text">Higher surgery</span>
+            </a>
+          </div>
+          <h4>Types of higher specialty training</h4>
+          <div class="nhsuk-blocklinks">
+            <div class="nhsuk-u-reading-width">
+            </div>
+            <ul class="nhsuk-list-blocklinks nhsuk-list-blocklinks--one-column">
               <li>
-                <div class="hee-anchorlinks__wrapper circle">
-                  <span>
-                    <svg width="3" height="3" viewBox="0 0 3 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="1.5" cy="1.5" r="1.5" fill="black" />
-                    </svg>
-                  </span>
-                  <a href="#">Introduction</a>
-                </div>
-              </li>
-              <li class=has-children>
-                <div class="hee-anchorlinks__wrapper chevron">
-                  <span>
-                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.00019 6.99994C8.00095 7.13155 7.97572 7.26201 7.92596 7.38385C7.87619 7.50569 7.80287 7.6165 7.71019 7.70994L2.71019 12.7099C2.61695 12.8032 2.50626 12.8771 2.38443 12.9276C2.26261 12.9781 2.13204 13.004 2.00019 13.004C1.86833 13.004 1.73776 12.9781 1.61594 12.9276C1.49411 12.8771 1.38342 12.8032 1.29018 12.7099C1.19695 12.6167 1.12299 12.506 1.07253 12.3842C1.02206 12.2624 0.996094 12.1318 0.996094 11.9999C0.996094 11.8681 1.02206 11.7375 1.07253 11.6157C1.12299 11.4939 1.19695 11.3832 1.29018 11.2899L5.59019 6.99994L1.29018 2.70994C1.10188 2.52164 0.996094 2.26624 0.996094 1.99994C0.996094 1.73364 1.10188 1.47825 1.29018 1.28994C1.47849 1.10164 1.73388 0.99585 2.00019 0.99585C2.26649 0.99585 2.52188 1.10164 2.71019 1.28994L7.71019 6.28994C7.80287 6.38338 7.87619 6.4942 7.92596 6.61603C7.97572 6.73787 8.00095 6.86833 8.00019 6.99994Z" fill="black" />
-                    </svg>
-                  </span>
-                  <a href="#">Foreword</a>
-                </div>
-                <ul>
-                  <li><a href="#">Executive summary</a></li>
-                </ul>
+                <a href="#">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+                    </path>
+                  </svg> Cardiothoracic Surgery </a>
               </li>
               <li>
-                <div class="hee-anchorlinks__wrapper circle">
-                  <span>
-                    <svg width="3" height="3" viewBox="0 0 3 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="1.5" cy="1.5" r="1.5" fill="black" />
-                    </svg>
-                  </span>
-                  <a href="#">Acknowledgments</a>
-                </div>
-              </li>
-              <li class=has-children>
-                <div class="hee-anchorlinks__wrapper chevron">
-                  <span>
-                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.00019 6.99994C8.00095 7.13155 7.97572 7.26201 7.92596 7.38385C7.87619 7.50569 7.80287 7.6165 7.71019 7.70994L2.71019 12.7099C2.61695 12.8032 2.50626 12.8771 2.38443 12.9276C2.26261 12.9781 2.13204 13.004 2.00019 13.004C1.86833 13.004 1.73776 12.9781 1.61594 12.9276C1.49411 12.8771 1.38342 12.8032 1.29018 12.7099C1.19695 12.6167 1.12299 12.506 1.07253 12.3842C1.02206 12.2624 0.996094 12.1318 0.996094 11.9999C0.996094 11.8681 1.02206 11.7375 1.07253 11.6157C1.12299 11.4939 1.19695 11.3832 1.29018 11.2899L5.59019 6.99994L1.29018 2.70994C1.10188 2.52164 0.996094 2.26624 0.996094 1.99994C0.996094 1.73364 1.10188 1.47825 1.29018 1.28994C1.47849 1.10164 1.73388 0.99585 2.00019 0.99585C2.26649 0.99585 2.52188 1.10164 2.71019 1.28994L7.71019 6.28994C7.80287 6.38338 7.87619 6.4942 7.92596 6.61603C7.97572 6.73787 8.00095 6.86833 8.00019 6.99994Z" fill="black" />
-                    </svg>
-                  </span>
-                  <a href="#">Notes to the reader</a>
-                </div>
-                <ul>
-                  <li><a href="#">1. Initial analysis and profiling</a></li>
-                  <li><a href="#">2. Creation and population of the database</a></li>
-                  <li><a href="#">3. Case studies</a></li>
-                </ul>
+                <a href="#">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+                    </path>
+                  </svg> General Surgery </a>
               </li>
               <li>
-                <div class="hee-anchorlinks__wrapper circle">
-                  <span>
-                    <svg width="3" height="3" viewBox="0 0 3 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="1.5" cy="1.5" r="1.5" fill="black" />
-                    </svg>
-                  </span>
-                  <a href="#">Limitations and recommendations</a>
-                </div>
+                <a href="#">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+                    </path>
+                  </svg> Neurosurgery </a>
               </li>
               <li>
-                <div class="hee-anchorlinks__wrapper circle">
-                  <span>
-                    <svg width="3" height="3" viewBox="0 0 3 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="1.5" cy="1.5" r="1.5" fill="black" />
-                    </svg>
-                  </span>
-                  <a href="#">Conclusion</a>
-                </div>
+                <a href="#">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+                    </path>
+                  </svg> Oral &amp; Maxillofacial Surgery </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+                    </path>
+                  </svg> Otolaryngology Surgery </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+                    </path>
+                  </svg> Paediatric Surgery </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+                    </path>
+                  </svg> Plastic Surgery </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+                    </path>
+                  </svg> Trauma &amp; Orthopaedics </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+                    </path>
+                  </svg> Urology </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+                    </path>
+                  </svg> Vascular Surgery </a>
               </li>
             </ul>
           </div>
-          <div class="hee-card hee-card--details">
-            <h3>Publication Info</h3>
-            <div class="hee-card--details__item">
-              <span>Published:</span> 24 June 2022
-            </div>
-            <div class="hee-card--details__item">
-              <span>Updated:</span> 24 July 2022
-            </div>
-            <div class="hee-card--details__item">
-              <span>Topic:</span>
-              <a href="#">Profession 1</a>, <a href="#">Topic 1</a>
-            </div>
-            <div class="hee-card--details__item">
-              <span>Estimated reading time:</span> 2 mins
-            </div>
+          <h2 class="toc_h2">Support</h2>
+          <p>Lorem ipsum dolor sit amet consectetur. Velit arcu consectetur enim eget eget. Pellentesque eget sem feugiat ut erat. Commodo ante ultrices dui etiam et cras velit euismod diam. Aliquam risus scelerisque.</p>
+          <h3 class="toc_h3">In-training support</h3>
+          <p>Felis vel aliquet in metus fermentum. Sit morbi fusce interdum luctus sodales. Amet platea sapien magna id. Dignissim volutpat nec odio platea consequat cras consequat euismod. Egestas in aliquam sed pellentesque. Sapien, varius consectetur donec habitant sed pellentesque sed. Adipiscing tortor, nibh ut mauris nibh phasellus augue volutpat aliquet.</p>
+          <div class="nhsuk-action-link">
+            <a class="nhsuk-action-link__link" href="#">
+              <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+              </svg>
+              <span class="nhsuk-action-link__text">In-training support</span>
+            </a>
           </div>
-          <div class="hee-card hee-card--details">
-            <h3>Alternative versions</h3>
-            <div class="hee-card--details__item">
-              <a class="hee-resources__link" href="#" title="Publication title - PDF version">
-                <span class="hee-resources__text">Publication title - PDF version</span><span class="hee-resources__tag
-          hee-resources__pdf"> PDF </span></a>
-            </div>
-            <div class="hee-card--details__item">
-              <a class="hee-resources__link" href="#" title="Publication title - Open Document">
-                <span class="hee-resources__text">Publication title - Open Document</span><span class="hee-resources__tag
-          hee-resources__odf"> ODF </span></a>
-            </div>
-            <div class="hee-card--details__item">
-              <a class="hee-resources__link" href="#" title="Publication title - Excel">
-                <span class="hee-resources__text">Publication title - Excel</span><span class="hee-resources__tag
-          hee-resources__xls"> XLS </span></a>
-            </div>
+          <h3 class="toc_h3">Professional Support and Wellbeing (PSW)</h3>
+          <p>Felis vel aliquet in metus fermentum. Sit morbi fusce interdum luctus sodales. Amet platea sapien magna id. Dignissim volutpat nec odio platea consequat cras consequat euismod. Egestas in aliquam sed pellentesque. Sapien, varius consectetur donec habitant sed pellentesque sed. Adipiscing tortor, nibh ut mauris nibh phasellus augue volutpat aliquet.</p>
+          <div class="nhsuk-action-link">
+            <a class="nhsuk-action-link__link" href="#">
+              <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+              </svg>
+              <span class="nhsuk-action-link__text">Professional Support and Wellbeing (PSW)</span>
+            </a>
           </div>
-          <div class="hee-card hee-card--details">
-            <h3>Languages</h3>
-            <div class="hee-card--details__item">
-              <a class="hee-resources__link" href="#" title="Teitl y cyhoeddiad - Fersiwn PDF">
-                <span class="hee-resources__text">Teitl y cyhoeddiad - Fersiwn PDF</span><span class="hee-resources__tag
-          hee-resources__pdf"> PDF </span></a>
-            </div>
-            <div class="hee-card--details__item">
-              <a class="hee-resources__link" href="#" title="Tytuł publikacji - wersja PDF">
-                <span class="hee-resources__text">Tytuł publikacji - wersja PDF</span><span class="hee-resources__tag
-          hee-resources__pdf"> PDF </span></a>
-            </div>
-          </div>
-        </aside>
+          <h2 class="toc_h2">Regions</h2>
+          <p>Pellentesque id posuere sapien vestibulum, quam pellentesque at libero. Aliquam at id fames hendrerit in vulputate orci aliquet augue. Massa penatibus sociis et nisl. Enim aliquam mauris suscipit turpis non hendrerit felis.</p>
+          <figure class="nhsuk-map">
+            <figcaption class="nhsuk-map__caption">
+              <ul id="regionList">
+                <li>
+                  <a id="lk" href="#"> London and Kent, Surrey and Sussex (KSS) </a>
+                </li>
+                <li>
+                  <a id="me" href="#"> Midlands and the East </a>
+                </li>
+                <li>
+                  <a id="nenc" href="#"> North East and North Cumbria </a>
+                </li>
+                <li>
+                  <a id="nw" href="#"> North West </a>
+                </li>
+                <li>
+                  <a id="sw" href="#"> South West </a>
+                </li>
+                <li>
+                  <a id="tvw" href="#"> Thames Valley and Wessex </a>
+                </li>
+                <li>
+                  <a id="yh" href="#"> Yorkshire and the Humber </a>
+                </li>
+              </ul>
+            </figcaption>
+            <object class="nhsuk-map__image" data="/images/nav-maps/dental-regions.svg" type="image/svg+xml" tabindex="-1">
+            </object>
+          </figure>
+        </div>
       </div>
+      <aside class="page__rightbar">
+        <div class="nhsuk-anchor-links hee-anchorlinks" data-toc-js=true data-headings="">
+          <h2 data-anchorlinksignore="true">Table of Contents</h2>
+        </div>
+        <div class="hee-card hee-card--details">
+          <h3>Publication Info</h3>
+          <div class="hee-card--details__item">
+            <span>Published:</span> 24 June 2022
+          </div>
+          <div class="hee-card--details__item">
+            <span>Updated:</span> 24 July 2022
+          </div>
+          <div class="hee-card--details__item">
+            <span>Topic:</span>
+            <a href="#">Profession 1</a>, <a href="#">Topic 1</a>
+          </div>
+          <div class="hee-card--details__item">
+            <span>Estimated reading time:</span> 2 mins
+          </div>
+        </div>
+        <div class="hee-card hee-card--details">
+          <h3>Alternative versions</h3>
+          <div class="hee-card--details__item">
+            <a class="hee-resources__link" href="#" title="Publication title - PDF version">
+              <span class="hee-resources__text">Publication title - PDF version</span><span class="hee-resources__tag
+          hee-resources__pdf"> PDF </span></a>
+          </div>
+          <div class="hee-card--details__item">
+            <a class="hee-resources__link" href="#" title="Publication title - Open Document">
+              <span class="hee-resources__text">Publication title - Open Document</span><span class="hee-resources__tag
+          hee-resources__odf"> ODF </span></a>
+          </div>
+          <div class="hee-card--details__item">
+            <a class="hee-resources__link" href="#" title="Publication title - Excel">
+              <span class="hee-resources__text">Publication title - Excel</span><span class="hee-resources__tag
+          hee-resources__xls"> XLS </span></a>
+          </div>
+          <div class="hee-card--details__item">
+            <a class="hee-resources__link" href="#" title="Publication title - Powerpoint">
+              <span class="hee-resources__text">Publication title - Powerpoint</span><span class="hee-resources__tag
+          hee-resources__ppt"> PPT </span></a>
+          </div>
+        </div>
+        <div class="hee-card hee-card--details">
+          <h3>Languages</h3>
+          <div class="hee-card--details__item">
+            <a class="hee-resources__link" href="#" title="Teitl y cyhoeddiad - Fersiwn PDF">
+              <span class="hee-resources__text">Teitl y cyhoeddiad - Fersiwn PDF</span><span class="hee-resources__tag
+          hee-resources__pdf"> PDF </span></a>
+          </div>
+          <div class="hee-card--details__item">
+            <a class="hee-resources__link" href="#" title="Tytuł publikacji - wersja PDF">
+              <span class="hee-resources__text">Tytuł publikacji - wersja PDF</span><span class="hee-resources__tag
+          hee-resources__pdf"> PDF </span></a>
+          </div>
+        </div>
+      </aside>
     </div>
     <div class="page__footer">
     </div>

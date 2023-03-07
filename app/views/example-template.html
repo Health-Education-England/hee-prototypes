@@ -1,7 +1,5 @@
 {% extends "example.html" %}
 
-{% set bodyClasses = 'example example--template' %}
-
 {% block headerStart %}
   {{ skipLink({
     href: '#maincontent',
@@ -84,26 +82,17 @@
 {% endblock %}
 
 {% block headerEnd %}
-  <div class="site-notifications">
-  </div>
 {% endblock %}
 
 {% block main %}
   <main class="page {% block pageClass %}{% endblock %}" id="maincontent" role="main">
-    <div class="page__breadcrumbs">
-      {% block pageBreadcrumbs %}
-        {# Breadcrumbs... #}
-      {% endblock %}
-    </div>
-    <div class="page__header">
+    <div class="page__header {% block pageHeaderClass %}{% endblock %}">
       {% block pageHeader %}
         {# Hero... Microhero... Title #}
       {% endblock %}
     </div>
     {% block pageMain %}
-    <div class="page__main">
-        {# Template... #}
-    </div>
+      {# Template... #}
     {% endblock %}
     <div class="page__footer">
       {% block pageFooter %}

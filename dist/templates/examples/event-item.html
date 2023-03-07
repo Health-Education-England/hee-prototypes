@@ -14,16 +14,6 @@
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
   <link href="/hee-prototypes/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
   <link href="/hee-prototypes/css/hee.css" rel="stylesheet" />
-  <style>
-    .example {}
-
-    .example--template {}
-
-    .example--blocks {
-      padding: 1em;
-      background-color: #f0f4f5;
-    }
-  </style>
   <link rel="shortcut icon" href="/hee-prototypes/favicons/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/hee-prototypes/favicons/apple-touch-icon-180x180.png">
   <link rel="mask-icon" href="/hee-prototypes/favicons/favicon.svg" color="#005eb8">
@@ -36,7 +26,7 @@
   <meta name="msapplication-square310x310logo" content="/hee-prototypes/favicons/largetile-310x310.png">
 </head>
 
-<body class="example example--template">
+<body>
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script>
@@ -150,21 +140,21 @@
       </nav>
     </header>
   </div>
-  <div class="site-notifications">
+  <div class="breadcrumbs">
+    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+      <div class="nhsuk-width-container">
+        <ol class="nhsuk-breadcrumb__list">
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates/examples/event-item">Event Item</a></li>
+        </ol>
+        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/templates/examples/event-item">Back to Event Item</a></p>
+      </div>
+    </nav>
+  </div>
+  <div class="banners">
   </div>
   <main class="page page--rightbar" id="maincontent" role="main">
-    <div class="page__breadcrumbs">
-      <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-        <div class="nhsuk-width-container">
-          <ol class="nhsuk-breadcrumb__list">
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates/examples/event-item">Event Item</a></li>
-          </ol>
-          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/templates/examples/event-item">Back to Event Item</a></p>
-        </div>
-      </nav>
-    </div>
-    <div class="page__header">
+    <div class="page__header ">
       <div class="nhsuk-width-container">
         <div class="nhsuk-back-link">
           <a class="nhsuk-back-link__link" href="#">
@@ -177,9 +167,9 @@
         <p class="nhsuk-lede-text">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
       </div>
     </div>
-    <div class="nhsuk-width-container">
-      <div class="page__layout">
-        <div class="page__main">
+    <div class="page__layout nhsuk-width-container">
+      <div class="page__main">
+        <div class="page__content">
           <h2>About this event</h2>
           <p>Working in the NHS can be stressful. According to a 2016 ‘Guardian’ survey of NHS staff, 43% of NHS health care workers surveyed identified feeling unreasonably stressed at work ‘most’ or ‘all of the time’. In 2013 the ONS found that the NHS had higher sickness absence rates than any other large public sector organisation, with 3.4% of worker hours lost to sickness. Sickness absence costs the NHS £2.4bn a year - accounting for around £1 in every £40 of the total budget. </p>
           <p>NHS Employers estimate 30% of this sickness time is caused by stress. It’s important to frame this in the context of what is currently the biggest sustained fall in NHS spending in any period since 1951. While NHS funding is getting tighter, demand for NHS services and costs for new medical treatments are increasing and other cut backs that impact the NHS have been deepening.</p>
@@ -199,43 +189,43 @@
             </figcaption>
           </div>
         </div>
-        <aside class="page__rightbar">
-          <div class="hee-card hee-card--details">
-            <h3>Event info</h3>
-            <div class="hee-card--details__item">
-              <span>Event type:</span> Webinar
-            </div>
-            <div class="hee-card--details__item">
-              <span>Category:</span> Dental
-            </div>
-            <div class="hee-card--details__item">
-              <span>Date:</span> Webinar
-            </div>
-            <div class="hee-card--details__item">
-              <span>Time:</span> 14:00 - 20:00
-            </div>
-            <div class="hee-card--details__item">
-              <span>Delivery:</span> Online
-            </div>
-            <div class="hee-card--details__item">
-              <span>Website:</span>
-              <a href="#">www.website.com</a>
-            </div>
-          </div>
-          <div class="hee-card hee-card--cta">
-            <h3>Book this event</h3>
-            <div class="hee-card--cta__button">
-              <a class="nhsuk-button" href="#" draggable="false"> Book on Eventbrite </a>
-            </div>
-          </div>
-          <div class="hee-card hee-card--cta">
-            <h3>Add to calendar</h3>
-            <div class="hee-card--cta__button">
-              <a class="nhsuk-button nhsuk-button--secondary" href="#" draggable="false"> Add to calendar </a>
-            </div>
-          </div>
-        </aside>
       </div>
+      <aside class="page__rightbar">
+        <div class="hee-card hee-card--details">
+          <h3>Event info</h3>
+          <div class="hee-card--details__item">
+            <span>Event type:</span> Webinar
+          </div>
+          <div class="hee-card--details__item">
+            <span>Category:</span> Dental
+          </div>
+          <div class="hee-card--details__item">
+            <span>Date:</span> Webinar
+          </div>
+          <div class="hee-card--details__item">
+            <span>Time:</span> 14:00 - 20:00
+          </div>
+          <div class="hee-card--details__item">
+            <span>Delivery:</span> Online
+          </div>
+          <div class="hee-card--details__item">
+            <span>Website:</span>
+            <a href="#">www.website.com</a>
+          </div>
+        </div>
+        <div class="hee-card hee-card--cta">
+          <h3>Book this event</h3>
+          <div class="hee-card--cta__button">
+            <a class="nhsuk-button" href="#" draggable="false"> Book on Eventbrite </a>
+          </div>
+        </div>
+        <div class="hee-card hee-card--cta">
+          <h3>Add to calendar</h3>
+          <div class="hee-card--cta__button">
+            <a class="nhsuk-button nhsuk-button--secondary" href="#" draggable="false"> Add to calendar </a>
+          </div>
+        </div>
+      </aside>
     </div>
     <div class="page__footer">
     </div>

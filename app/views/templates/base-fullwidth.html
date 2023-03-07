@@ -5,7 +5,7 @@
 
 {% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
 
-{% block pageBreadcrumbs %}
+{% block breadcrumbs %}
 {{ 
   breadcrumb({
   items: [
@@ -41,7 +41,6 @@
 
 {{ highlight({
   "html" : '<main class="page page--fullwidth" id="maincontent" role="main">
-  <div class="page__breadcrumbs">[ BREADCRUMBS ]</div>
   <div class="page__header">
     [ PAGE_MICROHERO ]
     [ IF PAGE_HERO ]
@@ -54,22 +53,20 @@
       </div>
     [ ENDIF ]
   </div>
-  <div class="page__main">
-    <div class="nhsuk-width-container">
-      [ IF HOMEPAGE, LANDINGHUB, 404 ]
-      <div class="page__content">
-        [ CONTENT--MAIN_BLOCKS ]
-      </div>
-      [ ELSEIF SEARCH_LISTING ]
-        [ SEARCH_INPUT ]
-        [ RESULTS_TITLE | RESULTS_SORTING ]
-        [ RESULTS_LISTING ]
-        [ RESULTS_PAGINATION ]
-      [ ELSEIF AZ_LISTING ]
-        [ AZLISTING_NAV ]
-        [ AZLISTING_RESULTS ]
-      [ ENDIF ]
+  <div class="page__main nhsuk-width-container">
+    [ IF HOMEPAGE, LANDINGHUB, 404 ]
+    <div class="page__content">
+      [ CONTENT--MAIN_BLOCKS ]
     </div>
+    [ ELSEIF SEARCH_LISTING ]
+      [ SEARCH_INPUT ]
+      [ RESULTS_TITLE | RESULTS_SORTING ]
+      [ RESULTS_LISTING ]
+      [ RESULTS_PAGINATION ]
+    [ ELSEIF AZ_LISTING ]
+      [ AZLISTING_NAV ]
+      [ AZLISTING_RESULTS ]
+    [ ENDIF ]
   </div>
   <div class="page__footer">
   </div>

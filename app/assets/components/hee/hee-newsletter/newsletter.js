@@ -9,6 +9,7 @@ export default () => {
       this.requiredInputs = newsletter.querySelectorAll("[required]");
       this.errors = [];
       this.init();
+      window.recaptchaCallback = this.recaptchaCallback
     }
 
     init() {
@@ -112,6 +113,10 @@ export default () => {
       errorSummaryItems.forEach(summaryitem => {
         summaryitem.style.display  = 'none';
       })
+    }
+
+    recaptchaCallback() {
+      document.querySelector('form#newsletter-form button[type="submit"]').removeAttribute('disabled');
     }
   }
   [...document.getElementsByClassName('nhsuk-newsletter-form')].forEach((newsletter) => new Newsletter(newsletter));

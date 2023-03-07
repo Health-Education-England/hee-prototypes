@@ -2,23 +2,23 @@
 
 {% block pageClass %}page--leftbar{% endblock %}
 
-{% block pageBreadcrumbs %}
+{% block breadcrumbs %}
 {% endblock %}
 
 {% block pageHeader %}
 {% endblock %}
 
 {% block pageMain %}
-<div class="nhsuk-width-container">
-  <div class="page__layout">
+  <div class="page__layout nhsuk-width-container">
     <aside class="page__leftbar">
-      {% block pageLeftbar %}Leftbar...{% endblock %}
+      {% block pageLeftbar %}{% endblock %}
     </aside>
     <div class="page__main">
-      {% block pageContent %}Content...{% endblock %}
+      <div class="page__content">
+        {% block pageContent %}{% endblock %}
+      </div>
     </div>
   </div>
-</div>
 {% endblock %}
 
 {% block pageFooter %}

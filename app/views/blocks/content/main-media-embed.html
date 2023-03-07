@@ -1,0 +1,153 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'main-media-embed' %}
+{% set page_title = 'Media Embed' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block breadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: basePath + "/",
+            text: "Home"
+        },
+        {
+            href: basePath + "/blocks",
+            text: "Blocks"
+        },
+        {
+            href: basePath + "/blocks/content",
+            text: "Content"
+        }
+    ],
+        href: basePath + "/blocks/" + page_url,
+      text: page_title
+    }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'blocks',
+    subarea: 'content'
+}) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Main</span>
+    <h1>{{ page_title }}</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+<p>Allows editors to embed YouTube or Vimeo media within content.</p>
+
+<h3>Example</h3>
+{{ example({
+    view: 'block',
+    url: basePath + '/blocks/content/examples/' + page_url,
+    height: '620'
+}) }}
+
+<hr />
+
+<h3>Macro - YouTube</h3>
+{{ highlight({
+  html: '
+{{ media({
+    title: "Pellentesque sit amet nulla",
+    description: "Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus.",
+    type: "youtube",
+    transcript: ["Donec pulvinar sollicitudin massa, nec pulvinar turpis dictum maximus."],
+    mediaId: "C0DPdy98e4c",
+    lastReview: "09/05/2022",
+    reviewDue: "09/05/2023"
+}) }}
+  '
+}) }}
+
+<hr />
+
+<h3>HTML - YouTube</h3>
+{{ highlight({
+  html : '
+<div class="nhsuk-media">
+    <h2>Pellentesque sit amet nulla</h2>
+    <div class="nhsuk-media__description">
+      <p>Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus.</p>
+    </div>
+    <iframe class="youtube" src="https://youtube.com/embed/C0DPdy98e4c" title="Pellentesque sit amet nulla" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"></iframe>
+    <div class="nhsuk-media__info">
+      <div class="nhsuk-media__transcript">
+        <a href="javascript:void(0);">
+          <span class="nhsuk-media__show-text">Show transcript</span>
+          <span class="nhsuk-media__hide-text">Hide transcript</span>
+        </a>
+        <div class="nhsuk-media__transcript-text">
+          <p>Donec pulvinar sollicitudin massa, nec pulvinar turpis dictum maximus.</p>
+        </div>
+      </div>
+      <div class="nhsuk-media__reviews">
+        <p> Page last reviewed: 09/05/2022 </p>
+        <p> Next review due: 09/05/2023 </p>
+      </div>
+    </div>
+</div>
+  '
+  }) 
+}}
+
+<hr />
+
+<h3>Macro - Vimeo</h3>
+{{ highlight({
+    html: '
+{{ media({
+    title: "Pellentesque sit amet nulla",
+    description: "Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus.",
+    type: "vimeo",
+    transcript: ["Donec pulvinar sollicitudin massa, nec pulvinar turpis dictum maximus."],
+    mediaId: "226053498",
+    lastReview: "09/05/2022",
+    reviewDue: "09/05/2023"
+}) }}
+'
+}) }}
+
+<hr />
+
+<h3>HTML - Vimeo</h3>
+{{ highlight({
+    html : '
+<div class="nhsuk-media">
+    <h2>Pellentesque sit amet nulla</h2>
+    <div class="nhsuk-media__description">
+      <p>Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus.</p>
+    </div>
+    <iframe class="vimeo" src="https://player.vimeo.com/video/226053498" title="Pellentesque sit amet nulla" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"></iframe>
+    <div class="nhsuk-media__info">
+      <div class="nhsuk-media__transcript">
+        <a href="javascript:void(0);">
+          <span class="nhsuk-media__show-text">Show transcript</span>
+          <span class="nhsuk-media__hide-text">Hide transcript</span>
+        </a>
+        <div class="nhsuk-media__transcript-text">
+          <p>Donec pulvinar sollicitudin massa, nec pulvinar turpis dictum maximus.</p>
+        </div>
+      </div>
+      <div class="nhsuk-media__reviews">
+        <p> Page last reviewed: 09/05/2022 </p>
+        <p> Next review due: 09/05/2023 </p>
+      </div>
+    </div>
+</div>
+'
+})
+}}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

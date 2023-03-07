@@ -8,7 +8,7 @@
 {%- from 'skip-link/macro.njk' import skipLink %}
 
 {# Notifications #}
-{%- from 'hee/blocks/scaffolding/notifications/globalalert/macro.njk' import globalAlert %}
+{%- from 'hee/blocks/scaffolding/notifications/banner/macro.njk' import banner %}
 {%- from 'hee/blocks/scaffolding/notifications/phasebanner/macro.njk' import phaseBanner %}
 
 {# Footer #}
@@ -106,7 +106,7 @@
         href: '#maincontent',
         text: 'Skip to main content'
       }) }}
-      {#{ globalAlert({
+      {#{ banner({
         customClass: 'hee-globalalert--black',
         heading: "Her Majesty Queen Elizabeth II",
         HTML: "<p>21 April 1926 to 8 September 2022</p><p><a href='https://www.hee.nhs.uk/news-blogs-events/news/her-majesty-queen-elizabeth-ii'>We join with the people across HEE and the NHS in mourning the death of Queen Elizabeth II</a></p>"
@@ -187,13 +187,19 @@
     </div>
     {% endblock %}
 
+    <div class="breadcrumbs">
+      {% block breadcrumbs %}
+        {# Breadcrumbs... #}
+      {% endblock %}
+    </div>
+
     {% block headerEnd %}
     <div class="site-notifications">
       {{ phaseBanner({
         tag: "Alpha",
         description: 'This is a new service – your <a class="nhsuk-link" href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.'
       }) }}
-      {#{ globalAlert({
+      {#{ banner({
         customClass: '',
         heading: "Coronavirus (COVID-19)",
         HTML: "<p><a href='https://www.nhs.uk/conditions/coronavirus-covid-19/'>Get the latest advice about coronavirus</a></p>"
@@ -203,11 +209,6 @@
 
     {% block main %}
     <main class="page {% block pageClass %}{% endblock %}" id="maincontent" role="main">
-      <div class="page__breadcrumbs">
-        {% block pageBreadcrumbs %}
-          {# Breadcrumbs... #}
-        {% endblock %}
-      </div>
       <div class="page__header">
         {% block pageHeader %}
           {# Hero... Microhero... Title #}

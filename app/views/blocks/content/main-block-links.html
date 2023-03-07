@@ -1,0 +1,209 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'main-block-links' %}
+{% set page_title = 'Block Links' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block breadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: basePath + "/",
+            text: "Home"
+        },
+        {
+            href: basePath + "/blocks",
+            text: "Blocks"
+        },
+        {
+            href: basePath + "/blocks/content",
+            text: "Content"
+        }
+    ],
+        href: basePath + "/blocks/" + page_url,
+      text: page_title
+    }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'blocks',
+    subarea: 'content'
+}) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Main</span>
+    <h1>{{ page_title }}</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+<p>Blue block links displayed in either a single or two column layout.</p>
+
+<h3>Example</h3>
+{{ example({
+    view: 'block',
+    url: basePath + '/blocks/content/examples/' + page_url,
+    height: '620'
+}) }}
+
+<hr />
+
+<h3>Macro - Two column</h3>
+{{ highlight({
+  html: '
+{{ blocklinks({
+    heading: "Learning 2 Columns",
+    HTML: "<p>Discover resources and information designed to support you on your learning journey</p>",
+    columns: "2",
+    links: [
+      {
+        "url": "/listing",
+        "label": "Learning Zone"
+      },
+      {
+        "url": "/listing",
+        "label": "Equality, Diversity and Inclusion"
+      },
+      {
+        "url": "/listing",
+        "label": "Talent Management Toolkit"
+      },
+      {
+        "url": "/listing",
+        "label": "Case studies"
+      }]
+    })
+}}
+  '
+}) }}
+
+<hr />
+
+<h3>HTML - Two column</h3>
+{{ highlight({
+  html : '
+<div class="nhsuk-blocklinks">
+    <div class="nhsuk-u-reading-width">
+      <h2>Learning 2 Columns</h2>
+      <p>Discover resources and information designed to support you on your learning journey</p>
+    </div>
+    <ul class="nhsuk-list-blocklinks nhsuk-list-blocklinks--two-columns">
+      <li>
+        <a href="/listing">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg> Learning Zone </a>
+      </li>
+      <li>
+        <a href="/listing">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg> Equality, Diversity and Inclusion </a>
+      </li>
+      <li>
+        <a href="/listing">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg> Talent Management Toolkit </a>
+      </li>
+      <li>
+        <a href="/listing">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg> Case studies </a>
+      </li>
+    </ul>
+</div>
+  '
+  }) 
+}}
+
+<hr />
+
+<h3>Macro - Single column</h3>
+{{ highlight({
+    html: '
+{{ blocklinks({
+    heading: "Learning 2 Columns",
+    HTML: "<p>Discover resources and information designed to support you on your learning journey</p>",
+    columns: "1",
+    links: [
+      {
+        "url": "/listing",
+        "label": "Learning Zone"
+      },
+      {
+        "url": "/listing",
+        "label": "Equality, Diversity and Inclusion"
+      },
+      {
+        "url": "/listing",
+        "label": "Talent Management Toolkit"
+      },
+      {
+        "url": "/listing",
+        "label": "Case studies"
+      }]
+    })
+}}
+'
+}) }}
+
+<hr />
+
+<h3>HTML - Single column</h3>
+{{ highlight({
+    html : '
+<div class="nhsuk-blocklinks">
+    <div class="nhsuk-u-reading-width">
+      <h2>Learning 1 Columns</h2>
+      <p>Discover resources and information designed to support you on your learning journey</p>
+    </div>
+    <ul class="nhsuk-list-blocklinks nhsuk-list-blocklinks--one-column">
+      <li>
+        <a href="/listing">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg> Learning Zone </a>
+      </li>
+      <li>
+        <a href="/listing">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg> Equality, Diversity and Inclusion </a>
+      </li>
+      <li>
+        <a href="/listing">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg> Talent Management Toolkit </a>
+      </li>
+      <li>
+        <a href="/listing">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg> Case studies </a>
+      </li>
+    </ul>
+</div>
+'
+})
+}}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

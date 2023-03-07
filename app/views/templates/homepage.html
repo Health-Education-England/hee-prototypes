@@ -5,7 +5,7 @@
 
 {% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
 
-{% block pageBreadcrumbs %}
+{% block breadcrumbs %}
   {{
     breadcrumb({
       items: [
@@ -53,15 +53,12 @@
   <h2>HTML</h2>
 {{ highlight({
   "html" : '<main class="page page--fullwidth" id="maincontent" role="main">
-  <div class="page__breadcrumbs">[ INTEMPLATE_BREADCRUMBS ]</div>
-  <div class="page__header">
+  <div class="page__header has-microhero">
     [ PAGE_HERO ]
   </div>
-  <div class="page__main">
-    <div class="nhsuk-width-container">
-      <div class="page__content">
-        [ CONTENT--MAIN_BLOCKS ]
-      </div>
+  <div class="page__main nhsuk-width-container">
+    <div class="page__content">
+      [ CONTENT--MAIN_BLOCKS ]
     </div>
   </div>
   <div class="page__footer">

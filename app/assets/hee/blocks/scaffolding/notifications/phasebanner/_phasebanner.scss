@@ -1,36 +1,43 @@
 /* NHSUK-HEE-PhaseBanner - swap to HEE-PhaseBanner */
-.nhsuk-hee-phasebanner {
+.hee-phasebanner {
+  border-bottom: 1px solid $nhsuk-border-color;
   padding-top: nhsuk-spacing(2);
   padding-bottom: nhsuk-spacing(2);
-  border-bottom: 1px solid $nhsuk-border-color;
 
-  .nhsuk-hee-phasebanner__content {
-    @include nhsuk-font(16);
-    margin: 0;
-  }
+  .hee-phasebanner__wrapper {
+    align-items: center;
+    display: flex;
 
-  .nhsuk-hee-phasebanner__tag {
-    display: inline-block;
-    vertical-align: middle;
-    padding: 8px 16px;
-    line-height: 1em;
-    color: #FFF;
-    margin-right: nhsuk-spacing(2);
-    background-color: $color_nhsuk-blue;
-    font-weight: bold;
-    text-transform: uppercase;
-    @include mq($until: desktop) {
-      line-height: 1.5;
+    .hee-phasebanner__tag {
+      background-color: $color_nhsuk-blue;
+      color: $color_nhsuk-white;
+      font-weight: bold;
+      line-height: 1em;
+      margin-right: nhsuk-spacing(3);
+      padding: 8px 16px;
+      text-transform: uppercase;
+
+      @include mq($until: desktop) {
+        line-height: 1.5;
+      }
+    }
+
+    .hee-phasebanner__content {
+      p {
+        @include nhsuk-font(16);
+        margin: 0;
+        margin-bottom: nhsuk-spacing(2);
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
   }
-
 }
 
-.nhsuk-hee-phasebanner--notag {
-  .nhsuk-hee-phasebanner__tag {
+.hee-phasebanner--notag {
+  .hee-phasebanner__tag {
     display: none!important;
   }
-}
-
-.nhsuk-hee-phasebanner--promo {
 }

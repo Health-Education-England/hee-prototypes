@@ -2,7 +2,9 @@
 
 {% block pageTitle %}Standard Content - Examples - NWP Prototype Kit{% endblock %}
 
-{% block pageBreadcrumbs %}
+{% block pageHeaderClass %}has-microhero{% endblock %}
+
+{% block breadcrumbs %}
 {{ 
     breadcrumb({
     items: [
@@ -18,21 +20,18 @@
 {% endblock %}
 
 {% block pageHeader %}
+  {{ microHero({
+    "imgURL": "/images/young-child-using-tablet-device.jpg"
+  }) }}
   <div class="nhsuk-width-container">
     <h1>Standard Content</h1>
     <span class="nhsuk-caption-xl">Caption</span>
-    <p class="nhsuk-lede-text">dsafasdfhkjsdahl</p>
+    <p class="nhsuk-lede-text"></p>
   </div>
 {% endblock %}
 
 {% block pageContent %}
-<article>
-  <p>NHS library staff in England may copy and share extracts from most printed and digital work in the following ways.</p>
-  {{ reviewDate({
-    "lastReview": "12 February 2017",
-    "nextReview": "1 February 2020"
-  }) }}
-  
+  <p class="nhsuk-lede-text">Pulvinar id lorem tincidunt porttitor non commodo in eu massa. Eget tempor vel sollicitudin aliquam euismod. Scelerisque nisl, vel eros, nunc condimentum donec.</p>
   {{ anchorLinks({
     "title": "On this page",
     "headings": "h2,h3,h4,h5,h6"  
@@ -93,6 +92,11 @@
     ]
   }) }}
 
+  {{ reviewDate({
+    "lastReview": "12 February 2017",
+    "nextReview": "1 February 2020"
+  }) }}
+
 {% endblock %}
 
 {% block pageRightbar %}
@@ -104,7 +108,7 @@
     }) 
   }#}
 
-  {#{ relatedNav({
+  {{ relatedNav({
       "heading": "Quick Links",
       "subsections": [{
         "links": [
@@ -131,7 +135,7 @@
         ]
       }]
     })
-  }#}
+  }}
 
   {{ relatedLinksCard({
       "heading": "Related Posts",
@@ -159,5 +163,49 @@
       ]
     })
   }}
+{% endblock %}
 
+{% block pageFeature %}
+  {% set items = [
+    {
+      title: "Content Title",
+      href: "#",
+      details: [
+      {
+        label: "Publish date:",
+        value: "07 September 2022"
+      }
+    ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada."
+    },
+    {
+      title: "Content Title",
+      href: "#",
+      details: [
+      {
+        label: "Publish date:",
+        value: "07 September 2022"
+      }
+    ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada."
+    },
+    {
+      title: "Content Title",
+      href: "#",
+      details: [
+      {
+        label: "Publish date:",
+        value: "07 September 2022"
+      }
+    ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada."
+    }
+  ]
+  %}
+
+  <div class="nhsuk-width-container">
+    <h2>Related content</h2>
+    <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet. Nunc turpis vel aliquam lacus arcu. Sodales nullam id lectus orci quis sed. dsf</p>
+    {{ miniListing(items) }}
+  </div>
 {% endblock %}

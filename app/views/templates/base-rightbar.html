@@ -5,7 +5,7 @@
 
 {% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
 
-{% block pageBreadcrumbs %}
+{% block breadcrumbs %}
 {{ 
   breadcrumb({
   items: [
@@ -44,7 +44,6 @@
 
 {{ highlight({
   "html" : '<article class="page page--rightbar" id="maincontent" role="main">
-  <div class="page__breadcrumbs">[ BREADCRUMBS ]</div>
   <div class="page__header">
     <div class="nhsuk-width-container">
       [ GO_BACK ]
@@ -58,19 +57,17 @@
       [ ENDIF ]
     </div>
   </div>
-  <div class="nhsuk-width-container">
-    <div class="page__layout">
-      <div class="page__main">
-        [ TABLEOFCONTENTS ]
-        <div class="page__content">
-          [ CONTENT--MAIN_BLOCKS ]
-        </div>
-        [ PAGE_LASTUPDATED | REVIEWED_NEXTLAST ]
+  <div class="page__layout nhsuk-width-container">
+    <div class="page__main">
+      [ TABLEOFCONTENTS ]
+      <div class="page__content">
+        [ CONTENT--MAIN_BLOCKS ]
       </div>
-      <aside class="page__rightbar">
-        [ CONTENT--SIDEBAR_BLOCKS ]
-      </aside>
+      [ PAGE_LASTUPDATED | REVIEWED_NEXTLAST ]
     </div>
+    <aside class="page__rightbar">
+      [ CONTENT--SIDEBAR_BLOCKS ]
+    </aside>
   </div>
   <div class="page__footer">
     [ IF MINIHUB ]

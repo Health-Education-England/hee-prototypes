@@ -8,7 +8,7 @@
 {%- from 'skip-link/macro.njk' import skipLink %}
 
 {# Notifications #}
-{%- from 'hee/blocks/scaffolding/notifications/globalalert/macro.njk' import globalAlert %}
+{%- from 'hee/blocks/scaffolding/notifications/banner/macro.njk' import banner %}
 {%- from 'hee/blocks/scaffolding/notifications/phasebanner/macro.njk' import phaseBanner %}
 
 {# Footer #}
@@ -26,6 +26,7 @@
 {%- from 'hee/blocks/furniture/collections/hee-listing/macro.njk' import listingLayout %}
 {%- from 'hee/blocks/furniture/collections/hee-listing-item/macro.njk' import listingItem %}
 {%- from 'hee/blocks/furniture/collections/hee-filter/macro.njk' import filter %}
+{%- from 'hee/blocks/furniture/collections/hee-filtertag/macro.njk' import filterTag %}
 
 {%- from 'pagination/macro.njk' import pagination %}
 
@@ -45,6 +46,7 @@
 {# To Sort #}
 {# HEE Components #}
 {%- from 'components/hee/hee-anchorlinks/macro.njk' import anchorLinks %}
+{%- from 'components/hee/hee-appliesto/macro.njk' import appliesTo %}
 {%- from 'components/hee/hee-media/macro.njk' import media %}
 {%- from 'components/hee/hee-navmap/macro.njk' import navMap %}
 {%- from 'components/hee/hee-relatednav/macro.njk' import relatedNav %}
@@ -54,12 +56,14 @@
 {%- from 'components/hee/hee-tabs/macro.njk' import tabs %}
 {%- from 'components/hee/hee-timeline/macro.njk' import timeline %}
 {%- from 'components/nhsuk-hee/nhsuk-hee-blocklinks/macro.njk' import blocklinks %}
+{%- from 'hee/blocks/scaffolding/back-to-top/macro.njk' import backToTop %}
 
 {# NHSUK Components #}
 {%- from 'action-link/macro.njk' import actionLink %}
 {%- from 'back-link/macro.njk' import backLink %}
 {%- from 'button/macro.njk' import button %}
 {%- from 'card/macro.njk' import card %}
+{%- from 'care-card/macro.njk' import careCard %}
 {%- from 'checkboxes/macro.njk' import checkboxes %}
 {%- from 'contents-list/macro.njk' import contentsList %}
 {%- from 'images/macro.njk' import image %}
@@ -102,14 +106,6 @@
     {% block headCSS %}
       <link href="{{ basePath }}/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
       <link href="{{ basePath }}/css/hee.css" rel="stylesheet" />
-      <style>
-      .example {}
-      .example--template {}
-      .example--blocks {
-        padding: 1em;
-        background-color: #f0f4f5;
-      }
-      </style>
     {% endblock %}
 
     {% block headIcons %}
@@ -126,7 +122,7 @@
     {% endblock %}
   </head>
 
-  <body class="{{ bodyClasses }}">
+  <body>
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
     {% block bodyStart %}
     {% endblock %}
@@ -139,6 +135,17 @@
 
     {% block headerEnd %}
     {% endblock %}
+
+    <div class="breadcrumbs">
+      {% block breadcrumbs %}
+      {% endblock %}
+    </div>
+
+    <div class="banners">
+      {% block banners %}
+        {# Mourning and Alert banners #}
+      {% endblock %}
+    </div>
 
     {% block main %}
     {% endblock %}
