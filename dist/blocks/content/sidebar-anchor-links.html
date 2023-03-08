@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Region Picker - Templates - NWP Prototype Kit</title>
+  <title>Anchor Links - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -60,9 +60,9 @@
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks">Blocks</a></li>
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/content">Content</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/main-region-picker">Region Picker</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/sidebar-anchor-links">Anchor Links</a></li>
         </ol>
-        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/main-region-picker">Back to Region Picker</a></p>
+        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/sidebar-anchor-links">Back to Anchor Links</a></p>
       </div>
     </nav>
   </div>
@@ -117,97 +117,60 @@
         </div>
         <div class="page__main">
           <div class="page__header">
-            <span class="nhsuk-caption-xl">Main</span>
-            <h1>Region Picker</h1>
+            <span class="nhsuk-caption-xl">Sidebar</span>
+            <h1>Anchor Links</h1>
             <p class="nhsuk-lede-text"></p>
           </div>
-          <p>Allows visitors to view region based content by clicking an area an SVG based map.</p>
-          <h3>Example</h3>
-          <div class="prototype__example block">
-            <a href="/hee-prototypes/blocks/content/examples/main-region-picker.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
+          <p>Generates a list of anchor links within the page right hand sidebar, based on the structure of main page content.</p>
+          <p>Comes in two variants:</p>
+          <ul>
+            <li><strong>Anchor links (auto generated)</strong></li>
+            <li><strong>Table of Contents (based on custom heading tags)</strong></li>
+          </ul>
+          <h3>Example - Anchor links</h3>
+          <div class="prototype__example scaled" style="height:223.52941176470588px;">
+            <a href="/hee-prototypes/blocks/content/examples/sidebar-anchor-links.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
             <div class="thumbnail">
-              <iframe src="/hee-prototypes/blocks/content/examples/main-region-picker.html" height="620"></iframe>
+              <iframe src="/hee-prototypes/blocks/content/examples/sidebar-anchor-links.html" height="380"></iframe>
             </div>
           </div>
           <hr />
-          <h3>Macro</h3>
+          <h3>Example - Table of Contents</h3>
+          <div class="prototype__example scaled" style="height:223.52941176470588px;">
+            <a href="/hee-prototypes/blocks/content/examples/sidebar-anchor-links-toc.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
+            <div class="thumbnail">
+              <iframe src="/hee-prototypes/blocks/content/examples/sidebar-anchor-links-toc.html" height="380"></iframe>
+            </div>
+          </div>
+          <hr />
+          <h3>Macro - Anchor links</h3>
           <pre><code>
-{{ navMap({
-    src: &quot;/images/nav-maps/dental-regions.svg&quot;,
-    caption: {
-      items: [
-        {
-          id: &quot;lk&quot;,
-          url: &quot;#&quot;,
-          text: &quot;London and Kent, Surrey and Sussex (KSS)&quot;
-        },
-        {
-          id: &quot;me&quot;,
-          url: &quot;#&quot;,
-          text: &quot;Midlands and the East&quot;
-        },
-        {
-          id: &quot;nenc&quot;,
-          url: &quot;#&quot;,
-          text: &quot;North East and North Cumbria&quot;
-        },
-        {
-          id: &quot;nw&quot;,
-          url: &quot;#&quot;,
-          text: &quot;North West&quot;
-        },
-        {
-          id: &quot;sw&quot;,
-          url: &quot;#&quot;,
-          text: &quot;South West&quot;
-        },
-        {
-          id: &quot;tvw&quot;,
-          url: &quot;#&quot;,
-          text: &quot;Thames Valley and Wessex&quot;
-        },
-        {
-          id: &quot;yh&quot;,
-          url: &quot;#&quot;,
-          text: &quot;Yorkshire and the Humber&quot;
-        }
-      ]
-    }
-}) }}
+{{ anchorlinks({
+  title: &quot;On this page&quot;,
+  headings: &quot;h2,h3,h4,h5,h6&quot;
+  })
+}}
   </code></pre>
           <hr />
-          <h3>HTML</h3>
-          <pre><code>
-&lt;figure class=&quot;nhsuk-map&quot;&gt;
-    &lt;figcaption class=&quot;nhsuk-map__caption&quot;&gt;
-      &lt;ul id=&quot;regionList&quot;&gt;
-        &lt;li&gt;
-          &lt;a id=&quot;lk&quot; href=&quot;#&quot;&gt; London and Kent, Surrey and Sussex (KSS) &lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;a id=&quot;me&quot; href=&quot;#&quot;&gt; Midlands and the East &lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;a id=&quot;nenc&quot; href=&quot;#&quot; class=&quot;&quot;&gt; North East and North Cumbria &lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;a id=&quot;nw&quot; href=&quot;#&quot;&gt; North West &lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;a id=&quot;sw&quot; href=&quot;#&quot;&gt; South West &lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;a id=&quot;tvw&quot; href=&quot;#&quot;&gt; Thames Valley and Wessex &lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;a id=&quot;yh&quot; href=&quot;#&quot;&gt; Yorkshire and the Humber &lt;/a&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/figcaption&gt;
-    &lt;object class=&quot;nhsuk-map__image&quot; data=&quot;/images/nav-maps/dental-regions.svg&quot; type=&quot;image/svg+xml&quot; tabindex=&quot;-1&quot;&gt;
-    &lt;/object&gt;
-&lt;/figure&gt;
+          <h3>HTML - Anchor links</h3>
+          <pre><code>&lt;div class=&quot;hee-anchorlinks&quot; data-headings=&quot;h2,h3,h4,h5,h6&quot;&gt;
+    &lt;h2 data-anchorlinksignore=&quot;true&quot;&gt;On this page&lt;/h2&gt;
+&lt;/div&gt;
   </code></pre>
+          <hr />
+          <h3>Macro - Table of Contents</h3>
+          <pre><code>
+{{ anchorLinks({
+  title: &quot;Table of Contents&quot;,
+  toc: true
+  })
+}}
+</code></pre>
+          <hr />
+          <pre><code>&lt;div class=&quot;hee-anchorlinks&quot; data-toc-js=&quot;true&quot;&gt;
+    &lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;/div&gt;
+</code></pre>
         </div>
       </div>
     </div>
