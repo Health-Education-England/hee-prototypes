@@ -22,3 +22,12 @@
     padding: 48px 0 88px;
   }
 }
+
+.nhsuk-hero--image {
+  .nhsuk-hero__overlay {
+    @include mq($from: tablet) {
+      height: 380px;
+    }
+  }
+}
+

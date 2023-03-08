@@ -12,15 +12,28 @@
     .hee-sidebarlinks__content {
       padding: 32px;
     }
+
+    .hee-sidebarlinks__heading {
+      @include mq($from: tablet) {
+        @include nhsuk-responsive-margin(3, 'bottom');
+      }
+    }
+
     .hee-sidebarlinks__list {
       list-style-type: none;
       padding: 0;
       margin: 0;
-      li::last-of-type {
+
+      li {
+        @include nhsuk-responsive-margin(3, 'bottom');
+      }
+
+      li:last-of-type {
         margin-bottom: 0;
       }
     }
     .hee-sidebarlinks__link {
+      @include nhsuk-typography-responsive(16);
       text-decoration: none;
       &:hover {
         text-decoration: underline;
