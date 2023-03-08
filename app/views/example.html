@@ -33,6 +33,7 @@
 {# CONTENT BLOCKS #}
 
 {# Main #}
+{%- from 'hee/blocks/content/main/applies-to/macro.njk' import appliesTo %}
 {%- from 'hee/blocks/content/main/card--author/macro.njk' import authorCard %}
 {%- from 'hee/blocks/content/main/hee-google-map/macro.njk' import googleMap %}
 {%- from 'hee/blocks/content/sidebar/card--person/macro.njk' import personCard %}
@@ -46,7 +47,6 @@
 {# To Sort #}
 {# HEE Components #}
 {%- from 'hee/blocks/content/sidebar/anchorlinks/macro.njk' import anchorLinks %}
-{%- from 'components/hee/hee-appliesto/macro.njk' import appliesTo %}
 {%- from 'components/hee/hee-media/macro.njk' import media %}
 {%- from 'components/hee/hee-navmap/macro.njk' import navMap %}
 {%- from 'components/hee/hee-relatednav/macro.njk' import relatedNav %}
