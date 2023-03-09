@@ -9,7 +9,15 @@
       }
 
       h1, p, span {
-        max-width: 66.6667%;
+        @include mq($from: tablet) {
+          max-width: 66.6667%;
+        }
+      }
+
+      .nhsuk-hero {
+        h1, p, span {
+          max-width: 100%;
+        }
       }
   }
   .page__layout {
@@ -52,12 +60,3 @@
     }
   }
 }
-
-.page--template-standard {}
-.page--template-minihub {}
-.page--template-sectionhome {}
-.page--single-news {}
-.page--single-blog {}
-.page--single-publication {}
-.page--single-event {}
-.page--template-legal {}
