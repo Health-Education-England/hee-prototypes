@@ -1,0 +1,11 @@
+{% extends "example-blocks.html" %}
+
+{% block main %}
+  <div class="nhsuk-width-container">
+    {{ searchForm({
+      label: "Enter a search term",
+      placeholder: "Type search here",
+      submitLabel: "Submit"
+    }) }}
+  </div>
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends "example-template-fullwidth.html" %}
+
+{% set page_url = 'search-listing' %}
+{% set page_title = 'Search results' %}
+
+{% block pageClass %}page--search{% endblock %}
+
+{% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
+
+{% block breadcrumbs %}
+  {{
+    breadcrumb({
+      items: [
+        {
+          href: basePath + "/",
+          text: "Home"
+        },
+        {
+          href: basePath + "/templates",
+          text: "Templates"
+        },
+        {
+          href: basePath + "/templates/examples",
+          text: "Examples"
+        }
+      ],
+      href: basePath + "/templates/examples/"+page_url,
+      text: page_title
+    })
+  }}
+{% endblock %}
+
+{% block pageHeader %}
+<div class="nhsuk-width-container">
+  <h1>Search results</h1>
+
+  <form method="get" action="">
+    <div class="nhsuk-form-group nhsuk-header__search-form--search-results">
+      <label class="nhsuk-label nhsuk-u-visually-hidden" for="search-field">Enter a search term</label>
+      <input class="nhsuk-input nhsuk-search__input--search-results" type="search" name="q" autocomplete="off" id="search-field" value="test">
+      <button class="nhsuk-search__submit--search-results" type="submit">
+        <span class="nhsuk-u-visually-hidden">Submit</span>
+        <svg class="nhsuk-icon nhsuk-icon__search--search-results" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+        </svg>
+      </button>
+    </div>
+  </form>
+</div>
+{% endblock %}
+
+{% block pageMain %}
+  <div class="page__main nhsuk-width-container">
+    {% set items = [] %}
+    {% for i in range(0, 10) -%}
+      {% set item = {
+        title: "Assessment of Dental Core competency #" + loop.index,
+        subtitle: "Dental and Maxillofacial Radiology recruitment",
+        href: "#",
+        url: "https://dental.hee.nhs.uk/dental-trainee-recruitment/dental-specialty-training/oral-medicine/overview-of-oral-medicine/assessment-of-dental-core-competency",
+        summary: "Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1)",
+        attributes: [
+          {
+            label: "Date:",
+            value: "21 July 2021"
+          },
+          {
+            label: "Location:",
+            value: "Birmingham"
+          }
+        ],
+        lastUpdated: "Page last updated: 17 January 2023"
+      } %}
+      {% set items = (items.push(item), items) %}
+    {% endfor %}
+
+    {{ searchListing({
+      count: "187",
+      results: items,
+      emptyMessage: "No results",
+      showPagination: true
+    }) }}
+  </div>
+{% endblock %}
