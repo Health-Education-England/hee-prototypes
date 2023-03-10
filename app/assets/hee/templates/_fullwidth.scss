@@ -5,6 +5,10 @@
   }
   .page__main {
     padding-bottom: nhsuk-spacing(6);
+
+    @include mq($from: tablet) {
+      padding-bottom: nhsuk-spacing(7);
+    }
   }
 }
 
