@@ -138,6 +138,53 @@
 {% endblock %}
 
 {% block pageRightbar %}
+  {{ relatedLinksCard({
+    heading: "Pages related to this programme",
+    itemBorder: true,
+    links: [
+      {
+        label: "Overview",
+        url: "#"
+      },
+      {
+        label: "Recruitment timelines",
+        url: "#"
+      },
+      {
+        label: "Eligibility",
+        url: "#"
+      },
+      {
+        label: "Applying",
+        url: "#"
+      },
+      {
+        label: "Shortlisting",
+        url: "#"
+      },
+      {
+        label: "Interviews and selection",
+        url: "#"
+      },
+      {
+        label: "Preferencing",
+        url: "#"
+      },
+      {
+        label: "Person specification",
+        url: "#"
+      },
+      {
+        label: "Curriculum",
+        url: "#"
+      },
+      {
+        label: "Current posts",
+        url: "#"
+      }
+    ]
+  })}}
+
   {{ ctaCard({
     title: "Apply for surgery on Oriel",
     text: "Visit Oriel",

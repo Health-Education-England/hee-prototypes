@@ -1,32 +1,36 @@
 # Related links card
-An extension of [NHS digital service manual - Card](https://service-manual.nhs.uk/design-system/components/card) component in order to accommodate it to render a collection of links.
+A sidebar block used to display links related to the content being viewed.
 
-- Related pages / links
-- Downloads
-- Resources (external)
+There are two style variants for this component:
+
+- Without borders below each link item
+- With borders below each item
 
 ## Quick start examples
 
-### Related links card with heading and links
+### Related links card - WITHOUT item borders
 
 #### HTML markup
 
 ```html
-<div class="nhsuk-card">
-  <div class="nhsuk-card__content">
-    <h3 class="nhsuk-card__heading">Related Posts</h3>
-    <ul class="nhsuk-related-links-card__list">
+<div class="hee-card hee-related-links">
+  <div class="hee-related-links__content">
+    <h3 class="hee-related-links__heading">Pages related to this programme</h3>
+    <ul class="hee-related-links__list">
       <li>
-        <a class="nhsuk-related-links-card__link" href="#">Expert searching</a>
+        <a class="hee-related-links__link" href="#">Overview</a>
       </li>
       <li>
-        <a class="nhsuk-related-links-card__link" href="#">Search bank</a>
+        <a class="hee-related-links__link" href="#">Recruitment timelines</a>
       </li>
       <li>
-        <a class="nhsuk-related-links-card__link" href="#">Costing</a>
+        <a class="hee-related-links__link" href="#">Eligibility</a>
       </li>
       <li>
-        <a class="nhsuk-related-links-card__link" href="#">Search training</a>
+        <a class="hee-related-links__link" href="#">Applying</a>
+      </li>
+      <li>
+        <a class="hee-related-links__link" href="#">Current posts</a>
       </li>
     </ul>
   </div>
@@ -36,53 +40,58 @@ An extension of [NHS digital service manual - Card](https://service-manual.nhs.u
 #### Nunjucks macro
 
 ```
-{%- from 'related-links-card/macro.njk' import relatedLinksCard %}
-
-{{ relatedLinksCard({
-    "heading": "Related Posts",
-    "links": [
+  {{ relatedLinksCard({
+    heading: "Pages related to this programme",
+    links: [
       {
-        "url"  : "#",
-        "label" : "Expert searching"
+        label: "Overview",
+        url: "#"
       },
       {
-        "url" : "#",
-        "label" : "Search bank"
+        label: "Recruitment timelines",
+        url: "#"
       },
       {
-        "url" : "#",
-        "label" : "Costing"
+        label: "Eligibility",
+        url: "#"
       },
       {
-        "url"  : "#",
-        "label" : "Search training"
+        label: "Applying",
+        url: "#"
+      },
+      {
+        label: "Current posts",
+        url: "#"
       }
     ]
-  })
-}}
+  })}}
 ```
 
 ---
 
-### Related links card with links ONLY
+### Related links card - WITH item borders
 
 #### HTML markup
 
 ```html
-<div class="nhsuk-card">
-  <div class="nhsuk-card__content">
-    <ul class="nhsuk-related-links-card__list">
+<div class="hee-card hee-related-links theme__item-border">
+  <div class="hee-related-links__content">
+    <h3 class="hee-related-links__heading">Pages related to this programme</h3>
+    <ul class="hee-related-links__list">
       <li>
-        <a class="nhsuk-related-links-card__link" href="#">Expert searching</a>
+        <a class="hee-related-links__link" href="#">Overview</a>
       </li>
       <li>
-        <a class="nhsuk-related-links-card__link" href="#">Search bank</a>
+        <a class="hee-related-links__link" href="#">Recruitment timelines</a>
       </li>
       <li>
-        <a class="nhsuk-related-links-card__link" href="#">Costing</a>
+        <a class="hee-related-links__link" href="#">Eligibility</a>
       </li>
       <li>
-        <a class="nhsuk-related-links-card__link" href="#">Search training</a>
+        <a class="hee-related-links__link" href="#">Applying</a>
+      </li>
+      <li>
+        <a class="hee-related-links__link" href="#">Current posts</a>
       </li>
     </ul>
   </div>
@@ -92,29 +101,32 @@ An extension of [NHS digital service manual - Card](https://service-manual.nhs.u
 #### Nunjucks macro
 
 ```
-{%- from 'related-links-card/macro.njk' import relatedLinksCard %}
-
-{{ relatedLinksCard({
-    "links": [
+  {{ relatedLinksCard({
+    heading: "Pages related to this programme",
+    itemBorder: true,
+    links: [
       {
-        "url"  : "#",
-        "label" : "Expert searching"
+        label: "Overview",
+        url: "#"
       },
       {
-        "url" : "#",
-        "label" : "Search bank"
+        label: "Recruitment timelines",
+        url: "#"
       },
       {
-        "url" : "#",
-        "label" : "Costing"
+        label: "Eligibility",
+        url: "#"
       },
       {
-        "url"  : "#",
-        "label" : "Search training"
+        label: "Applying",
+        url: "#"
+      },
+      {
+        label: "Current posts",
+        url: "#"
       }
     ]
-  })
-}}
+  })}}
 ```
 
 ---
@@ -123,11 +135,10 @@ An extension of [NHS digital service manual - Card](https://service-manual.nhs.u
 
 The relatedNav macro takes the following arguments:
 
-| Name                | Type     | Required  | Description  |
-| --------------------|----------|-----------|--------------|
-| **heading**         | string   | No        | Text heading of the related-links-card component. |
-| **links**           | array    | Yes       | Array of navigation links for use in the related-links-card component. |
-| **links[].url**     | string   | Yes       | The href of a navigation item in the related-links-card component. |
-| **links[].label**   | string   | Yes       | The label of a navigation item in the related-links-card component. |
-
-If you are using Nunjucks macros in production be aware that using `html` arguments, or ones ending with `html` can be a [security risk](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting). Read more about this in the [Nunjucks documentation](https://mozilla.github.io/nunjucks/api.html#user-defined-templates-warning).
+| Name                | Type    | Required  | Description                                                            |
+| --------------------|---------|-----------|------------------------------------------------------------------------|
+| **heading**         | string  | No        | Text heading of the related-links-card component.                      |
+| **itemBorder**      | boolean | No        | Flag to style the item borders                                         |
+| **links**           | array   | Yes       | Array of navigation links for use in the related-links-card component. |
+| **links[].url**     | string  | Yes       | The href of a navigation item in the related-links-card component.     |
+| **links[].label**   | string  | Yes       | The label of a navigation item in the related-links-card component.    |
