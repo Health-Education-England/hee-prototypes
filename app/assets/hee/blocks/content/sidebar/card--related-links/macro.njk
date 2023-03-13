@@ -1,14 +1,14 @@
 {% macro relatedLinksCard(params) %}
-  <div class="hee-card hee-related-links {{ "theme__item-border" if params.itemBorder === true }}">
-    <div class="hee-related-links__content">
+  <div class="hee-card hee-card--related-links {{ "theme__item-border" if params.itemBorder === true }}">
+    <div class="hee-card--related-links__content">
       {%- if params.heading %}
-        <h3 class="hee-related-links__heading">{{ params.heading }}</h3>
+        <h3 class="hee-card--related-links__heading">{{ params.heading }}</h3>
       {% endif -%}
 
-      <ul class="hee-related-links__list">
+      <ul class="hee-card--related-links__list">
         {%- for item in params.links %}
           <li>
-            <a class="hee-related-links__link" href="{{item.url}}">{{item.label}}</a>
+            <a class="hee-card--related-links__link" href="{{item.url}}">{{item.label}}</a>
           </li>
         {%- endfor %}
       </ul>
