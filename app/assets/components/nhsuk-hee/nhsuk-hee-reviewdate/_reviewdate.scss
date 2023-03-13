@@ -1,2 +1,8 @@
-.nhsuk-hee-reviewdate {
+.nhsuk-review-date {
+  margin-bottom: nhsuk-spacing(4);
+  margin-top: nhsuk-spacing(2);
+
+  @include mq($from: desktop) {
+    margin-bottom: 0;
+  }
 }

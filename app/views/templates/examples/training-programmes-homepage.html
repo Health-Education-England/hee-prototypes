@@ -7,6 +7,8 @@
 
 {% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
 
+{% block pageHeaderClass %}has-nhsukhero{% endblock %}
+
 {% block pageBreadcrumbs %}
   {{
     breadcrumb({
@@ -35,210 +37,161 @@
 {% endblock %}
 
 {% block pageContent %}
-  <section class="nhsuk-section__content">
-    <p class="nhsuk-body-l">Lorem ipsum dolor sit amet consectetur. A eu vitae commodo laoreet nulla vitae bibendum. Ipsum neque mauris porta sit dis cras elementum nibh.</p>
+  <p class="nhsuk-body-l">Lorem ipsum dolor sit amet consectetur. A eu vitae commodo laoreet nulla vitae bibendum. Ipsum neque mauris porta sit dis cras elementum nibh.</p>
 
-    <h2>Overview</h2>
-    <p>Working with The Royal College of Surgeons, Health Education England provides world-class education, assessment and development to 30,000 surgeons.</p>
-    <p>As your career progresses from medical school student through to surgeon, you will go through a number of stages that all have a level of competitive entry.</p>
+  <h2 class="toc_h2">Overview</h2>
+  <p>Working with The Royal College of Surgeons, Health Education England provides world-class education, assessment and development to 30,000 surgeons.</p>
+  <p>As your career progresses from medical school student through to surgeon, you will go through a number of stages that all have a level of competitive entry.</p>
 
-    <h2>Pathways</h2>
-    <p>The training pathway is the most direct route through surgical training. Following each training stage, particularly in the early years, you will need to be selected into the next stage.</p>
+  <h2 class="toc_h2">Pathways</h2>
+  <p>The training pathway is the most direct route through surgical training. Following each training stage, particularly in the early years, you will need to be selected into the next stage.</p>
 
-    {{ image({
-      src: basePath + "/images/pathway-graph.png",
-      alt: "Nulla vitae est vel metus aliquam pharetra",
-      caption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nec tellus auctor viverra egestas leo. Morbi eu elit diam fusce."
-    }) }}
+  {{ image({
+    src: basePath + "/images/pathway-graph.png",
+    alt: "Nulla vitae est vel metus aliquam pharetra",
+    caption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nec tellus auctor viverra egestas leo. Morbi eu elit diam fusce."
+  }) }}
 
-    <h3>Run-through and uncoupled</h3>
-    <p>Sollicitudin eu at arcu aliquam, non dui aliquet. Massa urna ultrices ullamcorper imperdiet velit ut a. Integer scelerisque nulla rhoncus nunc et. Et quis dui aliquam sapien nulla lobortis dictumst sapien, dolor. Est lectus volutpat lacus lorem. Semper duis dictumst ipsum diam. Sapien, leo amet erat arcu blandit. Varius viverra sit luctus viverra. Bibendum sed at penatibus odio erat</p>
+  <h3 class="toc_h3">Run-through and uncoupled</h3>
+  <p>Sollicitudin eu at arcu aliquam, non dui aliquet. Massa urna ultrices ullamcorper imperdiet velit ut a. Integer scelerisque nulla rhoncus nunc et. Et quis dui aliquam sapien nulla lobortis dictumst sapien, dolor. Est lectus volutpat lacus lorem. Semper duis dictumst ipsum diam. Sapien, leo amet erat arcu blandit. Varius viverra sit luctus viverra. Bibendum sed at penatibus odio erat</p>
 
-    <h3>Run-through posts (ST1-ST7)</h3>
-    <p>For some specialties training is through a run-through programme. You only have to apply once, at the beginning of the programme, and are recruited for the full duration of the specialty training.</p>
+  <h3 class="toc_h3">Run-through posts (ST1-ST7)</h3>
+  <p>For some specialties training is through a run-through programme. You only have to apply once, at the beginning of the programme, and are recruited for the full duration of the specialty training.</p>
 
-    <h3>Uncoupled posts (CT1, CT2, ST3-ST7)</h3>
-    <p>For some specialties training is ran as an uncoupled programme, meaning once you have completed your core training (CT1, CT2) you will be required to re-apply for ST3 onwards.</p>
+  <h3 class="toc_h3">Uncoupled posts (CT1, CT2, ST3-ST7)</h3>
+  <p>For some specialties training is ran as an uncoupled programme, meaning once you have completed your core training (CT1, CT2) you will be required to re-apply for ST3 onwards.</p>
 
-    <h2>Training routes</h2>
-    <h3>Core specialty Training (CT1, CT2 (CT3))</h3>
-    <p>Felis vel aliquet in metus fermentum. Sit morbi fusce interdum luctus sodales. Amet platea sapien magna id. Dignissim volutpat nec odio platea consequat cras consequat euismod. Egestas in aliquam sed pellentesque. Sapien, varius consectetur donec habitant sed pellentesque sed. Adipiscing tortor, nibh ut mauris nibh phasellus augue volutpat aliquet.</p>
-    {{ actionLink({
-      text: "Core surgery",
-      href: "#"
-    }) }}
+  <h2 class="toc_h2">Training routes</h2>
+  <h3>Core specialty Training (CT1, CT2 (CT3))</h3>
+  <p>Felis vel aliquet in metus fermentum. Sit morbi fusce interdum luctus sodales. Amet platea sapien magna id. Dignissim volutpat nec odio platea consequat cras consequat euismod. Egestas in aliquam sed pellentesque. Sapien, varius consectetur donec habitant sed pellentesque sed. Adipiscing tortor, nibh ut mauris nibh phasellus augue volutpat aliquet.</p>
+  {{ actionLink({
+    text: "Core surgery",
+    href: "#"
+  }) }}
 
-    <h3>Higher specialty Training (ST3-ST7 (ST8))</h3>
-    <p>Felis vel aliquet in metus fermentum. Sit morbi fusce interdum luctus sodales. Amet platea sapien magna id. Dignissim volutpat nec odio platea consequat cras consequat euismod. Egestas in aliquam sed pellentesque. Sapien, varius consectetur donec habitant sed pellentesque sed. Adipiscing tortor, nibh ut mauris nibh phasellus augue volutpat aliquet.</p>
-    {{ actionLink({
-      text: "Higher surgery",
-      href: "#"
-    }) }}
+  <h3 class="toc_h3">Higher specialty Training (ST3-ST7 (ST8))</h3>
+  <p>Felis vel aliquet in metus fermentum. Sit morbi fusce interdum luctus sodales. Amet platea sapien magna id. Dignissim volutpat nec odio platea consequat cras consequat euismod. Egestas in aliquam sed pellentesque. Sapien, varius consectetur donec habitant sed pellentesque sed. Adipiscing tortor, nibh ut mauris nibh phasellus augue volutpat aliquet.</p>
+  {{ actionLink({
+    text: "Higher surgery",
+    href: "#"
+  }) }}
 
-    <h4>Types of higher specialty training</h4>
-    {{ blocklinks({
-        columns: "1",
-        links: [
-          {
-            url: "#",
-            label: "Cardiothoracic Surgery"
-          },
-          {
-            url: "#",
-            label: "General Surgery"
-          },
-          {
-            url: "#",
-            label: "Neurosurgery"
-          },
-          {
-            url: "#",
-            label: "Oral & Maxillofacial Surgery"
-          },
-          {
-            url: "#",
-            label: "Otolaryngology Surgery"
-          },
-          {
-            url: "#",
-            label: "Paediatric Surgery"
-          },
-          {
-            url: "#",
-            label: "Plastic Surgery"
-          },
-          {
-            url: "#",
-            label: "Trauma & Orthopaedics"
-          },
-          {
-            url: "#",
-            label: "Urology"
-          },
-          {
-            url: "#",
-            label: "Vascular Surgery"
-          }
-        ]
-      })
-    }}
-
-    <h2>Support</h2>
-    <p>Lorem ipsum dolor sit amet consectetur. Velit arcu consectetur enim eget eget. Pellentesque eget sem feugiat ut erat. Commodo ante ultrices dui etiam et cras velit euismod diam. Aliquam risus scelerisque.</p>
-
-    <h3>In-training support</h3>
-    <p>Felis vel aliquet in metus fermentum. Sit morbi fusce interdum luctus sodales. Amet platea sapien magna id. Dignissim volutpat nec odio platea consequat cras consequat euismod. Egestas in aliquam sed pellentesque. Sapien, varius consectetur donec habitant sed pellentesque sed. Adipiscing tortor, nibh ut mauris nibh phasellus augue volutpat aliquet.</p>
-    {{ actionLink({
-      text: "In-training support",
-      href: "#"
-    }) }}
-
-    <h3>Professional Support and Wellbeing (PSW)</h3>
-    <p>Felis vel aliquet in metus fermentum. Sit morbi fusce interdum luctus sodales. Amet platea sapien magna id. Dignissim volutpat nec odio platea consequat cras consequat euismod. Egestas in aliquam sed pellentesque. Sapien, varius consectetur donec habitant sed pellentesque sed. Adipiscing tortor, nibh ut mauris nibh phasellus augue volutpat aliquet.</p>
-    {{ actionLink({
-      text: "Professional Support and Wellbeing (PSW)",
-      href: "#"
-    }) }}
-
-    <h2>Regions</h2>
-    <p>Pellentesque id posuere sapien vestibulum, quam pellentesque at libero. Aliquam at id fames hendrerit in vulputate orci aliquet augue. Massa penatibus sociis et nisl. Enim aliquam mauris suscipit turpis non hendrerit felis.</p>
-    {{ navMap({
-      src: basePath + "/images/nav-maps/dental-regions.svg",
-      caption: {
-        items: [
-          {
-            id: "lk",
-            url: "#",
-            text: "London and Kent, Surrey and Sussex (KSS)"
-          },
-          {
-            id: "me",
-            url: "#",
-            text: "Midlands and the East"
-          },
-          {
-            id: "nenc",
-            url: "#",
-            text: "North East and North Cumbria"
-          },
-          {
-            id: "nw",
-            url: "#",
-            text: "North West"
-          },
-          {
-            id: "sw",
-            url: "#",
-            text: "South West"
-          },
-          {
-            id: "tvw",
-            url: "#",
-            text: "Thames Valley and Wessex"
-          },
-          {
-            id: "yh",
-            url: "#",
-            text: "Yorkshire and the Humber"
-          }
-        ]
+  <h4>Types of higher specialty training</h4>
+  {{ blocklinks({
+    columns: "1",
+    links: [
+      {
+        url: "#",
+        label: "Cardiothoracic Surgery"
+      },
+      {
+        url: "#",
+        label: "General Surgery"
+      },
+      {
+        url: "#",
+        label: "Neurosurgery"
+      },
+      {
+        url: "#",
+        label: "Oral & Maxillofacial Surgery"
+      },
+      {
+        url: "#",
+        label: "Otolaryngology Surgery"
+      },
+      {
+        url: "#",
+        label: "Paediatric Surgery"
+      },
+      {
+        url: "#",
+        label: "Plastic Surgery"
+      },
+      {
+        url: "#",
+        label: "Trauma & Orthopaedics"
+      },
+      {
+        url: "#",
+        label: "Urology"
+      },
+      {
+        url: "#",
+        label: "Vascular Surgery"
       }
-    }) }}
-  </section>
+    ]
+  })
+  }}
+
+  <h2 class="toc_h2">Support</h2>
+  <p>Lorem ipsum dolor sit amet consectetur. Velit arcu consectetur enim eget eget. Pellentesque eget sem feugiat ut erat. Commodo ante ultrices dui etiam et cras velit euismod diam. Aliquam risus scelerisque.</p>
+
+  <h3 class="toc_h3">In-training support</h3>
+  <p>Felis vel aliquet in metus fermentum. Sit morbi fusce interdum luctus sodales. Amet platea sapien magna id. Dignissim volutpat nec odio platea consequat cras consequat euismod. Egestas in aliquam sed pellentesque. Sapien, varius consectetur donec habitant sed pellentesque sed. Adipiscing tortor, nibh ut mauris nibh phasellus augue volutpat aliquet.</p>
+  {{ actionLink({
+    text: "In-training support",
+    href: "#"
+  }) }}
+
+  <h3 class="toc_h3">Professional Support and Wellbeing (PSW)</h3>
+  <p>Felis vel aliquet in metus fermentum. Sit morbi fusce interdum luctus sodales. Amet platea sapien magna id. Dignissim volutpat nec odio platea consequat cras consequat euismod. Egestas in aliquam sed pellentesque. Sapien, varius consectetur donec habitant sed pellentesque sed. Adipiscing tortor, nibh ut mauris nibh phasellus augue volutpat aliquet.</p>
+  {{ actionLink({
+    text: "Professional Support and Wellbeing (PSW)",
+    href: "#"
+  }) }}
+
+  <h2 class="toc_h2">Regions</h2>
+  <p>Pellentesque id posuere sapien vestibulum, quam pellentesque at libero. Aliquam at id fames hendrerit in vulputate orci aliquet augue. Massa penatibus sociis et nisl. Enim aliquam mauris suscipit turpis non hendrerit felis.</p>
+  {{ navMap({
+    src: "/images/nav-maps/dental-regions.svg",
+    caption: {
+      items: [
+        {
+          id: "lk",
+          url: "#",
+          text: "London and Kent, Surrey and Sussex (KSS)"
+        },
+        {
+          id: "me",
+          url: "#",
+          text: "Midlands and the East"
+        },
+        {
+          id: "nenc",
+          url: "#",
+          text: "North East and North Cumbria"
+        },
+        {
+          id: "nw",
+          url: "#",
+          text: "North West"
+        },
+        {
+          id: "sw",
+          url: "#",
+          text: "South West"
+        },
+        {
+          id: "tvw",
+          url: "#",
+          text: "Thames Valley and Wessex"
+        },
+        {
+          id: "yh",
+          url: "#",
+          text: "Yorkshire and the Humber"
+        }
+      ]
+    }
+  }) }}
 {% endblock %}
 
 {% block pageRightbar %}
   {{ anchorLinks({
     title: "Table of Contents",
-    headings: "h2,h3,h4,h5,h6",
-    items: [
-      {
-        title: "Introduction",
-        href: "#"
-      },
-      {
-        title: "Foreword",
-        href: "#",
-        children: [
-          {
-            title: "Executive summary",
-            href: "#"
-          }
-        ]
-      },
-      {
-        title: "Acknowledgments",
-        href: "#"
-      },
-      {
-        title: "Notes to the reader",
-        href: "#",
-        children: [
-          {
-            title: "1. Initial analysis and profiling",
-            href: "#"
-          },
-          {
-            title: "2. Creation and population of the database",
-            href: "#"
-          },
-          {
-            title: "3. Case studies",
-            href: "#"
-          }
-        ]
-      },
-      {
-        title: "Limitations and recommendations",
-        href: "#"
-      },
-      {
-        title: "Conclusion",
-        href: "#"
-      }
-    ]
-    })
-  }}
+    toc: true
+  }) }}
 
   {{ ctaCard({
     title: "Apply for surgery on Oriel",
@@ -328,111 +281,62 @@
 {% endblock %}
 
 {% block pageFeature %}
-  {% set blogNewsItems = [
+  {% set items = [
     {
-      title: "Blog/News Title",
+      title: "Publication item #1",
       href: "#",
       details: [
-        {
-          label: "Publish date:",
-          value: "07 September 2022"
-        }
-      ],
-      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. "
+      {
+        label: "Publication type:",
+        value: "Briefing"
+      },
+      {
+        label: "Publish date:",
+        value: "07 September 2022"
+      }
+    ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
     },
     {
-      title: "Blog/News Title",
+      title: "Publication item #2",
       href: "#",
       details: [
-        {
-          label: "Publish date:",
-          value: "07 September 2022"
-        }
-      ],
-      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. "
+      {
+        label: "Publication type:",
+        value: "Briefing"
+      },
+      {
+        label: "Publish date:",
+        value: "07 September 2022"
+      }
+    ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
     },
     {
-      title: "Blog/News Title",
+      title: "Publication item #3",
       href: "#",
       details: [
-        {
-          label: "Publish date:",
-          value: "07 September 2022"
-        }
-      ],
-      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. "
-    }
-  ]
-  %}
-
-  {% set eventItems = [
-    {
-      title: "Event Title",
-      href: "#",
-      details: [
-        {
-          label: "Event type:",
-          value: "Webinar"
-        },
-        {
-          label: "Date:",
-          value: "07 September 2022"
-        },
-        {
-          label: "Time:",
-          value: "14:00 - 20:00"
-        }
-      ],
-      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. "
-    },
-    {
-      title: "Event Title",
-      href: "#",
-      details: [
-        {
-          label: "Event type:",
-          value: "Webinar"
-        },
-        {
-          label: "Date:",
-          value: "07 September 2022"
-        },
-        {
-          label: "Time:",
-          value: "14:00 - 20:00"
-        }
-      ],
-      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. "
-    },
-    {
-      title: "Event Title",
-      href: "#",
-      details: [
-        {
-          label: "Event type:",
-          value: "Webinar"
-        },
-        {
-          label: "Date:",
-          value: "07 September 2022"
-        },
-        {
-          label: "Time:",
-          value: "14:00 - 20:00"
-        }
-      ],
-      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. "
+      {
+        label: "Publication type:",
+        value: "Briefing"
+      },
+      {
+        label: "Publish date:",
+        value: "07 September 2022"
+      }
+    ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
     }
   ]
   %}
 
   <div class="nhsuk-width-container">
-    <h2>Related content type [Blog/news]</h2>
+    <h2>News</h2>
     <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet.</p>
-    {{ miniListing(blogNewsItems) }}
+    {{ miniListing(items) }}
 
-    <h2>Related content type [Events]</h2>
+    <h2>Events</h2>
     <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet.</p>
-    {{ miniListing(eventItems) }}
+    {{ miniListing(items) }}
   </div>
 {% endblock %}
