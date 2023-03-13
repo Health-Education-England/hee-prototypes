@@ -2,24 +2,24 @@
    COMPONENTS / #SIDEBARLINKS - related, download, resources
    ========================================================================== */
 
-.hee-sidebarlinks {
+.hee-related-links {
     margin-bottom: 40px;
     background: #fff;
     border: 1px solid #d8dde0;
     position: relative;
     width: 100%;
 
-    .hee-sidebarlinks__content {
+    .hee-related-links__content {
       padding: 32px;
     }
 
-    .hee-sidebarlinks__heading {
+    .hee-related-links__heading {
       @include mq($from: tablet) {
         @include nhsuk-responsive-margin(3, 'bottom');
       }
     }
 
-    .hee-sidebarlinks__list {
+    .hee-related-links__list {
       list-style-type: none;
       padding: 0;
       margin: 0;
@@ -32,7 +32,7 @@
         margin-bottom: 0;
       }
     }
-    .hee-sidebarlinks__link {
+    .hee-related-links__link {
       @include nhsuk-typography-responsive(16);
       text-decoration: none;
       &:hover {
