@@ -9,10 +9,6 @@
     position: relative;
     width: 100%;
 
-    .hee-related-links__content {
-      padding: 32px;
-    }
-
     .hee-related-links__heading {
       @include mq($from: tablet) {
         @include nhsuk-responsive-margin(3, 'bottom');
@@ -37,6 +33,17 @@
       text-decoration: none;
       &:hover {
         text-decoration: underline;
+      }
+    }
+
+    // Adjustments for item border variant.
+    &.theme__item-border {
+      .hee-related-links__list {
+        li {
+          border-bottom: 1px solid $color_nhsuk-grey-4;
+          margin-bottom: nhsuk-spacing(2);
+          padding-bottom: nhsuk-spacing(1);
+        }
       }
     }
 }

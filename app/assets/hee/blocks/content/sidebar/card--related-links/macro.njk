@@ -1,8 +1,5 @@
 {% macro relatedLinksCard(params) %}
-  <div class="hee-related-links">
-    {%- if params.imgURL %}
-      <img class="hee-related-links__img" src="{{ params.imgURL }}" alt="{{ params.imgALT }}">
-    {%- endif %}
+  <div class="hee-card hee-related-links {{ "theme__item-border" if params.itemBorder === true }}">
     <div class="hee-related-links__content">
       {%- if params.heading %}
         <h3 class="hee-related-links__heading">{{ params.heading }}</h3>
