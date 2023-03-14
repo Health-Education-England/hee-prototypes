@@ -1,0 +1,27 @@
+{% extends "example-blocks.html" %}
+
+{% block main %}
+  {{ summaryCard({
+    title: "Programme summary",
+    items: [
+      {
+        label: "Training programme",
+        value: "Core Training Surgery"
+      },
+      {
+        label: "Training type",
+        url: "http://www.randomurlhere.com",
+        value: "Core Training"
+      },
+      {
+        label: "Professions",
+        url: "http://www.randomurlhere.com",
+        value: "Medical"
+      },
+      {
+        label: "Fill rate",
+        value: "100%"
+      }
+    ]
+  }) }}
+{% endblock %}
