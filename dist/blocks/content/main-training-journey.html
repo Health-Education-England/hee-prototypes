@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Region Picker - Templates - NWP Prototype Kit</title>
+  <title>Training Journey - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -60,9 +60,9 @@
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks">Blocks</a></li>
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/content">Content</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/main-region-picker">Region Picker</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/main-training-journey">Training Journey</a></li>
         </ol>
-        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/main-region-picker">Back to Region Picker</a></p>
+        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/main-training-journey">Back to Training Journey</a></p>
       </div>
     </nav>
   </div>
@@ -119,95 +119,66 @@
         <div class="page__main">
           <div class="page__header">
             <span class="nhsuk-caption-xl">Main</span>
-            <h1>Region Picker</h1>
+            <h1>Training Journey</h1>
             <p class="nhsuk-lede-text"></p>
           </div>
-          <p>Allows visitors to view region based content by clicking an area an SVG based map.</p>
+          <p>A visual representation of a particular training programme's journey, providing site visitors with a clear understanding of the programme pathway to completion.</p>
           <h3>Example</h3>
           <div class="prototype__example block">
-            <a href="/hee-prototypes/blocks/content/examples/main-region-picker.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
+            <a href="/hee-prototypes/blocks/content/examples/main-training-journey.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
             <div class="thumbnail">
-              <iframe src="/hee-prototypes/blocks/content/examples/main-region-picker.html" height="620"></iframe>
+              <iframe src="/hee-prototypes/blocks/content/examples/main-training-journey.html" height="620"></iframe>
             </div>
           </div>
           <hr />
           <h3>Macro</h3>
           <pre><code>
-{{ navMap({
-    src: &quot;/images/nav-maps/dental-regions.svg&quot;,
-    caption: {
-      items: [
-        {
-          id: &quot;lk&quot;,
-          url: &quot;#&quot;,
-          text: &quot;London and Kent, Surrey and Sussex (KSS)&quot;
-        },
-        {
-          id: &quot;me&quot;,
-          url: &quot;#&quot;,
-          text: &quot;Midlands and the East&quot;
-        },
-        {
-          id: &quot;nenc&quot;,
-          url: &quot;#&quot;,
-          text: &quot;North East and North Cumbria&quot;
-        },
-        {
-          id: &quot;nw&quot;,
-          url: &quot;#&quot;,
-          text: &quot;North West&quot;
-        },
-        {
-          id: &quot;sw&quot;,
-          url: &quot;#&quot;,
-          text: &quot;South West&quot;
-        },
-        {
-          id: &quot;tvw&quot;,
-          url: &quot;#&quot;,
-          text: &quot;Thames Valley and Wessex&quot;
-        },
-        {
-          id: &quot;yh&quot;,
-          url: &quot;#&quot;,
-          text: &quot;Yorkshire and the Humber&quot;
-        }
-      ]
-    }
+{{ authorCard({
+  imgURL: &quot;/images/doctor-headshot.png&quot;,
+  title: &quot;Mr&quot;,
+  name: &quot;First Last&quot;,
+  initials: &quot;JB&quot;,
+  pronouns: &quot;Pronoun&quot;,
+  jobTitle: &quot;Job title&quot;,
+  department: &quot;Department&quot;,
+  organisation: &quot;Organisation&quot;,
+  email: &quot;jo.bloggs@hee.co.uk&quot;,
+  website: &quot;http://nhs.uk/&quot;,
+  twitter: &quot;nhsengland&quot;,
+  linkedin: &quot;nhs&quot;,
+  address: &quot;Health Education England&lt;br&gt;
+            3 Piccadilly&lt;br&gt;
+            Manchester&lt;br&gt;
+            M1 3BN&quot;,
+  bio: &quot;Lorem ipsum dolor sit amet...&quot;,
+  authorURL: &quot;/author/jo-blogs&quot;
 }) }}
   </code></pre>
           <hr />
           <h3>HTML</h3>
           <pre><code>
-&lt;figure class=&quot;nhsuk-map&quot;&gt;
-    &lt;figcaption class=&quot;nhsuk-map__caption&quot;&gt;
-      &lt;ul id=&quot;regionList&quot;&gt;
-        &lt;li&gt;
-          &lt;a id=&quot;lk&quot; href=&quot;#&quot;&gt; London and Kent, Surrey and Sussex (KSS) &lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;a id=&quot;me&quot; href=&quot;#&quot;&gt; Midlands and the East &lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;a id=&quot;nenc&quot; href=&quot;#&quot; class=&quot;&quot;&gt; North East and North Cumbria &lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;a id=&quot;nw&quot; href=&quot;#&quot;&gt; North West &lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;a id=&quot;sw&quot; href=&quot;#&quot;&gt; South West &lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;a id=&quot;tvw&quot; href=&quot;#&quot;&gt; Thames Valley and Wessex &lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;a id=&quot;yh&quot; href=&quot;#&quot;&gt; Yorkshire and the Humber &lt;/a&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/figcaption&gt;
-    &lt;object class=&quot;nhsuk-map__image&quot; data=&quot;/images/nav-maps/dental-regions.svg&quot; type=&quot;image/svg+xml&quot; tabindex=&quot;-1&quot;&gt;
-    &lt;/object&gt;
-&lt;/figure&gt;
+&lt;div class=&quot;hee-card hee-card--author&quot;&gt;
+    &lt;div class=&quot;hee-card__image has-bg&quot;&gt;
+      &lt;div class=&quot;hee-card__initials&quot; style=&quot;background: url(&#39;/images/doctor-headshot.png&#39;)&quot;&gt;
+        &lt;span&gt;JB&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;h2 class=&quot;hee-card__name&quot; aria-label=&quot;Name&quot;&gt; Mr First Last &lt;/h2&gt;
+    &lt;span class=&quot;hee-card__pronouns&quot;&gt;Pronoun&lt;/span&gt;
+    &lt;h3 class=&quot;nhsuk-heading-m hee-card__jobtitle&quot; aria-label=&quot;Job Title&quot;&gt;Job title&lt;/h3&gt;
+    &lt;p class=&quot;hee-card__department&quot; aria-label=&quot;Department&quot;&gt;Department&lt;/p&gt;
+    &lt;p class=&quot;hee-card__organisation&quot; aria-label=&quot;Organisation&quot;&gt;Organisation&lt;/p&gt;
+    &lt;hr&gt;
+    &lt;ul class=&quot;hee-card__contact&quot;&gt;
+      &lt;li class=&quot;hee-card__email hee-card__contact__item&quot; aria-label=&quot;Email&quot;&gt;&lt;a href=&quot;mailto:jo.bloggs@hee.co.uk;&quot;&gt;jo.bloggs@hee.co.uk&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;hee-card__website hee-card__contact__item&quot; aria-label=&quot;Website&quot;&gt;&lt;a href=&quot;http://nhs.uk/&quot;&gt;http://nhs.uk/&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;hee-card__linkedin hee-card__contact__item&quot; aria-label=&quot;Linkedin&quot;&gt;&lt;a href=&quot;https://www.linkedin.com/company/nhs&quot;&gt;nhs&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;hee-card__twitter hee-card__contact__item&quot; aria-label=&quot;Twitter&quot;&gt;&lt;a href=&quot;https://twitter.com/nhsengland&quot;&gt;@nhsengland&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p class=&quot;hee-card__address&quot; aria-label=&quot;Bio&quot;&gt;Health Education England&lt;br&gt; 3 Piccadilly&lt;br&gt; Manchester&lt;br&gt; M1 3BN&lt;/p&gt;
+    &lt;p class=&quot;hee-card__bio&quot; aria-label=&quot;Bio&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque ac pellentesque in sapien. Amet in ante libero a lobortis. Blandit sed pulvinar ultrices gravida vulputate at. Ipsum dolor condimentum habitasse aliquam risus risus consectetur.&lt;/p&gt;
+    &lt;p class=&quot;hee-card__authorurl&quot; aria-label=&quot;Author URL&quot;&gt;&lt;a href=&quot;/author/jo-blogs&quot;&gt;View more about Mr First Last&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
   </code></pre>
         </div>
       </div>
