@@ -71,6 +71,8 @@
 
     // First and active journey item to appear within group.
     &.active.first {
+      @include nhsuk-responsive-padding(3, 'bottom');
+
       .hee-training-journey__item__link {
         &:before {
           top: nhsuk-spacing(3) * -1;
