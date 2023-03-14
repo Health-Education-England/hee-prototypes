@@ -10,7 +10,7 @@
   }
 
   h4 {
-    @include nhsuk-responsive-margin(3, 'bottom');
+    margin-bottom: nhsuk-spacing(3);
     @include nhsuk-typography-responsive(16);
   }
 
@@ -32,8 +32,9 @@
     border-left: 4px solid $color_nhsuk-grey-4;
     position: relative;
 
+    // Active journey item within group.
     &.active {
-      padding-bottom: nhsuk-spacing(3);
+      padding-bottom: nhsuk-spacing(4);
       padding-top: nhsuk-spacing(3);
 
       span {
@@ -58,6 +59,7 @@
       }
     }
 
+    // Last journey item to appear within group.
     &.last {
       border: none;
       padding-bottom: 0;
@@ -65,9 +67,25 @@
       .hee-training-journey__item__link {
         right: 7px;
       }
+    }
 
-      &.active {
-        border-left: 4px solid $color_nhsuk-grey-4;
+    // First and active journey item to appear within group.
+    &.active.first {
+      .hee-training-journey__item__link {
+        &:before {
+          top: nhsuk-spacing(3) * -1;
+        }
+      }
+    }
+
+    // Last and active journey item to appear within group.
+    &.active.last {
+      border-left: 4px solid $color_nhsuk-grey-4;
+      line-height: 1;
+
+      .hee-training-journey__item__link {
+        bottom: 0;
+        right: 11px;
       }
     }
   }
