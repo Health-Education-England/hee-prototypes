@@ -6,8 +6,11 @@
         <h4>{{ group.name }}</h4>
         <div class="hee-training-journey__group__container">
           {% for item in group.items %}
-            <div class="hee-training-journey__item {{ "last" if loop.last }}">
-                <a class="hee-training-journey__item__link" href="{{ item.url }}">{{ item.label }}</a>
+            <div class="hee-training-journey__item {{ "first" if loop.first }} {{ "last" if loop.last }} {{ "active" if item.active === true }}">
+              {% if item.active === true %}
+                <span>You are here</span>
+              {% endif %}
+              <a class="hee-training-journey__item__link" href="{{ item.url }}">{{ item.label }}</a>
             </div>
           {% endfor %}
         </div>

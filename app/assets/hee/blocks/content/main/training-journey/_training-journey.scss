@@ -6,7 +6,7 @@
   padding: nhsuk-spacing(4);
 
   h3 {
-    @include nhsuk-responsive-margin(3, 'bottom');
+    margin-bottom: nhsuk-spacing(3);
   }
 
   h4 {
@@ -30,6 +30,33 @@
     @include nhsuk-responsive-padding(3, 'bottom');
     @include nhsuk-typography-responsive(19);
     border-left: 4px solid $color_nhsuk-grey-4;
+    position: relative;
+
+    &.active {
+      padding-bottom: nhsuk-spacing(3);
+      padding-top: nhsuk-spacing(3);
+
+      span {
+        @include nhsuk-typography-responsive(16);
+        display: block;
+        font-weight: $nhsuk-font-bold;
+        left: nhsuk-spacing(3);
+        position: absolute;
+        top: nhsuk-spacing(2) * -1;
+
+        @include mq($from: tablet) {
+          left: nhsuk-spacing(4);
+        }
+      }
+
+      .hee-training-journey__item__link {
+        font-weight: $nhsuk-font-bold;
+
+        &:before {
+          border-color: $color_nhsuk-blue;
+        }
+      }
+    }
 
     &.last {
       border: none;
@@ -37,6 +64,10 @@
 
       .hee-training-journey__item__link {
         right: 7px;
+      }
+
+      &.active {
+        border-left: 4px solid $color_nhsuk-grey-4;
       }
     }
   }
