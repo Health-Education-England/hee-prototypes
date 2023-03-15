@@ -1,7 +1,10 @@
-{% extends "example-template.html" %}
+{% extends "example-template-fullwidth.html" %}
 
 {% set page_url = 'homepage' %}
 {% set page_title = 'Homepage' %}
+
+{% block pageClass %}page--fullwidth{% endblock %}
+{% block pageHeaderClass %}has-microhero{% endblock %}
 
 {% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
 
@@ -48,7 +51,6 @@
              <p><strong>Body</strong> - This is banner body copy <a href=\"#\">this is the link</a></p>
             "
   })}}
-
 {% endblock %}
 
 {% block headerStart %}
@@ -69,51 +71,127 @@
   }) }}
 {% endblock %}
 
-{% block pageMain %}
-<div class="nhsuk-width-container">
-  <section class="nhsuk-section__content">
-    <p>Non elementum cras enim amet enim sollicitudin habitant leo erat. Leo faucibus aliquet vivamus donec ullamcorper mattis purus pharetra amet. Elit turpis odio pellentesque nibh adipiscing pellentesque.</p>
-    <p>Scelerisque interdum amet, non sed ut. Diam tellus etiam aenean enim, eget quisque arcu facilisis. Facilisis sed pharetra placerat condimentum risus. Arcu urna, lorem lectus odio. Ipsum faucibus venenatis sit duis donec ac viverra nisl sem.</p>
-    <p>Felis pellentesque proin id gravida morbi condimentum mi, ac non. Pulvinar ullamcorper orci risus felis. Elit feugiat pulvinar ac aliquet egestas ullamcorper. Vel.</p>
+{% block pageContent %}
+  <p>Non elementum cras enim amet enim sollicitudin habitant leo erat. Leo faucibus aliquet vivamus donec ullamcorper mattis purus pharetra amet. Elit turpis odio pellentesque nibh adipiscing pellentesque.</p>
+  <p>Scelerisque interdum amet, non sed ut. Diam tellus etiam aenean enim, eget quisque arcu facilisis. Facilisis sed pharetra placerat condimentum risus. Arcu urna, lorem lectus odio. Ipsum faucibus venenatis sit duis donec ac viverra nisl sem.</p>
+  <p>Felis pellentesque proin id gravida morbi condimentum mi, ac non. Pulvinar ullamcorper orci risus felis. Elit feugiat pulvinar ac aliquet egestas ullamcorper. Vel.</p>
 
-    {% set tabOneContent %}
-      <img src="{{ basePath }}/images/young-child-using-tablet-device.jpg" alt="" />
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    {% endset -%}
+  {% set tabOneContent %}
+    <img src="/images/young-child-using-tablet-device.jpg" alt="" />
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  {% endset -%}
 
-    {% set tabTwoContent %}
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-    {% endset -%}
+  {% set tabTwoContent %}
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+  {% endset -%}
 
-    {% set tabThreeContent %}
-      <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-    {% endset -%}
+  {% set tabThreeContent %}
+    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+  {% endset -%}
 
-    {{ tabs({
-      uniqueId: "tabsone",
-      title: "Tab component",
-      items: [
-        {
-          label: "Tab one",
-          panel: {
-          html: tabOneContent
-        }
-        },
-        {
-          label: "Tab two",
-          panel: {
-          html: tabTwoContent
-        }
-        },
-        {
-          label: "Tab three",
-          panel: {
-          html: tabThreeContent
-        }
-        }
-      ]
-    }) }}
+  {{ tabs({
+    uniqueId: "tabsone",
+    title: "Tab component",
+    items: [
+      {
+        label: "Tab one",
+        panel: {
+        html: tabOneContent
+      }
+      },
+      {
+        label: "Tab two",
+        panel: {
+        html: tabTwoContent
+      }
+      },
+      {
+        label: "Tab three",
+        panel: {
+        html: tabThreeContent
+      }
+      }
+    ]
+  }) }}
 
+  {{ blocklinks({
+    heading: "Learning 2 Columns",
+    HTML: "<p>Discover resources and information designed to support you on your learning journey</p>",
+    columns: "2",
+    links: [
+      {
+        url: "#",
+        label: "Learning Zone"
+      },
+      {
+        url: "#",
+        label: "Equality, Diversity and Inclusion"
+      },
+      {
+        url: "/listing",
+        label: "Talent Management Toolkit"
+      },
+      {
+        url: "/listing",
+        label: "Case studies"
+      }]
+  })
+  }}
+  <h2>Navigation cards component</h2>
+  <div class="nhsuk-grid-row">
+    <ul class="nhsuk-card-group">
+      <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+        {{ card({
+          "imgURL": "https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg",
+          "href": "#",
+          "clickable": "true",
+          "heading": "Facilisi lorem tristique.",
+          "headingClasses": "nhsuk-heading-m",
+          "description": "Risus vel, ut in in eu. Tincidunt purus adipiscing."
+        }) }}
+      </li>
+      <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+        {{ card({
+          "imgURL": "https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg",
+          "href": "#",
+          "clickable": "true",
+          "heading": "Ornare ac tincidunt.",
+          "headingClasses": "nhsuk-heading-m",
+          "description": "Nibh venenatis pretium semper facilisis ante consequat bibendum magna. "
+        }) }}
+      </li>
+      <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+        {{ card({
+          "imgURL": "https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg",
+          "href": "#",
+          "clickable": "true",
+          "heading": "Tristique phasellus.",
+          "headingClasses": "nhsuk-heading-m",
+          "description": "Imperdiet a id vestibulum bibendum. Facilisis amet."
+        }) }}
+      </li>
+      <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+        {{ card({
+          "imgURL": "https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg",
+          "href": "#",
+          "clickable": "true",
+          "heading": "Cursus dolor, faucibus nam orci. Nunc lacus orci nibh risus sed.",
+          "headingClasses": "nhsuk-heading-m",
+          "description": "Libero dignissim pharetra pharetra enim, vitae amet, aliquam. Nunc tincidunt."
+        }) }}
+      </li>
+      <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+        {{ card({
+          "imgURL": "https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg",
+          "href": "#",
+          "clickable": "true",
+          "heading": "Faucibus nunc donec.",
+          "headingClasses": "nhsuk-heading-m",
+          "description": "Est sollicitudin tempus dui sagittis enim luctus viverra. Pellentesque tempus blandit."
+        }) }}
+      </li>
+    </ul>
+  </div>
     {{ blocklinks({
       heading: "Learning 2 Columns",
       HTML: "<p>Discover resources and information designed to support you on your learning journey</p>",

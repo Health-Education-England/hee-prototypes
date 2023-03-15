@@ -14,16 +14,6 @@
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
   <link href="/hee-prototypes/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
   <link href="/hee-prototypes/css/hee.css" rel="stylesheet" />
-  <style>
-    .example {}
-
-    .example--template {}
-
-    .example--blocks {
-      padding: 1em;
-      background-color: #f0f4f5;
-    }
-  </style>
   <link rel="shortcut icon" href="/hee-prototypes/favicons/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/hee-prototypes/favicons/apple-touch-icon-180x180.png">
   <link rel="mask-icon" href="/hee-prototypes/favicons/favicon.svg" color="#005eb8">
@@ -36,7 +26,7 @@
   <meta name="msapplication-square310x310logo" content="/hee-prototypes/favicons/largetile-310x310.png">
 </head>
 
-<body class="example example--template">
+<body>
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script>
@@ -165,7 +155,7 @@
   <div class="banners">
   </div>
   <main class="page page--rightbar" id="maincontent" role="main">
-    <div class="page__header">
+    <div class="page__header ">
       <div class="nhsuk-width-container">
         <div class="nhsuk-back-link">
           <a class="nhsuk-back-link__link" href="#">
@@ -177,9 +167,9 @@
         <span class="nhsuk-caption-xl">Caption</span>
       </div>
     </div>
-    <div class="nhsuk-width-container">
-      <div class="page__layout">
-        <div class="page__main">
+    <div class="page__layout nhsuk-width-container">
+      <div class="page__main">
+        <div class="page__content">
           <p class="nhsuk-body-l">This report has been produced in partnership between Health Education England (HEE) and Unity Insights.</p>
           <h2 class="toc_h2" data-short-title="Overview">Overview</h2>
           <p>Working with The Royal College of Surgeons, Health Education England provides world-class education, assessment and development to 30,000 surgeons.</p>
@@ -348,64 +338,64 @@
             </object>
           </figure>
         </div>
-        <aside class="page__rightbar">
-          <div class="nhsuk-anchor-links hee-anchorlinks" data-toc-js=true data-headings="">
-            <h2 data-anchorlinksignore="true">Table of Contents</h2>
-          </div>
-          <div class="hee-card hee-card--details">
-            <h3>Publication Info</h3>
-            <div class="hee-card--details__item">
-              <span>Published:</span> 24 June 2022
-            </div>
-            <div class="hee-card--details__item">
-              <span>Updated:</span> 24 July 2022
-            </div>
-            <div class="hee-card--details__item">
-              <span>Topic:</span>
-              <a href="#">Profession 1</a>, <a href="#">Topic 1</a>
-            </div>
-            <div class="hee-card--details__item">
-              <span>Estimated reading time:</span> 2 mins
-            </div>
-          </div>
-          <div class="hee-card hee-card--details">
-            <h3>Alternative versions</h3>
-            <div class="hee-card--details__item">
-              <a class="hee-resources__link" href="#" title="Publication title - PDF version">
-                <span class="hee-resources__text">Publication title - PDF version</span><span class="hee-resources__tag
-          hee-resources__pdf"> PDF </span></a>
-            </div>
-            <div class="hee-card--details__item">
-              <a class="hee-resources__link" href="#" title="Publication title - Open Document">
-                <span class="hee-resources__text">Publication title - Open Document</span><span class="hee-resources__tag
-          hee-resources__odf"> ODF </span></a>
-            </div>
-            <div class="hee-card--details__item">
-              <a class="hee-resources__link" href="#" title="Publication title - Excel">
-                <span class="hee-resources__text">Publication title - Excel</span><span class="hee-resources__tag
-          hee-resources__xls"> XLS </span></a>
-            </div>
-            <div class="hee-card--details__item">
-              <a class="hee-resources__link" href="#" title="Publication title - Powerpoint">
-                <span class="hee-resources__text">Publication title - Powerpoint</span><span class="hee-resources__tag
-          hee-resources__ppt"> PPT </span></a>
-            </div>
-          </div>
-          <div class="hee-card hee-card--details">
-            <h3>Languages</h3>
-            <div class="hee-card--details__item">
-              <a class="hee-resources__link" href="#" title="Teitl y cyhoeddiad - Fersiwn PDF">
-                <span class="hee-resources__text">Teitl y cyhoeddiad - Fersiwn PDF</span><span class="hee-resources__tag
-          hee-resources__pdf"> PDF </span></a>
-            </div>
-            <div class="hee-card--details__item">
-              <a class="hee-resources__link" href="#" title="Tytuł publikacji - wersja PDF">
-                <span class="hee-resources__text">Tytuł publikacji - wersja PDF</span><span class="hee-resources__tag
-          hee-resources__pdf"> PDF </span></a>
-            </div>
-          </div>
-        </aside>
       </div>
+      <aside class="page__rightbar">
+        <div class="hee-anchorlinks nhsuk-anchor-links" data-toc-js=true data-headings="">
+          <h2 data-anchorlinksignore="true">Table of Contents</h2>
+        </div>
+        <div class="hee-card hee-card--details">
+          <h3>Publication Info</h3>
+          <div class="hee-card--details__item">
+            <span>Published:</span> 24 June 2022
+          </div>
+          <div class="hee-card--details__item">
+            <span>Updated:</span> 24 July 2022
+          </div>
+          <div class="hee-card--details__item">
+            <span>Topic:</span>
+            <a href="#">Profession 1</a>, <a href="#">Topic 1</a>
+          </div>
+          <div class="hee-card--details__item">
+            <span>Estimated reading time:</span> 2 mins
+          </div>
+        </div>
+        <div class="hee-card hee-card--details">
+          <h3>Alternative versions</h3>
+          <div class="hee-card--details__item">
+            <a class="hee-resources__link" href="#" title="Publication title - PDF version">
+              <span class="hee-resources__text">Publication title - PDF version</span><span class="hee-resources__tag
+          hee-resources__pdf"> PDF </span></a>
+          </div>
+          <div class="hee-card--details__item">
+            <a class="hee-resources__link" href="#" title="Publication title - Open Document">
+              <span class="hee-resources__text">Publication title - Open Document</span><span class="hee-resources__tag
+          hee-resources__odf"> ODF </span></a>
+          </div>
+          <div class="hee-card--details__item">
+            <a class="hee-resources__link" href="#" title="Publication title - Excel">
+              <span class="hee-resources__text">Publication title - Excel</span><span class="hee-resources__tag
+          hee-resources__xls"> XLS </span></a>
+          </div>
+          <div class="hee-card--details__item">
+            <a class="hee-resources__link" href="#" title="Publication title - Powerpoint">
+              <span class="hee-resources__text">Publication title - Powerpoint</span><span class="hee-resources__tag
+          hee-resources__ppt"> PPT </span></a>
+          </div>
+        </div>
+        <div class="hee-card hee-card--details">
+          <h3>Languages</h3>
+          <div class="hee-card--details__item">
+            <a class="hee-resources__link" href="#" title="Teitl y cyhoeddiad - Fersiwn PDF">
+              <span class="hee-resources__text">Teitl y cyhoeddiad - Fersiwn PDF</span><span class="hee-resources__tag
+          hee-resources__pdf"> PDF </span></a>
+          </div>
+          <div class="hee-card--details__item">
+            <a class="hee-resources__link" href="#" title="Tytuł publikacji - wersja PDF">
+              <span class="hee-resources__text">Tytuł publikacji - wersja PDF</span><span class="hee-resources__tag
+          hee-resources__pdf"> PDF </span></a>
+          </div>
+        </div>
+      </aside>
     </div>
     <div class="page__footer">
     </div>
