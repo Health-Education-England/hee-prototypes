@@ -93,6 +93,16 @@ Layout for the search listing results.
     href: "#",
     url: "https://dental.hee.nhs.uk/dental-trainee-recruitment/dental-specialty-training/oral-medicine/overview-of-oral-medicine/assessment-of-dental-core-competency",
     summary: "Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1)",
+    attributes: [
+      {
+        label: "Date",
+        value: "21 July 2021"
+      },
+      {
+        label: "Location",
+        value: "Birmingham"
+      }      
+    ],
     lastUpdated: "Page last updated: 17 January 2023"
   }    
 ] %}
@@ -109,15 +119,18 @@ Layout for the search listing results.
 
 Macro takes the following arguments:
 
-| Name                  | Type    | Required  | Description                                          |
-|-----------------------|---------|-----------|------------------------------------------------------|
-| count                 | string  | Yes       | Total number of results returned.                    |
-| emptyMessage          | string  | Yes       | Message displayed when no results returned.          |
-| showPagination        | boolean | Yes       | Flag to display pagination or not.                   |
-| results               | array   | Yes       | Array containing search results details.             |
-| results[].title       | string  | Yes       | Title of the search result.                          |
-| results[].subtitle    | string  | Yes       | Subtitle of the search result displayed below title. |
-| results[].href        | string  | Yes       | Result link href attribute.                          |
-| results[].url         | string  | Yes       | URL displayed within result details.                 |
-| results[].summary     | string  | Yes       | Summary text describing the result.                  |
-| results[].lastUpdated | string  | Yes       | Last date of update.                                 |
+| Name                         | Type    | Required | Description                                                        |
+|------------------------------|---------|----------|--------------------------------------------------------------------|
+| count                        | string  | Yes      | Total number of results returned.                                  |
+| emptyMessage                 | string  | Yes      | Message displayed when no results returned.                        |
+| showPagination               | boolean | Yes      | Flag to display pagination or not.                                 |
+| results                      | array   | Yes      | Array containing search results details.                           |
+| results[].title              | string  | Yes      | Title of the search result.                                        |
+| results[].subtitle           | string  | Yes      | Subtitle of the search result displayed below title.               |
+| results[].href               | string  | Yes      | Result link href attribute.                                        |
+| results[].url                | string  | Yes      | URL displayed within result details.                               |
+| results[].summary            | string  | Yes      | Summary text describing the result.                                |
+| results[].attributes         | array   | No       | Array containing label - value pairs for extra listing attributes. |
+| results[].attributes[].label | string  | Yes      | Attribute label.                                                   |
+| results[].attributes[].value | string  | Yes      | Attribute value.                                                   |
+| results[].lastUpdated        | string  | Yes      | Last date of update.                                               |

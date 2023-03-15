@@ -3,7 +3,7 @@
   @include nhsuk-responsive-padding(4, 'top');
   border-top: 1px solid $color_nhsuk-grey-4;
 
-  h2 {
+  h3 {
     @include nhsuk-typography-responsive(24);
     @include nhsuk-responsive-margin(2, 'bottom');
   }
@@ -15,7 +15,24 @@
   }
 
   .hee-search-listing-item__summary {
-    @include nhsuk-responsive-margin(3, 'bottom');
+    @include nhsuk-responsive-margin(4, 'bottom');
+  }
+
+  .hee-search-listing-item__attributes {
+    @include nhsuk-responsive-margin(4, 'bottom');
+    @include nhsuk-typography-responsive(19);
+  }
+
+  .hee-search-listing-item__attributes__item {
+    @include nhsuk-responsive-margin(2, 'bottom');
+    @include nhsuk-responsive-padding(2, 'bottom');
+    border-bottom: 1px solid $color_nhsuk-grey-4;
+    display: flex;
+  }
+
+  .hee-search-listing-item__attributes__label {
+    font-weight: $nhsuk-font-bold;
+    flex-basis: 33%;
   }
 
   .hee-search-listing-item__url {
