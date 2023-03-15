@@ -14,16 +14,6 @@
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
   <link href="/hee-prototypes/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
   <link href="/hee-prototypes/css/hee.css" rel="stylesheet" />
-  <style>
-    .example {}
-
-    .example--template {}
-
-    .example--blocks {
-      padding: 1em;
-      background-color: #f0f4f5;
-    }
-  </style>
   <link rel="shortcut icon" href="/hee-prototypes/favicons/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/hee-prototypes/favicons/apple-touch-icon-180x180.png">
   <link rel="mask-icon" href="/hee-prototypes/favicons/favicon.svg" color="#005eb8">
@@ -36,7 +26,7 @@
   <meta name="msapplication-square310x310logo" content="/hee-prototypes/favicons/largetile-310x310.png">
 </head>
 
-<body class="example example--template">
+<body>
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script>
@@ -201,8 +191,8 @@
       </div>
     </div>
   </div>
-  <main class="page " id="maincontent" role="main">
-    <div class="page__header">
+  <main class="page page--fullwidth" id="maincontent" role="main">
+    <div class="page__header has-microhero">
       <section class="nhsuk-hero nhsuk-hero--image nhsuk-hero--image-description" style="background-image: url('/hee-prototypes/images/young-child-using-tablet-device.jpg');">
         <div class="nhsuk-hero__overlay">
           <div class="nhsuk-width-container">
@@ -219,8 +209,8 @@
         </div>
       </section>
     </div>
-    <div class="nhsuk-width-container">
-      <section class="nhsuk-section__content">
+    <div class="page__main nhsuk-width-container">
+      <div class="page__content">
         <p>Non elementum cras enim amet enim sollicitudin habitant leo erat. Leo faucibus aliquet vivamus donec ullamcorper mattis purus pharetra amet. Elit turpis odio pellentesque nibh adipiscing pellentesque.</p>
         <p>Scelerisque interdum amet, non sed ut. Diam tellus etiam aenean enim, eget quisque arcu facilisis. Facilisis sed pharetra placerat condimentum risus. Arcu urna, lorem lectus odio. Ipsum faucibus venenatis sit duis donec ac viverra nisl sem.</p>
         <p>Felis pellentesque proin id gravida morbi condimentum mi, ac non. Pulvinar ullamcorper orci risus felis. Elit feugiat pulvinar ac aliquet egestas ullamcorper. Vel.</p>
@@ -233,7 +223,7 @@
               <button class="nhsuk-tabs__list-item" role="tab" aria-selected="false" aria-controls="tabsone-panel-3" id="tabsone-tab-3" tabindex="0"> Tab three </button>
             </div>
             <div class="nhsuk-tabs__panel" id="tabsone-panel-1" role="tabpanel" tabindex="0" aria-labelledby="tabsone-tab-1">
-              <img src="/hee-prototypes/images/young-child-using-tablet-device.jpg" alt="" />
+              <img src="/images/young-child-using-tablet-device.jpg" alt="" />
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
             <div class="nhsuk-tabs__panel" id="tabsone-panel-2" role="tabpanel" tabindex="0" aria-labelledby="tabsone-tab-2" hidden>
@@ -247,7 +237,7 @@
             <div class="nhsuk-tabs__list" role="tablist" aria-label="Tab component" data-module="nhsuk-tabs">
               <button class="nhsuk-tabs__list-item" role="tab" aria-selected="false" aria-controls="tabsone-panel-mobile-1" id="tabsone-tab-mobile-1" tabindex="0"> Tab one </button>
               <div class="nhsuk-tabs__panel" id="tabsone-panel-mobile-1" role="tabpanel" tabindex="0" aria-labelledby="tabsone-tab-mobile-1" hidden>
-                <img src="/hee-prototypes/images/young-child-using-tablet-device.jpg" alt="" />
+                <img src="/images/young-child-using-tablet-device.jpg" alt="" />
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               </div>
               <button class="nhsuk-tabs__list-item" role="tab" aria-selected="false" aria-controls="tabsone-panel-mobile-2" id="tabsone-tab-mobile-2" tabindex="0"> Tab two </button>
@@ -260,6 +250,102 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="nhsuk-blocklinks">
+          <div class="nhsuk-u-reading-width">
+            <h2>Learning 2 Columns</h2>
+            <p>Discover resources and information designed to support you on your learning journey</p>
+          </div>
+          <ul class="nhsuk-list-blocklinks nhsuk-list-blocklinks--two-columns">
+            <li>
+              <a href="#">
+                <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+                  </path>
+                </svg> Learning Zone </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+                  </path>
+                </svg> Equality, Diversity and Inclusion </a>
+            </li>
+            <li>
+              <a href="/listing">
+                <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+                  </path>
+                </svg> Talent Management Toolkit </a>
+            </li>
+            <li>
+              <a href="/listing">
+                <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+                  </path>
+                </svg> Case studies </a>
+            </li>
+          </ul>
+        </div>
+        <h2>Navigation cards component</h2>
+        <div class="nhsuk-grid-row">
+          <ul class="nhsuk-card-group">
+            <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+              <div class="nhsuk-card nhsuk-card--clickable">
+                <img class="nhsuk-card__img" src="https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg" alt="">
+                <div class="nhsuk-card__content">
+                  <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                    <a class="nhsuk-card__link" href="#">Facilisi lorem tristique.</a>
+                  </h2>
+                  <p class="nhsuk-card__description">Risus vel, ut in in eu. Tincidunt purus adipiscing.</p>
+                </div>
+              </div>
+            </li>
+            <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+              <div class="nhsuk-card nhsuk-card--clickable">
+                <img class="nhsuk-card__img" src="https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg" alt="">
+                <div class="nhsuk-card__content">
+                  <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                    <a class="nhsuk-card__link" href="#">Ornare ac tincidunt.</a>
+                  </h2>
+                  <p class="nhsuk-card__description">Nibh venenatis pretium semper facilisis ante consequat bibendum magna. </p>
+                </div>
+              </div>
+            </li>
+            <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+              <div class="nhsuk-card nhsuk-card--clickable">
+                <img class="nhsuk-card__img" src="https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg" alt="">
+                <div class="nhsuk-card__content">
+                  <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                    <a class="nhsuk-card__link" href="#">Tristique phasellus.</a>
+                  </h2>
+                  <p class="nhsuk-card__description">Imperdiet a id vestibulum bibendum. Facilisis amet.</p>
+                </div>
+              </div>
+            </li>
+            <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+              <div class="nhsuk-card nhsuk-card--clickable">
+                <img class="nhsuk-card__img" src="https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg" alt="">
+                <div class="nhsuk-card__content">
+                  <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                    <a class="nhsuk-card__link" href="#">Cursus dolor, faucibus nam orci. Nunc lacus orci nibh risus sed.</a>
+                  </h2>
+                  <p class="nhsuk-card__description">Libero dignissim pharetra pharetra enim, vitae amet, aliquam. Nunc tincidunt.</p>
+                </div>
+              </div>
+            </li>
+            <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+              <div class="nhsuk-card nhsuk-card--clickable">
+                <img class="nhsuk-card__img" src="https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg" alt="">
+                <div class="nhsuk-card__content">
+                  <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                    <a class="nhsuk-card__link" href="#">Faucibus nunc donec.</a>
+                  </h2>
+                  <p class="nhsuk-card__description">Est sollicitudin tempus dui sagittis enim luctus viverra. Pellentesque tempus blandit.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
         <div class="nhsuk-blocklinks">
           <div class="nhsuk-u-reading-width">
@@ -357,7 +443,9 @@
             </li>
           </ul>
         </div>
-      </section>
+        </section>
+      </div>
+    </div>
     </div>
     <div class="page__footer">
     </div>

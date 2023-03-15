@@ -10,8 +10,13 @@
     position: relative;
 
     .nhsuk-filter__group__clear {
+      display: none;
       position: absolute;
       right: 0;
+
+      &.visible {
+        display: inline-block;
+      }
     }
   }
 

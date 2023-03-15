@@ -10,7 +10,11 @@
 }
 
 .nhsuk-hero--image-description {
-  margin-bottom: 50px;
+  margin-bottom: 90px;
+
+  @include mq($from: tablet) {
+    margin-bottom: 98px;
+  }
 }
 
 .nhsuk-hee-hero {
@@ -18,3 +22,12 @@
     padding: 48px 0 88px;
   }
 }
+
+.nhsuk-hero--image {
+  .nhsuk-hero__overlay {
+    @include mq($from: tablet) {
+      height: 380px;
+    }
+  }
+}
+
