@@ -20,7 +20,7 @@
 @import 'templates/page';
 
 ///////////////////////////////////////////
-// BLOCKS
+// NHSUK-HEE Components (Overrides)
 ///////////////////////////////////////////
 @import '../components/nhsuk-hee/nhsuk-hee-blocklinks/blocklinks';
 @import '../components/nhsuk-hee/nhsuk-hee-breadcrumb/breadcrumb';
@@ -46,6 +46,7 @@
 @import '../components/timeline';
 @import '../components/image-card';
 @import '../hee/blocks/content/sidebar/card--details/details';
+
 @import '../components/related-nav';
 @import '../components/media';
 //@import '../components/hee/hee-media/media';
@@ -66,20 +67,24 @@
 
 ///// FURNITURE
 // -- Collections
-@import 'blocks/furniture/collections/hee-listing/listing';
-@import 'blocks/furniture/collections/hee-listing-item/listing-item';
-@import 'blocks/furniture/collections/hee-filter/filter';
-@import 'blocks/furniture/collections/hee-filtertag/filtertag';
-// -- Search
-@import 'blocks/furniture/search/form/search-form';
-@import 'blocks/furniture/search/listing/search-listing';
-@import 'blocks/furniture/search/listing-item/search-listing-item';
+@import '../hee/blocks/furniture/collections/hee-listing/listing';
+@import '../hee/blocks/furniture/collections/hee-listing-item/listing-item';
+@import '../hee/blocks/furniture/collections/hee-filter/filter';
+@import '../hee/blocks/furniture/collections/hee-filtertag/filtertag';
 
 ///// CONTENT
 @import 'blocks/content/hee-card';
-@import 'blocks/content/main/card--author/author';
+//@import 'blocks/content/main/card--author/author';
 @import 'blocks/content/main/hee-publication-doc/publication-doc';
 @import 'blocks/content/featured/hee-mini-listing/mini-listing';
+//@import '../hee/blocks/content/sidebar/card--department/department';
+//@import '../hee/blocks/content/sidebar/card--contact/contact';
+
+//@import '../components/hee/hee-sidebarimage/sidebarimage';
+//@import '../components/hee/hee-sidebarlinks/sidebarlinks';
+
+@import 'blocks/content/hee-card';
+@import 'blocks/content/main/card--author/author';
 //@import '../hee/blocks/content/sidebar/card--department/department';
 //@import '../hee/blocks/content/sidebar/card--contact/contact';
 
@@ -88,4 +93,5 @@
 //@import '../components/hee/hee-homesection/homesection';
 @import '../components/hee/hee-newsletter/newsletter';
 //@import '../components/hee/hee-relatednav/relatednav';
-//@import '../components/hee/hee-resources/resources';
+//@import '../components/hee/hee-sidebarimage/sidebarimage';
+//@import '../components/hee/hee-sidebarlinks/sidebarlinks';

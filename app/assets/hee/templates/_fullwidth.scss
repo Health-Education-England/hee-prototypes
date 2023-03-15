@@ -16,16 +16,4 @@
 .page--template-landinghub {}
 .page--template-404 {}
 .page--archive-az {}
-
-.page--search {
-  .page__header {
-    @include nhsuk-responsive-padding(7, 'top')
-  }
-  .page__main {
-    max-width: 100%;
-
-    @include mq($from: desktop) {
-      max-width: 66.6667%;
-    }
-  }
-}
+.page--archive-search {}

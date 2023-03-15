@@ -49,27 +49,25 @@
 
   <h2>HTML</h2>
 {{ highlight({
-  "html" : '<main class="page page--search" id="maincontent" role="main">
-  <div class="page__header">
-    <div class="nhsuk-width-container">
-      <h1>[ PAGE_TITLE ]</h1>
-      [ SEARCH--FORM ]
-    </div>
-  </div>
-  <div class="nhsuk-width-container">
-    <div class="page__main">
-      [ SEARCH--LISTING ]
-    </div>
-  </div>
-  <div class="page__footer">
-    [ INTEMPLATE_BACKTOTOP ]
-  </div>
-  <section class="page__feature">
-    [ CONTENT--FEATURED_BLOCKS ]
-  </section>
-</main>'
+  "html" : ''
   }) 
 }}
+
+  <hr />
+
+  <h2>Components</h2>
+  {{ components({
+    'data' : [
+      {
+          'type' : 'Furniture',
+          'list' : ['Page']
+      },
+      {
+          'type' : 'Content Blocks',
+          'list' : ['Main']
+      }
+    ]
+  }) }}
 
 {% endblock %}
 
