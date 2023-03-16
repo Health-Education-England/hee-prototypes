@@ -6,7 +6,7 @@
 {% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
 
 {% block breadcrumbs %}
-{{ 
+{{
     breadcrumb({
     items: [
         {
@@ -24,7 +24,7 @@
     ],
         href: basePath + "/blocks/"+page_url,
       text: page_title
-    }) 
+    })
 }}
 {% endblock %}
 
@@ -61,25 +61,25 @@
   title: "Alternative versions",
   items: [
     {
-      title: "Publication title - PDF version",
-      text: "Publication title - PDF version",
-      url: "https://www.google.com",
+      title: "First Publication Title",
+      text: "First Publication Title",
+      url: "#",
       docType: "PDF",
-      tagColor: "pdf",
+      tagColor: "pdf"
     },
     {
-      title: "Publication title - Open Document",
-      text: "Publication title - Open Document",
-      url: "https://www.google.com",
+      title: "Second Publication Title",
+      text: "Second Publication Title",
+      url: "#",
       docType: "ODF",
-      tagColor: "odf",
+      tagColor: "odf"
     },
     {
-      title: "Publication title - Excel",
-      text: "Publication title - Excel",
-      url: "https://www.google.com",
+      title: "Third Publication Title",
+      text: "Third Publication Title",
+      url: "#",
       docType: "XLS",
-      tagColor: "xls",
+      tagColor: "xls"
     }
   ]
 }) }}
@@ -92,28 +92,25 @@
 {{ highlight({
   html : '
 <div class="hee-card hee-card--details hee-card--downloads">
-    <h3>Alternative versions</h3>
-    <div class="hee-card--details__item">
-      <a class="hee-resources__link" href="#" title="Publication title - PDF version">
-        <span class="hee-resources__text">Publication title - PDF version</span>
-        <span class="hee-resources__tag hee-resources__pdf">PDF</span>
-      </a>
-    </div>
-    <div class="hee-card--details__item">
-      <a class="hee-resources__link" href="#" title="Publication title - Open Document">
-        <span class="hee-resources__text">Publication title - Open Document</span>
-        <span class="hee-resources__tag hee-resources__odf">ODF</span>
-      </a>
-    </div>
-    <div class="hee-card--details__item">
-      <a class="hee-resources__link" href="#" title="Publication title - Excel">
-        <span class="hee-resources__text">Publication title - Excel</span>
-        <span class="hee-resources__tag hee-resources__xls">XLS</span>
-      </a>
-    </div>
+  <h3>Alternative versions</h3>
+  <div class="hee-card--details__item">
+    <a class="hee-resources__link" href="#" title="First Publication Title">
+      <span class="hee-resources__text">First Publication Title</span><span class="hee-resources__tag
+        hee-resources__pdf"> PDF </span></a>
+  </div>
+  <div class="hee-card--details__item">
+    <a class="hee-resources__link" href="#" title="Second Publication Title">
+      <span class="hee-resources__text">Second Publication Title</span><span class="hee-resources__tag
+        hee-resources__odf"> ODF </span></a>
+  </div>
+  <div class="hee-card--details__item">
+    <a class="hee-resources__link" href="#" title="Third Publication Title">
+      <span class="hee-resources__text">Third Publication Title</span><span class="hee-resources__tag
+        hee-resources__xls"> XLS </span></a>
+  </div>
 </div>
   '
-  }) 
+  })
 }}
 
 {% endblock %}
