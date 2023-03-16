@@ -2,26 +2,23 @@
 .page--fullwidth {
   .page__header {
     padding-top: nhsuk-spacing(7);
-    h1, p, span {
-      max-width: 66.6667%;
-    }
   }
   .page__main {
     padding-bottom: nhsuk-spacing(6);
-  }
 
-  @include mq($until: desktop) {
-    .page__header {
-        h1, p, span {
-            max-width: 100%;
-        }
+    @include mq($from: tablet) {
+      padding-bottom: nhsuk-spacing(7);
     }
   }
-
 }
 
 .page--template-homepage {}
 .page--template-landinghub {}
 .page--template-404 {}
 .page--archive-az {}
-.page--archive-search {}
+
+.page--search {
+  .page__header {
+    @include nhsuk-responsive-padding(7, 'top')
+  }
+}

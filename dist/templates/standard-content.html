@@ -77,9 +77,9 @@
               <li><a href="/hee-prototypes/templates/base-fullwidth.html">Base</a></li>
               <li><a href="/hee-prototypes/templates/homepage.html">Homepage</a></li>
               <li><a href="/hee-prototypes/templates/landing-page.html">Landing Page</a></li>
-              <li>404</li>
-              <li>A-Z Listing</li>
-              <li>Search Listing</li>
+              <li><a href="/hee-prototypes/templates/404.html">404</a></li>
+              <li><a href="/hee-prototypes/templates/az-listing.html">A-Z Listing</a></li>
+              <li><a href="/hee-prototypes/templates/search-listing.html">Search Listing</a></li>
             </ul>
             <h3>Leftbar</h3>
             <ul>
@@ -100,6 +100,7 @@
               <li><a href="/hee-prototypes/templates/publications-landing.html">Publication Landing</a></li>
               <li><a href="/hee-prototypes/templates/publications-item.html">Publication Item</a></li>
               <li><a href="/hee-prototypes/templates/event-item.html">Event Item</a></li>
+              <li><a href="/hee-prototypes/templates/training-programmes-homepage.html">Training Programmes Homepage</a></li>
             </ul>
           </nav>
         </div>
@@ -107,46 +108,44 @@
           <div class="page__header">
             <span class="nhsuk-caption-xl">Templates</span>
             <h1>Standard Content</h1>
-            <p class="nhsuk-lede-text">hdfhakjdfhklasdh</p>
+            <p class="nhsuk-lede-text"></p>
           </div>
           <h2>Example</h2>
           <div class="prototype__example scaled" style="height:400px;overflow:hidden;">
-            <a href="/hee-prototypes/templates/examples/standard-content.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
+            <a href="/templates/examples/standard-content.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
             <div class="thumbnail">
-              <iframe src="/hee-prototypes/templates/examples/standard-content.html" height="780"></iframe>
+              <iframe src="/templates/examples/standard-content.html" height="780"></iframe>
             </div>
           </div>
           <hr />
           <h2>HTML</h2>
-          <pre><code>&lt;article class=&quot;page page--rightbar&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
+          <pre><code>&lt;main class=&quot;page page--rightbar&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
   &lt;div class=&quot;page__header&quot;&gt;
     &lt;div class=&quot;nhsuk-width-container&quot;&gt;
       &lt;h1&gt;[ PAGE_TITLE ]&lt;/h1&gt;
       &lt;span class=&quot;nhsuk-caption-xl&quot;&gt;[ PAGE_CAPTION ]&lt;/span&gt;
       &lt;p class=&quot;nhsuk-lede-text&quot;&gt;[ PAGE_SUMMARY ]&lt;/p&gt;
-      [ PUBLISHED_INFO ]
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;nhsuk-width-container&quot;&gt;
-    &lt;div class=&quot;page__layout&quot;&gt;
-      &lt;div class=&quot;page__main&quot;&gt;
-        &lt;div class=&quot;page__content&quot;&gt;
-          [ CONTENT--MAIN_BLOCKS ]
-        &lt;/div&gt;
-        [ PAGE_LASTUPDATED ]
+  &lt;div class=&quot;page__layout nhsuk-width-container&quot;&gt;
+    &lt;div class=&quot;page__main&quot;&gt;
+      &lt;div class=&quot;page__content&quot;&gt;
+        [ CONTENT--MAIN_BLOCKS ]
       &lt;/div&gt;
-      &lt;aside class=&quot;page__rightbar&quot;&gt;
-        [ CONTENT--SIDEBAR_BLOCKS ]
-      &lt;/aside&gt;
+      [ PAGE_LASTUPDATED ]
     &lt;/div&gt;
+    &lt;aside class=&quot;page__rightbar&quot;&gt;
+      [ CONTENT--SIDEBAR_BLOCKS ]
+    &lt;/aside&gt;
   &lt;/div&gt;
   &lt;div class=&quot;page__footer&quot;&gt;
+    [ PUBLISHED_INFO ]
     [ INTEMPLATE_BACKTOTOP ]
   &lt;/div&gt;
   &lt;section class=&quot;page__feature&quot;&gt;
     [ CONTENT--FEATURED_BLOCKS ]
   &lt;/section&gt;
-&lt;/article&gt;</code></pre>
+&lt;/main&gt;</code></pre>
           <h2>Components</h2>
           <h4>Furniture</h4>
           <ul>

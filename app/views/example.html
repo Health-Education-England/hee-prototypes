@@ -33,6 +33,7 @@
 {# CONTENT BLOCKS #}
 
 {# Main #}
+{%- from 'hee/blocks/content/main/applies-to/macro.njk' import appliesTo %}
 {%- from 'hee/blocks/content/main/card--author/macro.njk' import authorCard %}
 {%- from 'hee/blocks/content/main/hee-google-map/macro.njk' import googleMap %}
 {%- from 'hee/blocks/content/sidebar/card--person/macro.njk' import personCard %}
@@ -44,10 +45,14 @@
 {%- from 'hee/blocks/content/sidebar/card--cta/macro.njk' import ctaCard %}
 {%- from 'hee/blocks/content/sidebar/card--downloads/marco.njk' import downloadsCard %}
 
+{# Search #}
+{%- from 'hee/blocks/furniture/search/form/macro.njk' import searchForm %}
+{%- from 'hee/blocks/furniture/search/listing/macro.njk' import searchListing %}
+{%- from 'hee/blocks/furniture/search/listing-item/macro.njk' import searchListingItem %}
+
 {# To Sort #}
 {# HEE Components #}
-{%- from 'components/hee/hee-anchorlinks/macro.njk' import anchorLinks %}
-{%- from 'components/hee/hee-appliesto/macro.njk' import appliesTo %}
+{%- from 'hee/blocks/content/sidebar/anchorlinks/macro.njk' import anchorLinks %}
 {%- from 'components/hee/hee-media/macro.njk' import media %}
 {%- from 'components/hee/hee-navmap/macro.njk' import navMap %}
 {%- from 'components/hee/hee-relatednav/macro.njk' import relatedNav %}
@@ -57,6 +62,7 @@
 {%- from 'components/hee/hee-tabs/macro.njk' import tabs %}
 {%- from 'components/hee/hee-timeline/macro.njk' import timeline %}
 {%- from 'components/nhsuk-hee/nhsuk-hee-blocklinks/macro.njk' import blocklinks %}
+{%- from 'hee/blocks/scaffolding/back-to-top/macro.njk' import backToTop %}
 
 {# NHSUK Components #}
 {%- from 'action-link/macro.njk' import actionLink %}
@@ -69,6 +75,7 @@
 {%- from 'images/macro.njk' import image %}
 {%- from 'inset-text/macro.njk' import insetText %}
 {%- from 'do-dont-list/macro.njk' import list %}
+{%- from 'nav-a-z/macro.njk' import azNav %}
 {%- from 'review-date/macro.njk' import reviewDate %}
 {%- from 'summary-list/macro.njk' import summaryList %}
 {%- from 'select/macro.njk' import select %}
@@ -84,7 +91,6 @@
 {%- from 'input/macro.njk' import input %}
 {%- from 'label/macro.njk' import label %}
 {%- from 'list-panel/macro.njk' import listPanel %}
-{%- from 'nav-a-z/macro.njk' import azNav %}
 {%- from 'radios/macro.njk' import radios %}
 {%- from 'tag/macro.njk' import tag %}
 {%- from 'textarea/macro.njk' import textarea %#}
@@ -106,14 +112,6 @@
     {% block headCSS %}
       <link href="{{ basePath }}/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
       <link href="{{ basePath }}/css/hee.css" rel="stylesheet" />
-      <style>
-      .example {}
-      .example--template {}
-      .example--blocks {
-        padding: 1em;
-        background-color: #f0f4f5;
-      }
-      </style>
     {% endblock %}
 
     {% block headIcons %}
@@ -130,7 +128,7 @@
     {% endblock %}
   </head>
 
-  <body class="{{ bodyClasses }}">
+  <body>
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
     {% block bodyStart %}
     {% endblock %}

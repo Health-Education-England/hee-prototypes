@@ -5,6 +5,8 @@
 
 {% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
 
+{% block pageHeaderClass %}has-microhero{% endblock %}
+
 {% block breadcrumbs %}
   {{
     breadcrumb({
@@ -29,20 +31,24 @@
 {% endblock %}
 
 {% block pageHeader %}
+  {{ microHero({
+    "imgURL": "/images/young-child-using-tablet-device.jpg"
+  }) }}
   <div class="nhsuk-width-container">
     <h1>Blog Item</h1>
-    <p class="nhsuk-body-s nhsuk-u-secondary-text-color">Published on 25 October 2022, by Dr. Joe Soap</p>
-    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-7">
-      <a href="#">Learning and development</a>,
-      <a href="#">Artificial intelligence and robotics</a>,
-      <a href="#">Policy and strategy</a>
-    </p>
-    <p class="nhsuk-lede-text">Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi.</p>
+    <span class="nhsuk-caption-xl">Caption</span>
   </div>
 {% endblock %}
 
 {% block pageContent %}
-  
+  <p class="nhsuk-body-s nhsuk-u-secondary-text-color">Published on 25 October 2022, by Dr. Joe Soap</p>
+  <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-7">
+    <a href="#">Learning and development</a>,
+    <a href="#">Artificial intelligence and robotics</a>,
+    <a href="#">Policy and strategy</a>
+  </p>
+
+  <p class="nhsuk-body-l">Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi.</p>
   <h3 id="heading1">Donec pulvinar sollicitudin</h3>
   <p>Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi. Sed vestibulum quis mi nec volutpat. Proin tristique eleifend volutpat. Maecenas eu magna a sem aliquam luctus. Donec nec metus condimentum, molestie nulla eu, auctor sem. Cras nec arcu sed lorem eleifend pellentesque nec nec ligula.</p>
   <p>Nulla sodales dictum auctor. Donec pulvinar sollicitudin massa, nec pulvinar turpis dictum maximus. Duis consequat sem pretium purus vehicula ultricies. Maecenas sed turpis sed eros euismod consectetur.</p>
@@ -120,6 +126,11 @@
       authorURL: "/author/jo-blogs"
     }) }}
   </div>
+
+  {{ reviewDate({
+    "lastReview": "12 February 2017",
+    "nextReview": "1 February 2020"
+  }) }}
 {% endblock %}
 
 {% block pageRightbar %}
@@ -144,21 +155,66 @@
     authorURL: "/author/jo-blogs"
   }) }}
 
-  {{ relatedLinksCard({
-    heading: "Curabitur sit amet",
-    links: [
-      {
-        label: "Donec pulvinar",
-        url: "#"
-      },
-      {
-        label: "Duis consequat",
-        url: "#"
-      },
-      {
-        label: "Fusce at neque",
-        url: "#"
-      }
-    ]
-  })}}
+  <div class="nhsuk-contact nhsuk-contact__card">
+    <div class="nhsuk-contact__content">
+      <h3 data-anchorlinksignore="true" class="nhsuk-contact__name" aria-label="Name">HEE Knowledge for Healthcare</h3>
+
+      <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+
+      <div class="nhsuk-contact__secondary-info">
+
+        <p aria-label="Email">
+          <a href="mailto:kfh.england@knowledgeforhealthcare.nhs.uk" title="Opens email">kfh.england@knowledgeforhealthcare.nhs.uk</a>
+        </p>
+
+
+
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block pageFeature %}
+  {% set items = [
+    {
+      title: "Blog/News Title",
+      href: "#",
+      details: [
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada."
+    },
+    {
+      title: "Blog/News Title",
+      href: "#",
+      details: [
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada."
+    },
+    {
+      title: "Blog/News Title",
+      href: "#",
+      details: [
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada."
+    }
+  ]
+  %}
+
+  <div class="nhsuk-width-container">
+    <h2>Related content</h2>
+    <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet. Nunc turpis vel aliquam lacus arcu. Sodales nullam id lectus orci quis sed. dsf</p>
+    {{ miniListing(items) }}
+  </div>
 {% endblock %}

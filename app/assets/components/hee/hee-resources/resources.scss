@@ -51,7 +51,9 @@
     }
     .hee-resources__odp,
     .hee-resources__otp,
-    .hee-resources__fodp {
+    .hee-resources__fodp,
+    .hee-resources__ppt,
+    .hee-resources__pptx {
         background-color: #f1662d;
     }
     .hee-resources__oth {
@@ -96,9 +98,11 @@
             font-weight: normal;
 
             &.hee-resources__text {
+                @include nhsuk-responsive-padding(2, 'right');
                 display: block;
                 text-decoration: underline;
                 width: 80%;
+                word-break: break-word;
             }
 
             &.hee-resources__tag {

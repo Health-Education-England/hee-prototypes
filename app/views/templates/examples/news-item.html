@@ -2,6 +2,8 @@
 
 {% block pageTitle %}News Item - Examples - NWP Prototype Kit{% endblock %}
 
+{% block pageHeaderClass %}has-microhero{% endblock %}
+
 {% block breadcrumbs %}
   {{
   breadcrumb({
@@ -18,19 +20,24 @@
 {% endblock %}
 
 {% block pageHeader %}
-<div class="nhsuk-width-container">
-  <h1>News item</h1>
+  {{ microHero({
+    "imgURL": "/images/young-child-using-tablet-device.jpg"
+  }) }}
+  <div class="nhsuk-width-container">
+    <h1>News Item</h1>
+    <span class="nhsuk-caption-xl">Caption</span>
+  </div>
+{% endblock %}
+
+{% block pageContent %}
   <p class="nhsuk-body-s nhsuk-u-secondary-text-color">Published on 25 October 2022</p>
   <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-7">
     <a href="#">Learning and development</a>,
     <a href="#">Artificial intelligence and robotics</a>,
     <a href="#">Policy and strategy</a>
   </p>
-  <p class="nhsuk-lede-text">Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi.</p>
-</div>
-{% endblock %}
 
-{% block pageContent %}
+  <p class="nhsuk-body-l">Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi.</p>
 
   <h3>Donec pulvinar sollicitudin</h3>
   <p>Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi. Sed vestibulum quis mi nec volutpat. Proin tristique eleifend volutpat. Maecenas eu magna a sem aliquam luctus. Donec nec metus condimentum, molestie nulla eu, auctor sem. Cras nec arcu sed lorem eleifend pellentesque nec nec ligula.</p>
@@ -45,22 +52,26 @@
   <h3 id="heading2">Pellentesque sit amet nulla</h3>
   <p>Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus, semper ligula quis, eleifend ante. Pellentesque non malesuada tellus. Donec porta faucibus lacus at elementum. Pellentesque tempus magna vulputate felis ultricies porta. Cras condimentum imperdiet lobortis. Suspendisse aliquam nisl ut augue ultrices, sit amet tristique enim placerat. Nunc augue sapien, rhoncus scelerisque urna quis, posuere semper enim.</p>
 
-{{ authorCard({
-  title: "Dr",
-  name: "Jo Blogs", 
-  initials: "JB",
-  pronouns: "She/her",
-  jobRole: "Department Head",
-  department: "HEE",
-  organisation: "NHS UK",
-  email: "jo.bloggs@hee.co.uk",
-  website: "http://nhs.uk/",
-  twitter: "nhsengland",
-  linkedIn: "nhs",
-  bio: "Lorem ipsum dolor sit amet",
-  authorURL: "/author/jo-blogs"
-}) }}
+  {{ authorCard({
+    title: "Dr",
+    name: "Jo Blogs",
+    initials: "JB",
+    pronouns: "She/her",
+    jobRole: "Department Head",
+    department: "HEE",
+    organisation: "NHS UK",
+    email: "jo.bloggs@hee.co.uk",
+    website: "http://nhs.uk/",
+    twitter: "nhsengland",
+    linkedIn: "nhs",
+    bio: "Lorem ipsum dolor sit amet",
+    authorURL: "/author/jo-blogs"
+  }) }}
 
+  {{ reviewDate({
+    "lastReview": "12 February 2017",
+    "nextReview": "1 February 2020"
+  }) }}
 {% endblock %}
 
 {% block pageRightbar %}
@@ -81,4 +92,49 @@
       }
     ]
   })}}
+{% endblock %}
+
+{% block pageFeature %}
+  {% set items = [
+    {
+      title: "Blog/News Title",
+      href: "#",
+      details: [
+      {
+        label: "Publish date:",
+        value: "07 September 2022"
+      }
+    ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada."
+    },
+    {
+      title: "Blog/News Title",
+      href: "#",
+      details: [
+      {
+        label: "Publish date:",
+        value: "07 September 2022"
+      }
+    ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada."
+    },
+    {
+      title: "Blog/News Title",
+      href: "#",
+      details: [
+      {
+        label: "Publish date:",
+        value: "07 September 2022"
+      }
+    ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada."
+    }
+  ]
+  %}
+
+  <div class="nhsuk-width-container">
+    <h2>Related content</h2>
+    <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet. Nunc turpis vel aliquam lacus arcu. Sodales nullam id lectus orci quis sed. dsf</p>
+    {{ miniListing(items) }}
+  </div>
 {% endblock %}
