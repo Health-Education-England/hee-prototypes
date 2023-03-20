@@ -73,12 +73,11 @@ export default () => {
 
     toggleClearLinkVisibility(toggleLink) {
       const checkboxes = [...toggleLink.parentElement.querySelectorAll('.nhsuk-checkboxes__input')];
-
-      for (let i = 0; i <= checkboxes.length; i++ ) {
+      for (let i = 0; i < checkboxes.length; i++ ) {
         if (checkboxes[i].hasAttribute('checked')) {
           toggleLink.classList.add('visible');
+          break;
         }
-        break;
       }
     }
   }
