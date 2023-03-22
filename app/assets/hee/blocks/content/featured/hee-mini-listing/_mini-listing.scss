@@ -6,12 +6,20 @@
   }
 
   @include mq($from: desktop) {
-    column-gap: map-get($nhsuk-spacing-points, 4);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 
+  .hee-mini-listing__item {
+    flex-basis: 32%;
+  }
+
   .hee-listing-item {
+    @include mq($from: desktop) {
+      margin-bottom: nhsuk-spacing(5);
+    }
+
     span.hee-listing-item__details__label {
       @include mq($from: tablet) {
         width: auto;
