@@ -1,0 +1,25 @@
+{% macro summaryCard(params) %}
+  <div class="hee-card hee-card--summary">
+    {%- if params.title %}
+      <h3 class="hee-card--summary__heading">{{ params.title }}</h3>
+    {% endif -%}
+
+    <ul class="hee-card--summary__list">
+      {%- for item in params.items %}
+        <li class="hee-card--summary__item">
+          {% if item.label %}
+            <span class="hee-card--summary__item__label">{{item.label}}</span>
+          {% endif %}
+
+          <span class="hee-card--summary__item__value">
+              {% if item.url %}
+                <a class="hee-card--summary__item__link" href="{{item.url}}">{{item.value}}</a>
+              {% else %}
+                {{item.value}}
+              {% endif %}
+            </span>
+        </li>
+      {%- endfor %}
+    </ul>
+  </div>
+{% endmacro %}
