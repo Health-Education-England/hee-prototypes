@@ -49,6 +49,10 @@ html {
     }
 }
 
+.page__content {
+    word-break: break-word;
+}
+
 .page__feature {
     @include nhsuk-responsive-margin(8, 'top');
 }
