@@ -1,36 +1,43 @@
 export default () => {
   /**
-  * Listing
-  * Elements with the selector '.nhsuk-listing' are passed into this class
-  */
+   * Listing
+   * Elements with the selector '.nhsuk-listing' and '.hee-listings' are passed
+   * into this class.
+   *
+   * @todo Remove legacy references to .nhsuk-listing and loops once all new
+   * collection templates have been implemented.
+   */
   class Listing {
     constructor(container) {
-      this.container = container;
-      this.sort = this.container.querySelector('.hee-listing__filter__sort');
 
-      this.addEventListeners();
-      this.toggleJavascriptElements();
+      [...container.querySelectorAll('.hee-listing__filter__sort, .nhsuk-listing__sort')].forEach(formElement => {
+        this.addEventListeners(formElement);
+        this.toggleJavascriptElements(formElement);
+      });
     }
 
-    addEventListeners() {
-      if (this.sort) {
-        [...this.sort.getElementsByTagName('select')].forEach(select => select.addEventListener('change', evt => this.updateResults(evt)));
+    addEventListeners(formElement) {
+      if (formElement) {
+        [...formElement.getElementsByTagName('select')].forEach(select => {
+          select.addEventListener('change', evt => this.updateResults(formElement))
+        });
       }
     }
 
-    toggleJavascriptElements() {
-      if (this.sort) {
-        const submit = this.sort.querySelector('.hee-listing__filter__submit');
-        if (submit) {
-          submit.hidden = true;
-        }
+    toggleJavascriptElements(formElement) {
+      if (formElement) {
+        [...formElement.querySelectorAll('.hee-listing__filter__submit, .nhsuk-listing__sort__submit')].forEach(submit => {
+          if (submit) {
+            submit.hidden = true;
+          }
+        })
       }
     }
 
-    updateResults() {
-      this.sort.submit();
+    updateResults(formElement) {
+      formElement.submit();
     }
   }
 
-  [...document.getElementsByClassName('hee-listing')].forEach(listing => new Listing(listing));
+  [...document.querySelectorAll('.hee-listing, .nhsuk-listing')].forEach(listing => new Listing(listing));
 }

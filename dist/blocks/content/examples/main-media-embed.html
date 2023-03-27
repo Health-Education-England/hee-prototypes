@@ -14,16 +14,6 @@
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
   <link href="/hee-prototypes/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
   <link href="/hee-prototypes/css/hee.css" rel="stylesheet" />
-  <style>
-    .example {}
-
-    .example--template {}
-
-    .example--blocks {
-      padding: 1em;
-      background-color: #f0f4f5;
-    }
-  </style>
   <link rel="shortcut icon" href="/hee-prototypes/favicons/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/hee-prototypes/favicons/apple-touch-icon-180x180.png">
   <link rel="mask-icon" href="/hee-prototypes/favicons/favicon.svg" color="#005eb8">
@@ -36,7 +26,7 @@
   <meta name="msapplication-square310x310logo" content="/hee-prototypes/favicons/largetile-310x310.png">
 </head>
 
-<body class="example example--blocks">
+<body>
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script>
@@ -49,7 +39,9 @@
     <div class="nhsuk-media__description">
       <p>Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus.</p>
     </div>
-    <iframe class="youtube" src="https://youtube.com/embed/C0DPdy98e4c" title="Pellentesque sit amet nulla" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"></iframe>
+    <div class="nhsuk-media__container">
+      <iframe class="youtube" src="https://youtube.com/embed/C0DPdy98e4c" title="Pellentesque sit amet nulla" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"></iframe>
+    </div>
     <div class="nhsuk-media__info">
       <div class="nhsuk-media__transcript">
         <a href="javascript:void(0);">
@@ -71,7 +63,9 @@
     <div class="nhsuk-media__description">
       <p>Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus.</p>
     </div>
-    <iframe class="vimeo" src="https://player.vimeo.com/video/226053498" title="Pellentesque sit amet nulla" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"></iframe>
+    <div class="nhsuk-media__container">
+      <iframe class="vimeo" src="https://player.vimeo.com/video/226053498" title="Pellentesque sit amet nulla" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"></iframe>
+    </div>
     <div class="nhsuk-media__info">
       <div class="nhsuk-media__transcript">
         <a href="javascript:void(0);">

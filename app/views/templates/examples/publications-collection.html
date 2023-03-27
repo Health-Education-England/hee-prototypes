@@ -20,6 +20,7 @@
 {% block pageHeader %}
   <div class="nhsuk-width-container">
     <h1>Publications Collection</h1>
+    <span class="nhsuk-caption-xl">Caption</span>
     <p class="nhsuk-lede-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum sit sed porta viverra. Amet, tincidunt cras augue justo, proin mollis sapien. Sed cursus quam suspendisse.</p>
   </div>
 {% endblock %}
@@ -31,34 +32,35 @@
         title: "Topic",
         showClearToggle: true,
         items: [
-        {
-          text: "Item one",
-          value: "item_one",
-          checked: true
-        },
-        {
-          text: "Item two",
-          value: "item_two",
-          checked: true
-        }
-      ]
+          {
+            text: "Item one",
+            value: "item_one"
+          },
+          {
+            text: "Item two",
+            value: "item_two",
+            checked: true
+          }
+        ]
       },
       {
         title: "Publication type",
+        showClearToggle: true,
         items: [
-        {
-          text: "Item one",
-          value: "item_one"
-        },
-        {
-          text: "Item two",
-          value: "item_two"
-        },
-        {
-          text: "Item three",
-          value: "item_three"
-        }
-      ]
+          {
+            text: "Item one",
+            value: "item_one"
+          },
+          {
+            text: "Item two",
+            value: "item_two"
+          },
+          {
+            text: "Item three",
+            value: "item_three",
+            checked: true
+          }
+        ]
       }
     ]
   }) }}

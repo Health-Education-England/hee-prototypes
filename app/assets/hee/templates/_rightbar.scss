@@ -2,27 +2,39 @@
 .page--rightbar {
   padding-bottom: nhsuk-spacing(6);
   .page__header {
-      padding-top: nhsuk-spacing(7);
+      padding-top: nhsuk-spacing(6);
+
+      @include mq($from: tablet) {
+        padding-top: nhsuk-spacing(7);
+      }
+
       h1, p, span {
-        max-width: 66.6667%;
+        @include mq($from: tablet) {
+          max-width: 66.6667%;
+        }
+      }
+
+      .nhsuk-hero {
+        h1, p, span {
+          max-width: 100%;
+        }
       }
   }
   .page__layout {
       @include hee-flexgrid-row;
       .page__rightbar {
-          @include hee-flexgrid-col(3.75,$col-offset:0.25);
+          @include hee-flexgrid-col(3.75,$col-offset:0.4);
 
-          /* ADD CALL SIDEBAR BLOCKS TO THIS CODE */
-        .hee-sidebarlinks,
-        .hee-sidebarimage,
-        .nhsuk-card,
-        .hee-card {
-            margin-bottom: 24px!important;
-        }
-
+          .hee-sidebarlinks,
+          .hee-sidebarimage,
+          .nhsuk-card,
+          .nhsuk-contact__card,
+          .hee-card {
+            margin-bottom: 24px;
+          }
       }
       .page__main {
-          @include hee-flexgrid-col(8);
+          @include hee-flexgrid-col(7.85);
       }
   }
 
@@ -33,20 +45,18 @@
         }
     }
     .page__layout {
-      .page__rightbar, 
+      .page__rightbar,
       .page__main {
           @include hee-flexgrid-col(12,$col-offset:0);
       }
     }
-}
+  }
 
-}
+  .page__rightbar {
+    margin-bottom: 24px;
 
-.page--template-standard {}
-.page--template-minihub {}
-.page--template-sectionhome {}
-.page--single-news {}
-.page--single-blog {}
-.page--single-publication {}
-.page--single-event {}
-.page--template-legal {}
+    .nhsuk-card:last-of-type, .nhsuk-contact:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
