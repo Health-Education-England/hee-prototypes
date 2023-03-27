@@ -44,6 +44,7 @@
 {# Sidebar #}
 {%- from 'hee/blocks/content/sidebar/card--details/macro.njk' import detailsCard %}
 {%- from 'hee/blocks/content/sidebar/card--cta/macro.njk' import ctaCard %}
+{%- from 'hee/blocks/content/sidebar/card--summary/macro.njk' import summaryCard %}
 
 {# Search #}
 {%- from 'hee/blocks/furniture/search/form/macro.njk' import searchForm %}
@@ -53,6 +54,7 @@
 {# To Sort #}
 {# HEE Components #}
 {%- from 'hee/blocks/content/sidebar/anchorlinks/macro.njk' import anchorLinks %}
+{%- from 'hee/blocks/content/footer/anchorlinks-sticky/macro.njk' import anchorLinksSticky %}
 {%- from 'components/hee/hee-media/macro.njk' import media %}
 {%- from 'components/hee/hee-navmap/macro.njk' import navMap %}
 {%- from 'components/hee/hee-relatednav/macro.njk' import relatedNav %}
@@ -128,7 +130,7 @@
     {% endblock %}
   </head>
 
-  <body>
+  <body class="{{ bodyClasses }}">
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
     {% block bodyStart %}
     {% endblock %}
