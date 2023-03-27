@@ -1,9 +1,9 @@
 {%- from 'hee/blocks/furniture/collections/hee-listing-item/macro.njk' import listingItem %}
 
-{% macro miniListing(items) %}
-  <div class="hee-mini-listing">
+{% macro featuredContent(items) %}
+  <div class="hee-featured-content">
     {% for item in items %}
-      <div class="hee-mini-listing__item">
+      <div class="hee-featured-content__item">
         {{ listingItem(item) }}
       </div>
     {% endfor %}
