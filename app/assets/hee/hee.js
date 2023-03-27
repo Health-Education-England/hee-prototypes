@@ -5,7 +5,7 @@ import SubNav from './blocks/scaffolding/header/navigation/subnav';
 // HEE Components
 import AnchorLinks from './blocks/content/sidebar/anchorlinks/anchorlinks';
 import TableContents from './blocks/content/sidebar/anchorlinks/toc';
-import AnchorLinksSticky from '../components/hee/hee-anchorlinks-sticky/anchorlinks-sticky';
+import AnchorLinksSticky from './blocks/content/footer/anchorlinks-sticky/anchorlinks-sticky';
 import Listing from './blocks/furniture/collections/hee-listing/listing';
 import Media from '../components/hee/hee-media/media';
 import NavMap from '../components/hee/hee-navmap/navmap';
