@@ -196,8 +196,12 @@ export default () => {
      */
     setBackToTopLinks(headings) {
       headings.forEach((heading, index) => {
-        const link = this.createBackToTopLink();
-        heading.parentNode.insertBefore(link, heading);
+        // Avoids duplicate back to top links when sticky is present.
+        if (!heading.hasAttribute('data-has-top-link')) {
+          const link = this.createBackToTopLink();
+          heading.parentNode.insertBefore(link, heading);
+          heading.setAttribute('data-has-top-link', 1);
+        }
       });
     }
 
