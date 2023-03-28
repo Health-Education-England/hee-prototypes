@@ -1,7 +1,14 @@
 /* NHSUK-Header__container */
 
+.nhsuk-header {
+  position: relative;
+  z-index: 100;
+}
+
 .nhsuk-header__container {
   padding: 20px 0;
+  position: relative;
+  z-index: 100;
 }
 
 /* NHSUK-Header__content */

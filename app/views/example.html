@@ -22,7 +22,7 @@
 {%- from 'components/hee/hee-microhero/macro.njk' import microHero %}
 {%- from 'components/hee/hee-homesection/macro.njk' import homepageSection %}
 {%- from 'hee/blocks/content/main/hee-publication-doc/macro.njk' import publicationDoc %}
-{%- from 'hee/blocks/content/featured/hee-mini-listing/macro.njk' import miniListing %}
+{%- from 'hee/blocks/content/featured/featured-content/macro.njk' import featuredContent %}
 {%- from 'hee/blocks/furniture/collections/hee-listing/macro.njk' import listingLayout %}
 {%- from 'hee/blocks/furniture/collections/hee-listing-item/macro.njk' import listingItem %}
 {%- from 'hee/blocks/furniture/collections/hee-filter/macro.njk' import filter %}
@@ -36,6 +36,7 @@
 {%- from 'hee/blocks/content/main/applies-to/macro.njk' import appliesTo %}
 {%- from 'hee/blocks/content/main/card--author/macro.njk' import authorCard %}
 {%- from 'hee/blocks/content/main/google-map/macro.njk' import googleMap %}
+{%- from 'hee/blocks/content/main/training-journey/macro.njk' import trainingJourney %}
 {%- from 'hee/blocks/content/sidebar/card--person/macro.njk' import personCard %}
 {%- from 'hee/blocks/content/sidebar/card--department/macro.njk' import departmentCard %}
 {%- from 'components/hee/hee-detailscard/contact.njk' import contact %}
@@ -43,10 +44,17 @@
 {# Sidebar #}
 {%- from 'hee/blocks/content/sidebar/card--details/macro.njk' import detailsCard %}
 {%- from 'hee/blocks/content/sidebar/card--cta/macro.njk' import ctaCard %}
+{%- from 'hee/blocks/content/sidebar/card--summary/macro.njk' import summaryCard %}
+
+{# Search #}
+{%- from 'hee/blocks/furniture/search/form/macro.njk' import searchForm %}
+{%- from 'hee/blocks/furniture/search/listing/macro.njk' import searchListing %}
+{%- from 'hee/blocks/furniture/search/listing-item/macro.njk' import searchListingItem %}
 
 {# To Sort #}
 {# HEE Components #}
 {%- from 'hee/blocks/content/sidebar/anchorlinks/macro.njk' import anchorLinks %}
+{%- from 'hee/blocks/content/footer/anchorlinks-sticky/macro.njk' import anchorLinksSticky %}
 {%- from 'components/hee/hee-media/macro.njk' import media %}
 {%- from 'components/hee/hee-navmap/macro.njk' import navMap %}
 {%- from 'components/hee/hee-relatednav/macro.njk' import relatedNav %}
@@ -69,6 +77,7 @@
 {%- from 'images/macro.njk' import image %}
 {%- from 'inset-text/macro.njk' import insetText %}
 {%- from 'do-dont-list/macro.njk' import list %}
+{%- from 'nav-a-z/macro.njk' import azNav %}
 {%- from 'review-date/macro.njk' import reviewDate %}
 {%- from 'summary-list/macro.njk' import summaryList %}
 {%- from 'select/macro.njk' import select %}
@@ -84,7 +93,6 @@
 {%- from 'input/macro.njk' import input %}
 {%- from 'label/macro.njk' import label %}
 {%- from 'list-panel/macro.njk' import listPanel %}
-{%- from 'nav-a-z/macro.njk' import azNav %}
 {%- from 'radios/macro.njk' import radios %}
 {%- from 'tag/macro.njk' import tag %}
 {%- from 'textarea/macro.njk' import textarea %#}
