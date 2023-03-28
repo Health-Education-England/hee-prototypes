@@ -1,0 +1,7 @@
+.hee-search-listing {
+  max-width: 100%;
+
+  @include mq($from: desktop) {
+    max-width: 66%;
+  }
+}

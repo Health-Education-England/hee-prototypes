@@ -1,0 +1,91 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'search-form' %}
+{% set page_title = 'Search Form' %}
+{% set page_tag = 'NHS' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block breadcrumbs %}
+  {{
+  breadcrumb({
+    items: [
+      {
+        href: basePath + "/",
+        text: "Home"
+      },
+      {
+        href: basePath + "/blocks",
+        text: "Blocks"
+      },
+      {
+        href: basePath + "/blocks/furniture",
+        text: "Furniture"
+      }
+    ],
+    href: basePath + "/blocks/furniture/"+page_url,
+    text: page_title
+  })
+  }}
+{% endblock %}
+
+{% block pageLeftbar %}
+  {{ subnav({
+    area: 'blocks',
+    subarea: 'furniture'
+  }) }}
+{% endblock %}
+
+{% block pageHeader %}
+  <span class="nhsuk-caption-xl">Furniture</span>
+  <h1>{{ page_title }}</h1>
+
+  <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+  <h3>Example</h3>
+  {{ example({
+    view: 'block',
+    url: basePath + '/blocks/furniture/examples/' + page_url,
+    height: '130px'
+  }) }}
+
+  <hr />
+
+  <h3>Macro</h3>
+  {{ highlight({
+    html: '
+{{ searchForm({
+  label: "Enter a search term",
+  placeholder: "Type search here",
+  submitLabel: "Submit"
+}) }}
+  '
+  }) }}
+
+  <hr />
+
+  <h3>HTML</h3>
+  {{ highlight({
+    html : '<form class="hee-search-form" method="get" action="">
+  <div class="hee-search-form__wrapper nhsuk-form-group">
+    <label class="nhsuk-label nhsuk-u-visually-hidden" for="search-field">Enter a search term</label>
+    <input class="hee-search-form__input nhsuk-input" type="search" name="q" autocomplete="off" id="search-field" placeholder="Type search here">
+    <button class="hee-search-form__submit" type="submit">
+      <span class="nhsuk-u-visually-hidden">Submit</span>
+      <svg class="hee-search-form__icon nhsuk-icon" width="14" height="14" viewBox="-5 -5 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 17C13.866 17 17 13.866 17 10C17 6.13401 13.866 3 10 3C6.13401 3 3 6.13401 3 10C3 13.866 6.13401 17 10 17Z" stroke="#F0F4F5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M14.9531 14.95L19.0032 19.0001" stroke="#F0F4F5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </button>
+  </div>
+</form>
+'
+  })
+  }}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}
