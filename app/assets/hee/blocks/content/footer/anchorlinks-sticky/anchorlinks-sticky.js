@@ -99,6 +99,6 @@ export default () => {
 
   const element = document.getElementById('hee-anchorlinks-sticky');
   if (element !== null) {
-    new AnchorLinksSticky();
+    new AnchorLinksSticky(element);
   }
 }
