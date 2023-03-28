@@ -91,6 +91,10 @@
     text-indent: -99999px;
     width: 59px;
 
+    &:visited {
+      color: $color_nhsuk-blue;
+    }
+
     @include mq($from: desktop) {
       @include nhsuk-font(19);
       background-color: transparent;
