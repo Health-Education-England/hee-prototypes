@@ -29,7 +29,7 @@
     <h2 class="hee-card__heading">{{ params.heading | safe }}</h2>
   {% endif %}
 
-  <div class="hee-card--author__header">
+  <div class="hee-card--header">
     <div class="hee-card__image {{ 'has-bg' if params.imgURL }}">
       <div class="hee-card__initials" {%- if params.imgURL %} style="background: url('{{ params.imgURL }}')" {% endif %}>
         {% if params.initials %}
@@ -38,7 +38,7 @@
       </div>
     </div>
 
-    <div class="hee-card--author__details">
+    <div class="hee-card--details">
       <h2 class="hee-card__name" aria-label="Name">
         {{ params.title | safe }} {{ params.name | safe }}
       </h2>
