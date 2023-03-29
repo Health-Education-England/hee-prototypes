@@ -65,7 +65,7 @@ export default () => {
 
         // Traverse DOM for H3 elements after current H2 heading and append to
         // children links array.
-        while (sibling && sibling.tagName !== 'H2') {
+        while (sibling && !sibling.classList.contains('toc_h2')) {
           if (sibling.tagName === 'H3' && sibling.classList.contains('toc_h3')) {
 
             // Set unique id for current heading H3 element.
@@ -196,8 +196,12 @@ export default () => {
      */
     setBackToTopLinks(headings) {
       headings.forEach((heading, index) => {
-        const link = this.createBackToTopLink();
-        heading.parentNode.insertBefore(link, heading);
+        // Avoids duplicate back to top links when sticky is present.
+        if (!heading.hasAttribute('data-has-top-link')) {
+          const link = this.createBackToTopLink();
+          heading.parentNode.insertBefore(link, heading);
+          heading.setAttribute('data-has-top-link', 1);
+        }
       });
     }
 

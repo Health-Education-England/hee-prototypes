@@ -10,25 +10,17 @@
     margin: 0 nhsuk-spacing(4) nhsuk-spacing(4);
   }
 
-  iframe {
-    max-height: 100%;
-    width: 100%;
-    margin-bottom: -7px;
+  .nhsuk-media__container {
+    padding: 0 nhsuk-spacing(4) 56.25% nhsuk-spacing(4);
+    position: relative;
 
-    &.youtube,
-    &.vimeo{
-      min-height: 210px;
-
-      @include mq($from: mobile){
-        min-height: calc(((100vw - 48px) / 16 * 9) + 48px);
-      }
-      @include mq($from: tablet){
-        min-height: calc(((100vw - 48px) / 16 * 9));
-      }
-    }
-
-    &.anchor{
-      height: 98px;
+    iframe {
+      height: 100%;
+      left: 0;
+      max-height: 100%;
+      position: absolute;
+      top: 0;
+      width: 100%;
     }
   }
 
