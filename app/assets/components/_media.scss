@@ -167,7 +167,7 @@
       height: 100px;
 
       @include mq($from: desktop) {
-        height: auto;
+        height: 162px;
       }
     }
   }
