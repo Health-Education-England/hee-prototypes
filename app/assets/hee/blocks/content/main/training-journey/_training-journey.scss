@@ -15,7 +15,7 @@
   }
 
   .hee-training-journey__group {
-    @include nhsuk-responsive-margin(4, 'bottom');
+    @include nhsuk-responsive-margin(3, 'bottom');
 
     &:last-child {
       margin: 0;
@@ -34,28 +34,9 @@
 
     // Active journey item within group.
     &.active {
-      padding-bottom: nhsuk-spacing(2);
-      padding-top: nhsuk-spacing(3);
-
-      @include mq($from: tablet) {
-        padding-bottom: nhsuk-spacing(3);
-      }
-
-      span {
-        @include nhsuk-typography-responsive(16);
-        display: block;
-        font-weight: $nhsuk-font-bold;
-        left: nhsuk-spacing(3);
-        position: absolute;
-        top: nhsuk-spacing(2) * -1;
-
-        @include mq($from: tablet) {
-          left: nhsuk-spacing(4);
-        }
-      }
-
       .hee-training-journey__item__link {
         font-weight: $nhsuk-font-bold;
+        text-decoration: none;
 
         &:before {
           border-color: $color_nhsuk-blue;
@@ -70,35 +51,6 @@
 
       .hee-training-journey__item__link {
         right: 7px;
-      }
-    }
-
-    // First and active journey item to appear within group.
-    &.active.first {
-      @include nhsuk-responsive-padding(3, 'bottom');
-
-      .hee-training-journey__item__link {
-        &:before {
-          top: nhsuk-spacing(3) * -1;
-        }
-      }
-    }
-
-    // Last and active journey item to appear within group.
-    &.active.last {
-      @include nhsuk-responsive-padding(2, 'top');
-      border-left: 4px solid $color_nhsuk-grey-4;
-      line-height: 1;
-
-      span {
-        @include mq($from: tablet) {
-          top: -12px;
-        }
-      }
-
-      .hee-training-journey__item__link {
-        bottom: 0;
-        right: 11px;
       }
     }
   }
@@ -117,7 +69,7 @@
       display: inline-block;
       height: 18px;
       position: relative;
-      top: nhsuk-spacing(1);
+      top: 2px;
       width: 18px;
     }
   }
