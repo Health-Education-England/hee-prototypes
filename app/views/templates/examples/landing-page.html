@@ -4,7 +4,6 @@
 {% set page_title = 'Landing Page' %}
 
 {% block pageClass %}page--fullwidth{% endblock %}
-{% block pageHeaderClass %}has-microhero{% endblock %}
 
 {% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
 
@@ -32,9 +31,6 @@
 {% endblock %}
 
 {% block pageHeader %}
-  {{ microHero({
-    "imgURL": basePath + "/images/young-child-using-tablet-device.jpg"
-  }) }}
   <div class="nhsuk-width-container">
     {#{ backLink({
       "href": "#",
@@ -49,6 +45,34 @@
 
 {% block pageContent %}
   <div class="nhsuk-grid-row">
+    {{ media({
+      title: "Pellentesque sit amet nulla",
+      description: "Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus.",
+      type: "youtube",
+      transcript: ["Donec pulvinar sollicitudin massa, nec pulvinar turpis dictum maximus."],
+      mediaId: "C0DPdy98e4c",
+      lastReview: "09/05/2022",
+      reviewDue: "09/05/2023"
+    }) }}
+
+    {{ media({
+      "type": "anchor",
+      "src": "https://anchor.fm/health-education-england/embed/episodes/Robyn-Scargill---Trainee-nursing-associate-eqe7mk/a-a4l5nun",
+      "title": "Anchor.fm Example",
+      "lastReview": "01/01/2021",
+      "reviewDue": "01/01/2022"
+    }) }}
+
+    {{ media({
+      title: "Pellentesque sit amet nulla",
+      description: "Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus.",
+      type: "vimeo",
+      transcript: ["Donec pulvinar sollicitudin massa, nec pulvinar turpis dictum maximus."],
+      mediaId: "226053498",
+      lastReview: "09/05/2022",
+      reviewDue: "09/05/2023"
+    }) }}
+
     <ul class="nhsuk-card-group">
       <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
         {{ card({

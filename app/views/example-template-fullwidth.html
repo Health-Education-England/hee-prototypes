@@ -1,0 +1,23 @@
+{% extends "example-template.html" %}
+
+{% block pageClass %}page--fullwidth{% endblock %}
+
+{% block breadcrumbs %}
+{% endblock %}
+
+{% block pageHeader %}
+{% endblock %}
+
+{% block pageMain %}
+  <div class="page__main nhsuk-width-container">
+    <div class="page__content">
+      {% block pageContent %}{% endblock %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block pageFooter %}
+{% endblock %}
+
+{% block pageFeature %}
+{% endblock %}
