@@ -14,11 +14,6 @@
     padding: 0 nhsuk-spacing(4) 56.25% nhsuk-spacing(4);
     position: relative;
 
-    &.anchor {
-      height: 98px;
-      padding-bottom: 0;
-    }
-
     iframe {
       height: 100%;
       left: 0;
@@ -172,7 +167,7 @@
       height: 100px;
 
       @include mq($from: desktop) {
-        height: 162px;
+        height: auto;
       }
     }
   }
