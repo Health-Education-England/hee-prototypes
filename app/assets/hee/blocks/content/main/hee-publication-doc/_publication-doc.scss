@@ -25,13 +25,21 @@
       }
 
       .hee-publication-doc__icon__corner {
-        border-bottom: 16px solid $color_nhsuk-black;
-        border-right: 16px solid $color_nhsuk-grey-5;
-        height: 0;
         position: absolute;
-        right: 0;
         top: 4px;
+        right: 0;
+        width: 15px;
+        height: 16px;
+        background-color: $color_nhsuk-black;
+      }
+
+      .hee-publication-doc__icon__corner__triangle {
+        position: absolute;
         width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 1em 1em 0;
+        border-color: transparent $color_nhsuk-grey-5 transparent transparent;
       }
     }
 
@@ -54,6 +62,7 @@
     h3 {
       font-weight: normal;
       margin-bottom: map-get($nhsuk-spacing-points, 2);
+      word-break: break-all;
     }
 
     span {
