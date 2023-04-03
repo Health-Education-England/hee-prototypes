@@ -1,26 +1,5 @@
 {% macro authorCard(params) %}
 
-  {#{{ authorCard({
-    imgURL: basePath + "/images/doctor-headshot.png",
-    title: "Mr",
-    name: "First Last",
-    initials: "JB",
-    pronouns: "Pronoun",
-    jobTitle: "Job title",
-    department: "Department",
-    organisation: "Organisation",
-    email: "jo.bloggs@hee.co.uk",
-    website: "http://nhs.uk/",
-    twitter: "nhsengland",
-    linkedin: "nhs",
-    address: "Health Education England<br>
-              3 Piccadilly<br>
-              Manchester<br>
-              M1 3BN",
-    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque ac pellentesque in sapien. Amet in ante libero a lobortis. Blandit sed pulvinar ultrices gravida vulputate at. Ipsum dolor condimentum habitasse aliquam risus risus consectetur.",
-    authorURL: "/author/jo-blogs"
-  }) }}#}
-
 {%- if params.gridCol %}<div class="{{ params.gridCol }}">{% endif %}
 
 <div class="hee-card hee-card--author{%- if params.classes %} {{ params.classes }}{% endif %}">
@@ -29,7 +8,7 @@
     <h2 class="hee-card__heading">{{ params.heading | safe }}</h2>
   {% endif %}
 
-  <div class="hee-card--author__header">
+  <div class="hee-card--header">
     <div class="hee-card__image {{ 'has-bg' if params.imgURL }}">
       <div class="hee-card__initials" {%- if params.imgURL %} style="background: url('{{ params.imgURL }}')" {% endif %}>
         {% if params.initials %}
@@ -38,7 +17,7 @@
       </div>
     </div>
 
-    <div class="hee-card--author__details">
+    <div class="hee-card--details">
       <h2 class="hee-card__name" aria-label="Name">
         {{ params.title | safe }} {{ params.name | safe }}
       </h2>
@@ -62,6 +41,10 @@
   </div>
 
   <ul class="hee-card__contact">
+    {%- if params.telephone %}
+      <li class="hee-card__telephone hee-card__contact__item" aria-label="Telephone"><a href="tel:{{ params.telephone | safe }};">{{ params.telephone | safe }}</a></li>
+    {%- endif %}
+
     {%- if params.email %}
       <li class="hee-card__email hee-card__contact__item" aria-label="Email"><a href="mailto:{{ params.email | safe }};">{{ params.email | safe }}</a></li>
     {%- endif %}
@@ -80,7 +63,7 @@
   </ul>
 
   {%- if params.address %}
-    <p class="hee-card__address" aria-label="Bio" >{{ params.address | safe }}</p>
+    <p class="hee-card__address" aria-label="Address" >{{ params.address | safe }}</p>
   {%- endif %}
 
   {%- if params.bio %}
