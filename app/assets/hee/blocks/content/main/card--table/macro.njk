@@ -2,6 +2,12 @@
   {% from 'details/macro.njk' import details %}
 
   <div class="hee-card--table">
+    {% if params.items.length > 1 %}
+      <div class="hee-card--table__toggle">
+        <a href="#">Expand all</a>
+      </div>
+    {% endif %}
+
     {% for item in params.items %}
       {% set detailsContent = '' %}
 
