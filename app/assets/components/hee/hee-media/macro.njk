@@ -9,28 +9,28 @@
         <p>{{ params.description }}</p>
       </div>
     {% endif %}
-
-    <div class="nhsuk-media__container {{ params.type }}">
-      {% if params.type === "youtube" or params.type === "vimeo" %}
-      <iframe
-        {% if params.type === "youtube" %}
-          src="https://youtube.com/embed/{{ params.mediaId }}"
-        {% elif params.type === "vimeo" %}
-          src="https://player.vimeo.com/video/{{ params.mediaId }}"
-        {% endif %}
-        title="{{ params.title }}"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"
-      ></iframe>
-
-      {% elif params.type === "anchor" %}
-        <iframe
-          src="{{ params.src }}"
-          frameborder="0"
-          scrolling="no"
-        ></iframe>
+    
+    {% if params.type === "youtube" or params.type === "vimeo" %}
+    <iframe
+      class="{{ params.type }}"
+      {% if params.type === "youtube" %}
+        src="https://youtube.com/embed/{{ params.mediaId }}"
+      {% elif params.type === "vimeo" %}
+        src="https://player.vimeo.com/video/{{ params.mediaId }}"
       {% endif %}
-    </div>
+      title="{{ params.title }}"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"
+    ></iframe>
+
+    {% elif params.type === "anchor" %}
+      <iframe
+        class="{{ params.type }}"
+        src="{{ params.src }}"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
+    {% endif %}
 
     <div class="nhsuk-media__info">
 

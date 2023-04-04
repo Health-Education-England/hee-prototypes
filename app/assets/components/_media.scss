@@ -10,25 +10,25 @@
     margin: 0 nhsuk-spacing(4) nhsuk-spacing(4);
   }
 
-  .nhsuk-media__container {
-    padding: 0 nhsuk-spacing(4) 56.25% nhsuk-spacing(4);
-    position: relative;
+  iframe {
+    max-height: 100%;
+    width: 100%;
+    margin-bottom: -7px;
 
-    iframe {
-      height: 100%;
-      left: 0;
-      max-height: 100%;
-      position: absolute;
-      top: 0;
-      width: 100%;
+    &.youtube,
+    &.vimeo{
+      min-height: 210px;
+
+      @include mq($from: mobile){
+        min-height: calc(((100vw - 48px) / 16 * 9) + 48px);
+      }
+      @include mq($from: tablet){
+        min-height: calc(((100vw - 48px) / 16 * 9));
+      }
     }
 
-    &.anchor {
-      padding-bottom: 0;
-
-      iframe {
-        position: relative;
-      }
+    &.anchor{
+      height: 98px;
     }
   }
 
@@ -149,26 +149,4 @@
       }
     }
   }
-}
-
-// Adjust responsive height for anchor embed within right hand sidebar template.
-.page--rightbar .page__content {
-  .nhsuk-media__container.anchor {
-    iframe {
-      height: 100px;
-    }
-  }
-}
-
-// Adjust responsive height for anchor embed within fullwidth template.
-.page--fullwidth .page__content {
-  .nhsuk-media__container.anchor {
-    iframe {
-      height: 100px;
-
-      @include mq($from: desktop) {
-        height: 162px;
-      }
-    }
-  }
-}
+} 
