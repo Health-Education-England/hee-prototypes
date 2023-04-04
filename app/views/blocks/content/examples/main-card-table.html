@@ -1,25 +1,74 @@
 {% extends "example-blocks.html" %}
 
 {% block main %}
-  {{ details({
-    "classes": "nhsuk-expander",
-    "text": "Get your medical records",
-    "HTML": "
-  <p>You can see your GP records by:</p>
-  <ul>
-    <li>asking for them at your GP surgery </li>
-    <li>going online to see them (if you have signed up for <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>) </li>
-  </ul>"
-  }) }}
-
-  {{ details({
-    "classes": "nhsuk-expander",
-    "text": "Second item",
-    "HTML": "
-  <p>You can see your GP records by:</p>
-  <ul>
-    <li>asking for them at your GP surgery </li>
-    <li>going online to see them (if you have signed up for <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>) </li>
-  </ul>"
+  {{ tableCard({
+    items: [
+      {
+        title: "First item",
+        rows: [
+          {
+            heading: "Defence Medical Services (DMS)",
+            content: "1"
+          },
+          {
+            heading: "No of Posts 2013 - indicitive",
+            content: "7"
+          },
+          {
+            heading: "Competition ratios 2022 data - Ratio",
+            content: "6 (6:37)"
+          },
+          {
+            heading: "Job/Programme Descriptions",
+            content: "Kent, Surrey and Sussex",
+            href: "http://www.yahoo.com"
+          }
+        ]
+      },
+      {
+        title: "Second item",
+        rows: [
+          {
+            heading: "Defence Medical Services (DMS)",
+            content: "1"
+          },
+          {
+            heading: "No of Posts 2013 - indicitive",
+            content: "7"
+          },
+          {
+            heading: "Competition ratios 2022 data - Ratio",
+            content: "6 (6:37)"
+          },
+          {
+            heading: "Job/Programme Descriptions",
+            content: "Kent, Surrey and Sussex",
+            href: "http://www.yahoo.com"
+          }
+        ]
+      },
+      {
+        title: "Second item",
+        rows: [
+          {
+            heading: "Defence Medical Services (DMS)",
+            content: "1"
+          },
+          {
+            heading: "No of Posts 2013 - indicitive",
+            content: "7"
+          },
+          {
+            heading: "Competition ratios 2022 data - Ratio",
+            content: "6 (6:37)"
+          },
+          {
+            heading: "Job/Programme Descriptions",
+            content: "Kent, Surrey and Sussex",
+            href: "http://www.yahoo.com"
+          }
+        ]
+      }
+    ]
   }) }}
 {% endblock %}

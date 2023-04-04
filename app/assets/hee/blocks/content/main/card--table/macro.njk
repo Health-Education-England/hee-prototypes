@@ -1,0 +1,36 @@
+{% macro tableCard(params) %}
+  {% from 'details/macro.njk' import details %}
+
+  <div class="hee-card--table">
+    {% for item in params.items %}
+      {% set detailsContent = '' %}
+
+      {% for row in item.rows %}
+          {% set rowContent %}
+            <div class="hee-card--table__row">
+              {% if row.heading  %}
+                <span class="hee-card--table__row__heading">{{ row.heading }}</span>
+              {% endif %}
+              <span class="hee-card--table__row__content">
+                {% if row.href %}
+                  <a href="{{ row.href }}">
+                {% endif %}
+                  {{ row.content}}
+                {% if row.href %}
+                  </a>
+                {% endif %}
+              </span>
+            </div>
+          {% endset %}
+
+          {% set detailsContent = detailsContent + rowContent %}
+      {% endfor %}
+
+      {{ details({
+        classes: "nhsuk-expander",
+        text: item.title,
+        HTML: detailsContent
+      }) }}
+    {% endfor %}
+  </div>
+{% endmacro %}
