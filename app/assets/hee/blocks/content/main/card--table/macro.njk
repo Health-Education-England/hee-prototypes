@@ -1,7 +1,7 @@
 {% macro tableCard(params) %}
   {% from 'details/macro.njk' import details %}
 
-  <div class="hee-card--table">
+  <div class="hee-card--table" aria-rowcount="{{ params.items.length }}">
     {% if params.items.length > 1 %}
       <div class="hee-card--table__toggle">
         <a href="#">Expand all</a>
@@ -9,15 +9,17 @@
     {% endif %}
 
     {% for item in params.items %}
-      {% set detailsContent = '' %}
+      {% set detailsContent %}
+        <div class="hee-card--table__container" role="table">
+      {% endset %}
 
       {% for row in item.rows %}
           {% set rowContent %}
-            <div class="hee-card--table__row">
+            <div class="hee-card--table__row" role="row">
               {% if row.heading  %}
-                <span class="hee-card--table__row__heading">{{ row.heading }}</span>
+                <span class="hee-card--table__row__heading" role="cell">{{ row.heading }}</span>
               {% endif %}
-              <span class="hee-card--table__row__content">
+              <span class="hee-card--table__row__content" role="cell">
                 {% if row.href %}
                   <a href="{{ row.href }}">
                 {% endif %}
@@ -31,6 +33,8 @@
 
           {% set detailsContent = detailsContent + rowContent %}
       {% endfor %}
+
+      {% set detailsContent = detailsContent + '</div>' %}
 
       {{ details({
         classes: "nhsuk-expander",
