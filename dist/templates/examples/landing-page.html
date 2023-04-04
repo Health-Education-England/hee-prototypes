@@ -14,16 +14,6 @@
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
   <link href="/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
   <link href="/css/hee.css" rel="stylesheet" />
-  <style>
-    .example {}
-
-    .example--template {}
-
-    .example--blocks {
-      padding: 1em;
-      background-color: #f0f4f5;
-    }
-  </style>
   <link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png">
   <link rel="mask-icon" href="/nhsuk-frontend/assets/favicons/favicon.svg" color="#005eb8">
@@ -36,7 +26,7 @@
   <meta name="msapplication-square310x310logo" content="/nhsuk-frontend/assets/favicons/largetile-310x310.png">
 </head>
 
-<body class="example example--template">
+<body class="">
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script>
@@ -163,80 +153,30 @@
       </div>
     </nav>
   </div>
-  <div class="banners">
+  <div class="site-notifications">
+    <div class="hee-phasebanner">
+      <div class="nhsuk-width-container">
+        <div class="hee-phasebanner__wrapper">
+          <span class="hee-phasebanner__tag"> Alpha </span>
+          <div class="hee-phasebanner__content">
+            <p>This is a new service – your <a class="nhsuk-link" href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <main class="page page--fullwidth" id="maincontent" role="main">
     <div class="page__header">
-      <div class="nhsuk-width-container">
-        <h1>Example - LandingHub Template</h1>
-        <span class="nhsuk-caption-xl">Caption</span>
-        <p class="nhsuk-lede-text">Amet, gravida tortor elementum lectus pharetra non lectus fermentum nunc. Venenatis tellus lorem eget dictum penatibus turpis curabitur. Eget nisl, turpis mollis bibendum.</p>
-        <p>Proin tristique purus ornare sed est dictum montes.</p>
-      </div>
     </div>
-    <div class="page__main nhsuk-width-container">
-      <div class="page__content">
+    <div class="page__main">
+      <section class="nhsuk-width-container">
+        <h1>Example - LandingHub Template</h1>
+        <p class="nhsuk-body-l">Caption</p>
+        <p>Amet, gravida tortor elementum lectus pharetra non lectus fermentum nunc. Venenatis tellus lorem eget dictum penatibus turpis curabitur. Eget nisl, turpis mollis bibendum.</p>
+        <p>Proin tristique purus ornare sed est dictum montes.</p>
+      </section>
+      <section class="nhsuk-width-container">
         <div class="nhsuk-grid-row">
-          <div class="nhsuk-media">
-            <h2>Pellentesque sit amet nulla</h2>
-            <div class="nhsuk-media__description">
-              <p>Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus.</p>
-            </div>
-            <div class="nhsuk-media__container youtube">
-              <iframe src="https://youtube.com/embed/C0DPdy98e4c" title="Pellentesque sit amet nulla" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"></iframe>
-            </div>
-            <div class="nhsuk-media__info">
-              <div class="nhsuk-media__transcript">
-                <a href="javascript:void(0);">
-                  <span class="nhsuk-media__show-text">Show transcript</span>
-                  <span class="nhsuk-media__hide-text">Hide transcript</span>
-                </a>
-                <div class="nhsuk-media__transcript-text">
-                  <p>Donec pulvinar sollicitudin massa, nec pulvinar turpis dictum maximus.</p>
-                </div>
-              </div>
-              <div class="nhsuk-media__reviews">
-                <p> Page last reviewed: 09/05/2022 </p>
-                <p> Next review due: 09/05/2023 </p>
-              </div>
-            </div>
-          </div>
-          <div class="nhsuk-media">
-            <h2>Anchor.fm Example</h2>
-            <div class="nhsuk-media__container anchor">
-              <iframe src="https://anchor.fm/health-education-england/embed/episodes/Robyn-Scargill---Trainee-nursing-associate-eqe7mk/a-a4l5nun" frameborder="0" scrolling="no"></iframe>
-            </div>
-            <div class="nhsuk-media__info">
-              <div class="nhsuk-media__reviews">
-                <p> Page last reviewed: 01/01/2021 </p>
-                <p> Next review due: 01/01/2022 </p>
-              </div>
-            </div>
-          </div>
-          <div class="nhsuk-media">
-            <h2>Pellentesque sit amet nulla</h2>
-            <div class="nhsuk-media__description">
-              <p>Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus.</p>
-            </div>
-            <div class="nhsuk-media__container vimeo">
-              <iframe src="https://player.vimeo.com/video/226053498" title="Pellentesque sit amet nulla" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"></iframe>
-            </div>
-            <div class="nhsuk-media__info">
-              <div class="nhsuk-media__transcript">
-                <a href="javascript:void(0);">
-                  <span class="nhsuk-media__show-text">Show transcript</span>
-                  <span class="nhsuk-media__hide-text">Hide transcript</span>
-                </a>
-                <div class="nhsuk-media__transcript-text">
-                  <p>Donec pulvinar sollicitudin massa, nec pulvinar turpis dictum maximus.</p>
-                </div>
-              </div>
-              <div class="nhsuk-media__reviews">
-                <p> Page last reviewed: 09/05/2022 </p>
-                <p> Next review due: 09/05/2023 </p>
-              </div>
-            </div>
-          </div>
           <ul class="nhsuk-card-group">
             <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
               <div class="nhsuk-card nhsuk-card--clickable">
@@ -310,6 +250,8 @@
             </li>
           </ul>
         </div>
+      </section>
+      <section class="nhsuk-width-container">
         <h2>Navigation cards component</h2>
         <div class="nhsuk-grid-row">
           <ul class="nhsuk-card-group">
@@ -370,7 +312,7 @@
             </li>
           </ul>
         </div>
-      </div>
+      </section>
     </div>
     <div class="page__footer">
     </div>
