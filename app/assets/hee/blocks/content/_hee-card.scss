@@ -52,10 +52,10 @@
   }
 
   .hee-card__image {
-    width: 134px;
-    height: 134px;
-    display: block;
-    margin-bottom: 24px;
+      width: 134px;
+      height: 134px;
+      display: block;
+      margin-bottom: 24px;
   }
 
   .hee-card__initials {
@@ -179,10 +179,10 @@
     margin-bottom: 0;
   }
 
-  .hee-card__authorurl {
-    @include nhsuk-typography-responsive(16);
-    margin-bottom: 0;
-    @include nhsuk-responsive-margin(3, 'top');
+  &__authorurl {
+      @include nhsuk-typography-responsive(16);
+      margin-bottom: 0;
+      @include nhsuk-responsive-margin(3, 'top');
   }
 
   hr {
