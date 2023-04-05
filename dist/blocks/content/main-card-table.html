@@ -135,11 +135,165 @@
           <hr />
           <h3>Macro</h3>
           <pre><code>
-
+{{ tableCard({
+    items: [
+      {
+        title: &quot;First item&quot;,
+        rows: [
+          {
+            heading: &quot;Defence Medical Services (DMS)&quot;,
+            content: &quot;1&quot;
+          },
+          {
+            heading: &quot;No of Posts 2013 - indicitive&quot;,
+            content: &quot;7&quot;
+          },
+          {
+            heading: &quot;Competition ratios 2022 data - Ratio&quot;,
+            content: &quot;6 (6:37)&quot;
+          },
+          {
+            heading: &quot;Job/Programme Descriptions&quot;,
+            content: &quot;Kent, Surrey and Sussex&quot;,
+            href: &quot;http://www.yahoo.com&quot;
+          }
+        ]
+      },
+      {
+        title: &quot;Second item&quot;,
+        rows: [
+          {
+            heading: &quot;Defence Medical Services (DMS)&quot;,
+            content: &quot;1&quot;
+          },
+          {
+            heading: &quot;No of Posts 2013 - indicitive&quot;,
+            content: &quot;7&quot;
+          },
+          {
+            heading: &quot;Competition ratios 2022 data - Ratio&quot;,
+            content: &quot;6 (6:37)&quot;
+          },
+          {
+            heading: &quot;Job/Programme Descriptions&quot;,
+            content: &quot;Kent, Surrey and Sussex&quot;,
+            href: &quot;http://www.yahoo.com&quot;
+          }
+        ]
+      },
+      {
+        title: &quot;Third item&quot;,
+        rows: [
+          {
+            heading: &quot;Defence Medical Services (DMS)&quot;,
+            content: &quot;1&quot;
+          },
+          {
+            heading: &quot;No of Posts 2013 - indicitive&quot;,
+            content: &quot;7&quot;
+          },
+          {
+            heading: &quot;Competition ratios 2022 data - Ratio&quot;,
+            content: &quot;6 (6:37)&quot;
+          },
+          {
+            heading: &quot;Job/Programme Descriptions&quot;,
+            content: &quot;Kent, Surrey and Sussex&quot;,
+            href: &quot;http://www.yahoo.com&quot;
+          }
+        ]
+      }
+    ]
+}) }}
   </code></pre>
           <hr />
           <h3>HTML</h3>
-          <pre><code>
+          <pre><code>&lt;div class=&quot;hee-card--table&quot;&gt;
+    &lt;div class=&quot;hee-card--table__toggle&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;Expand all&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;details class=&quot;nhsuk-details nhsuk-expander&quot; nhsuk-polyfilled=&quot;true&quot; id=&quot;nhsuk-details0&quot;&gt;
+      &lt;summary class=&quot;nhsuk-details__summary&quot; role=&quot;button&quot; aria-controls=&quot;nhsuk-details__text0&quot; tabindex=&quot;0&quot; aria-expanded=&quot;false&quot;&gt;
+        &lt;span class=&quot;nhsuk-details__summary-text&quot;&gt; First item &lt;/span&gt;
+      &lt;/summary&gt;
+      &lt;div class=&quot;nhsuk-details__text&quot; id=&quot;nhsuk-details__text0&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;div aria-rowcount=&quot;3&quot; class=&quot;hee-card--table__container&quot; role=&quot;table&quot;&gt;
+          &lt;div class=&quot;hee-card--table__row&quot; role=&quot;row&quot;&gt;
+            &lt;span class=&quot;hee-card--table__row__heading&quot; role=&quot;cell&quot;&gt;Defence Medical Services (DMS)&lt;/span&gt;
+            &lt;span class=&quot;hee-card--table__row__content&quot; role=&quot;cell&quot;&gt; 1 &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;hee-card--table__row&quot; role=&quot;row&quot;&gt;
+            &lt;span class=&quot;hee-card--table__row__heading&quot; role=&quot;cell&quot;&gt;No of Posts 2013 - indicitive&lt;/span&gt;
+            &lt;span class=&quot;hee-card--table__row__content&quot; role=&quot;cell&quot;&gt; 7 &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;hee-card--table__row&quot; role=&quot;row&quot;&gt;
+            &lt;span class=&quot;hee-card--table__row__heading&quot; role=&quot;cell&quot;&gt;Competition ratios 2022 data - Ratio&lt;/span&gt;
+            &lt;span class=&quot;hee-card--table__row__content&quot; role=&quot;cell&quot;&gt; 6 (6:37) &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;hee-card--table__row&quot; role=&quot;row&quot;&gt;
+            &lt;span class=&quot;hee-card--table__row__heading&quot; role=&quot;cell&quot;&gt;Job/Programme Descriptions&lt;/span&gt;
+            &lt;span class=&quot;hee-card--table__row__content&quot; role=&quot;cell&quot;&gt;
+              &lt;a href=&quot;http://www.yahoo.com&quot;&gt; Kent, Surrey and Sussex &lt;/a&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/details&gt;
+    &lt;details class=&quot;nhsuk-details nhsuk-expander&quot; nhsuk-polyfilled=&quot;true&quot; id=&quot;nhsuk-details1&quot;&gt;
+      &lt;summary class=&quot;nhsuk-details__summary&quot; role=&quot;button&quot; aria-controls=&quot;nhsuk-details__text1&quot; tabindex=&quot;0&quot; aria-expanded=&quot;false&quot;&gt;
+        &lt;span class=&quot;nhsuk-details__summary-text&quot;&gt; Second item &lt;/span&gt;
+      &lt;/summary&gt;
+      &lt;div class=&quot;nhsuk-details__text&quot; id=&quot;nhsuk-details__text1&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;div aria-rowcount=&quot;3&quot; class=&quot;hee-card--table__container&quot; role=&quot;table&quot;&gt;
+          &lt;div class=&quot;hee-card--table__row&quot; role=&quot;row&quot;&gt;
+            &lt;span class=&quot;hee-card--table__row__heading&quot; role=&quot;cell&quot;&gt;Defence Medical Services (DMS)&lt;/span&gt;
+            &lt;span class=&quot;hee-card--table__row__content&quot; role=&quot;cell&quot;&gt; 1 &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;hee-card--table__row&quot; role=&quot;row&quot;&gt;
+            &lt;span class=&quot;hee-card--table__row__heading&quot; role=&quot;cell&quot;&gt;No of Posts 2013 - indicitive&lt;/span&gt;
+            &lt;span class=&quot;hee-card--table__row__content&quot; role=&quot;cell&quot;&gt; 7 &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;hee-card--table__row&quot; role=&quot;row&quot;&gt;
+            &lt;span class=&quot;hee-card--table__row__heading&quot; role=&quot;cell&quot;&gt;Competition ratios 2022 data - Ratio&lt;/span&gt;
+            &lt;span class=&quot;hee-card--table__row__content&quot; role=&quot;cell&quot;&gt; 6 (6:37) &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;hee-card--table__row&quot; role=&quot;row&quot;&gt;
+            &lt;span class=&quot;hee-card--table__row__heading&quot; role=&quot;cell&quot;&gt;Job/Programme Descriptions&lt;/span&gt;
+            &lt;span class=&quot;hee-card--table__row__content&quot; role=&quot;cell&quot;&gt;
+              &lt;a href=&quot;http://www.yahoo.com&quot;&gt; Kent, Surrey and Sussex &lt;/a&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/details&gt;
+    &lt;details class=&quot;nhsuk-details nhsuk-expander&quot; nhsuk-polyfilled=&quot;true&quot; id=&quot;nhsuk-details2&quot;&gt;
+      &lt;summary class=&quot;nhsuk-details__summary&quot; role=&quot;button&quot; aria-controls=&quot;nhsuk-details__text2&quot; tabindex=&quot;0&quot; aria-expanded=&quot;false&quot;&gt;
+        &lt;span class=&quot;nhsuk-details__summary-text&quot;&gt; Third item &lt;/span&gt;
+      &lt;/summary&gt;
+      &lt;div class=&quot;nhsuk-details__text&quot; id=&quot;nhsuk-details__text2&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;div aria-rowcount=&quot;3&quot; class=&quot;hee-card--table__container&quot; role=&quot;table&quot;&gt;
+          &lt;div class=&quot;hee-card--table__row&quot; role=&quot;row&quot;&gt;
+            &lt;span class=&quot;hee-card--table__row__heading&quot; role=&quot;cell&quot;&gt;Defence Medical Services (DMS)&lt;/span&gt;
+            &lt;span class=&quot;hee-card--table__row__content&quot; role=&quot;cell&quot;&gt; 1 &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;hee-card--table__row&quot; role=&quot;row&quot;&gt;
+            &lt;span class=&quot;hee-card--table__row__heading&quot; role=&quot;cell&quot;&gt;No of Posts 2013 - indicitive&lt;/span&gt;
+            &lt;span class=&quot;hee-card--table__row__content&quot; role=&quot;cell&quot;&gt; 7 &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;hee-card--table__row&quot; role=&quot;row&quot;&gt;
+            &lt;span class=&quot;hee-card--table__row__heading&quot; role=&quot;cell&quot;&gt;Competition ratios 2022 data - Ratio&lt;/span&gt;
+            &lt;span class=&quot;hee-card--table__row__content&quot; role=&quot;cell&quot;&gt; 6 (6:37) &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;hee-card--table__row&quot; role=&quot;row&quot;&gt;
+            &lt;span class=&quot;hee-card--table__row__heading&quot; role=&quot;cell&quot;&gt;Job/Programme Descriptions&lt;/span&gt;
+            &lt;span class=&quot;hee-card--table__row__content&quot; role=&quot;cell&quot;&gt;
+              &lt;a href=&quot;http://www.yahoo.com&quot;&gt; Kent, Surrey and Sussex &lt;/a&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/details&gt;
+  &lt;/div&gt;
   </code></pre>
         </div>
       </div>
