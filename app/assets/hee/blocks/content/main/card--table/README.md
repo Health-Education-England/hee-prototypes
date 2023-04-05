@@ -1,140 +1,18 @@
-{% extends "prototype-inner.html" %}
+# Author card
 
-{% set page_url = 'main-card-table' %}
-{% set page_title = 'Card--Table' %}
+## Guidance
 
-{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+This component provides a group of expander components, provided a simple single column table layout within each expander.
 
-{% block breadcrumbs %}
-{{ 
-    breadcrumb({
-    items: [
-        {
-            href: basePath + "/",
-            text: "Home"
-        },
-        {
-            href: basePath + "/blocks",
-            text: "Blocks"
-        },
-        {
-            href: basePath + "/blocks/content",
-            text: "Content"
-        }
-    ],
-        href: basePath + "/blocks/" + page_url,
-      text: page_title
-    }) 
-}}
-{% endblock %}
+It makes use of the existing nhsuk-details component to provide the expanders, leveraging existing styles and javascript
+functionality.
 
-{% block pageLeftbar %}
-{{ subnav({
-    area: 'blocks',
-    subarea: 'content'
-}) }}
-{% endblock %}
+## Quick start example
 
-{% block pageHeader %}
-    <span class="nhsuk-caption-xl">Main</span>
-    <h1>{{ page_title }}</h1>
-    <p class="nhsuk-lede-text"></p>
-{% endblock %}
+### HTML markup
 
-{% block pageContent %}
-
-<p>Provides a simple single column display of content within a group of expanders.</p>
-
-<h3>Example</h3>
-{{ example({
-    view: 'block',
-    url: basePath + '/blocks/content/examples/' + page_url,
-    height: '620'
-}) }}
-
-<hr />
-
-<h3>Macro</h3>
-{{ highlight({
-  html: '
-{{ tableCard({
-    items: [
-      {
-        title: "First item",
-        rows: [
-          {
-            heading: "Defence Medical Services (DMS)",
-            content: "1"
-          },
-          {
-            heading: "No of Posts 2013 - indicitive",
-            content: "7"
-          },
-          {
-            heading: "Competition ratios 2022 data - Ratio",
-            content: "6 (6:37)"
-          },
-          {
-            heading: "Job/Programme Descriptions",
-            content: "Kent, Surrey and Sussex",
-            href: "http://www.yahoo.com"
-          }
-        ]
-      },
-      {
-        title: "Second item",
-        rows: [
-          {
-            heading: "Defence Medical Services (DMS)",
-            content: "1"
-          },
-          {
-            heading: "No of Posts 2013 - indicitive",
-            content: "7"
-          },
-          {
-            heading: "Competition ratios 2022 data - Ratio",
-            content: "6 (6:37)"
-          },
-          {
-            heading: "Job/Programme Descriptions",
-            content: "Kent, Surrey and Sussex",
-            href: "http://www.yahoo.com"
-          }
-        ]
-      },
-      {
-        title: "Third item",
-        rows: [
-          {
-            heading: "Defence Medical Services (DMS)",
-            content: "1"
-          },
-          {
-            heading: "No of Posts 2013 - indicitive",
-            content: "7"
-          },
-          {
-            heading: "Competition ratios 2022 data - Ratio",
-            content: "6 (6:37)"
-          },
-          {
-            heading: "Job/Programme Descriptions",
-            content: "Kent, Surrey and Sussex",
-            href: "http://www.yahoo.com"
-          }
-        ]
-      }
-    ]
-}) }}
-  '
-}) }}
-
-<hr />
-
-<h3>HTML</h3>
-{{ highlight({
-  html : '<div class="hee-card--table">
+```html
+<div class="hee-card--table">
     <div class="hee-card--table__toggle">
       <a href="#">Expand all</a>
     </div>
@@ -220,10 +98,92 @@
       </div>
     </details>
   </div>
-  '
-  }) 
-}}
+```
 
-{% endblock %}
+### Nunjucks macro
 
-{% block pageFooter %}{% endblock %}
+```
+{{ tableCard({
+  items: [
+    {
+      title: "First item",
+      rows: [
+        {
+          heading: "Defence Medical Services (DMS)",
+          content: "1"
+        },
+        {
+          heading: "No of Posts 2013 - indicitive",
+          content: "7"
+        },
+        {
+          heading: "Competition ratios 2022 data - Ratio",
+          content: "6 (6:37)"
+        },
+        {
+          heading: "Job/Programme Descriptions",
+          content: "Kent, Surrey and Sussex",
+          href: "http://www.yahoo.com"
+        }
+      ]
+    },
+    {
+      title: "Second item",
+      rows: [
+        {
+          heading: "Defence Medical Services (DMS)",
+          content: "1"
+        },
+        {
+          heading: "No of Posts 2013 - indicitive",
+          content: "7"
+        },
+        {
+          heading: "Competition ratios 2022 data - Ratio",
+          content: "6 (6:37)"
+        },
+        {
+          heading: "Job/Programme Descriptions",
+          content: "Kent, Surrey and Sussex",
+          href: "http://www.yahoo.com"
+        }
+      ]
+    },
+    {
+      title: "Third item",
+      rows: [
+        {
+          heading: "Defence Medical Services (DMS)",
+          content: "1"
+        },
+        {
+          heading: "No of Posts 2013 - indicitive",
+          content: "7"
+        },
+        {
+          heading: "Competition ratios 2022 data - Ratio",
+          content: "6 (6:37)"
+        },
+        {
+          heading: "Job/Programme Descriptions",
+          content: "Kent, Surrey and Sussex",
+          href: "http://www.yahoo.com"
+        }
+      ]
+    }
+  ]
+}) }}
+```
+---
+
+### Nunjucks arguments
+
+The table card Nunjucks macro takes the following arguments:
+
+| Name                   | Type   | Required | Description                    |
+|------------------------|--------|----------|--------------------------------|
+| items                  | array  | Yes      | Array of table expander items. |
+| items[].title          | string | Yes      | Expander title.                |
+| items[].rows           | array  | Yes      | Array of table rows.           |
+| items[].rows[].heading | string | No       | Table row heading text.        |
+| items[].rows[].content | string | Yes      | Table row content.             |
