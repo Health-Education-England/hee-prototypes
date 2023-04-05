@@ -1,9 +1,8 @@
 .hee-card--table {
   .hee-card--table__toggle {
     @include nhsuk-responsive-margin(4, 'bottom');
-    display: inline-block;
+    display: block;
     text-align: right;
-    width: 100%;
   }
 
   .hee-card--table__row {

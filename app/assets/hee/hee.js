@@ -12,6 +12,7 @@ import NavMap from '../components/hee/hee-navmap/navmap';
 import Newsletter from '../components/hee/hee-newsletter/newsletter';
 //import DetailsCard from '../components/hee/hee-detailscard/detailscard';
 import Tabs from '../components/hee/hee-tabs/tabs';
+import TableCard from './blocks/content/main/card--table/table-card';
 //import Timeline from '../components/hee/hee-timeline/timeline';
 
 // Unsorted components
@@ -34,4 +35,5 @@ document.addEventListener('DOMContentLoaded', () => {
   SubNav();
   Newsletter();
   TableContents();
+  TableCard();
 });
