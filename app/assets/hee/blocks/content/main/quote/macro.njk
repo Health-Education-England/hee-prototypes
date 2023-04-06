@@ -1,0 +1,12 @@
+{% macro quote(params) %}
+  <div class="hee-quote">
+    <div class="hee-quote__text">
+      {{ params.text }}
+    </div>
+    {% if params.source %}
+      <div class="hee-quote__source">
+        {{ params.source }}
+      </div>
+    {% endif %}
+  </div>
+{% endmacro %}
