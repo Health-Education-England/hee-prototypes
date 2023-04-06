@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Content - Blocks - NWP Prototype Kit</title>
+  <title>Anchor Links - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -59,9 +59,10 @@
         <ol class="nhsuk-breadcrumb__list">
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks">Blocks</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/blocks/content">Content</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/content">Content</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/sidebar-anchor-links">Anchor Links</a></li>
         </ol>
-        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/blocks/content">Back to Content</a></p>
+        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/sidebar-anchor-links">Back to Anchor Links</a></p>
       </div>
     </nav>
   </div>
@@ -119,12 +120,60 @@
         </div>
         <div class="page__main">
           <div class="page__header">
-            <div class="nhsuk-width-container">
-              <span class="nhsuk-caption-xl">Blocks</span>
-              <h1>Content</h1>
-              <p class="nhsuk-lede-text"></p>
+            <span class="nhsuk-caption-xl">Sidebar</span>
+            <h1>Anchor Links</h1>
+            <p class="nhsuk-lede-text"></p>
+          </div>
+          <p>Generates a list of anchor links within the page right hand sidebar, based on the structure of main page content.</p>
+          <p>Comes in two variants:</p>
+          <ul>
+            <li><strong>Anchor links (auto generated)</strong></li>
+            <li><strong>Table of Contents (based on custom heading tags)</strong></li>
+          </ul>
+          <h3>Example - Anchor links</h3>
+          <div class="prototype__example scaled" style="height:223.52941176470588px;">
+            <a href="/hee-prototypes/blocks/content/examples/sidebar-anchor-links.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
+            <div class="thumbnail">
+              <iframe src="/hee-prototypes/blocks/content/examples/sidebar-anchor-links.html" height="380"></iframe>
             </div>
           </div>
+          <hr />
+          <h3>Example - Table of Contents</h3>
+          <div class="prototype__example scaled" style="height:223.52941176470588px;">
+            <a href="/hee-prototypes/blocks/content/examples/sidebar-anchor-links-toc.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
+            <div class="thumbnail">
+              <iframe src="/hee-prototypes/blocks/content/examples/sidebar-anchor-links-toc.html" height="380"></iframe>
+            </div>
+          </div>
+          <hr />
+          <h3>Macro - Anchor links</h3>
+          <pre><code>
+{{ anchorlinks({
+  title: &quot;On this page&quot;,
+  headings: &quot;h2,h3,h4,h5,h6&quot;
+  })
+}}
+  </code></pre>
+          <hr />
+          <h3>HTML - Anchor links</h3>
+          <pre><code>&lt;div class=&quot;hee-anchorlinks&quot; data-headings=&quot;h2,h3,h4,h5,h6&quot;&gt;
+    &lt;h2 data-anchorlinksignore=&quot;true&quot;&gt;On this page&lt;/h2&gt;
+&lt;/div&gt;
+  </code></pre>
+          <hr />
+          <h3>Macro - Table of Contents</h3>
+          <pre><code>
+{{ anchorLinks({
+  title: &quot;Table of Contents&quot;,
+  toc: true
+  })
+}}
+</code></pre>
+          <hr />
+          <pre><code>&lt;div class=&quot;hee-anchorlinks&quot; data-toc-js=&quot;true&quot;&gt;
+    &lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;/div&gt;
+</code></pre>
         </div>
       </div>
     </div>

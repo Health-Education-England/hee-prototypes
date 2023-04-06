@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Content - Blocks - NWP Prototype Kit</title>
+  <title>Applies To - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -59,9 +59,10 @@
         <ol class="nhsuk-breadcrumb__list">
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks">Blocks</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/blocks/content">Content</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/content">Content</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/main-applies-to">Applies To</a></li>
         </ol>
-        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/blocks/content">Back to Content</a></p>
+        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/main-applies-to">Back to Applies To</a></p>
       </div>
     </nav>
   </div>
@@ -119,12 +120,30 @@
         </div>
         <div class="page__main">
           <div class="page__header">
-            <div class="nhsuk-width-container">
-              <span class="nhsuk-caption-xl">Blocks</span>
-              <h1>Content</h1>
-              <p class="nhsuk-lede-text"></p>
+            <span class="nhsuk-caption-xl">Main</span>
+            <h1>Applies To</h1>
+            <p class="nhsuk-lede-text"></p>
+          </div>
+          <p>Used to describe which region a particular piece of content pertains to.</p>
+          <h3>Example</h3>
+          <div class="prototype__example block">
+            <a href="/hee-prototypes/blocks/content/examples/main-applies-to.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
+            <div class="thumbnail">
+              <iframe src="/hee-prototypes/blocks/content/examples/main-applies-to.html" height="620"></iframe>
             </div>
           </div>
+          <hr />
+          <h3>Macro</h3>
+          <pre><code>
+{{ appliesTo() }}
+  </code></pre>
+          <hr />
+          <h3>HTML</h3>
+          <pre><code>
+&lt;div class=&quot;hee-appliesto&quot;&gt;
+    &lt;p&gt;Applies to: &lt;span&gt;England&lt;/span&gt;. See guidance for &lt;a href=&quot;https://www.nimdta.gov.uk/&quot;&gt;Northern Ireland&lt;/a&gt;, &lt;a href=&quot;https://www.nes.scot.nhs.uk/&quot;&gt;Scotland&lt;/a&gt; and &lt;a href=&quot;https://heiw.nhs.wales/&quot;&gt;Wales&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+  </code></pre>
         </div>
       </div>
     </div>
