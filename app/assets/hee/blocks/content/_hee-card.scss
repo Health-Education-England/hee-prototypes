@@ -179,10 +179,10 @@
     margin-bottom: 0;
   }
 
-  &__authorurl {
-      @include nhsuk-typography-responsive(16);
-      margin-bottom: 0;
-      @include nhsuk-responsive-margin(3, 'top');
+  .hee-card__authorurl {
+    @include nhsuk-typography-responsive(16);
+    margin-bottom: 0;
+    @include nhsuk-responsive-margin(3, 'top');
   }
 
   hr {
