@@ -57,7 +57,10 @@
 <h3>Macro</h3>
 {{ highlight({
   html: '
-
+{{ quote({
+  text: "Pellentesque id posuere sapien vestibulum, quam pellentesque at libero. Aliquam at id fames hendrerit in vulputate orci aliquet augue. Massa penatibus sociis et nisl. Enim aliquam mauris suscipit turpis non hendrerit felis.",
+  source: "Joe Soap"
+}) }}
   '
 }) }}
 
@@ -66,7 +69,10 @@
 <h3>HTML</h3>
 {{ highlight({
     html : '
-
+<div class="hee-quote">
+  <div class="hee-quote__text"> Pellentesque id posuere sapien vestibulum, quam pellentesque at libero. Aliquam at id fames hendrerit in vulputate orci aliquet augue. Massa penatibus sociis et nisl. Enim aliquam mauris suscipit turpis non hendrerit felis. </div>
+  <div class="hee-quote__source"> Joe Soap </div>
+</div>
 '
 })
 }}

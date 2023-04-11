@@ -48,6 +48,11 @@
 {% endblock %}
 
 {% block pageContent %}
+  {{ quote({
+    text: "Pellentesque id posuere sapien vestibulum, quam pellentesque at libero. Aliquam at id fames hendrerit in vulputate orci aliquet augue. Massa penatibus sociis et nisl. Enim aliquam mauris suscipit turpis non hendrerit felis.",
+    source: "Joe Soap"
+  }) }}
+
   {{ media({
     title: "Pellentesque sit amet nulla",
     description: "Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus.",
