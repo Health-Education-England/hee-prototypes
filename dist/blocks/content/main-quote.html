@@ -135,12 +135,18 @@
           <hr />
           <h3>Macro</h3>
           <pre><code>
-
+{{ quote({
+  text: &quot;Pellentesque id posuere sapien vestibulum, quam pellentesque at libero. Aliquam at id fames hendrerit in vulputate orci aliquet augue. Massa penatibus sociis et nisl. Enim aliquam mauris suscipit turpis non hendrerit felis.&quot;,
+  source: &quot;Joe Soap&quot;
+}) }}
   </code></pre>
           <hr />
           <h3>HTML</h3>
           <pre><code>
-
+&lt;div class=&quot;hee-quote&quot;&gt;
+  &lt;div class=&quot;hee-quote__text&quot;&gt; Pellentesque id posuere sapien vestibulum, quam pellentesque at libero. Aliquam at id fames hendrerit in vulputate orci aliquet augue. Massa penatibus sociis et nisl. Enim aliquam mauris suscipit turpis non hendrerit felis. &lt;/div&gt;
+  &lt;div class=&quot;hee-quote__source&quot;&gt; Joe Soap &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
         </div>
       </div>
