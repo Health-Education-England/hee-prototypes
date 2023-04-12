@@ -9,7 +9,7 @@
                 <span class="hee-mega-menu__link-text">{{item.label | safe}}</span>
               </div>
             </a>
-            {% if item.children.length > 0 %}
+            {#{% if item.children.length > 0 %}
               <ul class="hee-mega-menu__subnav__list">
                 <li class="hee-mega-menu__subnav__list-item">
                   <a class="hee-mega-menu__subnav__list-link" href="{{item.url}}">
@@ -24,7 +24,7 @@
                   </li>
                 {% endfor -%}
               </ul>
-            {% endif %}
+            {% endif %}#}
           </li>
         {%- endfor %}
       </ul>
