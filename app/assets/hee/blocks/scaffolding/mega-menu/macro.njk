@@ -1,0 +1,42 @@
+{% macro megaMenu(params) %}
+  <nav class="hee-mega-menu{% if params.primaryLinks|length > 2 %} hee-mega-menu--more-items{% endif %}" id="mega-menu-navigation" role="navigation" aria-label="Primary navigation">
+    <div class="nhsuk-width-container">
+      <ul class="hee-mega-menu__list">
+        {%- for item in params.primaryLinks %}
+          {% if item.children %}
+            <li class="hee-mega-menu__item hee-mega-menu__subnav" aria-haspopup="true" aria-expanded="false">
+              <a class="hee-mega-menu__link" href="#">
+                <div class="hee-mega-menu__subnav__wrapper">
+                  <span class="hee-mega-menu__link-text">{{item.label | safe}}</span>
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+                  </svg>
+                </div>
+              </a>
+              <ul class="hee-mega-menu__subnav__list">
+                <li class="hee-mega-menu__subnav__list-item">
+                  <a class="hee-mega-menu__subnav__list-link" href="{{item.url}}">
+                    {{item.label | safe}}
+                  </a>
+                </li>
+                {%- for child in item.children %}
+                  <li class="hee-mega-menu__subnav__list-item">
+                    <a class="hee-mega-menu__subnav__list-link" href="{{child.url}}">
+                      {{child.label | safe}}
+                    </a>
+                  </li>
+                {% endfor -%}
+              </ul>
+            </li>
+          {% else %}
+            <li class="hee-mega-menu__item">
+              <a class="hee-mega-menu__link" href="{{item.url}}">
+                {{item.label | safe}}
+              </a>
+            </li>
+          {% endif %}
+        {%- endfor %}
+      </ul>
+    </div>
+  </nav>
+{% endmacro %}

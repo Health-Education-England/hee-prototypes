@@ -10,7 +10,7 @@
 {% block header %}
   <div class="site-header">
     {{ customHeader({
-          "showNav": "true",
+          "showNav": "false",
           "showSearch": "true",
           "showLogos": "false",
           "heeHref": "http://hee.nhs.uk/",
@@ -53,6 +53,26 @@
               url: basePath + "/components",
               label: "Components",
               children: [
+                {
+                  url: basePath + "/scaffolding",
+                  label: "Scaffolding"
+                },
+                {
+                  url: basePath + "/components/furniture",
+                  label: "Furniture"
+                },
+                {
+                  url: basePath + "/components/contentblocks",
+                  label: "Content Blocks"
+                },
+                {
+                  url: basePath + "/components/rightblocks",
+                  label: "Right Blocks"
+                },
+                {
+                  url: basePath + "/components/featureblocks",
+                  label: "Feature Blocks"
+                },
                 {
                   url: basePath + "/scaffolding",
                   label: "Scaffolding"
