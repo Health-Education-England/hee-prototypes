@@ -1,33 +1,36 @@
 {% macro megaMenu(params) %}
-  <nav class="hee-mega-menu{% if params.primaryLinks|length > 2 %} hee-mega-menu--more-items{% endif %}" id="mega-menu-navigation" role="navigation" aria-label="Primary navigation">
-    <div class="nhsuk-width-container">
-      <ul class="hee-mega-menu__list">
-        {%- for item in params.primaryLinks %}
-          <li class="hee-mega-menu__item{% if item.children.length > 0 %} hee-mega-menu__subnav{% endif %}" aria-haspopup="true" aria-expanded="false">
-            <a class="hee-mega-menu__link" href="#">
-              <div class="hee-mega-menu__subnav__wrapper">
-                <span class="hee-mega-menu__link-text">{{item.label | safe}}</span>
-              </div>
-            </a>
-            {#{% if item.children.length > 0 %}
-              <ul class="hee-mega-menu__subnav__list">
-                <li class="hee-mega-menu__subnav__list-item">
-                  <a class="hee-mega-menu__subnav__list-link" href="{{item.url}}">
-                    {{item.label | safe}}
+  <div class="hee-mega-menu">
+    <nav class="hee-mega-menu__nav{% if params.primaryLinks|length > 2 %} hee-mega-menu--more-items{% endif %}" id="mega-menu-navigation" role="navigation" aria-label="Primary navigation">
+      <div class="nhsuk-width-container">
+        <ul class="hee-mega-menu__list">
+          {% for item in params.primaryLinks %}
+            <li class="hee-mega-menu__item{% if item.children.length > 0 %} hee-mega-menu__subnav{% endif %}" aria-haspopup="true" aria-expanded="false">
+              <a class="hee-mega-menu__link" href="#">
+                <div class="hee-mega-menu__subnav__wrapper">
+                  <span class="hee-mega-menu__link-text">{{item.label | safe}}</span>
+                </div>
+              </a>
+            </li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </nav>
+    {% for item in params.primaryLinks %}
+      {% if item.children.length > 0 %}
+        <div class="hee-mega-menu__panel">
+          <div class="hee-mega-menu__panel__wrapper nhsuk-width-container">
+            {% for children in item.children|batch(7) %}
+              <div class="hee-mega-menu__panel__group">
+                {% for item in children %}
+                  <a class="hee-mega-menu__panel__link" href="{{ item.url }}">
+                    {{ item.label }}
                   </a>
-                </li>
-                {%- for child in item.children %}
-                  <li class="hee-mega-menu__subnav__list-item">
-                    <a class="hee-mega-menu__subnav__list-link" href="{{child.url}}">
-                      {{child.label | safe}}
-                    </a>
-                  </li>
-                {% endfor -%}
-              </ul>
-            {% endif %}#}
-          </li>
-        {%- endfor %}
-      </ul>
-    </div>
-  </nav>
+                {% endfor %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
 {% endmacro %}
