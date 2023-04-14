@@ -122,7 +122,12 @@
 
   .hee-mega-menu__panel {
     background-color: $color_nhsuk-white;
+    display: none;
     padding: nhsuk-spacing(5) 0;
+
+    &.is-active {
+      display: block;
+    }
   }
 
   .hee-mega-menu__panel__wrapper {
