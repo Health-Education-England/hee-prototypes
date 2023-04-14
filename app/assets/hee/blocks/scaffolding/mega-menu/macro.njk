@@ -4,7 +4,7 @@
       <div class="nhsuk-width-container">
         <ul class="hee-mega-menu__list">
           {% for item in params.primaryLinks %}
-            <li class="hee-mega-menu__item{% if item.children.length > 0 %} hee-mega-menu__subnav{% endif %}" aria-haspopup="true" aria-expanded="false">
+            <li class="hee-mega-menu__item{% if item.children.length > 0 %} hee-mega-menu__subnav{% endif %}" aria-haspopup="true">
               <a class="hee-mega-menu__link" href="#">
                 <div class="hee-mega-menu__subnav__wrapper">
                   <span class="hee-mega-menu__link-text">{{item.label | safe}}</span>
@@ -17,7 +17,7 @@
     </nav>
     {% for item in params.primaryLinks %}
       {% if item.children.length > 0 %}
-        <div class="hee-mega-menu__panel">
+        <div aria-expanded="false" class="hee-mega-menu__panel">
           <div class="hee-mega-menu__panel__wrapper nhsuk-width-container">
             {% for children in item.children|batch(7) %}
               <div class="hee-mega-menu__panel__group">
