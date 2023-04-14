@@ -24,6 +24,7 @@ export default () => {
         // Handle click event on sub menu panel toggle link.
         toggleLink.addEventListener('click', (event) => {
           event.preventDefault();
+          this.resetPanels();
           this.togglePanel(event.target);
         })
 
@@ -31,6 +32,7 @@ export default () => {
         toggleLink.addEventListener('keydown', (event) => {
           if (event.keyCode === 13 || event.keyCode === 32) {
             event.preventDefault();
+            this.resetPanels();
             this.togglePanel(event.target);
 
             // Set focus on first link in mega menu panel list.
@@ -68,6 +70,18 @@ export default () => {
     getTargetPanelElement(targetLink) {
       const panelId = targetLink.getAttribute('aria-controls');
       return document.getElementById(panelId);
+    }
+
+    /**
+     * Resets state of active panel.
+     */
+    resetPanels() {
+      const activePanel = this.megaMenu.querySelector('.hee-mega-menu__panel.is-active');
+      if (activePanel !== null) {
+        const toggleLink = this.megaMenu.querySelector('.hee-mega-menu__link[aria-controls="' + activePanel.id + '"]');
+        toggleLink.setAttribute('aria-expanded', 'false');
+        activePanel.classList.remove('is-active');
+      }
     }
   }
 
