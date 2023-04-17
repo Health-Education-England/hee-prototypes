@@ -39,6 +39,12 @@
         padding-left: 0;
       }
     }
+
+    &:last-child {
+      .hee-mega-menu__link {
+        padding-right: 0;
+      }
+    }
   }
 
   .hee-mega-menu__link {
@@ -149,7 +155,7 @@
 
   .hee-mega-menu__panel__wrapper[data-group-count="1"] {
     .hee-mega-menu__panel__group {
-      flex-basis: 100%;
+      flex-basis: 40%;
     }
   }
 
@@ -196,6 +202,11 @@
 
     .hee-mega-menu__panel__link {
       color: $color_nhsuk-white;
+
+      &:active,
+      &:focus {
+        color: $nhsuk-focus-text-color;
+      }
     }
   }
 }

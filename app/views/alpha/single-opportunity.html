@@ -1,26 +1,31 @@
-{% extends "alpha-template-fullwidth.html" %}
+{% extends "example-template-rightbar.html" %}
 
-{% set page_title = 'Parent Site - Single menu - Mental Health' %}
+{% block pageTitle %}Parent Site - Single menu - Opportunities{% endblock %}
 
-{% block pageClass %}page--fullwidth alpha-fullwidth{% endblock %}
-{% block pageHeaderClass %}has-microhero{% endblock %}
-
-{% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
+{% block pageHeaderClass %}{% endblock %}
 
 {% block breadcrumbs %}
   {{
-    breadcrumb({
-      items: [
-        {
-          href: basePath + "/",
-          text: "HEE"
-        },
-        {
-          href: basePath + "#",
-          text: "Healthcare topics"
-        }
-      ]
-    })
+  breadcrumb({
+    items: [
+      {
+        href: basePath + "/",
+        text: "HEE"
+      },
+      {
+        href: basePath + "#",
+        text: "Healthcare topics"
+      },
+      {
+        href: basePath + "#",
+        text: "Mental health"
+      },
+      {
+        href: basePath + "#",
+        text: "Get involved"
+      }
+    ]
+  })
   }}
 {% endblock %}
 
@@ -60,17 +65,17 @@
     })
     }}
 
-  {{ megaMenu({
-    theme: "theme-grey",
-    primaryLinks: [
-      {
-        url: basePath + "#",
-        label: "Mental Health"
-      },
-      {
-        url: basePath + "#",
-        label: "Training and education",
-        children: [
+    {{ megaMenu({
+      theme: "theme-grey",
+      primaryLinks: [
+        {
+          url: basePath + "#",
+          label: "Mental Health"
+        },
+        {
+          url: basePath + "#",
+          label: "Training and education",
+          children: [
           [
             {
               url: basePath + "#",
@@ -86,11 +91,11 @@
             }
           ]
         ]
-      },
-      {
-        url: basePath + "#",
-        label: "Evidence and resources",
-        children: [
+        },
+        {
+          url: basePath + "#",
+          label: "Evidence and resources",
+          children: [
           [
             {
               url: basePath + "#",
@@ -106,11 +111,11 @@
             }
           ]
         ]
-      },
-      {
-        url: basePath + "#",
-        label: "Get involved",
-        children: [
+        },
+        {
+          url: basePath + "#",
+          label: "Get involved",
+          children: [
           [
             {
               url: basePath + "#",
@@ -130,11 +135,11 @@
             }
           ]
         ]
-      },
-      {
-        url: basePath + "#",
-        label: "Support",
-        children: [
+        },
+        {
+          url: basePath + "#",
+          label: "Support",
+          children: [
           [
             {
               url: basePath + "#",
@@ -154,11 +159,11 @@
             }
           ]
         ]
-      },
-      {
-        url: basePath + "#",
-        label: "Workforce",
-        children: [
+        },
+        {
+          url: basePath + "#",
+          label: "Workforce",
+          children: [
           [
             {
               url: basePath + "#",
@@ -170,11 +175,11 @@
             }
           ]
         ]
-      },
-      {
-        url: basePath + "#",
-        label: "Our team",
-        children: [
+        },
+        {
+          url: basePath + "#",
+          label: "Our team",
+          children: [
           [
             {
               url: basePath + "#",
@@ -190,9 +195,9 @@
             }
           ]
         ]
-      }
-    ]
-  }) }}
+        }
+      ]
+    }) }}
   </div>
 
   {{ phaseBanner({
@@ -202,15 +207,78 @@
 {% endblock %}
 
 {% block pageHeader %}
-  {{ microHero({
-    imgURL: basePath + "/images/alpha-mental-hero.jpg"
-  }) }}
   <div class="nhsuk-width-container">
-    <h1>Mental Health</h1>
-    <span class="nhsuk-caption-xl">Healthcare Topics</span>
+    <h1>Opportunities</h1>
+    <span class="nhsuk-caption-xl">Mental Health</span>
+    <p class="nhsuk-lede-text">Getting involved in mental health in the workplace can help to create a more supportive and understanding work environment for everyone.</p>
   </div>
 {% endblock %}
 
 {% block pageContent %}
 
+{% endblock %}
+
+{% block pageRightbar %}
+  {{ relatedLinksCard({
+    heading: "Curabitur sit amet",
+    links: [
+      {
+        label: "Donec pulvinar",
+        url: "#"
+      },
+      {
+        label: "Duis consequat",
+        url: "#"
+      },
+      {
+        label: "Fusce at neque",
+        url: "#"
+      }
+    ]
+  })}}
+{% endblock %}
+
+{% block pageFeature %}
+  {% set items = [
+    {
+      title: "Blog/News Title",
+      href: "#",
+      details: [
+      {
+        label: "Publish date:",
+        value: "07 September 2022"
+      }
+    ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada."
+    },
+    {
+      title: "Blog/News Title",
+      href: "#",
+      details: [
+      {
+        label: "Publish date:",
+        value: "07 September 2022"
+      }
+    ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada."
+    },
+    {
+      title: "Blog/News Title",
+      href: "#",
+      details: [
+      {
+        label: "Publish date:",
+        value: "07 September 2022"
+      }
+    ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada."
+    }
+  ]
+  %}
+
+  <div class="nhsuk-width-container">
+    <h2>Related content</h2>
+    <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet. Nunc turpis vel aliquam lacus arcu. Sodales nullam id lectus orci quis sed. dsf</p>
+    {{ featuredContent(items) }}
+  </div>
 {% endblock %}
