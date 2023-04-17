@@ -24,7 +24,11 @@ export default () => {
         // Handle click event on sub menu panel toggle link.
         toggleLink.addEventListener('click', (event) => {
           event.preventDefault();
-          this.resetPanels();
+
+          if (!targetPanel.classList.contains('is-active')) {
+            this.resetPanels();
+          }
+
           this.togglePanel(event.target);
         })
 
