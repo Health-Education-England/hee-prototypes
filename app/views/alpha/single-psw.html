@@ -1,6 +1,6 @@
 {% extends "example-template-fullwidth.html" %}
 
-{% set page_title = 'Parent Site - Single menu - Mental Health' %}
+{% set page_title = 'Parent Site - Single menu - Professional Support and Wellbeing (PSW)' %}
 
 {% block pageClass %}page--fullwidth alpha-fullwidth{% endblock %}
 {% block pageHeaderClass %}has-microhero{% endblock %}
@@ -13,11 +13,11 @@
       items: [
         {
           href: basePath + "/",
-          text: "HEE"
+          text: "WTE"
         }
       ],
       href: basePath + "#",
-      text: "Healthcare topics"
+      text: "Support"
     })
   }}
 {% endblock %}
@@ -58,7 +58,7 @@
     })
     }}
 
-    {% include "alpha/_single-menu-mental-health.html" %}
+    {% include "alpha/_single-menu-psw.html" %}
   </div>
 
   {{ phaseBanner({
@@ -69,11 +69,11 @@
 
 {% block pageHeader %}
   {{ microHero({
-    imgURL: basePath + "/images/alpha-mental-hero.jpg"
+    imgURL: basePath + "/images/alpha-psw.jpg"
   }) }}
   <div class="nhsuk-width-container">
-    <h1>Mental Health</h1>
-    <span class="nhsuk-caption-xl">Healthcare Topics</span>
+    <h1>Professional Support and Wellbeing (PSW)</h1>
+    <span class="nhsuk-caption-xl">Support</span>
   </div>
 {% endblock %}
 

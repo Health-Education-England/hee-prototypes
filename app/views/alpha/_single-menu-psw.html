@@ -1,0 +1,99 @@
+{%- from 'hee/blocks/scaffolding/mega-menu/macro.njk' import megaMenu %}
+
+{{ megaMenu({
+  theme: "theme-grey",
+  primaryLinks: [
+    {
+      url: basePath + "/alpha/single-psw.html",
+      label: "Professional support and wellbeing"
+    },
+    {
+      url: basePath + "#",
+      label: "Wellbeing and psychological support",
+      children: [
+        [
+          {
+            url: basePath + "#",
+            label: "Wellbeing resources"
+          },
+          {
+            url: basePath + "#",
+            label: "Occupational health"
+          },
+          {
+            url: basePath + "#",
+            label: "Mental health support"
+          },
+          {
+            url: basePath + "#",
+            label: "Support for addiction"
+          }
+        ]
+      ]
+    },
+    {
+      url: basePath + "#",
+      label: "Coaching support",
+      children: [
+        [
+          {
+            url: basePath + "#",
+            label: "About coaching "
+          },
+          {
+            url: basePath + "#",
+            label: "Book an appointment"
+          }
+        ]
+      ]
+    },
+    {
+      url: basePath + "#",
+      label: "Careers support ",
+      children: [
+        [
+          {
+            url: basePath + "#",
+            label: "Career exploration "
+          },
+          {
+            url: basePath + "#",
+            label: "Careers fair "
+          },
+          {
+            url: basePath + "#",
+            label: "Decision making "
+          },
+          {
+            url: basePath + "#",
+            label: "Self assessment "
+          }
+        ]
+      ]
+    },
+    {
+      url: basePath + "#",
+      label: "Study support",
+      children: [
+        [
+          {
+            url: basePath + "#",
+            label: "Courses"
+          },
+          {
+            url: basePath + "#",
+            label: "Exam support "
+          },
+          {
+            url: basePath + "#",
+            label: "Support needs assessment "
+          },
+          {
+            url: basePath + "#",
+            label: "Studying resources "
+          }
+        ]
+      ]
+    }
+  ]
+}) }}
