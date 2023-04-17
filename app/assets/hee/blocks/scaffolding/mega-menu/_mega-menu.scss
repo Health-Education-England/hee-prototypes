@@ -140,6 +140,18 @@
     flex-basis: 25%;
   }
 
+  .hee-mega-menu__panel__wrapper[data-group-count="1"] {
+    .hee-mega-menu__panel__group {
+      flex-basis: 100%;
+    }
+  }
+
+  .hee-mega-menu__panel__wrapper[data-group-count="2"] {
+    .hee-mega-menu__panel__group {
+      flex-basis: 26%;
+    }
+  }
+
   .hee-mega-menu__panel__link {
     color: $color_nhsuk-black;
     display: block;

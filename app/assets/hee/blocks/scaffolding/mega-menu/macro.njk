@@ -15,10 +15,10 @@
       {% for item in params.primaryLinks %}
         {% if item.children.length > 0 %}
           <div class="hee-mega-menu__panel" id="hee-mega-menu__panel-{{ loop.index0 }}">
-            <div class="hee-mega-menu__panel__wrapper nhsuk-width-container">
-              {% for children in item.children|batch(7) %}
+            <div class="hee-mega-menu__panel__wrapper nhsuk-width-container" data-group-count="{{ item.children.length }}">
+              {% for group in item.children %}
                 <div class="hee-mega-menu__panel__group">
-                  {% for item in children %}
+                  {% for item in group %}
                     <a class="hee-mega-menu__panel__link" href="{{ item.url }}" role="menuitem">
                       {{ item.label }}
                     </a>
