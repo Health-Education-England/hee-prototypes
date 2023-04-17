@@ -188,4 +188,14 @@
       padding-bottom: 0;
     }
   }
+
+  &.theme-grey {
+    .hee-mega-menu__nav, .hee-mega-menu__panel {
+      background-color: $color_nhsuk-grey-1;
+    }
+
+    .hee-mega-menu__panel__link {
+      color: $color_nhsuk-white;
+    }
+  }
 }

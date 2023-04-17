@@ -1,5 +1,5 @@
 {% macro megaMenu(params) %}
-  <div class="hee-mega-menu">
+  <div class="hee-mega-menu {{ params.theme }}">
     <nav class="hee-mega-menu__nav{% if params.primaryLinks|length > 2 %} hee-mega-menu--more-items{% endif %}" id="mega-menu-navigation" role="navigation" aria-label="Primary navigation">
       <div class="nhsuk-width-container">
         <ul class="hee-mega-menu__list" role="menu">
