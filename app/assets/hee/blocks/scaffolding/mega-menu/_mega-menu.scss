@@ -111,6 +111,13 @@
         width: 8px;
       }
 
+      &[aria-expanded="true"] {
+        &:after {
+          top: 7px;
+          transform: rotate(180deg);
+        }
+      }
+
       &:active,
       &:focus {
         &:after {
