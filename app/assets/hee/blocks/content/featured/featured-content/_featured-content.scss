@@ -1,0 +1,29 @@
+.hee-featured-content {
+  padding-bottom: nhsuk-spacing(4);
+
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+
+  @include mq($from: desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .hee-featured-content__item {
+    flex-basis: 32%;
+  }
+
+  .hee-listing-item {
+    @include mq($from: desktop) {
+      margin-bottom: nhsuk-spacing(5);
+    }
+
+    span.hee-listing-item__details__label {
+      @include mq($from: tablet) {
+        width: auto;
+      }
+    }
+  }
+}

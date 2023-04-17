@@ -24,7 +24,7 @@ html {
         padding: 0;
     }
 
-    .page__header.has-microhero {
+    .page__header.has-microhero,  .page__header.has-nhsukhero{
         padding-top: 0;
 
         .hee-microhero {
@@ -51,6 +51,22 @@ html {
 
 .page__feature {
     @include nhsuk-responsive-margin(8, 'top');
+}
+
+.page__feature {
+    h1, p, span {
+        @include mq($from: tablet) {
+            max-width: 66.6667%;
+        }
+    }
+}
+
+.page__feature {
+    h1, p, span {
+        @include mq($from: tablet) {
+            max-width: 66.6667%;
+        }
+    }
 }
 
 @import '../templates/fullwidth';

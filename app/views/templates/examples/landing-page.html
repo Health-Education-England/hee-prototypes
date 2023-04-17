@@ -33,7 +33,7 @@
 
 {% block pageHeader %}
   {{ microHero({
-    "imgURL": "/images/young-child-using-tablet-device.jpg"
+    "imgURL": basePath + "/images/young-child-using-tablet-device.jpg"
   }) }}
   <div class="nhsuk-width-container">
     {#{ backLink({
@@ -48,6 +48,20 @@
 {% endblock %}
 
 {% block pageContent %}
+  {{ quote({
+    text: "Pellentesque id posuere sapien vestibulum, quam pellentesque at libero. Aliquam at id fames hendrerit in vulputate orci aliquet augue. Massa penatibus sociis et nisl. Enim aliquam mauris suscipit turpis non hendrerit felis.",
+    source: "Joe Soap"
+  }) }}
+
+  {{ media({
+    title: "Pellentesque sit amet nulla",
+    description: "Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus.",
+    type: "vimeo",
+    transcript: ["Donec pulvinar sollicitudin massa, nec pulvinar turpis dictum maximus."],
+    mediaId: "226053498",
+    lastReview: "09/05/2022",
+    reviewDue: "09/05/2023"
+  }) }}
   <div class="nhsuk-grid-row">
     <ul class="nhsuk-card-group">
       <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
