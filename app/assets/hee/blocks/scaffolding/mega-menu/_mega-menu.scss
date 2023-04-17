@@ -133,11 +133,11 @@
   .hee-mega-menu__panel__wrapper {
     align-items: flex-start;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .hee-mega-menu__panel__group {
-    flex-basis: 23%;
+    flex-basis: 25%;
   }
 
   .hee-mega-menu__panel__link {
