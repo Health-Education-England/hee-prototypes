@@ -1,0 +1,31 @@
+{%- from 'hee/blocks/scaffolding/mega-menu/macro.njk' import megaMenu %}
+
+{{ megaMenu({
+  theme: "theme-grey",
+  primaryLinks: [
+    {
+      url: basePath + "/alpha/single-nhs-digital-academy.html",
+      label: "Digital Academy"
+    },
+    {
+      url: basePath + "#",
+      label: "Training & Education"
+    },
+    {
+      url: basePath + "#",
+      label: "Evidence & resources"
+    },
+    {
+      url: basePath + "#",
+      label: "Support"
+    },
+    {
+      url: basePath + "#",
+      label: "Digital Workforce"
+    },
+    {
+      url: basePath + "#",
+      label: "Our team"
+    }
+  ]
+}) }}
