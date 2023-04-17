@@ -1,0 +1,574 @@
+{% extends "example-template-leftbar.html" %}
+
+{% block pageTitle %}Parent Site - Single menu - News{% endblock %}
+
+{% block breadcrumbs %}
+  {{
+    breadcrumb({
+      items: [
+          {
+              href: basePath + "/alpha/single-index.html",
+              text: "WTE"
+          }
+      ],
+      href: "#",
+      text: "About us"
+    })
+  }}
+{% endblock %}
+
+{% block header %}
+  <div class="site-header">
+    {{ customHeader({
+      "showNav": "false",
+      "showSearch": "true",
+      "showLogos": "false",
+      "heeHref": basePath + "/alpha/single-index.html",
+      "classes": "nhsuk-header--white",
+      "organisation": {
+        "name": "Health Education England",
+        "split": "",
+        "descriptor": "Dental Education Hub"
+      },
+      "logos": [
+        {
+          "href": "https://www.nimdta.gov.uk/",
+          "label": "Northern Ireland Medical and Dental Training Agency Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/nimdta-logo.png",
+          "imgAlt": "Logo for Northern Ireland Medical and Dental Training Agency"
+        },
+        {
+          "href": "https://www.nes.scot.nhs.uk/",
+          "label": "NHS Education for Scotland Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/nhs-scotland-logo.png",
+          "imgAlt": "Logo for NHS Education for Scotland"
+        },
+        {
+          "href": "https://heiw.nhs.wales/",
+          "label": "Health Education and Improvement Wales Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/heiw-logo.png",
+          "imgAlt": "Logo for Health Education and Improvement Wales"
+        }
+      ]
+    })
+    }}
+
+    {{ megaMenu({
+      theme: "theme-white-blue",
+      primaryLinks: [
+        {
+          url: basePath + "#",
+          label: "Professions",
+          children: [
+            [
+              {
+                url: basePath + "#",
+                label: "All Professions A-Z"
+              },
+              {
+                url: basePath + "#",
+                label: "Allied health professions "
+              },
+              {
+                url: basePath + "#",
+                label: "Ambulance service"
+              },
+              {
+                url: basePath + "#",
+                label: "Armed forces"
+              },
+              {
+                url: basePath + "#",
+                label: "Digital, Data and Technology "
+              },
+              {
+                url: basePath + "#",
+                label: "Dental professions"
+              },
+              {
+                url: basePath + "#",
+                label: "Dentists"
+              }
+            ],
+            [
+              {
+                url: basePath + "#",
+                label: "Estates and facilities"
+              },
+              {
+                url: basePath + "#",
+                label: "Health academia"
+              },
+              {
+                url: basePath + "#",
+                label: "Health coach"
+              },
+              {
+                url: basePath + "#",
+                label: "Health coach"
+              },
+              {
+                url: basePath + "#",
+                label: "Healthcare scientists"
+              },
+              {
+                url: basePath + "#",
+                label: "Healthcare support workers"
+              },
+              {
+                url: basePath + "#",
+                label: "Knowledge staff"
+              }
+            ],
+            [
+              {
+                url: basePath + "#",
+                label: "Management (non-clinical)"
+              },
+              {
+                url: basePath + "#",
+                label: "Medical associate professions"
+              },
+              {
+                url: basePath + "#",
+                label: "Medical doctors"
+              },
+              {
+                url: basePath + "#",
+                label: "Midwives"
+              },
+              {
+                url: basePath + "#",
+                label: "Nurses"
+              },
+              {
+                url: basePath + "#",
+                label: "Pharmacy professions"
+              },
+              {
+                url: basePath + "#",
+                label: "Psychological professions"
+              }
+            ],
+            [
+              {
+                url: basePath + "#",
+                label: "Public health professions"
+              },
+              {
+                url: basePath + "#",
+                label: "Wider healthcare team"
+              }
+            ]
+          ]
+        },
+        {
+          url: basePath + "#",
+          label: "Healthcare topics",
+          children: [
+            [
+              {
+                url: basePath + "#",
+                label: "Antimicrobial resistance"
+              },
+              {
+                url: basePath + "#",
+                label: "Cancer"
+              },
+              {
+                url: basePath + "#",
+                label: "Children and young people"
+              },
+              {
+                url: basePath + "#",
+                label: "Community care"
+              },
+              {
+                url: basePath + "#",
+                label: "COVID-19"
+              },
+              {
+                url: basePath + "#",
+                label: "Dementia"
+              },
+              {
+                url: basePath + "#",
+                label: "End of life care"
+              },
+              {
+                url: basePath + "#",
+                label: "Genomics"
+              }
+            ],
+            [
+              {
+                url: basePath + "#",
+                label: "Global health "
+              },
+              {
+                url: basePath + "#",
+                label: "Health inequalities"
+              },
+              {
+                url: basePath + "#",
+                label: "Infection management"
+              },
+              {
+                url: basePath + "#",
+                label: "Integrated care"
+              },
+              {
+                url: basePath + "#",
+                label: "Learning disability and autism"
+              },
+              {
+                url: basePath + "#",
+                label: "Long-term conditions"
+              },
+              {
+                url: basePath + "#",
+                label: "Maternity"
+              },
+              {
+                url: basePath + "#",
+                label: "Medicines optimisation"
+              }
+            ],
+            [
+              {
+                url: basePath + "/alpha/single-mental-health.html",
+                label: "Mental health"
+              },
+              {
+                url: basePath + "#",
+                label: "Neonatal care"
+              },
+              {
+                url: basePath + "#",
+                label: "NHS Screening services"
+              },
+              {
+                url: basePath + "#",
+                label: "Patient safety"
+              },
+              {
+                url: basePath + "#",
+                label: "Personalised care"
+              },
+              {
+                url: basePath + "#",
+                label: "Primary care"
+              },
+              {
+                url: basePath + "#",
+                label: "Public health"
+              },
+              {
+                url: basePath + "#",
+                label: "Sexual and reproductive health"
+              }
+            ],
+            [
+              {
+                url: basePath + "#",
+                label: "Urgent and emergency care"
+              }
+            ]
+          ]
+        },
+        {
+          url: basePath + "#",
+          label: "About us",
+          children: [
+            [
+              {
+                url: basePath + "#",
+                label: "Blogs"
+              },
+              {
+                url: basePath + "#",
+                label: "Campaigns"
+              },
+              {
+                url: basePath + "#",
+                label: "Contact us"
+              },
+              {
+                url: basePath + "#",
+                label: "Events"
+              },
+              {
+                url: basePath + "#",
+                label: "Governance and management"
+              }
+            ],
+            [
+              {
+                url: basePath + "/alpha/single-news.html",
+                label: "News"
+              },
+              {
+                url: basePath + "#",
+                label: "Our values"
+              },
+              {
+                url: basePath + "#",
+                label: "Publications"
+              }
+            ]
+          ]
+        },
+        {
+          url: basePath + "#",
+          label: "Training and Education",
+          children: [
+            [
+              {
+                url: basePath + "#",
+                label: "Apprenticeships"
+              },
+              {
+                url: basePath + "#",
+                label: "Digital academy"
+              },
+              {
+                url: basePath + "#",
+                label: "Education funding"
+              },
+              {
+                url: basePath + "#",
+                label: "E-learning resources"
+              },
+              {
+                url: basePath + "#",
+                label: "Help applying for training"
+              }
+            ],
+            [
+              {
+                url: basePath + "#",
+                label: "Postgraduate in-training support"
+              },
+              {
+                url: basePath + "#",
+                label: "Quality of training"
+              },
+              {
+                url: basePath + "#",
+                label: "Research and innovation"
+              },
+              {
+                url: basePath + "#",
+                label: "Training programmes"
+              }
+            ]
+          ]
+        },
+        {
+          url: basePath + "#",
+          label: "Support",
+          children: [
+            [
+              {
+                url: basePath + "#",
+                label: "Access knowledge and information"
+              },
+              {
+                url: basePath + "#",
+                label: "Financial support for training and education"
+              },
+              {
+                url: basePath + "#",
+                label: "Professional support and wellbeing"
+              },
+              {
+                url: basePath + "#",
+                label: "Postgraduate in-training support"
+              }
+            ]
+          ]
+        },
+        {
+          url: basePath + "#",
+          label: "Healthcare workforce",
+          children: [
+            [
+              {
+                url: basePath + "#",
+                label: "Recruiting the workforce"
+              },
+              {
+                url: basePath + "#",
+                label: "Widening participation"
+              },
+              {
+                url: basePath + "#",
+                label: "Workforce planning and intelligence"
+              }
+            ],
+            [
+              {
+                url: basePath + "#",
+                label: "Workforce transformation"
+              },
+              {
+                url: basePath + "#",
+                label: "Workforce strategy"
+              },
+              {
+                url: basePath + "#",
+                label: "Workforce streamlining"
+              }
+            ]
+          ]
+        },
+        {
+          url: basePath + "#",
+          label: "Regions",
+          children: [
+            [
+              {
+                url: basePath + "#",
+                label: "East of England"
+              },
+              {
+                url: basePath + "#",
+                label: "London"
+              },
+              {
+                url: basePath + "#",
+                label: "Midlands"
+              },
+              {
+                url: basePath + "#",
+                label: "North East and North Yorkshire"
+              }
+            ],
+            [
+              {
+                url: basePath + "#",
+                label: "North West"
+              },
+              {
+                url: basePath + "#",
+                label: "South East"
+              },
+              {
+                url: basePath + "#",
+                label: "South West"
+              }
+            ]
+          ]
+        }
+      ]
+    }) }}
+  </div>
+
+  {{ phaseBanner({
+    tag: "Alpha",
+    description: 'This is a new service – your <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.'
+  }) }}
+{% endblock %}
+
+{% block pageHeader %}
+  <div class="nhsuk-width-container">
+    <h1>News</h1>
+    <span class="nhsuk-caption-xl">Workforce, Training and Education</span>
+    <p class="nhsuk-lede-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum sit sed porta viverra. Amet, tincidunt cras augue justo, proin mollis sapien. Sed cursus quam suspendisse.</p>
+  </div>
+{% endblock %}
+
+{% block pageLeftbar %}
+  {{ filter({
+    groups: [
+      {
+        title: "Category",
+        showClearToggle: true,
+        items: [
+        {
+          text: "Item one",
+          value: "item_one",
+          checked: true
+        },
+        {
+          text: "Item two",
+          value: "item_two",
+          checked: true
+        }
+      ]
+      },
+      {
+        title: "Organisation",
+        items: [
+        {
+          text: "Item one",
+          value: "item_one"
+        },
+        {
+          text: "Item two",
+          value: "item_two"
+        },
+        {
+          text: "Item three",
+          value: "item_three"
+        }
+      ]
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block pageContent %}
+  {% set selectAttributes = {
+    id: "sort",
+    name: "sort",
+    label: {
+      text: "Sort by"
+    },
+    items: [
+      {
+        value: "newest",
+        text: "Newest"
+      },
+      {
+        value: "relevance",
+        text: "Relevance"
+      }
+    ]
+  } %}
+
+  {% set submitAttributes = {
+    text: "Update",
+    classes: "hee-listing__filter__submit"
+  } %}
+
+  {% set items = [] %}
+  {% for i in range(0, 10) -%}
+    {% set item = {
+      title: "News item #" + loop.index,
+      href: "#",
+      details: [
+        {
+          label: "News type:",
+          value: "Briefing"
+        },
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+    } %}
+    {% set items = (items.push(item), items) %}
+  {% endfor %}
+
+  {{ listingLayout({
+    filter: {
+      select: selectAttributes,
+      submit: submitAttributes
+    },
+    results: items,
+    emptyMessage: "No results",
+    showPagination: true
+  }) }}
+{% endblock %}

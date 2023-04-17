@@ -1,4 +1,4 @@
-{% extends "alpha-template-fullwidth.html" %}
+{% extends "example-template-fullwidth.html" %}
 
 {% set page_title = 'Parent Site - Single menu - Homepage' %}
 
@@ -6,19 +6,6 @@
 {% block pageHeaderClass %}has-microhero{% endblock %}
 
 {% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
-
-{% block breadcrumbs %}
-  {{
-    breadcrumb({
-      items: [
-        {
-          href: basePath + "/",
-          text: "WTE"
-        }
-      ]
-    })
-  }}
-{% endblock %}
 
 {% block header %}
   <div class="site-header">
@@ -307,7 +294,7 @@
           ],
           [
             {
-              url: basePath + "#",
+              url: basePath + "/alpha/single-news.html",
               label: "News"
             },
             {

@@ -1,4 +1,4 @@
-{% extends "alpha-template-fullwidth.html" %}
+{% extends "example-template-fullwidth.html" %}
 
 {% set page_title = 'Parent Site - Single menu - Mental Health' %}
 
@@ -14,12 +14,10 @@
         {
           href: basePath + "/",
           text: "HEE"
-        },
-        {
-          href: basePath + "#",
-          text: "Healthcare topics"
         }
-      ]
+      ],
+      href: basePath + "#",
+      text: "Healthcare topics"
     })
   }}
 {% endblock %}
@@ -64,7 +62,7 @@
     theme: "theme-grey",
     primaryLinks: [
       {
-        url: basePath + "#",
+        url: basePath + "/alpha/single-mental-health.html",
         label: "Mental Health"
       },
       {

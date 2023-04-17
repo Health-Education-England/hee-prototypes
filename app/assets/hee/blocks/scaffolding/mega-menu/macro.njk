@@ -5,7 +5,7 @@
         <ul class="hee-mega-menu__list" role="menu">
           {% for item in params.primaryLinks %}
             <li class="hee-mega-menu__item{% if item.children.length > 0 %} hee-mega-menu__subnav{% endif %}">
-              <a class="hee-mega-menu__link" href="#" role="menuitem" {% if item.children.length > 0 %}aria-expanded="false" aria-controls="hee-mega-menu__panel-{{ loop.index0 }}" {% endif %}>
+              <a class="hee-mega-menu__link" href="{{ item.url }}" role="menuitem" {% if item.children.length > 0 %}aria-expanded="false" aria-controls="hee-mega-menu__panel-{{ loop.index0 }}" {% endif %}>
                 {{item.label | safe}}
               </a>
             </li>

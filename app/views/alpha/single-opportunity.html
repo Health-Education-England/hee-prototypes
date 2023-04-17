@@ -6,26 +6,24 @@
 
 {% block breadcrumbs %}
   {{
-  breadcrumb({
-    items: [
-      {
-        href: basePath + "/",
-        text: "HEE"
-      },
-      {
-        href: basePath + "#",
-        text: "Healthcare topics"
-      },
-      {
-        href: basePath + "#",
-        text: "Mental health"
-      },
-      {
-        href: basePath + "#",
-        text: "Get involved"
-      }
-    ]
-  })
+    breadcrumb({
+      items: [
+        {
+          href: basePath + "/alpha/single-index.html",
+          text: "WTE"
+        },
+        {
+          href: "#",
+          text: "Healthcare topics"
+        },
+        {
+          href: basePath + "/alpha/single-mental-health.html",
+          text: "Mental health"
+        }
+      ],
+      href: "#",
+      text: "Get involved"
+    })
   }}
 {% endblock %}
 
@@ -69,132 +67,132 @@
       theme: "theme-grey",
       primaryLinks: [
         {
-          url: basePath + "#",
+          url: basePath + "/alpha/single-mental-health.html",
           label: "Mental Health"
         },
         {
           url: basePath + "#",
           label: "Training and education",
           children: [
-          [
-            {
-              url: basePath + "#",
-              label: "Courses"
-            },
-            {
-              url: basePath + "#",
-              label: "Training programmes "
-            },
-            {
-              url: basePath + "#",
-              label: "Educational events"
-            }
+            [
+              {
+                url: basePath + "#",
+                label: "Courses"
+              },
+              {
+                url: basePath + "#",
+                label: "Training programmes "
+              },
+              {
+                url: basePath + "#",
+                label: "Educational events"
+              }
+            ]
           ]
-        ]
         },
         {
           url: basePath + "#",
           label: "Evidence and resources",
           children: [
-          [
-            {
-              url: basePath + "#",
-              label: "Publications"
-            },
-            {
-              url: basePath + "#",
-              label: "Data"
-            },
-            {
-              url: basePath + "#",
-              label: "Resources"
-            }
+            [
+              {
+                url: basePath + "#",
+                label: "Publications"
+              },
+              {
+                url: basePath + "#",
+                label: "Data"
+              },
+              {
+                url: basePath + "#",
+                label: "Resources"
+              }
+            ]
           ]
-        ]
         },
         {
           url: basePath + "#",
           label: "Get involved",
           children: [
-          [
-            {
-              url: basePath + "#",
-              label: "Roles"
-            },
-            {
-              url: basePath + "#",
-              label: "Pathways"
-            },
-            {
-              url: basePath + "/alpha/single-opportunity.html",
-              label: "Opportunities"
-            },
-            {
-              url: basePath + "#",
-              label: "Collaboration"
-            }
+            [
+              {
+                url: basePath + "#",
+                label: "Roles"
+              },
+              {
+                url: basePath + "#",
+                label: "Pathways"
+              },
+              {
+                url: basePath + "/alpha/single-opportunity.html",
+                label: "Opportunities"
+              },
+              {
+                url: basePath + "#",
+                label: "Collaboration"
+              }
+            ]
           ]
-        ]
         },
         {
           url: basePath + "#",
           label: "Support",
           children: [
-          [
-            {
-              url: basePath + "#",
-              label: "Support for learners"
-            },
-            {
-              url: basePath + "#",
-              label: "Support for educators"
-            },
-            {
-              url: basePath + "#",
-              label: "Support for employers"
-            },
-            {
-              url: basePath + "#",
-              label: "Support for commissioners"
-            }
+            [
+              {
+                url: basePath + "#",
+                label: "Support for learners"
+              },
+              {
+                url: basePath + "#",
+                label: "Support for educators"
+              },
+              {
+                url: basePath + "#",
+                label: "Support for employers"
+              },
+              {
+                url: basePath + "#",
+                label: "Support for commissioners"
+              }
+            ]
           ]
-        ]
         },
         {
           url: basePath + "#",
           label: "Workforce",
           children: [
-          [
-            {
-              url: basePath + "#",
-              label: "Workforce planning"
-            },
-            {
-              url: basePath + "#",
-              label: "Workforce transformation"
-            }
+            [
+              {
+                url: basePath + "#",
+                label: "Workforce planning"
+              },
+              {
+                url: basePath + "#",
+                label: "Workforce transformation"
+              }
+            ]
           ]
-        ]
         },
         {
           url: basePath + "#",
           label: "Our team",
           children: [
-          [
-            {
-              url: basePath + "#",
-              label: "Contact"
-            },
-            {
-              url: basePath + "#",
-              label: "News"
-            },
-            {
-              url: basePath + "#",
-              label: "Blogs"
-            }
+            [
+              {
+                url: basePath + "#",
+                label: "Contact"
+              },
+              {
+                url: basePath + "/alpha/single-news.html",
+                label: "News"
+              },
+              {
+                url: basePath + "#",
+                label: "Blogs"
+              }
+            ]
           ]
-        ]
         }
       ]
     }) }}
