@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Card--Department - Templates - NWP Prototype Kit</title>
+  <title>Card--Details - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -60,9 +60,9 @@
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks">Blocks</a></li>
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/content">Content</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/sidebar-card-department">Card--Department</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/sidebar-card-details">Card--Details</a></li>
         </ol>
-        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/sidebar-card-department">Back to Card--Department</a></p>
+        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/sidebar-card-details">Back to Card--Details</a></p>
       </div>
     </nav>
   </div>
@@ -121,40 +121,60 @@
         <div class="page__main">
           <div class="page__header">
             <span class="nhsuk-caption-xl">Main</span>
-            <h1>Card--Department</h1>
+            <h1>Card--Details</h1>
             <p class="nhsuk-lede-text"></p>
           </div>
-          <p>You can find the content type data model in the <a href="https://hee-tis.atlassian.net/wiki/spaces/NWPK/pages/3611721734/Department">Department specification</a>.</p>
+          <p>Card displaying a title and a list of labels and values on each new line.</p>
           <h3>Example</h3>
           <div class="prototype__example block">
-            <a href="/hee-prototypes/blocks/content/examples/sidebar-card-department.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
+            <a href="/hee-prototypes/blocks/content/examples/sidebar-card-details.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
             <div class="thumbnail">
-              <iframe src="/hee-prototypes/blocks/content/examples/sidebar-card-department.html" height="380"></iframe>
+              <iframe src="/hee-prototypes/blocks/content/examples/sidebar-card-details.html" height="380"></iframe>
             </div>
           </div>
           <hr />
           <h3>Macro</h3>
           <pre><code>
-{{ departmentCard({
-  name: &quot;Paediatrics&quot;, 
-  organisation: &quot;University Hospitals Birmingham NHS Foundation Trust &quot;,
-  email: &quot;email@hee.co.uk&quot;,
-  website: &quot;http://nhs.uk/&quot;,
-  description: &quot;Lorem ipsum dolor sit amet&quot;
+{{ detailsCard({
+    title: &quot;Publication Info&quot;,
+    items: [
+      {
+        label: &quot;Published:&quot;,
+        value: &quot;24 June 2022&quot;
+      },
+      {
+        label: &quot;Updated:&quot;,
+        value: &quot;24 July 2022&quot;
+      },
+      {
+        label: &quot;Topic:&quot;,
+        value: &quot;&lt;a href=&quot;#&quot;&gt;Profession 1&lt;/a&gt;, &lt;a href=&quot;#&quot;&gt;Topic 1&lt;/a&gt;&quot;
+      },
+      {
+        label: &quot;Estimated reading time:&quot;,
+        value: &quot;2 mins&quot;
+      }
+    ]
 }) }}
   </code></pre>
           <hr />
           <h3>HTML</h3>
           <pre><code>
-&lt;div class=&quot;hee-card hee-card--department&quot;&gt;
-  &lt;h2 class=&quot;nhsuk-heading-m hee-card__jobtitle&quot; aria-label=&quot;Department name&quot;&gt;Paediatrics&lt;/h2&gt;
-  &lt;p class=&quot;hee-card__organisation&quot; aria-label=&quot;Organisation&quot;&gt;University Hospitals Birmingham NHS Foundation Trust &lt;/p&gt;
-  &lt;hr&gt;
-  &lt;ul class=&quot;hee-card__contact&quot;&gt;
-    &lt;li class=&quot;hee-card__email&quot; aria-label=&quot;Email&quot;&gt;&lt;a href=&quot;mailto:http://nhs.uk/;&quot;&gt;email@hee.co.uk&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;hee-card__website&quot; aria-label=&quot;Website&quot;&gt;&lt;a href=&quot;http://nhs.uk/&quot;&gt;http://nhs.uk/&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;p class=&quot;hee-card__description&quot; aria-label=&quot;Description&quot;&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+&lt;div class=&quot;hee-card hee-card--details&quot;&gt;
+    &lt;h3&gt;Publication Info&lt;/h3&gt;
+    &lt;div class=&quot;hee-card--details__item&quot;&gt;
+      &lt;span&gt;Published:&lt;/span&gt; 24 June 2022
+    &lt;/div&gt;
+    &lt;div class=&quot;hee-card--details__item&quot;&gt;
+      &lt;span&gt;Updated:&lt;/span&gt; 24 July 2022
+    &lt;/div&gt;
+    &lt;div class=&quot;hee-card--details__item&quot;&gt;
+      &lt;span&gt;Topic:&lt;/span&gt;
+      &lt;a href=&quot;#&quot;&gt;Profession 1&lt;/a&gt;, &lt;a href=&quot;#&quot;&gt;Topic 1&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;hee-card--details__item&quot;&gt;
+      &lt;span&gt;Estimated reading time:&lt;/span&gt; 2 mins
+    &lt;/div&gt;
 &lt;/div&gt;
   </code></pre>
         </div>

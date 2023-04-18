@@ -14,6 +14,16 @@
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
   <link href="/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
   <link href="/css/hee.css" rel="stylesheet" />
+  <style>
+    .example {}
+
+    .example--template {}
+
+    .example--blocks {
+      padding: 1em;
+      background-color: #f0f4f5;
+    }
+  </style>
   <link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png">
   <link rel="mask-icon" href="/nhsuk-frontend/assets/favicons/favicon.svg" color="#005eb8">
@@ -26,7 +36,7 @@
   <meta name="msapplication-square310x310logo" content="/nhsuk-frontend/assets/favicons/largetile-310x310.png">
 </head>
 
-<body>
+<body class="example example--template">
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script>
@@ -145,7 +155,7 @@
   <div class="banners">
   </div>
   <main class="page page--fullwidth" id="maincontent" role="main">
-    <div class="page__header ">
+    <div class="page__header">
     </div>
     <div class="page__main nhsuk-width-container">
       <div class="page__content">

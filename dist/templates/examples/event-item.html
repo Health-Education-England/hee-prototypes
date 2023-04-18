@@ -7,13 +7,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Publication Landing - Examples - NWP Prototype Kit</title>
+  <title>Event Item - Examples - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
   <link href="/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
   <link href="/css/hee.css" rel="stylesheet" />
+  <style>
+    .example {}
+
+    .example--template {}
+
+    .example--blocks {
+      padding: 1em;
+      background-color: #f0f4f5;
+    }
+  </style>
   <link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png">
   <link rel="mask-icon" href="/nhsuk-frontend/assets/favicons/favicon.svg" color="#005eb8">
@@ -26,7 +36,7 @@
   <meta name="msapplication-square310x310logo" content="/nhsuk-frontend/assets/favicons/largetile-310x310.png">
 </head>
 
-<body>
+<body class="example example--template">
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script>
@@ -141,11 +151,20 @@
     </header>
   </div>
   <div class="breadcrumbs">
+    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+      <div class="nhsuk-width-container">
+        <ol class="nhsuk-breadcrumb__list">
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates/examples/event-item">Event Item</a></li>
+        </ol>
+        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/templates/examples/event-item">Back to Event Item</a></p>
+      </div>
+    </nav>
   </div>
   <div class="banners">
   </div>
   <main class="page page--rightbar" id="maincontent" role="main">
-    <div class="page__header ">
+    <div class="page__header">
       <div class="nhsuk-width-container">
         <div class="nhsuk-back-link">
           <a class="nhsuk-back-link__link" href="#">
@@ -153,166 +172,81 @@
               <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
             </svg> Go back</a>
         </div>
-        <h1>Publication title</h1>
-        <span class="nhsuk-caption-xl">Caption</span>
+        <h1>Dignissim suspendisse blandit ut sit ultricies.</h1>
+        <span class="nhsuk-caption-xl">HEE Yorkshire and the Humber is pleased to offer one day training to all trainees focusing on Resilience.</span>
+        <p class="nhsuk-lede-text">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
       </div>
     </div>
-    <div class="page__layout nhsuk-width-container">
-      <div class="page__main">
-        <div class="page__content">
-          <p class="nhsuk-body-l">Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi.</p>
-          <h2>Documents</h2>
-          <div class="hee-publication-doc">
-            <div class="hee-publication-doc__wrapper">
-              <div class="hee-publication-doc__icon">
-                <div class="hee-publication-doc__icon__page"></div>
-                <div class="hee-publication-doc__icon__corner">
-                  <div class="hee-publication-doc__icon__corner__triangle"></div>
-                </div>
-              </div>
-              <div class="hee-publication-doc__icon__title">WEB</div>
+    <div class="nhsuk-width-container">
+      <div class="page__layout">
+        <div class="page__main">
+          <h2>About this event</h2>
+          <p>Working in the NHS can be stressful. According to a 2016 ‘Guardian’ survey of NHS staff, 43% of NHS health care workers surveyed identified feeling unreasonably stressed at work ‘most’ or ‘all of the time’. In 2013 the ONS found that the NHS had higher sickness absence rates than any other large public sector organisation, with 3.4% of worker hours lost to sickness. Sickness absence costs the NHS £2.4bn a year - accounting for around £1 in every £40 of the total budget. </p>
+          <p>NHS Employers estimate 30% of this sickness time is caused by stress. It’s important to frame this in the context of what is currently the biggest sustained fall in NHS spending in any period since 1951. While NHS funding is getting tighter, demand for NHS services and costs for new medical treatments are increasing and other cut backs that impact the NHS have been deepening.</p>
+          <p>The NHS could be characterised as an increasingly unworkable system that relies on the good will of staff who accept over-work as the price to pay for survival – and that is innately stressful. There is now significant evidence to show that when staff are feeling persistently threatened with overwhelming workloads their ability to meet patients’ care needs – as well as their own needs for self-care – with empathy and compassion is compromised. If the ‘threat’ mode is maintained for long enough it becomes the norm and part of the team and/or organisational culture and this can have a significant negative impact on personal resilience.</p>
+          <figure class="nhsuk-image">
+            <img class="nhsuk-image__img" src="https://digital-transformation.hee.nhs.uk/binaries/content/gallery/digital-transformation/blogs/vr-headsets.jpg" alt="Nulla vitae est vel metus aliquam pharetra">
+            <figcaption class="nhsuk-image__caption"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nec tellus auctor viverra egestas leo. Morbi eu elit diam fusce. </figcaption>
+          </figure>
+          <p>Resilience training is seen as one of the solutions to this very difficult situation. One of the dangers of this is that such training could be viewed (and even used) as a way to avoid the obvious organisational and structural issues and locate the problem of stress in the individual.</p>
+          <p>This one-day course – ‘Resilience for trainee doctors’ – seeks to address the multifaceted problem of stress in the NHS workplace head-on, using the concept of ‘relational intelligence’ to help course participants see more clearly the causes of stress – the ways in which they relate to them¬selves, their colleagues and their teams/ organisations. The objective of the day is to develop a comprehensive ‘resilience plan’ to equip participants with the tools and practices necessary to survive and thrive in the NHS today.</p>
+          <div class="hee-google-map">
+            <div class="hee-google-map__wrapper">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38876.46420375777!2d-1.945322588878691!3d52.48313681174725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bdaa5d4e3383%3A0xc9d525245d0b1f47!2sHealth%20Education%20England!5e0!3m2!1sen!2suk!4v1669730967510!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <div class="hee-publication-doc__details">
-              <h3><a href="#">Publication title - Web version</a></h3>
-              <span> Published: 24th June 2022 </span>
-              <span> Updated: 24th June 2022 </span>
-              <span> WEB </span>
-              <span> 20 min read </span>
-            </div>
-          </div>
-          <div class="hee-publication-doc">
-            <div class="hee-publication-doc__wrapper">
-              <div class="hee-publication-doc__icon">
-                <div class="hee-publication-doc__icon__page"></div>
-                <div class="hee-publication-doc__icon__corner">
-                  <div class="hee-publication-doc__icon__corner__triangle"></div>
-                </div>
-              </div>
-              <div class="hee-publication-doc__icon__title">PDF</div>
-            </div>
-            <div class="hee-publication-doc__details">
-              <h3><a href="#">Publication title - PDF version</a></h3>
-              <span> Published: 24th June 2022 </span>
-              <span> Updated: 24th June 2022 </span>
-              <span> PDF, 16 MB, 92 pages </span>
-              <span> 20 min read </span>
-            </div>
-          </div>
-          <div class="hee-publication-doc">
-            <div class="hee-publication-doc__wrapper">
-              <div class="hee-publication-doc__icon">
-                <div class="hee-publication-doc__icon__page"></div>
-                <div class="hee-publication-doc__icon__corner">
-                  <div class="hee-publication-doc__icon__corner__triangle"></div>
-                </div>
-              </div>
-              <div class="hee-publication-doc__icon__title">ODT</div>
-            </div>
-            <div class="hee-publication-doc__details">
-              <h3><a href="#">Publication title - Open Document version</a></h3>
-              <span> Published: 24th June 2022 </span>
-              <span> Updated: 24th June 2022 </span>
-              <span> Open Document Format, 16.9 MB, 92 pages </span>
-              <span> 20 min read </span>
-            </div>
-          </div>
-          <div class="hee-publication-doc">
-            <div class="hee-publication-doc__wrapper">
-              <div class="hee-publication-doc__icon">
-                <div class="hee-publication-doc__icon__page"></div>
-                <div class="hee-publication-doc__icon__corner">
-                  <div class="hee-publication-doc__icon__corner__triangle"></div>
-                </div>
-              </div>
-              <div class="hee-publication-doc__icon__title">XLSX</div>
-            </div>
-            <div class="hee-publication-doc__details">
-              <h3><a href="#">Publication title - Open Document version</a></h3>
-              <span> Published: 24th June 2022 </span>
-              <span> Updated: 24th June 2022 </span>
-              <span> Open Document Format, 16 MB, 92 pages </span>
-              <span> 20 min read </span>
-            </div>
-          </div>
-          <h2>Languages</h2>
-          <div class="hee-publication-doc">
-            <div class="hee-publication-doc__wrapper">
-              <div class="hee-publication-doc__icon">
-                <div class="hee-publication-doc__icon__page"></div>
-                <div class="hee-publication-doc__icon__corner">
-                  <div class="hee-publication-doc__icon__corner__triangle"></div>
-                </div>
-              </div>
-              <div class="hee-publication-doc__icon__title">PDF</div>
-            </div>
-            <div class="hee-publication-doc__details">
-              <h3><a href="#">Teitl y cyhoeddiad - Fersiwn PDF</a></h3>
-              <span> Cyhoeddwyd ar 24 Mehefin 2022, gan yr Awdur </span>
-              <span> Wedi&#39;i ddiweddaru: 24 Gorffennaf 2022 </span>
-              <span> Darllen 20 munud </span>
-            </div>
-          </div>
-          <div class="hee-publication-doc">
-            <div class="hee-publication-doc__wrapper">
-              <div class="hee-publication-doc__icon">
-                <div class="hee-publication-doc__icon__page"></div>
-                <div class="hee-publication-doc__icon__corner">
-                  <div class="hee-publication-doc__icon__corner__triangle"></div>
-                </div>
-              </div>
-              <div class="hee-publication-doc__icon__title">PDF</div>
-            </div>
-            <div class="hee-publication-doc__details">
-              <h3><a href="#">Tytuł publikacji - wersja PDF</a></h3>
-              <span> Opublikowane 24 czerwca 2022, autor: Autor </span>
-              <span> Zaktualizowano: 24 lipca 2022 r. </span>
-              <span> PDF, 16 MB, 92 strony </span>
-              <span> 20 minut czytania </span>
-            </div>
+            <figcaption class="hee-google-map__caption">
+              <h3>Location</h3> 23 Stephenson St, Birmingham B2 4BJ, UK
+            </figcaption>
           </div>
         </div>
+        <aside class="page__rightbar">
+          <div class="hee-card hee-card--details">
+            <h3>Event info</h3>
+            <div class="hee-card--details__item">
+              <span>Event type:</span> Webinar
+            </div>
+            <div class="hee-card--details__item">
+              <span>Category:</span> Dental
+            </div>
+            <div class="hee-card--details__item">
+              <span>Date:</span> Webinar
+            </div>
+            <div class="hee-card--details__item">
+              <span>Time:</span> 14:00 - 20:00
+            </div>
+            <div class="hee-card--details__item">
+              <span>Delivery:</span> Online
+            </div>
+            <div class="hee-card--details__item">
+              <span>Website:</span>
+              <a href="#">www.website.com</a>
+            </div>
+          </div>
+        </aside>
       </div>
-      <aside class="page__rightbar">
-        <div class="hee-card hee-card--details">
-          <h3>Publication Info</h3>
-          <div class="hee-card--details__item">
-            <span>Published:</span> 24 June 2022
-          </div>
-          <div class="hee-card--details__item">
-            <span>Updated:</span> 24 July 2022
-          </div>
-          <div class="hee-card--details__item">
-            <span>Professions:</span>
-            <a href="#">Profession 1</a>, <a href="#">Profession 2</a>
-          </div>
-          <div class="hee-card--details__item">
-            <span>Topics:</span>
-            <a href="#">Topic 1</a>, <a href="#">Topic 2</a>
-          </div>
-          <div class="hee-card--details__item">
-            <span>Estimated reading time:</span> 2 mins
-          </div>
-        </div>
-      </aside>
     </div>
     <div class="page__footer">
     </div>
     <section class="page__feature">
       <div class="nhsuk-width-container">
-        <h2>Related publications</h2>
+        <h2>Related Events</h2>
         <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet. Nunc turpis vel aliquam lacus arcu. Sodales nullam id lectus orci quis sed. dsf</p>
         <div class="hee-mini-listing">
           <div class="hee-mini-listing__item">
             <div class="hee-listing-item">
-              <h3><a href="#">Publication item #1</a></h3>
+              <h3><a href="#">Event item #1</a></h3>
               <div class="hee-listing-item__details">
                 <div class="hee-listing-item__details__row">
-                  <span class="hee-listing-item__details__label">Publication type:</span>
+                  <span class="hee-listing-item__details__label">Event type:</span>
                   <span>Briefing</span>
                 </div>
                 <div class="hee-listing-item__details__row">
-                  <span class="hee-listing-item__details__label">Publish date:</span>
+                  <span class="hee-listing-item__details__label">Date:</span>
                   <span>07 September 2022</span>
+                </div>
+                <div class="hee-listing-item__details__row">
+                  <span class="hee-listing-item__details__label">Time:</span>
+                  <span>14:00 - 20:00</span>
                 </div>
               </div>
               <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
@@ -320,15 +254,19 @@
           </div>
           <div class="hee-mini-listing__item">
             <div class="hee-listing-item">
-              <h3><a href="#">Publication item #2</a></h3>
+              <h3><a href="#">Event item #2</a></h3>
               <div class="hee-listing-item__details">
                 <div class="hee-listing-item__details__row">
-                  <span class="hee-listing-item__details__label">Publication type:</span>
+                  <span class="hee-listing-item__details__label">Event type:</span>
                   <span>Briefing</span>
                 </div>
                 <div class="hee-listing-item__details__row">
-                  <span class="hee-listing-item__details__label">Publish date:</span>
+                  <span class="hee-listing-item__details__label">Date:</span>
                   <span>07 September 2022</span>
+                </div>
+                <div class="hee-listing-item__details__row">
+                  <span class="hee-listing-item__details__label">Time:</span>
+                  <span>14:00 - 20:00</span>
                 </div>
               </div>
               <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
@@ -336,15 +274,19 @@
           </div>
           <div class="hee-mini-listing__item">
             <div class="hee-listing-item">
-              <h3><a href="#">Publication item #3</a></h3>
+              <h3><a href="#">Event item #3</a></h3>
               <div class="hee-listing-item__details">
                 <div class="hee-listing-item__details__row">
-                  <span class="hee-listing-item__details__label">Publication type:</span>
+                  <span class="hee-listing-item__details__label">Event type:</span>
                   <span>Briefing</span>
                 </div>
                 <div class="hee-listing-item__details__row">
-                  <span class="hee-listing-item__details__label">Publish date:</span>
+                  <span class="hee-listing-item__details__label">Date:</span>
                   <span>07 September 2022</span>
+                </div>
+                <div class="hee-listing-item__details__row">
+                  <span class="hee-listing-item__details__label">Time:</span>
+                  <span>14:00 - 20:00</span>
                 </div>
               </div>
               <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>

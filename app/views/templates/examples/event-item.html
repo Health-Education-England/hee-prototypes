@@ -1,0 +1,117 @@
+{% extends "example-template-rightbar.html" %}
+
+{% block pageTitle %}Event Item - Examples - NWP Prototype Kit{% endblock %}
+
+{% block breadcrumbs %}
+  {{
+  breadcrumb({
+    items: [
+      {
+        href: "/",
+        text: "Home"
+      }
+    ],
+    href: "/templates/examples/event-item",
+    text: "Event Item"
+  })
+  }}
+{% endblock %}
+
+{% block pageHeader %}
+  <div class="nhsuk-width-container">
+    {{ backLink({
+      href: "#",
+      text: "Go back"
+    }) }}
+    <h1>Dignissim suspendisse blandit ut sit ultricies.</h1>
+    <span class="nhsuk-caption-xl">HEE Yorkshire and the Humber is pleased to offer one day training to all trainees focusing on Resilience.</span>
+    <p class="nhsuk-lede-text">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+  </div>
+{% endblock %}
+
+{% block pageContent %}
+  <h2>About this event</h2>
+  <p>Working in the NHS can be stressful. According to a 2016 ‘Guardian’ survey of NHS staff, 43% of NHS health care workers surveyed identified feeling unreasonably stressed at work ‘most’ or ‘all of the time’. In 2013 the ONS found that the NHS had higher sickness absence rates than any other large public sector organisation, with 3.4% of worker hours lost to sickness. Sickness absence costs the NHS £2.4bn a year - accounting for around £1 in every £40 of the total budget. </p>
+  <p>NHS Employers estimate 30% of this sickness time is caused by stress. It’s important to frame this in the context of what is currently the biggest sustained fall in NHS spending in any period since 1951. While NHS funding is getting tighter, demand for NHS services and costs for new medical treatments are increasing and other cut backs that impact the NHS have been deepening.</p>
+  <p>The NHS could be characterised as an increasingly unworkable system that relies on the good will of staff who accept over-work as the price to pay for survival – and that is innately stressful. There is now significant evidence to show that when staff are feeling persistently threatened with overwhelming workloads their ability to meet patients’ care needs – as well as their own needs for self-care – with empathy and compassion is compromised. If the ‘threat’ mode is maintained for long enough it becomes the norm and part of the team and/or organisational culture and this can have a significant negative impact on personal resilience.</p>
+
+  {{ image({
+    src: "https://digital-transformation.hee.nhs.uk/binaries/content/gallery/digital-transformation/blogs/vr-headsets.jpg",
+    alt: "Nulla vitae est vel metus aliquam pharetra",
+    caption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nec tellus auctor viverra egestas leo. Morbi eu elit diam fusce."
+  }) }}
+
+  <p>Resilience training is seen as one of the solutions to this very difficult situation. One of the dangers of this is that such training could be viewed (and even used) as a way to avoid the obvious organisational and structural issues and locate the problem of stress in the individual.</p>
+  <p>This one-day course – ‘Resilience for trainee doctors’ – seeks to address the multifaceted problem of stress in the NHS workplace head-on, using the concept of ‘relational intelligence’ to help course participants see more clearly the causes of stress – the ways in which they relate to them¬selves, their colleagues and their teams/ organisations. The objective of the day is to develop a comprehensive ‘resilience plan’ to equip participants with the tools and practices necessary to survive and thrive in the NHS today.</p>
+
+  {{ googleMap({
+    embedCode: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38876.46420375777!2d-1.945322588878691!3d52.48313681174725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bdaa5d4e3383%3A0xc9d525245d0b1f47!2sHealth%20Education%20England!5e0!3m2!1sen!2suk!4v1669730967510!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
+    title: "Location",
+    caption: "23 Stephenson St, Birmingham B2 4BJ, UK"
+  }) }}
+{% endblock %}
+
+{% block pageFeature %}
+  {% set items = [] %}
+  {% for i in range(0, 3) -%}
+    {% set item = {
+      title: "Event item #" + loop.index,
+      href: "#",
+      details: [
+        {
+          label: "Event type:",
+          value: "Briefing"
+        },
+        {
+          label: "Date:",
+          value: "07 September 2022"
+        },
+        {
+          label: "Time:",
+          value: "14:00 - 20:00"
+        }
+      ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+    } %}
+    {% set items = (items.push(item), items) %}
+  {% endfor %}
+
+  <div class="nhsuk-width-container">
+    <h2>Related Events</h2>
+    <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet. Nunc turpis vel aliquam lacus arcu. Sodales nullam id lectus orci quis sed. dsf</p>
+
+    {{ miniListing(items) }}
+  </div>
+{% endblock %}
+
+{% block pageRightbar %}
+  {{ detailsCard({
+    title: "Event info",
+    items: [
+      {
+        label: "Event type:",
+        value: "Webinar"
+      },
+      {
+        label: "Category:",
+        value: "Dental"
+      },
+      {
+        label: "Date:",
+        value: "Webinar"
+      },
+      {
+        label: "Time:",
+        value: "14:00 - 20:00"
+      },
+      {
+        label: "Delivery:",
+        value: "Online"
+      },
+      {
+        label: "Website:",
+        value: "<a href=\"#\">www.website.com</a>"
+      }
+    ]
+  }) }}
+{% endblock %}
