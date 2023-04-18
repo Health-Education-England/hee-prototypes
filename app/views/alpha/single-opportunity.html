@@ -29,6 +29,11 @@
 
 {% block header %}
   <div class="site-header">
+    {{ backToHomeBanner({
+      url: basePath + "/alpha/single-index.html",
+      title: "Back to Workforce, training and education"
+    }) }}
+
     {{ customHeader({
       "showNav": "false",
       "showSearch": "true",
