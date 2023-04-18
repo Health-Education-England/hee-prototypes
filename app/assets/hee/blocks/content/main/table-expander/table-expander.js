@@ -7,7 +7,7 @@ export default () => {
 
     constructor(tableCard) {
       this.tableCard = tableCard;
-      this.toggleLink = this.tableCard.querySelector('.hee-card--table__toggle a');
+      this.toggleLink = this.tableCard.querySelector('.hee-table-expander__toggle a');
       this.expanders = this.tableCard.querySelectorAll('.nhsuk-expander');
       this.stateOpen = false;
 
@@ -114,5 +114,5 @@ export default () => {
     }
   }
 
-  [...document.getElementsByClassName('hee-card--table')].forEach(tableCard => new TableCard(tableCard));
+  [...document.getElementsByClassName('hee-table-expander')].forEach(tableCard => new TableCard(tableCard));
 }

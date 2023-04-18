@@ -1,11 +1,11 @@
-.hee-card--table {
-  .hee-card--table__toggle {
+.hee-table-expander {
+  .hee-table-expander__toggle {
     @include nhsuk-responsive-margin(4, 'bottom');
     display: block;
     text-align: right;
   }
 
-  .hee-card--table__row {
+  .hee-table-expander__row {
     @include nhsuk-responsive-padding(3, 'top');
     @include nhsuk-responsive-padding(3, 'bottom');
     border-bottom: 2px solid $color_nhsuk-grey-4;
@@ -24,7 +24,7 @@
     }
   }
 
-  .hee-card--table__row__heading {
+  .hee-table-expander__row__heading {
     @include nhsuk-responsive-margin(2, 'bottom');
     font-weight: $nhsuk-font-bold;
   }
