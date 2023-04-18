@@ -1,7 +1,8 @@
-{% extends "example-template-rightbar.html" %}
+{% extends "example-template-fullwidth.html" %}
 
 {% block pageTitle %}Parent Site - Single menu - Opportunities{% endblock %}
 
+{% block pageClass %}page--fullwidth alpha-fullwidth{% endblock %}
 {% block pageHeaderClass %}{% endblock %}
 
 {% block breadcrumbs %}
@@ -86,70 +87,16 @@
 {% endblock %}
 
 {% block pageContent %}
+  <h2>Training and working in Mental Health</h2>
+  <p>These are just a few of the many roles that are available in mental health. There are many different ways to get involved in mental health.</p>
 
-{% endblock %}
-
-{% block pageRightbar %}
-  {{ relatedLinksCard({
-    heading: "Curabitur sit amet",
-    links: [
-      {
-        label: "Donec pulvinar",
-        url: "#"
-      },
-      {
-        label: "Duis consequat",
-        url: "#"
-      },
-      {
-        label: "Fusce at neque",
-        url: "#"
-      }
-    ]
-  })}}
-{% endblock %}
-
-{% block pageFeature %}
-  {% set items = [
-    {
-      title: "Blog/News Title",
-      href: "#",
-      details: [
-      {
-        label: "Publish date:",
-        value: "07 September 2022"
-      }
-    ],
-      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada."
-    },
-    {
-      title: "Blog/News Title",
-      href: "#",
-      details: [
-      {
-        label: "Publish date:",
-        value: "07 September 2022"
-      }
-    ],
-      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada."
-    },
-    {
-      title: "Blog/News Title",
-      href: "#",
-      details: [
-      {
-        label: "Publish date:",
-        value: "07 September 2022"
-      }
-    ],
-      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada."
-    }
-  ]
-  %}
-
-  <div class="nhsuk-width-container">
-    <h2>Related content</h2>
-    <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet. Nunc turpis vel aliquam lacus arcu. Sodales nullam id lectus orci quis sed. dsf</p>
-    {{ featuredContent(items) }}
-  </div>
+  <ul>
+    <li><strong>Psychiatrist.</strong> Psychiatrists are medical doctors who diagnose and treat mental disorders. They can prescribe medication and provide therapy.</li>
+    <li><strong>Psychologist.</strong> Psychologists are experts in human behaviour. They can provide talking therapies and counselling, and they can also conduct research on mental health.</li>
+    <li><strong>Social worker.</strong> Social workers help people with a variety of problems, including mental health issues. They can provide case management, counselling, and support groups.</li>
+    <li><strong>Mental Health Nurse.</strong> Nurses can work in a variety of settings, including hospitals, clinics, and schools. They can provide care to people with mental health problems, and they can also provide education and support.</li>
+    <li><strong>Counsellor.</strong> Mental health counsellors provide therapy and counselling to people with mental health problems. They can also provide support groups and educational programs.</li>
+    <li><strong>Crisis worker.</strong> Crisis workers help people who are in crisis, including people who are suicidal or who are experiencing mental health problems. They can provide support and counselling, and they can also help people connect with resources.</li>
+    <li><strong>Recovery coach.</strong> Recovery coaches help people who are recovering from mental health problems. They can provide support and guidance, and they can also help people connect with resources.</li>
+  </ul>
 {% endblock %}
