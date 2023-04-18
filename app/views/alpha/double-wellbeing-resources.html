@@ -1,9 +1,9 @@
 {% extends "example-template-fullwidth.html" %}
 
-{% block pageTitle %}Parent Site - Single menu - Wellbeing Resources{% endblock %}
+{% block pageTitle %}Parent Site - Double menu - Wellbeing Resources{% endblock %}
 
-{% block pageClass %}page--fullwidth alpha-fullwidth{% endblock %}
-{% block pageHeaderClass %}{% endblock %}
+{% block pageClass %}page--fullwidth alpha-fullwidth double-menu{% endblock %}
+{% block pageHeaderClass %}has-microhero{% endblock %}
 
 {% block breadcrumbs %}
   {{
@@ -30,16 +30,11 @@
 
 {% block header %}
   <div class="site-header">
-    {{ backToHomeBanner({
-      url: basePath + "/alpha/single-index.html",
-      title: "Back to Workforce, training and education"
-    }) }}
-
     {{ customHeader({
       "showNav": "false",
       "showSearch": "true",
       "showLogos": "false",
-      "heeHref": basePath + "/alpha/single-index.html",
+      "heeHref": basePath + "/alpha/double-index.html",
       "classes": "nhsuk-header--white",
       "organisation": {
         "name": "Workforce, Training and Education",
@@ -69,7 +64,7 @@
     })
     }}
 
-    {% include "alpha/_single-menu-psw.html" %}
+      {% include "alpha/_double-menu-main.html" %}
   </div>
 
   {{ phaseBanner({
@@ -79,6 +74,35 @@
 {% endblock %}
 
 {% block pageHeader %}
+  {{ microHero({
+    imgURL: basePath + "/images/alpha-resources-hero.jpg"
+  }) }}
+
+  {{ secondaryMenu({
+    items: [
+      {
+        title: "PSW",
+        url: basePath + "/alpha/double-psw.html"
+      },
+      {
+        title: "Wellbeing & psychological support",
+        url: basePath + "/alpha/double-wellbeing-support.html"
+      },
+      {
+        title: "Coaching support",
+        url: basePath + "#"
+      },
+      {
+        title: "Careers support",
+        url: basePath + "#"
+      },
+      {
+        title: "Study support",
+        url: basePath + "#"
+      }
+    ]
+  }) }}
+
   <div class="nhsuk-width-container">
     <h1>Wellbeing resources</h1>
     <span class="nhsuk-caption-xl">Professional Support and Wellbeing</span>

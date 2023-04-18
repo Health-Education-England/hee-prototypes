@@ -1,6 +1,6 @@
 {% extends "example-template-fullwidth.html" %}
 
-{% set page_title = 'Parent Site - Double menu - Get Involved' %}
+{% set page_title = 'Parent Site - Double menu - Professional Support and Wellbeing (PSW)' %}
 
 {% block pageClass %}page--fullwidth alpha-fullwidth double-menu{% endblock %}
 {% block pageHeaderClass %}has-microhero{% endblock %}
@@ -13,11 +13,11 @@
       items: [
         {
           href: basePath + "/",
-          text: "HEE"
+          text: "WTE"
         }
       ],
       href: basePath + "#",
-      text: "Healthcare topics"
+      text: "Support"
     })
   }}
 {% endblock %}
@@ -69,75 +69,48 @@
 
 {% block pageHeader %}
   {{ microHero({
-    imgURL: basePath + "/images/alpha-involved-hero.jpg"
+    imgURL: basePath + "/images/alpha-psw.jpg"
   }) }}
 
   {{ secondaryMenu({
     items: [
       {
-        title: "Mental health",
-        url: basePath + "/alpha/double-mental-health.html"
-      },
-      {
-        title: "Training and education",
-        url: basePath + "#"
-      },
-      {
-        title: "Evidence and resources",
-        url: basePath + "#"
-      },
-      {
         active: true,
-        title: "Get involved",
-        url: basePath + "/alpha/double-get-involved.html"
+        title: "PSW",
+        url: basePath + "/alpha/double-psw.html"
       },
       {
-        title: "Support",
+        title: "Wellbeing & psychological support",
+        url: basePath + "/alpha/double-wellbeing-support.html"
+      },
+      {
+        title: "Coaching support",
         url: basePath + "#"
       },
       {
-        title: "Mental Health Workforce",
+        title: "Careers support",
         url: basePath + "#"
       },
       {
-        title: "Our team",
+        title: "Study support",
         url: basePath + "#"
       }
     ]
   }) }}
 
   <div class="nhsuk-width-container">
-    <h1>Get involved</h1>
-    <span class="nhsuk-caption-xl">Mental Health</span>
+    <h1>Professional Support and Wellbeing (PSW)</h1>
+    <span class="nhsuk-caption-xl">Support</span>
+    <p class="nhsuk-lede-text">Workplace, Training and Education is committed to enabling all postgraduate medical and dental trainees to maximise the opportunities available to them throughout their training</p>
   </div>
 {% endblock %}
 
 {% block pageContent %}
-  {% set items = [
-    {
-      title: "Collaboration",
-      href: basePath + "#",
-      summary: "Pellentesque nibh lectus, tincidunt nec rutrum non, vulputate a null."
-    },
-    {
-      title: "Opportunities",
-      href: basePath + "/alpha/double-opportunity.html",
-      summary: "Pellentesque nibh lectus, tincidunt nec rutrum non, vulputate a null."
-    },
-    {
-      title: "Pathways",
-      href: basePath + "#",
-      summary: "Pellentesque nibh lectus, tincidunt nec rutrum non, vulputate a null."
-    },
-    {
-      title: "Roles",
-      href: basePath + "#",
-      summary: "Pellentesque nibh lectus, tincidunt nec rutrum non, vulputate a null."
-    }
-  ]
-  %}
-
-  <br>
-
-  {{ featuredContent(items) }}
+  <h2>How can Professional Support and Wellbeing help you?</h2>
+  <p>Professional Support and Wellbeing (PSW) can help you in a number of ways. First, they can provide you with support and guidance on how to manage your workload and stress levels. Second, they can help you to develop coping mechanisms for dealing with difficult situations. Third, they can connect you with resources and support networks that can help you to stay well. Finally, they can provide you with confidential advice and support if you are struggling with your mental health. </p>
+  <p>PSW can help you to:</p>
+  <ul>
+    <li><strong>Manage your workload and stress levels.</strong> PSW can help you to identify the sources of stress in your life and develop strategies for managing them. They can also help you to set realistic expectations for yourself and to prioritise your work.</li>
+    <li><strong>Connect with resources and support networks.</strong> PSW can connect you with resources and support networks that can help you to stay well. These resources may include things like counselling, support groups, or online resources.</li>
+  </ul>
 {% endblock %}

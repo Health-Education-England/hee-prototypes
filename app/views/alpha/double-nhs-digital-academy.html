@@ -1,6 +1,6 @@
 {% extends "example-template-fullwidth.html" %}
 
-{% set page_title = 'Parent Site - Double menu - Get Involved' %}
+{% set page_title = 'Parent Site - Double menu - NHS Digital Academy' %}
 
 {% block pageClass %}page--fullwidth alpha-fullwidth double-menu{% endblock %}
 {% block pageHeaderClass %}has-microhero{% endblock %}
@@ -12,12 +12,10 @@
     breadcrumb({
       items: [
         {
-          href: basePath + "/",
-          text: "HEE"
+          href: basePath + "/alpha/double-index.html",
+          text: "WTE"
         }
-      ],
-      href: basePath + "#",
-      text: "Healthcare topics"
+      ]
     })
   }}
 {% endblock %}
@@ -69,34 +67,30 @@
 
 {% block pageHeader %}
   {{ microHero({
-    imgURL: basePath + "/images/alpha-involved-hero.jpg"
+    imgURL: basePath + "/images/alpha-digital-hero.jpg"
   }) }}
 
   {{ secondaryMenu({
     items: [
       {
-        title: "Mental health",
-        url: basePath + "/alpha/double-mental-health.html"
-      },
-      {
-        title: "Training and education",
-        url: basePath + "#"
-      },
-      {
-        title: "Evidence and resources",
-        url: basePath + "#"
-      },
-      {
         active: true,
-        title: "Get involved",
-        url: basePath + "/alpha/double-get-involved.html"
+        title: "Digital Academy",
+        url: basePath + "/alpha/double-nhs-digital-academy.html"
+      },
+      {
+        title: "Training & Education",
+        url: basePath + "#"
+      },
+      {
+        title: "Evidence & resources",
+        url: basePath + "#"
       },
       {
         title: "Support",
         url: basePath + "#"
       },
       {
-        title: "Mental Health Workforce",
+        title: "Digital Workforce",
         url: basePath + "#"
       },
       {
@@ -107,37 +101,29 @@
   }) }}
 
   <div class="nhsuk-width-container">
-    <h1>Get involved</h1>
-    <span class="nhsuk-caption-xl">Mental Health</span>
+    <h1>Digital Academy</h1>
+    <span class="nhsuk-caption-xl">Training and Education</span>
+    <p class="nhsuk-lede-text">Welcome to the NHS Digital Academy. Here you will find all of the latest information regarding learning programmes and future plans.</p>
   </div>
 {% endblock %}
 
 {% block pageContent %}
-  {% set items = [
-    {
-      title: "Collaboration",
-      href: basePath + "#",
-      summary: "Pellentesque nibh lectus, tincidunt nec rutrum non, vulputate a null."
-    },
-    {
-      title: "Opportunities",
-      href: basePath + "/alpha/double-opportunity.html",
-      summary: "Pellentesque nibh lectus, tincidunt nec rutrum non, vulputate a null."
-    },
-    {
-      title: "Pathways",
-      href: basePath + "#",
-      summary: "Pellentesque nibh lectus, tincidunt nec rutrum non, vulputate a null."
-    },
-    {
-      title: "Roles",
-      href: basePath + "#",
-      summary: "Pellentesque nibh lectus, tincidunt nec rutrum non, vulputate a null."
-    }
-  ]
-  %}
+  <h2>What is the NHS Digital Academy?</h2>
+  <p>The NHS Digital Academy is a virtual organisation set up to develop a new generation of excellent digital leaders who can drive the information and technology transformation of the NHS.</p>
 
-  <br>
+  <p>The Academy offers a range of learning programmes, including:</p>
+  <ul>
+    <li><strong>Digital Leadership Programme:</strong> This is a year-long programme that equips leaders with the skills and knowledge they need to lead digital transformation in the NHS.</li>
+    <li><strong>Digital Acceleration Programme:</strong> This is a six-month programme that helps individuals develop the skills and knowledge they need to accelerate digital transformation in their organisations.</li>
+    <li><strong>Digital Skills Programme:</strong> This is a short course that provides individuals with the essential digital skills they need to work in the NHS.</li>
+  </ul>
 
-  {{ featuredContent(items) }}
+  <p>The Academy also offers a range of support services, including:</p>
+  <ul>
+    <li><strong>Mentoring:</strong> The Academy provides mentors to support individuals as they develop their digital skills and knowledge.</li>
+    <li><strong>Networking:</strong> The Academy provides opportunities for individuals to network with other digital leaders in the NHS.</li>
+    <li><strong>Research:</strong> The Academy conducts research into digital transformation in the NHS.</li>
+  </ul>
+
+  <p>The NHS Digital Academy is committed to developing the next generation of digital leaders who can drive the information and technology transformation of the NHS.</p>
 {% endblock %}
