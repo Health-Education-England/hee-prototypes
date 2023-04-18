@@ -2,6 +2,8 @@
 
 {% block pageTitle %}Parent Site - Single menu - News{% endblock %}
 
+{% block pageHeaderClass %}has-microhero{% endblock %}
+
 {% block breadcrumbs %}
   {{
     breadcrumb({
@@ -63,6 +65,10 @@
 {% endblock %}
 
 {% block pageHeader %}
+  {{ microHero({
+    imgURL: basePath + "/images/alpha-news-hero.jpg"
+  }) }}
+
   <div class="nhsuk-width-container">
     <h1>News</h1>
     <span class="nhsuk-caption-xl">Workforce, Training and Education</span>
