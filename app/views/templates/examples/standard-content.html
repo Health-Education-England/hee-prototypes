@@ -2,6 +2,8 @@
 
 {% block pageTitle %}Standard Content - Examples - NWP Prototype Kit{% endblock %}
 
+{% block pageHeaderClass %}has-microhero{% endblock %}
+
 {% block breadcrumbs %}
 {{ 
     breadcrumb({
@@ -18,20 +20,18 @@
 {% endblock %}
 
 {% block pageHeader %}
+  {{ microHero({
+    "imgURL":  basePath + "/images/young-child-using-tablet-device.jpg"
+  }) }}
   <div class="nhsuk-width-container">
     <h1>Standard Content</h1>
+    <span class="nhsuk-caption-xl">Caption</span>
     <p class="nhsuk-lede-text"></p>
   </div>
 {% endblock %}
 
 {% block pageContent %}
-<article>
-  <p>NHS library staff in England may copy and share extracts from most printed and digital work in the following ways.</p>
-  {{ reviewDate({
-    "lastReview": "12 February 2017",
-    "nextReview": "1 February 2020"
-  }) }}
-  
+  <p class="nhsuk-lede-text">Pulvinar id lorem tincidunt porttitor non commodo in eu massa. Eget tempor vel sollicitudin aliquam euismod. Scelerisque nisl, vel eros, nunc condimentum donec.</p>
   {{ anchorLinks({
     "title": "On this page",
     "headings": "h2,h3,h4,h5,h6"  
@@ -55,7 +55,7 @@
   }) }}
 
   {% set tabOneContent %}
-    <img src="/images/young-child-using-tablet-device.jpg" alt="" />
+    <img src="{{ basePath }}/images/young-child-using-tablet-device.jpg" alt="" />
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>        
   {% endset -%}
 
@@ -90,6 +90,11 @@
         }
       }
     ]
+  }) }}
+
+  {{ reviewDate({
+    "lastReview": "12 February 2017",
+    "nextReview": "1 February 2020"
   }) }}
 
 {% endblock %}
@@ -159,4 +164,72 @@
     })
   }}
 
+  {{ personCard({
+    title: "Dr",
+    name: "Bobby Smith",
+    initials: "BS",
+    pronouns: "They/them",
+    jobTitle: "Content Editor",
+    department: "National Website Platform",
+    organisation: "NHS UK",
+    workAddress: {
+      line1: "2 Stephenson St",
+      line2: "",
+      line3: "",
+      city: "Birmingham",
+      county: "West Midlands",
+      postcode: "B1 2SE"
+    },
+    image: "",
+    email: "bobby.smithandthelongestemail@hee.co.uk",
+    telephone: "01162344444",
+    website: "http://nhs.uk/",
+    twitter: "nhsengland",
+    linkedIn: "nhs"
+  }) }}
+{% endblock %}
+
+{% block pageFeature %}
+  {% set items = [
+    {
+      title: "Content Title",
+      href: "#",
+      details: [
+      {
+        label: "Publish date:",
+        value: "07 September 2022"
+      }
+    ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada."
+    },
+    {
+      title: "Content Title",
+      href: "#",
+      details: [
+      {
+        label: "Publish date:",
+        value: "07 September 2022"
+      }
+    ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada."
+    },
+    {
+      title: "Content Title",
+      href: "#",
+      details: [
+      {
+        label: "Publish date:",
+        value: "07 September 2022"
+      }
+    ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada."
+    }
+  ]
+  %}
+
+  <div class="nhsuk-width-container">
+    <h2>Related content</h2>
+    <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet. Nunc turpis vel aliquam lacus arcu. Sodales nullam id lectus orci quis sed. dsf</p>
+    {{ featuredContent(items) }}
+  </div>
 {% endblock %}
