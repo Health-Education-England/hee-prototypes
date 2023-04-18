@@ -42,7 +42,7 @@
 
   <ul class="hee-card__contact">
     {%- if params.telephone %}
-      <li class="hee-card__telephone hee-card__contact__item" aria-label="Telephone"><a href="tel:{{ params.telephone | safe }};">{{ params.telephone | safe }}</a></li>
+      <li class="hee-card__telephone hee-card__contact__item" aria-label="Telephone"><a href="tel:{{ params.telephone | safe }};" title="Opens call">{{ params.telephone | safe }}</a></li>
     {%- endif %}
 
     {%- if params.email %}
