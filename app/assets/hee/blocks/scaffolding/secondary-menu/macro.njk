@@ -1,0 +1,15 @@
+{% macro secondaryMenu(params) %}
+  <div class="hee-secondary-menu" role="menu">
+    <div class="nhsuk-width-container">
+      <ul class="hee-secondary-menu__list">
+        {% for item in params.items %}
+          <li class="hee-secondary-menu__item">
+            <a class="hee-secondary-menu__link {{ "is-active" if item.active }}" href="{{ item.url }}">
+              {{ item.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endmacro %}

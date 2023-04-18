@@ -1,0 +1,39 @@
+.hee-secondary-menu {
+  background-color: $color_nhsuk-white;
+  margin-bottom: nhsuk-spacing(7);
+
+  .hee-secondary-menu__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @include mq($from: desktop) {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+  }
+
+  .hee-secondary-menu__item {
+    margin-bottom: 0;
+  }
+
+  .hee-secondary-menu__link {
+    @include nhsuk-font(16);
+
+    @include mq($from: desktop) {
+      color: $color_nhsuk-grey-1;
+      border-bottom: 4px solid transparent;
+      border-top: 4px solid transparent;
+      display: flex;
+      flex-grow: 1;
+      justify-content: center;
+      padding: 12px 0;
+      text-decoration: none;
+    }
+
+    &.is-active {
+      border-bottom: 2px solid $color_nhsuk-blue;
+    }
+  }
+}

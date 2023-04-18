@@ -1,0 +1,117 @@
+{% extends "example-template-fullwidth.html" %}
+
+{% set page_title = 'Parent Site - Single menu - Mental Health' %}
+
+{% block pageClass %}page--fullwidth alpha-fullwidth double-menu{% endblock %}
+{% block pageHeaderClass %}has-microhero{% endblock %}
+
+{% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
+
+{% block breadcrumbs %}
+  {{
+    breadcrumb({
+      items: [
+        {
+          href: basePath + "/",
+          text: "HEE"
+        }
+      ],
+      href: basePath + "#",
+      text: "Healthcare topics"
+    })
+  }}
+{% endblock %}
+
+{% block header %}
+  <div class="site-header">
+    {{ customHeader({
+      "showNav": "false",
+      "showSearch": "true",
+      "showLogos": "false",
+      "heeHref": basePath + "/alpha/double-index.html",
+      "classes": "nhsuk-header--white",
+      "organisation": {
+        "name": "Health Education England",
+        "split": "",
+        "descriptor": "Dental Education Hub"
+      },
+      "logos": [
+        {
+          "href": "https://www.nimdta.gov.uk/",
+          "label": "Northern Ireland Medical and Dental Training Agency Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/nimdta-logo.png",
+          "imgAlt": "Logo for Northern Ireland Medical and Dental Training Agency"
+        },
+        {
+          "href": "https://www.nes.scot.nhs.uk/",
+          "label": "NHS Education for Scotland Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/nhs-scotland-logo.png",
+          "imgAlt": "Logo for NHS Education for Scotland"
+        },
+        {
+          "href": "https://heiw.nhs.wales/",
+          "label": "Health Education and Improvement Wales Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/heiw-logo.png",
+          "imgAlt": "Logo for Health Education and Improvement Wales"
+        }
+      ]
+    })
+    }}
+
+    {% include "alpha/_double-menu-main.html" %}
+  </div>
+
+  {{ phaseBanner({
+    tag: "Alpha",
+    description: 'This is a new service – your <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.'
+  }) }}
+{% endblock %}
+
+{% block pageHeader %}
+  {{ microHero({
+    imgURL: basePath + "/images/alpha-mental-hero.jpg"
+  }) }}
+
+  {{ secondaryMenu({
+    items: [
+      {
+        active: true,
+        title: "Mental health",
+        url: basePath + "/alpha/double-mental-health.html"
+      },
+      {
+        title: "Training and education",
+        url: basePath + "#"
+      },
+      {
+        title: "Evidence and resources",
+        url: basePath + "#"
+      },
+      {
+        title: "Get involved",
+        url: basePath + "#"
+      },
+      {
+        title: "Support",
+        url: basePath + "#"
+      },
+      {
+        title: "Mental Health Workforce",
+        url: basePath + "#"
+      },
+      {
+        title: "Our team",
+        url: basePath + "#"
+      }
+    ]
+  }) }}
+
+  <div class="nhsuk-width-container">
+    <h1>Mental Health</h1>
+    <span class="nhsuk-caption-xl">Healthcare Topics</span>
+  </div>
+{% endblock %}
+
+{% block pageContent %}
+
+{% endblock %}
