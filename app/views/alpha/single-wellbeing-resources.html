@@ -1,7 +1,8 @@
-{% extends "example-template-rightbar.html" %}
+{% extends "example-template-fullwidth.html" %}
 
 {% block pageTitle %}Parent Site - Single menu - Wellbeing Resources{% endblock %}
 
+{% block pageClass %}page--fullwidth alpha-fullwidth{% endblock %}
 {% block pageHeaderClass %}{% endblock %}
 
 {% block breadcrumbs %}
@@ -86,70 +87,26 @@
 {% endblock %}
 
 {% block pageContent %}
+  {{ warningCallout({
+    heading: "NHS Staff Support Line",
+    HTML: "<p>A free helpline is available to all NHS staff in England. Trained professionals can give you advice on coaching, bereavement care, mental health and financial help. Support via text is also available to doctors any time of day.</p>"
+  }) }}
 
-{% endblock %}
+  <h2>Different types of support</h2>
+  <p>NHS staff have been given free access to a number of wellbeing apps to support with their mental health and wellbeing. Click each link below for more information, including how to access support and when this free offer expires.</p>
+  <p><strong>Accessing Support</strong><br>A referral must first be made to the PSW service by the doctor or dentist in training themselves (via self-referral) or via the doctors Supervisor, Training Programme Director or Head of School.</p>
+  <p><strong>Neurodiversity Assessment</strong><br>The PSW service supports doctors in training to recognise if they may have any neurodiversity condition which may be impacting on areas of their training and provides coping strategies to overcome these and give them the best chance to succeed.</p>
+  <p><strong>Access to work</strong><br>Access to work is a government funded scheme and forms an important part of supporting your learning needs, helping you to achieve your full potential throughout your training and will fund important IT equipment and other individual requirements.</p>
+  <p><strong>Return to training</strong><br>SuppoRTT applies to doctors in training who have been out of training for a period of 3 months or more for example due to: a gap in training, parental leave, sick leave/phased return or OOP (Out of Programme).</p>
 
-{% block pageRightbar %}
-  {{ relatedLinksCard({
-    heading: "Curabitur sit amet",
-    links: [
-      {
-        label: "Donec pulvinar",
-        url: "#"
-      },
-      {
-        label: "Duis consequat",
-        url: "#"
-      },
-      {
-        label: "Fusce at neque",
-        url: "#"
-      }
-    ]
-  })}}
-{% endblock %}
+  <p>SuppoRTT can offer, for example:</p>
+  <ul>
+    <li>A period of enhanced supervision</li>
+    <li>Refresher courses and simulation training</li>
+    <li>Mentoring or professional coaching</li>
+    <li>Conferences and workshops</li>
+    <li>Funding for other courses or development, as individually required.</li>
+  </ul>
 
-{% block pageFeature %}
-  {% set items = [
-    {
-      title: "Blog/News Title",
-      href: "#",
-      details: [
-      {
-        label: "Publish date:",
-        value: "07 September 2022"
-      }
-    ],
-      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada."
-    },
-    {
-      title: "Blog/News Title",
-      href: "#",
-      details: [
-      {
-        label: "Publish date:",
-        value: "07 September 2022"
-      }
-    ],
-      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada."
-    },
-    {
-      title: "Blog/News Title",
-      href: "#",
-      details: [
-      {
-        label: "Publish date:",
-        value: "07 September 2022"
-      }
-    ],
-      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada."
-    }
-  ]
-  %}
-
-  <div class="nhsuk-width-container">
-    <h2>Related content</h2>
-    <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet. Nunc turpis vel aliquam lacus arcu. Sodales nullam id lectus orci quis sed. dsf</p>
-    {{ featuredContent(items) }}
-  </div>
+  <p><strong>Support with Disabilities</strong><br>We fully recognise that the majority of doctors in training with long-term health conditions, quite reasonably will not consider themselves as being disabled. Indeed, some doctors in training will have episodes of short-lived symptoms which may need temporary short-term adjustments. The support process however is available to all who have health conditions which might impact on their training so whether you have a long-term condition or a short term illness that might require some temporary adjustments, we want you to know that we are committed to assist you if we can.</p>
 {% endblock %}
