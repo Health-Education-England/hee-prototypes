@@ -1,0 +1,166 @@
+{% extends "example-template-leftbar.html" %}
+
+{% block pageTitle %}Parent Site - Double menu - News{% endblock %}
+
+{% block breadcrumbs %}
+  {{
+    breadcrumb({
+      items: [
+          {
+              href: basePath + "/alpha/double-index.html",
+              text: "WTE"
+          }
+      ],
+      href: "#",
+      text: "About us"
+    })
+  }}
+{% endblock %}
+
+{% block header %}
+  <div class="site-header">
+    {{ customHeader({
+      "showNav": "false",
+      "showSearch": "true",
+      "showLogos": "false",
+      "heeHref": basePath + "/alpha/double-index.html",
+      "classes": "nhsuk-header--white",
+      "organisation": {
+        "name": "Health Education England",
+        "split": "",
+        "descriptor": "Dental Education Hub"
+      },
+      "logos": [
+        {
+          "href": "https://www.nimdta.gov.uk/",
+          "label": "Northern Ireland Medical and Dental Training Agency Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/nimdta-logo.png",
+          "imgAlt": "Logo for Northern Ireland Medical and Dental Training Agency"
+        },
+        {
+          "href": "https://www.nes.scot.nhs.uk/",
+          "label": "NHS Education for Scotland Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/nhs-scotland-logo.png",
+          "imgAlt": "Logo for NHS Education for Scotland"
+        },
+        {
+          "href": "https://heiw.nhs.wales/",
+          "label": "Health Education and Improvement Wales Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/heiw-logo.png",
+          "imgAlt": "Logo for Health Education and Improvement Wales"
+        }
+      ]
+    })
+    }}
+
+    {% include "alpha/_double-menu-main.html" %}
+  </div>
+
+  {{ phaseBanner({
+    tag: "Alpha",
+    description: 'This is a new service – your <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.'
+  }) }}
+{% endblock %}
+
+{% block pageHeader %}
+  <div class="nhsuk-width-container">
+    <h1>News</h1>
+    <span class="nhsuk-caption-xl">Workforce, Training and Education</span>
+    <p class="nhsuk-lede-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum sit sed porta viverra. Amet, tincidunt cras augue justo, proin mollis sapien. Sed cursus quam suspendisse.</p>
+  </div>
+{% endblock %}
+
+{% block pageLeftbar %}
+  {{ filter({
+    groups: [
+      {
+        title: "Category",
+        showClearToggle: true,
+        items: [
+        {
+          text: "Item one",
+          value: "item_one",
+          checked: true
+        },
+        {
+          text: "Item two",
+          value: "item_two",
+          checked: true
+        }
+      ]
+      },
+      {
+        title: "Organisation",
+        items: [
+        {
+          text: "Item one",
+          value: "item_one"
+        },
+        {
+          text: "Item two",
+          value: "item_two"
+        },
+        {
+          text: "Item three",
+          value: "item_three"
+        }
+      ]
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block pageContent %}
+  {% set selectAttributes = {
+    id: "sort",
+    name: "sort",
+    label: {
+      text: "Sort by"
+    },
+    items: [
+      {
+        value: "newest",
+        text: "Newest"
+      },
+      {
+        value: "relevance",
+        text: "Relevance"
+      }
+    ]
+  } %}
+
+  {% set submitAttributes = {
+    text: "Update",
+    classes: "hee-listing__filter__submit"
+  } %}
+
+  {% set items = [] %}
+  {% for i in range(0, 10) -%}
+    {% set item = {
+      title: "News item #" + loop.index,
+      href: "#",
+      details: [
+        {
+          label: "News type:",
+          value: "Briefing"
+        },
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+    } %}
+    {% set items = (items.push(item), items) %}
+  {% endfor %}
+
+  {{ listingLayout({
+    filter: {
+      select: selectAttributes,
+      submit: submitAttributes
+    },
+    results: items,
+    emptyMessage: "No results",
+    showPagination: true
+  }) }}
+{% endblock %}
