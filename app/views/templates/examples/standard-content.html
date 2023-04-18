@@ -2,8 +2,6 @@
 
 {% block pageTitle %}Standard Content - Examples - NWP Prototype Kit{% endblock %}
 
-{% block pageHeaderClass %}has-microhero{% endblock %}
-
 {% block breadcrumbs %}
 {{ 
     breadcrumb({
@@ -20,9 +18,6 @@
 {% endblock %}
 
 {% block pageHeader %}
-  {{ microHero({
-    "imgURL":  basePath + "/images/young-child-using-tablet-device.jpg"
-  }) }}
   <div class="nhsuk-width-container">
     <h1>Standard Content</h1>
     <span class="nhsuk-caption-xl">Caption</span>
@@ -100,70 +95,6 @@
 {% endblock %}
 
 {% block pageRightbar %}
-
-  {#{ imageCard({
-      "imgURL" : "/images/placeholders/dental-region-map.png",
-      "imgALT" : "Dental region map",
-      "imgCaption" : "Yorkshire and Humber region"
-    }) 
-  }#}
-
-  {{ relatedNav({
-      "heading": "Quick Links",
-      "subsections": [{
-        "links": [
-          {
-            "url"  : "#",
-            "label" : "Briefing for library staff on Library and inter-library document supply and copyright in the NHS"
-          },
-          {
-            "url" : "#",
-            "label" : "Decision Tree"
-          },
-          {
-            "url" : "#",
-            "label" : "NHS-HE crossover copyright queries: guidance for higher education and NHS Library staff"
-          },
-          {
-            "url"  : "#",
-            "label" : "CILIP Copyright Hub"
-          },
-          {
-            "url"  : "#",
-            "label" : "NHS Copy Aid"
-          }
-        ]
-      }]
-    })
-  }}
-
-  {{ relatedLinksCard({
-      "heading": "Related Posts",
-      "links": [
-        {
-          "url"  : "#",
-          "label" : "Expert searching"
-        },
-        {
-          "url"  : "#",
-          "label" : "Search training as a longer title"
-        },
-        {
-          "url" : "#",
-          "label" : "Search bank"
-        },
-        {
-          "url" : "#",
-          "label" : "Costing"
-        },
-        {
-          "url"  : "#",
-          "label" : "Search training"
-        }
-      ]
-    })
-  }}
-
   {{ personCard({
     title: "Dr",
     name: "Bobby Smith",
