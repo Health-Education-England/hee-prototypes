@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Training Journey - Templates - NWP Prototype Kit</title>
+  <title>Table Expander - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -60,9 +60,9 @@
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks">Blocks</a></li>
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/content">Content</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/main-training-journey">Training Journey</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/main-table-expander">Table Expander</a></li>
         </ol>
-        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/main-training-journey">Back to Training Journey</a></p>
+        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/main-table-expander">Back to Table Expander</a></p>
       </div>
     </nav>
   </div>
@@ -121,147 +121,179 @@
         <div class="page__main">
           <div class="page__header">
             <span class="nhsuk-caption-xl">Main</span>
-            <h1>Training Journey</h1>
+            <h1>Table Expander</h1>
             <p class="nhsuk-lede-text"></p>
           </div>
-          <p>A visual representation of a training programme's journey, providing site visitors with a clear understanding of the programme pathway to completion.</p>
+          <p>Provides a simple single column display of content within a group of expanders.</p>
           <h3>Example</h3>
           <div class="prototype__example block">
-            <a href="/hee-prototypes/blocks/content/examples/main-training-journey.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
+            <a href="/hee-prototypes/blocks/content/examples/main-table-expander.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
             <div class="thumbnail">
-              <iframe src="/hee-prototypes/blocks/content/examples/main-training-journey.html" height="620"></iframe>
+              <iframe src="/hee-prototypes/blocks/content/examples/main-table-expander.html" height="620"></iframe>
             </div>
           </div>
           <hr />
           <h3>Macro</h3>
           <pre><code>
-  {% set params = {
-    title: &quot;Your training journey&quot;,
-    groups: [
+{{ tableExpander({
+    items: [
       {
-        name: &quot;Prerequisites&quot;,
-        items: [
+        title: &quot;First item&quot;,
+        rows: [
           {
-            label: &quot;Foundation Surgery&quot;,
-            url: &quot;https://www.abc123.com&quot;
+            heading: &quot;Defence Medical Services (DMS)&quot;,
+            content: &quot;1&quot;
           },
           {
-            label: &quot;F2 Standalone Surgery&quot;,
-            url: &quot;https://www.abc123.com&quot;
+            heading: &quot;No of Posts 2013 - indicitive&quot;,
+            content: &quot;7&quot;
           },
           {
-            label: &quot;Core surgery&quot;,
-            url: &quot;https://www.abc123.com&quot;
+            heading: &quot;Competition ratios 2022 data - Ratio&quot;,
+            content: &quot;6 (6:37)&quot;
+          },
+          {
+            heading: &quot;Job/Programme Descriptions&quot;,
+            content: &quot;Kent, Surrey and Sussex&quot;,
+            href: &quot;http://www.yahoo.com&quot;
           }
         ]
       },
       {
-        name: &quot;Optional routes&quot;,
-        items: [
+        title: &quot;Second item&quot;,
+        rows: [
           {
-            label: &quot;Cardiothoracic Surgery&quot;,
-            url: &quot;https://www.abc123.com&quot;
+            heading: &quot;Defence Medical Services (DMS)&quot;,
+            content: &quot;1&quot;
           },
           {
-            label: &quot;General Surgery&quot;,
-            url: &quot;https://www.abc123.com&quot;
+            heading: &quot;No of Posts 2013 - indicitive&quot;,
+            content: &quot;7&quot;
           },
           {
-            label: &quot;Neurosurgery&quot;,
-            url: &quot;https://www.abc123.com&quot;
+            heading: &quot;Competition ratios 2022 data - Ratio&quot;,
+            content: &quot;6 (6:37)&quot;
           },
           {
-            active: true,
-            label: &quot;Oral &amp; Maxillofacial Surgery&quot;,
-            url: &quot;https://www.abc123.com&quot;
+            heading: &quot;Job/Programme Descriptions&quot;,
+            content: &quot;Kent, Surrey and Sussex&quot;,
+            href: &quot;http://www.yahoo.com&quot;
+          }
+        ]
+      },
+      {
+        title: &quot;Third item&quot;,
+        rows: [
+          {
+            heading: &quot;Defence Medical Services (DMS)&quot;,
+            content: &quot;1&quot;
           },
           {
-            label: &quot;Otolaryngology Surgery&quot;,
-            url: &quot;https://www.abc123.com&quot;
+            heading: &quot;No of Posts 2013 - indicitive&quot;,
+            content: &quot;7&quot;
           },
           {
-            label: &quot;Paediatric Surgery &quot;,
-            url: &quot;https://www.abc123.com&quot;
+            heading: &quot;Competition ratios 2022 data - Ratio&quot;,
+            content: &quot;6 (6:37)&quot;
           },
           {
-            label: &quot;Plastic Surgery&quot;,
-            url: &quot;https://www.abc123.com&quot;
-          },
-          {
-            label: &quot;Trauma &amp; Orthopaedics&quot;,
-            url: &quot;https://www.abc123.com&quot;
-          },
-          {
-            label: &quot;Urology&quot;,
-            url: &quot;https://www.abc123.com&quot;
-          },
-          {
-            label: &quot;Vascular Surgery&quot;,
-            url: &quot;https://www.abc123.com&quot;
+            heading: &quot;Job/Programme Descriptions&quot;,
+            content: &quot;Kent, Surrey and Sussex&quot;,
+            href: &quot;http://www.yahoo.com&quot;
           }
         ]
       }
     ]
-  } %}
-
-  {{ trainingJourney(params) }}
+}) }}
   </code></pre>
           <hr />
           <h3>HTML</h3>
-          <pre><code>
-&lt;div class=&quot;hee-training-journey&quot;&gt;
-    &lt;h3&gt;Your training journey&lt;/h3&gt;
-    &lt;div class=&quot;hee-training-journey__group&quot;&gt;
-      &lt;h4&gt;Prerequisites&lt;/h4&gt;
-      &lt;div class=&quot;hee-training-journey__group__container&quot;&gt;
-        &lt;div class=&quot;hee-training-journey__item first  &quot;&gt;
-          &lt;a class=&quot;hee-training-journey__item__link&quot; href=&quot;https://www.abc123.com&quot;&gt;Foundation Surgery&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;hee-training-journey__item   &quot;&gt;
-          &lt;a class=&quot;hee-training-journey__item__link&quot; href=&quot;https://www.abc123.com&quot;&gt;F2 Standalone Surgery&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;hee-training-journey__item  last &quot;&gt;
-          &lt;a class=&quot;hee-training-journey__item__link&quot; href=&quot;https://www.abc123.com&quot;&gt;Core surgery&lt;/a&gt;
+          <pre><code>&lt;div class=&quot;hee-table-expander&quot;&gt;
+    &lt;div class=&quot;hee-table-expander__toggle&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;Expand all&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;details class=&quot;nhsuk-details nhsuk-expander&quot; nhsuk-polyfilled=&quot;true&quot; id=&quot;nhsuk-details0&quot;&gt;
+      &lt;summary class=&quot;nhsuk-details__summary&quot; role=&quot;button&quot; aria-controls=&quot;nhsuk-details__text0&quot; tabindex=&quot;0&quot; aria-expanded=&quot;false&quot;&gt;
+        &lt;span class=&quot;nhsuk-details__summary-text&quot;&gt; First item &lt;/span&gt;
+      &lt;/summary&gt;
+      &lt;div class=&quot;nhsuk-details__text&quot; id=&quot;nhsuk-details__text0&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;div aria-rowcount=&quot;3&quot; class=&quot;hee-table-expander__container&quot; role=&quot;table&quot;&gt;
+          &lt;div class=&quot;hee-table-expander__row&quot; role=&quot;row&quot;&gt;
+            &lt;span class=&quot;hee-table-expander__row__heading&quot; role=&quot;cell&quot;&gt;Defence Medical Services (DMS)&lt;/span&gt;
+            &lt;span class=&quot;hee-table-expander__row__content&quot; role=&quot;cell&quot;&gt; 1 &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;hee-table-expander__row&quot; role=&quot;row&quot;&gt;
+            &lt;span class=&quot;hee-table-expander__row__heading&quot; role=&quot;cell&quot;&gt;No of Posts 2013 - indicitive&lt;/span&gt;
+            &lt;span class=&quot;hee-table-expander__row__content&quot; role=&quot;cell&quot;&gt; 7 &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;hee-table-expander__row&quot; role=&quot;row&quot;&gt;
+            &lt;span class=&quot;hee-table-expander__row__heading&quot; role=&quot;cell&quot;&gt;Competition ratios 2022 data - Ratio&lt;/span&gt;
+            &lt;span class=&quot;hee-table-expander__row__content&quot; role=&quot;cell&quot;&gt; 6 (6:37) &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;hee-table-expander__row&quot; role=&quot;row&quot;&gt;
+            &lt;span class=&quot;hee-table-expander__row__heading&quot; role=&quot;cell&quot;&gt;Job/Programme Descriptions&lt;/span&gt;
+            &lt;span class=&quot;hee-table-expander__row__content&quot; role=&quot;cell&quot;&gt;
+              &lt;a href=&quot;http://www.yahoo.com&quot;&gt; Kent, Surrey and Sussex &lt;/a&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;hee-training-journey__group&quot;&gt;
-      &lt;h4&gt;Optional routes&lt;/h4&gt;
-      &lt;div class=&quot;hee-training-journey__group__container&quot;&gt;
-        &lt;div class=&quot;hee-training-journey__item first  &quot;&gt;
-          &lt;a class=&quot;hee-training-journey__item__link&quot; href=&quot;https://www.abc123.com&quot;&gt;Cardiothoracic Surgery&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;hee-training-journey__item   &quot;&gt;
-          &lt;a class=&quot;hee-training-journey__item__link&quot; href=&quot;https://www.abc123.com&quot;&gt;General Surgery&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;hee-training-journey__item   &quot;&gt;
-          &lt;a class=&quot;hee-training-journey__item__link&quot; href=&quot;https://www.abc123.com&quot;&gt;Neurosurgery&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;hee-training-journey__item   active&quot;&gt;
-          &lt;span&gt;You are here&lt;/span&gt;
-          &lt;a class=&quot;hee-training-journey__item__link&quot; href=&quot;https://www.abc123.com&quot;&gt;Oral &amp;amp; Maxillofacial Surgery&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;hee-training-journey__item   &quot;&gt;
-          &lt;a class=&quot;hee-training-journey__item__link&quot; href=&quot;https://www.abc123.com&quot;&gt;Otolaryngology Surgery&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;hee-training-journey__item   &quot;&gt;
-          &lt;a class=&quot;hee-training-journey__item__link&quot; href=&quot;https://www.abc123.com&quot;&gt;Paediatric Surgery &lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;hee-training-journey__item   &quot;&gt;
-          &lt;a class=&quot;hee-training-journey__item__link&quot; href=&quot;https://www.abc123.com&quot;&gt;Plastic Surgery&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;hee-training-journey__item   &quot;&gt;
-          &lt;a class=&quot;hee-training-journey__item__link&quot; href=&quot;https://www.abc123.com&quot;&gt;Trauma &amp;amp; Orthopaedics&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;hee-training-journey__item   &quot;&gt;
-          &lt;a class=&quot;hee-training-journey__item__link&quot; href=&quot;https://www.abc123.com&quot;&gt;Urology&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;hee-training-journey__item  last &quot;&gt;
-          &lt;a class=&quot;hee-training-journey__item__link&quot; href=&quot;https://www.abc123.com&quot;&gt;Vascular Surgery&lt;/a&gt;
+    &lt;/details&gt;
+    &lt;details class=&quot;nhsuk-details nhsuk-expander&quot; nhsuk-polyfilled=&quot;true&quot; id=&quot;nhsuk-details1&quot;&gt;
+      &lt;summary class=&quot;nhsuk-details__summary&quot; role=&quot;button&quot; aria-controls=&quot;nhsuk-details__text1&quot; tabindex=&quot;0&quot; aria-expanded=&quot;false&quot;&gt;
+        &lt;span class=&quot;nhsuk-details__summary-text&quot;&gt; Second item &lt;/span&gt;
+      &lt;/summary&gt;
+      &lt;div class=&quot;nhsuk-details__text&quot; id=&quot;nhsuk-details__text1&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;div aria-rowcount=&quot;3&quot; class=&quot;hee-table-expander__container&quot; role=&quot;table&quot;&gt;
+          &lt;div class=&quot;hee-table-expander__row&quot; role=&quot;row&quot;&gt;
+            &lt;span class=&quot;hee-table-expander__row__heading&quot; role=&quot;cell&quot;&gt;Defence Medical Services (DMS)&lt;/span&gt;
+            &lt;span class=&quot;hee-table-expander__row__content&quot; role=&quot;cell&quot;&gt; 1 &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;hee-table-expander__row&quot; role=&quot;row&quot;&gt;
+            &lt;span class=&quot;hee-table-expander__row__heading&quot; role=&quot;cell&quot;&gt;No of Posts 2013 - indicitive&lt;/span&gt;
+            &lt;span class=&quot;hee-table-expander__row__content&quot; role=&quot;cell&quot;&gt; 7 &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;hee-table-expander__row&quot; role=&quot;row&quot;&gt;
+            &lt;span class=&quot;hee-table-expander__row__heading&quot; role=&quot;cell&quot;&gt;Competition ratios 2022 data - Ratio&lt;/span&gt;
+            &lt;span class=&quot;hee-table-expander__row__content&quot; role=&quot;cell&quot;&gt; 6 (6:37) &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;hee-table-expander__row&quot; role=&quot;row&quot;&gt;
+            &lt;span class=&quot;hee-table-expander__row__heading&quot; role=&quot;cell&quot;&gt;Job/Programme Descriptions&lt;/span&gt;
+            &lt;span class=&quot;hee-table-expander__row__content&quot; role=&quot;cell&quot;&gt;
+              &lt;a href=&quot;http://www.yahoo.com&quot;&gt; Kent, Surrey and Sussex &lt;/a&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+    &lt;/details&gt;
+    &lt;details class=&quot;nhsuk-details nhsuk-expander&quot; nhsuk-polyfilled=&quot;true&quot; id=&quot;nhsuk-details2&quot;&gt;
+      &lt;summary class=&quot;nhsuk-details__summary&quot; role=&quot;button&quot; aria-controls=&quot;nhsuk-details__text2&quot; tabindex=&quot;0&quot; aria-expanded=&quot;false&quot;&gt;
+        &lt;span class=&quot;nhsuk-details__summary-text&quot;&gt; Third item &lt;/span&gt;
+      &lt;/summary&gt;
+      &lt;div class=&quot;nhsuk-details__text&quot; id=&quot;nhsuk-details__text2&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;div aria-rowcount=&quot;3&quot; class=&quot;hee-table-expander__container&quot; role=&quot;table&quot;&gt;
+          &lt;div class=&quot;hee-table-expander__row&quot; role=&quot;row&quot;&gt;
+            &lt;span class=&quot;hee-table-expander__row__heading&quot; role=&quot;cell&quot;&gt;Defence Medical Services (DMS)&lt;/span&gt;
+            &lt;span class=&quot;hee-table-expander__row__content&quot; role=&quot;cell&quot;&gt; 1 &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;hee-table-expander__row&quot; role=&quot;row&quot;&gt;
+            &lt;span class=&quot;hee-table-expander__row__heading&quot; role=&quot;cell&quot;&gt;No of Posts 2013 - indicitive&lt;/span&gt;
+            &lt;span class=&quot;hee-table-expander__row__content&quot; role=&quot;cell&quot;&gt; 7 &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;hee-table-expander__row&quot; role=&quot;row&quot;&gt;
+            &lt;span class=&quot;hee-table-expander__row__heading&quot; role=&quot;cell&quot;&gt;Competition ratios 2022 data - Ratio&lt;/span&gt;
+            &lt;span class=&quot;hee-table-expander__row__content&quot; role=&quot;cell&quot;&gt; 6 (6:37) &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;hee-table-expander__row&quot; role=&quot;row&quot;&gt;
+            &lt;span class=&quot;hee-table-expander__row__heading&quot; role=&quot;cell&quot;&gt;Job/Programme Descriptions&lt;/span&gt;
+            &lt;span class=&quot;hee-table-expander__row__content&quot; role=&quot;cell&quot;&gt;
+              &lt;a href=&quot;http://www.yahoo.com&quot;&gt; Kent, Surrey and Sussex &lt;/a&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/details&gt;
+  &lt;/div&gt;
   </code></pre>
         </div>
       </div>
