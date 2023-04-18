@@ -1,6 +1,6 @@
 {% extends "example-template-fullwidth.html" %}
 
-{% set page_title = 'Parent Site - Double menu - Mental Health' %}
+{% set page_title = 'Parent Site - Double menu - Get Involved' %}
 
 {% block pageClass %}page--fullwidth alpha-fullwidth double-menu{% endblock %}
 {% block pageHeaderClass %}has-microhero{% endblock %}
@@ -69,13 +69,12 @@
 
 {% block pageHeader %}
   {{ microHero({
-    imgURL: basePath + "/images/alpha-mental-hero.jpg"
+    imgURL: basePath + "/images/alpha-involved-hero.jpg"
   }) }}
 
   {{ secondaryMenu({
     items: [
       {
-        active: true,
         title: "Mental health",
         url: basePath + "/alpha/double-mental-health.html"
       },
@@ -88,6 +87,7 @@
         url: basePath + "#"
       },
       {
+        active: true,
         title: "Get involved",
         url: basePath + "/alpha/double-get-involved.html"
       },
@@ -107,11 +107,37 @@
   }) }}
 
   <div class="nhsuk-width-container">
-    <h1>Mental Health</h1>
-    <span class="nhsuk-caption-xl">Healthcare Topics</span>
+    <h1>Get involved</h1>
+    <span class="nhsuk-caption-xl">Mental Health</span>
   </div>
 {% endblock %}
 
 {% block pageContent %}
+  {% set items = [
+    {
+      title: "Collaboration",
+      href: basePath + "#",
+      summary: "Pellentesque nibh lectus, tincidunt nec rutrum non, vulputate a null."
+    },
+    {
+      title: "Opportunities",
+      href: basePath + "/alpha/double-opportunity.html",
+      summary: "Pellentesque nibh lectus, tincidunt nec rutrum non, vulputate a null."
+    },
+    {
+      title: "Pathways",
+      href: basePath + "#",
+      summary: "Pellentesque nibh lectus, tincidunt nec rutrum non, vulputate a null."
+    },
+    {
+      title: "Roles",
+      href: basePath + "#",
+      summary: "Pellentesque nibh lectus, tincidunt nec rutrum non, vulputate a null."
+    }
+  ]
+  %}
 
+  <br>
+
+  {{ featuredContent(items) }}
 {% endblock %}

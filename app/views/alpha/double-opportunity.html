@@ -1,6 +1,6 @@
 {% extends "example-template-fullwidth.html" %}
 
-{% set page_title = 'Parent Site - Double menu - Mental Health' %}
+{% set page_title = 'Parent Site - Double menu - Opportunities' %}
 
 {% block pageClass %}page--fullwidth alpha-fullwidth double-menu{% endblock %}
 {% block pageHeaderClass %}has-microhero{% endblock %}
@@ -14,10 +14,14 @@
         {
           href: basePath + "/",
           text: "HEE"
+        },
+        {
+          href: basePath + "#",
+          text: "Healthcare topics"
         }
       ],
-      href: basePath + "#",
-      text: "Healthcare topics"
+      href: basePath + "/alpha/double-mental-health.html",
+      text: "Mental Health"
     })
   }}
 {% endblock %}
@@ -69,13 +73,12 @@
 
 {% block pageHeader %}
   {{ microHero({
-    imgURL: basePath + "/images/alpha-mental-hero.jpg"
+    imgURL: basePath + "/images/alpha-opportunity-hero.jpg"
   }) }}
 
   {{ secondaryMenu({
     items: [
       {
-        active: true,
         title: "Mental health",
         url: basePath + "/alpha/double-mental-health.html"
       },
@@ -88,6 +91,7 @@
         url: basePath + "#"
       },
       {
+        active: true,
         title: "Get involved",
         url: basePath + "/alpha/double-get-involved.html"
       },
@@ -107,8 +111,8 @@
   }) }}
 
   <div class="nhsuk-width-container">
-    <h1>Mental Health</h1>
-    <span class="nhsuk-caption-xl">Healthcare Topics</span>
+    <h1>Opportunities</h1>
+    <span class="nhsuk-caption-xl">Mental Health</span>
   </div>
 {% endblock %}
 
