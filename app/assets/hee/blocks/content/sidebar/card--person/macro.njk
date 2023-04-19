@@ -47,7 +47,7 @@
         </h2>
 
         {% if params.pronouns %}
-          <span class="hee-card__pronouns">{{ params.pronouns | safe }}</span>
+          <span class="hee-card__pronouns" aria-label="Pronouns">{{ params.pronouns | safe }}</span>
         {% endif %}
 
         {%- if params.jobTitle %}
@@ -66,23 +66,23 @@
 
     <ul class="hee-card__contact">
       {%- if params.telephone %}
-        <li class="hee-card__telephone hee-card__contact__item" aria-label="Telephone"><a href="tel:{{ params.telephone | safe }};">{{ params.telephone | safe }}</a></li>
+        <li class="hee-card__telephone hee-card__contact__item" aria-label="Telephone"><a href="tel:{{ params.telephone | safe }};" title="Opens telephone">{{ params.telephone | safe }}</a></li>
       {%- endif %}
 
       {%- if params.email %}
-        <li class="hee-card__email hee-card__contact__item" aria-label="Email"><a href="mailto:{{ params.email | safe }};">{{ params.email | safe }}</a></li>
+        <li class="hee-card__email hee-card__contact__item" aria-label="Email"><a href="mailto:{{ params.email | safe }};" title="Opens email">{{ params.email | safe }}</a></li>
       {%- endif %}
 
       {%- if params.website %}
-        <li class="hee-card__website hee-card__contact__item" aria-label="Website"><a href="{{ params.website | safe }}">{{ params.website | safe }}</a></li>
+        <li class="hee-card__website hee-card__contact__item" aria-label="Website"><a href="{{ params.website | safe }}" title="Opens website">{{ params.website | safe }}</a></li>
       {%- endif %}
 
       {%- if params.linkedin %}
-        <li class="hee-card__linkedin hee-card__contact__item" aria-label="Linkedin"><a href="https://www.linkedin.com/company/{{ params.linkedin | safe }}">{{ params.linkedin | safe }}</a></li>
+        <li class="hee-card__linkedin hee-card__contact__item" aria-label="Linkedin"><a href="https://www.linkedin.com/company/{{ params.linkedin | safe }}" title="Opens linkedin">{{ params.linkedin | safe }}</a></li>
       {%- endif %}
 
       {%- if params.twitter %}
-        <li class="hee-card__twitter hee-card__contact__item" aria-label="Twitter"><a href="https://twitter.com/{{ params.twitter | safe }}">@{{ params.twitter | safe }}</a></li>
+        <li class="hee-card__twitter hee-card__contact__item" aria-label="Twitter"><a href="https://twitter.com/{{ params.twitter | safe }}" title="Opens twitter">@{{ params.twitter | safe }}</a></li>
       {%- endif %}
     </ul>
 
