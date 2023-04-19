@@ -9,7 +9,7 @@
 
 {% block pageHeaderClass %}has-nhsukhero{% endblock %}
 
-{% block pageBreadcrumbs %}
+{% block breadcrumbs %}
   {{
     breadcrumb({
       items: [
@@ -144,7 +144,7 @@
   <h2 class="toc_h2">Regions</h2>
   <p>Pellentesque id posuere sapien vestibulum, quam pellentesque at libero. Aliquam at id fames hendrerit in vulputate orci aliquet augue. Massa penatibus sociis et nisl. Enim aliquam mauris suscipit turpis non hendrerit felis.</p>
   {{ navMap({
-    src: "/images/nav-maps/dental-regions.svg",
+    src:  basePath + "/images/nav-maps/dental-regions.svg",
     caption: {
       items: [
         {
@@ -333,10 +333,10 @@
   <div class="nhsuk-width-container">
     <h2>News</h2>
     <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet.</p>
-    {{ miniListing(items) }}
+    {{ featuredContent(items) }}
 
     <h2>Events</h2>
     <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet.</p>
-    {{ miniListing(items) }}
+    {{ featuredContent(items) }}
   </div>
 {% endblock %}

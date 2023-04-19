@@ -141,6 +141,16 @@
     </header>
   </div>
   <div class="breadcrumbs">
+    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+      <div class="nhsuk-width-container">
+        <ol class="nhsuk-breadcrumb__list">
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates">Templates</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates/examples/training-programmes-homepage">Training Programmes Homepage</a></li>
+        </ol>
+        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/templates/examples/training-programmes-homepage">Back to Training Programmes Homepage</a></p>
+      </div>
+    </nav>
   </div>
   <div class="banners">
   </div>
@@ -333,7 +343,7 @@
                 </li>
               </ul>
             </figcaption>
-            <object class="nhsuk-map__image" data="/images/nav-maps/dental-regions.svg" type="image/svg+xml" tabindex="-1">
+            <object class="nhsuk-map__image" data="/hee-prototypes/images/nav-maps/dental-regions.svg" type="image/svg+xml" tabindex="-1">
             </object>
           </figure>
         </div>
@@ -411,11 +421,11 @@
             <p class="hee-card__organisation" aria-label="Organisation">Organisation</p>
           </div>
           <ul class="hee-card__contact">
-            <li class="hee-card__telephone" aria-label="Telephone"><a href="tel:07575 731 776;">07575 731 776</a></li>
-            <li class="hee-card__email" aria-label="Email"><a href="mailto:http://nhs.uk/;">email@hee.co.uk</a></li>
-            <li class="hee-card__website" aria-label="Website"><a href="http://nhs.uk/">http://nhs.uk/</a></li>
+            <li class="hee-card__telephone hee-card__contact__item" aria-label="Telephone"><a href="tel:07575 731 776;">07575 731 776</a></li>
+            <li class="hee-card__email hee-card__contact__item" aria-label="Email"><a href="mailto:email@hee.co.uk;">email@hee.co.uk</a></li>
+            <li class="hee-card__website hee-card__contact__item" aria-label="Website"><a href="http://nhs.uk/">http://nhs.uk/</a></li>
           </ul>
-          <p class="hee-card__address" aria-label="Bio">Health Education England<br> 3 Piccadilly<br> Manchester<br> M1 3BN</p>
+          <p class="hee-card__address" aria-label="Address">Health Education England<br> 3 Piccadilly<br> Manchester<br> M1 3BN</p>
           <p class="hee-card__description" aria-label="Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque ac pellentesque in sapien.</p>
         </div>
       </aside>
@@ -426,8 +436,8 @@
       <div class="nhsuk-width-container">
         <h2>News</h2>
         <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet.</p>
-        <div class="hee-mini-listing">
-          <div class="hee-mini-listing__item">
+        <div class="hee-featured-content">
+          <div class="hee-featured-content__item">
             <div class="hee-listing-item">
               <h3><a href="#">Publication item #1</a></h3>
               <div class="hee-listing-item__details">
@@ -443,7 +453,7 @@
               <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
             </div>
           </div>
-          <div class="hee-mini-listing__item">
+          <div class="hee-featured-content__item">
             <div class="hee-listing-item">
               <h3><a href="#">Publication item #2</a></h3>
               <div class="hee-listing-item__details">
@@ -459,7 +469,7 @@
               <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
             </div>
           </div>
-          <div class="hee-mini-listing__item">
+          <div class="hee-featured-content__item">
             <div class="hee-listing-item">
               <h3><a href="#">Publication item #3</a></h3>
               <div class="hee-listing-item__details">
@@ -478,8 +488,8 @@
         </div>
         <h2>Events</h2>
         <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet.</p>
-        <div class="hee-mini-listing">
-          <div class="hee-mini-listing__item">
+        <div class="hee-featured-content">
+          <div class="hee-featured-content__item">
             <div class="hee-listing-item">
               <h3><a href="#">Publication item #1</a></h3>
               <div class="hee-listing-item__details">
@@ -495,7 +505,7 @@
               <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
             </div>
           </div>
-          <div class="hee-mini-listing__item">
+          <div class="hee-featured-content__item">
             <div class="hee-listing-item">
               <h3><a href="#">Publication item #2</a></h3>
               <div class="hee-listing-item__details">
@@ -511,7 +521,7 @@
               <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
             </div>
           </div>
-          <div class="hee-mini-listing__item">
+          <div class="hee-featured-content__item">
             <div class="hee-listing-item">
               <h3><a href="#">Publication item #3</a></h3>
               <div class="hee-listing-item__details">

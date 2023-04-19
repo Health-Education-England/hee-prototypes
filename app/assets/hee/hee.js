@@ -5,6 +5,7 @@ import SubNav from './blocks/scaffolding/header/navigation/subnav';
 // HEE Components
 import AnchorLinks from './blocks/content/sidebar/anchorlinks/anchorlinks';
 import TableContents from './blocks/content/sidebar/anchorlinks/toc';
+import AnchorLinksSticky from './blocks/content/footer/anchorlinks-sticky/anchorlinks-sticky';
 import Listing from './blocks/furniture/collections/hee-listing/listing';
 import Media from '../components/hee/hee-media/media';
 import NavMap from '../components/hee/hee-navmap/navmap';
@@ -23,6 +24,7 @@ import FilterTag from './blocks/furniture/collections/hee-filtertag/filtertag';
 document.addEventListener('DOMContentLoaded', () => {
   Tabs();
   AnchorLinks();
+  AnchorLinksSticky();
   Cookies();
   Filter();
   FilterTag();

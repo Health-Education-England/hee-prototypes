@@ -1,7 +1,7 @@
 {% extends "prototype-inner.html" %}
 
-{% set page_url = 'featured-mini-listing' %}
-{% set page_title = 'Mini Listing' %}
+{% set page_url = 'featured-featured-content' %}
+{% set page_title = 'Featured Content' %}
 
 {% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
 
@@ -43,7 +43,7 @@
 
 {% block pageContent %}
 
-<p>Used to list out content at the bottom of the page in the featured region.</p>
+<p>This block component is used to list relevant / related content at the bottom of a page, usually in the "Featured" region.</p>
 
 <h3>Example</h3>
 {{ example({
@@ -57,7 +57,7 @@
 <h3>Macro</h3>
 {{ highlight({
   html: '
-{{ miniListing([
+{{ featuredContent([
     {
       title: "Publication item #1",
       href: "#",
@@ -112,8 +112,8 @@
 <h3>HTML</h3>
 {{ highlight({
   html : '
-<div class="hee-mini-listing">
-    <div class="hee-mini-listing__item">
+<div class="hee-featured-content">
+    <div class="hee-featured-content__item">
       <div class="hee-listing-item">
         <h3><a href="#">Publication item #1</a></h3>
         <div class="hee-listing-item__details">
@@ -129,7 +129,7 @@
         <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
       </div>
     </div>
-    <div class="hee-mini-listing__item">
+    <div class="hee-featured-content__item">
       <div class="hee-listing-item">
         <h3><a href="#">Publication item #2</a></h3>
         <div class="hee-listing-item__details">
@@ -145,7 +145,7 @@
         <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
       </div>
     </div>
-    <div class="hee-mini-listing__item">
+    <div class="hee-featured-content__item">
       <div class="hee-listing-item">
         <h3><a href="#">Publication item #3</a></h3>
         <div class="hee-listing-item__details">
