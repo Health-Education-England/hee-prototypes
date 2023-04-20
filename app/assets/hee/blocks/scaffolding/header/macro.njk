@@ -23,9 +23,11 @@
             </svg>
             <span class="nhsuk-organisation-name">{{ params.organisation.name }}{% if params.organisation.split %} <span class="nhsuk-organisation-name-split">{{ params.organisation.split }}</span>{% endif %}</span>
           </a>
-          <a class="nhsuk-header__link" href="{% if params.homeHref %}{{ basePath }}{{ params.homeHref }}{% else %}/{% endif %}" aria-label="{{ params.organisation.name }} {{ params.organisation.split }} {{ params.organisation.descriptor }} homepage">
-            {% if params.organisation.descriptor %}<span class="nhsuk-organisation-descriptor">{{ params.organisation.descriptor }}</span>{% endif %}
-          </a>
+          {% if params.organisation.descriptor %}
+            <a class="nhsuk-header__link" href="{% if params.homeHref %}{{ basePath }}{{ params.homeHref }}{% else %}/{% endif %}" aria-label="{{ params.organisation.name }} {{ params.organisation.split }} {{ params.organisation.descriptor }} homepage">
+              {% if params.organisation.descriptor %}<span class="nhsuk-organisation-descriptor">{{ params.organisation.descriptor }}</span>{% endif %}
+            </a>
+          {% endif %}
         </span>
 
         {% if showLogos == "true" and params.logos %}
