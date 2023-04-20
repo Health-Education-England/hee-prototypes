@@ -1,0 +1,18 @@
+{% extends "example-blocks.html" %}
+
+{% block main %}
+  {{ departmentCard({
+    name: "Department Name",
+    organisation: "Organisation",
+    telephone: "07575 731 776",
+    email: "email@hee.co.uk",
+    website: "http://nhs.uk/",
+    twitter: "@doctor",
+    linkedin: "doctor",
+    address: "Health Education England<br>
+              3 Piccadilly<br>
+              Manchester<br>
+              M1 3BN",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque ac pellentesque in sapien."
+  }) }}
+{% endblock %}
