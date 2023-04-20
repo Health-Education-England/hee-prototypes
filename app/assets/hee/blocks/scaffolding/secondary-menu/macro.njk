@@ -4,9 +4,13 @@
       <ul class="hee-secondary-menu__list">
         {% for item in params.items %}
           <li class="hee-secondary-menu__item">
-            <a class="hee-secondary-menu__link {{ "is-active" if item.active }}" href="{{ item.url }}">
-              {{ item.title }}
-            </a>
+            {% if item.url %}
+              <a class="hee-secondary-menu__link {{ "is-active" if item.active }}" href="{{ item.url }}">
+                {{ item.title }}
+              </a>
+            {% else %}
+              <span class="hee-secondary-menu__label {{ "is-active" if item.active }}">{{ item.title }}</span>
+            {% endif %}
           </li>
         {% endfor %}
       </ul>

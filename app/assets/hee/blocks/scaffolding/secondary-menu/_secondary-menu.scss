@@ -18,7 +18,7 @@
     margin-bottom: 0;
   }
 
-  .hee-secondary-menu__link {
+  .hee-secondary-menu__link, .hee-secondary-menu__label {
     @include nhsuk-font(16);
 
     @include mq($from: desktop) {
