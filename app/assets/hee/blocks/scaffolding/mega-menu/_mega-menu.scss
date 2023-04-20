@@ -102,6 +102,17 @@
     }
   }
 
+  .hee-mega-menu__label {
+    @include nhsuk-font(16);
+
+    @include mq($from: desktop) {
+      color: $color_nhsuk-white;
+      border-bottom: 4px solid transparent;
+      border-top: 4px solid transparent;
+      padding: 12px nhsuk-spacing(3) 12px nhsuk-spacing(2);
+    }
+  }
+
   // Has child items.
   .hee-mega-menu__subnav {
     .hee-mega-menu__link {
