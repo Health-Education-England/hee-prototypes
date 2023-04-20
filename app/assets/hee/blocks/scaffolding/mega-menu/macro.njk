@@ -4,10 +4,16 @@
       <div class="nhsuk-width-container">
         <ul class="hee-mega-menu__list" role="menu">
           {% for item in params.primaryLinks %}
-            <li class="hee-mega-menu__item{% if item.children.length > 0 %} hee-mega-menu__subnav{% endif %}">
-              <a class="hee-mega-menu__link" href="{{ item.url }}" role="menuitem" {% if item.children.length > 0 %}aria-expanded="false" aria-controls="hee-mega-menu__panel-{{ loop.index0 }}" {% endif %}>
-                {{item.label | safe}}
-              </a>
+            <li class="hee-mega-menu__item{% if item.children.length > 0 %} hee-mega-menu__subnav{% endif %}"{{ 'aria-hidden="true"' if item.active else '' }}>
+              {% if item.url %}
+                <a class="hee-mega-menu__link" href="{{ item.url }}" role="menuitem" {% if item.children.length > 0 %}aria-expanded="false" aria-controls="hee-mega-menu__panel-{{ loop.index0 }}" {% endif %}>
+                  {{item.label | safe}}
+                </a>
+              {% else %}
+                <span class="hee-mega-menu__label">
+                  {{item.label | safe}}
+                </span>
+              {% endif %}
             </li>
           {%- endfor %}
         </ul>
