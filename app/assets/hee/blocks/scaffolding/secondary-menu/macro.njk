@@ -3,7 +3,7 @@
     <div class="nhsuk-width-container">
       <ul class="hee-secondary-menu__list">
         {% for item in params.items %}
-          <li class="hee-secondary-menu__item" {{ '' if item.active else 'aria-hidden="true"' }}>
+          <li class="hee-secondary-menu__item"{{ 'aria-hidden="true"' if item.active else '' }}>
             {% if item.url %}
               <a class="hee-secondary-menu__link {{ "is-active" if item.active }}" href="{{ item.url }}">
                 {{ item.title }}
