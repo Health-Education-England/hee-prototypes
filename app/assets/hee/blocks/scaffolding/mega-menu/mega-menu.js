@@ -36,7 +36,11 @@ export default () => {
         toggleLink.addEventListener('keydown', (event) => {
           if (event.keyCode === 13 || event.keyCode === 32) {
             event.preventDefault();
-            this.resetPanels();
+
+            if (!targetPanel.classList.contains('is-active')) {
+              this.resetPanels();
+            }
+
             this.togglePanel(event.target);
 
             // Set focus on first link in mega menu panel list.
@@ -54,6 +58,14 @@ export default () => {
               toggleLink.focus();
             }
           })
+        })
+
+        // Handles shift + tab behaviour from first link to toggle link.
+        targetPanel.querySelector('.hee-mega-menu__panel__link:first-child').addEventListener('keydown', (event) => {
+          if(event.shiftKey && event.keyCode === 9) {
+            event.preventDefault();
+            toggleLink.focus();
+          }
         })
       })
     }
