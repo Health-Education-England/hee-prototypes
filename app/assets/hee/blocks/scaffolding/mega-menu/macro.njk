@@ -4,7 +4,7 @@
       <div class="nhsuk-width-container">
         <ul class="hee-mega-menu__list">
           {% for item in params.primaryLinks %}
-            <li class="hee-mega-menu__item{% if item.children.length > 0 %} hee-mega-menu__subnav{% endif %}"{{ 'aria-hidden="true"' if item.active else '' }}>
+            <li class="hee-mega-menu__item{% if item.children.length > 0 %} hee-mega-menu__subnav{% endif %} {{ "has-home-icon" if params.homeIcon === true and loop.first }}"{{ 'aria-hidden="true"' if item.active else '' }}>
               {% if item.url %}
                 <a class="hee-mega-menu__link {{ "is-active" if params.activeItemIndex === loop.index0 }}"
                    href="{{ item.url }}"

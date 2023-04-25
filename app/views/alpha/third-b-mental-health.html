@@ -78,36 +78,56 @@
     imgURL: basePath + "/images/alpha-mental-health-revised.jpg"
   }) }}
 
-  {{ secondaryMenu({
+  {% set secondaryMenuItems = [
+    {
+      active: true,
+      label: "Mental health"
+    },
+    {
+      label: "Training and education",
+      url: "#"
+    },
+    {
+      label: "Evidence and resources",
+      url: "#"
+    },
+    {
+      label: "Get involved",
+      url: "#",
+      children: [
+        [
+          {
+            label: "Collaboration",
+            url: "#"
+          },
+          {
+            label: "Opportunities",
+            url: basePath + "/alpha/third-b-opportunity.html",
+          },
+          {
+            label: "Pathways",
+            url: "#",
+          }
+        ]
+      ]
+    },
+    {
+      label: "Support",
+      url: "#"
+    },
+    {
+      label: "Mental Health Workforce",
+      url: "#"
+    }
+  ] %}
+
+  {{ megaMenu({
+    activeItemIndex: 0,
     homeIcon: true,
-    theme: "theme-black-text",
-    items: [
-      {
-        active: true,
-        title: "Mental health"
-      },
-      {
-        title: "Training and education",
-        url: "#"
-      },
-      {
-        title: "Evidence and resources",
-        url: "#"
-      },
-      {
-        title: "Get involved",
-        url: basePath + "/alpha/third-b-get-involved.html"
-      },
-      {
-        title: "Support",
-        url: "#"
-      },
-      {
-        title: "Mental Health Workforce",
-        url: "#"
-      }
-    ]
+    theme: "theme-black-white",
+    primaryLinks: secondaryMenuItems
   }) }}
+  <br>
 
   <div class="nhsuk-width-container">
     <h1>Mental Health</h1>
