@@ -2,11 +2,17 @@
   <div class="hee-mega-menu {{ params.theme }}">
     <nav class="hee-mega-menu__nav{% if params.primaryLinks|length > 2 %} hee-mega-menu--more-items{% endif %}" id="mega-menu-navigation" role="navigation" aria-label="Primary navigation">
       <div class="nhsuk-width-container">
-        <ul class="hee-mega-menu__list" role="menu">
+        <ul class="hee-mega-menu__list">
           {% for item in params.primaryLinks %}
             <li class="hee-mega-menu__item{% if item.children.length > 0 %} hee-mega-menu__subnav{% endif %}"{{ 'aria-hidden="true"' if item.active else '' }}>
               {% if item.url %}
-                <a class="hee-mega-menu__link" href="{{ item.url }}" role="menuitem" {% if item.children.length > 0 %}aria-expanded="false" aria-controls="hee-mega-menu__panel-{{ loop.index0 }}" {% endif %}>
+                <a class="hee-mega-menu__link"
+                   href="{{ item.url }}"
+                   {% if item.children.length > 0 %}
+                    aria-controls="hee-mega-menu__panel-{{ loop.index0 }}"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                  {% endif %}>
                   {{item.label | safe}}
                 </a>
               {% else %}
@@ -25,7 +31,7 @@
               {% for group in item.children %}
                 <div class="hee-mega-menu__panel__group">
                   {% for item in group %}
-                    <a class="hee-mega-menu__panel__link" href="{{ item.url }}" role="menuitem">
+                    <a class="hee-mega-menu__panel__link" href="{{ item.url }}">
                       {{ item.label }}
                     </a>
                   {% endfor %}
