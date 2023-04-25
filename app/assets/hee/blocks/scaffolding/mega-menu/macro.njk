@@ -1,6 +1,6 @@
 {% macro megaMenu(params) %}
   <div class="hee-mega-menu {{ params.theme }}">
-    <nav class="hee-mega-menu__nav{% if params.primaryLinks|length > 2 %} hee-mega-menu--more-items{% endif %}" id="mega-menu-navigation" role="navigation" aria-label="Primary navigation">
+    <nav class="hee-mega-menu__nav{% if params.primaryLinks|length > 2 %} hee-mega-menu--more-items{% endif %}" id="mega-menu-navigation-{{ params.id }}" role="navigation" aria-label="{{ params.ariaLabel }}">
       <div class="nhsuk-width-container">
         <ul class="hee-mega-menu__list">
           {% for item in params.primaryLinks %}
@@ -9,7 +9,7 @@
                 <a class="hee-mega-menu__link {{ "is-active" if params.activeItemIndex === loop.index0 }}"
                    href="{{ item.url }}"
                    {% if item.children.length > 0 %}
-                    aria-controls="hee-mega-menu__panel-{{ loop.index0 }}"
+                    aria-controls="hee-mega-menu__panel-{{ params.id }}-{{ loop.index0 }}"
                     aria-expanded="false"
                     aria-haspopup="true"
                   {% endif %}>
@@ -26,7 +26,7 @@
       </div>
       {% for item in params.primaryLinks %}
         {% if item.children.length > 0 %}
-          <div class="hee-mega-menu__panel" id="hee-mega-menu__panel-{{ loop.index0 }}">
+          <div class="hee-mega-menu__panel" id="hee-mega-menu__panel-{{ params.id }}-{{ loop.index0 }}">
             <div class="hee-mega-menu__panel__wrapper nhsuk-width-container" data-group-count="{{ item.children.length }}">
               {% for group in item.children %}
                 <div class="hee-mega-menu__panel__group">

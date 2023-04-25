@@ -31,7 +31,9 @@
 
     {% import "alpha/_third-b-menu-main.html" as mainMenu %}
     {{ megaMenu({
+      id: "main",
       activeItemIndex: 1,
+      ariaLabel: "Primary navigation",
       theme: "theme-white-blue",
       primaryLinks: mainMenu.items
     }) }}
@@ -102,11 +104,11 @@
           },
           {
             label: "Opportunities",
-            url: basePath + "/alpha/third-b-opportunity.html",
+            url: basePath + "/alpha/third-b-opportunity.html"
           },
           {
             label: "Pathways",
-            url: "#",
+            url: "#"
           }
         ]
       ]
@@ -122,7 +124,9 @@
   ] %}
 
   {{ megaMenu({
+    id: "secondary",
     activeItemIndex: 0,
+    ariaLabel: "Secondary navigation",
     homeIcon: true,
     theme: "theme-black-white",
     primaryLinks: secondaryMenuItems

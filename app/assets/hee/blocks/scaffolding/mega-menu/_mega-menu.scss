@@ -104,6 +104,11 @@
     &.is-active {
       border-bottom: 4px solid $color_nhsuk-white;
       font-weight: $nhsuk-font-bold;
+
+      &:active,
+      &:focus {
+        border-bottom: 4px solid $color_nhsuk-black;
+      }
     }
   }
 
@@ -228,6 +233,7 @@
     }
   }
 
+  // Grey theme.
   &.theme-grey {
     .hee-mega-menu__nav, .hee-mega-menu__panel {
       background-color: $color_nhsuk-grey-1;
@@ -243,6 +249,7 @@
     }
   }
 
+  // Black text on white background theme.
   &.theme-black-white {
     .hee-mega-menu__nav, .hee-mega-menu__panel {
       background-color: $color_nhsuk-white;
@@ -274,7 +281,7 @@
         &:active,
         &:focus {
           &:after {
-            background-image: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 0.666748C4.2 0.666748 4.33333 0.733415 4.46667 0.866748L7.8 4.20008C8.06667 4.46675 8.06667 4.86675 7.8 5.13341C7.53333 5.40008 7.13333 5.40008 6.86667 5.13341L4 2.26675L1.13333 5.13341C0.866667 5.40008 0.466666 5.40008 0.199999 5.13341C-0.0666675 4.86675 -0.0666675 4.46675 0.199999 4.20008L3.53333 0.866748C3.66667 0.733415 3.8 0.666748 4 0.666748Z' fill='white'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 5.33325C3.8 5.33325 3.66667 5.26659 3.53333 5.13325L0.2 1.79992C-0.0666666 1.53325 -0.0666666 1.13325 0.2 0.866586C0.466667 0.599919 0.866666 0.599919 1.13333 0.866586L4 3.73325L6.86667 0.866586C7.13333 0.599919 7.53333 0.599919 7.8 0.866586C8.06667 1.13325 8.06667 1.53325 7.8 1.79992L4.46667 5.13325C4.33333 5.26659 4.2 5.33325 4 5.33325Z' fill='white'/%3E%3C/svg%3E");
           }
         }
       }

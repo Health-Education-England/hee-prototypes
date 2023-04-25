@@ -16,6 +16,8 @@
 
     {% import "alpha/_third-b-menu-main.html" as mainMenu %}
     {{ megaMenu({
+      id: "menu-main",
+      ariaLabel: "Primary navigation",
       theme: "theme-white-blue",
       primaryLinks: mainMenu.items
     }) }}
