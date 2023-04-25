@@ -1,0 +1,135 @@
+{% extends "example-template-fullwidth.html" %}
+
+{% set page_title = 'Opportunities - Workforce, Training and Education, NHS England' %}
+
+{% block pageClass %}page--fullwidth alpha-fullwidth double-menu{% endblock %}
+{% block pageHeaderClass %}has-microhero{% endblock %}
+
+{% block pageTitle %}{{ page_title }}{% endblock %}
+
+{% block breadcrumbs %}
+  {{
+    breadcrumb({
+      items: [
+        {
+          href: basePath + "/",
+          text: "HEE"
+        },
+        {
+          href: basePath + "#",
+          text: "Healthcare topics"
+        }
+      ],
+      href: basePath + "/alpha/third-a-mental-health.html",
+      text: "Mental Health"
+    })
+  }}
+{% endblock %}
+
+{% block header %}
+  <div class="site-header">
+    {{ customHeader({
+      "showNav": "false",
+      "showSearch": "false",
+      "showLogos": "false",
+      "heeHref": basePath + "/alpha/third-a-index.html",
+      "homeHref": "/alpha/third-a-mental-health.html",
+      "classes": "nhsuk-header--white",
+      "organisation": {
+        "name": "Workforce, Training and Education",
+        "split": "",
+        "descriptor": "Mental Health"
+      },
+      "logos": [
+        {
+          "href": "https://www.nimdta.gov.uk/",
+          "label": "Northern Ireland Medical and Dental Training Agency Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/nimdta-logo.png",
+          "imgAlt": "Logo for Northern Ireland Medical and Dental Training Agency"
+        },
+        {
+          "href": "https://www.nes.scot.nhs.uk/",
+          "label": "NHS Education for Scotland Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/nhs-scotland-logo.png",
+          "imgAlt": "Logo for NHS Education for Scotland"
+        },
+        {
+          "href": "https://heiw.nhs.wales/",
+          "label": "Health Education and Improvement Wales Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/heiw-logo.png",
+          "imgAlt": "Logo for Health Education and Improvement Wales"
+        }
+      ]
+    })
+    }}
+
+    {% include "alpha/_third-a-menu-main.html" %}
+  </div>
+
+  {{ phaseBanner({
+    tag: "Alpha",
+    description: 'This is a new service – your <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.'
+  }) }}
+{% endblock %}
+
+{% block pageHeader %}
+  {{ microHero({
+    imgURL: basePath + "/images/alpha-opportunity-hero.jpg"
+  }) }}
+
+  {{ secondaryMenu({
+    homeIcon: true,
+    theme: "theme-black-text",
+    items: [
+      {
+        title: "Mental health",
+        url: basePath + "/alpha/third-a-mental-health.html"
+      },
+      {
+        title: "Training and education",
+        url: "#"
+      },
+      {
+        title: "Evidence and resources",
+        url: "#"
+      },
+      {
+        active: true,
+        title: "Get involved",
+        url: basePath + "/alpha/third-a-get-involved.html"
+      },
+      {
+        title: "Support",
+        url: "#"
+      },
+      {
+        title: "Mental Health Workforce",
+        url: "#"
+      },
+      {
+        title: "Our team",
+        url: "#"
+      }
+    ]
+  }) }}
+
+  <div class="nhsuk-width-container">
+    <h1>Opportunities</h1>
+    <span class="nhsuk-caption-xl">Mental Health</span>
+  </div>
+{% endblock %}
+
+{% block pageContent %}
+  <h2>Training and working in Mental Health</h2>
+  <p>These are just a few of the many roles that are available in mental health. There are many different ways to get involved in mental health.</p>
+
+  <ul>
+    <li><strong>Psychiatrist.</strong> Psychiatrists are medical doctors who diagnose and treat mental disorders. They can prescribe medication and provide therapy.</li>
+    <li><strong>Psychologist.</strong> Psychologists are experts in human behaviour. They can provide talking therapies and counselling, and they can also conduct research on mental health.</li>
+    <li><strong>Social worker.</strong> Social workers help people with a variety of problems, including mental health issues. They can provide case management, counselling, and support groups.</li>
+    <li><strong>Mental Health Nurse.</strong> Nurses can work in a variety of settings, including hospitals, clinics, and schools. They can provide care to people with mental health problems, and they can also provide education and support.</li>
+    <li><strong>Counsellor.</strong> Mental health counsellors provide therapy and counselling to people with mental health problems. They can also provide support groups and educational programs.</li>
+    <li><strong>Crisis worker.</strong> Crisis workers help people who are in crisis, including people who are suicidal or who are experiencing mental health problems. They can provide support and counselling, and they can also help people connect with resources.</li>
+    <li><strong>Recovery coach.</strong> Recovery coaches help people who are recovering from mental health problems. They can provide support and guidance, and they can also help people connect with resources.</li>
+  </ul>
+{% endblock %}
