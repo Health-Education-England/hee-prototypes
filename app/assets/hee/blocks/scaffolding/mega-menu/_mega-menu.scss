@@ -94,6 +94,11 @@
         color: $nhsuk-focus-text-color;
       }
     }
+
+    &.is-active {
+      border-bottom: 4px solid $color_nhsuk-white;
+      font-weight: $nhsuk-font-bold;
+    }
   }
 
   .hee-mega-menu__label {
