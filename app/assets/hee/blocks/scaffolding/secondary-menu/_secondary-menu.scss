@@ -36,4 +36,27 @@
       border-bottom: 2px solid $color_nhsuk-blue;
     }
   }
+
+  // Home icon variant styling.
+  .hee-secondary-menu__item.has-home-icon {
+    .hee-secondary-menu__label, .hee-secondary-menu__link {
+      font-weight: $nhsuk-font-bold;
+
+      &:before {
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 0L7.58087 0.378844L0 7.54244L0.838269 8.33456L1.58542 7.62854V14H6.83371V8.48954H9.16629V14H14.4146V7.62854L15.1617 8.33456L16 7.54244L8.41914 0.378844L8 0ZM8 1.56704L13.2483 6.52645V12.8979H10.3326V7.38745H5.66743V12.8979H2.75171V6.52645L8 1.56704Z' fill='black'/%3E%3C/svg%3E");
+        content: "";
+        display: inline-block;
+        height: 14px;
+        margin: 3px 4px 0 0;
+        width: 16px;
+      }
+    }
+  }
+
+  // Theme black text.
+  &.theme-black-text {
+    .hee-secondary-menu__label, .hee-secondary-menu__link {
+      color: $color_nhsuk-black;
+    }
+  }
 }
