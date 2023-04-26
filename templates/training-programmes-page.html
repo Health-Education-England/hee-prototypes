@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Events Collection - Templates - NWP Prototype Kit</title>
+  <title>Training Programmes - Page - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -54,16 +54,6 @@
     </header>
   </div>
   <div class="breadcrumbs">
-    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-      <div class="nhsuk-width-container">
-        <ol class="nhsuk-breadcrumb__list">
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates">Templates</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates/event-collection">Events Collection</a></li>
-        </ol>
-        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/templates/event-collection">Back to Events Collection</a></p>
-      </div>
-    </nav>
   </div>
   <div class="site-notifications">
   </div>
@@ -88,7 +78,7 @@
               <li><a href="/hee-prototypes/templates/blog-collection.html">Blog Collection</a></li>
               <li>Casestudies Collection</li>
               <li><a href="/hee-prototypes/templates/publications-collection.html">Publications Collection</a></li>
-              <li class='current'><a href="/hee-prototypes/templates/event-collection.html">Event Collection</a></li>
+              <li><a href="/hee-prototypes/templates/event-collection.html">Event Collection</a></li>
             </ul>
             <h3>Rightbar</h3>
             <ul>
@@ -101,51 +91,65 @@
               <li><a href="/hee-prototypes/templates/publications-item.html">Publication - Item</a></li>
               <li><a href="/hee-prototypes/templates/event-item.html">Event Item</a></li>
               <li><a href="/hee-prototypes/templates/training-programmes-homepage.html">Training Programmes - Homepage</a></li>
-              <li><a href="/hee-prototypes/templates/training-programmes-page.html">Training Programmes - Page</a></li>
+              <li class='current'><a href="/hee-prototypes/templates/training-programmes-page.html">Training Programmes - Page</a></li>
             </ul>
           </nav>
         </div>
         <div class="page__main">
           <div class="page__header">
             <span class="nhsuk-caption-xl">Templates</span>
-            <h1>Events Collection</h1>
-            <p class="nhsuk-lede-text">A layout with a left sidebar and right content area. Used for listing event items.</p>
+            <h1>Training Programmes - Page</h1>
+            <p class="nhsuk-lede-text">Used to display information regarding specific Training Programmes on a single page.</p>
           </div>
           <h2>Example</h2>
           <div class="prototype__example scaled" style="height:400px;overflow:hidden;">
-            <a href="/hee-prototypes/templates/examples/event-collection.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
+            <a href="/hee-prototypes/templates/examples/training-programmes-page.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
             <div class="thumbnail">
-              <iframe src="/hee-prototypes/templates/examples/event-collection.html" height="780"></iframe>
+              <iframe src="/hee-prototypes/templates/examples/training-programmes-page.html" height="780"></iframe>
             </div>
           </div>
           <hr />
-          <pre><code>&lt;main class=&quot;page page--leftbar&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
+          <h2>HTML</h2>
+          <pre><code>&lt;main class=&quot;page page--rightbar&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
   &lt;div class=&quot;page__header&quot;&gt;
-    [ PAGE_MICROHERO ]
     &lt;div class=&quot;nhsuk-width-container&quot;&gt;
       &lt;h1&gt;[ PAGE_TITLE ]&lt;/h1&gt;
       &lt;span class=&quot;nhsuk-caption-xl&quot;&gt;[ PAGE_CAPTION ]&lt;/span&gt;
       &lt;p class=&quot;nhsuk-lede-text&quot;&gt;[ PAGE_SUMMARY ]&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;nhsuk-width-container&quot;&gt;
-    &lt;div class=&quot;page__layout&quot;&gt;
-      &lt;aside class=&quot;page__leftbar&quot;&gt;
-        [ FILTER_GROUP | FILTER_CLEAR ]
-      &lt;/aside&gt;
-      &lt;div class=&quot;page__main&quot;&gt;
-        [ RESULTS_TITLE | RESULTS_SORTING ]
-        [ FILTER_TAG ]
-        [ RESULTS_LISTING ]
-        [ RESULTS_PAGINATION ]
+  &lt;div class=&quot;page__layout nhsuk-width-container&quot;&gt;
+    &lt;div class=&quot;page__main&quot;&gt;
+      &lt;div class=&quot;page__content&quot;&gt;
+        [ CONTENT--MAIN_BLOCKS ]
       &lt;/div&gt;
+      [ PAGE_LASTUPDATED ]
     &lt;/div&gt;
+    &lt;aside class=&quot;page__rightbar&quot;&gt;
+      [ CONTENT--SIDEBAR_BLOCKS ]
+    &lt;/aside&gt;
   &lt;/div&gt;
   &lt;div class=&quot;page__footer&quot;&gt;
+    [ PUBLISHED_INFO ]
+    [ INTEMPLATE_BACKTOTOP ]
   &lt;/div&gt;
   &lt;section class=&quot;page__feature&quot;&gt;
+    [ CONTENT--FEATURED_BLOCKS ]
   &lt;/section&gt;
 &lt;/main&gt;</code></pre>
+          <hr />
+          <h2>Components</h2>
+          <h4>Furniture</h4>
+          <ul>
+            <li>Page</li>
+            <li>Content</li>
+          </ul>
+          <h4>Content Blocks</h4>
+          <ul>
+            <li>Main</li>
+            <li>Sidebar</li>
+            <li>Featured</li>
+          </ul>
         </div>
       </div>
     </div>
