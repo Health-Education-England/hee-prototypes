@@ -1,6 +1,6 @@
 {% extends "example-template-fullwidth.html" %}
 
-{% set page_title = 'Mental Health - Workforce, Training and Education, NHS England' %}
+{% set page_title = 'Mental Health Workforce - Workforce, Training and Education, NHS England' %}
 
 {% block pageClass %}page--fullwidth alpha-fullwidth double-menu{% endblock %}
 {% block pageHeaderClass %}has-microhero{% endblock %}
@@ -70,7 +70,7 @@
 
 {% block pageHeader %}
   {{ microHero({
-    imgURL: basePath + "/images/alpha-mental-health-revised.jpg"
+    imgURL: basePath + "/images/alpha-involved-hero.jpg"
   }) }}
 
   {{ secondaryMenu({
@@ -78,8 +78,8 @@
     theme: "theme-black-text",
     items: [
       {
-        active: true,
-        title: "Mental health"
+        title: "Mental health",
+        url: basePath + "/alpha/third-a-mental-health.html"
       },
       {
         title: "Training and education",
@@ -98,22 +98,34 @@
         url: basePath + "/alpha/third-a-mh-support.html"
       },
       {
-        title: "Mental Health Workforce",
-        url: basePath + "/alpha/third-a-mh-workforce.html"
+        active: true,
+        title: "Workforce"
       }
     ]
   }) }}
 
   <div class="nhsuk-width-container">
-    <h1>Mental Health</h1>
-    <span class="nhsuk-caption-xl">Healthcare Topics</span>
+    <h1>Mental Health Workforce</h1>
+    <span class="nhsuk-caption-xl">Mental Health</span>
   </div>
 {% endblock %}
 
 {% block pageContent %}
-  <p>Mental health is just as important as physical health, and it is vital for the NHS to provide services to its patients. There are a range of ways that health professionals can be involved in the provision of mental health services across different professions and roles. Multi-disciplinary working is a key aspect of providing high quality mental health services.</p>
+  {% set items = [
+    {
+      title: "Workforce planning",
+      href: "#",
+      summary: "Access data and guidance to help plan the mental health workforce"
+    },
+    {
+      title: "Workforce transformation",
+      href: "#",
+      summary: "Find information about best practice and innovation to improve the quality of mental health services"
+    }
+  ]
+  %}
 
-  <h2>What is Mental Health?</h2>
-  <p>Mental health is a state of well-being in which the individual realises his or her own potential, can cope with the normal stresses of life, can work productively and fruitfully, and is able to make a contribution to his or her community.</p>
-  <p>Mental health is a broad concept that encompasses our emotional, psychological, and social well-being. It affects how we think, feel, and act, and it can also influence our physical health.</p>
+  <br>
+
+  {{ featuredContent(items) }}
 {% endblock %}
