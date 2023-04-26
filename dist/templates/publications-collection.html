@@ -57,9 +57,9 @@
               <li><a href="/templates/base-fullwidth">Base</a></li>
               <li><a href="/templates/homepage">Homepage</a></li>
               <li><a href="/templates/landing-page">Landing Page</a></li>
-              <li><a href="/templates/404">404</a></li>
-              <li><a href="/templates/az-listing">A-Z Listing</a></li>
-              <li><a href="/templates/search-listing">Search Listing</a></li>
+              <li>404</li>
+              <li>A-Z Listing</li>
+              <li>Search Listing</li>
             </ul>
             <h3>Leftbar</h3>
             <ul>
@@ -106,17 +106,15 @@
       &lt;p class=&quot;nhsuk-lede-text&quot;&gt;[ PAGE_SUMMARY ]&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;nhsuk-width-container&quot;&gt;
-    &lt;div class=&quot;page__layout&quot;&gt;
-      &lt;aside class=&quot;page__leftbar&quot;&gt;
-        [ FILTER_GROUP | FILTER_CLEAR ]
-      &lt;/aside&gt;
-      &lt;div class=&quot;page__main&quot;&gt;
-        [ RESULTS_TITLE | RESULTS_SORTING ]
-        [ FILTER_TAG ]
-        [ RESULTS_LISTING ]
-        [ RESULTS_PAGINATION ]
-      &lt;/div&gt;
+  &lt;div class=&quot;page__layout nhsuk-width-container&quot;&gt;
+    &lt;aside class=&quot;page__leftbar&quot;&gt;
+      [ FILTER_GROUP | FILTER_CLEAR ]
+    &lt;/aside&gt;
+    &lt;div class=&quot;page__main&quot;&gt;
+      [ RESULTS_TITLE | RESULTS_SORTING ]
+      [ FILTER_TAG ]
+      [ RESULTS_LISTING ]
+      [ RESULTS_PAGINATION ]
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;page__footer&quot;&gt;

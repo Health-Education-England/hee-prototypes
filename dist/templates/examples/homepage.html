@@ -14,16 +14,6 @@
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
   <link href="/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
   <link href="/css/hee.css" rel="stylesheet" />
-  <style>
-    .example {}
-
-    .example--template {}
-
-    .example--blocks {
-      padding: 1em;
-      background-color: #f0f4f5;
-    }
-  </style>
   <link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png">
   <link rel="mask-icon" href="/nhsuk-frontend/assets/favicons/favicon.svg" color="#005eb8">
@@ -36,7 +26,7 @@
   <meta name="msapplication-square310x310logo" content="/nhsuk-frontend/assets/favicons/largetile-310x310.png">
 </head>
 
-<body class="example example--template">
+<body>
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script>
@@ -201,8 +191,8 @@
       </div>
     </div>
   </div>
-  <main class="page " id="maincontent" role="main">
-    <div class="page__header">
+  <main class="page page--fullwidth" id="maincontent" role="main">
+    <div class="page__header has-microhero">
       <section class="nhsuk-hero nhsuk-hero--image nhsuk-hero--image-description" style="background-image: url('/images/young-child-using-tablet-device.jpg');">
         <div class="nhsuk-hero__overlay">
           <div class="nhsuk-width-container">
@@ -219,8 +209,8 @@
         </div>
       </section>
     </div>
-    <div class="nhsuk-width-container">
-      <section class="nhsuk-section__content">
+    <div class="page__main nhsuk-width-container">
+      <div class="page__content">
         <p>Non elementum cras enim amet enim sollicitudin habitant leo erat. Leo faucibus aliquet vivamus donec ullamcorper mattis purus pharetra amet. Elit turpis odio pellentesque nibh adipiscing pellentesque.</p>
         <p>Scelerisque interdum amet, non sed ut. Diam tellus etiam aenean enim, eget quisque arcu facilisis. Facilisis sed pharetra placerat condimentum risus. Arcu urna, lorem lectus odio. Ipsum faucibus venenatis sit duis donec ac viverra nisl sem.</p>
         <p>Felis pellentesque proin id gravida morbi condimentum mi, ac non. Pulvinar ullamcorper orci risus felis. Elit feugiat pulvinar ac aliquet egestas ullamcorper. Vel.</p>
@@ -357,7 +347,7 @@
             </li>
           </ul>
         </div>
-      </section>
+      </div>
     </div>
     <div class="page__footer">
     </div>

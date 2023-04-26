@@ -67,9 +67,9 @@
               <li><a href="/templates/base-fullwidth">Base</a></li>
               <li><a href="/templates/homepage">Homepage</a></li>
               <li><a href="/templates/landing-page">Landing Page</a></li>
-              <li><a href="/templates/404">404</a></li>
-              <li><a href="/templates/az-listing">A-Z Listing</a></li>
-              <li><a href="/templates/search-listing">Search Listing</a></li>
+              <li>404</li>
+              <li>A-Z Listing</li>
+              <li>Search Listing</li>
             </ul>
             <h3>Leftbar</h3>
             <ul>
@@ -115,19 +115,17 @@
       [ ENDIF ]
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;nhsuk-width-container&quot;&gt;
-    &lt;div class=&quot;page__layout&quot;&gt;
-      &lt;div class=&quot;page__main&quot;&gt;
-        [ TABLEOFCONTENTS ]
-        &lt;div class=&quot;page__content&quot;&gt;
-          [ CONTENT--MAIN_BLOCKS ]
-        &lt;/div&gt;
-        [ PAGE_LASTUPDATED | REVIEWED_NEXTLAST ]
+  &lt;div class=&quot;page__layout nhsuk-width-container&quot;&gt;
+    &lt;div class=&quot;page__main&quot;&gt;
+      [ TABLEOFCONTENTS ]
+      &lt;div class=&quot;page__content&quot;&gt;
+        [ CONTENT--MAIN_BLOCKS ]
       &lt;/div&gt;
-      &lt;aside class=&quot;page__rightbar&quot;&gt;
-        [ CONTENT--SIDEBAR_BLOCKS ]
-      &lt;/aside&gt;
+      [ PAGE_LASTUPDATED | REVIEWED_NEXTLAST ]
     &lt;/div&gt;
+    &lt;aside class=&quot;page__rightbar&quot;&gt;
+      [ CONTENT--SIDEBAR_BLOCKS ]
+    &lt;/aside&gt;
   &lt;/div&gt;
   &lt;div class=&quot;page__footer&quot;&gt;
     [ IF MINIHUB ]

@@ -1,23 +1,19 @@
 // FULLWIDTH 
 .page--fullwidth {
   .page__header {
-    padding-top: nhsuk-spacing(7);
-    h1, p, span {
-      max-width: 66.6667%;
+    padding-top: nhsuk-spacing(6);
+
+    @include mq($from: desktop) {
+      padding-top: nhsuk-spacing(7);
     }
   }
   .page__main {
     padding-bottom: nhsuk-spacing(6);
-  }
 
-  @include mq($until: desktop) {
-    .page__header {
-        h1, p, span {
-            max-width: 100%;
-        }
+    @include mq($from: tablet) {
+      padding-bottom: nhsuk-spacing(7);
     }
   }
-
 }
 
 .page--template-homepage {}

@@ -6,46 +6,48 @@
 {% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
 
 {% block breadcrumbs %}
-{{
-    breadcrumb({
-        items: [
-            {
-                href: "/",
-                text: "Home"
-            },
-            {
-                href: "/templates",
-                text: "Templates"
-            }
-        ],
-        href: "/templates/"+page_url,
-        text: page_title
-    })
-}}
+  {{
+  breadcrumb({
+    items: [
+      {
+        href: "/",
+        text: "Home"
+      },
+      {
+        href: "/templates",
+        text: "Templates"
+      }
+    ],
+    href: "/templates/"+page_url,
+    text: page_title
+  })
+  }}
 {% endblock %}
 
 {% block pageLeftbar %}
   {{ subnav({
-      area: 'templates',
-      current: page_url
+    area: 'templates',
+    current: page_url
   }) }}
 {% endblock %}
 
 {% block pageHeader %}
-    <span class="nhsuk-caption-xl">Templates</span>
-    <h1>{{ page_title }}</h1>
-    <p class="nhsuk-lede-text"></p>
+  <span class="nhsuk-caption-xl">Templates</span>
+  <h1>{{ page_title }}</h1>
+  <p class="nhsuk-lede-text"></p>
 {% endblock %}
 
 {% block pageContent %}
-    <h2>Example</h2>
-    <a href="/templates/examples/{{ page_url }}" target="_blank">Click to preview the template [opens in new window]</a>
+  <h2>Example</h2>
+  {{ example({
+    url: '/templates/examples/'+page_url,
+    view: 'template'
+  }) }}
+  <hr />
 
-    <hr />
-
-    <h2>HTML</h2>
-{{ highlight({
-  "html" : '<article class="page page--rightbar" id="maincontent" role="main">
+  <h2>HTML</h2>
+  {{ highlight({
+    "html" : '<main class="page page--rightbar" id="maincontent" role="main">
   <div class="page__header">
     <div class="nhsuk-width-container">
       [ PAGE_BACK ]
@@ -56,44 +58,42 @@
       [ TAXONOMIES ]
     </div>
   </div>
-  <div class="nhsuk-width-container">
-    <div class="page__layout">
-      <div class="page__main">
-        <div class="page__content">
-          [ CONTENT--MAIN_BLOCKS ]
-        </div>
-        [ PAGE_LASTUPDATED ]
+  <div class="page__layout nhsuk-width-container">
+    <div class="page__main">
+      <div class="page__content">
+        [ CONTENT--MAIN_BLOCKS ]
       </div>
-      <aside class="page__rightbar">
-        [ CONTENT--SIDEBAR_BLOCKS ]
-      </aside>
     </div>
+    <aside class="page__rightbar">
+      [ CONTENT--SIDEBAR_BLOCKS ]
+    </aside>
   </div>
   <div class="page__footer">
+    [ PAGE_LASTUPDATED ]
     [ INTEMPLATE_BACKTOTOP ]
   </div>
   <section class="page__feature">
     [ CONTENT--FEATURED_BLOCKS ]
   </section>
-</article>'
-  }) 
-}}
+</main>'
+  })
+  }}
 
-    <h2>Components</h2>
-    {{ components({
-        'data' : [
-            {
-                'type' : 'Furniture',
-                'list' : ['Page', 'Content']
-            },
-            {
-                'type' : 'Content Blocks',
-                'list' : ['Main', 'Sidebar', 'Featured']
-            }
-        ]
-    }) }}
+  <h2>Components</h2>
+  {{ components({
+    'data' : [
+      {
+        'type' : 'Furniture',
+        'list' : ['Page', 'Content']
+      },
+      {
+        'type' : 'Content Blocks',
+        'list' : ['Main', 'Sidebar', 'Featured']
+      }
+    ]
+  }) }}
 
-    <hr />
+  <hr />
 
 {% endblock %}
 

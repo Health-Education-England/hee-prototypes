@@ -67,9 +67,9 @@
               <li class='current'><a href="/templates/base-fullwidth">Base</a></li>
               <li><a href="/templates/homepage">Homepage</a></li>
               <li><a href="/templates/landing-page">Landing Page</a></li>
-              <li><a href="/templates/404">404</a></li>
-              <li><a href="/templates/az-listing">A-Z Listing</a></li>
-              <li><a href="/templates/search-listing">Search Listing</a></li>
+              <li>404</li>
+              <li>A-Z Listing</li>
+              <li>Search Listing</li>
             </ul>
             <h3>Leftbar</h3>
             <ul>
@@ -112,22 +112,20 @@
       &lt;/div&gt;
     [ ENDIF ]
   &lt;/div&gt;
-  &lt;div class=&quot;page__main&quot;&gt;
-    &lt;div class=&quot;nhsuk-width-container&quot;&gt;
-      [ IF HOMEPAGE, LANDINGHUB, 404 ]
-      &lt;div class=&quot;page__content&quot;&gt;
-        [ CONTENT--MAIN_BLOCKS ]
-      &lt;/div&gt;
-      [ ELSEIF SEARCH_LISTING ]
-        [ SEARCH_INPUT ]
-        [ RESULTS_TITLE | RESULTS_SORTING ]
-        [ RESULTS_LISTING ]
-        [ RESULTS_PAGINATION ]
-      [ ELSEIF AZ_LISTING ]
-        [ AZLISTING_NAV ]
-        [ AZLISTING_RESULTS ]
-      [ ENDIF ]
+  &lt;div class=&quot;page__main nhsuk-width-container&quot;&gt;
+    [ IF HOMEPAGE, LANDINGHUB, 404 ]
+    &lt;div class=&quot;page__content&quot;&gt;
+      [ CONTENT--MAIN_BLOCKS ]
     &lt;/div&gt;
+    [ ELSEIF SEARCH_LISTING ]
+      [ SEARCH_INPUT ]
+      [ RESULTS_TITLE | RESULTS_SORTING ]
+      [ RESULTS_LISTING ]
+      [ RESULTS_PAGINATION ]
+    [ ELSEIF AZ_LISTING ]
+      [ AZLISTING_NAV ]
+      [ AZLISTING_RESULTS ]
+    [ ENDIF ]
   &lt;/div&gt;
   &lt;div class=&quot;page__footer&quot;&gt;
   &lt;/div&gt;
