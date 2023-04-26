@@ -1,6 +1,6 @@
 {% extends "example-template-fullwidth.html" %}
 
-{% set page_title = 'Mental Health - Workforce, Training and Education, NHS England' %}
+{% set page_title = 'NHS Digital Academy - Workforce, Training and Education, NHS England' %}
 
 {% block pageClass %}page--fullwidth alpha-fullwidth double-menu{% endblock %}
 {% block pageHeaderClass %}has-microhero{% endblock %}
@@ -12,12 +12,10 @@
     breadcrumb({
       items: [
         {
-          href: basePath + "/",
-          text: "HEE"
+          href: basePath + "/alpha/third-b-index.html",
+          text: "WTE"
         }
-      ],
-      href: basePath + "#",
-      text: "Healthcare topics"
+      ]
     })
   }}
 {% endblock %}
@@ -32,7 +30,7 @@
     {% import "alpha/_third-b-menu-main.html" as mainMenu %}
     {{ megaMenu({
       id: "main",
-      activeItemIndex: 1,
+      activeItemIndex: 4,
       ariaLabel: "Primary navigation",
       theme: "theme-white-blue",
       primaryLinks: mainMenu.items
@@ -43,12 +41,12 @@
       "showSearch": "false",
       "showLogos": "false",
       "heeHref": basePath + "/alpha/third-b-index.html",
-      "homeHref": "/alpha/third-b-mental-health.html",
+      "homeHref": "/alpha/third-b-nhs-digital-academy.html",
       "classes": "nhsuk-header--white",
       "organisation": {
         "name": "Workforce, Training and Education",
         "split": "",
-        "descriptor": "Mental Health"
+        "descriptor": "Digital Academy"
       },
       "logos": [
         {
@@ -77,51 +75,32 @@
 
 {% block pageHeader %}
   {{ microHero({
-    imgURL: basePath + "/images/alpha-mental-health-revised.jpg"
+    imgURL: basePath + "/images/alpha-digital-hero.jpg"
   }) }}
 
   {% set secondaryMenuItems = [
     {
-      label: "Mental health"
-    },
-    {
-      label: "Training and education",
+      label: "Digital Academy",
       url: "#"
     },
     {
-      label: "Evidence and resources",
+      label: "Training & Education",
       url: "#"
     },
     {
-      label: "Get involved",
-      url: "#",
-      children: [
-        [
-          {
-            label: "Collaboration",
-            url: "#"
-          },
-          {
-            label: "Opportunities",
-            url: basePath + "/alpha/third-b-opportunity.html"
-          },
-          {
-            label: "Pathways",
-            url: "#"
-          },
-          {
-            label: "Roles",
-            url: "#"
-          }
-        ]
-      ]
+      label: "Evidence & resources",
+      url: "#"
     },
     {
       label: "Support",
       url: "#"
     },
     {
-      label: "Mental Health Workforce",
+      label: "Digital Workforce",
+      url: "#"
+    },
+    {
+      title: "Our team",
       url: "#"
     }
   ] %}
@@ -136,15 +115,29 @@
   <br>
 
   <div class="nhsuk-width-container">
-    <h1>Mental Health</h1>
-    <span class="nhsuk-caption-xl">Healthcare Topics</span>
+    <h1>Digital Academy</h1>
+    <span class="nhsuk-caption-xl">Training and Education</span>
+    <p class="nhsuk-lede-text">Welcome to the NHS Digital Academy. Here you will find all of the latest information regarding learning programmes and future plans.</p>
   </div>
 {% endblock %}
 
 {% block pageContent %}
-  <p>Mental health is just as important as physical health, and it is vital for the NHS to provide services to its patients. There are a range of ways that health professionals can be involved in the provision of mental health services across different professions and roles. Multi-disciplinary working is a key aspect of providing high quality mental health services.</p>
+  <h2>What is the NHS Digital Academy?</h2>
+  <p>The NHS Digital Academy is a virtual organisation set up to develop a new generation of excellent digital leaders who can drive the information and technology transformation of the NHS.</p>
 
-  <h2>What is Mental Health?</h2>
-  <p>Mental health is a state of well-being in which the individual realises his or her own potential, can cope with the normal stresses of life, can work productively and fruitfully, and is able to make a contribution to his or her community.</p>
-  <p>Mental health is a broad concept that encompasses our emotional, psychological, and social well-being. It affects how we think, feel, and act, and it can also influence our physical health.</p>
+  <p>The Academy offers a range of learning programmes, including:</p>
+  <ul>
+    <li><strong>Digital Leadership Programme:</strong> This is a year-long programme that equips leaders with the skills and knowledge they need to lead digital transformation in the NHS.</li>
+    <li><strong>Digital Acceleration Programme:</strong> This is a six-month programme that helps individuals develop the skills and knowledge they need to accelerate digital transformation in their organisations.</li>
+    <li><strong>Digital Skills Programme:</strong> This is a short course that provides individuals with the essential digital skills they need to work in the NHS.</li>
+  </ul>
+
+  <p>The Academy also offers a range of support services, including:</p>
+  <ul>
+    <li><strong>Mentoring:</strong> The Academy provides mentors to support individuals as they develop their digital skills and knowledge.</li>
+    <li><strong>Networking:</strong> The Academy provides opportunities for individuals to network with other digital leaders in the NHS.</li>
+    <li><strong>Research:</strong> The Academy conducts research into digital transformation in the NHS.</li>
+  </ul>
+
+  <p>The NHS Digital Academy is committed to developing the next generation of digital leaders who can drive the information and technology transformation of the NHS.</p>
 {% endblock %}
