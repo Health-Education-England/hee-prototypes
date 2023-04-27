@@ -1,11 +1,11 @@
 {% extends "example-template-fullwidth.html" %}
 
-{% set page_title = 'Wellbeing and psychological support - Workforce, Training and Education, NHS England' %}
+{% set page_title = 'Evidence and Resources - Workforce, Training and Education, NHS England' %}
 
 {% block pageClass %}page--fullwidth alpha-fullwidth double-menu{% endblock %}
 {% block pageHeaderClass %}has-microhero{% endblock %}
 
-{% block pageTitle %}{{ page_title }}{% endblock %}
+{% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
 
 {% block breadcrumbs %}
   {{
@@ -13,15 +13,11 @@
       items: [
         {
           href: basePath + "/",
-          text: "WTE"
-        },
-        {
-          href: basePath + "#",
-          text: "Support"
+          text: "HEE"
         }
       ],
-      href: basePath + "/alpha/third-a-psw.html",
-      text: "Professional Support & Wellbeing"
+      href: "#",
+      text: "Healthcare topics"
     })
   }}
 {% endblock %}
@@ -33,12 +29,12 @@
       "showSearch": "false",
       "showLogos": "false",
       "heeHref": basePath + "/alpha/third-a-index.html",
-      "homeHref": "/alpha/third-a-psw.html",
+      "homeHref": "/alpha/third-a-mental-health.html",
       "classes": "nhsuk-header--white",
       "organisation": {
         "name": "Workforce, Training and Education",
         "split": "",
-        "descriptor": "Professional Support and Wellbeing"
+        "descriptor": "Mental Health"
       },
       "logos": [
         {
@@ -74,7 +70,7 @@
 
 {% block pageHeader %}
   {{ microHero({
-    imgURL: basePath + "/images/alpha-wellbeing-hero.jpg"
+    imgURL: basePath + "/images/alpha-involved-hero.jpg"
   }) }}
 
   {{ secondaryMenu({
@@ -82,55 +78,54 @@
     theme: "theme-black-text",
     items: [
       {
-        title: "PSW",
-        url: basePath + "/alpha/third-a-psw.html"
+        title: "Mental health",
+        url: basePath + "/alpha/third-a-mental-health.html"
+      },
+      {
+        title: "Training and education",
+        url: basePath + "/alpha/third-a-mh-training-education.html"
       },
       {
         active: true,
-        title: "Wellbeing & psychological support"
+        title: "Evidence and resources"
       },
       {
-        title: "Coaching support",
-        url: "#"
+        title: "Get involved",
+        url: basePath + "/alpha/third-a-mh-get-involved.html"
       },
       {
-        title: "Careers support",
-        url: "#"
+        title: "Support",
+        url: basePath + "/alpha/third-a-mh-support.html"
       },
       {
-        title: "Study support",
-        url: "#"
+        title: "Workforce",
+        url: basePath + "/alpha/third-a-mh-workforce.html"
       }
     ]
   }) }}
 
   <div class="nhsuk-width-container">
-    <h1>Wellbeing and psychological support</h1>
-    <span class="nhsuk-caption-xl">Professional Support and Wellbeing</span>
+    <h1>Evidence and Resources</h1>
+    <span class="nhsuk-caption-xl">Mental Health</span>
   </div>
 {% endblock %}
 
 {% block pageContent %}
   {% set items = [
     {
-      title: "Wellbeing resources",
-      href: basePath + "/alpha/third-a-wellbeing-resources.html",
-      summary: "Access tools and resources to help you manage your wellbeing."
+      title: "Publications",
+      href: "#",
+      summary: "Find the latest publications about training and working in mental health services"
     },
     {
-      title: "Occupational health",
-      href: basePath + "#l",
-      summary: "Get information about how occupational health can help you."
+      title: "Data",
+      href: "#",
+      summary: "Access data about mental health and mental health services"
     },
     {
-      title: "Mental health support",
-      href: basePath + "#",
-      summary: "Find out how to access support for your mental health."
-    },
-    {
-      title: "Support for addiction",
-      href: basePath + "#",
-      summary: "Access resources and support for addiction."
+      title: "Resources",
+      href: "#",
+      summary: "Find resources that can help you if you are training or working in mental health services"
     }
   ]
   %}

@@ -1,11 +1,11 @@
 {% extends "example-template-fullwidth.html" %}
 
-{% set page_title = 'Parent Site - Double menu - Get Involved' %}
+{% set page_title = 'Professional Support & Wellbeing - Careers Support - Workforce, Training and Education, NHS England' %}
 
 {% block pageClass %}page--fullwidth alpha-fullwidth double-menu{% endblock %}
 {% block pageHeaderClass %}has-microhero{% endblock %}
 
-{% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
+{% block pageTitle %}{{ page_title }}{% endblock %}
 
 {% block breadcrumbs %}
   {{
@@ -13,11 +13,15 @@
       items: [
         {
           href: basePath + "/",
-          text: "HEE"
+          text: "WTE"
+        },
+        {
+          href: "#",
+          text: "Support"
         }
       ],
-      href: basePath + "#",
-      text: "Healthcare topics"
+      href: basePath + "/alpha/third-a-psw.html",
+      text: "Professional Support & Wellbeing"
     })
   }}
 {% endblock %}
@@ -29,12 +33,12 @@
       "showSearch": "false",
       "showLogos": "false",
       "heeHref": basePath + "/alpha/third-a-index.html",
-      "homeHref": "/alpha/third-a-mental-health.html",
+      "homeHref": "/alpha/third-a-psw.html",
       "classes": "nhsuk-header--white",
       "organisation": {
         "name": "Workforce, Training and Education",
         "split": "",
-        "descriptor": "Mental Health"
+        "descriptor": "Professional Support and Wellbeing"
       },
       "logos": [
         {
@@ -70,7 +74,7 @@
 
 {% block pageHeader %}
   {{ microHero({
-    imgURL: basePath + "/images/alpha-involved-hero.jpg"
+    imgURL: basePath + "/images/alpha-wellbeing-hero.jpg"
   }) }}
 
   {{ secondaryMenu({
@@ -78,63 +82,51 @@
     theme: "theme-black-text",
     items: [
       {
-        title: "Mental health",
-        url: basePath + "/alpha/third-a-mental-health.html"
+        title: "PSW",
+        url: basePath + "/alpha/third-a-psw.html"
       },
       {
-        title: "Training and education",
-        url: "#"
+        title: "Wellbeing & psychological support",
+        url: basePath + "/alpha/third-a-psw-wellbeing-support.html"
       },
       {
-        title: "Evidence and resources",
-        url: "#"
+        title: "Coaching support",
+        url: basePath + "/alpha/third-a-psw-coaching.html"
       },
       {
         active: true,
-        title: "Get involved"
-      },
-      {
-        title: "Support",
-        url: "#"
-      },
-      {
-        title: "Mental Health Workforce",
-        url: "#"
-      },
-      {
-        title: "Our team",
-        url: "#"
+        title: "Careers support"
       }
     ]
   }) }}
 
   <div class="nhsuk-width-container">
-    <h1>Get involved</h1>
-    <span class="nhsuk-caption-xl">Mental Health</span>
+    <h1>Careers support</h1>
+    <span class="nhsuk-caption-xl">Professional Support and Wellbeing</span>
   </div>
 {% endblock %}
 
 {% block pageContent %}
   {% set items = [
     {
-      title: "Collaboration",
-      href: basePath + "#",
-      summary: "Get in touch with other health and care professionals working in the area of mental health."
+      title: "Career exploration",
+      href: "#",
+      summary: "Explore the different options that are open to you if you pursue a career in the health sector"
     },
     {
-      title: "Opportunities",
-      href: basePath + "/alpha/third-a-opportunity.html",
-      summary: "Find opportunities to train, work and volunteer in mental health services."
+      title: "Careers fair",
+      href: "#",
+      summary: "Find all the information about our next careers fair"
     },
     {
-      title: "Pathways",
-      href: basePath + "#",
-      summary: "Discover different career pathways in mental health services."
+      title: "Decision making",
+      href: "#",
+      summary: "Find tools and resources to help you make decisions about your career"
     },
     {
-      title: "Roles",
-      href: basePath + "#",
-      summary: "Find out about what's involved in the different roles in mental health services."
+      title: "Self assessment",
+      href: "#",
+      summary: "Access our self assessment tools to help you identify your skills and capabilities"
     }
   ]
   %}
