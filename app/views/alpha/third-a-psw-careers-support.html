@@ -1,6 +1,6 @@
 {% extends "example-template-fullwidth.html" %}
 
-{% set page_title = 'Wellbeing and psychological support - Workforce, Training and Education, NHS England' %}
+{% set page_title = 'Professional Support & Wellbeing - Careers Support - Workforce, Training and Education, NHS England' %}
 
 {% block pageClass %}page--fullwidth alpha-fullwidth double-menu{% endblock %}
 {% block pageHeaderClass %}has-microhero{% endblock %}
@@ -86,26 +86,22 @@
         url: basePath + "/alpha/third-a-psw.html"
       },
       {
-        active: true,
-        title: "Wellbeing & psychological support"
+        title: "Wellbeing & psychological support",
+        url: basePath + "/alpha/third-a-psw-wellbeing-support.html"
       },
       {
         title: "Coaching support",
-        url: "#"
+        url: basePath + "/alpha/third-a-psw-coaching.html"
       },
       {
-        title: "Careers support",
-        url: "#"
-      },
-      {
-        title: "Study support",
-        url: "#"
+        active: true,
+        title: "Careers support"
       }
     ]
   }) }}
 
   <div class="nhsuk-width-container">
-    <h1>Wellbeing and psychological support</h1>
+    <h1>Careers support</h1>
     <span class="nhsuk-caption-xl">Professional Support and Wellbeing</span>
   </div>
 {% endblock %}
@@ -113,24 +109,24 @@
 {% block pageContent %}
   {% set items = [
     {
-      title: "Wellbeing resources",
-      href: basePath + "/alpha/third-a-wellbeing-resources.html",
-      summary: "Access tools and resources to help you manage your wellbeing."
-    },
-    {
-      title: "Occupational health",
-      href: basePath + "#l",
-      summary: "Get information about how occupational health can help you."
-    },
-    {
-      title: "Mental health support",
+      title: "Career exploration",
       href: "#",
-      summary: "Find out how to access support for your mental health."
+      summary: "Explore the different options that are open to you if you pursue a career in the health sector"
     },
     {
-      title: "Support for addiction",
+      title: "Careers fair",
       href: "#",
-      summary: "Access resources and support for addiction."
+      summary: "Find all the information about our next careers fair"
+    },
+    {
+      title: "Decision making",
+      href: "#",
+      summary: "Find tools and resources to help you make decisions about your career"
+    },
+    {
+      title: "Self assessment",
+      href: "#",
+      summary: "Access our self assessment tools to help you identify your skills and capabilities"
     }
   ]
   %}

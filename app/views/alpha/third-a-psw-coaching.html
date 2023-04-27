@@ -1,6 +1,6 @@
 {% extends "example-template-fullwidth.html" %}
 
-{% set page_title = 'Professional Support and Wellbeing - Workforce, Training and Education, NHS England' %}
+{% set page_title = 'Professional Support & Wellbeing - Coaching support - Workforce, Training and Education, NHS England' %}
 
 {% block pageClass %}page--fullwidth alpha-fullwidth double-menu{% endblock %}
 {% block pageHeaderClass %}has-microhero{% endblock %}
@@ -14,10 +14,14 @@
         {
           href: basePath + "/",
           text: "WTE"
+        },
+        {
+          href: "#",
+          text: "Support"
         }
       ],
-      href: "#",
-      text: "Support"
+      href: basePath + "/alpha/third-a-psw.html",
+      text: "Professional Support & Wellbeing"
     })
   }}
 {% endblock %}
@@ -70,7 +74,7 @@
 
 {% block pageHeader %}
   {{ microHero({
-    imgURL: basePath + "/images/alpha-psw.jpg"
+    imgURL: basePath + "/images/alpha-wellbeing-hero.jpg"
   }) }}
 
   {{ secondaryMenu({
@@ -78,16 +82,16 @@
     theme: "theme-black-text",
     items: [
       {
-        active: true,
-        title: "PSW"
+        title: "PSW",
+        url: basePath + "/alpha/third-a-psw.html"
       },
       {
         title: "Wellbeing & psychological support",
         url: basePath + "/alpha/third-a-psw-wellbeing-support.html"
       },
       {
-        title: "Coaching support",
-        url: basePath + "/alpha/third-a-psw-coaching.html"
+        active: true,
+        title: "Coaching support"
       },
       {
         title: "Careers support",
@@ -97,18 +101,27 @@
   }) }}
 
   <div class="nhsuk-width-container">
-    <h1>Professional Support and Wellbeing (PSW)</h1>
-    <span class="nhsuk-caption-xl">Support</span>
-    <p class="nhsuk-lede-text">Workplace, Training and Education is committed to enabling all postgraduate medical and dental trainees to maximise the opportunities available to them throughout their training</p>
+    <h1>Coaching support</h1>
+    <span class="nhsuk-caption-xl">Professional Support and Wellbeing</span>
   </div>
 {% endblock %}
 
 {% block pageContent %}
-  <h2>How can Professional Support and Wellbeing help you?</h2>
-  <p>Professional Support and Wellbeing (PSW) can help you in a number of ways. First, they can provide you with support and guidance on how to manage your workload and stress levels. Second, they can help you to develop coping mechanisms for dealing with difficult situations. Third, they can connect you with resources and support networks that can help you to stay well. Finally, they can provide you with confidential advice and support if you are struggling with your mental health. </p>
-  <p>PSW can help you to:</p>
-  <ul>
-    <li><strong>Manage your workload and stress levels.</strong> PSW can help you to identify the sources of stress in your life and develop strategies for managing them. They can also help you to set realistic expectations for yourself and to prioritise your work.</li>
-    <li><strong>Connect with resources and support networks.</strong> PSW can connect you with resources and support networks that can help you to stay well. These resources may include things like counselling, support groups, or online resources.</li>
-  </ul>
+  {% set items = [
+    {
+      title: "About coaching",
+      href: "#",
+      summary: "Find out what coaching is and how it could help you"
+    },
+    {
+      title: "Book an appointment",
+      href: "#",
+      summary: "Find out how to book a coaching appointment"
+    }
+  ]
+  %}
+
+  <br>
+
+  {{ featuredContent(items) }}
 {% endblock %}
