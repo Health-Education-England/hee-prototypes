@@ -7,19 +7,6 @@
 
 {% block pageTitle %}{{ page_title }}{% endblock %}
 
-{% block breadcrumbs %}
-  {{
-    breadcrumb({
-      items: [
-        {
-          href: basePath + "/alpha/third-b-index.html",
-          text: "WTE"
-        }
-      ]
-    })
-  }}
-{% endblock %}
-
 {% block header %}
   <div class="site-header">
     {{ phaseBanner({
@@ -112,7 +99,20 @@
     theme: "theme-black-white",
     primaryLinks: secondaryMenuItems
   }) }}
-  <br>
+
+
+  <div class="breadcrumbs alpha">
+    {{
+      breadcrumb({
+        items: [
+          {
+            href: basePath + "/alpha/third-b-index.html",
+            text: "WTE"
+          }
+        ]
+      })
+    }}
+  </div>
 
   <div class="nhsuk-width-container">
     <h1>Digital Academy</h1>

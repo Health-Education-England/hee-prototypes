@@ -7,21 +7,6 @@
 
 {% block pageTitle %}{{ page_title }}{% endblock %}
 
-{% block breadcrumbs %}
-  {{
-    breadcrumb({
-      items: [
-        {
-          href: basePath + "/",
-          text: "WTE"
-        }
-      ],
-      href: "#",
-      text: "Support"
-    })
-  }}
-{% endblock %}
-
 {% block header %}
   <div class="site-header">
     {{ phaseBanner({
@@ -157,7 +142,22 @@
     theme: "theme-black-white",
     primaryLinks: secondaryMenuItems
   }) }}
-  <br>
+
+
+  <div class="breadcrumbs alpha">
+    {{
+      breadcrumb({
+        items: [
+          {
+            href: basePath + "/",
+            text: "WTE"
+          }
+        ],
+        href: "#",
+        text: "Support"
+      })
+    }}
+  </div>
 
   <div class="nhsuk-width-container">
     <h1>Professional Support and Wellbeing (PSW)</h1>

@@ -2,31 +2,8 @@
 
 {% block pageTitle %}Wellbeing Resources - Workforce, Training and Education, NHS England{% endblock %}
 
-{% block pageClass %}page--fullwidth alpha-fullwidth double-menu{% endblock %}
+{% block pageClass %}page--fullwidth alpha-fullwidth double-menu third-a{% endblock %}
 {% block pageHeaderClass %}has-microhero{% endblock %}
-
-{% block breadcrumbs %}
-  {{
-    breadcrumb({
-      items: [
-        {
-          href: basePath + "/alpha/single-index.html",
-          text: "WTE"
-        },
-        {
-          href: "#",
-          text: "Support"
-        },
-        {
-          href: basePath + "/alpha/single-psw.html",
-          text: "Professional support & wellbeing"
-        }
-      ],
-      href: "#",
-      text: "Wellbeing & psychological support"
-    })
-  }}
-{% endblock %}
 
 {% block header %}
   <div class="site-header">
@@ -105,6 +82,29 @@
       }
     ]
   }) }}
+
+  <div class="breadcrumbs alpha">
+    {{
+      breadcrumb({
+        items: [
+          {
+            href: basePath + "/alpha/single-index.html",
+            text: "WTE"
+          },
+          {
+            href: "#",
+            text: "Support"
+          },
+          {
+            href: basePath + "/alpha/single-psw.html",
+            text: "Professional support & wellbeing"
+          }
+        ],
+        href: "#",
+        text: "Wellbeing & psychological support"
+      })
+    }}
+  </div>
 
   <div class="nhsuk-width-container">
     <h1>Wellbeing resources</h1>

@@ -2,29 +2,10 @@
 
 {% set page_title = 'Professional Support & Wellbeing - Wellbeing and psychological support - Workforce, Training and Education, NHS England' %}
 
-{% block pageClass %}page--fullwidth alpha-fullwidth double-menu{% endblock %}
+{% block pageClass %}page--fullwidth alpha-fullwidth double-menu third-a{% endblock %}
 {% block pageHeaderClass %}has-microhero{% endblock %}
 
 {% block pageTitle %}{{ page_title }}{% endblock %}
-
-{% block breadcrumbs %}
-  {{
-    breadcrumb({
-      items: [
-        {
-          href: basePath + "/",
-          text: "WTE"
-        },
-        {
-          href: "#",
-          text: "Support"
-        }
-      ],
-      href: basePath + "/alpha/third-a-psw.html",
-      text: "Professional Support & Wellbeing"
-    })
-  }}
-{% endblock %}
 
 {% block header %}
   <div class="site-header">
@@ -99,6 +80,25 @@
       }
     ]
   }) }}
+
+  <div class="breadcrumbs alpha">
+    {{
+    breadcrumb({
+      items: [
+        {
+          href: basePath + "/alpha/third-a-index.html",
+          text: "WTE"
+        },
+        {
+          href: "#",
+          text: "Support"
+        }
+      ],
+      href: basePath + "/alpha/third-a-psw.html",
+      text: "Professional Support & Wellbeing"
+    })
+    }}
+  </div>
 
   <div class="nhsuk-width-container">
     <h1>Wellbeing and psychological support</h1>

@@ -2,25 +2,10 @@
 
 {% set page_title = 'Get Involved - Workforce, Training and Education, NHS England' %}
 
-{% block pageClass %}page--fullwidth alpha-fullwidth double-menu{% endblock %}
+{% block pageClass %}page--fullwidth alpha-fullwidth double-menu third-a{% endblock %}
 {% block pageHeaderClass %}has-microhero{% endblock %}
 
 {% block pageTitle %}{{ page_title }}{% endblock %}
-
-{% block breadcrumbs %}
-  {{
-    breadcrumb({
-      items: [
-        {
-          href: basePath + "/",
-          text: "HEE"
-        }
-      ],
-      href: "#",
-      text: "Healthcare topics"
-    })
-  }}
-{% endblock %}
 
 {% block header %}
   <div class="site-header">
@@ -103,6 +88,25 @@
       }
     ]
   }) }}
+
+  <div class="breadcrumbs alpha">
+    {{
+      breadcrumb({
+        items: [
+          {
+            href: basePath + "/alpha/third-a-index.html",
+            text: "WTE"
+          },
+          {
+            href: "#",
+            text: "Healthcare topics"
+          }
+        ],
+        href: basePath + "/alpha/third-a-mental-health.html",
+        text: "Mental health"
+      })
+    }}
+  </div>
 
   <div class="nhsuk-width-container">
     <h1>Get involved</h1>

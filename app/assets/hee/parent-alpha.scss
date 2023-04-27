@@ -2,14 +2,24 @@
   .page__feature, .page__footer {
     display: none;
   }
+}
 
-  &.double-menu {
-    .hee-microhero {
-      margin: 0 !important;
-    }
+.page.double-menu {
+  .hee-microhero {
+    margin: 0 !important;
   }
 }
 
 .nhsuk-skip-link {
   z-index: 150 !important;
+}
+
+.breadcrumbs.alpha {
+  margin-bottom: nhsuk-spacing(8);
+}
+
+.third-a {
+  .hee-secondary-menu {
+    margin-bottom: 0;
+  }
 }
