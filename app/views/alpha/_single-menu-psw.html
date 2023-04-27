@@ -1,0 +1,76 @@
+{%- from 'hee/blocks/scaffolding/mega-menu/macro.njk' import megaMenu %}
+
+{{ megaMenu({
+  id: "menu-main",
+  ariaLabel: "Primary navigation",
+  theme: "theme-grey",
+  primaryLinks: [
+    {
+      label: "Professional support and wellbeing"
+    },
+    {
+      url: "#",
+      label: "Wellbeing and psychological support",
+      children: [
+        [
+          {
+            url: basePath + "/alpha/single-wellbeing-resources.html",
+            label: "Wellbeing resources"
+          },
+          {
+            url: "#",
+            label: "Occupational health"
+          },
+          {
+            url: "#",
+            label: "Mental health support"
+          },
+          {
+            url: "#",
+            label: "Support for addiction"
+          }
+        ]
+      ]
+    },
+    {
+      url: "#",
+      label: "Coaching support",
+      children: [
+        [
+          {
+            url: "#",
+            label: "About coaching "
+          },
+          {
+            url: "#",
+            label: "Book an appointment"
+          }
+        ]
+      ]
+    },
+    {
+      url: "#",
+      label: "Careers support ",
+      children: [
+        [
+          {
+            url: "#",
+            label: "Career exploration "
+          },
+          {
+            url: "#",
+            label: "Careers fair "
+          },
+          {
+            url: "#",
+            label: "Decision making "
+          },
+          {
+            url: "#",
+            label: "Self assessment "
+          }
+        ]
+      ]
+    }
+  ]
+}) }}

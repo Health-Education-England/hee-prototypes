@@ -1,0 +1,139 @@
+{% extends "example-template-fullwidth.html" %}
+
+{% block pageTitle %}Wellbeing Resources - Workforce, Training and Education, NHS England{% endblock %}
+
+{% block pageClass %}page--fullwidth alpha-fullwidth double-menu{% endblock %}
+{% block pageHeaderClass %}has-microhero{% endblock %}
+
+{% block breadcrumbs %}
+  {{
+    breadcrumb({
+      items: [
+        {
+          href: basePath + "/alpha/single-index.html",
+          text: "WTE"
+        },
+        {
+          href: "#",
+          text: "Support"
+        },
+        {
+          href: basePath + "/alpha/single-psw.html",
+          text: "Professional support & wellbeing"
+        }
+      ],
+      href: "#",
+      text: "Wellbeing & psychological support"
+    })
+  }}
+{% endblock %}
+
+{% block header %}
+  <div class="site-header">
+    {{ customHeader({
+      "showNav": "false",
+      "showSearch": "false",
+      "showLogos": "false",
+      "heeHref": basePath + "/alpha/third-a-index.html",
+      "homeHref": "/alpha/third-a-psw.html",
+      "classes": "nhsuk-header--white",
+      "organisation": {
+        "name": "Workforce, Training and Education",
+        "split": "",
+        "descriptor": "Professional Support and Wellbeing"
+      },
+      "logos": [
+        {
+          "href": "https://www.nimdta.gov.uk/",
+          "label": "Northern Ireland Medical and Dental Training Agency Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/nimdta-logo.png",
+          "imgAlt": "Logo for Northern Ireland Medical and Dental Training Agency"
+        },
+        {
+          "href": "https://www.nes.scot.nhs.uk/",
+          "label": "NHS Education for Scotland Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/nhs-scotland-logo.png",
+          "imgAlt": "Logo for NHS Education for Scotland"
+        },
+        {
+          "href": "https://heiw.nhs.wales/",
+          "label": "Health Education and Improvement Wales Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/heiw-logo.png",
+          "imgAlt": "Logo for Health Education and Improvement Wales"
+        }
+      ]
+    })
+    }}
+
+    {% include "alpha/_third-a-menu-main.html" %}
+  </div>
+
+  {{ phaseBanner({
+    tag: "Alpha",
+    description: 'This is a new service – your <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.'
+  }) }}
+{% endblock %}
+
+{% block pageHeader %}
+  {{ microHero({
+    imgURL: basePath + "/images/alpha-resources-hero.jpg"
+  }) }}
+
+  {{ secondaryMenu({
+    homeIcon: true,
+    theme: "theme-black-text",
+    items: [
+      {
+        title: "PSW",
+        url: basePath + "/alpha/third-a-psw.html"
+      },
+      {
+        active: true,
+        title: "Wellbeing & psychological support"
+      },
+      {
+        title: "Coaching support",
+        url: "#"
+      },
+      {
+        title: "Careers support",
+        url: "#"
+      },
+      {
+        title: "Study support",
+        url: "#"
+      }
+    ]
+  }) }}
+
+  <div class="nhsuk-width-container">
+    <h1>Wellbeing resources</h1>
+    <span class="nhsuk-caption-xl">Professional Support and Wellbeing</span>
+    <p class="nhsuk-lede-text">Wellbeing resources can be a valuable tool for anyone who is looking to improve their mental and physical health.</p>
+  </div>
+{% endblock %}
+
+{% block pageContent %}
+  {{ warningCallout({
+    heading: "NHS Staff Support Line",
+    HTML: "<p>A free helpline is available to all NHS staff in England. Trained professionals can give you advice on coaching, bereavement care, mental health and financial help. Support via text is also available to doctors any time of day.</p>"
+  }) }}
+
+  <h2>Different types of support</h2>
+  <p>NHS staff have been given free access to a number of wellbeing apps to support with their mental health and wellbeing. Click each link below for more information, including how to access support and when this free offer expires.</p>
+  <p><strong>Accessing Support</strong><br>A referral must first be made to the PSW service by the doctor or dentist in training themselves (via self-referral) or via the doctors Supervisor, Training Programme Director or Head of School.</p>
+  <p><strong>Neurodiversity Assessment</strong><br>The PSW service supports doctors in training to recognise if they may have any neurodiversity condition which may be impacting on areas of their training and provides coping strategies to overcome these and give them the best chance to succeed.</p>
+  <p><strong>Access to work</strong><br>Access to work is a government funded scheme and forms an important part of supporting your learning needs, helping you to achieve your full potential throughout your training and will fund important IT equipment and other individual requirements.</p>
+  <p><strong>Return to training</strong><br>SuppoRTT applies to doctors in training who have been out of training for a period of 3 months or more for example due to: a gap in training, parental leave, sick leave/phased return or OOP (Out of Programme).</p>
+
+  <p>SuppoRTT can offer, for example:</p>
+  <ul>
+    <li>A period of enhanced supervision</li>
+    <li>Refresher courses and simulation training</li>
+    <li>Mentoring or professional coaching</li>
+    <li>Conferences and workshops</li>
+    <li>Funding for other courses or development, as individually required.</li>
+  </ul>
+
+  <p><strong>Support with Disabilities</strong><br>We fully recognise that the majority of doctors in training with long-term health conditions, quite reasonably will not consider themselves as being disabled. Indeed, some doctors in training will have episodes of short-lived symptoms which may need temporary short-term adjustments. The support process however is available to all who have health conditions which might impact on their training so whether you have a long-term condition or a short term illness that might require some temporary adjustments, we want you to know that we are committed to assist you if we can.</p>
+{% endblock %}

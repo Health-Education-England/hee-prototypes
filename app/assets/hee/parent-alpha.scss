@@ -1,0 +1,15 @@
+.alpha-fullwidth {
+  .page__feature, .page__footer {
+    display: none;
+  }
+
+  &.double-menu {
+    .hee-microhero {
+      margin: 0 !important;
+    }
+  }
+}
+
+.nhsuk-skip-link {
+  z-index: 150 !important;
+}

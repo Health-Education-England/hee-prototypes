@@ -1,0 +1,95 @@
+{% extends "example-template-fullwidth.html" %}
+
+{% set page_title = 'Professional Support and Wellbeing (PSW) - Workforce, Training and Education, NHS England' %}
+
+{% block pageClass %}page--fullwidth alpha-fullwidth{% endblock %}
+{% block pageHeaderClass %}has-microhero{% endblock %}
+
+{% block pageTitle %}{{ page_title }}{% endblock %}
+
+{% block breadcrumbs %}
+  {{
+    breadcrumb({
+      items: [
+        {
+          href: basePath + "/",
+          text: "WTE"
+        }
+      ],
+      href: basePath + "#",
+      text: "Support"
+    })
+  }}
+{% endblock %}
+
+{% block header %}
+  <div class="site-header">
+    {{ backToHomeBanner({
+      url: basePath + "/alpha/single-index.html",
+      title: "Back to Workforce, training and education"
+    }) }}
+
+    {{ customHeader({
+      "showNav": "false",
+      "showSearch": "false",
+      "showLogos": "false",
+      "heeHref": basePath + "/alpha/single-index.html",
+      "homeHref": "/alpha/single-psw.html",
+      "classes": "nhsuk-header--white",
+      "organisation": {
+        "name": "Workforce, Training and Education",
+        "split": "",
+        "descriptor": "Professional Support and Wellbeing"
+      },
+      "logos": [
+        {
+          "href": "https://www.nimdta.gov.uk/",
+          "label": "Northern Ireland Medical and Dental Training Agency Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/nimdta-logo.png",
+          "imgAlt": "Logo for Northern Ireland Medical and Dental Training Agency"
+        },
+        {
+          "href": "https://www.nes.scot.nhs.uk/",
+          "label": "NHS Education for Scotland Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/nhs-scotland-logo.png",
+          "imgAlt": "Logo for NHS Education for Scotland"
+        },
+        {
+          "href": "https://heiw.nhs.wales/",
+          "label": "Health Education and Improvement Wales Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/heiw-logo.png",
+          "imgAlt": "Logo for Health Education and Improvement Wales"
+        }
+      ]
+    })
+    }}
+
+    {% include "alpha/_single-menu-psw.html" %}
+  </div>
+
+  {{ phaseBanner({
+    tag: "Alpha",
+    description: 'This is a new service – your <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.'
+  }) }}
+{% endblock %}
+
+{% block pageHeader %}
+  {{ microHero({
+    imgURL: basePath + "/images/alpha-psw.jpg"
+  }) }}
+  <div class="nhsuk-width-container">
+    <h1>Professional Support and Wellbeing (PSW)</h1>
+    <span class="nhsuk-caption-xl">Support</span>
+    <p class="nhsuk-lede-text">Workplace, Training and Education is committed to enabling all postgraduate medical and dental trainees to maximise the opportunities available to them throughout their training</p>
+  </div>
+{% endblock %}
+
+{% block pageContent %}
+  <h2>How can Professional Support and Wellbeing help you?</h2>
+  <p>Professional Support and Wellbeing (PSW) can help you in a number of ways. First, they can provide you with support and guidance on how to manage your workload and stress levels. Second, they can help you to develop coping mechanisms for dealing with difficult situations. Third, they can connect you with resources and support networks that can help you to stay well. Finally, they can provide you with confidential advice and support if you are struggling with your mental health. </p>
+  <p>PSW can help you to:</p>
+  <ul>
+    <li><strong>Manage your workload and stress levels.</strong> PSW can help you to identify the sources of stress in your life and develop strategies for managing them. They can also help you to set realistic expectations for yourself and to prioritise your work.</li>
+    <li><strong>Connect with resources and support networks.</strong> PSW can connect you with resources and support networks that can help you to stay well. These resources may include things like counselling, support groups, or online resources.</li>
+  </ul>
+{% endblock %}
