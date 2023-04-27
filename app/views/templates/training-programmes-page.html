@@ -1,7 +1,7 @@
 {% extends "prototype-inner.html" %}
 
-{% set page_url = 'training-programmes-homepage' %}
-{% set page_title = 'Training Programmes - Homepage' %}
+{% set page_url = 'training-programmes-page' %}
+{% set page_title = 'Training Programmes - Page' %}
 
 {% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
 
@@ -38,7 +38,7 @@
 {% block pageHeader %}
   <span class="nhsuk-caption-xl">Templates</span>
   <h1>{{ page_title }}</h1>
-  <p class="nhsuk-lede-text">Typically used for the Training Programmes homepage.</p>
+  <p class="nhsuk-lede-text">Used to display information regarding specific Training Programmes on a single page.</p>
 {% endblock %}
 
 {% block pageContent %}
@@ -52,20 +52,15 @@
   
   <h2>HTML</h2>
 {{ highlight({
-  "html" : '<article class="page page--rightbar" id="maincontent" role="main">
-  <div class="page__breadcrumbs">[ INTEMPLATE_BREADCRUMBS ]</div>
+  "html" : '<main class="page page--rightbar" id="maincontent" role="main">
   <div class="page__header">
-  <div class="nhsuk-width-container">
-    [ PAGE_BACK ]
-    <h1>[ PAGE_TITLE ]</h1>
-    <span class="nhsuk-caption-xl">[ PAGE_CAPTION ]</span>
-    <p class="nhsuk-lede-text">[ PAGE_SUMMARY ]</p>
-    [ PUBLISHED_INFO ]
-    [ TAXONOMIES ]
+    <div class="nhsuk-width-container">
+      <h1>[ PAGE_TITLE ]</h1>
+      <span class="nhsuk-caption-xl">[ PAGE_CAPTION ]</span>
+      <p class="nhsuk-lede-text">[ PAGE_SUMMARY ]</p>
+    </div>
   </div>
-  </div>
-  <div class="nhsuk-width-container">
-  <div class="page__layout">
+  <div class="page__layout nhsuk-width-container">
     <div class="page__main">
       <div class="page__content">
         [ CONTENT--MAIN_BLOCKS ]
@@ -76,14 +71,14 @@
       [ CONTENT--SIDEBAR_BLOCKS ]
     </aside>
   </div>
-  </div>
   <div class="page__footer">
-  [ INTEMPLATE_BACKTOTOP ]
+    [ PUBLISHED_INFO ]
+    [ INTEMPLATE_BACKTOTOP ]
   </div>
   <section class="page__feature">
-  [ CONTENT--FEATURED_BLOCKS ]
+    [ CONTENT--FEATURED_BLOCKS ]
   </section>
-  </article>'
+</main>'
   })
 }}
 
