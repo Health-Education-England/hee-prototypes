@@ -4,21 +4,6 @@
 
 {% block pageHeaderClass %}has-microhero{% endblock %}
 
-{% block breadcrumbs %}
-  {{
-    breadcrumb({
-      items: [
-          {
-              href: basePath + "/alpha/third-a-index.html",
-              text: "WTE"
-          }
-      ],
-      href: "#",
-      text: "About us"
-    })
-  }}
-{% endblock %}
-
 {% block header %}
   <div class="site-header">
     {{ customHeader({
@@ -68,6 +53,21 @@
   {{ microHero({
     imgURL: basePath + "/images/alpha-news-hero.jpg"
   }) }}
+
+  <div class="breadcrumbs alpha">
+    {{
+      breadcrumb({
+        items: [
+          {
+            href: basePath + "/alpha/third-a-index.html",
+            text: "WTE"
+          }
+        ],
+        href: "#",
+        text: "About us"
+      })
+    }}
+  </div>
 
   <div class="nhsuk-width-container">
     <h1>News</h1>

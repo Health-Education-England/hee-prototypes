@@ -7,21 +7,6 @@
 
 {% block pageTitle %}{{ page_title }}{% endblock %}
 
-{% block breadcrumbs %}
-  {{
-    breadcrumb({
-      items: [
-        {
-          href: basePath + "/",
-          text: "HEE"
-        }
-      ],
-      href: "#",
-      text: "Healthcare topics"
-    })
-  }}
-{% endblock %}
-
 {% block header %}
   <div class="site-header">
     {{ phaseBanner({
@@ -197,7 +182,21 @@
     theme: "theme-black-white",
     primaryLinks: secondaryMenuItems
   }) }}
-  <br>
+
+  <div class="breadcrumbs alpha">
+    {{
+      breadcrumb({
+        items: [
+          {
+            href: basePath + "/",
+            text: "HEE"
+          }
+        ],
+        href: "#",
+        text: "Healthcare topics"
+      })
+    }}
+  </div>
 
   <div class="nhsuk-width-container">
     <h1>Mental Health</h1>
