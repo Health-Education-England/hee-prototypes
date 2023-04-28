@@ -137,48 +137,6 @@
 
   <h2 class="toc_h2">Regions</h2>
   <p>Pellentesque id posuere sapien vestibulum, quam pellentesque at libero. Aliquam at id fames hendrerit in vulputate orci aliquet augue. Massa penatibus sociis et nisl. Enim aliquam mauris suscipit turpis non hendrerit felis.</p>
-  {{ navMap({
-    src: "/images/nav-maps/dental-regions.svg",
-    caption: {
-      items: [
-        {
-          id: "lk",
-          url: "#",
-          text: "London and Kent, Surrey and Sussex (KSS)"
-        },
-        {
-          id: "me",
-          url: "#",
-          text: "Midlands and the East"
-        },
-        {
-          id: "nenc",
-          url: "#",
-          text: "North East and North Cumbria"
-        },
-        {
-          id: "nw",
-          url: "#",
-          text: "North West"
-        },
-        {
-          id: "sw",
-          url: "#",
-          text: "South West"
-        },
-        {
-          id: "tvw",
-          url: "#",
-          text: "Thames Valley and Wessex"
-        },
-        {
-          id: "yh",
-          url: "#",
-          text: "Yorkshire and the Humber"
-        }
-      ]
-    }
-  }) }}
 
 {% endblock %}
 
@@ -201,12 +159,12 @@
         value: "24 July 2022"
       },
       {
-        label: "Topic:",
-        value: "<a href=\"#\">Profession 1</a>, <a href=\"#\">Topic 1</a>"
+        label: "Professions:",
+        value: "<a href=\"#\">Profession 1</a>, <a href=\"#\">Profession 2</a>"
       },
       {
-        label: "Estimated reading time:",
-        value: "2 mins"
+        label: "Topics:",
+        value: "<a href=\"#\">Topic 1</a>, <a href=\"#\">Topic 2</a>"
       }
     ]
   }) }}
@@ -261,4 +219,8 @@
 {% endblock %}
 
 {% block pageFeature %}
+{% endblock %}
+
+{% block pageFooter %}
+  {{ anchorLinksSticky() }}
 {% endblock %}

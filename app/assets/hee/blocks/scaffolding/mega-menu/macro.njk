@@ -1,0 +1,46 @@
+{% macro megaMenu(params) %}
+  <div class="hee-mega-menu {{ params.theme }}">
+    <nav class="hee-mega-menu__nav{% if params.primaryLinks|length > 2 %} hee-mega-menu--more-items{% endif %}" id="mega-menu-navigation-{{ params.id }}" role="navigation" aria-label="{{ params.ariaLabel }}">
+      <div class="nhsuk-width-container">
+        <ul class="hee-mega-menu__list">
+          {% for item in params.primaryLinks %}
+            <li class="hee-mega-menu__item{% if item.children.length > 0 %} hee-mega-menu__subnav{% endif %} {{ "has-home-icon" if params.homeIcon === true and loop.first }}"{{ 'aria-hidden="true"' if item.active else '' }}>
+              {% if item.url %}
+                <a class="hee-mega-menu__link {{ "is-active" if params.activeItemIndex === loop.index0 }}"
+                   href="{{ item.url }}"
+                   {% if item.children.length > 0 %}
+                    aria-controls="hee-mega-menu__panel-{{ params.id }}-{{ loop.index0 }}"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                  {% endif %}>
+                  {{item.label | safe}}
+                </a>
+              {% else %}
+                <span class="hee-mega-menu__label {{ "is-active" if item.active }}">
+                  {{item.label | safe}}
+                </span>
+              {% endif %}
+            </li>
+          {%- endfor %}
+        </ul>
+      </div>
+      {% for item in params.primaryLinks %}
+        {% if item.children.length > 0 %}
+          <div class="hee-mega-menu__panel" id="hee-mega-menu__panel-{{ params.id }}-{{ loop.index0 }}">
+            <div class="hee-mega-menu__panel__wrapper nhsuk-width-container" data-group-count="{{ item.children.length }}">
+              {% for group in item.children %}
+                <div class="hee-mega-menu__panel__group">
+                  {% for item in group %}
+                    <a class="hee-mega-menu__panel__link" href="{{ item.url }}">
+                      {{ item.label }}
+                    </a>
+                  {% endfor %}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </div>
+{% endmacro %}

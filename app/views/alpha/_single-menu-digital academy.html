@@ -1,0 +1,33 @@
+{%- from 'hee/blocks/scaffolding/mega-menu/macro.njk' import megaMenu %}
+
+{{ megaMenu({
+  id: "menu-main",
+  ariaLabel: "Primary navigation",
+  theme: "theme-grey",
+  primaryLinks: [
+    {
+      active: true,
+      label: "Digital Academy"
+    },
+    {
+      url: "#",
+      label: "Training & Education"
+    },
+    {
+      url: "#",
+      label: "Evidence & resources"
+    },
+    {
+      url: "#",
+      label: "Support"
+    },
+    {
+      url: "#",
+      label: "Digital Workforce"
+    },
+    {
+      url: "#",
+      label: "Our team"
+    }
+  ]
+}) }}

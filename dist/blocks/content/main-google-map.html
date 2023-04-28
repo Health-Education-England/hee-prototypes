@@ -37,7 +37,7 @@
       <div class="nhsuk-width-container nhsuk-header__container">
         <div class="nhsuk-header__multilogo">
           <span class="nhsuk-header__logo nhsuk-header__logo-home">
-            <a class="nhsuk-header__link" href="http://hee.nhs.uk/" aria-label="Health Education England  NWP Prototype Kit homepage">
+            <a class="nhsuk-header__link" href="http://hee.nhs.uk/" aria-label="Health Education England homepage">
               <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="presentation" focusable="false" viewBox="0 0 40 16">
                 <path class="nhsuk-logo__background" d="M0 0h40v16H0z"></path>
                 <path class="nhsuk-logo__text" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
@@ -45,7 +45,7 @@
               </svg>
               <span class="nhsuk-organisation-name">Health Education England</span>
             </a>
-            <a class="nhsuk-header__link" href="/" aria-label="Health Education England  NWP Prototype Kit homepage">
+            <a class="nhsuk-header__link" href="/" aria-label="NWP Prototype Kit homepage">
               <span class="nhsuk-organisation-descriptor">NWP Prototype Kit</span>
             </a>
           </span>
@@ -89,11 +89,14 @@
               <li><a href="/hee-prototypes/blocks/content/main-media-embed.html">Media Embed</a></li>
               <li>Newsletter Signup</li>
               <li><a href="/hee-prototypes/blocks/content/main-publication-doc.html">Publication Document</a></li>
+              <li><a href="/hee-prototypes/blocks/content/main-quote.html">Quote</a></li>
               <li><a href="/hee-prototypes/blocks/content/main-region-picker.html">Region Picker</a></li>
               <li>Table of Contents</li>
+              <li><a href="/hee-prototypes/blocks/content/main-table-expander.html">Table Expander</a></li>
               <li><a href="/hee-prototypes/blocks/content/main-tabs.html">Tabs</a></li>
               <li>Text</li>
               <li><a href="/hee-prototypes/blocks/content/main-timeline.html">Timeline</a></li>
+              <li><a href="/hee-prototypes/blocks/content/main-training-journey.html">Training Journey</a></li>
               <li><a href="/hee-prototypes/blocks/content/main-image.html">Image</a></li>
               <li><a href="/hee-prototypes/blocks/content/main-table.html">Table</a></li>
             </ul>
@@ -108,10 +111,11 @@
               <li>Card--Internal Links</li>
               <li><a href="/hee-prototypes/blocks/content/sidebar-card-image.html">Card--Image</a></li>
               <li><a href="/hee-prototypes/blocks/content/sidebar-card-person.html">Card--Person</a></li>
+              <li><a href="/hee-prototypes/blocks/content/sidebar-card-summary.html">Card--Summary</a></li>
             </ul>
             <h3>Featured</h3>
             <ul>
-              <li><a href="/hee-prototypes/blocks/content/featured-mini-listing.html">Mini Listing</a></li>
+              <li><a href="/hee-prototypes/blocks/content/featured-featured-content.html">Featured Content</a></li>
             </ul>
           </nav>
         </div>
@@ -135,11 +139,7 @@
 {{ googleMap({
     embedCode: &#39;&lt;iframe src=&quot;https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38876.46420375777!2d-1.945322588878691!3d52.48313681174725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bdaa5d4e3383%3A0xc9d525245d0b1f47!2sHealth%20Education%20England!5e0!3m2!1sen!2suk!4v1669730967510!5m2!1sen!2suk&quot; width=&quot;600&quot; height=&quot;450&quot; style=&quot;border:0;&quot; allowfullscreen=&quot;&quot; loading=&quot;lazy&quot; referrerpolicy=&quot;no-referrer-when-downgrade&quot;&gt;&lt;/iframe&gt;&#39;,
     title: &quot;Location&quot;,
-    caption: &quot;HEE Yorkshire and the Humber, Dental Street, Yorkshire, YA1 1AA.&quot;,
-    link: {
-      href: &quot;#&quot;,
-      text: &quot;Get Directions&quot;
-    }
+    caption: &quot;HEE Yorkshire and the Humber, Dental Street, Yorkshire, YA1 1AA.&quot;
 }) }}
   </code></pre>
           <hr />
@@ -150,7 +150,7 @@
       &lt;iframe src=&quot;https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38876.46420375777!2d-1.945322588878691!3d52.48313681174725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bdaa5d4e3383%3A0xc9d525245d0b1f47!2sHealth%20Education%20England!5e0!3m2!1sen!2suk!4v1669730967510!5m2!1sen!2suk&quot; width=&quot;600&quot; height=&quot;450&quot; style=&quot;border:0;&quot; allowfullscreen=&quot;&quot; loading=&quot;lazy&quot; referrerpolicy=&quot;no-referrer-when-downgrade&quot;&gt;&lt;/iframe&gt;
     &lt;/div&gt;
     &lt;figcaption class=&quot;hee-google-map__caption&quot;&gt;
-      &lt;h3&gt;Location&lt;/h3&gt; HEE Yorkshire and the Humber, Dental Street, Yorkshire, YA1 1AA. &lt;a href=&quot;#&quot;&gt;Get Directions&lt;/a&gt;
+      &lt;h3&gt;Location&lt;/h3&gt; HEE Yorkshire and the Humber, Dental Street, Yorkshire, YA1 1AA.
     &lt;/figcaption&gt;
 &lt;/div&gt;
   </code></pre>

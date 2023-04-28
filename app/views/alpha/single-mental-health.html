@@ -1,0 +1,92 @@
+{% extends "example-template-fullwidth.html" %}
+
+{% set page_title = 'Mental Health - Workforce, Training and Education, NHS England' %}
+
+{% block pageClass %}page--fullwidth alpha-fullwidth{% endblock %}
+{% block pageHeaderClass %}has-microhero{% endblock %}
+
+{% block pageTitle %}{{ page_title }}{% endblock %}
+
+{% block breadcrumbs %}
+  {{
+    breadcrumb({
+      items: [
+        {
+          href: basePath + "/",
+          text: "HEE"
+        }
+      ],
+      href: "#",
+      text: "Healthcare topics"
+    })
+  }}
+{% endblock %}
+
+{% block header %}
+  <div class="site-header">
+    {{ backToHomeBanner({
+      url: basePath + "/alpha/single-index.html",
+      title: "Back to Workforce, training and education"
+    }) }}
+
+    {{ customHeader({
+      "showNav": "false",
+      "showSearch": "false",
+      "showLogos": "false",
+      "heeHref": basePath + "/alpha/single-index.html",
+      "homeHref": "/alpha/single-mental-health.html",
+      "classes": "nhsuk-header--white",
+      "organisation": {
+        "name": "Workforce, Training and Education",
+        "split": "",
+        "descriptor": "Mental Health"
+      },
+      "logos": [
+        {
+          "href": "https://www.nimdta.gov.uk/",
+          "label": "Northern Ireland Medical and Dental Training Agency Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/nimdta-logo.png",
+          "imgAlt": "Logo for Northern Ireland Medical and Dental Training Agency"
+        },
+        {
+          "href": "https://www.nes.scot.nhs.uk/",
+          "label": "NHS Education for Scotland Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/nhs-scotland-logo.png",
+          "imgAlt": "Logo for NHS Education for Scotland"
+        },
+        {
+          "href": "https://heiw.nhs.wales/",
+          "label": "Health Education and Improvement Wales Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/heiw-logo.png",
+          "imgAlt": "Logo for Health Education and Improvement Wales"
+        }
+      ]
+    })
+    }}
+
+    {% include "alpha/_single-menu-mental-health.html" %}
+  </div>
+
+  {{ phaseBanner({
+    tag: "Alpha",
+    description: 'This is a new service – your <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.'
+  }) }}
+{% endblock %}
+
+{% block pageHeader %}
+  {{ microHero({
+    imgURL: basePath + "/images/alpha-mental-health-revised.jpg"
+  }) }}
+  <div class="nhsuk-width-container">
+    <h1>Mental Health</h1>
+    <span class="nhsuk-caption-xl">Healthcare Topics</span>
+  </div>
+{% endblock %}
+
+{% block pageContent %}
+  <p>Mental health is just as important as physical health, and it is vital for the NHS to provide services to its patients. There are a range of ways that health professionals can be involved in the provision of mental health services across different professions and roles. Multi-disciplinary working is a key aspect of providing high quality mental health services.</p>
+
+  <h2>What is Mental Health?</h2>
+  <p>Mental health is a state of well-being in which the individual realises his or her own potential, can cope with the normal stresses of life, can work productively and fruitfully, and is able to make a contribution to his or her community.</p>
+  <p>Mental health is a broad concept that encompasses our emotional, psychological, and social well-being. It affects how we think, feel, and act, and it can also influence our physical health.</p>
+{% endblock %}

@@ -49,8 +49,20 @@ html {
     }
 }
 
+.page__content {
+    word-break: break-word;
+}
+
 .page__feature {
     @include nhsuk-responsive-margin(8, 'top');
+}
+
+.page__feature {
+    h1, p, span {
+        @include mq($from: tablet) {
+            max-width: 66.6667%;
+        }
+    }
 }
 
 .page__feature {

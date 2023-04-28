@@ -1,0 +1,371 @@
+{% extends "example-template-leftbar.html" %}
+
+{% block pageTitle %}News - Workforce, Training and Education, NHS England{% endblock %}
+
+{% block pageHeaderClass %}has-microhero{% endblock %}
+
+{% block breadcrumbs %}
+  {{
+    breadcrumb({
+      items: [
+          {
+              href: basePath + "/alpha/double-index.html",
+              text: "WTE"
+          }
+      ],
+      href: "#",
+      text: "About us"
+    })
+  }}
+{% endblock %}
+
+{% block header %}
+  <div class="site-header">
+    {{ customHeader({
+      "showNav": "false",
+      "showSearch": "false",
+      "showLogos": "false",
+      "heeHref": basePath + "/alpha/double-index.html",
+      "homeHref": "/alpha/double-index.html",
+      "classes": "nhsuk-header--white",
+      "organisation": {
+        "name": "Workforce, Training and Education",
+        "split": ""
+      },
+      "logos": [
+        {
+          "href": "https://www.nimdta.gov.uk/",
+          "label": "Northern Ireland Medical and Dental Training Agency Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/nimdta-logo.png",
+          "imgAlt": "Logo for Northern Ireland Medical and Dental Training Agency"
+        },
+        {
+          "href": "https://www.nes.scot.nhs.uk/",
+          "label": "NHS Education for Scotland Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/nhs-scotland-logo.png",
+          "imgAlt": "Logo for NHS Education for Scotland"
+        },
+        {
+          "href": "https://heiw.nhs.wales/",
+          "label": "Health Education and Improvement Wales Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/heiw-logo.png",
+          "imgAlt": "Logo for Health Education and Improvement Wales"
+        }
+      ]
+    })
+    }}
+
+    {% include "alpha/_double-menu-main.html" %}
+  </div>
+
+  {{ phaseBanner({
+    tag: "Alpha",
+    description: 'This is a new service – your <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.'
+  }) }}
+{% endblock %}
+
+{% block pageHeader %}
+  {{ microHero({
+    imgURL: basePath + "/images/alpha-news-hero.jpg"
+  }) }}
+
+  <div class="nhsuk-width-container">
+    <h1>News</h1>
+    <span class="nhsuk-caption-xl">Workforce, Training and Education</span>
+    <p class="nhsuk-lede-text">Keep up-to-date with our latest news.</p>
+  </div>
+{% endblock %}
+
+{% block pageLeftbar %}
+  {{ filter({
+    groups: [
+      {
+        title: "Topic",
+        showClearToggle: true,
+        items: [
+        {
+          text: "Armed Forces",
+          value: "armed_forces",
+          checked: true
+        },
+        {
+          text: "Better Care Fund",
+          value: "bcf",
+          checked: true
+        },
+        {
+          text: "Carers",
+          value: "carers"
+        },
+        {
+          text: "Children & young people",
+          value: "cyp"
+        },
+        {
+          text: "Clinical audit",
+          value: "cyp"
+        },
+        {
+          text: "Commissioning",
+          value: "cyp"
+        },
+        {
+          text: "Culture & leadership",
+          value: "cyp"
+        },
+        {
+          text: "EU Exit",
+          value: "cyp"
+        },
+        {
+          text: "Events",
+          value: "cyp"
+        },
+        {
+          text: "Expo",
+          value: "cyp"
+        },
+        {
+          text: "Finance",
+          value: "cyp"
+        },
+        {
+          text: "Health and Wellbeing",
+          value: "cyp"
+        },
+        {
+          text: "Human Resources",
+          value: "cyp"
+        }
+      ]
+      },
+      {
+        title: "Type",
+        items: [
+        {
+          text: "Blog",
+          value: "item_one"
+        },
+        {
+          text: "Board Papers",
+          value: "item_two"
+        },
+        {
+          text: "HEE Life",
+          value: "item_three"
+        },
+        {
+          text: "Newsletter",
+          value: "item_three"
+        },
+        {
+          text: "Document",
+          value: "item_three"
+        }
+      ]
+      },
+      {
+        title: "Author",
+        items: [
+        {
+          text: "HEE Coms",
+          value: "item_one"
+        },
+        {
+          text: "HEE HR",
+          value: "item_two"
+        },
+        {
+          text: "HEE Legal",
+          value: "item_three"
+        },
+        {
+          text: "HEE Announcements",
+          value: "item_three"
+        },
+        {
+          text: "NHSE",
+          value: "item_three"
+        },
+        {
+          text: "HEE Transformation",
+          value: "item_three"
+        }
+      ]
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block pageContent %}
+  {% set selectAttributes = {
+    id: "sort",
+    name: "sort",
+    label: {
+      text: "Sort by"
+    },
+    items: [
+      {
+        value: "newest",
+        text: "Date ascending"
+      },
+      {
+        value: "relevance",
+        text: "Date descending"
+      }
+    ]
+  } %}
+
+  {% set submitAttributes = {
+    text: "Update",
+    classes: "hee-listing__filter__submit"
+  } %}
+
+  {% set items = [
+    {
+      title: "Hundreds of psychiatrists to be upskilled in NHS autism training initiative.",
+      href: "#",
+      details: [
+      {
+        label: "Date:",
+        value: "28 March 2023"
+      },
+      {
+        label: "By:",
+        value: "HEE Comms"
+      }
+    ],
+      summary: "Hundreds of psychiatrists will be given the opportunity to improve their skills and knowledge about autism with two new training offers that have been commissioned by Health Education England."
+    },
+    {
+      title: "Health Education England staff reflect on a decade of achievement",
+      href: "#",
+      details: [
+      {
+        label: "Date:",
+        value: "28 March 2023"
+      },
+      {
+        label: "By:",
+        value: "HEE Comms"
+      }
+    ],
+      summary: "As Health Education England prepares to merge with the new NHS England, HEE staff are looking back proudly at ten years of innovative and far-reaching public service."
+    },
+    {
+      title: "Applications are still open for HEE Population Health Fellowships",
+      href: "#",
+      details: [
+      {
+        label: "Date:",
+        value: "28 March 2023"
+      },
+      {
+        label: "By:",
+        value: "HEE Comms"
+      }
+    ],
+      summary: "Health Education England is still inviting applicants for its population health fellowship programme, providing exciting opportunities for a wide range of health professionals."
+    },
+    {
+      title: "Non-Executive Director Andrew Foster has passed away",
+      href: "#",
+      details: [
+      {
+        label: "Date:",
+        value: "28 March 2023"
+      },
+      {
+        label: "By:",
+        value: "HEE Comms"
+      }
+    ],
+      summary: "With great sadness, we share the news that Non- Executive Director and Chair of our People and Culture Committee, Andrew Foster, has died."
+    },
+    {
+      title: "HEE publishes new strategy to support healthcare educators",
+      href: "#",
+      details: [
+      {
+        label: "Date:",
+        value: "28 March 2023"
+      },
+      {
+        label: "By:",
+        value: "HEE Comms"
+      }
+    ],
+      summary: "Health Education England has published a new strategy to ensure that the NHS has a sustainable supply of educators to support the development of the healthcare workforce."
+    },
+    {
+      title: "Vision for future of General Practice specialty training unveiled by Health Education England",
+      href: "#",
+      details: [
+      {
+        label: "Date:",
+        value: "28 March 2023"
+      },
+      {
+        label: "By:",
+        value: "HEE Comms"
+      }
+    ],
+      summary: "A vision for the future of general practice specialty training has today been revealed by Health Education England (HEE)."
+    },
+    {
+      title: "Vision for future of General Practice specialty training unveiled by Health Education England",
+      href: "#",
+      details: [
+      {
+        label: "Date:",
+        value: "28 March 2023"
+      },
+      {
+        label: "By:",
+        value: "HEE Comms"
+      }
+    ],
+      summary: "A vision for the future of general practice specialty training has today been revealed by Health Education England (HEE)."
+    },
+    {
+      title: "New clinical examination skills training for community pharmacists launched",
+      href: "#",
+      details: [
+      {
+        label: "Date:",
+        value: "28 March 2023"
+      },
+      {
+        label: "By:",
+        value: "HEE Comms"
+      }
+    ],
+      summary: "A new, flexible NHS-funded training offer is being launched this month to further support the clinical role of community pharmacists in NHS primary care services and improve access to patient care."
+    },
+    {
+      title: "HEE to support Royal Pharmaceutical Society and Centre for Post Graduate Pharmacy Education to deliver fully funded pathway for advanced pharmacist practice",
+      href: "#",
+      details: [
+      {
+        label: "Date:",
+        value: "28 March 2023"
+      },
+      {
+        label: "By:",
+        value: "HEE Comms"
+      }
+    ],
+      summary: "The first participants in a fully funded, supported e-portfolio pathway to recognise advanced pharmacist practice in England will get underway in March 2023"
+    }
+  ] %}
+
+  {{ listingLayout({
+    filter: {
+      select: selectAttributes,
+      submit: submitAttributes
+    },
+    results: items,
+    emptyMessage: "No results",
+    showPagination: true
+  }) }}
+{% endblock %}
