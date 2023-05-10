@@ -2,9 +2,9 @@
   {% from 'details/macro.njk' import details %}
 
   <div class="hee-table-expander">
-    {% if params.items.length > 1 %}
+    {% if params.items.length > 1 and params.showToggleLink === true %}
       <div class="hee-table-expander__toggle">
-        <a href="#">Expand all</a>
+        <a data-label-open="{{ params.toggleLabelOpen }}" data-label-close="{{ params.toggleLabelClose }}" href="#"></a>
       </div>
     {% endif %}
 
