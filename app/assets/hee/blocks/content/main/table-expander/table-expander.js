@@ -11,8 +11,11 @@ export default () => {
       this.expanders = this.tableCard.querySelectorAll('.nhsuk-expander');
       this.stateOpen = false;
 
-      this.addEventListeners();
-      this.initExpanderObserver();
+      if (this.toggleLink !== null) {
+        this.toggleLink.innerText = this.toggleLink.dataset.labelOpen;
+        this.addEventListeners();
+        this.initExpanderObserver();
+      }
     }
 
     /**
@@ -66,7 +69,7 @@ export default () => {
       this.stateOpen = !this.stateOpen;
 
       // Toggle button text.
-      !this.stateOpen ? this.toggleLink.innerText = 'Expand all' : this.toggleLink.innerText = 'Collapse all'
+      !this.stateOpen ? this.toggleLink.innerText = this.toggleLink.dataset.labelOpen : this.toggleLink.innerText = this.toggleLink.dataset.labelClose
     }
 
     /**
@@ -84,7 +87,7 @@ export default () => {
       });
 
       !allOpen ? this.stateOpen = false : this.stateOpen = true;
-      !this.stateOpen ? this.toggleLink.innerText = 'Expand all' : this.toggleLink.innerText = 'Collapse all'
+      !this.stateOpen ? this.toggleLink.innerText = this.toggleLink.dataset.labelOpen : this.toggleLink.innerText = this.toggleLink.dataset.labelClose
     }
 
     /**

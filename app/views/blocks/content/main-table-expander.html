@@ -58,6 +58,9 @@
 {{ highlight({
   html: '
 {{ tableExpander({
+    showToggleLink: true,
+    toggleLabelOpen: "Expand all",
+    toggleLabelClose: "Close all",
     items: [
       {
         title: "First item",
@@ -136,7 +139,7 @@
 {{ highlight({
   html : '<div class="hee-table-expander">
     <div class="hee-table-expander__toggle">
-      <a href="#">Expand all</a>
+      <a data-label-open="Expand all" data-label-close="Close all" href="#">Expand all</a>
     </div>
     <details class="nhsuk-details nhsuk-expander" nhsuk-polyfilled="true" id="nhsuk-details0">
       <summary class="nhsuk-details__summary" role="button" aria-controls="nhsuk-details__text0" tabindex="0" aria-expanded="false">
