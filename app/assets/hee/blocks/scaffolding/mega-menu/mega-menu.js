@@ -12,6 +12,7 @@ export default () => {
       this.toggleLinks = this.megaMenu.querySelectorAll('.hee-mega-menu__subnav .hee-mega-menu__link');
 
       this.addEventListeners();
+      this.setPanelsTopOffset();
     }
 
     /**
@@ -42,11 +43,6 @@ export default () => {
             }
 
             this.togglePanel(event.target);
-
-            // Set focus on first link in mega menu panel list.
-            targetPanel
-              .querySelector('.hee-mega-menu__panel__link:first-child')
-              .focus();
           }
         })
 
@@ -68,6 +64,28 @@ export default () => {
           }
         })
       })
+    }
+
+    /**
+     * Set top css property for each panel element to correctly position
+     * fly out drop down.
+     */
+    setPanelsTopOffset() {
+      const panels = this.megaMenu.querySelectorAll('.hee-mega-menu__panel');
+
+      panels.forEach((panel) => {
+        panel.style.top = this.getMenuOffsetTop() + 'px';
+      })
+    }
+
+    /**
+     * Calculates top offset plus height of mega menu relative to the document.
+     * @returns {int} Offset in pixels.
+     */
+    getMenuOffsetTop() {
+      const rect = this.megaMenu.getBoundingClientRect();
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      return rect.top + scrollTop + rect.height;
     }
 
     /**
