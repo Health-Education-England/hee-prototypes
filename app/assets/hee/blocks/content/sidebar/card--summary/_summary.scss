@@ -27,4 +27,12 @@
     font-weight: $nhsuk-font-bold;
     margin-bottom: nhsuk-spacing(2);
   }
+
+  .hee-card--summary__item__link {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
