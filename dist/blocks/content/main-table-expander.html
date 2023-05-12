@@ -100,7 +100,7 @@
             </ul>
             <h3>Featured</h3>
             <ul>
-              <li>Mini Listing</li>
+              <li><a href="/blocks/content/featured-featured-content">Featured Content</a></li>
             </ul>
           </nav>
         </div>
@@ -122,6 +122,9 @@
           <h3>Macro</h3>
           <pre><code>
 {{ tableExpander({
+    showToggleLink: true,
+    toggleLabelOpen: &quot;Expand all&quot;,
+    toggleLabelClose: &quot;Close all&quot;,
     items: [
       {
         title: &quot;First item&quot;,
@@ -196,7 +199,7 @@
           <h3>HTML</h3>
           <pre><code>&lt;div class=&quot;hee-table-expander&quot;&gt;
     &lt;div class=&quot;hee-table-expander__toggle&quot;&gt;
-      &lt;a href=&quot;#&quot;&gt;Expand all&lt;/a&gt;
+      &lt;a data-label-open=&quot;Expand all&quot; data-label-close=&quot;Close all&quot; href=&quot;#&quot;&gt;Expand all&lt;/a&gt;
     &lt;/div&gt;
     &lt;details class=&quot;nhsuk-details nhsuk-expander&quot; nhsuk-polyfilled=&quot;true&quot; id=&quot;nhsuk-details0&quot;&gt;
       &lt;summary class=&quot;nhsuk-details__summary&quot; role=&quot;button&quot; aria-controls=&quot;nhsuk-details__text0&quot; tabindex=&quot;0&quot; aria-expanded=&quot;false&quot;&gt;
