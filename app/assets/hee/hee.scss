@@ -57,7 +57,7 @@
 @import '../components/hee/hee-navmap/navmap';
 @import '../components/related-nav'; //?
 @import '../components/resources-link';
-@import '../components/hee/hee-resources/resources';
+@import 'blocks/content/sidebar/resources/resources';
 @import '../components/hee-table-2';
 @import 'blocks/content/main/applies-to/applies-to';
 @import 'blocks/content/sidebar/anchorlinks/anchorlinks';
@@ -101,7 +101,7 @@
 //@import '../components/hee/hee-homesection/homesection';
 @import '../components/hee/hee-newsletter/newsletter';
 //@import '../components/hee/hee-relatednav/relatednav';
-//@import '../components/hee/hee-resources/resources';
+//@import '../hee/blocks/content/sidebar/resources/resources';
 
 @import './parent-alpha';
 @import 'blocks/scaffolding/mega-menu/mega-menu';

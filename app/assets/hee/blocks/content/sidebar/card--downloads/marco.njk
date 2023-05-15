@@ -1,4 +1,4 @@
-{%- from 'components/hee/hee-resources/macro.njk' import resources %}
+{%- from 'hee/blocks/content/sidebar/resources/macro.njk' import resources %}
 
 {% macro downloadsCard(params) %}
 <div class="hee-card hee-card--details hee-card--downloads">
@@ -9,6 +9,7 @@
         title: item.title,
         text: item.text,
         url: item.url,
+        docSize: item.docSize,
         docType: item.docType,
         tagColor: item.tagColor
       }) }}
