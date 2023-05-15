@@ -14,7 +14,7 @@ functionality.
 ```html
 <div class="hee-table-expander">
   <div class="hee-table-expander__toggle">
-    <a data-label-open="Expand all" data-label-close="Close all" href="#">Expand all</a>
+    <a data-label-open="Expand all" data-label-close="Collapse all" href="#">Expand all</a>
   </div>
   <details class="nhsuk-details nhsuk-expander" nhsuk-polyfilled="true" id="nhsuk-details0">
     <summary class="nhsuk-details__summary" role="button" aria-controls="nhsuk-details__text0" tabindex="0" aria-expanded="false">
@@ -106,7 +106,7 @@ functionality.
 {{ tableCard({
   showToggleLink: true,
   toggleLabelOpen: "Expand all",
-  toggleLabelClose: "Close all",
+  toggleLabelClose: "Collapse all",
   items: [
     {
       title: "First item",
@@ -187,7 +187,7 @@ The table card Nunjucks macro takes the following arguments:
 |------------------------|---------|----------|-------------------------------------|
 | showToggleLink         | boolean | No       | Flag to display expand link or not. |
 | toggleLabelOpen        | string  | No       | Open all text label.                |
-| toggleLabelClose       | string  | No       | Close all text label.               |
+| toggleLabelClose       | string  | No       | Collapse all text label.               |
 | items                  | array   | Yes      | Array of table expander items.      |
 | items[].title          | string  | Yes      | Expander title.                     |
 | items[].rows           | array   | Yes      | Array of table rows.                |
