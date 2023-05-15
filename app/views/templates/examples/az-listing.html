@@ -1,0 +1,168 @@
+{% extends "example-template-fullwidth.html" %}
+
+{% set page_url = 'az-listing' %}
+{% set page_title = 'A-Z listing' %}
+{% block pageClass %}page--fullwidth{% endblock %}
+{% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
+
+{% block breadcrumbs %}
+  {{
+    breadcrumb({
+      items: [
+        {
+          href: "/",
+          text: "Home"
+        },
+        {
+          href: "/templates",
+          text: "Templates"
+        },
+        {
+          href: "/templates/examples",
+          text: "Examples"
+        }
+      ],
+      href: "/templates/examples/"+page_url,
+      text: page_title
+    })
+  }}
+{% endblock %}
+
+{% block pageHeader %}
+  <div class="nhsuk-width-container">
+    <h1>Pages A - Z </h1>
+    <span class="nhsuk-caption-xl">Caption</span>
+    <p class="nhsuk-lede-text">Odio lectus amet, gravida aenean nulla consequat consectetur. Et cum in arcu quam dictum et dignissim.</p>
+  </div>
+{% endblock %}
+
+{% block pageMain %}
+<div class="page__main nhsuk-width-container">
+  <div class="page__content">
+    {{ azNav({
+      "items": [
+        {
+          "label": "A"
+        },
+        {
+          "disable": "true",
+          "label": "B"
+        },
+        {
+          "label": "C"
+        },
+        {
+          "label": "D"
+        },
+        {
+          "label": "E"
+        },
+        {
+          "label": "F"
+        },
+        {
+          "label": "G"
+        },
+        {
+          "label": "H"
+        },
+        {
+          "label": "I"
+        },
+        {
+          "label": "J"
+        },
+        {
+          "label": "K"
+        },
+        {
+          "label": "L"
+        },
+        {
+          "label": "M"
+        },
+        {
+          "label": "N"
+        },
+        {
+          "label": "O"
+        },
+        {
+          "label": "P"
+        },
+        {
+          "label": "Q"
+        },
+        {
+          "label": "R"
+        },
+        {
+          "label": "S"
+        },
+        {
+          "label": "T"
+        },
+        {
+          "label": "U"
+        },
+        {
+          "label": "V"
+        },
+        {
+          "label": "W"
+        },
+        {
+          "label": "X"
+        },
+        {
+          "label": "Y"
+        },
+        {
+          "label": "Z"
+        }
+      ]
+    }) }}
+
+    {{ card({
+      "feature": "true",
+      "heading": "A",
+      "headingClasses": "nhsuk-u-font-size-24",
+      "descriptionHtml": "<ul class='nhsuk-list nhsuk-list--border'>
+              <li><a href='/conditions/abdominal-aortic-aneurysm/'>AAA</a></li>
+              <li><a href='/conditions/abdominal-aortic-aneurysm/'>Abdominal aortic aneurysm</a></li>
+              <li><a href='/conditions/abscess/'>Abscess</a></li>
+            </ul>"
+    }) }}
+
+    {{ card({
+      "feature": "true",
+      "heading": "B",
+      "headingClasses": "nhsuk-u-font-size-24",
+      "descriptionHtml": "<ul class='nhsuk-list nhsuk-list--border'>
+              <li>There are currently no conditions listed</li>
+            </ul>"
+    }) }}
+
+    {{ card({
+      "feature": "true",
+      "heading": "C",
+      "headingClasses": "nhsuk-u-font-size-24",
+      "descriptionHtml": "<ul class='nhsuk-list nhsuk-list--border'>
+              <li><a href='/conditions/chest-pain/'>Chest pain</a></li>
+              <li><a href='/conditions/cold-sores/'>Cold sore</a></li>
+            </ul>"
+    }) }}
+
+    {{ card({
+      "feature": "true",
+      "heading": "D",
+      "headingClasses": "nhsuk-u-font-size-24",
+      "descriptionHtml": "<ul class='nhsuk-list nhsuk-list--border'>
+              <li><a href='/conditions/dandruff/'>Dandruff</a></li>
+              <li><a href='/conditions/dementia/'>Dementia</a></li>
+              <li><a href='/conditions/toothache/'>Dental pain</a></li>
+            </ul>"
+    }) }}
+  </div>
+</div>
+{% endblock %}
