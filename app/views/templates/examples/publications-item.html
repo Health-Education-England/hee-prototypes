@@ -169,92 +169,49 @@
     ]
   }) }}
 
-  {% set pdf %}
-    {{ resources({
-      title: "First Publication Title",
-      text: "First Publication Title",
-      url: "#",
-      docType: "PDF",
-      tagColor: "pdf"
-    }) }}
-  {% endset %}
-
-  {% set odf %}
-    {{ resources({
-      title: "Second Publication Title",
-      text: "Second Publication Title",
-      url: "#",
-      docType: "ODF",
-      tagColor: "odf"
-    }) }}
-  {% endset %}
-
-  {% set xls %}
-    {{ resources({
-      title: "Third Publication Title",
-      text: "Third Publication Title",
-      url: "#",
-      docType: "XLS",
-      tagColor: "xls"
-    }) }}
-  {% endset %}
-
-  {% set ppt %}
-    {{ resources({
-      title: "Fourth Publication Title",
-      text: "Fourth Publication Title",
-      url: "#",
-      docType: "PPT",
-      tagColor: "ppt"
-    }) }}
-  {% endset %}
-
-  {{ detailsCard({
+  {{ downloadsCard({
     title: "Alternative versions",
     items: [
       {
-        value: pdf
+        title: "Publication title - PDF version",
+        text: "Publication title - PDF version",
+        url: "#",
+        docType: "PDF",
+        tagColor: "pdf"
       },
       {
-        value: odf
+        title: "Publication title - Open Document",
+        text: "Publication title - Open Document",
+        url: "#",
+        docType: "ODF",
+        tagColor: "odf"
       },
       {
-        value: xls
-      },
-      {
-        value: ppt
+        title: "Publication title - Excel",
+        text: "Publication title - Excel",
+        url: "#",
+        docType: "XLS",
+        tagColor: "xls"
       }
     ]
   }) }}
 
-  {% set firstLang %}
-    {{ resources({
-      title: "Teitl y cyhoeddiad",
-      text: "Teitl y cyhoeddiad",
-      url: "#",
-      docType: "PDF",
-      tagColor: "pdf"
-    }) }}
-  {% endset %}
-
-  {% set secondLang %}
-    {{ resources({
-      title: "Tytuł publikacji",
-      text: "Tytuł publikacji",
-      url: "#",
-      docType: "PDF",
-      tagColor: "pdf"
-    }) }}
-  {% endset %}
-
-  {{ detailsCard({
+  {{ downloadsCard({
     title: "Languages",
     items: [
       {
-        value: firstLang
+        title: "Teitl y cyhoeddiad - Fersiwn PDF",
+        text: "Teitl y cyhoeddiad - Fersiwn PDF",
+        url: "#",
+        docType: "PDF",
+        tagColor: "pdf"
       },
       {
-        value: secondLang
+        title: "Tytuł publikacji - wersja PDF",
+        text: "Tytuł publikacji - wersja PDF",
+        url: "#",
+        docType: "PDF",
+        tagColor: "pdf"
       }
     ]
   }) }}
