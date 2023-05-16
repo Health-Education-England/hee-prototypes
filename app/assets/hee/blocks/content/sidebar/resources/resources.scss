@@ -32,7 +32,8 @@
     .hee-resources__csv {
         background-color: #1D6F42;
     }
-    .hee-resources__txt {
+    .hee-resources__txt,
+    .hee-resources__mrc {
         background-color: #768692;
     }
     .hee-resources__odt,
@@ -88,6 +89,17 @@
 
 // Card adjustments
 .hee-card--details {
+    .hee-resources__wrapper {
+        @include nhsuk-responsive-padding(2, 'right');
+        display: block;
+        width: 80%;
+        word-break: break-word;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
     .hee-resources__link {
         align-content: flex-start;
         align-items: flex-start;
@@ -98,11 +110,7 @@
             font-weight: normal;
 
             &.hee-resources__text {
-                @include nhsuk-responsive-padding(2, 'right');
-                display: block;
-                text-decoration: underline;
-                width: 80%;
-                word-break: break-word;
+                padding-right: nhsuk-spacing(1);
             }
 
             &.hee-resources__tag {
@@ -117,9 +125,3 @@
         }
     }
 }
-
-
-
-
-
-
