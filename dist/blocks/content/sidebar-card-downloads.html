@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Block Links - Templates - NWP Prototype Kit</title>
+  <title>Card--Downloads - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -60,9 +60,9 @@
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks">Blocks</a></li>
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/content">Content</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/main-block-links">Block Links</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/sidebar-card-downloads">Card--Downloads</a></li>
         </ol>
-        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/main-block-links">Back to Block Links</a></p>
+        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/sidebar-card-downloads">Back to Card--Downloads</a></p>
       </div>
     </nav>
   </div>
@@ -122,151 +122,81 @@
         <div class="page__main">
           <div class="page__header">
             <span class="nhsuk-caption-xl">Main</span>
-            <h1>Block Links</h1>
+            <h1>Card--Downloads</h1>
             <p class="nhsuk-lede-text"></p>
           </div>
-          <p>Blue block links displayed in either a single or two column layout.</p>
+          <p>Card displaying link of download resource links including their file types.</p>
           <h3>Example</h3>
           <div class="prototype__example block">
-            <a href="/hee-prototypes/blocks/content/examples/main-block-links.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
+            <a href="/hee-prototypes/blocks/content/examples/sidebar-card-downloads.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
             <div class="thumbnail">
-              <iframe src="/hee-prototypes/blocks/content/examples/main-block-links.html" height="620"></iframe>
+              <iframe src="/hee-prototypes/blocks/content/examples/sidebar-card-downloads.html" height="380"></iframe>
             </div>
           </div>
           <hr />
-          <h3>Macro - Two column</h3>
+          <h3>Macro</h3>
           <pre><code>
-{{ blocklinks({
-    heading: &quot;Learning 2 Columns&quot;,
-    HTML: &quot;&lt;p&gt;Discover resources and information designed to support you on your learning journey&lt;/p&gt;&quot;,
-    columns: &quot;2&quot;,
-    links: [
-      {
-        &quot;url&quot;: &quot;/listing&quot;,
-        &quot;label&quot;: &quot;Learning Zone&quot;
-      },
-      {
-        &quot;url&quot;: &quot;/listing&quot;,
-        &quot;label&quot;: &quot;Equality, Diversity and Inclusion&quot;
-      },
-      {
-        &quot;url&quot;: &quot;/listing&quot;,
-        &quot;label&quot;: &quot;Talent Management Toolkit&quot;
-      },
-      {
-        &quot;url&quot;: &quot;/listing&quot;,
-        &quot;label&quot;: &quot;Case studies&quot;
-      }]
-    })
-}}
+{{ downloadsCard({
+  title: &quot;Alternative versions&quot;,
+  items: [
+    {
+      title: &quot;First Publication Title&quot;,
+      text: &quot;First Publication Title&quot;,
+      url: &quot;#&quot;,
+      docSize: &quot;836KB&quot;,
+      docType: &quot;PDF&quot;,
+      tagColor: &quot;pdf&quot;
+    },
+    {
+      title: &quot;Second Publication Title&quot;,
+      text: &quot;Second Publication Title&quot;,
+      url: &quot;#&quot;,
+      docSize: &quot;1.4MB&quot;,
+      docType: &quot;ODF&quot;,
+      tagColor: &quot;odf&quot;
+    },
+    {
+      title: &quot;Third Publication Title&quot;,
+      text: &quot;Third Publication Title&quot;,
+      url: &quot;#&quot;,
+      docSize: &quot;2.89MB&quot;,
+      docType: &quot;XLS&quot;,
+      tagColor: &quot;xls&quot;
+    }
+  ]
+}) }}
   </code></pre>
           <hr />
-          <h3>HTML - Two column</h3>
+          <h3>HTML</h3>
           <pre><code>
-&lt;div class=&quot;nhsuk-blocklinks&quot;&gt;
-    &lt;div class=&quot;nhsuk-u-reading-width&quot;&gt;
-      &lt;h2&gt;Learning 2 Columns&lt;/h2&gt;
-      &lt;p&gt;Discover resources and information designed to support you on your learning journey&lt;/p&gt;
+&lt;div class=&quot;hee-card hee-card--details hee-card--downloads&quot;&gt;
+    &lt;h3&gt;Alternative versions&lt;/h3&gt;
+    &lt;div class=&quot;hee-card--details__item&quot;&gt;
+      &lt;a class=&quot;hee-resources__link&quot; href=&quot;#&quot; title=&quot;First Publication Title&quot;&gt;
+        &lt;div class=&quot;hee-resources__wrapper&quot;&gt;
+          &lt;span class=&quot;hee-resources__text&quot;&gt;Short title&lt;/span&gt;&lt;span class=&quot;hee-resources__docSize&quot;&gt; 836KB &lt;/span&gt;
+        &lt;/div&gt;&lt;span class=&quot;hee-resources__tag
+          hee-resources__pdf&quot;&gt; PDF &lt;/span&gt;
+      &lt;/a&gt;
     &lt;/div&gt;
-    &lt;ul class=&quot;nhsuk-list-blocklinks nhsuk-list-blocklinks--two-columns&quot;&gt;
-      &lt;li&gt;
-        &lt;a href=&quot;/listing&quot;&gt;
-          &lt;svg class=&quot;nhsuk-icon nhsuk-icon__chevron-right&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;
-            &lt;path d=&quot;M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z&quot;&gt;
-            &lt;/path&gt;
-          &lt;/svg&gt; Learning Zone &lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href=&quot;/listing&quot;&gt;
-          &lt;svg class=&quot;nhsuk-icon nhsuk-icon__chevron-right&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;
-            &lt;path d=&quot;M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z&quot;&gt;
-            &lt;/path&gt;
-          &lt;/svg&gt; Equality, Diversity and Inclusion &lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href=&quot;/listing&quot;&gt;
-          &lt;svg class=&quot;nhsuk-icon nhsuk-icon__chevron-right&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;
-            &lt;path d=&quot;M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z&quot;&gt;
-            &lt;/path&gt;
-          &lt;/svg&gt; Talent Management Toolkit &lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href=&quot;/listing&quot;&gt;
-          &lt;svg class=&quot;nhsuk-icon nhsuk-icon__chevron-right&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;
-            &lt;path d=&quot;M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z&quot;&gt;
-            &lt;/path&gt;
-          &lt;/svg&gt; Case studies &lt;/a&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
+    &lt;div class=&quot;hee-card--details__item&quot;&gt;
+      &lt;a class=&quot;hee-resources__link&quot; href=&quot;#&quot; title=&quot;Second Publication Title&quot;&gt;
+        &lt;div class=&quot;hee-resources__wrapper&quot;&gt;
+          &lt;span class=&quot;hee-resources__text&quot;&gt; Second Publication Title &lt;/span&gt;&lt;span class=&quot;hee-resources__docSize&quot;&gt; 1.4MB &lt;/span&gt;
+        &lt;/div&gt;&lt;span class=&quot;hee-resources__tag
+          hee-resources__odf&quot;&gt; ODF &lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;hee-card--details__item&quot;&gt;
+      &lt;a class=&quot;hee-resources__link&quot; href=&quot;#&quot; title=&quot;Third Publication Title&quot;&gt;
+        &lt;div class=&quot;hee-resources__wrapper&quot;&gt;
+          &lt;span class=&quot;hee-resources__text&quot;&gt; Third Publication Title &lt;/span&gt;&lt;span class=&quot;hee-resources__docSize&quot;&gt; 2.89MB &lt;/span&gt;
+        &lt;/div&gt;&lt;span class=&quot;hee-resources__tag
+          hee-resources__xls&quot;&gt; XLS &lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
   </code></pre>
-          <hr />
-          <h3>Macro - Single column</h3>
-          <pre><code>
-{{ blocklinks({
-    heading: &quot;Learning 2 Columns&quot;,
-    HTML: &quot;&lt;p&gt;Discover resources and information designed to support you on your learning journey&lt;/p&gt;&quot;,
-    columns: &quot;1&quot;,
-    links: [
-      {
-        &quot;url&quot;: &quot;/listing&quot;,
-        &quot;label&quot;: &quot;Learning Zone&quot;
-      },
-      {
-        &quot;url&quot;: &quot;/listing&quot;,
-        &quot;label&quot;: &quot;Equality, Diversity and Inclusion&quot;
-      },
-      {
-        &quot;url&quot;: &quot;/listing&quot;,
-        &quot;label&quot;: &quot;Talent Management Toolkit&quot;
-      },
-      {
-        &quot;url&quot;: &quot;/listing&quot;,
-        &quot;label&quot;: &quot;Case studies&quot;
-      }]
-    })
-}}
-</code></pre>
-          <hr />
-          <h3>HTML - Single column</h3>
-          <pre><code>
-&lt;div class=&quot;nhsuk-blocklinks&quot;&gt;
-    &lt;div class=&quot;nhsuk-u-reading-width&quot;&gt;
-      &lt;h2&gt;Learning 1 Columns&lt;/h2&gt;
-      &lt;p&gt;Discover resources and information designed to support you on your learning journey&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;ul class=&quot;nhsuk-list-blocklinks nhsuk-list-blocklinks--one-column&quot;&gt;
-      &lt;li&gt;
-        &lt;a href=&quot;/listing&quot;&gt;
-          &lt;svg class=&quot;nhsuk-icon nhsuk-icon__chevron-right&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;
-            &lt;path d=&quot;M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z&quot;&gt;
-            &lt;/path&gt;
-          &lt;/svg&gt; Learning Zone &lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href=&quot;/listing&quot;&gt;
-          &lt;svg class=&quot;nhsuk-icon nhsuk-icon__chevron-right&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;
-            &lt;path d=&quot;M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z&quot;&gt;
-            &lt;/path&gt;
-          &lt;/svg&gt; Equality, Diversity and Inclusion &lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href=&quot;/listing&quot;&gt;
-          &lt;svg class=&quot;nhsuk-icon nhsuk-icon__chevron-right&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;
-            &lt;path d=&quot;M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z&quot;&gt;
-            &lt;/path&gt;
-          &lt;/svg&gt; Talent Management Toolkit &lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href=&quot;/listing&quot;&gt;
-          &lt;svg class=&quot;nhsuk-icon nhsuk-icon__chevron-right&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;
-            &lt;path d=&quot;M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z&quot;&gt;
-            &lt;/path&gt;
-          &lt;/svg&gt; Case studies &lt;/a&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;
-</code></pre>
         </div>
       </div>
     </div>
