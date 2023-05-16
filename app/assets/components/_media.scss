@@ -135,8 +135,24 @@
   }
 }
 
+.nhsuk-grid-column-two-thirds {
+  .nhsuk-media {
+    iframe {
+      &.youtube,
+      &.vimeo{
+        @include mq($from: desktop){
+          min-height: calc(((100vw - 48px) / 16 * 9) - 74px);
+        }
+        @media (min-width: 61.875em){
+          min-height: 480px;
+        }
+      }
+    }
+  }
+}
+
 // Adjust responsive height for anchor embed within right hand sidebar template.
-.page--rightbar .page__content, .nhsuk-grid-column-two-thirds {
+.page--rightbar .page__content {
   .nhsuk-media__container.anchor {
     iframe {
       height: 100px;
@@ -145,7 +161,7 @@
 }
 
 // Adjust responsive height for anchor embed within fullwidth template.
-.page--fullwidth .page__content, .nhsuk-grid-column-full {
+.page--fullwidth .page__content {
   .nhsuk-media__container.anchor {
     iframe {
       height: 100px;
