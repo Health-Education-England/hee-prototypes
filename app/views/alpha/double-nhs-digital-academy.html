@@ -1,0 +1,129 @@
+{% extends "example-template-fullwidth.html" %}
+
+{% set page_title = 'NHS Digital Academy - Workforce, Training and Education, NHS England' %}
+
+{% block pageClass %}page--fullwidth alpha-fullwidth double-menu{% endblock %}
+{% block pageHeaderClass %}has-microhero{% endblock %}
+
+{% block pageTitle %}{{ page_title }}{% endblock %}
+
+{% block breadcrumbs %}
+  {{
+    breadcrumb({
+      items: [
+        {
+          href: basePath + "/alpha/double-index.html",
+          text: "WTE"
+        }
+      ]
+    })
+  }}
+{% endblock %}
+
+{% block header %}
+  <div class="site-header">
+    {{ customHeader({
+      "showNav": "false",
+      "showSearch": "false",
+      "showLogos": "false",
+      "heeHref": basePath + "/alpha/double-index.html",
+      "homeHref": "/alpha/double-nhs-digital-academy.html",
+      "classes": "nhsuk-header--white",
+      "organisation": {
+        "name": "Workforce, Training and Education",
+        "split": "",
+        "descriptor": "Digital Academy"
+      },
+      "logos": [
+        {
+          "href": "https://www.nimdta.gov.uk/",
+          "label": "Northern Ireland Medical and Dental Training Agency Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/nimdta-logo.png",
+          "imgAlt": "Logo for Northern Ireland Medical and Dental Training Agency"
+        },
+        {
+          "href": "https://www.nes.scot.nhs.uk/",
+          "label": "NHS Education for Scotland Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/nhs-scotland-logo.png",
+          "imgAlt": "Logo for NHS Education for Scotland"
+        },
+        {
+          "href": "https://heiw.nhs.wales/",
+          "label": "Health Education and Improvement Wales Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/heiw-logo.png",
+          "imgAlt": "Logo for Health Education and Improvement Wales"
+        }
+      ]
+    })
+    }}
+
+    {% include "alpha/_double-menu-main.html" %}
+  </div>
+
+  {{ phaseBanner({
+    tag: "Alpha",
+    description: 'This is a new service – your <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.'
+  }) }}
+{% endblock %}
+
+{% block pageHeader %}
+  {{ microHero({
+    imgURL: basePath + "/images/alpha-digital-hero.jpg"
+  }) }}
+
+  {{ secondaryMenu({
+    items: [
+      {
+        active: true,
+        title: "Digital Academy"
+      },
+      {
+        title: "Training & Education",
+        url: "#"
+      },
+      {
+        title: "Evidence & resources",
+        url: "#"
+      },
+      {
+        title: "Support",
+        url: "#"
+      },
+      {
+        title: "Digital Workforce",
+        url: "#"
+      },
+      {
+        title: "Our team",
+        url: "#"
+      }
+    ]
+  }) }}
+
+  <div class="nhsuk-width-container">
+    <h1>Digital Academy</h1>
+    <span class="nhsuk-caption-xl">Training and Education</span>
+    <p class="nhsuk-lede-text">Welcome to the NHS Digital Academy. Here you will find all of the latest information regarding learning programmes and future plans.</p>
+  </div>
+{% endblock %}
+
+{% block pageContent %}
+  <h2>What is the NHS Digital Academy?</h2>
+  <p>The NHS Digital Academy is a virtual organisation set up to develop a new generation of excellent digital leaders who can drive the information and technology transformation of the NHS.</p>
+
+  <p>The Academy offers a range of learning programmes, including:</p>
+  <ul>
+    <li><strong>Digital Leadership Programme:</strong> This is a year-long programme that equips leaders with the skills and knowledge they need to lead digital transformation in the NHS.</li>
+    <li><strong>Digital Acceleration Programme:</strong> This is a six-month programme that helps individuals develop the skills and knowledge they need to accelerate digital transformation in their organisations.</li>
+    <li><strong>Digital Skills Programme:</strong> This is a short course that provides individuals with the essential digital skills they need to work in the NHS.</li>
+  </ul>
+
+  <p>The Academy also offers a range of support services, including:</p>
+  <ul>
+    <li><strong>Mentoring:</strong> The Academy provides mentors to support individuals as they develop their digital skills and knowledge.</li>
+    <li><strong>Networking:</strong> The Academy provides opportunities for individuals to network with other digital leaders in the NHS.</li>
+    <li><strong>Research:</strong> The Academy conducts research into digital transformation in the NHS.</li>
+  </ul>
+
+  <p>The NHS Digital Academy is committed to developing the next generation of digital leaders who can drive the information and technology transformation of the NHS.</p>
+{% endblock %}

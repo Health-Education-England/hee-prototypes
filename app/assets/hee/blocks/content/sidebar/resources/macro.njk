@@ -1,0 +1,52 @@
+{% macro resources(params) %}
+  {% set tagColor = params.tagColor %}
+
+  {% set card = true if params.card === "card" %}
+
+  {%- if params.description %}
+    <p
+      {%- if card -%}
+        class="nhsuk-card__description"
+      {%- endif -%}
+    >
+      {{ params.description }}
+    </p>
+  {%- endif %}
+
+  <a class="hee-resources__link"
+     href="{{ params.url }}"
+     title="{{ params.title }}"
+    {%- if params.newTab === true %}
+      target="_blank"
+    {%- endif %}
+  >
+
+    {%- if params.text %}
+      <div class="hee-resources__wrapper">
+        {%- if params.text %}
+          <span class="hee-resources__text">
+            {{ params.text | safe }}
+          </span>
+        {%- endif -%}
+        {%- if params.docSize -%}
+          <span class="hee-resources__docSize">
+            {{ params.docSize | safe }}
+          </span>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if params.docType -%}
+      <span
+        class="hee-resources__tag
+          {% if params.tagColor -%}
+            hee-resources__{{- params.tagColor -}}
+          {% endif -%}
+        "
+      >
+        {{ params.docType | safe }}
+      </span>
+    {%- endif -%}
+  </a>
+
+{% endmacro %}

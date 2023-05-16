@@ -6,6 +6,9 @@
 {# Header #}
 {%- from 'hee/blocks/scaffolding/header/macro.njk' import customHeader %}
 {%- from 'skip-link/macro.njk' import skipLink %}
+{%- from 'hee/blocks/scaffolding/mega-menu/macro.njk' import megaMenu %}
+{%- from 'hee/blocks/scaffolding/back-to-home-banner/macro.njk' import backToHomeBanner %}
+{%- from 'hee/blocks/scaffolding/secondary-menu/macro.njk' import secondaryMenu %}
 
 {# Notifications #}
 {%- from 'hee/blocks/scaffolding/notifications/banner/macro.njk' import banner %}
@@ -35,8 +38,10 @@
 {# Main #}
 {%- from 'hee/blocks/content/main/applies-to/macro.njk' import appliesTo %}
 {%- from 'hee/blocks/content/main/card--author/macro.njk' import authorCard %}
+{%- from 'hee/blocks/content/main/table-expander/macro.njk' import tableExpander %}
 {%- from 'hee/blocks/content/main/google-map/macro.njk' import googleMap %}
 {%- from 'hee/blocks/content/main/training-journey/macro.njk' import trainingJourney %}
+{%- from 'hee/blocks/content/main/quote/macro.njk' import quote %}
 {%- from 'hee/blocks/content/sidebar/card--person/macro.njk' import personCard %}
 {%- from 'hee/blocks/content/sidebar/card--department/macro.njk' import departmentCard %}
 {%- from 'components/hee/hee-detailscard/contact.njk' import contact %}
@@ -44,6 +49,8 @@
 {# Sidebar #}
 {%- from 'hee/blocks/content/sidebar/card--details/macro.njk' import detailsCard %}
 {%- from 'hee/blocks/content/sidebar/card--cta/macro.njk' import ctaCard %}
+{%- from 'hee/blocks/content/sidebar/card--downloads/marco.njk' import downloadsCard %}
+{%- from 'hee/blocks/content/sidebar/card--related-links/macro.njk' import relatedLinksCard %}
 {%- from 'hee/blocks/content/sidebar/card--summary/macro.njk' import summaryCard %}
 
 {# Search #}
@@ -58,9 +65,8 @@
 {%- from 'components/hee/hee-media/macro.njk' import media %}
 {%- from 'components/hee/hee-navmap/macro.njk' import navMap %}
 {%- from 'components/hee/hee-relatednav/macro.njk' import relatedNav %}
-{%- from 'components/hee/hee-resources/macro.njk' import resources %}
+{%- from 'hee/blocks/content/sidebar/resources/macro.njk' import resources %}
 {%- from 'components/hee/hee-sidebarimage/macro.njk' import imageCard %}
-{%- from 'components/hee/hee-sidebarlinks/macro.njk' import relatedLinksCard %}
 {%- from 'components/hee/hee-tabs/macro.njk' import tabs %}
 {%- from 'components/hee/hee-timeline/macro.njk' import timeline %}
 {%- from 'components/nhsuk-hee/nhsuk-hee-blocklinks/macro.njk' import blocklinks %}
@@ -74,6 +80,7 @@
 {%- from 'care-card/macro.njk' import careCard %}
 {%- from 'checkboxes/macro.njk' import checkboxes %}
 {%- from 'contents-list/macro.njk' import contentsList %}
+{%- from 'details/macro.njk' import details %}
 {%- from 'images/macro.njk' import image %}
 {%- from 'inset-text/macro.njk' import insetText %}
 {%- from 'do-dont-list/macro.njk' import list %}
@@ -85,7 +92,6 @@
 {%- from 'warning-callout/macro.njk' import warningCallout %}
 {#{%- from 'care-card/macro.njk' import careCard %}
 {%- from 'date-input/macro.njk' import dateInput %}
-{%- from 'details/macro.njk' import details %}
 {%- from 'error-message/macro.njk' import errorMessage %}
 {%- from 'error-summary/macro.njk' import errorSummary %}
 {%- from 'fieldset/macro.njk' import fieldset %}

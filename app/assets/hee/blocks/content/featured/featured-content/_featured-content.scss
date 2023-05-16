@@ -6,13 +6,22 @@
   }
 
   @include mq($from: desktop) {
+    align-content: space-between;
+    column-gap: 18px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .hee-featured-content__item {
     flex-basis: 32%;
+
+    @include mq($from: desktop) {
+      align-items: stretch;
+      align-content: stretch;
+      display: flex;
+      row-gap: 10px;
+    }
   }
 
   .hee-listing-item {
