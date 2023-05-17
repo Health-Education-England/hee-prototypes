@@ -10,10 +10,9 @@
       </div>
     {% endif %}
 
-    <div class="nhsuk-media__container">
+    <div class="nhsuk-media__container {{ params.type }}">
       {% if params.type === "youtube" or params.type === "vimeo" %}
       <iframe
-        class="{{ params.type }}"
         {% if params.type === "youtube" %}
           src="https://youtube.com/embed/{{ params.mediaId }}"
         {% elif params.type === "vimeo" %}
@@ -26,7 +25,6 @@
 
       {% elif params.type === "anchor" %}
         <iframe
-          class="{{ params.type }}"
           src="{{ params.src }}"
           frameborder="0"
           scrolling="no"
