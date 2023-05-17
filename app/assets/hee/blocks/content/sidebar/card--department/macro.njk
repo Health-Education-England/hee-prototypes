@@ -27,18 +27,20 @@
 
   <ul class="hee-card__contact">
     {%- if params.telephone %}
-      <li class="hee-card__telephone" aria-label="Telephone"><a href="tel:{{ params.telephone | safe }};">{{ params.telephone | safe }}</a></li>
+      <li class="hee-card__telephone hee-card__contact__item" aria-label="Telephone"><a href="tel:{{ params.telephone | safe }};" title="Opens telephone">{{ params.telephone | safe }}</a></li>
     {%- endif %}
+
     {%- if params.email %}
-      <li class="hee-card__email" aria-label="Email"><a href="mailto:{{ params.website | safe }};">{{ params.email | safe }}</a></li>
+      <li class="hee-card__email hee-card__contact__item" aria-label="Email"><a href="mailto:{{ params.email | safe }};" title="Opens email">{{ params.email | safe }}</a></li>
     {%- endif %}
+
     {%- if params.website %}
-      <li class="hee-card__website" aria-label="Website"><a href="{{ params.website | safe }}">{{ params.website | safe }}</a></li>
+      <li class="hee-card__website hee-card__contact__item" aria-label="Website"><a href="{{ params.website | safe }}" title="Opens website">{{ params.website | safe }}</a></li>
     {%- endif %}
   </ul>
 
   {%- if params.address %}
-    <p class="hee-card__address" aria-label="Bio" >{{ params.address | safe }}</p>
+    <p class="hee-card__address" aria-label="Address" >{{ params.address | safe }}</p>
   {%- endif %}
 
   {%- if params.description %}

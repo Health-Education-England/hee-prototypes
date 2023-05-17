@@ -6,3 +6,16 @@
   background-color: #fff;
   padding: 16px 16px 0 16px;
 }
+
+.nhsuk-details {
+  .nhsuk-details__text {
+    table {
+      padding: 0;
+
+      caption {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}

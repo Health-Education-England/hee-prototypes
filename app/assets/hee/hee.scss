@@ -29,7 +29,7 @@
 @import '../components/nhsuk-hee/nhsuk-hee-image/image';
 @import 'blocks/content/sidebar/card--details/details';
 @import 'blocks/content/sidebar/card--cta/cta';
-@import 'blocks/content/main/hee-google-map/google-map';
+@import 'blocks/content/main/google-map/google-map';
 @import 'blocks/scaffolding/cookies/cookies';
 @import 'blocks/scaffolding/header/header';
 @import 'blocks/scaffolding/header/logos/logo';
@@ -52,21 +52,22 @@
 @import '../components/related-nav';
 @import '../components/header-search';
 @import '../components/media';
-@import '../components/hee/hee-media/media';
+//@import '../components/hee/hee-media/media';
 @import '../components/hee/hee-navmap/navmap';
 @import '../components/related-nav'; //?
 @import '../components/resources-link';
-@import '../components/hee/hee-resources/resources';
+@import 'blocks/content/sidebar/resources/resources';
 @import '../components/hee-table-2';
 @import 'blocks/content/main/applies-to/applies-to';
 @import 'blocks/content/sidebar/anchorlinks/anchorlinks';
+@import 'blocks/content/footer/anchorlinks-sticky/anchorlinks-sticky';
 @import 'blocks/scaffolding/notifications/phasebanner/phasebanner';
 @import '../components/hee/hee-tabs/tabs';
 @import '../components/nhsuk-hee/nhsuk-hee-tables/tables2'; //?
 
 @import 'blocks/scaffolding/notifications/banner/banner';
 @import '../components/hee/hee-sidebarimage/sidebarimage';
-@import '../components/hee/hee-sidebarlinks/sidebarlinks';
+@import 'blocks/content/sidebar/card--related-links/related-links';
 
 ///// FURNITURE
 // -- Collections
@@ -82,9 +83,14 @@
 ///// CONTENT
 @import 'blocks/content/hee-card';
 @import 'blocks/content/main/card--author/author';
+@import 'blocks/content/main/table-expander/table';
 @import 'blocks/content/main/hee-publication-doc/publication-doc';
-@import 'blocks/content/featured/hee-mini-listing/mini-listing';
+@import 'blocks/content/main/training-journey/training-journey';
+@import 'blocks/content/main/quote/quote';
+@import 'blocks/content/featured/featured-content/featured-content';
 @import '../hee/blocks/content/sidebar/card--department/department';
+@import 'blocks/content/sidebar/card--summary/summary';
+@import 'blocks/content/sidebar/card--person/person';
 @import 'blocks/scaffolding/back-to-top/back-to-top';
 //@import '../hee/blocks/content/sidebar/card--department/department';
 //@import '../hee/blocks/content/sidebar/card--contact/contact';
@@ -94,4 +100,9 @@
 //@import '../components/hee/hee-homesection/homesection';
 @import '../components/hee/hee-newsletter/newsletter';
 //@import '../components/hee/hee-relatednav/relatednav';
-//@import '../components/hee/hee-resources/resources';
+//@import '../hee/blocks/content/sidebar/resources/resources';
+
+@import './parent-alpha';
+@import 'blocks/scaffolding/mega-menu/mega-menu';
+@import 'blocks/scaffolding/back-to-home-banner/back-to-home';
+@import 'blocks/scaffolding/secondary-menu/secondary-menu';

@@ -137,48 +137,6 @@
 
   <h2 class="toc_h2">Regions</h2>
   <p>Pellentesque id posuere sapien vestibulum, quam pellentesque at libero. Aliquam at id fames hendrerit in vulputate orci aliquet augue. Massa penatibus sociis et nisl. Enim aliquam mauris suscipit turpis non hendrerit felis.</p>
-  {{ navMap({
-    src: "/images/nav-maps/dental-regions.svg",
-    caption: {
-      items: [
-        {
-          id: "lk",
-          url: "#",
-          text: "London and Kent, Surrey and Sussex (KSS)"
-        },
-        {
-          id: "me",
-          url: "#",
-          text: "Midlands and the East"
-        },
-        {
-          id: "nenc",
-          url: "#",
-          text: "North East and North Cumbria"
-        },
-        {
-          id: "nw",
-          url: "#",
-          text: "North West"
-        },
-        {
-          id: "sw",
-          url: "#",
-          text: "South West"
-        },
-        {
-          id: "tvw",
-          url: "#",
-          text: "Thames Valley and Wessex"
-        },
-        {
-          id: "yh",
-          url: "#",
-          text: "Yorkshire and the Humber"
-        }
-      ]
-    }
-  }) }}
 
 {% endblock %}
 
@@ -201,102 +159,59 @@
         value: "24 July 2022"
       },
       {
-        label: "Topic:",
-        value: "<a href=\"#\">Profession 1</a>, <a href=\"#\">Topic 1</a>"
+        label: "Professions:",
+        value: "<a href=\"#\">Profession 1</a>, <a href=\"#\">Profession 2</a>"
       },
       {
-        label: "Estimated reading time:",
-        value: "2 mins"
+        label: "Topics:",
+        value: "<a href=\"#\">Topic 1</a>, <a href=\"#\">Topic 2</a>"
       }
     ]
   }) }}
 
-  {% set pdf %}
-    {{ resources({
-      title: "Publication title - PDF version",
-      text: "Publication title - PDF version",
-      url: "#",
-      docType: "PDF",
-      tagColor: "pdf"
-    }) }}
-  {% endset %}
-
-  {% set odf %}
-    {{ resources({
-      title: "Publication title - Open Document",
-      text: "Publication title - Open Document",
-      url: "#",
-      docType: "ODF",
-      tagColor: "odf"
-    }) }}
-  {% endset %}
-
-  {% set xls %}
-    {{ resources({
-      title: "Publication title - Excel",
-      text: "Publication title - Excel",
-      url: "#",
-      docType: "XLS",
-      tagColor: "xls"
-    }) }}
-  {% endset %}
-
-  {% set ppt %}
-    {{ resources({
-      title: "Publication title - Powerpoint",
-      text: "Publication title - Powerpoint",
-      url: "#",
-      docType: "PPT",
-      tagColor: "ppt"
-    }) }}
-  {% endset %}
-
-  {{ detailsCard({
+  {{ downloadsCard({
     title: "Alternative versions",
     items: [
       {
-        value: pdf
+        title: "Publication title - PDF version",
+        text: "Publication title - PDF version",
+        url: "#",
+        docType: "PDF",
+        tagColor: "pdf"
       },
       {
-        value: odf
+        title: "Publication title - Open Document",
+        text: "Publication title - Open Document",
+        url: "#",
+        docType: "ODF",
+        tagColor: "odf"
       },
       {
-        value: xls
-      },
-      {
-        value: ppt
+        title: "Publication title - Excel",
+        text: "Publication title - Excel",
+        url: "#",
+        docType: "XLS",
+        tagColor: "xls"
       }
     ]
   }) }}
 
-  {% set firstLang %}
-    {{ resources({
-      title: "Teitl y cyhoeddiad - Fersiwn PDF",
-      text: "Teitl y cyhoeddiad - Fersiwn PDF",
-      url: "#",
-      docType: "PDF",
-      tagColor: "pdf"
-    }) }}
-  {% endset %}
-
-  {% set secondLang %}
-    {{ resources({
-      title: "Tytuł publikacji - wersja PDF",
-      text: "Tytuł publikacji - wersja PDF",
-      url: "#",
-      docType: "PDF",
-      tagColor: "pdf"
-    }) }}
-  {% endset %}
-
-  {{ detailsCard({
+  {{ downloadsCard({
     title: "Languages",
     items: [
       {
-        value: firstLang
+        title: "Teitl y cyhoeddiad - Fersiwn PDF",
+        text: "Teitl y cyhoeddiad - Fersiwn PDF",
+        url: "#",
+        docType: "PDF",
+        tagColor: "pdf"
       },
       {
-        value: secondLang
+        title: "Tytuł publikacji - wersja PDF",
+        text: "Tytuł publikacji - wersja PDF",
+        url: "#",
+        docType: "PDF",
+        tagColor: "pdf"
       }
     ]
   }) }}
@@ -304,4 +219,8 @@
 {% endblock %}
 
 {% block pageFeature %}
+{% endblock %}
+
+{% block pageFooter %}
+  {{ anchorLinksSticky() }}
 {% endblock %}

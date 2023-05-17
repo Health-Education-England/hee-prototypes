@@ -2,6 +2,7 @@
 table {
     background-color: #fff;
     padding: 16px;
+    word-break: normal;
 }
 table caption {
     background-color: #fff;
@@ -11,6 +12,9 @@ table caption {
     margin-bottom: 4em !important;
     background-color: #fff;
 }
+
+
+
 @media (max-width: 48.0525em) {
     .nhsuk-table-responsive .nhsuk-table__body .nhsuk-table__row {
         display: block;

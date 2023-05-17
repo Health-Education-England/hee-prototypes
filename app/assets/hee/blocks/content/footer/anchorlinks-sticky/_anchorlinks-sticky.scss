@@ -1,0 +1,108 @@
+// Sticky TOC.
+.hee-anchorlinks__sticky {
+  @include nhsuk-responsive-padding(4);
+  border-top: 1px solid $color_nhsuk-grey-4;
+  bottom: 0;
+  background-color: $color_nhsuk-grey-5;
+  display: none;
+  height: 91px;
+  position: fixed;
+  min-height: 91px;
+  width: 100%;
+
+  @include mq($from: desktop) {
+    min-height: 107px;
+  }
+
+  &.active {
+    display: block;
+  }
+
+  .hee-anchorlinks__sticky__wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    position: relative;
+
+    @include mq($from: desktop) {
+      max-width: 960px;
+    }
+
+    .hee-anchorlinks {
+      display: none;
+
+      &.is-sticky {
+        border: 1px solid $color_nhsuk-grey-4;
+        bottom: 31px;
+        display: block;
+        left: 0;
+        position: absolute;
+        z-index: 10;
+      }
+    }
+  }
+
+  .hee-anchorlinks__sticky__btn {
+    -webkit-appearance: button;
+    align-items: center;
+    border: 1px solid $color_nhsuk-grey-4;
+    background-color: $color_nhsuk-white;
+    box-shadow: none;
+    color: $color_nhsuk-black;
+    cursor: pointer;
+    display: flex;
+    font-size: 19px;
+    font-weight: $nhsuk-font-bold;
+    padding: 16px 14px;
+    text-decoration: none;
+
+    span {
+      color: $color_nhsuk-black;
+      padding-right: 15px;
+    }
+
+    &:after {
+      background-image: url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__chevron-right' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='true'%3E%3Cpath d='M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z'%3E%3C/path%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 1px center;
+      content: "";
+      display: block;
+      height: 24px;
+      transform: rotate(90deg);
+      width: 24px;
+    }
+
+    &.active {
+      &:after {
+        transform: rotate(270deg);
+      }
+    }
+  }
+
+  .hee-anchorlinks__sticky__top-link {
+    background-color: $color_nhsuk-white;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 8.5C12.3 8.5 12.5 8.6 12.7 8.8L17.7 13.8C18.1 14.2 18.1 14.8 17.7 15.2C17.3 15.6 16.7 15.6 16.3 15.2L12 10.9L7.7 15.2C7.3 15.6 6.7 15.6 6.3 15.2C5.9 14.8 5.9 14.2 6.3 13.8L11.3 8.8C11.5 8.6 11.7 8.5 12 8.5Z' fill='black'/%3E%3Crect x='6' y='5' width='12' height='2' rx='1' fill='black'/%3E%3Crect x='11' y='19' width='10' height='2' rx='1' transform='rotate(-90 11 19)' fill='black'/%3E%3C/svg%3E");
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 1px solid $color_nhsuk-grey-4;
+    height: 58px;
+    text-indent: -99999px;
+    width: 59px;
+
+    &:visited {
+      color: $color_nhsuk-blue;
+    }
+
+    @include mq($from: desktop) {
+      @include nhsuk-font(19);
+      background-color: transparent;
+      background-image: none;
+      border: 0;
+      height: auto;
+      text-indent: 0;
+      width: auto;
+    }
+  }
+}
