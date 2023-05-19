@@ -1,0 +1,232 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'main-table-expander' %}
+{% set page_title = 'Table Expander' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block breadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/",
+            text: "Home"
+        },
+        {
+            href: "/blocks",
+            text: "Blocks"
+        },
+        {
+            href: "/blocks/content",
+            text: "Content"
+        }
+    ],
+        href: "/blocks/" + page_url,
+      text: page_title
+    }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'blocks',
+    subarea: 'content'
+}) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Main</span>
+    <h1>{{ page_title }}</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+<p>Provides a simple single column display of content within a group of expanders.</p>
+
+<h3>Example</h3>
+{{ example({
+    view: 'block',
+    url: '/blocks/content/examples/' + page_url,
+    height: '620'
+}) }}
+
+<hr />
+
+<h3>Macro</h3>
+{{ highlight({
+  html: '
+{{ tableExpander({
+    showToggleLink: true,
+    toggleLabelOpen: "Expand all",
+    toggleLabelClose: "Collapse all",
+    items: [
+      {
+        title: "First item",
+        rows: [
+          {
+            heading: "Defence Medical Services (DMS)",
+            content: "1"
+          },
+          {
+            heading: "No of Posts 2013 - indicitive",
+            content: "7"
+          },
+          {
+            heading: "Competition ratios 2022 data - Ratio",
+            content: "6 (6:37)"
+          },
+          {
+            heading: "Job/Programme Descriptions",
+            content: "Kent, Surrey and Sussex",
+            href: "http://www.yahoo.com"
+          }
+        ]
+      },
+      {
+        title: "Second item",
+        rows: [
+          {
+            heading: "Defence Medical Services (DMS)",
+            content: "1"
+          },
+          {
+            heading: "No of Posts 2013 - indicitive",
+            content: "7"
+          },
+          {
+            heading: "Competition ratios 2022 data - Ratio",
+            content: "6 (6:37)"
+          },
+          {
+            heading: "Job/Programme Descriptions",
+            content: "Kent, Surrey and Sussex",
+            href: "http://www.yahoo.com"
+          }
+        ]
+      },
+      {
+        title: "Third item",
+        rows: [
+          {
+            heading: "Defence Medical Services (DMS)",
+            content: "1"
+          },
+          {
+            heading: "No of Posts 2013 - indicitive",
+            content: "7"
+          },
+          {
+            heading: "Competition ratios 2022 data - Ratio",
+            content: "6 (6:37)"
+          },
+          {
+            heading: "Job/Programme Descriptions",
+            content: "Kent, Surrey and Sussex",
+            href: "http://www.yahoo.com"
+          }
+        ]
+      }
+    ]
+}) }}
+  '
+}) }}
+
+<hr />
+
+<h3>HTML</h3>
+{{ highlight({
+  html : '<div class="hee-table-expander">
+  <div class="hee-table-expander__toggle">
+    <a data-label-open="Expand all" data-label-close="Collapse all" href="#"></a>
+  </div>
+  <details class="nhsuk-details nhsuk-expander">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text"> First item </span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <div aria-rowcount="3" class="hee-table-expander__container" role="table">
+        <div class="hee-table-expander__row" role="row">
+          <span class="hee-table-expander__row__heading" role="cell">Defence Medical Services (DMS)</span>
+          <span class="hee-table-expander__row__content" role="cell"> 1 </span>
+        </div>
+        <div class="hee-table-expander__row" role="row">
+          <span class="hee-table-expander__row__heading" role="cell">No of Posts 2013 - indicitive</span>
+          <span class="hee-table-expander__row__content" role="cell"> 7 </span>
+        </div>
+        <div class="hee-table-expander__row" role="row">
+          <span class="hee-table-expander__row__heading" role="cell">Competition ratios 2022 data - Ratio</span>
+          <span class="hee-table-expander__row__content" role="cell"> 6 (6:37) </span>
+        </div>
+        <div class="hee-table-expander__row" role="row">
+          <span class="hee-table-expander__row__heading" role="cell">Job/Programme Descriptions</span>
+          <span class="hee-table-expander__row__content" role="cell">
+              <a href="http://www.yahoo.com"> Kent, Surrey and Sussex </a>
+            </span>
+        </div>
+      </div>
+    </div>
+  </details>
+  <details class="nhsuk-details nhsuk-expander">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text"> Second item </span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <div aria-rowcount="3" class="hee-table-expander__container" role="table">
+        <div class="hee-table-expander__row" role="row">
+          <span class="hee-table-expander__row__heading" role="cell">Defence Medical Services (DMS)</span>
+          <span class="hee-table-expander__row__content" role="cell"> 1 </span>
+        </div>
+        <div class="hee-table-expander__row" role="row">
+          <span class="hee-table-expander__row__heading" role="cell">No of Posts 2013 - indicitive</span>
+          <span class="hee-table-expander__row__content" role="cell"> 7 </span>
+        </div>
+        <div class="hee-table-expander__row" role="row">
+          <span class="hee-table-expander__row__heading" role="cell">Competition ratios 2022 data - Ratio</span>
+          <span class="hee-table-expander__row__content" role="cell"> 6 (6:37) </span>
+        </div>
+        <div class="hee-table-expander__row" role="row">
+          <span class="hee-table-expander__row__heading" role="cell">Job/Programme Descriptions</span>
+          <span class="hee-table-expander__row__content" role="cell">
+              <a href="http://www.yahoo.com"> Kent, Surrey and Sussex </a>
+            </span>
+        </div>
+      </div>
+    </div>
+  </details>
+  <details class="nhsuk-details nhsuk-expander">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text"> Third item </span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <div aria-rowcount="3" class="hee-table-expander__container" role="table">
+        <div class="hee-table-expander__row" role="row">
+          <span class="hee-table-expander__row__heading" role="cell">Defence Medical Services (DMS)</span>
+          <span class="hee-table-expander__row__content" role="cell"> 1 </span>
+        </div>
+        <div class="hee-table-expander__row" role="row">
+          <span class="hee-table-expander__row__heading" role="cell">No of Posts 2013 - indicitive</span>
+          <span class="hee-table-expander__row__content" role="cell"> 7 </span>
+        </div>
+        <div class="hee-table-expander__row" role="row">
+          <span class="hee-table-expander__row__heading" role="cell">Competition ratios 2022 data - Ratio</span>
+          <span class="hee-table-expander__row__content" role="cell"> 6 (6:37) </span>
+        </div>
+        <div class="hee-table-expander__row" role="row">
+          <span class="hee-table-expander__row__heading" role="cell">Job/Programme Descriptions</span>
+          <span class="hee-table-expander__row__content" role="cell">
+              <a href="http://www.yahoo.com"> Kent, Surrey and Sussex </a>
+            </span>
+        </div>
+      </div>
+    </div>
+  </details>
+</div>
+  '
+  }) 
+}}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

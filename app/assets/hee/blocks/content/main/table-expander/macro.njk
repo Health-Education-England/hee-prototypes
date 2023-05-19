@@ -1,0 +1,46 @@
+{% macro tableExpander(params) %}
+  {% from 'details/macro.njk' import details %}
+
+  <div class="hee-table-expander">
+    {% if params.items.length > 1 and params.showToggleLink === true %}
+      <div class="hee-table-expander__toggle">
+        <a data-label-open="{{ params.toggleLabelOpen }}" data-label-close="{{ params.toggleLabelClose }}" href="#"></a>
+      </div>
+    {% endif %}
+
+    {% for item in params.items %}
+      {% set detailsContent %}
+        <div aria-rowcount="{{ params.items.length }}" class="hee-table-expander__container" role="table">
+      {% endset %}
+
+      {% for row in item.rows %}
+        {% set rowContent %}
+          <div class="hee-table-expander__row" role="row">
+            {% if row.heading  %}
+              <span class="hee-table-expander__row__heading" role="cell">{{ row.heading }}</span>
+            {% endif %}
+            <span class="hee-table-expander__row__content" role="cell">
+              {% if row.href %}
+                <a href="{{ row.href }}">
+              {% endif %}
+                {{ row.content}}
+              {% if row.href %}
+                </a>
+              {% endif %}
+            </span>
+          </div>
+        {% endset %}
+
+        {% set detailsContent = detailsContent + rowContent %}
+      {% endfor %}
+
+      {% set detailsContent = detailsContent + '</div>' %}
+
+      {{ details({
+        classes: "nhsuk-expander",
+        text: item.title,
+        HTML: detailsContent
+      }) }}
+    {% endfor %}
+  </div>
+{% endmacro %}

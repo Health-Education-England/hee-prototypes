@@ -32,6 +32,7 @@
 
 {# Main #}
 {%- from 'hee/blocks/content/main/card--author/macro.njk' import authorCard %}
+{%- from 'hee/blocks/content/main/table-expander/macro.njk' import tableExpander %}
 {%- from 'hee/blocks/content/main/google-map/macro.njk' import googleMap %}
 {%- from 'hee/blocks/content/main/quote/macro.njk' import quote %}
 {#{%- from 'hee/blocks/content/sidebar/card--person/macro.njk' import personCard %}
@@ -55,6 +56,7 @@
 {%- from 'components/hee/hee-timeline/macro.njk' import timeline %}
 {%- from 'components/nhsuk-hee/nhsuk-hee-blocklinks/macro.njk' import blocklinks %}
 {%- from 'hee/blocks/scaffolding/back-to-top/macro.njk' import backToTop %}
+{%- from 'components/hee/hee-appliesto/macro.njk' import appliesTo %}
 
 {# NHSUK Components #}
 {%- from 'action-link/macro.njk' import actionLink %}
@@ -63,9 +65,11 @@
 {%- from 'card/macro.njk' import card %}
 {%- from 'checkboxes/macro.njk' import checkboxes %}
 {%- from 'contents-list/macro.njk' import contentsList %}
+{%- from 'details/macro.njk' import details %}
 {%- from 'images/macro.njk' import image %}
 {%- from 'inset-text/macro.njk' import insetText %}
 {%- from 'do-dont-list/macro.njk' import list %}
+{%- from 'nav-a-z/macro.njk' import azNav %}
 {%- from 'review-date/macro.njk' import reviewDate %}
 {%- from 'summary-list/macro.njk' import summaryList %}
 {%- from 'select/macro.njk' import select %}
@@ -73,7 +77,6 @@
 {%- from 'warning-callout/macro.njk' import warningCallout %}
 {#{%- from 'care-card/macro.njk' import careCard %}
 {%- from 'date-input/macro.njk' import dateInput %}
-{%- from 'details/macro.njk' import details %}
 {%- from 'error-message/macro.njk' import errorMessage %}
 {%- from 'error-summary/macro.njk' import errorSummary %}
 {%- from 'fieldset/macro.njk' import fieldset %}
@@ -81,7 +84,6 @@
 {%- from 'input/macro.njk' import input %}
 {%- from 'label/macro.njk' import label %}
 {%- from 'list-panel/macro.njk' import listPanel %}
-{%- from 'nav-a-z/macro.njk' import azNav %}
 {%- from 'radios/macro.njk' import radios %}
 {%- from 'tag/macro.njk' import tag %}
 {%- from 'textarea/macro.njk' import textarea %#}
