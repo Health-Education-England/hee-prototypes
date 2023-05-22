@@ -63,3 +63,7 @@ jspm_packages/
 .DS_Store
 Thumbs.db
 HEE-prototype.code-workspace
+
+# BackstopJS
+tests/backstop/bitmaps_test/*
+tests/backstop/html_report/*
