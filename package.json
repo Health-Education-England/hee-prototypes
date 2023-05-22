@@ -9,9 +9,9 @@
     "build:prod": "gulp build --prod",
     "test": "npm run backstop:test",
     "watch": "gulp watch",
-    "backstop:ref": "start-server-and-test serve http://localhost:3000 'backstop --config=./tests/backstop/backstop.json reference --docker'",
-    "backstop:test": "start-server-and-test serve http://localhost:3000 'backstop --config=./tests/backstop/backstop.json test --docker'",
-    "backstop:approve": "backstop --config=./tests/backstop/backstop.json approve"
+    "backstop:ref": "start-server-and-test serve http://localhost:3000 'backstop --config=./tests/backstop/backstop.js reference --docker'",
+    "backstop:test": "start-server-and-test serve http://localhost:3000 'backstop --config=./tests/backstop/backstop.js test --docker'",
+    "backstop:approve": "backstop --config=./tests/backstop/backstop.js approve"
   },
   "author": "https://github.com/nhsuk/",
   "license": "MIT",
