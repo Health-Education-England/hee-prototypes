@@ -67,3 +67,5 @@ HEE-prototype.code-workspace
 # BackstopJS
 tests/backstop/bitmaps_test/*
 tests/backstop/html_report/*
+tests/backstop/config/*
+!tests/backstop/config/base.json

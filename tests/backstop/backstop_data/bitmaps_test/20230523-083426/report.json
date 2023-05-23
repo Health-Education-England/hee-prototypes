@@ -1,0 +1,72 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/hee-prototypes_Example_-_Homepage_0_document_0_desktop.png",
+        "test": "../bitmaps_test/20230523-083426/hee-prototypes_Example_-_Homepage_0_document_0_desktop.png",
+        "selector": "document",
+        "fileName": "hee-prototypes_Example_-_Homepage_0_document_0_desktop.png",
+        "label": "Example - Homepage",
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/templates/examples/homepage.html",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/hee-prototypes_Example_-_Homepage_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20230523-083426/hee-prototypes_Example_-_Homepage_0_document_1_tablet.png",
+        "selector": "document",
+        "fileName": "hee-prototypes_Example_-_Homepage_0_document_1_tablet.png",
+        "label": "Example - Homepage",
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/templates/examples/homepage.html",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/hee-prototypes_Example_-_Homepage_0_document_2_mobile.png",
+        "test": "../bitmaps_test/20230523-083426/hee-prototypes_Example_-_Homepage_0_document_2_mobile.png",
+        "selector": "document",
+        "fileName": "hee-prototypes_Example_-_Homepage_0_document_2_mobile.png",
+        "label": "Example - Homepage",
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/templates/examples/homepage.html",
+        "expect": 0,
+        "viewportLabel": "mobile",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    }
+  ],
+  "id": "hee-prototypes"
+}
