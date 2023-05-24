@@ -6,18 +6,25 @@ const fs = require('fs');
 const glob = require('glob');
 
 /**
- * Writes config objects for BackstopJS to JSON file.
+ * Returns an array of scenario file includes.
  *
- * @param {string} path Path to config file output.
- * @param {Object} data JS object to write to JSON file.
- *
+ * @return {string[]} Array containing scenario objects.
  */
-const writeConfigFile = (path, data) => {
-  try {
-    fs.writeFileSync(path, JSON.stringify(data))
-  } catch (err) {
-    console.error(err)
+const getScenarioIncludes = () => {
+  let includePaths = glob.globSync('./tests/backstop/scenarios/*.js');
+
+  if (includePaths.length === 0) {
+    throw new Error('No scenario includes found.')
   }
+
+  includePaths = includePaths.map(path => {
+    path = path.split('/');
+    path = path.pop();
+    path = path.split('.');
+    return path[0];
+  })
+
+  return includePaths.sort();
 }
 
 /**
@@ -29,11 +36,13 @@ const writeConfigFile = (path, data) => {
  *
  * @return {Object[]} Array containing scenario objects.
  */
-const generateScenarios = (host, scenarioId, pathPattern) => {
+const generateScenariosArray = (host, scenarioId, pathPattern) => {
   let scenarios = [];
-  let filePaths = glob.globSync(pathPattern);
 
-  filePaths.map(path => {
+  let filePaths = glob.globSync(pathPattern);
+  filePaths.sort();
+
+  filePaths.forEach(path => {
     // Split path string into array.
     path = path.split('/');
 
@@ -68,5 +77,19 @@ const generateScenarios = (host, scenarioId, pathPattern) => {
   return scenarios;
 }
 
-module.exports.writeConfigFile = writeConfigFile;
-module.exports.generateScenarios = generateScenarios;
+/**
+ * Writes config objects for BackstopJS to JSON file.
+ *
+ * @param {string} path Path to config file output.
+ * @param {Object} data JS object to write to JSON file.
+ *
+ */
+const writeConfigFile = (path, data) => {
+  try {
+    fs.writeFileSync(path, JSON.stringify(data))
+  } catch (err) {
+    console.error(err)
+  }
+}
+
+module.exports = { getScenarioIncludes, writeConfigFile, generateScenariosArray }
