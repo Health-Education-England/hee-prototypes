@@ -78,6 +78,27 @@ const generateScenariosArray = (host, scenarioId, pathPattern) => {
 }
 
 /**
+ * Merges manual scenario override with auto generated scenarios array.
+ *
+ * @param  {Object[]} scenarios Array of auto generated scenario objects.
+ * @param  {Object[]} overrides Array of manually overridden scenarios.
+ *
+ * @return {Object[]} Array containing merged array of scenario objects.
+ */
+const applyScenarioOverrides = (scenarios, overrides) => {
+  overrides.forEach(override => {
+    scenarios.find((o, index) => {
+      if (o.label === override.label) {
+        scenarios[index] = {...o, ...override}
+        return true;
+      }
+    });
+  })
+
+  return scenarios;
+}
+
+/**
  * Writes config objects for BackstopJS to JSON file.
  *
  * @param {string} path Path to config file output.
@@ -92,4 +113,9 @@ const writeConfigFile = (path, data) => {
   }
 }
 
-module.exports = { getScenarioIncludes, writeConfigFile, generateScenariosArray }
+module.exports = {
+  getScenarioIncludes,
+  generateScenariosArray,
+  applyScenarioOverrides,
+  writeConfigFile,
+}

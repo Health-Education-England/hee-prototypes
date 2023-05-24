@@ -32,6 +32,11 @@ scenarioIncludes.forEach(includeFile => {
     return;
   }
 
+  // Apply custom scenario overrides.
+  if (scenario.hasOwnProperty('overrides')) {
+    scenarios = utils.applyScenarioOverrides(scenarios, scenario.overrides);
+  }
+
   scenarioData = scenarioData.concat(scenarios);
 })
 

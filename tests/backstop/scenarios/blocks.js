@@ -5,4 +5,12 @@
 const id = 'blocks';
 const pathPattern = './app/views/blocks/**/examples/*.html';
 
-module.exports = { id, pathPattern };
+// Add extra attributes manually to specific scenarios here.
+const overrides = [
+  {
+    label: 'blocks-main-google-map',
+    delay: 5000
+  }
+];
+
+module.exports = { id, pathPattern, overrides };
