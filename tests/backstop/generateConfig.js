@@ -9,6 +9,7 @@ const blocks = require('./scenarios/blocks');
 const TEST_HOST = 'http://localhost:3000';
 
 let blockScenarios = [];
+
 try {
   blockScenarios = utils.generateScenarios(TEST_HOST, blocks.id, blocks.pathPattern);
 } catch (e) {

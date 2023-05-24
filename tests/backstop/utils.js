@@ -21,15 +21,15 @@ const writeConfigFile = (path, data) => {
 }
 
 /**
- * Generates scenario array for JSON config.
+ * Generates scenarios array for JSON config.
  *
  * @param  {string} host        Hostname for test server.
- * @param  {string} id          Scenario id.
+ * @param  {string} scenarioId          Scenario scenarioId.
  * @param  {string} pathPattern Glob pattern for block html files.
  *
  * @return {Object[]} Array containing scenario objects.
  */
-const generateScenarios = (host, id, pathPattern) => {
+const generateScenarios = (host, scenarioId, pathPattern) => {
   let scenarios = [];
   let filePaths = glob.globSync(pathPattern);
 
@@ -37,12 +37,12 @@ const generateScenarios = (host, id, pathPattern) => {
     // Split path string into array.
     path = path.split('/');
 
-    // Throw error if scenario id does not exist in filepath pattern.
-    if (path.indexOf(id) === -1) {
-      throw new Error('Scenario id of "' + id + '" not found in filepath pattern: "' + pathPattern + '"');
+    // Throw error if scenario scenarioId does not exist in filepath pattern.
+    if (path.indexOf(scenarioId) === -1) {
+      throw new Error('Scenario scenarioId of "' + scenarioId + '" not found in filepath pattern: "' + pathPattern + '"');
     }
 
-    const directoryIndex = path.indexOf(id);
+    const directoryIndex = path.indexOf(scenarioId);
 
     let urlPath = '/';
     for (let i = directoryIndex; i < path.length; i++) {
@@ -55,7 +55,7 @@ const generateScenarios = (host, id, pathPattern) => {
     // Format scenario name.
     let name = path[path.length - 1];
     name = name.split('.');
-    name = 'block' + '-' + name[0];
+    name = scenarioId + '-' + name[0];
 
     let config = {
       label: name,
