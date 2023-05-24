@@ -23,17 +23,26 @@ const writeConfigFile = (path, data) => {
 /**
  * Generates scenario array for JSON config.
  *
- * @param {string} pathPattern     Glob pattern for block html files.
- * @param {number} directoryIndex  Start index for directory pattern.
+ * @param  {string} host        Hostname for test server.
+ * @param  {string} id          Scenario id.
+ * @param  {string} pathPattern Glob pattern for block html files.
  *
+ * @return {Object[]} Array containing scenario objects.
  */
-const generateScenarios = (pathPattern, directoryIndex) => {
+const generateScenarios = (host, id, pathPattern) => {
   let scenarios = [];
   let filePaths = glob.globSync(pathPattern);
 
   filePaths.map(path => {
     // Split path string into array.
     path = path.split('/');
+
+    // Throw error if scenario id does not exist in filepath pattern.
+    if (path.indexOf(id) === -1) {
+      throw new Error('Scenario id of "' + id + '" not found in filepath pattern: "' + pathPattern + '"');
+    }
+
+    const directoryIndex = path.indexOf(id);
 
     let urlPath = '/';
     for (let i = directoryIndex; i < path.length; i++) {
@@ -50,7 +59,7 @@ const generateScenarios = (pathPattern, directoryIndex) => {
 
     let config = {
       label: name,
-      url: urlPath
+      url: host + urlPath
     }
 
     scenarios.push(config);

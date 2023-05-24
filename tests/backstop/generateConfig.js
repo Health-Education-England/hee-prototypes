@@ -3,11 +3,19 @@
  */
 
 const utils = require('./utils');
-
 const baseConfig = require('./config/base.json');
 const blocks = require('./scenarios/blocks');
 
-const blockScenarios = utils.generateScenarios(blocks.pathPattern, blocks.directoryIndex);
+const TEST_HOST = 'http://localhost:3000';
+
+let blockScenarios = [];
+try {
+  blockScenarios = utils.generateScenarios(TEST_HOST, blocks.id, blocks.pathPattern);
+} catch (e) {
+  console.error(e);
+  return;
+}
+
 baseConfig.scenarios = blockScenarios;
 
-utils.writeConfigFile('./config/backstop.json', baseConfig);
+utils.writeConfigFile('./tests/backstop/config/backstop.json', baseConfig);

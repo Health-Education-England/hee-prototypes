@@ -65,7 +65,7 @@ Thumbs.db
 HEE-prototype.code-workspace
 
 # BackstopJS
-tests/backstop/bitmaps_test/*
-tests/backstop/html_report/*
+tests/backstop/backstop_data/bitmaps_test/*
+tests/backstop/backstop_data/html_report/*
 tests/backstop/config/*
 !tests/backstop/config/base.json

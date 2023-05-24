@@ -2,7 +2,7 @@
  * Generates BackstopJS scenarios array covering HEE prototype content blocks.
  */
 
-const pathPattern = '../../app/views/blocks/**/examples/*.html';
-const directoryIndex = 4;
+const id = 'blocks';
+const pathPattern = './app/views/blocks/**/examples/*.html';
 
-module.exports = { pathPattern, directoryIndex };
+module.exports = { id, pathPattern };
