@@ -5,16 +5,18 @@
   "debug": false,
   "debugWindow": false,
   "dockerCommandTemplate": "docker run --expose 3000 --network='host' -P --rm -i -u $(id -u ${USER}):$(id -g ${USER}) --mount type=bind,source='{cwd}',target=/src backstopjs/backstopjs:{version} {backstopCommand} {args}",
-  "engine": "puppeteer",
+  "engine": "playwright",
   "engineOptions": {
     "args": [
       "--no-sandbox"
     ]
   },
+  "onBeforeScript": "playwright/onBefore.js",
+  "onReadyScript": "playwright/onReady.js",
   "paths": {
     "bitmaps_reference": "tests/backstop/backstop_data/bitmaps_reference",
     "bitmaps_test": "tests/backstop/backstop_data/bitmaps_test",
-    "casper_scripts": "tests/backstop/backstop_data/casper_scripts",
+    "engine_scripts": "tests/backstop/backstop_data/engine_scripts",
     "html_report": "tests/backstop/backstop_data/html_report",
     "ci_report": "tests/backstop/backstop_data/ci_report"
   },
