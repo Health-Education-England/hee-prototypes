@@ -1,0 +1,4 @@
+{
+  "id": "templates",
+  "pathPattern": "./app/views/templates/examples/*.html"
+}

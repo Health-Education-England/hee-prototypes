@@ -11,7 +11,7 @@ const glob = require('glob');
  * @return {string[]} Array containing scenario objects.
  */
 const getScenarioIncludes = () => {
-  let includePaths = glob.globSync('./tests/backstop/scenarios/*.js');
+  let includePaths = glob.globSync('./tests/backstop/scenarios/*.json');
 
   if (includePaths.length === 0) {
     throw new Error('No scenario includes found.')
@@ -78,7 +78,7 @@ const generateScenariosArray = (host, scenarioId, pathPattern) => {
 }
 
 /**
- * Merges manual scenario override with auto generated scenarios array.
+ * Merges manual scenario overrides with auto generated scenarios array.
  *
  * @param  {Object[]} scenarios Array of auto generated scenario objects.
  * @param  {Object[]} overrides Array of manually overridden scenarios.

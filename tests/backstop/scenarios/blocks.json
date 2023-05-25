@@ -1,0 +1,10 @@
+{
+  "id": "blocks",
+  "pathPattern": "./app/views/blocks/**/examples/*.html",
+  "overrides": [
+    {
+      "label": "blocks-main-google-map",
+      "delay": 5000
+    }
+  ]
+}
