@@ -9,9 +9,9 @@
     "build:prod": "gulp build --prod",
     "test": "npm run backstop:test",
     "watch": "gulp watch",
-    "backstop:ref": "npm run backstop:generate-config && start-server-and-test serve http://localhost:3000 'backstop --config=./tests/backstop/config/backstop.json reference --docker'",
-    "backstop:test": "npm run backstop:generate-config && start-server-and-test serve http://localhost:3000 'backstop --config=./tests/backstop/config/backstop.json test --docker'",
-    "backstop:approve": "backstop --config=./tests/backstop/config/backstop.json approve",
+    "backstop:ref": "npm run backstop:generate-config && start-server-and-test serve http://localhost:3000 'npx backstop --config=./tests/backstop/config/backstop.json reference --docker'",
+    "backstop:test": "npm run backstop:generate-config && start-server-and-test serve http://localhost:3000 'npx backstop --config=./tests/backstop/config/backstop.json test --docker'",
+    "backstop:approve": "npx backstop --config=./tests/backstop/config/backstop.json approve",
     "backstop:generate-config": "node tests/backstop/generateConfig.js"
   },
   "author": "https://github.com/nhsuk/",

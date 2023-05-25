@@ -87,12 +87,23 @@ const generateScenariosArray = (host, scenarioId, pathPattern) => {
  */
 const applyScenarioOverrides = (scenarios, overrides) => {
   overrides.forEach(override => {
+
+    let exists = false;
+
+    // Updates an existing scenario with the manually overridden scenario
+    // properties.
     scenarios.find((o, index) => {
       if (o.label === override.label) {
         scenarios[index] = {...o, ...override}
-        return true;
+        exists = true;
+        return exists;
       }
     });
+
+    // When an override is a new scenario add object to auto generated scenarios.
+    if (!exists) {
+      scenarios.push(override);
+    }
   })
 
   return scenarios;
