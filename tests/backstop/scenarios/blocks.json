@@ -37,6 +37,11 @@
       ]
     },
     {
+      "label": "blocks-main-google-map",
+      "delay": 5000,
+      "misMatchThreshold": 5.0
+    },
+    {
       "label": "blocks-main-media-embed",
       "clickSelectors": [
         ".nhsuk-media__transcript a"

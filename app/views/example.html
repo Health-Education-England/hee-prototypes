@@ -134,15 +134,9 @@
     <meta name="msapplication-wide310x150logo" content="{{ basePath }}/favicons/widetile-310x150.png">
     <meta name="msapplication-square310x310logo" content="{{ basePath }}/favicons/largetile-310x310.png">
     {% endblock %}
-
-    <style>
-      .example.example--blocks {
-        max-width: 640px;
-      }
-    </style>
   </head>
 
-  <body class="{{ bodyClasses }}">
+  <body>
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
     {% block bodyStart %}
     {% endblock %}

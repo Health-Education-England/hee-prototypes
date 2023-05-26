@@ -1,4 +1,10 @@
 {
   "id": "templates",
-  "pathPattern": "./app/views/templates/examples/*.html"
+  "pathPattern": "./app/views/templates/examples/*.html",
+  "overrides": [
+    {
+      "label": "templates-event-item",
+      "delay": 5000
+    }
+  ]
 }
