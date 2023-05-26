@@ -54,6 +54,10 @@
         ".hee-table-expander__toggle a"
       ],
       "url": "http://localhost:3000/blocks/content/examples/main-table-expander.html"
+    },
+    {
+      "label": "blocks-skip-link",
+      "focusSelector": ".nhsuk-skip-link"
     }
   ]
 }
