@@ -11,6 +11,12 @@
       h1, p, span {
         max-width: 66.6667%;
       }
+
+      .nhsuk-hero {
+        h1, p, span {
+          max-width: 100%;
+        }
+      }
   }
   .page__layout {
       @include hee-flexgrid-row;
