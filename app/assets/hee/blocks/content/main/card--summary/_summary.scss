@@ -8,6 +8,16 @@
     height: 8px;
     margin-top: nhsuk-spacing(2);
     width: 12px;
+
+    @include mq($from: desktop) {
+      transform: rotate(180deg);
+    }
+  }
+
+  .hee-card--summary__heading {
+    @include mq($from: desktop) {
+      margin: 0;
+    }
   }
 
   .hee-card--summary__list {
@@ -15,6 +25,10 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+
+    @include mq($from: desktop) {
+      display: none;
+    }
   }
 
   .hee-card--summary__item {
