@@ -2,8 +2,12 @@
 .hee-card {
   background-color: #FFF;
   padding: 24px;
-  max-width: 360px;
   margin-bottom: nhsuk-spacing(4);
+  max-width: 360px;
+
+  @include mq($from: desktop) {
+    max-width: 100%;
+  }
 
   .hee-flexgrid-row & {
       max-width: none;
