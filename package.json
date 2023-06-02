@@ -7,12 +7,12 @@
     "serve": "gulp serve",
     "build": "gulp build",
     "build:prod": "gulp build --prod",
-    "test": "npm run backstop:test",
     "watch": "gulp watch",
-    "backstop:ref": "npm run backstop:generate-config && start-server-and-test serve http://localhost:3000 'npx backstop --config=./tests/backstop/config/backstop.json reference --docker'",
-    "backstop:test": "npm run backstop:generate-config && start-server-and-test serve http://localhost:3000 'npx backstop --config=./tests/backstop/config/backstop.json test --docker'",
-    "backstop:approve": "npx backstop --config=./tests/backstop/config/backstop.json approve",
-    "backstop:generate-config": "node tests/backstop/generateConfig.js"
+    "test": "npm run backstop:test",
+    "backstop:ref": "docker-compose run backstopjs npm run backstop:ref",
+    "backstop:test": "docker-compose run backstopjs npm run backstop:test",
+    "backstop:approve": "docker-compose run backstopjs npm run backstop:approve",
+    "backstop:generate-config": "docker-compose run backstopjs npm run backstop:generate-config"
   },
   "author": "https://github.com/nhsuk/",
   "license": "MIT",
@@ -27,7 +27,6 @@
     "dotenv": "^6.0.0",
     "express": "^4.18.0",
     "express-session": "^1.17.1",
-    "glob": "^10.2.6",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-clean": "^0.4.0",
@@ -47,11 +46,8 @@
     "node-sass": "^7.0",
     "nunjucks": "^3.2.2",
     "path": "^0.12.7",
-    "start-server-and-test": "^2.0.0",
     "webpack": "^5.72.0",
     "webpack-stream": "^7.0.0"
   },
-  "dependencies": {
-    "backstopjs": "^6.2.1"
-  }
+  "dependencies": {}
 }

@@ -69,4 +69,3 @@ tests/backstop/backstop_data/bitmaps_test/*
 tests/backstop/backstop_data/html_report/*
 tests/backstop/config/*
 !tests/backstop/config/base.json
-tests/backstop/_run-backstopjs-regression-tests/*
