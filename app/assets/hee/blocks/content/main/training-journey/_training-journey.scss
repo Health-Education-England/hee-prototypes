@@ -73,4 +73,17 @@
       width: 18px;
     }
   }
+
+  // Styling for optional route group.
+  .hee-training-journey__group.optional {
+    .hee-training-journey__item {
+      border: none;
+    }
+
+    .hee-training-journey__item.last {
+      .hee-training-journey__item__link {
+        right: 11px;
+      }
+    }
+  }
 }
