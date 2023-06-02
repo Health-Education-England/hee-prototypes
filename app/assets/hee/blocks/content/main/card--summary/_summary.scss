@@ -2,6 +2,14 @@
   border: 1px solid $color_nhsuk-grey-4;
   width: 100%;
 
+  .hee-card--summary__toggle {
+    background-image: url('data:image/svg+xml,<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 0.5C6.3 0.5 6.5 0.6 6.7 0.8L11.7 5.8C12.1 6.2 12.1 6.8 11.7 7.2C11.3 7.6 10.7 7.6 10.3 7.2L6 2.9L1.7 7.2C1.3 7.6 0.699999 7.6 0.299999 7.2C-0.100001 6.8 -0.100001 6.2 0.299999 5.8L5.3 0.8C5.5 0.6 5.7 0.5 6 0.5Z" fill="black"/></svg>');
+    float: right;
+    height: 8px;
+    margin-top: nhsuk-spacing(2);
+    width: 12px;
+  }
+
   .hee-card--summary__list {
     @include nhsuk-typography-responsive(19);
     list-style-type: none;
@@ -47,6 +55,33 @@
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+
+  // Default state styling (closed for mobile, open for desktop).
+  &.default {
+    .hee-card--summary__heading {
+      margin-bottom: 0;
+
+      @include mq($from: desktop) {
+        @include nhsuk-responsive-margin(4, 'bottom');
+      }
+    }
+
+    .hee-card--summary__list {
+      display: none;
+
+      @include mq($from: desktop) {
+        display: block;
+      }
+    }
+
+    .hee-card--summary__toggle {
+      transform: rotate(180deg);
+
+      @include mq($from: desktop) {
+        transform: none;
+      }
     }
   }
 }
