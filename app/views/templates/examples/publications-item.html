@@ -147,24 +147,40 @@
     })
   }}
 
-  {{ detailsCard({
-    title: "Publication Info",
+  {{ downloadsCard({
+    title: "Alternative versions",
     items: [
       {
-        label: "Published:",
-        value: "24 June 2022"
+        title: "Short title",
+        text: "Short title",
+        url: "#",
+        docSize: "836KB",
+        docType: "PDF",
+        tagColor: "pdf"
       },
       {
-        label: "Updated:",
-        value: "24 July 2022"
+        title: "Second Publication Title",
+        text: "Second Publication Title",
+        url: "#",
+        docSize: "1.4MB",
+        docType: "ODF",
+        tagColor: "odf"
       },
       {
-        label: "Professions:",
-        value: "<a href=\"#\">Profession 1</a>, <a href=\"#\">Profession 2</a>"
+        title: "Third Publication Title",
+        text: "Third Publication Title",
+        url: "#",
+        docSize: "2.89MB",
+        docType: "XLS",
+        tagColor: "xls"
       },
       {
-        label: "Topics:",
-        value: "<a href=\"#\">Topic 1</a>, <a href=\"#\">Topic 2</a>"
+        title: "Fourth Publication Title",
+        text: "Fourth Publication Title",
+        url: "#",
+        docSize: "2.89MB",
+        docType: "MRC",
+        tagColor: "mrc"
       }
     ]
   }) }}
@@ -176,6 +192,7 @@
         title: "Publication title - PDF version",
         text: "Publication title - PDF version",
         url: "#",
+        docSize: "1.4MB",
         docType: "PDF",
         tagColor: "pdf"
       },
@@ -184,12 +201,14 @@
         text: "Publication title - Open Document",
         url: "#",
         docType: "ODF",
+        docSize: "2.89MB",
         tagColor: "odf"
       },
       {
         title: "Publication title - Excel",
         text: "Publication title - Excel",
         url: "#",
+        docSize: "836KB",
         docType: "XLS",
         tagColor: "xls"
       }
@@ -203,6 +222,7 @@
         title: "Teitl y cyhoeddiad - Fersiwn PDF",
         text: "Teitl y cyhoeddiad - Fersiwn PDF",
         url: "#",
+        docSize: "2.89MB",
         docType: "PDF",
         tagColor: "pdf"
       },
@@ -210,6 +230,7 @@
         title: "Tytuł publikacji - wersja PDF",
         text: "Tytuł publikacji - wersja PDF",
         url: "#",
+        docSize: "1.4MB",
         docType: "PDF",
         tagColor: "pdf"
       }
