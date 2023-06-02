@@ -1,13 +1,13 @@
 {
   "id": "blocks",
-  "pathPattern": "./app/views/blocks/**/examples/*.html",
+  "pathPattern": "/app/src/public/blocks/**/examples/*.html",
   "overrides": [
     {
       "label": "blocks-header-navigation-desktop-submenu-click",
       "clickSelectors": [
         "li.nhsuk-subnav"
       ],
-      "url": "http://localhost:3000/blocks/scaffolding/examples/header-navigation.html",
+      "url": "http://127.0.0.1:8080/blocks/scaffolding/examples/header-navigation.html",
       "viewports": [
         {
           "label": "desktop",
@@ -22,7 +22,7 @@
         "button.nhsuk-header__menu-toggle",
         "li.nhsuk-subnav"
       ],
-      "url": "http://localhost:3000/blocks/scaffolding/examples/header-navigation.html",
+      "url": "http://127.0.0.1:8080/blocks/scaffolding/examples/header-navigation.html",
       "viewports": [
         {
           "label": "tablet",
@@ -46,14 +46,14 @@
       "clickSelectors": [
         ".nhsuk-media__transcript a"
       ],
-      "url": "http://localhost:3000/blocks/content/examples/main-media-embed.html"
+      "url": "http://127.0.0.1:8080/blocks/content/examples/main-media-embed.html"
     },
     {
       "label": "blocks-main-table-expander-open",
       "clickSelectors": [
         ".hee-table-expander__toggle a"
       ],
-      "url": "http://localhost:3000/blocks/content/examples/main-table-expander.html"
+      "url": "http://127.0.0.1:8080/blocks/content/examples/main-table-expander.html"
     },
     {
       "label": "blocks-skip-link",

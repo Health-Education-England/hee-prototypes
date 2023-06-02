@@ -1,5 +1,5 @@
 {
-  "id": "hee-prototypes",
+  "id": "backstopjs-regression-tests",
   "asyncCaptureLimit": 5,
   "asyncCompareLimit": 50,
   "debug": false,
@@ -14,11 +14,11 @@
   "onBeforeScript": "playwright/onBefore.js",
   "onReadyScript": "playwright/onReady.js",
   "paths": {
-    "bitmaps_reference": "tests/backstop/backstop_data/bitmaps_reference",
-    "bitmaps_test": "tests/backstop/backstop_data/bitmaps_test",
-    "engine_scripts": "tests/backstop/backstop_data/engine_scripts",
-    "html_report": "tests/backstop/backstop_data/html_report",
-    "ci_report": "tests/backstop/backstop_data/ci_report"
+    "bitmaps_reference": "/app/src/backstop/backstop_data/bitmaps_reference",
+    "bitmaps_test": "/app/src/backstop/backstop_data/bitmaps_test",
+    "engine_scripts": "/app/engine",
+    "html_report": "/app/src/backstop/backstop_data/html_report",
+    "ci_report": "/app/src/backstop/backstop_data/ci_report"
   },
   "report": [
     "browser"

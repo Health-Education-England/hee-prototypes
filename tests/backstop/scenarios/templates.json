@@ -1,6 +1,6 @@
 {
   "id": "templates",
-  "pathPattern": "./app/views/templates/examples/*.html",
+  "pathPattern": "/app/src/public/templates/examples/*.html",
   "overrides": [
     {
       "label": "templates-event-item",
