@@ -14,8 +14,22 @@
     @include nhsuk-responsive-padding(1, 'bottom');
     border-bottom: 1px solid $color_nhsuk-grey-4;
 
+    @include mq($from: tablet) {
+      display: flex;
+    }
+
     span {
       display: block;
+
+      @include mq($from: tablet) {
+        flex-basis: 48%;
+      }
+
+      &.hee-card--summary__item__label {
+        @include mq($from: tablet) {
+          padding-right: nhsuk-spacing(2);
+        }
+      }
     }
 
     &:last-of-type {
