@@ -98,11 +98,12 @@ jobs:
 
       # Run backstopjs tests.
       - name: Run backstopjs tests
-        run: npm run backstop:generate-config && start-server-and-test serve http://127.0.0.1:8080 'npx backstop --config=/app/src/backstop/config/backstop.json test'
+        run: npm run backstop:test
 
       # Upload html report as an asset
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
+        if: ${{ always() }}
         with:
           name: backstop_report
           path: tests/backstop/backstop_data/**
