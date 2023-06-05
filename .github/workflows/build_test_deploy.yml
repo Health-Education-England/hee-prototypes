@@ -76,8 +76,8 @@ jobs:
     runs-on: ubuntu-latest
 
     # Docker image - https://github.com/Health-Education-England/run-backstopjs-regression-tests
-    container:
-      image: ghcr.io/health-education-england/run-backstopjs-regression-tests:main
+    #container:
+      #image: ghcr.io/health-education-england/run-backstopjs-regression-tests:main
 
     steps:
       # Checkout repo from GitHub and use current branch.
