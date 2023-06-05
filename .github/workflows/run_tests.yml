@@ -6,9 +6,13 @@ on:
     types: [opened, synchronize]
 
 jobs:
-  build:
-    name: Download build assets
+  backstopjs:
+    name: Run backstopjs visual regression tests
     runs-on: ubuntu-latest
+
+    # Docker image - https://github.com/Health-Education-England/run-backstopjs-regression-tests
+    container:
+      image: ghcr.io/health-education-england/run-backstopjs-regression-tests:main
 
     steps:
       # Checkout repo from GitHub and use current branch.
@@ -36,31 +40,14 @@ jobs:
         run: ls -R
         working-directory: public/
 
-  backstopjs:
-    name: Run backstopjs tests
-    runs-on: ubuntu-latest
-
-    # Docker image - https://github.com/Health-Education-England/run-backstopjs-regression-tests
-    container:
-      image: ghcr.io/health-education-england/run-backstopjs-regression-tests:main
-
-    steps:
-      # Checkout repo from GitHub and use current branch.
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      # Download assets from "Build" step into "public/" directory.
-      - name: Download build artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: assets
-          path: public/
-
-      # Debugging step to display ./public directory contents in GitHub action logs.
-      - name: Display structure of downloaded files
-        run: ls -R
-        working-directory: public/
-
       # Run backstopjs tests.
       - name: Run backstopjs tests
         run: npm run backstop:test
+
+      # Upload html report as an asset
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: backstopjs_html_report
+          path: tests/backstop/backstop_data/html_report/**
+          retention-days: 1
