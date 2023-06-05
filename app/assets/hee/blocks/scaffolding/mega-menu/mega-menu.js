@@ -42,11 +42,6 @@ export default () => {
             }
 
             this.togglePanel(event.target);
-
-            // Set focus on first link in mega menu panel list.
-            targetPanel
-              .querySelector('.hee-mega-menu__panel__link:first-child')
-              .focus();
           }
         })
 

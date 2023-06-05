@@ -2,7 +2,7 @@
   <div class="hee-training-journey">
     <h3>{{ params.title }}</h3>
     {% for group in params.groups %}
-      <div class="hee-training-journey__group">
+      <div class="hee-training-journey__group {{ group.class }}">
         <h4>{{ group.name }}</h4>
         <div class="hee-training-journey__group__container">
           {% for item in group.items %}

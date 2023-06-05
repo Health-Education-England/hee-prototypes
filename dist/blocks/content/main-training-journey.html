@@ -157,6 +157,7 @@
         ]
       },
       {
+        class: &quot;optional&quot;,
         name: &quot;Optional routes&quot;,
         items: [
           {
@@ -212,21 +213,26 @@
           <pre><code>
 &lt;div class=&quot;hee-training-journey&quot;&gt;
     &lt;h3&gt;Your training journey&lt;/h3&gt;
-    &lt;div class=&quot;hee-training-journey__group&quot;&gt;
+    &lt;div class=&quot;hee-training-journey__group &quot;&gt;
       &lt;h4&gt;Prerequisites&lt;/h4&gt;
       &lt;div class=&quot;hee-training-journey__group__container&quot;&gt;
         &lt;div class=&quot;hee-training-journey__item first  &quot;&gt;
           &lt;a class=&quot;hee-training-journey__item__link&quot; href=&quot;https://www.abc123.com&quot;&gt;Foundation Surgery&lt;/a&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;hee-training-journey__item   &quot;&gt;
+        &lt;div class=&quot;hee-training-journey__item  last &quot;&gt;
           &lt;a class=&quot;hee-training-journey__item__link&quot; href=&quot;https://www.abc123.com&quot;&gt;F2 Standalone Surgery&lt;/a&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;hee-training-journey__item  last &quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;hee-training-journey__group &quot;&gt;
+      &lt;h4&gt;You are here&lt;/h4&gt;
+      &lt;div class=&quot;hee-training-journey__group__container&quot;&gt;
+        &lt;div class=&quot;hee-training-journey__item first last active&quot;&gt;
           &lt;a class=&quot;hee-training-journey__item__link&quot; href=&quot;https://www.abc123.com&quot;&gt;Core surgery&lt;/a&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;hee-training-journey__group&quot;&gt;
+    &lt;div class=&quot;hee-training-journey__group optional&quot;&gt;
       &lt;h4&gt;Optional routes&lt;/h4&gt;
       &lt;div class=&quot;hee-training-journey__group__container&quot;&gt;
         &lt;div class=&quot;hee-training-journey__item first  &quot;&gt;
@@ -238,8 +244,7 @@
         &lt;div class=&quot;hee-training-journey__item   &quot;&gt;
           &lt;a class=&quot;hee-training-journey__item__link&quot; href=&quot;https://www.abc123.com&quot;&gt;Neurosurgery&lt;/a&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;hee-training-journey__item   active&quot;&gt;
-          &lt;span&gt;You are here&lt;/span&gt;
+        &lt;div class=&quot;hee-training-journey__item   &quot;&gt;
           &lt;a class=&quot;hee-training-journey__item__link&quot; href=&quot;https://www.abc123.com&quot;&gt;Oral &amp;amp; Maxillofacial Surgery&lt;/a&gt;
         &lt;/div&gt;
         &lt;div class=&quot;hee-training-journey__item   &quot;&gt;
@@ -262,7 +267,7 @@
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
+  &lt;/div&gt;
   </code></pre>
         </div>
       </div>
@@ -278,7 +283,7 @@
         <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/hee-prototypes/about">About us</a></li>
         <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/hee-prototypes/contact">Contact us</a></li>
       </ul>
-      <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+      <p class="nhsuk-footer__copyright">&copy; Crown</p>
     </div>
   </footer>
   <script src="/hee-prototypes/js/jquery-3.3.1.min.js"></script>
