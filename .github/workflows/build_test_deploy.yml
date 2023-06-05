@@ -89,12 +89,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: assets
-          path: public/
-
-      # Debugging step to display ./dist directory contents in GitHub action logs.
-      - name: Display structure of downloaded files
-        run: ls -R
-        working-directory: public/
+          path: public/hee-prototypes/
 
       # Run backstopjs tests.
       - name: Run backstopjs tests
