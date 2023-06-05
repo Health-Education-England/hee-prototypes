@@ -8,45 +8,46 @@ on:
 jobs:
   backstopjs:
     name: Run backstopjs visual regression tests
-  runs-on: ubuntu-latest
-  # Docker image - https://github.com/Health-Education-England/run-backstopjs-regression-tests
-  container:
-    image: ghcr.io/health-education-england/run-backstopjs-regression-tests:main
+    runs-on: ubuntu-latest
 
-  steps:
-    # Checkout repo from GitHub and use current branch.
-    - name: Checkout code
-      uses: actions/checkout@v3
+    # Docker image - https://github.com/Health-Education-England/run-backstopjs-regression-tests
+    container:
+      image: ghcr.io/health-education-england/run-backstopjs-regression-tests:main
 
-    # Wait for Build operation to finish from build_commit_deploy workflow.
-    - name: Wait for build operation to complete
-      uses: lewagon/wait-on-check-action@v1.3.1
-      with:
-        ref: ${{ github.ref }}
-        check-name: 'Build'
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        wait-interval: 10
+    steps:
+      # Checkout repo from GitHub and use current branch.
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    # Download assets from "Build" step into "public/" directory.
-    - name: Download build artifacts
-      uses: actions/download-artifact@v3
-      with:
-        name: assets
-        path: public/
+      # Wait for Build operation to finish from build_commit_deploy workflow.
+      - name: Wait for build operation to complete
+        uses: lewagon/wait-on-check-action@v1.3.1
+        with:
+          ref: ${{ github.ref }}
+          check-name: 'Build'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          wait-interval: 10
 
-    # Debugging step to display ./dist directory contents in GitHub action logs.
-    - name: Display structure of downloaded files
-      run: ls -R
-      working-directory: public/
+      # Download assets from "Build" step into "public/" directory.
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: assets
+          path: public/
 
-    # Run backstopjs tests.
-    - name: Run backstopjs tests
-      run: npm run backstop:test
+      # Debugging step to display ./dist directory contents in GitHub action logs.
+      - name: Display structure of downloaded files
+        run: ls -R
+        working-directory: public/
 
-    # Upload html report as an asset
-    - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: backstopjs_html_report
-        path: tests/backstop/backstop_data/html_report/**
-        retention-days: 1
+      # Run backstopjs tests.
+      - name: Run backstopjs tests
+        run: npm run backstop:test
+
+      # Upload html report as an asset
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: backstopjs_html_report
+          path: tests/backstop/backstop_data/html_report/**
+          retention-days: 1
