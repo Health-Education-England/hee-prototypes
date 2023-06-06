@@ -9,5 +9,9 @@
     span {
       font-weight: $nhsuk-font-bold;
     }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
