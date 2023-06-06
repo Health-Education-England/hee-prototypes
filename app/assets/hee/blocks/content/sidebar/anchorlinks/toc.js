@@ -178,7 +178,7 @@ export default () => {
       container.classList.add('hee-back-to-top');
 
       let anchor = document.createElement('a');
-      anchor.setAttribute('href', '#publication-title');
+      anchor.setAttribute('href', '#maincontent');
       anchor.setAttribute('title', 'Back to top');
       anchor.innerText = 'Back to top';
 
@@ -196,8 +196,12 @@ export default () => {
      */
     setBackToTopLinks(headings) {
       headings.forEach((heading, index) => {
-        const link = this.createBackToTopLink();
-        heading.parentNode.insertBefore(link, heading);
+        // Avoids duplicate back to top links when sticky is present.
+        if (!heading.hasAttribute('data-has-top-link')) {
+          const link = this.createBackToTopLink();
+          heading.parentNode.insertBefore(link, heading);
+          heading.setAttribute('data-has-top-link', 1);
+        }
       });
     }
 
