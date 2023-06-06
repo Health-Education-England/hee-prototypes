@@ -97,8 +97,5 @@ export default () => {
     }
   }
 
-  const element = document.getElementById('hee-anchorlinks-sticky');
-  if (element !== null) {
-    new AnchorLinksSticky(element);
-  }
+  [...document.getElementsByClassName('hee-anchorlinks__sticky')].forEach(anchorLinksSticky => new AnchorLinksSticky(anchorLinksSticky));
 }
