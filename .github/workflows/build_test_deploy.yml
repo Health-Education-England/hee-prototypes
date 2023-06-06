@@ -69,6 +69,7 @@ jobs:
         with:
           commit_message: "[Github Actions] - Bundled assets for build number: ${{ github.run_number }}"
 
+  # Run backstopjs regression tests only when in PR.
   test_backstopjs:
     if: github.event_name == 'pull_request'
     name: Run backstopjs visual regression tests
@@ -94,6 +95,8 @@ jobs:
       # Run backstopjs tests.
       - name: Run backstopjs tests
         run: npm run backstop:test
+        env:
+          HTTP_SERVE_BASEPATH: /hee-prototypes/
 
       # Upload html report as an asset
       - name: Upload build artifacts
