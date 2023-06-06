@@ -29,14 +29,26 @@ jobs:
       - name: Install dependencies
         run: npm install --no-optional
 
-      - name: Build assets
+      # This builds the assets with the correct '/hee-prototypes/' basePath for Github Pages.
+      - name: Build assets (for Github Pages deployment)
         run: npm run build:prod
 
-      # Share built assets between jobs.
-      - name: Upload build artifacts
+      - name: Upload Github Pages build artifacts
         uses: actions/upload-artifact@v3
         with:
           name: assets
+          path: public/**
+          retention-days: 1
+
+      # Builds assets for pipeline tests operations (no basepath).
+      - name: Build assets (for local tests)
+        run: npm run build
+
+      # Share built assets between jobs.
+      - name: Upload testing build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: assets-tests
           path: public/**
           retention-days: 1
 
@@ -89,14 +101,12 @@ jobs:
       - name: Download build artifacts
         uses: actions/download-artifact@v3
         with:
-          name: assets
+          name: assets-tests
           path: public
 
       # Run backstopjs tests.
       - name: Run backstopjs tests
-        run: |
-          cp .github/config/.env .
-          docker-compose run backstopjs npm run backstop:test
+        run: docker-compose run backstopjs npm run backstop:test
 
       # Upload html report as an asset
       - name: Upload backstop report
