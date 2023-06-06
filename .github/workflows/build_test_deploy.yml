@@ -95,7 +95,7 @@ jobs:
       # Run backstopjs tests.
       - name: Run backstopjs tests
         run: |
-          export HTTP_SERVE_BASEPATH=/hee-prototypes/
+          cp .github/config/.env .
           docker-compose run backstopjs npm run backstop:test
 
       # Upload html report as an asset

@@ -58,6 +58,7 @@ jspm_packages/
 
 # dotenv environment variables file
 .env
+!.github/config/.env
 
 # System Files
 .DS_Store
