@@ -99,12 +99,21 @@ jobs:
           HTTP_SERVE_BASEPATH: /hee-prototypes/
 
       # Upload html report as an asset
-      - name: Upload build artifacts
+      - name: Upload backstop report
         uses: actions/upload-artifact@v3
         if: ${{ always() }}
         with:
           name: backstop_report
           path: tests/backstop/backstop_data/**
+          retention-days: 1
+
+      # Upload backstop config as asset for debuggin
+      - name: Upload generated backstop config
+        uses: actions/upload-artifact@v3
+        if: ${{ always() }}
+        with:
+          name: backstop_report
+          path: tests/backstop/config/backstop.json
           retention-days: 1
 
   # Runs the release job if we're on "develop" to deploy our latest build to GitHub Pages.
