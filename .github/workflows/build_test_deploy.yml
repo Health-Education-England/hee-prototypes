@@ -84,7 +84,7 @@ jobs:
   # Run backstopjs regression tests only when in PR.
   test_backstopjs:
     if: github.event_name == 'pull_request'
-    name: Run backstopjs visual regression tests
+    name: 'Run tests: BackstopJS'
     needs: build
     runs-on: ubuntu-latest
 
