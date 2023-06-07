@@ -1,7 +1,11 @@
 // FULLWIDTH 
 .page--fullwidth {
   .page__header {
-    padding-top: nhsuk-spacing(7);
+    padding-top: nhsuk-spacing(6);
+
+    @include mq($from: desktop) {
+      padding-top: nhsuk-spacing(7);
+    }
   }
   .page__main {
     padding-bottom: nhsuk-spacing(6);

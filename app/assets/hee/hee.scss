@@ -20,12 +20,15 @@
 @import 'templates/page';
 
 ///////////////////////////////////////////
-// NHSUK-HEE Components (Overrides)
+// BLOCKS
 ///////////////////////////////////////////
 @import '../components/nhsuk-hee/nhsuk-hee-blocklinks/blocklinks';
 @import '../components/nhsuk-hee/nhsuk-hee-breadcrumb/breadcrumb';
 @import '../components/nhsuk-hee/nhsuk-hee-reviewdate/reviewdate';
 @import '../components/nhsuk-hee/nhsuk-hee-contentslist/contentslist';
+@import '../components/nhsuk-hee/nhsuk-hee-image/image';
+@import 'blocks/content/sidebar/card--details/details';
+@import 'blocks/content/main/google-map/google-map';
 @import 'blocks/scaffolding/cookies/cookies';
 @import 'blocks/scaffolding/header/header';
 @import 'blocks/scaffolding/header/logos/logo';
@@ -85,6 +88,8 @@
 
 @import 'blocks/content/hee-card';
 @import 'blocks/content/main/card--author/author';
+@import 'blocks/content/main/table-expander/table';
+@import 'blocks/content/main/quote/quote';
 //@import '../hee/blocks/content/sidebar/card--department/department';
 //@import '../hee/blocks/content/sidebar/card--contact/contact';
 
