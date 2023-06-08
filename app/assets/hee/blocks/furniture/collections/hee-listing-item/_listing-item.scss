@@ -9,7 +9,7 @@
     margin-bottom: map-get($nhsuk-spacing-points, 2);
 
     span {
-      display: inline-block;
+      display: block;
 
       &.hee-listing-item__details__label {
         font-weight: $nhsuk-font-bold;
