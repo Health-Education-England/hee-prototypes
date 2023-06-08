@@ -19,7 +19,7 @@
 
 {% block pageHeader %}
   <div class="nhsuk-width-container">
-    <h1>Events Collection</h1>
+    <h1>Event Collection</h1>
     <p class="nhsuk-lede-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum sit sed porta viverra. Amet, tincidunt cras augue justo, proin mollis sapien. Sed cursus quam suspendisse.</p>
   </div>
 {% endblock %}
@@ -28,37 +28,25 @@
   {{ filter({
     groups: [
       {
-        title: "Topic",
+        title: "Year",
         showClearToggle: true,
         items: [
-        {
-          text: "Item one",
-          value: "item_one",
-          checked: true
-        },
-        {
-          text: "Item two",
-          value: "item_two",
-          checked: true
-        }
-      ]
-      },
-      {
-        title: "Event type",
-        items: [
-        {
-          text: "Item one",
-          value: "item_one"
-        },
-        {
-          text: "Item two",
-          value: "item_two"
-        },
-        {
-          text: "Item three",
-          value: "item_three"
-        }
-      ]
+          {
+            text: "2023",
+            value: "2023",
+            checked: true
+          },
+          {
+            text: "2022",
+            value: "2022",
+            checked: true
+          },
+          {
+            text: "2021",
+            value: "2021",
+            checked: false
+          }
+        ]
       }
     ]
   }) }}
@@ -73,12 +61,16 @@
     },
     items: [
       {
+        value: "oldest",
+        text: "Oldest"
+      },
+      {
         value: "newest",
         text: "Newest"
       },
       {
-        value: "relevance",
-        text: "Relevance"
+        value: "a-z",
+        text: "A to Z"
       }
     ]
   } %}
@@ -95,12 +87,12 @@
       href: "#",
       details: [
         {
-          label: "Event type:",
-          value: "Briefing"
+          label: "Date:",
+          value: "07 September 2022"
         },
         {
-          label: "Publish date:",
-          value: "07 September 2022"
+          label: "Location:",
+          value: "London"
         }
       ],
       summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
