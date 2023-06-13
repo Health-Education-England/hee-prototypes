@@ -1,4 +1,4 @@
-name: Build, test, commit and deploy
+name: Build test commit and deploy
 
 # Only run workflow when committing directly to master, release branches or when within a PR.
 on:
