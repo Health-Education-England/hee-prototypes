@@ -1,0 +1,80 @@
+{% extends "example-blocks.html" %}
+
+{% block main %}
+  {% set params = {
+    title: "Your training journey",
+    groups: [
+      {
+        name: "Prerequisites",
+        items: [
+          {
+            label: "Foundation Surgery",
+            url: "https://www.abc123.com"
+          },
+          {
+            label: "F2 Standalone Surgery",
+            url: "https://www.abc123.com"
+          }
+        ]
+      },
+      {
+        name: "You are here",
+        items: [
+          {
+            active: true,
+            label: "Core surgery",
+            url: "https://www.abc123.com"
+          }
+        ]
+      },
+      {
+        class: "optional",
+        name: "Optional routes",
+        items: [
+          {
+            label: "Cardiothoracic Surgery",
+            url: "https://www.abc123.com"
+          },
+          {
+            label: "General Surgery",
+            url: "https://www.abc123.com"
+          },
+          {
+            label: "Neurosurgery",
+            url: "https://www.abc123.com"
+          },
+          {
+            label: "Oral & Maxillofacial Surgery",
+            url: "https://www.abc123.com"
+          },
+          {
+            label: "Otolaryngology Surgery",
+            url: "https://www.abc123.com"
+          },
+          {
+            label: "Paediatric Surgery ",
+            url: "https://www.abc123.com"
+          },
+          {
+            label: "Plastic Surgery",
+            url: "https://www.abc123.com"
+          },
+          {
+            label: "Trauma & Orthopaedics",
+            url: "https://www.abc123.com"
+          },
+          {
+            label: "Urology",
+            url: "https://www.abc123.com"
+          },
+          {
+            label: "Vascular Surgery",
+            url: "https://www.abc123.com"
+          }
+        ]
+      }
+    ]
+  } %}
+
+  {{ trainingJourney(params) }}
+{% endblock %}

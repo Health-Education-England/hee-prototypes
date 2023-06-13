@@ -1,96 +1,137 @@
 {% extends "example-blocks.html" %}
 
 {% block main %}
-  {{ featuredContent([
-    {
-      title: "Publication item #1",
-      href: "#",
-      details: [
+  {{ featuredContent({
+    title: "Phasellus sagittis",
+    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultrices dui lacus, sit amet mattis ipsum accumsan a. Aliquam eget quam eget arcu rhoncus ullamcorper. ",
+    items: [
       {
-        label: "Publication type:",
-        value: "Briefing"
+        title: "Publication item #1",
+        href: "#",
+        details: [
+        {
+          label: "Publication type:",
+          value: "Briefing"
+        },
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+        summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
       },
       {
-        label: "Publish date:",
-        value: "07 September 2022"
-      }
-    ],
-      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
-    },
-    {
-      title: "Publication item #2",
-      href: "#",
-      details: [
-      {
-        label: "Publication type:",
-        value: "Briefing"
+        title: "Publication item #2",
+        href: "#",
+        details: [
+        {
+          label: "Publication type:",
+          value: "Briefing"
+        },
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+        summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
       },
       {
-        label: "Publish date:",
-        value: "07 September 2022"
-      }
-    ],
-      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
-    },
-    {
-      title: "Publication item #3",
-      href: "#",
-      details: [
-      {
-        label: "Publication type:",
-        value: "Briefing"
+        title: "Publication item #3",
+        href: "#",
+        details: [
+        {
+          label: "Publication type:",
+          value: "Briefing"
+        },
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+        summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
       },
       {
-        label: "Publish date:",
-        value: "07 September 2022"
-      }
-    ],
-      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
-    },
-    {
-      title: "Publication item #1",
-      href: "#",
-      details: [
-      {
-        label: "Publication type:",
-        value: "Briefing"
+        title: "Publication item #1",
+        href: "#",
+        details: [
+        {
+          label: "Publication type:",
+          value: "Briefing"
+        },
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+        summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
       },
       {
-        label: "Publish date:",
-        value: "07 September 2022"
-      }
-    ],
-      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
-    },
-    {
-      title: "Publication item #2",
-      href: "#",
-      details: [
-      {
-        label: "Publication type:",
-        value: "Briefing"
+        title: "Publication item #2",
+        href: "#",
+        details: [
+        {
+          label: "Publication type:",
+          value: "Briefing"
+        },
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+        summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
       },
       {
-        label: "Publish date:",
-        value: "07 September 2022"
+        title: "Publication item #3",
+        href: "#",
+        details: [
+        {
+          label: "Publication type:",
+          value: "Briefing"
+        },
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+        summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
       }
-    ],
-      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
-    },
-    {
-      title: "Publication item #3",
-      href: "#",
-      details: [
+    ]
+  }) }}
+
+  {{ featuredContent({
+    title: "Double item example",
+    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultrices dui lacus, sit amet mattis ipsum accumsan a. Aliquam eget quam eget arcu rhoncus ullamcorper. ",
+    items: [
       {
-        label: "Publication type:",
-        value: "Briefing"
+        title: "Publication item #1",
+        href: "#",
+        details: [
+        {
+          label: "Publication type:",
+          value: "Briefing"
+        },
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+        summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
       },
       {
-        label: "Publish date:",
-        value: "07 September 2022"
+        title: "Publication item #2",
+        href: "#",
+        details: [
+        {
+          label: "Publication type:",
+          value: "Briefing"
+        },
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+        summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
       }
-    ],
-      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
-    }
-  ]) }}
+    ]
+  }) }}
 {% endblock %}
