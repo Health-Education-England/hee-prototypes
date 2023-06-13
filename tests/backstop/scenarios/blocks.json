@@ -43,6 +43,7 @@
     },
     {
       "label": "blocks-main-media-embed",
+      "delay": 5000,
       "clickSelectors": [
         ".nhsuk-media__transcript a"
       ],
