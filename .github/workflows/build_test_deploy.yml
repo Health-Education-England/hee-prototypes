@@ -1,4 +1,4 @@
-name: Build test commit and deploy
+name: Build, test, commit and deploy
 
 # Only run workflow when committing directly to master, release branches or when within a PR.
 on:
@@ -103,10 +103,6 @@ jobs:
       # Docker image: ghcr.io/health-education-england/run-backstopjs-regression-tests:main
       - name: Pull HEE backstopjs docker image
         run: docker-compose pull
-
-      - name: Cache docker image
-        uses: satackey/action-docker-layer-caching@v0.0.11
-        continue-on-error: true
 
       # Run backstopjs tests.
       - name: Run backstopjs tests
