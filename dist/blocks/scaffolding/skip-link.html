@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Templates - HEE Prototype</title>
+  <title>Skip Link - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -47,10 +47,12 @@
     <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
       <div class="nhsuk-width-container">
         <ol class="nhsuk-breadcrumb__list">
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates">Templates</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks">Blocks</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/scaffolding">Scaffolding</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/scaffolding/skip-link">Skip Link</a></li>
         </ol>
-        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/templates">Back to Templates</a></p>
+        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/scaffolding/skip-link">Back to Skip Link</a></p>
       </div>
     </nav>
   </div>
@@ -61,49 +63,58 @@
       <div class="page__layout">
         <div class="page__leftbar">
           <nav class="prototype__subnav">
-            <h3>Fullwidth</h3>
+            <div class="nhsuk-back-link">
+              <a class="nhsuk-back-link__link" href="/blocks">
+                <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+                </svg> Blocks</a>
+            </div>
+            <h3>Header</h3>
             <ul>
-              <li><a href="/templates/base-fullwidth">Base</a></li>
-              <li><a href="/templates/homepage">Homepage</a></li>
-              <li><a href="/templates/landing-page">Landing Page</a></li>
-              <li>404</li>
-              <li>A-Z Listing</li>
-              <li>Search Listing</li>
+              <li><a href="/blocks/scaffolding/header">HEE Header</a></li>
+              <li>Cookies</li>
+              <li><a href="/blocks/scaffolding/skip-link">Skip Link</a></li>
             </ul>
-            <h3>Leftbar</h3>
+            <h3>InTemplate</h3>
             <ul>
-              <li><a href="/templates/base-leftbar">Base</a></li>
-              <li>News Collection</li>
-              <li>Blog Collection</li>
-              <li>Casestudies Collection</li>
-              <li><a href="/templates/publications-collection">Publications Collection</a></li>
-              <li>Event Collection</li>
+              <li>Breadcrumbs</li>
+              <li>Back to Top</li>
             </ul>
-            <h3>Rightbar</h3>
+            <h3>Notifications</h3>
             <ul>
-              <li><a href="/templates/base-rightbar">Base</a></li>
-              <li><a href="/templates/standard-content">Standard Content</a></li>
-              <li><a href="/templates/mini-hub-item">Mini-hub Item</a></li>
-              <li><a href="/templates/news-item">News Item</a></li>
-              <li><a href="/templates/blog-item">Blog Item</a></li>
-              <li><a href="/templates/publications-landing">Publication Landing</a></li>
-              <li><a href="/templates/publications-item">Publication Item</a></li>
-              <li>Event Item</li>
+              <li><a href="/blocks/scaffolding/notifications-phase-banner">Phase Banner</a></li>
+              <li><a href="/blocks/scaffolding/notifications-banner">Banner</a></li>
+            </ul>
+            <h3>Footer</h3>
+            <ul>
+              <li><a href="/blocks/scaffolding/footer-links">Links + Copyright</a></li>
             </ul>
           </nav>
         </div>
         <div class="page__main">
           <div class="page__header">
-            <h1>Templates</h1>
-            <p class="nhsuk-lede-text">All of the available HEE templates</p>
+            <span class="nhsuk-caption-xl">Scaffolding</span>
+            <h1>Skip Link</h1>
+            <p class="nhsuk-lede-text"></p>
           </div>
-          <p>The templates are grouped into <strong>three layout types</strong>:
-          <ul>
-            <li>Full width</li>
-            <li>Leftbar</li>
-            <li>Rightbar</li>
-          </ul>
-          </p>
+          <p>Hidden link used by screen readers allowing users to skip to main content. Should appear at the very top of the website and accessible by the tab key.</p>
+          <h2>Example</h2>
+          <div class="prototype__example block">
+            <a href="/hee-prototypes/blocks/scaffolding/examples/skip-link" target="_blank" class="prototype__example-link">Open this example in new window</a>
+            <div class="thumbnail">
+              <iframe src="/hee-prototypes/blocks/scaffolding/examples/skip-link" height="400px"></iframe>
+            </div>
+          </div>
+          <hr />
+          <h2>Macro</h2>
+          <pre><code>{{ skipLink({
+    href: &quot;#maincontent&quot;,
+    text: &quot;Skip to main content&quot;
+}) }}
+</code></pre>
+          <hr />
+          <h3>HTML</h3>
+          <pre><code>&lt;a class=&quot;nhsuk-skip-link&quot; href=&quot;#maincontent&quot;&gt;Skip to main content&lt;/a&gt;</code></pre>
         </div>
       </div>
     </div>
