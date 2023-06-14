@@ -4,11 +4,15 @@
   "description": "Rapidly create HTML prototypes of NHS websites and services.",
   "main": "app.js",
   "scripts": {
-    "serve": "gulp",
+    "serve": "gulp serve",
     "build": "gulp build",
     "build:prod": "gulp build --prod",
-    "test": "",
-    "watch": "gulp"
+    "watch": "gulp watch",
+    "test": "npm run backstop:test",
+    "backstop:ref": "docker-compose run backstopjs npm run backstop:ref",
+    "backstop:test": "docker-compose run backstopjs npm run backstop:test",
+    "backstop:approve": "docker-compose run backstopjs npm run backstop:approve",
+    "backstop:generate-config": "docker-compose run backstopjs npm run backstop:generate-config"
   },
   "author": "https://github.com/nhsuk/",
   "license": "MIT",
@@ -44,5 +48,6 @@
     "path": "^0.12.7",
     "webpack": "^5.72.0",
     "webpack-stream": "^7.0.0"
-  }
+  },
+  "dependencies": {}
 }

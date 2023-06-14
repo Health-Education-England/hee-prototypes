@@ -52,11 +52,14 @@ gulp.task('build', gulp.series(
   'build:templates'
 ));
 
-gulp.task('serve', gulp.series(
-  gulp.parallel(taskServe.serve)
-));
+gulp.task('serve', taskServe.serve);
 
 gulp.task('default', gulp.series([
+  'build',
+  taskServe.serve,
+]));
+
+gulp.task('watch', gulp.series([
   'build',
   gulp.parallel([taskServe.serve, watch]),
 ]));
