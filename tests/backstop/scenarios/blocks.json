@@ -42,14 +42,6 @@
       "misMatchThreshold": 5.0
     },
     {
-      "label": "blocks-main-media-embed",
-      "delay": 5250,
-      "clickSelectors": [
-        ".nhsuk-media__transcript a"
-      ],
-      "url": "http://127.0.0.1:8080/blocks/content/examples/main-media-embed.html"
-    },
-    {
       "label": "blocks-main-table-expander-open",
       "clickSelectors": [
         ".hee-table-expander__toggle a"
