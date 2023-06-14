@@ -178,7 +178,7 @@ export default () => {
       container.classList.add('hee-back-to-top');
 
       let anchor = document.createElement('a');
-      anchor.setAttribute('href', '#publication-title');
+      anchor.setAttribute('href', '#maincontent');
       anchor.setAttribute('title', 'Back to top');
       anchor.innerText = 'Back to top';
 
