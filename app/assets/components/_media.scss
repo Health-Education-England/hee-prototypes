@@ -25,6 +25,8 @@
 
     &.anchor {
       padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
 
       iframe {
         position: relative;
@@ -167,7 +169,7 @@
       height: 100px;
 
       @include mq($from: desktop) {
-        height: auto;
+        height: 162px;
       }
     }
   }
