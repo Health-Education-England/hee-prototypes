@@ -1,0 +1,347 @@
+{% extends "example-template-rightbar.html" %}
+
+{% set page_url = 'training-programmes-page' %}
+{% set page_title = 'Training Programmes - Page' %}
+
+{% block pageClass %}page--rightbar page--specialty-homepage{% endblock %}
+
+{% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
+
+{% block pageHeaderClass %}has-microhero{% endblock %}
+
+{% block pageBreadcrumbs %}
+  {{
+    breadcrumb({
+      items: [
+        {
+          href: basePath + "/",
+          text: "Home"
+        },
+        {
+          href: basePath + "/templates",
+          text: "Templates"
+        }
+      ],
+      href: basePath + "/templates/examples/"+page_url,
+      text: page_title
+    })
+  }}
+{% endblock %}
+
+{% block pageHeader %}
+  {{ microHero({
+    "imgURL": basePath + "/images/surgery-in-theatre.jpg"
+  }) }}
+
+  <div class="nhsuk-width-container">
+    <h1>Core Surgery</h1>
+    <span class="nhsuk-caption-xl">Caption</span>
+  </div>
+{% endblock %}
+
+{% block pageContent %}
+  {{ summaryCard({
+    title: "Programme summary",
+    items: [
+      {
+        label: "Training programme",
+        value: "Core Training Surgery"
+      },
+      {
+        label: "Training type",
+        url: "http://www.abc1234.com",
+        value: "Core Training"
+      },
+      {
+        label: "Professions",
+        url: "http://www.abc1234.com",
+        value: "Medical"
+      },
+      {
+        label: "Discipline",
+        url: "http://www.abc1234.com",
+        value: "Surgery"
+      },
+      {
+        label: "Recruitment format",
+        value: "Uncoupled"
+      },
+      {
+        label: "Duration",
+        value: "24 months"
+      },
+      {
+        label: "Competition ratio",
+        value: "2.56"
+      },
+      {
+        label: "Fill rate",
+        value: "100%"
+      },
+      {
+        label: "Opening",
+        value: "Thu 03/11/2022"
+      },
+      {
+        label: "Closing",
+        value: "Thu 01/12/2022"
+      }
+    ]
+  }) }}
+
+  <h2>Overview</h2>
+  <p>Lorem ipsum dolor sit amet consectetur. Cursus massa pulvinar vestibulum dui in dictum elementum lacinia. Sagittis nisl vitae egestas convallis placerat amet ultrices. </p>
+  <p>Velit adipiscing diam augue facilisis bibendum id a elit. Libero ac malesuada urna sit tortor malesuada est. Sollicitudin dis a tempor urna. Sed aliquet orci enim blandit.</p>
+
+  {{ card({
+    feature: "true",
+    heading: "Title goes here",
+    headingClasses: "nhsuk-heading-m",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna id semper senectus cras quisque mi purus in. Adipiscing auctor."
+  }) }}
+
+  <p>Lorem ipsum dolor sit amet consectetur. Cursus massa pulvinar vestibulum dui in dictum elementum lacinia. Sagittis nisl vitae egestas convallis placerat amet ultrices. </p>
+  <p>Velit adipiscing diam augue facilisis bibendum id a elit. Libero ac malesuada urna sit tortor malesuada est. Sollicitudin dis a tempor urna. Sed aliquet orci enim blandit.</p>
+
+  {{ insetText({
+    HTML: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac vestibulum semper pulvinar dictum eget. Vel a enim, in enim. Mauris morbi risus sodales odio consectetur felis, consequat amet.</p>"
+  }) }}
+
+  {{ media({
+    title: "Promotional Video",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nec tellus auctor viverra egestas leo. Morbi eu elit diam fusce.",
+    type: "youtube",
+    transcript: ["Donec pulvinar sollicitudin massa, nec pulvinar turpis dictum maximus."],
+    mediaId: "C0DPdy98e4c",
+    lastReview: "09/05/2022",
+    reviewDue: "09/05/2023"
+  }) }}
+
+  <h2>Rich text component</h2>
+  <p>Lorem ipsum dolor sit amet consectetur. Cursus massa pulvinar vestibulum dui in dictum elementum lacinia. Sagittis nisl vitae egestas convallis placerat amet ultrices.</p>
+  <p>Velit adipiscing diam augue facilisis bibendum id a elit. Libero ac malesuada urna sit tortor malesuada est. Sollicitudin dis a tempor urna. Sed aliquet orci enim blandit.</p>
+
+  {{ warningCallout({
+    heading: "Title goes here",
+    HTML: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est morbi integer turpis tempor, vestibulum. Morbi et in a ut quis eu egestas.</p>"
+  }) }}
+
+  <h2>Rich text component</h2>
+  <p>Lorem ipsum dolor sit amet consectetur. Cursus massa pulvinar vestibulum dui in dictum elementum lacinia. Sagittis nisl vitae egestas convallis placerat amet ultrices.</p>
+  <p>Velit adipiscing diam augue facilisis bibendum id a elit. Libero ac malesuada urna sit tortor malesuada est. Sollicitudin dis a tempor urna. Sed aliquet orci enim blandit.</p>
+
+  {{ image({
+    src: basePath + "/images/pathway-graph.png",
+    alt: "Title goes here",
+    caption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nec tellus auctor viverra egestas leo. Morbi eu elit diam fusce."
+  }) }}
+
+  <h2>Training in different regions</h2>
+  <p>Lorem ipsum dolor sit amet consectetur. Cursus massa pulvinar vestibulum dui in dictum elementum lacinia. Sagittis nisl vitae egestas convallis placerat amet ultrices.</p>
+  <p>Velit adipiscing diam augue facilisis bibendum id a elit. Libero ac malesuada urna sit tortor malesuada est. Sollicitudin dis a tempor urna. Sed aliquet orci enim blandit.</p>
+
+  <h2 class="toc_h2">Regions</h2>
+  <p>Pellentesque id posuere sapien vestibulum, quam pellentesque at libero. Aliquam at id fames hendrerit in vulputate orci aliquet augue. Massa penatibus sociis et nisl. Enim aliquam mauris suscipit turpis non hendrerit felis.</p>
+  {{ navMap({
+    src: basePath + "/images/nav-maps/dental-regions.svg",
+    caption: {
+      items: [
+        {
+          id: "lk",
+          url: "#",
+          text: "London and Kent, Surrey and Sussex (KSS)"
+        },
+        {
+          id: "me",
+          url: "#",
+          text: "Midlands and the East"
+        },
+        {
+          id: "nenc",
+          url: "#",
+          text: "North East and North Cumbria"
+        },
+        {
+          id: "nw",
+          url: "#",
+          text: "North West"
+        },
+        {
+          id: "sw",
+          url: "#",
+          text: "South West"
+        },
+        {
+          id: "tvw",
+          url: "#",
+          text: "Thames Valley and Wessex"
+        },
+        {
+          id: "yh",
+          url: "#",
+          text: "Yorkshire and the Humber"
+        }
+      ]
+    }
+  }) }}
+
+{% endblock %}
+
+{% block pageRightbar %}
+  {{ relatedLinksCard({
+    heading: "Pages related to this programme",
+    itemBorder: true,
+    links: [
+      {
+        label: "Overview",
+        url: "#"
+      },
+      {
+        label: "Recruitment timelines",
+        url: "#"
+      },
+      {
+        label: "Eligibility",
+        url: "#"
+      },
+      {
+        label: "Applying",
+        url: "#"
+      },
+      {
+        label: "Shortlisting",
+        url: "#"
+      },
+      {
+        label: "Interviews and selection",
+        url: "#"
+      },
+      {
+        label: "Preferencing",
+        url: "#"
+      },
+      {
+        label: "Person specification",
+        url: "#"
+      },
+      {
+        label: "Curriculum",
+        url: "#"
+      },
+      {
+        label: "Current posts",
+        url: "#"
+      }
+    ]
+  })}}
+
+  {{ relatedLinksCard({
+    heading: "Related links",
+    links: [
+      {
+        label: "Link goes here",
+        url: "#"
+      },
+      {
+        label: "Link goes here",
+        url: "#"
+      },
+      {
+        label: "Link goes here",
+        url: "#"
+      },
+      {
+        label: "Link goes here",
+        url: "#"
+      },
+      {
+        label: "Link goes here",
+        url: "#"
+      },
+      {
+        label: "Link goes here",
+        url: "#"
+      },
+      {
+        label: "Link goes here",
+        url: "#"
+      }
+    ]
+  })}}
+
+  {{ relatedLinksCard({
+    heading: "External links",
+    links: [
+      {
+        label: "Link goes here",
+        url: "#"
+      },
+      {
+        label: "Link goes here",
+        url: "#"
+      },
+      {
+        label: "Link goes here",
+        url: "#"
+      },
+      {
+        label: "Link goes here",
+        url: "#"
+      },
+      {
+        label: "Link goes here",
+        url: "#"
+      },
+      {
+        label: "Link goes here",
+        url: "#"
+      },
+      {
+        label: "Link goes here",
+        url: "#"
+      }
+    ]
+  })}}
+
+{% endblock %}
+
+{% block pageFeature %}
+  {% set items = [
+    {
+      title: "Title goes here",
+      href: "#",
+      summary: "Pellentesque nibh lectus, tincidunt nec rutrum non, vulputate a null."
+    },
+    {
+      title: "Title goes here",
+      href: "#",
+      summary: "Pellentesque nibh lectus, tincidunt nec rutrum non, vulputate a null."
+    },
+    {
+      title: "Title goes here",
+      href: "#",
+      summary: "Pellentesque nibh lectus, tincidunt nec rutrum non, vulputate a null."
+    },
+    {
+      title: "Title goes here",
+      href: "#",
+      summary: "Pellentesque nibh lectus, tincidunt nec rutrum non, vulputate a null."
+    },
+    {
+      title: "Title goes here",
+      href: "#",
+      summary: "Pellentesque nibh lectus, tincidunt nec rutrum non, vulputate a null."
+    },
+    {
+      title: "Title goes here",
+      href: "#",
+      summary: "Pellentesque nibh lectus, tincidunt nec rutrum non, vulputate a null."
+    }
+  ]
+  %}
+
+  <div class="nhsuk-width-container">
+    <h2>Related content</h2>
+    {{ featuredContent({items: items}) }}
+  </div>
+{% endblock %}
