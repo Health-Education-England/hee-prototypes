@@ -1,0 +1,118 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'sidebar-anchor-links' %}
+{% set page_title = 'Anchor Links' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block breadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: basePath + "/",
+            text: "Home"
+        },
+        {
+            href: basePath + "/blocks",
+            text: "Blocks"
+        },
+        {
+            href: basePath + "/blocks/content",
+            text: "Content"
+        }
+    ],
+        href: basePath + "/blocks/"+page_url,
+      text: page_title
+    }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'blocks',
+    subarea: 'content'
+}) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Sidebar</span>
+    <h1>{{ page_title }}</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+<p>Generates a list of anchor links within the page right hand sidebar, based on the structure of main page content.</p>
+<p>Comes in two variants:</p>
+<ul>
+    <li><strong>Anchor links (auto generated)</strong></li>
+    <li><strong>Table of Contents (based on custom heading tags)</strong></li>
+</ul>
+
+<h3>Example - Anchor links</h3>
+{{ example({
+    view: 'scaled',
+    url: basePath + '/blocks/content/examples/' + page_url,
+    height: '380'
+}) }}
+
+<hr />
+
+<h3>Example - Table of Contents</h3>
+{{ example({
+    view: 'scaled',
+    url: basePath + '/blocks/content/examples/' + page_url + '-toc',
+    height: '380'
+}) }}
+
+<hr />
+
+<h3>Macro - Anchor links</h3>
+{{ highlight({
+  html: '
+{{ anchorlinks({
+  title: "On this page",
+  headings: "h2,h3,h4,h5,h6"
+  })
+}}
+  '
+}) }}
+
+<hr />
+
+<h3>HTML - Anchor links</h3>
+{{ highlight({
+  html : '<div class="hee-anchorlinks" data-headings="h2,h3,h4,h5,h6">
+    <h2 data-anchorlinksignore="true">On this page</h2>
+</div>
+  '
+  }) 
+}}
+
+<hr />
+
+<h3>Macro - Table of Contents</h3>
+{{ highlight({
+    html: '
+{{ anchorLinks({
+  title: "Table of Contents",
+  toc: true
+  })
+}}
+'
+}) }}
+
+<hr />
+
+{{ highlight({
+    html : '<div class="hee-anchorlinks" data-toc-js="true">
+    <h2>Table of Contents</h2>
+</div>
+'
+  })
+}}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}
