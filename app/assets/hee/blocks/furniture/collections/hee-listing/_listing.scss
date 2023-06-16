@@ -4,11 +4,16 @@
 
     @include mq($from: desktop) {
       display: flex;
+      flex-flow: row wrap;
       justify-content: space-between;
     }
   }
 
   .hee-listing__results {
-    padding-top: map-get($nhsuk-spacing-points, 3);
+    padding-top: map-get($nhsuk-spacing-points, 5);
+  }
+
+  .hee-listing__tags {
+    @include nhsuk-responsive-margin(5, 'bottom')
   }
 }
