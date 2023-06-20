@@ -22,11 +22,16 @@
   .hee-listing__results {
     @include nhsuk-responsive-margin(7, 'bottom');
     padding-top: map-get($nhsuk-spacing-points, 5);
+
   }
 
   .hee-listing__tags {
     @include nhsuk-responsive-margin(5, 'bottom');
     width: 100%;
+  }
+
+  .nhsuk-pagination {
+    margin-top: 0;
   }
 
   .nhsuk-pagination {
