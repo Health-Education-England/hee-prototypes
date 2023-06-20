@@ -1,0 +1,120 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'main-card-summary' %}
+{% set page_title = 'Card--Summary' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block breadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: "/",
+            text: "Home"
+        },
+        {
+            href: "/blocks",
+            text: "Blocks"
+        },
+        {
+            href: "/blocks/content",
+            text: "Content"
+        }
+    ],
+        href: "/blocks/"+page_url,
+      text: page_title
+    }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'blocks',
+    subarea: 'content'
+}) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Sidebar</span>
+    <h1>{{ page_title }}</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+<p>Card which summarises content for website visitors, by displaying a list of vertically aligned labels and corresponding values, in the right hand sidebar.</p>
+
+<h3>Example</h3>
+{{ example({
+    view: 'block',
+    url: '/blocks/content/examples/' + page_url,
+    height: '380'
+}) }}
+
+<hr />
+
+<h3>Macro</h3>
+{{ highlight({
+  html: '
+{{ summaryCard({
+  title: "Programme summary",
+  items: [
+    {
+      label: "Training programme",
+      value: "Core Training Surgery"
+    },
+    {
+      label: "Training type",
+      url: "http://www.randomurlhere.com",
+      value: "Core Training"
+    },
+    {
+      label: "Professions",
+      url: "http://www.randomurlhere.com",
+      value: "Medical"
+    },
+    {
+      label: "Fill rate",
+      value: "100%"
+    }
+  ]
+}) }}
+  '
+}) }}
+
+<hr />
+
+<h3>HTML</h3>
+{{ highlight({
+  html : '
+<div class="hee-card hee-card--summary">
+    <h3 class="hee-card--summary__heading">Programme summary</h3>
+    <ul class="hee-card--summary__list">
+      <li class="hee-card--summary__item">
+        <span class="hee-card--summary__item__label">Training programme</span>
+        <span class="hee-card--summary__item__value"> Core Training Surgery </span>
+      </li>
+      <li class="hee-card--summary__item">
+        <span class="hee-card--summary__item__label">Training type</span>
+        <span class="hee-card--summary__item__value">
+          <a class="hee-card--summary__item__link" href="http://www.randomurlhere.com">Core Training</a>
+        </span>
+      </li>
+      <li class="hee-card--summary__item">
+        <span class="hee-card--summary__item__label">Professions</span>
+        <span class="hee-card--summary__item__value"> Medical </span>
+      </li>
+      <li class="hee-card--summary__item">
+        <span class="hee-card--summary__item__label">Fill rate</span>
+        <span class="hee-card--summary__item__value"> 100% </span>
+      </li>
+    </ul>
+</div>
+  '
+  }) 
+}}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}
