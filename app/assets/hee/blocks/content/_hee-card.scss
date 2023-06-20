@@ -4,6 +4,11 @@
   border: 1px solid $color_nhsuk-grey-4;
   padding: 24px;
   margin-bottom: nhsuk-spacing(4);
+  max-width: 300px;
+
+  @include mq($from: desktop) {
+    max-width: 100%;
+  }
 
   .hee-flexgrid-row & {
     max-width: none;
