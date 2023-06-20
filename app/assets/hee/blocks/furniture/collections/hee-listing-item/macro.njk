@@ -6,7 +6,7 @@
         {% for detail in item.details %}
           <div class="hee-listing-item__details__row">
             <span class="hee-listing-item__details__label">{{ detail.label }}</span>
-            <span>{{ detail.value }}</span>
+            <span>{{ detail.value | safe }}</span>
           </div>
         {% endfor %}
       </div>
