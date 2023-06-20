@@ -15,5 +15,6 @@
 
   .hee-listing__tags {
     @include nhsuk-responsive-margin(5, 'bottom')
+    width: 100%;
   }
 }
