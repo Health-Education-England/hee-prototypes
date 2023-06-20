@@ -10,10 +10,16 @@
   }
 
   .hee-listing__results {
+    @include nhsuk-responsive-margin(7, 'bottom');
     padding-top: map-get($nhsuk-spacing-points, 5);
+
   }
 
   .hee-listing__tags {
     @include nhsuk-responsive-margin(5, 'bottom')
+  }
+
+  .nhsuk-pagination {
+    margin-top: 0;
   }
 }
