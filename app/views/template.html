@@ -56,7 +56,6 @@
 {%- from 'images/macro.njk' import image %}
 {%- from 'inset-text/macro.njk' import insetText %}
 {%- from 'do-dont-list/macro.njk' import list %}
-{%- from 'review-date/macro.njk' import reviewDate %}
 {%- from 'summary-list/macro.njk' import summaryList %}
 {%- from 'select/macro.njk' import select %}
 {%- from 'tables/macro.njk' import table %}
@@ -77,21 +76,21 @@
     <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
 
     {% block headCSS %}
-      <link href="/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
-      <link href="/css/hee.css" rel="stylesheet" />
+      <link href="{{ basePath }}/css/nhsuk-7.0.0.min.css" rel="stylesheet" />
+      <link href="{{ basePath }}/css/hee.css" rel="stylesheet" />
     {% endblock %}
 
     {% block headIcons %}
-    <link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png">
-    <link rel="mask-icon" href="/nhsuk-frontend/assets/favicons/favicon.svg" color="#005eb8">
-    <link rel="icon" sizes="192x192" href="/nhsuk-frontend/assets/favicons/favicon-192x192.png">
-    <meta name="msapplication-TileImage" content="/nhsuk-frontend/assets/favicons/mediumtile-144x144.png">
+    <link rel="shortcut icon" href="{{ basePath }}/nhsuk-frontend/assets/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{ basePath }}/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png">
+    <link rel="mask-icon" href="{{ basePath }}/nhsuk-frontend/assets/favicons/favicon.svg" color="#005eb8">
+    <link rel="icon" sizes="192x192" href="{{ basePath }}/nhsuk-frontend/assets/favicons/favicon-192x192.png">
+    <meta name="msapplication-TileImage" content="{{ basePath }}/nhsuk-frontend/assets/favicons/mediumtile-144x144.png">
     <meta name="msapplication-TileColor" content="#005eb8">
-    <meta name="msapplication-square70x70logo" content="/nhsuk-frontend/assets/favicons/smalltile-70x70.png">
-    <meta name="msapplication-square150x150logo" content="/nhsuk-frontend/assets/favicons/mediumtile-150x150.png">
-    <meta name="msapplication-wide310x150logo" content="/nhsuk-frontend/assets/favicons/widetile-310x150.png">
-    <meta name="msapplication-square310x310logo" content="/nhsuk-frontend/assets/favicons/largetile-310x310.png">
+    <meta name="msapplication-square70x70logo" content="{{ basePath }}/nhsuk-frontend/assets/favicons/smalltile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="{{ basePath }}/nhsuk-frontend/assets/favicons/mediumtile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="{{ basePath }}/nhsuk-frontend/assets/favicons/widetile-310x150.png">
+    <meta name="msapplication-square310x310logo" content="{{ basePath }}/nhsuk-frontend/assets/favicons/largetile-310x310.png">
     {% endblock %}
   </head>
 
@@ -130,53 +129,53 @@
             {
               "href": "https://www.nimdta.gov.uk/",
               "label": "Northern Ireland Medical and Dental Training Agency Website (Opens in New Window)",
-              "imgSrc": "/images/logos/nimdta-logo.png",
+              "imgSrc": basePath + "/images/logos/nimdta-logo.png",
               "imgAlt": "Logo for Northern Ireland Medical and Dental Training Agency"
             },
             {
               "href": "https://www.nes.scot.nhs.uk/",
               "label": "NHS Education for Scotland Website (Opens in New Window)",
-              "imgSrc": "/images/logos/nhs-scotland-logo.png",
+              "imgSrc": basePath + "/images/logos/nhs-scotland-logo.png",
               "imgAlt": "Logo for NHS Education for Scotland"
             },
             {
               "href": "https://heiw.nhs.wales/",
               "label": "Health Education and Improvement Wales Website (Opens in New Window)",
-              "imgSrc": "/images/logos/heiw-logo.png",
+              "imgSrc": basePath + "/images/logos/heiw-logo.png",
               "imgAlt": "Logo for Health Education and Improvement Wales"
             }
           ],
           "primaryLinks": [
             {
-              url: "/templates",
+              url: basePath + "/templates",
               label: "Templates"
             },
             {
-              url: "/templates",
+              url: basePath + "/templates",
               label: "Templates longer name"
             },
             {
-              url: "/components",
+              url: basePath + "/components",
               label: "Components",
               children: [
                 {
-                  url: "/scaffolding",
+                  url: basePath + "/scaffolding",
                   label: "Scaffolding"
                 },
                 {
-                  url: "/components/furniture",
+                  url: basePath + "/components/furniture",
                   label: "Furniture"
                 },
                 {
-                  url: "/components/contentblocks",
+                  url: basePath + "/components/contentblocks",
                   label: "Content Blocks"
                 },
                 {
-                  url: "/components/rightblocks",
+                  url: basePath + "/components/rightblocks",
                   label: "Right Blocks"
                 },
                 {
-                  url: "/components/featureblocks",
+                  url: basePath + "/components/featureblocks",
                   label: "Feature Blocks"
                 }
               ]
@@ -235,15 +234,15 @@
         "list": "nhsuk-footer__list--three-columns",
         "links": [
           {
-            "URL": "/blog",
+            "URL": basePath + "/blog",
             "label": "Blog"
           },
           {
-            "URL": "/about",
+            "URL": basePath + "/about",
             "label": "About us"
           },
           {
-            "URL": "/contact",
+            "URL": basePath + "/contact",
             "label": "Contact us"
           }
         ]
@@ -251,9 +250,9 @@
     {% endblock %}
 
     {% block scripts %}
-      <script src="/js/jquery-3.3.1.min.js"></script>
-      <script src="/js/nhsuk.min.js"></script>
-      <script src="/js/hee.js"></script>
+      <script src="{{ basePath }}/js/jquery-3.3.1.min.js"></script>
+      <script src="{{ basePath }}/js/nhsuk.min.js"></script>
+      <script src="{{ basePath }}/js/hee.js"></script>
     {% endblock %}
     {% block bodyEnd %}
       {% block pageScripts %}

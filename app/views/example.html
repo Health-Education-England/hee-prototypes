@@ -35,6 +35,7 @@
 {# CONTENT BLOCKS #}
 
 {# Main #}
+{%- from 'hee/blocks/content/main/applies-to/macro.njk' import appliesTo %}
 {%- from 'hee/blocks/content/main/card--author/macro.njk' import authorCard %}
 {%- from 'hee/blocks/content/main/table-expander/macro.njk' import tableExpander %}
 {%- from 'hee/blocks/content/main/google-map/macro.njk' import googleMap %}
@@ -61,7 +62,6 @@
 {%- from 'components/hee/hee-timeline/macro.njk' import timeline %}
 {%- from 'components/nhsuk-hee/nhsuk-hee-blocklinks/macro.njk' import blocklinks %}
 {%- from 'hee/blocks/scaffolding/back-to-top/macro.njk' import backToTop %}
-{%- from 'components/hee/hee-appliesto/macro.njk' import appliesTo %}
 
 {# NHSUK Components #}
 {%- from 'action-link/macro.njk' import actionLink %}
@@ -106,21 +106,21 @@
     <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
 
     {% block headCSS %}
-      <link href="/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
-      <link href="/css/hee.css" rel="stylesheet" />
+      <link href="{{ basePath }}/css/nhsuk-7.0.0.min.css" rel="stylesheet" />
+      <link href="{{ basePath }}/css/hee.css" rel="stylesheet" />
     {% endblock %}
 
     {% block headIcons %}
-    <link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png">
-    <link rel="mask-icon" href="/nhsuk-frontend/assets/favicons/favicon.svg" color="#005eb8">
-    <link rel="icon" sizes="192x192" href="/nhsuk-frontend/assets/favicons/favicon-192x192.png">
-    <meta name="msapplication-TileImage" content="/nhsuk-frontend/assets/favicons/mediumtile-144x144.png">
+    <link rel="shortcut icon" href="{{ basePath }}/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{ basePath }}/favicons/apple-touch-icon-180x180.png">
+    <link rel="mask-icon" href="{{ basePath }}/favicons/favicon.svg" color="#005eb8">
+    <link rel="icon" sizes="192x192" href="{{ basePath }}/favicons/favicon-192x192.png">
+    <meta name="msapplication-TileImage" content="{{ basePath }}/favicons/mediumtile-144x144.png">
     <meta name="msapplication-TileColor" content="#005eb8">
-    <meta name="msapplication-square70x70logo" content="/nhsuk-frontend/assets/favicons/smalltile-70x70.png">
-    <meta name="msapplication-square150x150logo" content="/nhsuk-frontend/assets/favicons/mediumtile-150x150.png">
-    <meta name="msapplication-wide310x150logo" content="/nhsuk-frontend/assets/favicons/widetile-310x150.png">
-    <meta name="msapplication-square310x310logo" content="/nhsuk-frontend/assets/favicons/largetile-310x310.png">
+    <meta name="msapplication-square70x70logo" content="{{ basePath }}/favicons/smalltile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="{{ basePath }}/favicons/mediumtile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="{{ basePath }}/favicons/widetile-310x150.png">
+    <meta name="msapplication-square310x310logo" content="{{ basePath }}/favicons/largetile-310x310.png">
     {% endblock %}
   </head>
 
@@ -156,9 +156,9 @@
     {% endblock %}
 
     {% block scripts %}
-      <script src="/js/jquery-3.3.1.min.js"></script>
-      <script src="/js/nhsuk.min.js"></script>
-      <script src="/js/hee.js"></script>
+      <script src="{{ basePath }}/js/jquery-3.3.1.min.js"></script>
+      <script src="{{ basePath }}/js/nhsuk.min.js"></script>
+      <script src="{{ basePath }}/js/hee.js"></script>
     {% endblock %}
     {% block bodyEnd %}
       {% block pageScripts %}
