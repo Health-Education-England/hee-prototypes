@@ -30,6 +30,21 @@
   .nhsuk-header__search-toggle {
     position: relative;
   }
+
+  .autocomplete-container {
+    display: inline-block;
+
+    .nhsuk-search__input {
+      @include mq($from: tablet) {
+        padding: 0 12px;
+        width: 180px;
+      }
+
+      @include mq($from: desktop) {
+        width: 200px;
+      }
+    }
+  }
 }
 
 /* NHSUK-Header__search - Blue BG variation */
