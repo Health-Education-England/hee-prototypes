@@ -101,10 +101,9 @@
         },
         {
           label: "Website:",
-          value: "Stockport NHS Foundation Trust guidelines"
+          value: "<a href=\"#\">Bulletin item #" + loop.index + "</a>"
         }
-      ],
-      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+      ]
     } %}
     {% set items = (items.push(item), items) %}
   {% endfor %}
