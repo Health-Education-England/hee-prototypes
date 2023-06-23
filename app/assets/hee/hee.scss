@@ -24,7 +24,6 @@
 ///////////////////////////////////////////
 @import '../components/nhsuk-hee/nhsuk-hee-blocklinks/blocklinks';
 @import '../components/nhsuk-hee/nhsuk-hee-breadcrumb/breadcrumb';
-@import '../components/nhsuk-hee/nhsuk-hee-reviewdate/reviewdate';
 @import '../components/nhsuk-hee/nhsuk-hee-contentslist/contentslist';
 @import '../components/nhsuk-hee/nhsuk-hee-image/image';
 @import 'blocks/content/sidebar/card--details/details';
@@ -75,6 +74,8 @@
 @import '../hee/blocks/furniture/collections/hee-listing-item/listing-item';
 @import '../hee/blocks/furniture/collections/hee-filter/filter';
 @import '../hee/blocks/furniture/collections/hee-filtertag/filtertag';
+// -- Content
+@import 'blocks/furniture/content/review-date/review-date';
 
 ///// CONTENT
 @import 'blocks/content/hee-card';

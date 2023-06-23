@@ -1,6 +1,6 @@
 {% macro reviewDate(params) %}
   <div class="hee-review-date">
-    <p class="nhsuk-body-s nhsuk-u-margin-top-2 nhsuk-u-secondary-text-color">
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color">
       {% if params.lastReview %}Page last reviewed: {{ params.lastReview }}<br>{% endif %}
       {% if params.nextReview %}Next review due: {{ params.nextReview }}{% endif %}
     </p>
