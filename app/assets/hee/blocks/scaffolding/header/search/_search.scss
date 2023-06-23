@@ -43,6 +43,10 @@
       @include mq($from: desktop) {
         width: 200px;
       }
+
+      &::placeholder {
+        color: $color_nhsuk-grey-2;
+      }
     }
   }
 }
