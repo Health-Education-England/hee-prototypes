@@ -11,7 +11,6 @@ import Media from '../components/hee/hee-media/media';
 import NavMap from '../components/hee/hee-navmap/navmap';
 import Newsletter from '../components/hee/hee-newsletter/newsletter';
 //import DetailsCard from '../components/hee/hee-detailscard/detailscard';
-import SummaryCard from "./blocks/content/main/card--summary/summary";
 import Tabs from '../components/hee/hee-tabs/tabs';
 import TableCard from './blocks/content/main/table-expander/table-expander';
 //import Timeline from '../components/hee/hee-timeline/timeline';
@@ -35,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
   NavMap();
   SubNav();
   Newsletter();
-  SummaryCard();
   TableContents();
   TableCard();
 });
