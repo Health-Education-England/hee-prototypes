@@ -1,7 +1,7 @@
 {% extends "example-template-fullwidth.html" %}
 
-{% set page_url = 'landing-page' %}
-{% set page_title = 'Landing Page' %}
+{% set page_url = '404' %}
+{% set page_title = '404 Not Found' %}
 
 {% block pageClass %}page--fullwidth{% endblock %}
 
@@ -43,7 +43,47 @@
 {% endblock %}
 
 {% block pageContent %}
-  <div class="nhsuk-grid-row">
+  {% set items = [
+    {
+      title: "Pellentesque habitant sem sit enim purus eu.",
+      href: "#",
+      summary: "Augue orci, pellentesque felis sed massa consectetur purus. Arcu quam odio enim."
+    },
+    {
+      title: "Sit venenatis purus odio neque in sed.",
+      href: "#",
+      summary: "Tempor at consectetur ante in sapien cras nibh id."
+    },
+    {
+      title: "Vivamus suspendisse vel posuere aliquet.",
+      href: "#",
+      summary: "Sit elit lorem tristique faucibus. Phasellus velit malesuada orci viverra urna."
+    },
+    {
+      title: "In pharetra sit nisl, eros, sed. Erat.",
+      href: "#",
+      summary: "Mollis interdum amet in pellentesque lectus massa, purus vel mollis. A, eu sit pharetra a, ut. Eget arcu."
+    },
+    {
+      title: "Vulputate sed dui lectus vitae interdum accumsan in molestie.",
+      href: "#",
+      summary: "Sed porttitor molestie egestas velit feugiat pellentesque mattis. Tortor a."
+    },
+    {
+      title: "Duis donec tortor condimentum pretium.",
+      href: "#",
+      summary: "Leo sagittis sed lorem consequat. Purus quam aliquet at egestas. Neque."
+    }
+  ]
+  %}
+
+  <div class="nhsuk-width-container">
+    {{ featuredContent({
+      items: items
+    }) }}
+  </div>
+
+  {#<div class="nhsuk-grid-row">
     <ul class="nhsuk-card-group">
       <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
         {{ card({
@@ -106,5 +146,5 @@
         }) }}
       </li>
     </ul>
-  </div>
+  </div>#}
 {% endblock %}
