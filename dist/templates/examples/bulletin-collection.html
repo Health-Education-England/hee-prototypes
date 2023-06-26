@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>News Collection - Examples - NWP Prototype Kit</title>
+  <title>Bulletin Collection - Examples - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -145,9 +145,9 @@
       <div class="nhsuk-width-container">
         <ol class="nhsuk-breadcrumb__list">
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="undefined/">Home</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="undefined/templates/examples/news-collection">News Collection</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="undefined/templates/examples/bulletin-collection">Bulletin Collection</a></li>
         </ol>
-        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="undefined/templates/examples/news-collection">Back to News Collection</a></p>
+        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="undefined/templates/examples/bulletin-collection">Back to Bulletin Collection</a></p>
       </div>
     </nav>
   </div>
@@ -156,7 +156,7 @@
   <main class="page page--leftbar" id="maincontent" role="main">
     <div class="page__header ">
       <div class="nhsuk-width-container">
-        <h1>News Collection</h1>
+        <h1>Bulletin Collection</h1>
         <p class="nhsuk-lede-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum sit sed porta viverra. Amet, tincidunt cras augue justo, proin mollis sapien. Sed cursus quam suspendisse.</p>
       </div>
     </div>
@@ -172,24 +172,20 @@
                   <legend class="nhsuk-fieldset__legend"> Category </legend>
                   <div class="nhsuk-checkboxes">
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Category-1" name="filter" type="checkbox" value="board">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-1"> Board development </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_Category-1" name="filter" type="checkbox" value="evidence_resource_searching" checked>
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-1"> Evidence and resources, Searching </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Category-2" name="filter" type="checkbox" value="fellowships">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-2"> Fellowships and scholarships </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_Category-2" name="filter" type="checkbox" value="child_health">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-2"> Child Health </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Category-3" name="filter" type="checkbox" value="graduates" checked>
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-3"> Graduates </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_Category-3" name="filter" type="checkbox" value="medical_oncology" checked>
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-3"> Medical Oncology </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Category-4" name="filter" type="checkbox" value="learning_dev" checked>
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-4"> Learning and development </label>
-                    </div>
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Category-5" name="filter" type="checkbox" value="school_leavers">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-5"> School leavers </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_Category-4" name="filter" type="checkbox" value="covid" checked>
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-4"> COVID-19 </label>
                     </div>
                   </div>
                 </fieldset>
@@ -211,164 +207,199 @@
                   <div class="nhsuk-form-group">
                     <label class="nhsuk-label" for="sort"> Sort by </label>
                     <select class="nhsuk-select" id="sort" name="sort">
+                      <option value="oldest">Oldest</option>
                       <option value="newest">Newest</option>
-                      <option value="relevance">Relevance</option>
+                      <option value="a-z">A to Z</option>
                     </select>
                   </div>
                   <button class="nhsuk-button hee-listing__filter__submit" type="submit"> Update </button>
                 </form>
               </div>
               <div class="hee-listing__tags">
-                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="graduates">
-                  <span>Graduates</span>
+                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="evidence-resources-searching">
+                  <span>Evidence and resources, Searching</span>
                   <img class="nhsuk-filter-tag__icon" src="/images/icons/close.svg" alt="Remove" hidden />
                 </div>
-                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="learning-development">
-                  <span>Learning and development</span>
+                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="medical-oncology">
+                  <span>Medical Oncology</span>
+                  <img class="nhsuk-filter-tag__icon" src="/images/icons/close.svg" alt="Remove" hidden />
+                </div>
+                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="covid">
+                  <span>COVID-19</span>
                   <img class="nhsuk-filter-tag__icon" src="/images/icons/close.svg" alt="Remove" hidden />
                 </div>
               </div>
             </div>
             <div class="hee-listing__results">
               <div class="hee-listing-item">
-                <h3><a href="#">News item #1</a></h3>
+                <h3><a href="#">Bulletin item #1</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
                     <span class="hee-listing-item__details__label">Category:</span>
-                    <span>Graduates</span>
+                    <span>Child Health</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Overview:</span>
+                    <span>This alert details latest guidelines published by organisations such as NICE and WHO</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Website:</span>
+                    <span><a href="#">Bulletin item #1</a></span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
               <div class="hee-listing-item">
-                <h3><a href="#">News item #2</a></h3>
+                <h3><a href="#">Bulletin item #2</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
                     <span class="hee-listing-item__details__label">Category:</span>
-                    <span>Graduates</span>
+                    <span>Child Health</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Overview:</span>
+                    <span>This alert details latest guidelines published by organisations such as NICE and WHO</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Website:</span>
+                    <span><a href="#">Bulletin item #2</a></span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
               <div class="hee-listing-item">
-                <h3><a href="#">News item #3</a></h3>
+                <h3><a href="#">Bulletin item #3</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
                     <span class="hee-listing-item__details__label">Category:</span>
-                    <span>Graduates</span>
+                    <span>Child Health</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Overview:</span>
+                    <span>This alert details latest guidelines published by organisations such as NICE and WHO</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Website:</span>
+                    <span><a href="#">Bulletin item #3</a></span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
               <div class="hee-listing-item">
-                <h3><a href="#">News item #4</a></h3>
+                <h3><a href="#">Bulletin item #4</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
                     <span class="hee-listing-item__details__label">Category:</span>
-                    <span>Graduates</span>
+                    <span>Child Health</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Overview:</span>
+                    <span>This alert details latest guidelines published by organisations such as NICE and WHO</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Website:</span>
+                    <span><a href="#">Bulletin item #4</a></span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
               <div class="hee-listing-item">
-                <h3><a href="#">News item #5</a></h3>
+                <h3><a href="#">Bulletin item #5</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
                     <span class="hee-listing-item__details__label">Category:</span>
-                    <span>Graduates</span>
+                    <span>Child Health</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Overview:</span>
+                    <span>This alert details latest guidelines published by organisations such as NICE and WHO</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Website:</span>
+                    <span><a href="#">Bulletin item #5</a></span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
               <div class="hee-listing-item">
-                <h3><a href="#">News item #6</a></h3>
+                <h3><a href="#">Bulletin item #6</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
                     <span class="hee-listing-item__details__label">Category:</span>
-                    <span>Graduates</span>
+                    <span>Child Health</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Overview:</span>
+                    <span>This alert details latest guidelines published by organisations such as NICE and WHO</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Website:</span>
+                    <span><a href="#">Bulletin item #6</a></span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
               <div class="hee-listing-item">
-                <h3><a href="#">News item #7</a></h3>
+                <h3><a href="#">Bulletin item #7</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
                     <span class="hee-listing-item__details__label">Category:</span>
-                    <span>Graduates</span>
+                    <span>Child Health</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Overview:</span>
+                    <span>This alert details latest guidelines published by organisations such as NICE and WHO</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Website:</span>
+                    <span><a href="#">Bulletin item #7</a></span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
               <div class="hee-listing-item">
-                <h3><a href="#">News item #8</a></h3>
+                <h3><a href="#">Bulletin item #8</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
                     <span class="hee-listing-item__details__label">Category:</span>
-                    <span>Graduates</span>
+                    <span>Child Health</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Overview:</span>
+                    <span>This alert details latest guidelines published by organisations such as NICE and WHO</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Website:</span>
+                    <span><a href="#">Bulletin item #8</a></span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
               <div class="hee-listing-item">
-                <h3><a href="#">News item #9</a></h3>
+                <h3><a href="#">Bulletin item #9</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
                     <span class="hee-listing-item__details__label">Category:</span>
-                    <span>Graduates</span>
+                    <span>Child Health</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Overview:</span>
+                    <span>This alert details latest guidelines published by organisations such as NICE and WHO</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Website:</span>
+                    <span><a href="#">Bulletin item #9</a></span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
               <div class="hee-listing-item">
-                <h3><a href="#">News item #10</a></h3>
+                <h3><a href="#">Bulletin item #10</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
                     <span class="hee-listing-item__details__label">Category:</span>
-                    <span>Graduates</span>
+                    <span>Child Health</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Overview:</span>
+                    <span>This alert details latest guidelines published by organisations such as NICE and WHO</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Website:</span>
+                    <span><a href="#">Bulletin item #10</a></span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
             </div>
             <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">

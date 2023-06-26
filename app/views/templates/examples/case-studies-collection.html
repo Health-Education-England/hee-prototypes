@@ -1,0 +1,155 @@
+{% extends "example-template-leftbar.html" %}
+
+{% block pageTitle %}Case Study Collection - Examples - NWP Prototype Kit{% endblock %}
+
+{% block breadcrumbs %}
+  {{
+  breadcrumb({
+    items: [
+      {
+        href: basePath + "/",
+        text: "Home"
+      }
+    ],
+    href: basePath + "/templates/examples/case-studies-collection",
+    text: "Case Study Collection"
+  })
+  }}
+{% endblock %}
+
+{% block pageHeader %}
+  <div class="nhsuk-width-container">
+    <h1>Case Study Collection</h1>
+    <p class="nhsuk-lede-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum sit sed porta viverra. Amet, tincidunt cras augue justo, proin mollis sapien. Sed cursus quam suspendisse.</p>
+  </div>
+{% endblock %}
+
+{% block pageLeftbar %}
+  {{ filter({
+    groups: [
+      {
+        title: "Category",
+        showClearToggle: true,
+          items: [
+          {
+            text: "All Staff",
+            value: "all_staff",
+            checked: false
+          },
+          {
+            text: "Additional Clinical Services",
+            value: "additional_clinical_services",
+            checked: true
+          },
+          {
+            text: "Admin and Clerical",
+            value: "admin_clerical",
+            checked: false
+          },
+          {
+            text: "Healthcare Scientists",
+            value: "healthcare_scientists",
+            checked: true
+          },
+          {
+            text: "Nursing and Midwifery",
+            value: "nursing_midwifery",
+            checked: true
+          }
+        ]
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block pageContent %}
+  {% set selectAttributes = {
+    id: "sort",
+    name: "sort",
+    label: {
+      text: "Sort by"
+    },
+    items: [
+      {
+        value: "oldest",
+        text: "Oldest"
+      },
+      {
+        value: "newest",
+        text: "Newest"
+      },
+      {
+        value: "a-z",
+        text: "A to Z"
+      }
+    ]
+  } %}
+
+  {% set submitAttributes = {
+    text: "Update",
+    classes: "hee-listing__filter__submit"
+  } %}
+
+  {% set items = [] %}
+  {% for i in range(0, 10) -%}
+    {% set item = {
+      title: "Case study item #" + loop.index,
+      href: "#",
+      details: [
+        {
+          label: "Group impacted:",
+          value: "Admin and Clerical"
+        },
+        {
+          label: "Impact types:",
+          value: "	Contributed to personal or professional development, Productivity and efficiency, Saved money or contributed to financial effectiveness"
+        },
+        {
+          label: "Document:",
+          value: "<a href=\"#\">Get document</a>"
+        },
+        {
+          label: "Sector:",
+          value: "Acute"
+        },
+        {
+          label: "Region:",
+          value: "South West"
+        },
+        {
+          label: "Organisation:",
+          value: "Oxford University Hospitals NHS Foundation Trust"
+        },
+        {
+          label: "Date submitted:",
+          value: "21 March 2023"
+        }
+      ]
+    } %}
+    {% set items = (items.push(item), items) %}
+  {% endfor %}
+
+  {{ listingLayout({
+    filter: {
+      select: selectAttributes,
+      submit: submitAttributes
+    },
+    tags: [
+      {
+        text: "Nursing and Midwifery",
+        value: "nursing_midwifery"
+      },
+      {
+        text: "Healthcare Scientists",
+        value: "healthcare_scientists"
+      },
+      {
+        text: "Additional Clinical Services",
+        value: "additional_clinical_services"
+      }
+    ],
+    results: items,
+    emptyMessage: "No results",
+    showPagination: true
+  }) }}
+{% endblock %}
