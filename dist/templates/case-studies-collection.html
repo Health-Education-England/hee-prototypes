@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Homepage - Templates - NWP Prototype Kit</title>
+  <title>Case Studies Collection - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -49,10 +49,9 @@
         <ol class="nhsuk-breadcrumb__list">
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates">Templates</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates/examples">Examples</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates/examples/homepage">Homepage</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates/case-studies-collection">Case Studies Collection</a></li>
         </ol>
-        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/templates/examples/homepage">Back to Homepage</a></p>
+        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/templates/case-studies-collection">Back to Case Studies Collection</a></p>
       </div>
     </nav>
   </div>
@@ -66,7 +65,7 @@
             <h3>Fullwidth</h3>
             <ul>
               <li><a href="/templates/base-fullwidth">Base</a></li>
-              <li class='current'><a href="/templates/homepage">Homepage</a></li>
+              <li><a href="/templates/homepage">Homepage</a></li>
               <li><a href="/templates/landing-page">Landing Page</a></li>
               <li>404</li>
               <li><a href="/templates/az-listing">A-Z Listing</a></li>
@@ -77,7 +76,7 @@
               <li><a href="/templates/base-leftbar">Base</a></li>
               <li><a href="/templates/news-collection">News Collection</a></li>
               <li><a href="/templates/blog-collection">Blog Collection</a></li>
-              <li><a href="/templates/case-studies-collection">Casestudies Collection</a></li>
+              <li class='current'><a href="/templates/case-studies-collection">Casestudies Collection</a></li>
               <li><a href="/templates/publications-collection">Publications Collection</a></li>
               <li>Event Collection</li>
               <li><a href="/templates/search-bank-collection">Search Bank Collection</a></li>
@@ -99,40 +98,42 @@
         <div class="page__main">
           <div class="page__header">
             <span class="nhsuk-caption-xl">Templates</span>
-            <h1>Homepage</h1>
-            <p class="nhsuk-lede-text">Typically used for landing pages.</p>
+            <h1>Case Studies Collection</h1>
+            <p class="nhsuk-lede-text">A layout with a left sidebar and right content area. Used for listing case study items.</p>
           </div>
           <h2>Example</h2>
           <div class="prototype__example scaled" style="height:400px;overflow:hidden;">
-            <a href="/templates/examples/homepage" target="_blank" class="prototype__example-link">Open this example in new window</a>
+            <a href="/templates/examples/case-studies-collection" target="_blank" class="prototype__example-link">Open this example in new window</a>
             <div class="thumbnail">
-              <iframe src="/templates/examples/homepage" height="780"></iframe>
+              <iframe src="/templates/examples/case-studies-collection" height="780"></iframe>
             </div>
           </div>
           <hr />
-          <h2>HTML</h2>
-          <pre><code>&lt;main class=&quot;page page--fullwidth&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
-  &lt;div class=&quot;page__header has-microhero&quot;&gt;
-    [ PAGE_HERO ]
+          <pre><code>&lt;main class=&quot;page page--leftbar&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
+  &lt;div class=&quot;page__header&quot;&gt;
+    [ PAGE_MICROHERO ]
+    &lt;div class=&quot;nhsuk-width-container&quot;&gt;
+      &lt;h1&gt;[ PAGE_TITLE ]&lt;/h1&gt;
+      &lt;span class=&quot;nhsuk-caption-xl&quot;&gt;[ PAGE_CAPTION ]&lt;/span&gt;
+      &lt;p class=&quot;nhsuk-lede-text&quot;&gt;[ PAGE_SUMMARY ]&lt;/p&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;page__main nhsuk-width-container&quot;&gt;
-    &lt;div class=&quot;page__content&quot;&gt;
-      [ CONTENT--MAIN_BLOCKS ]
+  &lt;div class=&quot;page__layout nhsuk-width-container&quot;&gt;
+    &lt;aside class=&quot;page__leftbar&quot;&gt;
+      [ FILTER_GROUP | FILTER_CLEAR ]
+    &lt;/aside&gt;
+    &lt;div class=&quot;page__main&quot;&gt;
+      [ RESULTS_TITLE | RESULTS_SORTING ]
+      [ FILTER_TAG ]
+      [ RESULTS_LISTING ]
+      [ RESULTS_PAGINATION ]
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;page__footer&quot;&gt;
   &lt;/div&gt;
+  &lt;section class=&quot;page__feature&quot;&gt;
+  &lt;/section&gt;
 &lt;/main&gt;</code></pre>
-          <hr />
-          <h2>Components</h2>
-          <h4>Furniture</h4>
-          <ul>
-            <li>Page</li>
-          </ul>
-          <h4>Content Blocks</h4>
-          <ul>
-            <li>Main</li>
-          </ul>
         </div>
       </div>
     </div>
