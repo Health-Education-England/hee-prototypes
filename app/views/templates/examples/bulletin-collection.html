@@ -1,6 +1,6 @@
 {% extends "example-template-leftbar.html" %}
 
-{% block pageTitle %}News Collection - Examples - NWP Prototype Kit{% endblock %}
+{% block pageTitle %}Bulletin Collection - Examples - NWP Prototype Kit{% endblock %}
 
 {% block breadcrumbs %}
   {{
@@ -11,15 +11,15 @@
         text: "Home"
       }
     ],
-    href: basePath + "/templates/examples/news-collection",
-    text: "News Collection"
+    href: basePath + "/templates/examples/bulletin-collection",
+    text: "Bulletin Collection"
   })
   }}
 {% endblock %}
 
 {% block pageHeader %}
   <div class="nhsuk-width-container">
-    <h1>News Collection</h1>
+    <h1>Bulletin Collection</h1>
     <p class="nhsuk-lede-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum sit sed porta viverra. Amet, tincidunt cras augue justo, proin mollis sapien. Sed cursus quam suspendisse.</p>
   </div>
 {% endblock %}
@@ -32,29 +32,24 @@
         showClearToggle: true,
         items: [
           {
-            text: "Board development",
-            value: "board",
-            checked: false
-          },
-          {
-            text: "Fellowships and scholarships",
-            value: "fellowships",
-            checked: false
-          },
-          {
-            text: "Graduates",
-            value: "graduates",
+            text: "Evidence and resources, Searching",
+            value: "evidence_resource_searching",
             checked: true
           },
           {
-            text: "Learning and development",
-            value: "learning_dev",
+            text: "Child Health",
+            value: "child_health",
+            checked: false
+          },
+          {
+            text: "Medical Oncology",
+            value: "medical_oncology",
             checked: true
           },
           {
-            text: "School leavers",
-            value: "school_leavers",
-            checked: false
+            text: "COVID-19",
+            value: "covid",
+            checked: true
           }
         ]
       }
@@ -71,12 +66,16 @@
     },
     items: [
       {
+        value: "oldest",
+        text: "Oldest"
+      },
+      {
         value: "newest",
         text: "Newest"
       },
       {
-        value: "relevance",
-        text: "Relevance"
+        value: "a-z",
+        text: "A to Z"
       }
     ]
   } %}
@@ -89,19 +88,22 @@
   {% set items = [] %}
   {% for i in range(0, 10) -%}
     {% set item = {
-      title: "News item #" + loop.index,
+      title: "Bulletin item #" + loop.index,
       href: "#",
       details: [
         {
           label: "Category:",
-          value: "Graduates"
+          value: "Child Health"
         },
         {
-          label: "Publish date:",
-          value: "07 September 2022"
+          label: "Overview:",
+          value: "This alert details latest guidelines published by organisations such as NICE and WHO"
+        },
+        {
+          label: "Website:",
+          value: "<a href=\"#\">Bulletin item #" + loop.index + "</a>"
         }
-      ],
-      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+      ]
     } %}
     {% set items = (items.push(item), items) %}
   {% endfor %}
@@ -113,12 +115,16 @@
     },
     tags: [
       {
-        text: "Graduates",
-        value: "graduates"
+        text: "Evidence and resources, Searching",
+        value: "evidence-resources-searching"
       },
       {
-        text: "Learning and development",
-        value: "learning-development"
+        text: "Medical Oncology",
+        value: "medical-oncology"
+      },
+      {
+        text: "COVID-19",
+        value: "covid"
       }
     ],
     results: items,
