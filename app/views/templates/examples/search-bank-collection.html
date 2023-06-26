@@ -1,0 +1,147 @@
+{% extends "example-template-leftbar.html" %}
+
+{% block pageTitle %}Search Bank Collection - Examples - NWP Prototype Kit{% endblock %}
+
+{% block breadcrumbs %}
+  {{
+  breadcrumb({
+    items: [
+      {
+        href: basePath + "/",
+        text: "Home"
+      }
+    ],
+    href: basePath + "/templates/examples/news-collection",
+    text: "News Collection"
+  })
+  }}
+{% endblock %}
+
+{% block pageHeader %}
+  <div class="nhsuk-width-container">
+    <h1>Search Bank Collection</h1>
+    <p class="nhsuk-lede-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum sit sed porta viverra. Amet, tincidunt cras augue justo, proin mollis sapien. Sed cursus quam suspendisse.</p>
+  </div>
+{% endblock %}
+
+{% block pageLeftbar %}
+  {{ filter({
+    groups: [
+      {
+        title: "Topic",
+        showClearToggle: true,
+          items: [
+            {
+              text: "3D printing",
+              value: "item_one",
+              checked: true
+            },
+            {
+              text: "Abuse",
+              value: "item_two",
+              checked: true
+            },
+            {
+              text: "Acute respiratory distress syndrome",
+              value: "item_three",
+              checked: false
+            },
+            {
+              text: "Admission",
+              value: "four",
+              checked: false
+            },
+            {
+              text: "Adverse experience children",
+              value: "five",
+              checked: false
+            }
+          ]
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block pageContent %}
+  {% set selectAttributes = {
+    id: "sort",
+    name: "sort",
+    label: {
+      text: "Sort by"
+    },
+    items: [
+      {
+        value: "oldest",
+        text: "Oldest"
+      },
+      {
+        value: "newest",
+        text: "Newest"
+      },
+      {
+        value: "a-z",
+        text: "A to Z"
+      }
+    ]
+  } %}
+
+  {% set submitAttributes = {
+    text: "Update",
+    classes: "hee-listing__filter__submit"
+  } %}
+
+  {% set items = [] %}
+  {% for i in range(0, 10) -%}
+    {% set item = {
+      title: "Search bank #" + loop.index,
+      href: "#",
+      details: [
+        {
+          label: "Topics:",
+          value: "Abuse, Admission, Adverse experience children"
+        },
+        {
+          label: "Key Terms:",
+          value: "Epidermolysis bullosa"
+        },
+        {
+          label: "Strings / Strategies:",
+          value: "<a href=\"#\">Get strategy</a>"
+        },
+        {
+          label: "Search:",
+          value: "<a href=\"#\">Get search</a>"
+        },
+        {
+          label: "Completed on:",
+          value: "12 October 2022"
+        },
+        {
+          label: "Provider:",
+          value: "Brighton and Sussex"
+        }
+      ]
+    } %}
+    {% set items = (items.push(item), items) %}
+  {% endfor %}
+
+  {{ listingLayout({
+    filter: {
+      select: selectAttributes,
+      submit: submitAttributes
+    },
+    tags: [
+      {
+        text: "3D printing",
+        value: "item_one"
+      },
+      {
+        text: "Abuse",
+        value: "item_two"
+      }
+    ],
+    results: items,
+    emptyMessage: "No results",
+    showPagination: true
+  }) }}
+{% endblock %}
