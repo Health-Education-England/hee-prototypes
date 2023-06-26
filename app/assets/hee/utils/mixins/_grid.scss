@@ -75,11 +75,11 @@ $grid-columns: 12;
 
         } @else {
             @if $important == true {
-                $flex-basis: percentage($col / $grid-columns)!important;
-                width: percentage($col / $grid-columns) !important;
+                $flex-basis: calc($col / $grid-columns) * 100% !important;
+                width: calc($col / $grid-columns) * 100% !important;
             } @else {
-                width: percentage($col / $grid-columns);
-                $flex-basis: percentage($col / $grid-columns);
+                width: calc($col / $grid-columns) * 100%;
+                $flex-basis: calc($col / $grid-columns) * 100%;
             }
         }
 
@@ -112,7 +112,7 @@ $grid-columns: 12;
     }
 	flex: $flex-grow $flex-shrink $flex-basis;
     @if $col-offset and unitless($col-offset) == true {
-        margin-left: percentage($col-offset / $grid-columns);
+        margin-left: calc($col-offset / $grid-columns) * 100%;
     }
 	@if $align-self {
 		align-self: $align-self;
