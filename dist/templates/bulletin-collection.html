@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Templates - HEE Prototype</title>
+  <title>Bulletin Collection - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -49,8 +49,9 @@
         <ol class="nhsuk-breadcrumb__list">
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates">Templates</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates/bulletin-collection">Bulletin Collection</a></li>
         </ol>
-        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/templates">Back to Templates</a></p>
+        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/templates/bulletin-collection">Back to Bulletin Collection</a></p>
       </div>
     </nav>
   </div>
@@ -78,7 +79,7 @@
               <li>Casestudies Collection</li>
               <li><a href="/templates/publications-collection">Publications Collection</a></li>
               <li>Event Collection</li>
-              <li><a href="/templates/bulletin-collection">Bulletin Collection</a></li>
+              <li class='current'><a href="/templates/bulletin-collection">Bulletin Collection</a></li>
             </ul>
             <h3>Rightbar</h3>
             <ul>
@@ -95,16 +96,43 @@
         </div>
         <div class="page__main">
           <div class="page__header">
-            <h1>Templates</h1>
-            <p class="nhsuk-lede-text">All of the available HEE templates</p>
+            <span class="nhsuk-caption-xl">Templates</span>
+            <h1>Bulletin Collection</h1>
+            <p class="nhsuk-lede-text">A layout with a left sidebar and right content area. Used for listing bulletin items.</p>
           </div>
-          <p>The templates are grouped into <strong>three layout types</strong>:
-          <ul>
-            <li>Full width</li>
-            <li>Leftbar</li>
-            <li>Rightbar</li>
-          </ul>
-          </p>
+          <h2>Example</h2>
+          <div class="prototype__example scaled" style="height:400px;overflow:hidden;">
+            <a href="/templates/examples/bulletin-collection" target="_blank" class="prototype__example-link">Open this example in new window</a>
+            <div class="thumbnail">
+              <iframe src="/templates/examples/bulletin-collection" height="780"></iframe>
+            </div>
+          </div>
+          <hr />
+          <pre><code>&lt;main class=&quot;page page--leftbar&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
+  &lt;div class=&quot;page__header&quot;&gt;
+  [ PAGE_MICROHERO ]
+  &lt;div class=&quot;nhsuk-width-container&quot;&gt;
+    &lt;h1&gt;[ PAGE_TITLE ]&lt;/h1&gt;
+    &lt;span class=&quot;nhsuk-caption-xl&quot;&gt;[ PAGE_CAPTION ]&lt;/span&gt;
+    &lt;p class=&quot;nhsuk-lede-text&quot;&gt;[ PAGE_SUMMARY ]&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;page__layout nhsuk-width-container&quot;&gt;
+  &lt;aside class=&quot;page__leftbar&quot;&gt;
+    [ FILTER_GROUP | FILTER_CLEAR ]
+  &lt;/aside&gt;
+  &lt;div class=&quot;page__main&quot;&gt;
+    [ RESULTS_TITLE | RESULTS_SORTING ]
+    [ FILTER_TAG ]
+    [ RESULTS_LISTING ]
+    [ RESULTS_PAGINATION ]
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;page__footer&quot;&gt;
+  &lt;/div&gt;
+  &lt;section class=&quot;page__feature&quot;&gt;
+  &lt;/section&gt;
+&lt;/main&gt;</code></pre>
         </div>
       </div>
     </div>
