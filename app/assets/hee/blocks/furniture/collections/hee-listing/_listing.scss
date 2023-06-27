@@ -9,6 +9,16 @@
     }
   }
 
+  .hee-listing__count {
+    @include mq($from: desktop) {
+      align-self: center;
+    }
+
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+
   .hee-listing__results {
     @include nhsuk-responsive-margin(7, 'bottom');
     padding-top: map-get($nhsuk-spacing-points, 5);
