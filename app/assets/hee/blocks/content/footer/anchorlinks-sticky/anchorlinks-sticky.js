@@ -97,5 +97,5 @@ export default () => {
     }
   }
 
-  new AnchorLinksSticky(document.getElementById('hee-anchorlinks-sticky'));
+  [...document.getElementsByClassName('hee-anchorlinks-sticky')].forEach(anchorLinks => new AnchorLinksSticky(anchorLinks));
 }
