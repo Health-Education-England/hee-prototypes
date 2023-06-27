@@ -141,7 +141,7 @@
           <hr />
           <h3>Macro - Non-urgent</h3>
           <pre><code>
-  {{ careCard({
+  {{ card({
     type: &quot;non-urgent&quot;,
     heading: &quot;Speak to a GP if:&quot;,
     HTML: &quot;
@@ -158,26 +158,28 @@
           <hr />
           <h3>HTML - Non-urgent</h3>
           <pre><code>
-&lt;div class=&quot;nhsuk-care-card nhsuk-care-card--non-urgent&quot;&gt;
-    &lt;div class=&quot;nhsuk-care-card__heading-container&quot;&gt;
-      &lt;h3 class=&quot;nhsuk-care-card__heading&quot;&gt;&lt;span role=&quot;text&quot;&gt;&lt;span class=&quot;nhsuk-u-visually-hidden&quot;&gt;Non-urgent advice: &lt;/span&gt;Speak to a GP if:&lt;/span&gt;&lt;/h3&gt;
-      &lt;span class=&quot;nhsuk-care-card__arrow&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+&lt;div class=&quot;nhsuk-card nhsuk-card--care nhsuk-card--care--non-urgent&quot;&gt;
+    &lt;div class=&quot;nhsuk-card--care__heading-container&quot;&gt;
+      &lt;h2 class=&quot;nhsuk-card--care__heading&quot;&gt;
+        &lt;span role=&quot;text&quot;&gt;&lt;span class=&quot;nhsuk-u-visually-hidden&quot;&gt;Non-urgent advice: &lt;/span&gt;Speak to a GP if:&lt;/span&gt;
+      &lt;/h2&gt;
+      &lt;span class=&quot;nhsuk-card--care__arrow&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;nhsuk-care-card__content&quot;&gt;
+    &lt;div class=&quot;nhsuk-card__content&quot;&gt;
       &lt;ul&gt;
         &lt;li&gt;You&#39;re not sure it&#39;s chickenpox&lt;/li&gt;
         &lt;li&gt;The skin around the blisters is red, hot or painful (signs of infection)&lt;/li&gt;
         &lt;li&gt;Your child is &lt;a href=&quot;https://www.nhs.uk/conditions/dehydration&quot;&gt;dehydrated&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;You&#39;re concerned about your child or they get worse&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;p&gt;Tell the receptionist you think it&#39;s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.&lt;/p&gt;
+      &lt;/ul&gt;
+      &lt;p&gt;Tell the receptionist you think it&#39;s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
   </code></pre>
           <hr />
           <h3>Macro - Urgent</h3>
-          <pre><code>{{ careCard({
-    type: &quot;Urgent&quot;,
+          <pre><code>  {{ card({
+    type: &quot;urgent&quot;,
     heading: &quot;Speak to a GP if:&quot;,
     HTML: &quot;
             &lt;ul&gt;
@@ -188,32 +190,34 @@
             &lt;/ul&gt;
             &lt;p&gt;Tell the receptionist you think it&#39;s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.&lt;/p&gt;
           &quot;
-}) }}
+  }) }}
 </code></pre>
           <hr />
           <h3>HTML - Urgent</h3>
           <pre><code>
-&lt;div class=&quot;nhsuk-care-card nhsuk-care-card--urgent&quot;&gt;
-    &lt;div class=&quot;nhsuk-care-card__heading-container&quot;&gt;
-      &lt;h3 class=&quot;nhsuk-care-card__heading&quot;&gt;&lt;span role=&quot;text&quot;&gt;&lt;span class=&quot;nhsuk-u-visually-hidden&quot;&gt;Non-urgent advice: &lt;/span&gt;Speak to a GP if:&lt;/span&gt;&lt;/h3&gt;
-      &lt;span class=&quot;nhsuk-care-card__arrow&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+&lt;div class=&quot;nhsuk-card nhsuk-card--care nhsuk-card--care--urgent&quot;&gt;
+    &lt;div class=&quot;nhsuk-card--care__heading-container&quot;&gt;
+      &lt;h2 class=&quot;nhsuk-card--care__heading&quot;&gt;
+        &lt;span role=&quot;text&quot;&gt;&lt;span class=&quot;nhsuk-u-visually-hidden&quot;&gt;Urgent advice: &lt;/span&gt;Speak to a GP if:&lt;/span&gt;
+      &lt;/h2&gt;
+      &lt;span class=&quot;nhsuk-card--care__arrow&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;nhsuk-care-card__content&quot;&gt;
+    &lt;div class=&quot;nhsuk-card__content&quot;&gt;
       &lt;ul&gt;
         &lt;li&gt;You&#39;re not sure it&#39;s chickenpox&lt;/li&gt;
         &lt;li&gt;The skin around the blisters is red, hot or painful (signs of infection)&lt;/li&gt;
         &lt;li&gt;Your child is &lt;a href=&quot;https://www.nhs.uk/conditions/dehydration&quot;&gt;dehydrated&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;You&#39;re concerned about your child or they get worse&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;p&gt;Tell the receptionist you think it&#39;s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.&lt;/p&gt;
+      &lt;/ul&gt;
+      &lt;p&gt;Tell the receptionist you think it&#39;s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
           <hr />
           <h3>Macro - Immediate</h3>
           <pre><code>
-{{ careCard({
-    type: &quot;immediate&quot;,
+  {{ card({
+    type: &quot;emergency&quot;,
     heading: &quot;Speak to a GP if:&quot;,
     HTML: &quot;
             &lt;ul&gt;
@@ -224,24 +228,26 @@
             &lt;/ul&gt;
             &lt;p&gt;Tell the receptionist you think it&#39;s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.&lt;/p&gt;
           &quot;
-}) }}
+  }) }}
 </code></pre>
           <hr />
           <h3>HTML - Immediate</h3>
           <pre><code>
-&lt;div class=&quot;nhsuk-care-card nhsuk-care-card--immediate&quot;&gt;
-    &lt;div class=&quot;nhsuk-care-card__heading-container&quot;&gt;
-      &lt;h3 class=&quot;nhsuk-care-card__heading&quot;&gt;&lt;span role=&quot;text&quot;&gt;&lt;span class=&quot;nhsuk-u-visually-hidden&quot;&gt;Non-urgent advice: &lt;/span&gt;Speak to a GP if:&lt;/span&gt;&lt;/h3&gt;
-      &lt;span class=&quot;nhsuk-care-card__arrow&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+&lt;div class=&quot;nhsuk-card nhsuk-card--care nhsuk-card--care--emergency&quot;&gt;
+    &lt;div class=&quot;nhsuk-card--care__heading-container&quot;&gt;
+      &lt;h2 class=&quot;nhsuk-card--care__heading&quot;&gt;
+        &lt;span role=&quot;text&quot;&gt;&lt;span class=&quot;nhsuk-u-visually-hidden&quot;&gt;Immediate action required: &lt;/span&gt;Speak to a GP if:&lt;/span&gt;
+      &lt;/h2&gt;
+      &lt;span class=&quot;nhsuk-card--care__arrow&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;nhsuk-care-card__content&quot;&gt;
+    &lt;div class=&quot;nhsuk-card__content&quot;&gt;
       &lt;ul&gt;
         &lt;li&gt;You&#39;re not sure it&#39;s chickenpox&lt;/li&gt;
         &lt;li&gt;The skin around the blisters is red, hot or painful (signs of infection)&lt;/li&gt;
         &lt;li&gt;Your child is &lt;a href=&quot;https://www.nhs.uk/conditions/dehydration&quot;&gt;dehydrated&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;You&#39;re concerned about your child or they get worse&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;p&gt;Tell the receptionist you think it&#39;s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.&lt;/p&gt;
+      &lt;/ul&gt;
+      &lt;p&gt;Tell the receptionist you think it&#39;s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
