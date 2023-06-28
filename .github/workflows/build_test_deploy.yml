@@ -1,7 +1,13 @@
-name: Build and Commit
+name: Build, test, commit and deploy
 
+# Only run workflow when committing directly to master, release branches or when within a PR.
 on:
-  push
+  push:
+    branches:
+      - master
+      - release/*
+  pull_request:
+    types: [opened, reopened, synchronize, ready_for_review]
 
 jobs:
   # Build prototype dependencies, assets and templates.
@@ -23,14 +29,26 @@ jobs:
       - name: Install dependencies
         run: npm install --no-optional
 
-      - name: Build assets
+      # This builds the assets with the correct '/hee-prototypes/' basePath for Github Pages.
+      - name: Build assets (for Github Pages deployment)
         run: npm run build:prod
 
-      # Share built assets between jobs.
-      - name: Upload build artifacts
+      - name: Upload Github Pages build artifacts
         uses: actions/upload-artifact@v3
         with:
           name: assets
+          path: public/**
+          retention-days: 1
+
+      # Builds assets for pipeline tests operations (no basepath).
+      - name: Build assets (for local tests)
+        run: npm run build
+
+      # Share built assets between jobs.
+      - name: Upload testing build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: assets-tests
           path: public/**
           retention-days: 1
 
@@ -62,6 +80,51 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[Github Actions] - Bundled assets for build number: ${{ github.run_number }}"
+
+  # Run backstopjs regression tests only when in PR.
+  test_backstopjs:
+    if: github.event_name == 'pull_request'
+    name: 'Run tests: BackstopJS'
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout repo from GitHub and use current branch.
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Download assets from "Build" step into "public/" directory.
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: assets-tests
+          path: public
+
+      # Docker image: ghcr.io/health-education-england/run-backstopjs-regression-tests:main
+      - name: Pull HEE backstopjs docker image
+        run: docker-compose pull
+
+      # Run backstopjs tests.
+      - name: Run backstopjs tests
+        run: docker-compose run backstopjs npm run backstop:test
+
+      # Upload html report as an asset
+      - name: Upload backstop report
+        uses: actions/upload-artifact@v3
+        if: ${{ always() }}
+        with:
+          name: backstop_report
+          path: tests/backstop/backstop_data/**
+          retention-days: 1
+
+      # Upload backstop config as asset for debugging.
+      - name: Upload generated backstop config
+        uses: actions/upload-artifact@v3
+        if: ${{ always() }}
+        with:
+          name: backstop_generated_config
+          path: tests/backstop/config/backstop.json
+          retention-days: 1
 
   # Runs the release job if we're on "develop" to deploy our latest build to GitHub Pages.
   deploy:

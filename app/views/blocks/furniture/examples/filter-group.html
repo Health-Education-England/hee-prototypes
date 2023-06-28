@@ -1,0 +1,41 @@
+{% extends "example-blocks.html" %}
+
+{% block main %}
+  {{ filter({
+    groups: [
+      {
+        title: "Topic",
+        showClearToggle: true,
+        items: [
+        {
+          text: "Item one",
+          value: "item_one",
+          checked: true
+        },
+        {
+          text: "Item two",
+          value: "item_two",
+          checked: true
+        }
+      ]
+      },
+      {
+        title: "Publication type",
+        items: [
+        {
+          text: "Item one",
+          value: "item_one"
+        },
+        {
+          text: "Item two",
+          value: "item_two"
+        },
+        {
+          text: "Item three",
+          value: "item_three"
+        }
+      ]
+      }
+    ]
+  }) }}
+{% endblock %}
