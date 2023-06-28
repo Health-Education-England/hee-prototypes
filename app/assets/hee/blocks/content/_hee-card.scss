@@ -4,7 +4,7 @@
   padding: 24px;
   max-width: 360px;
   margin-bottom: nhsuk-spacing(4);
-  
+
   .hee-flexgrid-row & {
       max-width: none;
   }
@@ -46,7 +46,7 @@
   &__jobtitle {
       @include nhsuk-responsive-margin(2, 'bottom');
   }
-  &__department, 
+  &__department,
   &__organisation {
       @include nhsuk-typography-responsive(19);
       @include nhsuk-responsive-margin(2, 'bottom');
@@ -63,7 +63,7 @@
   }
 
   &__bio,
-  &__description 
+  &__description
   {
       color: $color_nhsuk-grey-1;
       @include nhsuk-typography-responsive(16);

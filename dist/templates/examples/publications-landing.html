@@ -26,7 +26,7 @@
   <meta name="msapplication-square310x310logo" content="/nhsuk-frontend/assets/favicons/largetile-310x310.png">
 </head>
 
-<body>
+<body class="">
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script>
@@ -141,6 +141,16 @@
     </header>
   </div>
   <div class="breadcrumbs">
+    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+      <div class="nhsuk-width-container">
+        <ol class="nhsuk-breadcrumb__list">
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates">Templates</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates/examples/publications-landing">Publication Landing</a></li>
+        </ol>
+        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/templates/examples/publications-landing">Back to Publication Landing</a></p>
+      </div>
+    </nav>
   </div>
   <div class="banners">
   </div>
@@ -194,7 +204,7 @@
               <h3><a href="#">Publication title - PDF version</a></h3>
               <span> Published: 24th June 2022 </span>
               <span> Updated: 24th June 2022 </span>
-              <span> PDF, 16 MB, 92 pages </span>
+              <span> PDF, 16.9 MB, 92 pages </span>
               <span> 20 min read </span>
             </div>
           </div>
@@ -230,7 +240,7 @@
               <h3><a href="#">Publication title - Open Document version</a></h3>
               <span> Published: 24th June 2022 </span>
               <span> Updated: 24th June 2022 </span>
-              <span> Open Document Format, 16 MB, 92 pages </span>
+              <span> Open Document Format, 16.9 MB, 92 pages </span>
               <span> 20 min read </span>
             </div>
           </div>
@@ -266,7 +276,7 @@
               <h3><a href="#">Tytuł publikacji - wersja PDF</a></h3>
               <span> Opublikowane 24 czerwca 2022, autor: Autor </span>
               <span> Zaktualizowano: 24 lipca 2022 r. </span>
-              <span> PDF, 16 MB, 92 strony </span>
+              <span> PDF, 16,9 MB, 92 strony </span>
               <span> 20 minut czytania </span>
             </div>
           </div>
@@ -282,12 +292,8 @@
             <span>Updated:</span> 24 July 2022
           </div>
           <div class="hee-card--details__item">
-            <span>Professions:</span>
-            <a href="#">Profession 1</a>, <a href="#">Profession 2</a>
-          </div>
-          <div class="hee-card--details__item">
-            <span>Topics:</span>
-            <a href="#">Topic 1</a>, <a href="#">Topic 2</a>
+            <span>Topic:</span>
+            <a href="#">Profession 1</a>, <a href="#">Topic 1</a>
           </div>
           <div class="hee-card--details__item">
             <span>Estimated reading time:</span> 2 mins
@@ -299,55 +305,57 @@
     </div>
     <section class="page__feature">
       <div class="nhsuk-width-container">
-        <h2>Related publications</h2>
-        <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet. Nunc turpis vel aliquam lacus arcu. Sodales nullam id lectus orci quis sed. dsf</p>
-        <div class="hee-mini-listing">
-          <div class="hee-mini-listing__item">
-            <div class="hee-listing-item">
-              <h3><a href="#">Publication item #1</a></h3>
-              <div class="hee-listing-item__details">
-                <div class="hee-listing-item__details__row">
-                  <span class="hee-listing-item__details__label">Publication type:</span>
-                  <span>Briefing</span>
+        <div class="hee-featured-content">
+          <h2>Related publications</h2>
+          <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet. Nunc turpis vel aliquam lacus arcu. Sodales nullam id lectus orci quis sed. dsf</p>
+          <div class="hee-featured-content-wrapper ">
+            <div class="hee-featured-content__item">
+              <div class="hee-listing-item">
+                <h3><a href="#">Publication item #1</a></h3>
+                <div class="hee-listing-item__details">
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Publication type:</span>
+                    <span>Briefing</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Publish date:</span>
+                    <span>07 September 2022</span>
+                  </div>
                 </div>
-                <div class="hee-listing-item__details__row">
-                  <span class="hee-listing-item__details__label">Publish date:</span>
-                  <span>07 September 2022</span>
-                </div>
+                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
-              <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
             </div>
-          </div>
-          <div class="hee-mini-listing__item">
-            <div class="hee-listing-item">
-              <h3><a href="#">Publication item #2</a></h3>
-              <div class="hee-listing-item__details">
-                <div class="hee-listing-item__details__row">
-                  <span class="hee-listing-item__details__label">Publication type:</span>
-                  <span>Briefing</span>
+            <div class="hee-featured-content__item">
+              <div class="hee-listing-item">
+                <h3><a href="#">Publication item #2</a></h3>
+                <div class="hee-listing-item__details">
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Publication type:</span>
+                    <span>Briefing</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Publish date:</span>
+                    <span>07 September 2022</span>
+                  </div>
                 </div>
-                <div class="hee-listing-item__details__row">
-                  <span class="hee-listing-item__details__label">Publish date:</span>
-                  <span>07 September 2022</span>
-                </div>
+                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
-              <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
             </div>
-          </div>
-          <div class="hee-mini-listing__item">
-            <div class="hee-listing-item">
-              <h3><a href="#">Publication item #3</a></h3>
-              <div class="hee-listing-item__details">
-                <div class="hee-listing-item__details__row">
-                  <span class="hee-listing-item__details__label">Publication type:</span>
-                  <span>Briefing</span>
+            <div class="hee-featured-content__item">
+              <div class="hee-listing-item">
+                <h3><a href="#">Publication item #3</a></h3>
+                <div class="hee-listing-item__details">
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Publication type:</span>
+                    <span>Briefing</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Publish date:</span>
+                    <span>07 September 2022</span>
+                  </div>
                 </div>
-                <div class="hee-listing-item__details__row">
-                  <span class="hee-listing-item__details__label">Publish date:</span>
-                  <span>07 September 2022</span>
-                </div>
+                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
-              <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
             </div>
           </div>
         </div>

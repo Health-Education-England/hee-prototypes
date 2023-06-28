@@ -1,0 +1,19 @@
+{%- from 'hee/blocks/furniture/collections/hee-listing-item/macro.njk' import listingItem %}
+
+{% macro featuredContent(params) %}
+  <div class="hee-featured-content">
+    {% if params.title %}
+      <h2>{{ params.title }}</h2>
+    {% endif %}
+    {% if params.summary %}
+      <p>{{ params.summary }}</p>
+    {% endif %}
+    <div class="hee-featured-content-wrapper {{ "double" if params.items.length == 2 }}">
+      {% for item in params.items %}
+        <div class="hee-featured-content__item">
+          {{ listingItem(item) }}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endmacro %}

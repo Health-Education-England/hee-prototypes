@@ -48,10 +48,21 @@
   <hr />
 
   <h2>HTML</h2>
-{{ highlight({
-  "html" : ''
-  }) 
-}}
+  {{ highlight({
+    "html" : '<main class="page page--fullwidth" id="maincontent" role="main">
+  <div class="page__header has-microhero">
+    [ PAGE_HERO ]
+  </div>
+  <div class="page__main nhsuk-width-container">
+    <div class="page__content">
+      [ CONTENT--MAIN_BLOCKS ]
+    </div>
+  </div>
+  <div class="page__footer">
+  </div>
+</main>'
+  })
+  }}
 
   <hr />
 
@@ -59,12 +70,12 @@
   {{ components({
     'data' : [
       {
-          'type' : 'Furniture',
-          'list' : ['Page']
+        'type' : 'Furniture',
+        'list' : ['Page', 'Content']
       },
       {
-          'type' : 'Content Blocks',
-          'list' : ['Main']
+        'type' : 'Content Blocks',
+        'list' : ['Main', 'Featured']
       }
     ]
   }) }}
