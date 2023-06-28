@@ -159,14 +159,15 @@
     <div class="page__header ">
       <div class="nhsuk-width-container">
         <h1>Search results</h1>
-        <form method="get" action="">
-          <div class="nhsuk-form-group nhsuk-header__search-form--search-results">
+        <form class="hee-search-form" method="get" action="">
+          <div class="hee-search-form__wrapper nhsuk-form-group">
             <label class="nhsuk-label nhsuk-u-visually-hidden" for="search-field">Enter a search term</label>
-            <input class="nhsuk-input nhsuk-search__input--search-results" type="search" name="q" autocomplete="off" id="search-field" value="test">
-            <button class="nhsuk-search__submit--search-results" type="submit">
+            <input class="hee-search-form__input nhsuk-input" type="search" name="q" autocomplete="off" id="search-field" placeholder="Type search here">
+            <button class="hee-search-form__submit" type="submit">
               <span class="nhsuk-u-visually-hidden">Submit</span>
-              <svg class="nhsuk-icon nhsuk-icon__search--search-results" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+              <svg class="hee-search-form__icon nhsuk-icon" width="14" height="14" viewBox="-5 -5 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 17C13.866 17 17 13.866 17 10C17 6.13401 13.866 3 10 3C6.13401 3 3 6.13401 3 10C3 13.866 6.13401 17 10 17Z" stroke="#F0F4F5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M14.9531 14.95L19.0032 19.0001" stroke="#F0F4F5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </button>
           </div>
@@ -177,195 +178,145 @@
       <div class="hee-search-listing">
         <h2>187 results</h2>
         <div class="hee-search-listing__items">
-          <div class="hee-search-listing-item">
-            <h3><a href="#" title="Assessment of Dental Core competency #1">Assessment of Dental Core competency #1</a></h3>
-            <span class="hee-search-listing-item__subtitle">Dental and Maxillofacial Radiology recruitment</span>
-            <div class="hee-search-listing-item__summary"> Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1) </div>
-            <div class="hee-search-listing-item__attributes">
-              <div class="hee-search-listing-item__attributes__item">
-                <span class="hee-search-listing-item__attributes__label"> Date: </span>
-                <span class="hee-search-listing-item__attributes__value"> 21 July 2021 </span>
+          <div class="hee-listing-item">
+            <h3><a href="#">Assessment of Dental Core competency #1</a></h3>
+            <div class="hee-listing-item__details">
+              <div class="hee-listing-item__details__row">
+                <span class="hee-listing-item__details__label">Date:</span>
+                <span>21 July 2021</span>
               </div>
-              <div class="hee-search-listing-item__attributes__item">
-                <span class="hee-search-listing-item__attributes__label"> Location: </span>
-                <span class="hee-search-listing-item__attributes__value"> Birmingham </span>
+              <div class="hee-listing-item__details__row">
+                <span class="hee-listing-item__details__label">Location:</span>
+                <span>Birmingham</span>
               </div>
             </div>
-            <div class="hee-search-listing-item__url">
-              <a href="#">https://dental.hee.nhs.uk/dental-trainee-recruitment/dental-specialty-training/oral-medicine/overview-of-oral-medicine/assessment-of-dental-core-competency</a>
-            </div>
-            <span class="hee-search-listing-item__updated">Page last updated: 17 January 2023</span>
+            <div class="hee-listing-item__summary"> Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1) </div>
           </div>
-          <div class="hee-search-listing-item">
-            <h3><a href="#" title="Assessment of Dental Core competency #2">Assessment of Dental Core competency #2</a></h3>
-            <span class="hee-search-listing-item__subtitle">Dental and Maxillofacial Radiology recruitment</span>
-            <div class="hee-search-listing-item__summary"> Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1) </div>
-            <div class="hee-search-listing-item__attributes">
-              <div class="hee-search-listing-item__attributes__item">
-                <span class="hee-search-listing-item__attributes__label"> Date: </span>
-                <span class="hee-search-listing-item__attributes__value"> 21 July 2021 </span>
+          <div class="hee-listing-item">
+            <h3><a href="#">Assessment of Dental Core competency #2</a></h3>
+            <div class="hee-listing-item__details">
+              <div class="hee-listing-item__details__row">
+                <span class="hee-listing-item__details__label">Date:</span>
+                <span>21 July 2021</span>
               </div>
-              <div class="hee-search-listing-item__attributes__item">
-                <span class="hee-search-listing-item__attributes__label"> Location: </span>
-                <span class="hee-search-listing-item__attributes__value"> Birmingham </span>
+              <div class="hee-listing-item__details__row">
+                <span class="hee-listing-item__details__label">Location:</span>
+                <span>Birmingham</span>
               </div>
             </div>
-            <div class="hee-search-listing-item__url">
-              <a href="#">https://dental.hee.nhs.uk/dental-trainee-recruitment/dental-specialty-training/oral-medicine/overview-of-oral-medicine/assessment-of-dental-core-competency</a>
-            </div>
-            <span class="hee-search-listing-item__updated">Page last updated: 17 January 2023</span>
+            <div class="hee-listing-item__summary"> Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1) </div>
           </div>
-          <div class="hee-search-listing-item">
-            <h3><a href="#" title="Assessment of Dental Core competency #3">Assessment of Dental Core competency #3</a></h3>
-            <span class="hee-search-listing-item__subtitle">Dental and Maxillofacial Radiology recruitment</span>
-            <div class="hee-search-listing-item__summary"> Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1) </div>
-            <div class="hee-search-listing-item__attributes">
-              <div class="hee-search-listing-item__attributes__item">
-                <span class="hee-search-listing-item__attributes__label"> Date: </span>
-                <span class="hee-search-listing-item__attributes__value"> 21 July 2021 </span>
+          <div class="hee-listing-item">
+            <h3><a href="#">Assessment of Dental Core competency #3</a></h3>
+            <div class="hee-listing-item__details">
+              <div class="hee-listing-item__details__row">
+                <span class="hee-listing-item__details__label">Date:</span>
+                <span>21 July 2021</span>
               </div>
-              <div class="hee-search-listing-item__attributes__item">
-                <span class="hee-search-listing-item__attributes__label"> Location: </span>
-                <span class="hee-search-listing-item__attributes__value"> Birmingham </span>
+              <div class="hee-listing-item__details__row">
+                <span class="hee-listing-item__details__label">Location:</span>
+                <span>Birmingham</span>
               </div>
             </div>
-            <div class="hee-search-listing-item__url">
-              <a href="#">https://dental.hee.nhs.uk/dental-trainee-recruitment/dental-specialty-training/oral-medicine/overview-of-oral-medicine/assessment-of-dental-core-competency</a>
-            </div>
-            <span class="hee-search-listing-item__updated">Page last updated: 17 January 2023</span>
+            <div class="hee-listing-item__summary"> Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1) </div>
           </div>
-          <div class="hee-search-listing-item">
-            <h3><a href="#" title="Assessment of Dental Core competency #4">Assessment of Dental Core competency #4</a></h3>
-            <span class="hee-search-listing-item__subtitle">Dental and Maxillofacial Radiology recruitment</span>
-            <div class="hee-search-listing-item__summary"> Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1) </div>
-            <div class="hee-search-listing-item__attributes">
-              <div class="hee-search-listing-item__attributes__item">
-                <span class="hee-search-listing-item__attributes__label"> Date: </span>
-                <span class="hee-search-listing-item__attributes__value"> 21 July 2021 </span>
+          <div class="hee-listing-item">
+            <h3><a href="#">Assessment of Dental Core competency #4</a></h3>
+            <div class="hee-listing-item__details">
+              <div class="hee-listing-item__details__row">
+                <span class="hee-listing-item__details__label">Date:</span>
+                <span>21 July 2021</span>
               </div>
-              <div class="hee-search-listing-item__attributes__item">
-                <span class="hee-search-listing-item__attributes__label"> Location: </span>
-                <span class="hee-search-listing-item__attributes__value"> Birmingham </span>
+              <div class="hee-listing-item__details__row">
+                <span class="hee-listing-item__details__label">Location:</span>
+                <span>Birmingham</span>
               </div>
             </div>
-            <div class="hee-search-listing-item__url">
-              <a href="#">https://dental.hee.nhs.uk/dental-trainee-recruitment/dental-specialty-training/oral-medicine/overview-of-oral-medicine/assessment-of-dental-core-competency</a>
-            </div>
-            <span class="hee-search-listing-item__updated">Page last updated: 17 January 2023</span>
+            <div class="hee-listing-item__summary"> Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1) </div>
           </div>
-          <div class="hee-search-listing-item">
-            <h3><a href="#" title="Assessment of Dental Core competency #5">Assessment of Dental Core competency #5</a></h3>
-            <span class="hee-search-listing-item__subtitle">Dental and Maxillofacial Radiology recruitment</span>
-            <div class="hee-search-listing-item__summary"> Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1) </div>
-            <div class="hee-search-listing-item__attributes">
-              <div class="hee-search-listing-item__attributes__item">
-                <span class="hee-search-listing-item__attributes__label"> Date: </span>
-                <span class="hee-search-listing-item__attributes__value"> 21 July 2021 </span>
+          <div class="hee-listing-item">
+            <h3><a href="#">Assessment of Dental Core competency #5</a></h3>
+            <div class="hee-listing-item__details">
+              <div class="hee-listing-item__details__row">
+                <span class="hee-listing-item__details__label">Date:</span>
+                <span>21 July 2021</span>
               </div>
-              <div class="hee-search-listing-item__attributes__item">
-                <span class="hee-search-listing-item__attributes__label"> Location: </span>
-                <span class="hee-search-listing-item__attributes__value"> Birmingham </span>
+              <div class="hee-listing-item__details__row">
+                <span class="hee-listing-item__details__label">Location:</span>
+                <span>Birmingham</span>
               </div>
             </div>
-            <div class="hee-search-listing-item__url">
-              <a href="#">https://dental.hee.nhs.uk/dental-trainee-recruitment/dental-specialty-training/oral-medicine/overview-of-oral-medicine/assessment-of-dental-core-competency</a>
-            </div>
-            <span class="hee-search-listing-item__updated">Page last updated: 17 January 2023</span>
+            <div class="hee-listing-item__summary"> Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1) </div>
           </div>
-          <div class="hee-search-listing-item">
-            <h3><a href="#" title="Assessment of Dental Core competency #6">Assessment of Dental Core competency #6</a></h3>
-            <span class="hee-search-listing-item__subtitle">Dental and Maxillofacial Radiology recruitment</span>
-            <div class="hee-search-listing-item__summary"> Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1) </div>
-            <div class="hee-search-listing-item__attributes">
-              <div class="hee-search-listing-item__attributes__item">
-                <span class="hee-search-listing-item__attributes__label"> Date: </span>
-                <span class="hee-search-listing-item__attributes__value"> 21 July 2021 </span>
+          <div class="hee-listing-item">
+            <h3><a href="#">Assessment of Dental Core competency #6</a></h3>
+            <div class="hee-listing-item__details">
+              <div class="hee-listing-item__details__row">
+                <span class="hee-listing-item__details__label">Date:</span>
+                <span>21 July 2021</span>
               </div>
-              <div class="hee-search-listing-item__attributes__item">
-                <span class="hee-search-listing-item__attributes__label"> Location: </span>
-                <span class="hee-search-listing-item__attributes__value"> Birmingham </span>
+              <div class="hee-listing-item__details__row">
+                <span class="hee-listing-item__details__label">Location:</span>
+                <span>Birmingham</span>
               </div>
             </div>
-            <div class="hee-search-listing-item__url">
-              <a href="#">https://dental.hee.nhs.uk/dental-trainee-recruitment/dental-specialty-training/oral-medicine/overview-of-oral-medicine/assessment-of-dental-core-competency</a>
-            </div>
-            <span class="hee-search-listing-item__updated">Page last updated: 17 January 2023</span>
+            <div class="hee-listing-item__summary"> Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1) </div>
           </div>
-          <div class="hee-search-listing-item">
-            <h3><a href="#" title="Assessment of Dental Core competency #7">Assessment of Dental Core competency #7</a></h3>
-            <span class="hee-search-listing-item__subtitle">Dental and Maxillofacial Radiology recruitment</span>
-            <div class="hee-search-listing-item__summary"> Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1) </div>
-            <div class="hee-search-listing-item__attributes">
-              <div class="hee-search-listing-item__attributes__item">
-                <span class="hee-search-listing-item__attributes__label"> Date: </span>
-                <span class="hee-search-listing-item__attributes__value"> 21 July 2021 </span>
+          <div class="hee-listing-item">
+            <h3><a href="#">Assessment of Dental Core competency #7</a></h3>
+            <div class="hee-listing-item__details">
+              <div class="hee-listing-item__details__row">
+                <span class="hee-listing-item__details__label">Date:</span>
+                <span>21 July 2021</span>
               </div>
-              <div class="hee-search-listing-item__attributes__item">
-                <span class="hee-search-listing-item__attributes__label"> Location: </span>
-                <span class="hee-search-listing-item__attributes__value"> Birmingham </span>
+              <div class="hee-listing-item__details__row">
+                <span class="hee-listing-item__details__label">Location:</span>
+                <span>Birmingham</span>
               </div>
             </div>
-            <div class="hee-search-listing-item__url">
-              <a href="#">https://dental.hee.nhs.uk/dental-trainee-recruitment/dental-specialty-training/oral-medicine/overview-of-oral-medicine/assessment-of-dental-core-competency</a>
-            </div>
-            <span class="hee-search-listing-item__updated">Page last updated: 17 January 2023</span>
+            <div class="hee-listing-item__summary"> Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1) </div>
           </div>
-          <div class="hee-search-listing-item">
-            <h3><a href="#" title="Assessment of Dental Core competency #8">Assessment of Dental Core competency #8</a></h3>
-            <span class="hee-search-listing-item__subtitle">Dental and Maxillofacial Radiology recruitment</span>
-            <div class="hee-search-listing-item__summary"> Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1) </div>
-            <div class="hee-search-listing-item__attributes">
-              <div class="hee-search-listing-item__attributes__item">
-                <span class="hee-search-listing-item__attributes__label"> Date: </span>
-                <span class="hee-search-listing-item__attributes__value"> 21 July 2021 </span>
+          <div class="hee-listing-item">
+            <h3><a href="#">Assessment of Dental Core competency #8</a></h3>
+            <div class="hee-listing-item__details">
+              <div class="hee-listing-item__details__row">
+                <span class="hee-listing-item__details__label">Date:</span>
+                <span>21 July 2021</span>
               </div>
-              <div class="hee-search-listing-item__attributes__item">
-                <span class="hee-search-listing-item__attributes__label"> Location: </span>
-                <span class="hee-search-listing-item__attributes__value"> Birmingham </span>
+              <div class="hee-listing-item__details__row">
+                <span class="hee-listing-item__details__label">Location:</span>
+                <span>Birmingham</span>
               </div>
             </div>
-            <div class="hee-search-listing-item__url">
-              <a href="#">https://dental.hee.nhs.uk/dental-trainee-recruitment/dental-specialty-training/oral-medicine/overview-of-oral-medicine/assessment-of-dental-core-competency</a>
-            </div>
-            <span class="hee-search-listing-item__updated">Page last updated: 17 January 2023</span>
+            <div class="hee-listing-item__summary"> Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1) </div>
           </div>
-          <div class="hee-search-listing-item">
-            <h3><a href="#" title="Assessment of Dental Core competency #9">Assessment of Dental Core competency #9</a></h3>
-            <span class="hee-search-listing-item__subtitle">Dental and Maxillofacial Radiology recruitment</span>
-            <div class="hee-search-listing-item__summary"> Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1) </div>
-            <div class="hee-search-listing-item__attributes">
-              <div class="hee-search-listing-item__attributes__item">
-                <span class="hee-search-listing-item__attributes__label"> Date: </span>
-                <span class="hee-search-listing-item__attributes__value"> 21 July 2021 </span>
+          <div class="hee-listing-item">
+            <h3><a href="#">Assessment of Dental Core competency #9</a></h3>
+            <div class="hee-listing-item__details">
+              <div class="hee-listing-item__details__row">
+                <span class="hee-listing-item__details__label">Date:</span>
+                <span>21 July 2021</span>
               </div>
-              <div class="hee-search-listing-item__attributes__item">
-                <span class="hee-search-listing-item__attributes__label"> Location: </span>
-                <span class="hee-search-listing-item__attributes__value"> Birmingham </span>
+              <div class="hee-listing-item__details__row">
+                <span class="hee-listing-item__details__label">Location:</span>
+                <span>Birmingham</span>
               </div>
             </div>
-            <div class="hee-search-listing-item__url">
-              <a href="#">https://dental.hee.nhs.uk/dental-trainee-recruitment/dental-specialty-training/oral-medicine/overview-of-oral-medicine/assessment-of-dental-core-competency</a>
-            </div>
-            <span class="hee-search-listing-item__updated">Page last updated: 17 January 2023</span>
+            <div class="hee-listing-item__summary"> Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1) </div>
           </div>
-          <div class="hee-search-listing-item">
-            <h3><a href="#" title="Assessment of Dental Core competency #10">Assessment of Dental Core competency #10</a></h3>
-            <span class="hee-search-listing-item__subtitle">Dental and Maxillofacial Radiology recruitment</span>
-            <div class="hee-search-listing-item__summary"> Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1) </div>
-            <div class="hee-search-listing-item__attributes">
-              <div class="hee-search-listing-item__attributes__item">
-                <span class="hee-search-listing-item__attributes__label"> Date: </span>
-                <span class="hee-search-listing-item__attributes__value"> 21 July 2021 </span>
+          <div class="hee-listing-item">
+            <h3><a href="#">Assessment of Dental Core competency #10</a></h3>
+            <div class="hee-listing-item__details">
+              <div class="hee-listing-item__details__row">
+                <span class="hee-listing-item__details__label">Date:</span>
+                <span>21 July 2021</span>
               </div>
-              <div class="hee-search-listing-item__attributes__item">
-                <span class="hee-search-listing-item__attributes__label"> Location: </span>
-                <span class="hee-search-listing-item__attributes__value"> Birmingham </span>
+              <div class="hee-listing-item__details__row">
+                <span class="hee-listing-item__details__label">Location:</span>
+                <span>Birmingham</span>
               </div>
             </div>
-            <div class="hee-search-listing-item__url">
-              <a href="#">https://dental.hee.nhs.uk/dental-trainee-recruitment/dental-specialty-training/oral-medicine/overview-of-oral-medicine/assessment-of-dental-core-competency</a>
-            </div>
-            <span class="hee-search-listing-item__updated">Page last updated: 17 January 2023</span>
+            <div class="hee-listing-item__summary"> Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1) </div>
           </div>
         </div>
         <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
