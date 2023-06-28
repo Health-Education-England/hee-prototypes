@@ -67,7 +67,7 @@
               <li><a href="/templates/base-fullwidth">Base</a></li>
               <li><a href="/templates/homepage">Homepage</a></li>
               <li><a href="/templates/landing-page">Landing Page</a></li>
-              <li>404</li>
+              <li class='current'><a href="/templates/404">404</a></li>
               <li>A-Z Listing</li>
               <li>Search Listing</li>
             </ul>
@@ -108,16 +108,29 @@
           </div>
           <hr />
           <h2>HTML</h2>
-          <pre><code></code></pre>
+          <pre><code>&lt;main class=&quot;page page--fullwidth&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
+  &lt;div class=&quot;page__header has-microhero&quot;&gt;
+    [ PAGE_HERO ]
+  &lt;/div&gt;
+  &lt;div class=&quot;page__main nhsuk-width-container&quot;&gt;
+    &lt;div class=&quot;page__content&quot;&gt;
+      [ CONTENT--MAIN_BLOCKS ]
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;page__footer&quot;&gt;
+  &lt;/div&gt;
+&lt;/main&gt;</code></pre>
           <hr />
           <h2>Components</h2>
           <h4>Furniture</h4>
           <ul>
             <li>Page</li>
+            <li>Content</li>
           </ul>
           <h4>Content Blocks</h4>
           <ul>
             <li>Main</li>
+            <li>Featured</li>
           </ul>
         </div>
       </div>
