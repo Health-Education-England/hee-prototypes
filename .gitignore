@@ -58,8 +58,15 @@ jspm_packages/
 
 # dotenv environment variables file
 .env
+!.github/config/.env
 
 # System Files
 .DS_Store
 Thumbs.db
 HEE-prototype.code-workspace
+
+# BackstopJS
+tests/backstop/backstop_data/bitmaps_test/*
+tests/backstop/backstop_data/html_report/*
+tests/backstop/config/*
+!tests/backstop/config/base.json

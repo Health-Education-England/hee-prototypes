@@ -1,0 +1,82 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'cookies' %}
+{% set page_title = 'Cookies' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block breadcrumbs %}
+  {{
+  breadcrumb({
+    items: [
+      {
+        href: basePath + "/",
+        text: "Home"
+      },
+      {
+        href: basePath + "/blocks",
+        text: "Blocks"
+      },
+      {
+        href: basePath + "/blocks/scaffolding",
+        text: "Scaffolding"
+      }
+    ],
+    href: basePath + "/blocks/scaffolding/"+page_url,
+    text: page_title
+  })
+  }}
+{% endblock %}
+
+{% block pageLeftbar %}
+  {{ subnav({
+    area: 'blocks',
+    subarea: 'scaffolding'
+  }) }}
+{% endblock %}
+
+{% block pageHeader %}
+  <span class="nhsuk-caption-xl">Scaffolding</span>
+  <h1>{{ page_title }}</h1>
+  <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+  <p>Cookie policy banner appearing at the very top of the website.</p>
+
+  <h2>Example</h2>
+  {{ example({
+    url: basePath + '/blocks/scaffolding/examples/' + page_url,
+    height: '400px'
+  }) }}
+
+  <hr />
+
+  <h2>Macro</h2>
+  {{ highlight({
+    html: '{{ cookies() }}'
+  }) }}
+
+  <hr />
+
+  <h3>HTML</h3>
+  {{ highlight({
+    html : '
+<div class="nhsuk-cookie-banner">
+    <div class="nhsuk-width-container">
+      <h2>Cookies</h2>
+      <p> We use some essential cookies to make this website work. We’d like to set some additional cookies to understand how you use the website and to improve it. We also use cookies set by other sites to help us deliver content from their services. <a href="/lks/cookie-policy" title="Cookie Policy">You can read more about our cookies</a> before you choose. </p>
+      <ul>
+        <li><button class="nhsuk-button" id="nhsuk-cookie-banner__link_accept_analytics" tabindex="2">Accept additional cookies</button></li>
+        <li><button class="nhsuk-button" id="nhsuk-cookie-banner__link_decline_analytics" tabindex="3">Reject additional cookies</button></li>
+      </ul>
+    </div>
+</div>
+'
+  })
+  }}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}
