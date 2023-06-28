@@ -1,0 +1,7 @@
+version: '3'
+services:
+  backstopjs:
+    image: ghcr.io/health-education-england/run-backstopjs-regression-tests:main
+    volumes:
+      - ./tests/backstop:/app/src/backstop
+      - ./public:/app/src/public
