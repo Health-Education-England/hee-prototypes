@@ -4,6 +4,7 @@
   border: 1px solid $color_nhsuk-grey-4;
   padding: 24px;
   margin-bottom: nhsuk-spacing(4);
+  max-width: 360px;
 
   .hee-flexgrid-row & {
     max-width: none;
