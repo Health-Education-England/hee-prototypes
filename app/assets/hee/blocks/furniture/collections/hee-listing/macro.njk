@@ -4,6 +4,7 @@
   {%- from 'pagination/macro.njk' import pagination %}
   {%- from 'select/macro.njk' import select %}
   {%- from 'summary-list/macro.njk' import summaryList %}
+  {%- from 'hee/blocks/furniture/collections/hee-filtertag/macro.njk' import filterTag %}
 
   <div class="hee-listing">
     <div class="hee-listing__summary">
@@ -16,6 +17,16 @@
           {{ button(list.filter.submit) }}
         </form>
       </div>
+      {% if list.tags.length > 0 %}
+        <div class="hee-listing__tags">
+          {% for tag in list.tags %}
+            {{ filterTag({
+              text: tag.text,
+              value: tag.value
+            }) }}
+          {% endfor %}
+        </div>
+      {% endif %}
     </div>
     <div class="hee-listing__results">
       {% if list.results.length > 0 %}

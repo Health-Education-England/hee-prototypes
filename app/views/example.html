@@ -27,7 +27,6 @@
 {%- from 'hee/blocks/furniture/collections/hee-listing-item/macro.njk' import listingItem %}
 {%- from 'hee/blocks/furniture/collections/hee-filter/macro.njk' import filter %}
 {%- from 'hee/blocks/furniture/collections/hee-filtertag/macro.njk' import filterTag %}
-
 {%- from 'pagination/macro.njk' import pagination %}
 
 {# CONTENT BLOCKS #}
@@ -45,6 +44,11 @@
 {# Sidebar #}
 {%- from 'hee/blocks/content/sidebar/card--details/macro.njk' import detailsCard %}
 {%- from 'hee/blocks/content/sidebar/card--downloads/marco.njk' import downloadsCard %}
+
+{# Search #}
+{%- from 'hee/blocks/furniture/search/form/macro.njk' import searchForm %}
+{%- from 'hee/blocks/furniture/search/listing/macro.njk' import searchListing %}
+{%- from 'hee/blocks/furniture/search/listing-item/macro.njk' import searchListingItem %}
 
 {# To Sort #}
 {# HEE Components #}
