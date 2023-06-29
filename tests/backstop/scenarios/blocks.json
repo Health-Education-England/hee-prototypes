@@ -59,6 +59,13 @@
     {
       "label": "blocks-skip-link",
       "focusSelector": ".nhsuk-skip-link"
+    },
+    {
+      "label": "blocks-main-card-summary-click-toggle",
+      "clickSelectors": [
+        ".hee-card--summary__toggle"
+      ],
+      "url": "http://127.0.0.1:8080/blocks/content/examples/main-card-summary.html"
     }
   ]
 }
