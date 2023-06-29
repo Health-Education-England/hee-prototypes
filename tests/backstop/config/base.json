@@ -1,0 +1,44 @@
+{
+  "id": "backstopjs-regression-tests",
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false,
+  "dockerCommandTemplate": "docker run --expose 3000 --network='host' -P --rm -i -u $(id -u ${USER}):$(id -g ${USER}) --mount type=bind,source='{cwd}',target=/src backstopjs/backstopjs:{version} {backstopCommand} {args}",
+  "engine": "playwright",
+  "engineOptions": {
+    "args": [
+      "--no-sandbox"
+    ]
+  },
+  "onBeforeScript": "playwright/onBefore.js",
+  "onReadyScript": "playwright/onReady.js",
+  "paths": {
+    "bitmaps_reference": "/app/src/backstop/backstop_data/bitmaps_reference",
+    "bitmaps_test": "/app/src/backstop/backstop_data/bitmaps_test",
+    "engine_scripts": "/app/engine",
+    "html_report": "/app/src/backstop/backstop_data/html_report",
+    "ci_report": "/app/src/backstop/backstop_data/ci_report"
+  },
+  "report": [
+    "browser"
+  ],
+  "viewports": [
+    {
+      "label": "desktop",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "label": "tablet",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "label": "mobile",
+      "width": 375,
+      "height": 667
+    }
+  ],
+  "scenarios": []
+}

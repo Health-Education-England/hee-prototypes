@@ -78,6 +78,7 @@
         ]
       },
       {
+        class: "optional",
         name: "Optional routes",
         items: [
           {
@@ -137,21 +138,26 @@
   html : '
 <div class="hee-training-journey">
     <h3>Your training journey</h3>
-    <div class="hee-training-journey__group">
+    <div class="hee-training-journey__group ">
       <h4>Prerequisites</h4>
       <div class="hee-training-journey__group__container">
         <div class="hee-training-journey__item first  ">
           <a class="hee-training-journey__item__link" href="https://www.abc123.com">Foundation Surgery</a>
         </div>
-        <div class="hee-training-journey__item   ">
+        <div class="hee-training-journey__item  last ">
           <a class="hee-training-journey__item__link" href="https://www.abc123.com">F2 Standalone Surgery</a>
         </div>
-        <div class="hee-training-journey__item  last ">
+      </div>
+    </div>
+    <div class="hee-training-journey__group ">
+      <h4>You are here</h4>
+      <div class="hee-training-journey__group__container">
+        <div class="hee-training-journey__item first last active">
           <a class="hee-training-journey__item__link" href="https://www.abc123.com">Core surgery</a>
         </div>
       </div>
     </div>
-    <div class="hee-training-journey__group">
+    <div class="hee-training-journey__group optional">
       <h4>Optional routes</h4>
       <div class="hee-training-journey__group__container">
         <div class="hee-training-journey__item first  ">
@@ -163,8 +169,7 @@
         <div class="hee-training-journey__item   ">
           <a class="hee-training-journey__item__link" href="https://www.abc123.com">Neurosurgery</a>
         </div>
-        <div class="hee-training-journey__item   active">
-          <span>You are here</span>
+        <div class="hee-training-journey__item   ">
           <a class="hee-training-journey__item__link" href="https://www.abc123.com">Oral &amp; Maxillofacial Surgery</a>
         </div>
         <div class="hee-training-journey__item   ">
@@ -187,7 +192,7 @@
         </div>
       </div>
     </div>
-</div>
+  </div>
   '
   }) 
 }}

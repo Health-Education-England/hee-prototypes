@@ -30,7 +30,7 @@
 
 {% block pageHeader %}
   {{ microHero({
-    "imgURL": "/images/surgery-in-theatre.jpg"
+    "imgURL": basePath + "/images/surgery-in-theatre.jpg"
   }) }}
 
   <div class="nhsuk-width-container">
@@ -40,6 +40,55 @@
 {% endblock %}
 
 {% block pageContent %}
+  {{ summaryCard({
+    title: "Programme summary",
+    items: [
+      {
+        label: "Training programme",
+        value: "Core Training Surgery"
+      },
+      {
+        label: "Training type",
+        url: "http://www.abc1234.com",
+        value: "Core Training"
+      },
+      {
+        label: "Professions",
+        url: "http://www.abc1234.com",
+        value: "Medical"
+      },
+      {
+        label: "Discipline",
+        url: "http://www.abc1234.com",
+        value: "Surgery"
+      },
+      {
+        label: "Recruitment format",
+        value: "Uncoupled"
+      },
+      {
+        label: "Duration",
+        value: "24 months"
+      },
+      {
+        label: "Competition ratio",
+        value: "2.56"
+      },
+      {
+        label: "Fill rate",
+        value: "100%"
+      },
+      {
+        label: "Opening",
+        value: "Thu 03/11/2022"
+      },
+      {
+        label: "Closing",
+        value: "Thu 01/12/2022"
+      }
+    ]
+  }) }}
+
   <h2>Overview</h2>
   <p>Lorem ipsum dolor sit amet consectetur. Cursus massa pulvinar vestibulum dui in dictum elementum lacinia. Sagittis nisl vitae egestas convallis placerat amet ultrices. </p>
   <p>Velit adipiscing diam augue facilisis bibendum id a elit. Libero ac malesuada urna sit tortor malesuada est. Sollicitudin dis a tempor urna. Sed aliquet orci enim blandit.</p>
@@ -94,7 +143,7 @@
   <h2 class="toc_h2">Regions</h2>
   <p>Pellentesque id posuere sapien vestibulum, quam pellentesque at libero. Aliquam at id fames hendrerit in vulputate orci aliquet augue. Massa penatibus sociis et nisl. Enim aliquam mauris suscipit turpis non hendrerit felis.</p>
   {{ navMap({
-    src: "/images/nav-maps/dental-regions.svg",
+    src: basePath + "/images/nav-maps/dental-regions.svg",
     caption: {
       items: [
         {
@@ -262,55 +311,6 @@
     ]
   })}}
 
-  {{ summaryCard({
-    title: "Programme summary",
-    items: [
-      {
-        label: "Training programme",
-        value: "Core Training Surgery"
-      },
-      {
-        label: "Training type",
-        url: "http://www.abc1234.com",
-        value: "Core Training"
-      },
-      {
-        label: "Professions",
-        url: "http://www.abc1234.com",
-        value: "Medical"
-      },
-      {
-        label: "Discipline",
-        url: "http://www.abc1234.com",
-        value: "Surgery"
-      },
-      {
-        label: "Recruitment format",
-        value: "Uncoupled"
-      },
-      {
-        label: "Duration",
-        value: "24 months"
-      },
-      {
-        label: "Competition ratio",
-        value: "2.56"
-      },
-      {
-        label: "Fill rate",
-        value: "100%"
-      },
-      {
-        label: "Opening",
-        value: "Thu 03/11/2022"
-      },
-      {
-        label: "Closing",
-        value: "Thu 01/12/2022"
-      }
-    ]
-  }) }}
-
   {{ ctaCard({
     title: "Apply for surgery on Oriel",
     text: "Visit Oriel",
@@ -437,6 +437,6 @@
 
   <div class="nhsuk-width-container">
     <h2>Related content</h2>
-    {{ featuredContent(items) }}
+    {{ featuredContent({items: items}) }}
   </div>
 {% endblock %}

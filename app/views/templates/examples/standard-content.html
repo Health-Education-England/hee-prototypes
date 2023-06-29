@@ -48,6 +48,80 @@
 
   <p>See also The British Library’s help about <a href="#">Library Privilege.</a></p>
 
+  {{ tableExpander({
+    showToggleLink: true,
+    toggleLabelOpen: "Expand all",
+    toggleLabelClose: "Close all",
+    items: [
+      {
+        title: "First item",
+        rows: [
+          {
+            heading: "Defence Medical Services (DMS)",
+            content: "1"
+          },
+          {
+            heading: "No of Posts 2013 - indicitive",
+            content: "7"
+          },
+          {
+            heading: "Competition ratios 2022 data - Ratio",
+            content: "6 (6:37)"
+          },
+          {
+            heading: "Job/Programme Descriptions",
+            content: "Kent, Surrey and Sussex",
+            href: "http://www.yahoo.com"
+          }
+        ]
+      },
+      {
+        title: "Second item",
+        rows: [
+          {
+            heading: "Defence Medical Services (DMS)",
+            content: "1"
+          },
+          {
+            heading: "No of Posts 2013 - indicitive",
+            content: "7"
+          },
+          {
+            heading: "Competition ratios 2022 data - Ratio",
+            content: "6 (6:37)"
+          },
+          {
+            heading: "Job/Programme Descriptions",
+            content: "Kent, Surrey and Sussex",
+            href: "http://www.yahoo.com"
+          }
+        ]
+      },
+      {
+        title: "Third item",
+        rows: [
+          {
+            heading: "Defence Medical Services (DMS)",
+            content: "1"
+          },
+          {
+            heading: "No of Posts 2013 - indicitive",
+            content: "7"
+          },
+          {
+            heading: "Competition ratios 2022 data - Ratio",
+            content: "6 (6:37)"
+          },
+          {
+            heading: "Job/Programme Descriptions",
+            content: "Kent, Surrey and Sussex",
+            href: "http://www.yahoo.com"
+          }
+        ]
+        }
+      ]
+  }) }}
+
   {{ image({
   "src": "https://assets.nhs.uk/prod/images/S_1017_allergic-conjunctivitis_M15.2e16d0ba.fill-320x213.jpg",
   "alt": "Picture of allergic conjunctivitis",
@@ -253,6 +327,6 @@
   <div class="nhsuk-width-container">
     <h2>Related content</h2>
     <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet. Nunc turpis vel aliquam lacus arcu. Sodales nullam id lectus orci quis sed. dsf</p>
-    {{ featuredContent(items) }}
+    {{ featuredContent({items: items}) }}
   </div>
 {% endblock %}
