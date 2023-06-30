@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Care Card - Templates - NWP Prototype Kit</title>
+  <title>Sticky Table of Contents - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -60,9 +60,9 @@
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks">Blocks</a></li>
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/content">Content</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/main-care-card">Care Card</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/footer-sticky-toc">Sticky Table of Contents</a></li>
         </ol>
-        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/main-care-card">Back to Care Card</a></p>
+        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/footer-sticky-toc">Back to Sticky Table of Contents</a></p>
       </div>
     </nav>
   </div>
@@ -125,127 +125,40 @@
         </div>
         <div class="page__main">
           <div class="page__header">
-            <span class="nhsuk-caption-xl">Main</span>
-            <h1>Care Card</h1>
+            <span class="nhsuk-caption-xl">Footer</span>
+            <h1>Sticky Table of Contents</h1>
             <p class="nhsuk-lede-text"></p>
           </div>
-          <p>Card used to describe care instructions to visitors. Comes in three variants:</p>
-          <ul>
-            <li><strong>non-urgent</strong></li>
-            <li><strong>urgent</strong></li>
-            <li><strong>immediate</strong></li>
-          </ul>
+          <p>TOC navigation fixed at the bottom of the browser viewport, generated from the TOC within the page right hand sidebar.</p>
+          <p>Requires that the <a href="/hee-prototypes/blocks/content/sidebar-anchor-links.html">TOC variant of the anchor links component</a> is placed in the right hand sidebar.</p>
+          <p>By design, the component will not display if the entire right hand sidebar TOC component is visible in the viewport.</p>
+          <p>It is recommended that this component is placed in the <strong>page__footer</strong> region.</p>
+          <p>A full working example can be found on the <a href="/hee-prototypes/templates/publications-item.html">Publication Item template.</a></p>
           <h3>Example</h3>
-          <div class="prototype__example block">
-            <a href="/hee-prototypes/blocks/content/examples/main-care-card.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
+          <div class="prototype__example scaled" style="height:294.11764705882354px;">
+            <a href="/hee-prototypes/blocks/content/examples/footer-sticky-toc.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
             <div class="thumbnail">
-              <iframe src="/hee-prototypes/blocks/content/examples/main-care-card.html" height="620"></iframe>
+              <iframe src="/hee-prototypes/blocks/content/examples/footer-sticky-toc.html" height="500"></iframe>
             </div>
           </div>
           <hr />
-          <h3>Macro - Non-urgent</h3>
-          <pre><code>
-  {{ careCard({
-    type: &quot;non-urgent&quot;,
-    heading: &quot;Speak to a GP if:&quot;,
-    HTML: &quot;
-            &lt;ul&gt;
-              &lt;li&gt;You&#39;re not sure it&#39;s chickenpox&lt;/li&gt;
-              &lt;li&gt;The skin around the blisters is red, hot or painful (signs of infection)&lt;/li&gt;
-              &lt;li&gt;Your child is &lt;a href=&quot;https://www.nhs.uk/conditions/dehydration&quot;&gt;dehydrated&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;You&#39;re concerned about your child or they get worse&lt;/li&gt;
-            &lt;/ul&gt;
-            &lt;p&gt;Tell the receptionist you think it&#39;s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.&lt;/p&gt;
-          &quot;
-  }) }}
-  </code></pre>
-          <hr />
-          <h3>HTML - Non-urgent</h3>
-          <pre><code>
-&lt;div class=&quot;nhsuk-care-card nhsuk-care-card--non-urgent&quot;&gt;
-    &lt;div class=&quot;nhsuk-care-card__heading-container&quot;&gt;
-      &lt;h3 class=&quot;nhsuk-care-card__heading&quot;&gt;&lt;span role=&quot;text&quot;&gt;&lt;span class=&quot;nhsuk-u-visually-hidden&quot;&gt;Non-urgent advice: &lt;/span&gt;Speak to a GP if:&lt;/span&gt;&lt;/h3&gt;
-      &lt;span class=&quot;nhsuk-care-card__arrow&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;nhsuk-care-card__content&quot;&gt;
-      &lt;ul&gt;
-        &lt;li&gt;You&#39;re not sure it&#39;s chickenpox&lt;/li&gt;
-        &lt;li&gt;The skin around the blisters is red, hot or painful (signs of infection)&lt;/li&gt;
-        &lt;li&gt;Your child is &lt;a href=&quot;https://www.nhs.uk/conditions/dehydration&quot;&gt;dehydrated&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;You&#39;re concerned about your child or they get worse&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;p&gt;Tell the receptionist you think it&#39;s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-  </code></pre>
-          <hr />
-          <h3>Macro - Urgent</h3>
-          <pre><code>{{ careCard({
-    type: &quot;Urgent&quot;,
-    heading: &quot;Speak to a GP if:&quot;,
-    HTML: &quot;
-            &lt;ul&gt;
-              &lt;li&gt;You&#39;re not sure it&#39;s chickenpox&lt;/li&gt;
-              &lt;li&gt;The skin around the blisters is red, hot or painful (signs of infection)&lt;/li&gt;
-              &lt;li&gt;Your child is &lt;a href=&quot;https://www.nhs.uk/conditions/dehydration&quot;&gt;dehydrated&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;You&#39;re concerned about your child or they get worse&lt;/li&gt;
-            &lt;/ul&gt;
-            &lt;p&gt;Tell the receptionist you think it&#39;s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.&lt;/p&gt;
-          &quot;
-}) }}
+          <h3>Macro</h3>
+          <pre><code>{{ anchorLinksSticky() }}
 </code></pre>
           <hr />
-          <h3>HTML - Urgent</h3>
+          <h3>HTML</h3>
           <pre><code>
-&lt;div class=&quot;nhsuk-care-card nhsuk-care-card--urgent&quot;&gt;
-    &lt;div class=&quot;nhsuk-care-card__heading-container&quot;&gt;
-      &lt;h3 class=&quot;nhsuk-care-card__heading&quot;&gt;&lt;span role=&quot;text&quot;&gt;&lt;span class=&quot;nhsuk-u-visually-hidden&quot;&gt;Non-urgent advice: &lt;/span&gt;Speak to a GP if:&lt;/span&gt;&lt;/h3&gt;
-      &lt;span class=&quot;nhsuk-care-card__arrow&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;nhsuk-care-card__content&quot;&gt;
-      &lt;ul&gt;
-        &lt;li&gt;You&#39;re not sure it&#39;s chickenpox&lt;/li&gt;
-        &lt;li&gt;The skin around the blisters is red, hot or painful (signs of infection)&lt;/li&gt;
-        &lt;li&gt;Your child is &lt;a href=&quot;https://www.nhs.uk/conditions/dehydration&quot;&gt;dehydrated&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;You&#39;re concerned about your child or they get worse&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;p&gt;Tell the receptionist you think it&#39;s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-          <hr />
-          <h3>Macro - Immediate</h3>
-          <pre><code>
-{{ careCard({
-    type: &quot;immediate&quot;,
-    heading: &quot;Speak to a GP if:&quot;,
-    HTML: &quot;
-            &lt;ul&gt;
-              &lt;li&gt;You&#39;re not sure it&#39;s chickenpox&lt;/li&gt;
-              &lt;li&gt;The skin around the blisters is red, hot or painful (signs of infection)&lt;/li&gt;
-              &lt;li&gt;Your child is &lt;a href=&quot;https://www.nhs.uk/conditions/dehydration&quot;&gt;dehydrated&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;You&#39;re concerned about your child or they get worse&lt;/li&gt;
-            &lt;/ul&gt;
-            &lt;p&gt;Tell the receptionist you think it&#39;s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.&lt;/p&gt;
-          &quot;
-}) }}
-</code></pre>
-          <hr />
-          <h3>HTML - Immediate</h3>
-          <pre><code>
-&lt;div class=&quot;nhsuk-care-card nhsuk-care-card--immediate&quot;&gt;
-    &lt;div class=&quot;nhsuk-care-card__heading-container&quot;&gt;
-      &lt;h3 class=&quot;nhsuk-care-card__heading&quot;&gt;&lt;span role=&quot;text&quot;&gt;&lt;span class=&quot;nhsuk-u-visually-hidden&quot;&gt;Non-urgent advice: &lt;/span&gt;Speak to a GP if:&lt;/span&gt;&lt;/h3&gt;
-      &lt;span class=&quot;nhsuk-care-card__arrow&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;nhsuk-care-card__content&quot;&gt;
-      &lt;ul&gt;
-        &lt;li&gt;You&#39;re not sure it&#39;s chickenpox&lt;/li&gt;
-        &lt;li&gt;The skin around the blisters is red, hot or painful (signs of infection)&lt;/li&gt;
-        &lt;li&gt;Your child is &lt;a href=&quot;https://www.nhs.uk/conditions/dehydration&quot;&gt;dehydrated&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;You&#39;re concerned about your child or they get worse&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;p&gt;Tell the receptionist you think it&#39;s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.&lt;/p&gt;
+&lt;div aria-expanded=&quot;false&quot; class=&quot;hee-anchorlinks__sticky&quot; id=&quot;hee-anchorlinks-sticky&quot;&gt;
+    &lt;div class=&quot;hee-anchorlinks__sticky__wrapper&quot;&gt;
+      &lt;button aria-haspopup=&quot;true&quot; aria-label=&quot;Open table of contents&quot; class=&quot;hee-anchorlinks__sticky__btn&quot; tabindex=&quot;1&quot;&gt;
+        &lt;span&gt;Table of Contents&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;div class=&quot;hee-anchorlinks__sticky__container&quot;&gt;
+        &lt;div class=&quot;hee-anchorlinks nhsuk-anchor-links&quot; data-toc-js=true data-headings=&quot;&quot;&gt;
+          &lt;h2 data-anchorlinksignore=&quot;true&quot;&gt;Table of Contents&lt;/h2&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;a aria-label=&quot;Back to top of page&quot; class=&quot;hee-anchorlinks__sticky__top-link&quot; href=&quot;#maincontent&quot; tabindex=&quot;2&quot;&gt;Back to top&lt;/a&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
