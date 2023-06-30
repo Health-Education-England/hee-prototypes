@@ -26,7 +26,7 @@
   <meta name="msapplication-square310x310logo" content="/hee-prototypes/favicons/largetile-310x310.png">
 </head>
 
-<body>
+<body class="">
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script>
@@ -298,35 +298,6 @@
           </div>
           <h2 class="toc_h2">Regions</h2>
           <p>Pellentesque id posuere sapien vestibulum, quam pellentesque at libero. Aliquam at id fames hendrerit in vulputate orci aliquet augue. Massa penatibus sociis et nisl. Enim aliquam mauris suscipit turpis non hendrerit felis.</p>
-          <figure class="nhsuk-map">
-            <figcaption class="nhsuk-map__caption">
-              <ul id="regionList">
-                <li>
-                  <a id="lk" href="#"> London and Kent, Surrey and Sussex (KSS) </a>
-                </li>
-                <li>
-                  <a id="me" href="#"> Midlands and the East </a>
-                </li>
-                <li>
-                  <a id="nenc" href="#"> North East and North Cumbria </a>
-                </li>
-                <li>
-                  <a id="nw" href="#"> North West </a>
-                </li>
-                <li>
-                  <a id="sw" href="#"> South West </a>
-                </li>
-                <li>
-                  <a id="tvw" href="#"> Thames Valley and Wessex </a>
-                </li>
-                <li>
-                  <a id="yh" href="#"> Yorkshire and the Humber </a>
-                </li>
-              </ul>
-            </figcaption>
-            <object class="nhsuk-map__image" data="/images/nav-maps/dental-regions.svg" type="image/svg+xml" tabindex="-1">
-            </object>
-          </figure>
         </div>
       </div>
       <aside class="page__rightbar">
@@ -407,6 +378,19 @@
       </aside>
     </div>
     <div class="page__footer">
+      <div aria-expanded="false" class="hee-anchorlinks__sticky" id="hee-anchorlinks-sticky">
+        <div class="hee-anchorlinks__sticky__wrapper">
+          <button aria-haspopup="true" aria-label="Open table of contents" class="hee-anchorlinks__sticky__btn" tabindex="1">
+            <span>Table of Contents</span>
+          </button>
+          <div class="hee-anchorlinks__sticky__container">
+            <div class="nhsuk-anchor-links hee-anchorlinks" data-toc-js=true data-headings="">
+              <h2 data-anchorlinksignore="true">Table of Contents</h2>
+            </div>
+          </div>
+          <a aria-label="Back to top of page" class="hee-anchorlinks__sticky__top-link" href="#maincontent" tabindex="2">Back to top</a>
+        </div>
+      </div>
     </div>
     <section class="page__feature">
     </section>

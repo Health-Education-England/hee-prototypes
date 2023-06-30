@@ -5,20 +5,20 @@
 
 {% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
 
-{% block pageBreadcrumbs %}
+{% block breadcrumbs %}
   {{
     breadcrumb({
       items: [
         {
-          href: "/",
+          href: basePath + "/",
           text: "Home"
         },
         {
-          href: "/templates",
+          href: basePath + "/templates",
           text: "Templates"
         }
       ],
-      href: "/templates/examples/"+page_url,
+      href: basePath + "/templates/examples/"+page_url,
       text: page_title
     })
   }}
@@ -73,7 +73,7 @@
           value: "24th June 2022"
         },
         {
-          value: "PDF, 16 MB, 92 pages"
+          value: "PDF, 16.9 MB, 92 pages"
         },
         {
           value: "20 min read"
@@ -115,7 +115,7 @@
           value: "24th June 2022"
         },
         {
-          value: "Open Document Format, 16 MB, 92 pages"
+          value: "Open Document Format, 16.9 MB, 92 pages"
         },
         {
           value: "20 min read"
@@ -163,7 +163,7 @@
           value: "24 lipca 2022 r."
         },
         {
-          value: "PDF, 16 MB, 92 strony"
+          value: "PDF, 16,9 MB, 92 strony"
         },
         {
           value: "20 minut czytania"
@@ -192,12 +192,8 @@
         value: "24 July 2022"
       },
       {
-        label: "Professions:",
-        value: "<a href=\"#\">Profession 1</a>, <a href=\"#\">Profession 2</a>"
-      },
-      {
-        label: "Topics:",
-        value: "<a href=\"#\">Topic 1</a>, <a href=\"#\">Topic 2</a>"
+        label: "Topic:",
+        value: "<a href=\"#\">Profession 1</a>, <a href=\"#\">Topic 1</a>"
       },
       {
         label: "Estimated reading time:",
@@ -258,9 +254,10 @@
   %}
 
   <div class="nhsuk-width-container">
-    <h2>Related publications</h2>
-    <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet. Nunc turpis vel aliquam lacus arcu. Sodales nullam id lectus orci quis sed. dsf</p>
-
-    {{ miniListing(items) }}
+    {{ featuredContent({
+      title: "Related publications",
+      summary: "Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet. Nunc turpis vel aliquam lacus arcu. Sodales nullam id lectus orci quis sed. dsf",
+      items: items
+    }) }}
   </div>
 {% endblock %}

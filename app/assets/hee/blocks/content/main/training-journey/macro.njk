@@ -1,0 +1,17 @@
+{% macro trainingJourney(params) %}
+  <div class="hee-training-journey">
+    <h3>{{ params.title }}</h3>
+    {% for group in params.groups %}
+      <div class="hee-training-journey__group {{ group.class }}">
+        <h4>{{ group.name }}</h4>
+        <div class="hee-training-journey__group__container">
+          {% for item in group.items %}
+            <div class="hee-training-journey__item {{ "first" if loop.first }} {{ "last" if loop.last }} {{ "active" if item.active === true }}">
+              <a class="hee-training-journey__item__link" href="{{ item.url }}">{{ item.label }}</a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endmacro %}
