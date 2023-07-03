@@ -40,5 +40,15 @@ function serve() {
   });
 }
 
+function playwrightReport() {
+  connect.server({
+    host: 'localhost',
+    livereload: true,
+    port: 8080,
+    root: 'tests/playwright/report'
+  });
+}
+
 exports.connect = connect
 exports.serve = serve
+exports.playwrightReport = playwrightReport
