@@ -5,3 +5,8 @@ services:
     volumes:
       - ./tests/backstop:/app/src/backstop
       - ./public:/app/src/public
+
+  playwright:
+    image: mcr.microsoft.com/playwright:v1.35.1-jammy
+    volumes:
+      - .:/app
