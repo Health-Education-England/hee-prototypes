@@ -12,7 +12,8 @@
     "backstop:ref": "docker-compose run backstopjs npm run backstop:ref",
     "backstop:test": "docker-compose run backstopjs npm run backstop:test",
     "backstop:approve": "docker-compose run backstopjs npm run backstop:approve",
-    "backstop:generate-config": "docker-compose run backstopjs npm run backstop:generate-config"
+    "backstop:generate-config": "docker-compose run backstopjs npm run backstop:generate-config",
+    "playwright:test": "docker-compose run playwright npx playwright test --config ./tests/playwright/config/playwright.config.js"
   },
   "author": "https://github.com/nhsuk/",
   "license": "MIT",

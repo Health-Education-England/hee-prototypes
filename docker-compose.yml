@@ -8,5 +8,6 @@ services:
 
   playwright:
     image: mcr.microsoft.com/playwright:v1.35.1-jammy
+    working_dir: /app
     volumes:
       - .:/app
