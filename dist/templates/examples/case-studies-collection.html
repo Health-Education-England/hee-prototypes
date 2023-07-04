@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Blog Collection - Examples - NWP Prototype Kit</title>
+  <title>Case Study Collection - Examples - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -145,9 +145,9 @@
       <div class="nhsuk-width-container">
         <ol class="nhsuk-breadcrumb__list">
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates/examples/news-collection">News Collection</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates/examples/case-studies-collection">Case Study Collection</a></li>
         </ol>
-        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/templates/examples/news-collection">Back to News Collection</a></p>
+        <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/templates/examples/case-studies-collection">Back to Case Study Collection</a></p>
       </div>
     </nav>
   </div>
@@ -156,7 +156,7 @@
   <main class="page page--leftbar" id="maincontent" role="main">
     <div class="page__header ">
       <div class="nhsuk-width-container">
-        <h1>Blog Collection</h1>
+        <h1>Case Study Collection</h1>
         <p class="nhsuk-lede-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum sit sed porta viverra. Amet, tincidunt cras augue justo, proin mollis sapien. Sed cursus quam suspendisse.</p>
       </div>
     </div>
@@ -172,20 +172,24 @@
                   <legend class="nhsuk-fieldset__legend"> Category </legend>
                   <div class="nhsuk-checkboxes">
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Category-1" name="filter" type="checkbox" value="item_one" checked>
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-1"> Learning and development </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_Category-1" name="filter" type="checkbox" value="all_staff">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-1"> All Staff </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Category-2" name="filter" type="checkbox" value="item_two" checked>
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-2"> School leavers </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_Category-2" name="filter" type="checkbox" value="additional_clinical_services" checked>
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-2"> Additional Clinical Services </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Category-3" name="filter" type="checkbox" value="graduates">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-3"> Graduates </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_Category-3" name="filter" type="checkbox" value="admin_clerical">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-3"> Admin and Clerical </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Category-4" name="filter" type="checkbox" value="blended">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-4"> Blended learning </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_Category-4" name="filter" type="checkbox" value="healthcare_scientists" checked>
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-4"> Healthcare Scientists </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="filter_Category-5" name="filter" type="checkbox" value="nursing_midwifery" checked>
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-5"> Nursing and Midwifery </label>
                     </div>
                   </div>
                 </fieldset>
@@ -207,164 +211,359 @@
                   <div class="nhsuk-form-group">
                     <label class="nhsuk-label" for="sort"> Sort by </label>
                     <select class="nhsuk-select" id="sort" name="sort">
+                      <option value="oldest">Oldest</option>
                       <option value="newest">Newest</option>
-                      <option value="relevance">Relevance</option>
+                      <option value="a-z">A to Z</option>
                     </select>
                   </div>
                   <button class="nhsuk-button hee-listing__filter__submit" type="submit"> Update </button>
                 </form>
               </div>
               <div class="hee-listing__tags">
-                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="learning-development">
-                  <span>Learning and development</span>
+                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="nursing_midwifery">
+                  <span>Nursing and Midwifery</span>
                   <img class="nhsuk-filter-tag__icon" src="/hee-prototypes/images/icons/close.svg" alt="Remove" hidden />
                 </div>
-                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="school-leavers">
-                  <span>School leavers</span>
+                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="healthcare_scientists">
+                  <span>Healthcare Scientists</span>
+                  <img class="nhsuk-filter-tag__icon" src="/hee-prototypes/images/icons/close.svg" alt="Remove" hidden />
+                </div>
+                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="additional_clinical_services">
+                  <span>Additional Clinical Services</span>
                   <img class="nhsuk-filter-tag__icon" src="/hee-prototypes/images/icons/close.svg" alt="Remove" hidden />
                 </div>
               </div>
             </div>
             <div class="hee-listing__results">
               <div class="hee-listing-item">
-                <h3><a href="#">Blog item #1</a></h3>
+                <h3><a href="#">Case study item #1</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Blog type:</span>
-                    <span>Briefing, Learning and development, School leavers and Graduates</span>
+                    <span class="hee-listing-item__details__label">Group impacted:</span>
+                    <span>Admin and Clerical</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Impact types:</span>
+                    <span> Contributed to personal or professional development, Productivity and efficiency, Saved money or contributed to financial effectiveness</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Document:</span>
+                    <span><a href="#">Get document</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Sector:</span>
+                    <span>Acute</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Region:</span>
+                    <span>South West</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Organisation:</span>
+                    <span>Oxford University Hospitals NHS Foundation Trust</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Date submitted:</span>
+                    <span>21 March 2023</span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
               <div class="hee-listing-item">
-                <h3><a href="#">Blog item #2</a></h3>
+                <h3><a href="#">Case study item #2</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Blog type:</span>
-                    <span>Briefing, Learning and development, School leavers and Graduates</span>
+                    <span class="hee-listing-item__details__label">Group impacted:</span>
+                    <span>Admin and Clerical</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Impact types:</span>
+                    <span> Contributed to personal or professional development, Productivity and efficiency, Saved money or contributed to financial effectiveness</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Document:</span>
+                    <span><a href="#">Get document</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Sector:</span>
+                    <span>Acute</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Region:</span>
+                    <span>South West</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Organisation:</span>
+                    <span>Oxford University Hospitals NHS Foundation Trust</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Date submitted:</span>
+                    <span>21 March 2023</span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
               <div class="hee-listing-item">
-                <h3><a href="#">Blog item #3</a></h3>
+                <h3><a href="#">Case study item #3</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Blog type:</span>
-                    <span>Briefing, Learning and development, School leavers and Graduates</span>
+                    <span class="hee-listing-item__details__label">Group impacted:</span>
+                    <span>Admin and Clerical</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Impact types:</span>
+                    <span> Contributed to personal or professional development, Productivity and efficiency, Saved money or contributed to financial effectiveness</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Document:</span>
+                    <span><a href="#">Get document</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Sector:</span>
+                    <span>Acute</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Region:</span>
+                    <span>South West</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Organisation:</span>
+                    <span>Oxford University Hospitals NHS Foundation Trust</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Date submitted:</span>
+                    <span>21 March 2023</span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
               <div class="hee-listing-item">
-                <h3><a href="#">Blog item #4</a></h3>
+                <h3><a href="#">Case study item #4</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Blog type:</span>
-                    <span>Briefing, Learning and development, School leavers and Graduates</span>
+                    <span class="hee-listing-item__details__label">Group impacted:</span>
+                    <span>Admin and Clerical</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Impact types:</span>
+                    <span> Contributed to personal or professional development, Productivity and efficiency, Saved money or contributed to financial effectiveness</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Document:</span>
+                    <span><a href="#">Get document</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Sector:</span>
+                    <span>Acute</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Region:</span>
+                    <span>South West</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Organisation:</span>
+                    <span>Oxford University Hospitals NHS Foundation Trust</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Date submitted:</span>
+                    <span>21 March 2023</span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
               <div class="hee-listing-item">
-                <h3><a href="#">Blog item #5</a></h3>
+                <h3><a href="#">Case study item #5</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Blog type:</span>
-                    <span>Briefing, Learning and development, School leavers and Graduates</span>
+                    <span class="hee-listing-item__details__label">Group impacted:</span>
+                    <span>Admin and Clerical</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Impact types:</span>
+                    <span> Contributed to personal or professional development, Productivity and efficiency, Saved money or contributed to financial effectiveness</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Document:</span>
+                    <span><a href="#">Get document</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Sector:</span>
+                    <span>Acute</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Region:</span>
+                    <span>South West</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Organisation:</span>
+                    <span>Oxford University Hospitals NHS Foundation Trust</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Date submitted:</span>
+                    <span>21 March 2023</span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
               <div class="hee-listing-item">
-                <h3><a href="#">Blog item #6</a></h3>
+                <h3><a href="#">Case study item #6</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Blog type:</span>
-                    <span>Briefing, Learning and development, School leavers and Graduates</span>
+                    <span class="hee-listing-item__details__label">Group impacted:</span>
+                    <span>Admin and Clerical</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Impact types:</span>
+                    <span> Contributed to personal or professional development, Productivity and efficiency, Saved money or contributed to financial effectiveness</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Document:</span>
+                    <span><a href="#">Get document</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Sector:</span>
+                    <span>Acute</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Region:</span>
+                    <span>South West</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Organisation:</span>
+                    <span>Oxford University Hospitals NHS Foundation Trust</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Date submitted:</span>
+                    <span>21 March 2023</span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
               <div class="hee-listing-item">
-                <h3><a href="#">Blog item #7</a></h3>
+                <h3><a href="#">Case study item #7</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Blog type:</span>
-                    <span>Briefing, Learning and development, School leavers and Graduates</span>
+                    <span class="hee-listing-item__details__label">Group impacted:</span>
+                    <span>Admin and Clerical</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Impact types:</span>
+                    <span> Contributed to personal or professional development, Productivity and efficiency, Saved money or contributed to financial effectiveness</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Document:</span>
+                    <span><a href="#">Get document</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Sector:</span>
+                    <span>Acute</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Region:</span>
+                    <span>South West</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Organisation:</span>
+                    <span>Oxford University Hospitals NHS Foundation Trust</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Date submitted:</span>
+                    <span>21 March 2023</span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
               <div class="hee-listing-item">
-                <h3><a href="#">Blog item #8</a></h3>
+                <h3><a href="#">Case study item #8</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Blog type:</span>
-                    <span>Briefing, Learning and development, School leavers and Graduates</span>
+                    <span class="hee-listing-item__details__label">Group impacted:</span>
+                    <span>Admin and Clerical</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Impact types:</span>
+                    <span> Contributed to personal or professional development, Productivity and efficiency, Saved money or contributed to financial effectiveness</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Document:</span>
+                    <span><a href="#">Get document</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Sector:</span>
+                    <span>Acute</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Region:</span>
+                    <span>South West</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Organisation:</span>
+                    <span>Oxford University Hospitals NHS Foundation Trust</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Date submitted:</span>
+                    <span>21 March 2023</span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
               <div class="hee-listing-item">
-                <h3><a href="#">Blog item #9</a></h3>
+                <h3><a href="#">Case study item #9</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Blog type:</span>
-                    <span>Briefing, Learning and development, School leavers and Graduates</span>
+                    <span class="hee-listing-item__details__label">Group impacted:</span>
+                    <span>Admin and Clerical</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Impact types:</span>
+                    <span> Contributed to personal or professional development, Productivity and efficiency, Saved money or contributed to financial effectiveness</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Document:</span>
+                    <span><a href="#">Get document</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Sector:</span>
+                    <span>Acute</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Region:</span>
+                    <span>South West</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Organisation:</span>
+                    <span>Oxford University Hospitals NHS Foundation Trust</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Date submitted:</span>
+                    <span>21 March 2023</span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
               <div class="hee-listing-item">
-                <h3><a href="#">Blog item #10</a></h3>
+                <h3><a href="#">Case study item #10</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Blog type:</span>
-                    <span>Briefing, Learning and development, School leavers and Graduates</span>
+                    <span class="hee-listing-item__details__label">Group impacted:</span>
+                    <span>Admin and Clerical</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Impact types:</span>
+                    <span> Contributed to personal or professional development, Productivity and efficiency, Saved money or contributed to financial effectiveness</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Document:</span>
+                    <span><a href="#">Get document</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Sector:</span>
+                    <span>Acute</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Region:</span>
+                    <span>South West</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Organisation:</span>
+                    <span>Oxford University Hospitals NHS Foundation Trust</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Date submitted:</span>
+                    <span>21 March 2023</span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
             </div>
             <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">

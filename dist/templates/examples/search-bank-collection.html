@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Blog Collection - Examples - NWP Prototype Kit</title>
+  <title>Search Bank Collection - Examples - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -156,7 +156,7 @@
   <main class="page page--leftbar" id="maincontent" role="main">
     <div class="page__header ">
       <div class="nhsuk-width-container">
-        <h1>Blog Collection</h1>
+        <h1>Search Bank Collection</h1>
         <p class="nhsuk-lede-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum sit sed porta viverra. Amet, tincidunt cras augue justo, proin mollis sapien. Sed cursus quam suspendisse.</p>
       </div>
     </div>
@@ -169,23 +169,27 @@
               <a class="nhsuk-filter__group__clear" href="#">Clear</a>
               <div class="nhsuk-form-group">
                 <fieldset class="nhsuk-fieldset">
-                  <legend class="nhsuk-fieldset__legend"> Category </legend>
+                  <legend class="nhsuk-fieldset__legend"> Topic </legend>
                   <div class="nhsuk-checkboxes">
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Category-1" name="filter" type="checkbox" value="item_one" checked>
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-1"> Learning and development </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_Topic-1" name="filter" type="checkbox" value="item_one" checked>
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Topic-1"> 3D printing </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Category-2" name="filter" type="checkbox" value="item_two" checked>
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-2"> School leavers </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_Topic-2" name="filter" type="checkbox" value="item_two" checked>
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Topic-2"> Abuse </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Category-3" name="filter" type="checkbox" value="graduates">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-3"> Graduates </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_Topic-3" name="filter" type="checkbox" value="item_three">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Topic-3"> Acute respiratory distress syndrome </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Category-4" name="filter" type="checkbox" value="blended">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-4"> Blended learning </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_Topic-4" name="filter" type="checkbox" value="four">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Topic-4"> Admission </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="filter_Topic-5" name="filter" type="checkbox" value="five">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Topic-5"> Adverse experience children </label>
                     </div>
                   </div>
                 </fieldset>
@@ -207,164 +211,315 @@
                   <div class="nhsuk-form-group">
                     <label class="nhsuk-label" for="sort"> Sort by </label>
                     <select class="nhsuk-select" id="sort" name="sort">
+                      <option value="oldest">Oldest</option>
                       <option value="newest">Newest</option>
-                      <option value="relevance">Relevance</option>
+                      <option value="a-z">A to Z</option>
                     </select>
                   </div>
                   <button class="nhsuk-button hee-listing__filter__submit" type="submit"> Update </button>
                 </form>
               </div>
               <div class="hee-listing__tags">
-                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="learning-development">
-                  <span>Learning and development</span>
+                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="item_one">
+                  <span>3D printing</span>
                   <img class="nhsuk-filter-tag__icon" src="/hee-prototypes/images/icons/close.svg" alt="Remove" hidden />
                 </div>
-                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="school-leavers">
-                  <span>School leavers</span>
+                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="item_two">
+                  <span>Abuse</span>
                   <img class="nhsuk-filter-tag__icon" src="/hee-prototypes/images/icons/close.svg" alt="Remove" hidden />
                 </div>
               </div>
             </div>
             <div class="hee-listing__results">
               <div class="hee-listing-item">
-                <h3><a href="#">Blog item #1</a></h3>
+                <h3><a href="#">Search bank #1</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Blog type:</span>
-                    <span>Briefing, Learning and development, School leavers and Graduates</span>
+                    <span class="hee-listing-item__details__label">Topics:</span>
+                    <span>Abuse, Admission, Adverse experience children</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Key Terms:</span>
+                    <span>Epidermolysis bullosa</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Strings / Strategies:</span>
+                    <span><a href="#">Get strategy</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Search:</span>
+                    <span><a href="#">Get search</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Completed on:</span>
+                    <span>12 October 2022</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Provider:</span>
+                    <span>Brighton and Sussex</span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
               <div class="hee-listing-item">
-                <h3><a href="#">Blog item #2</a></h3>
+                <h3><a href="#">Search bank #2</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Blog type:</span>
-                    <span>Briefing, Learning and development, School leavers and Graduates</span>
+                    <span class="hee-listing-item__details__label">Topics:</span>
+                    <span>Abuse, Admission, Adverse experience children</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Key Terms:</span>
+                    <span>Epidermolysis bullosa</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Strings / Strategies:</span>
+                    <span><a href="#">Get strategy</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Search:</span>
+                    <span><a href="#">Get search</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Completed on:</span>
+                    <span>12 October 2022</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Provider:</span>
+                    <span>Brighton and Sussex</span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
               <div class="hee-listing-item">
-                <h3><a href="#">Blog item #3</a></h3>
+                <h3><a href="#">Search bank #3</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Blog type:</span>
-                    <span>Briefing, Learning and development, School leavers and Graduates</span>
+                    <span class="hee-listing-item__details__label">Topics:</span>
+                    <span>Abuse, Admission, Adverse experience children</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Key Terms:</span>
+                    <span>Epidermolysis bullosa</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Strings / Strategies:</span>
+                    <span><a href="#">Get strategy</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Search:</span>
+                    <span><a href="#">Get search</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Completed on:</span>
+                    <span>12 October 2022</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Provider:</span>
+                    <span>Brighton and Sussex</span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
               <div class="hee-listing-item">
-                <h3><a href="#">Blog item #4</a></h3>
+                <h3><a href="#">Search bank #4</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Blog type:</span>
-                    <span>Briefing, Learning and development, School leavers and Graduates</span>
+                    <span class="hee-listing-item__details__label">Topics:</span>
+                    <span>Abuse, Admission, Adverse experience children</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Key Terms:</span>
+                    <span>Epidermolysis bullosa</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Strings / Strategies:</span>
+                    <span><a href="#">Get strategy</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Search:</span>
+                    <span><a href="#">Get search</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Completed on:</span>
+                    <span>12 October 2022</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Provider:</span>
+                    <span>Brighton and Sussex</span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
               <div class="hee-listing-item">
-                <h3><a href="#">Blog item #5</a></h3>
+                <h3><a href="#">Search bank #5</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Blog type:</span>
-                    <span>Briefing, Learning and development, School leavers and Graduates</span>
+                    <span class="hee-listing-item__details__label">Topics:</span>
+                    <span>Abuse, Admission, Adverse experience children</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Key Terms:</span>
+                    <span>Epidermolysis bullosa</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Strings / Strategies:</span>
+                    <span><a href="#">Get strategy</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Search:</span>
+                    <span><a href="#">Get search</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Completed on:</span>
+                    <span>12 October 2022</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Provider:</span>
+                    <span>Brighton and Sussex</span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
               <div class="hee-listing-item">
-                <h3><a href="#">Blog item #6</a></h3>
+                <h3><a href="#">Search bank #6</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Blog type:</span>
-                    <span>Briefing, Learning and development, School leavers and Graduates</span>
+                    <span class="hee-listing-item__details__label">Topics:</span>
+                    <span>Abuse, Admission, Adverse experience children</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Key Terms:</span>
+                    <span>Epidermolysis bullosa</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Strings / Strategies:</span>
+                    <span><a href="#">Get strategy</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Search:</span>
+                    <span><a href="#">Get search</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Completed on:</span>
+                    <span>12 October 2022</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Provider:</span>
+                    <span>Brighton and Sussex</span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
               <div class="hee-listing-item">
-                <h3><a href="#">Blog item #7</a></h3>
+                <h3><a href="#">Search bank #7</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Blog type:</span>
-                    <span>Briefing, Learning and development, School leavers and Graduates</span>
+                    <span class="hee-listing-item__details__label">Topics:</span>
+                    <span>Abuse, Admission, Adverse experience children</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Key Terms:</span>
+                    <span>Epidermolysis bullosa</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Strings / Strategies:</span>
+                    <span><a href="#">Get strategy</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Search:</span>
+                    <span><a href="#">Get search</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Completed on:</span>
+                    <span>12 October 2022</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Provider:</span>
+                    <span>Brighton and Sussex</span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
               <div class="hee-listing-item">
-                <h3><a href="#">Blog item #8</a></h3>
+                <h3><a href="#">Search bank #8</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Blog type:</span>
-                    <span>Briefing, Learning and development, School leavers and Graduates</span>
+                    <span class="hee-listing-item__details__label">Topics:</span>
+                    <span>Abuse, Admission, Adverse experience children</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Key Terms:</span>
+                    <span>Epidermolysis bullosa</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Strings / Strategies:</span>
+                    <span><a href="#">Get strategy</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Search:</span>
+                    <span><a href="#">Get search</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Completed on:</span>
+                    <span>12 October 2022</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Provider:</span>
+                    <span>Brighton and Sussex</span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
               <div class="hee-listing-item">
-                <h3><a href="#">Blog item #9</a></h3>
+                <h3><a href="#">Search bank #9</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Blog type:</span>
-                    <span>Briefing, Learning and development, School leavers and Graduates</span>
+                    <span class="hee-listing-item__details__label">Topics:</span>
+                    <span>Abuse, Admission, Adverse experience children</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Key Terms:</span>
+                    <span>Epidermolysis bullosa</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Strings / Strategies:</span>
+                    <span><a href="#">Get strategy</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Search:</span>
+                    <span><a href="#">Get search</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Completed on:</span>
+                    <span>12 October 2022</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Provider:</span>
+                    <span>Brighton and Sussex</span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
               <div class="hee-listing-item">
-                <h3><a href="#">Blog item #10</a></h3>
+                <h3><a href="#">Search bank #10</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Blog type:</span>
-                    <span>Briefing, Learning and development, School leavers and Graduates</span>
+                    <span class="hee-listing-item__details__label">Topics:</span>
+                    <span>Abuse, Admission, Adverse experience children</span>
                   </div>
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">Publish date:</span>
-                    <span>07 September 2022</span>
+                    <span class="hee-listing-item__details__label">Key Terms:</span>
+                    <span>Epidermolysis bullosa</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Strings / Strategies:</span>
+                    <span><a href="#">Get strategy</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Search:</span>
+                    <span><a href="#">Get search</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Completed on:</span>
+                    <span>12 October 2022</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Provider:</span>
+                    <span>Brighton and Sussex</span>
                   </div>
                 </div>
-                <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
             </div>
             <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
