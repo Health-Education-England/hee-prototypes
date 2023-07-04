@@ -36,6 +36,11 @@ test('Mobile menu: sub nav expand and collapse', async ({ page }) => {
   await expect(subNav).toHaveClass('nhsuk-header__navigation-item nhsuk-subnav is-active');
   await expect(subNavList).toBeVisible();
 
+  await subNavToggle.click();
+
+  await expect(navList).toHaveClass('nhsuk-header__navigation-list');
+  await expect(subNav).toHaveClass('nhsuk-header__navigation-item nhsuk-subnav');
+
 });
 
 test('Mobile menu: search input show and hide', async ({ page }) => {
