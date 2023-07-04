@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test('transcript expand and collapse', async ({ page }) => {
+test('Media transcript: expand and collapse', async ({ page }) => {
   await page.goto('/blocks/content/examples/main-media-embed.html');
 
   const transcriptAnchor = page.locator('.nhsuk-media .nhsuk-media__transcript a').first();
