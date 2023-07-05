@@ -164,7 +164,7 @@ jobs:
         run: npm run playwright:test
 
       # Upload html report as an asset
-      - name: Upload backstop report
+      - name: Upload playwright report
         uses: actions/upload-artifact@v3
         if: ${{ always() }}
         with:
