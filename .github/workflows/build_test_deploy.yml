@@ -150,6 +150,15 @@ jobs:
       - name: Pull playwright docker image
         run: docker-compose pull playwright
 
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install --no-optional
+
       # Run playwright tests.
       - name: Run playwright tests
         run: npm run playwright:test
