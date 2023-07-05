@@ -3,18 +3,18 @@
 {% block pageTitle %}News Collection - Examples - NWP Prototype Kit{% endblock %}
 
 {% block breadcrumbs %}
-{{ 
-    breadcrumb({
+  {{
+  breadcrumb({
     items: [
-        {
-            href: "/",
-            text: "Home"
-        }
+      {
+        href: basePath + "/",
+        text: "Home"
+      }
     ],
-        href: "/templates/examples/news-collection",
-        text: "News Collection"
-    }) 
-}}
+    href: basePath + "/templates/examples/news-collection",
+    text: "News Collection"
+  })
+  }}
 {% endblock %}
 
 {% block pageHeader %}
@@ -29,70 +29,100 @@
     groups: [
       {
         title: "Category",
+        showClearToggle: true,
         items: [
-        {
-          text: "Item one"
-        },
-        {
-          text: "Item two"
-        }
-      ]
-      },
-      {
-        title: "Organisation",
-        items: [
-        {
-          text: "Item one"
-        },
-        {
-          text: "Item two"
-        },
-        {
-          text: "Item three"
-        }
-      ]
+          {
+            text: "Board development",
+            value: "board",
+            checked: false
+          },
+          {
+            text: "Fellowships and scholarships",
+            value: "fellowships",
+            checked: false
+          },
+          {
+            text: "Graduates",
+            value: "graduates",
+            checked: true
+          },
+          {
+            text: "Learning and development",
+            value: "learning_dev",
+            checked: true
+          },
+          {
+            text: "School leavers",
+            value: "school_leavers",
+            checked: false
+          }
+        ]
       }
     ]
   }) }}
 {% endblock %}
 
 {% block pageContent %}
-  {{ listingLayout({
-      showPagination: true,
-      pageType: "bulletin",
-      items: [
+  {% set selectAttributes = {
+    id: "sort",
+    name: "sort",
+    label: {
+      text: "Sort by"
+    },
+    items: [
       {
-        title: "Item one",
-        summaryList: {
-          rows: [
-            {
-              key: {
-              text: "Category"
-            },
-              value: {
-              text: "Lorem ipsum dolor sit amet"
-            }
-            },
-            {
-              key: {
-              text: "Overview"
-            },
-              value: {
-              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt felis in felis pharetra, at fringilla neque auctor"
-            }
-            },
-            {
-              key: {
-              text: "Website"
-            },
-              value: {
-              html: "<a href=\"#\">Website title</a>"
-            }
-            }
-          ]
-        }
+        value: "newest",
+        text: "Newest"
+      },
+      {
+        value: "relevance",
+        text: "Relevance"
       }
-      ]
-    })
-  }}
+    ]
+  } %}
+
+  {% set submitAttributes = {
+    text: "Update",
+    classes: "hee-listing__filter__submit"
+  } %}
+
+  {% set items = [] %}
+  {% for i in range(0, 10) -%}
+    {% set item = {
+      title: "News item #" + loop.index,
+      href: "#",
+      details: [
+        {
+          label: "Category:",
+          value: "Graduates"
+        },
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+    } %}
+    {% set items = (items.push(item), items) %}
+  {% endfor %}
+
+  {{ listingLayout({
+    filter: {
+      select: selectAttributes,
+      submit: submitAttributes
+    },
+    tags: [
+      {
+        text: "Graduates",
+        value: "graduates"
+      },
+      {
+        text: "Learning and development",
+        value: "learning-development"
+      }
+    ],
+    results: items,
+    emptyMessage: "No results",
+    showPagination: true
+  }) }}
 {% endblock %}

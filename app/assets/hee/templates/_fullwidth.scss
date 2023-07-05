@@ -19,8 +19,8 @@
   }
 }
 
-.page--template-homepage {}
-.page--template-landinghub {}
-.page--template-404 {}
-.page--archive-az {}
-.page--archive-search {}
+.page--search {
+  .page__header {
+    @include nhsuk-responsive-padding(7, 'top')
+  }
+}
