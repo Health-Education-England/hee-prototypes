@@ -2227,13 +2227,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "addClass": () => (/* binding */ addClass),
-/* harmony export */   "getClasses": () => (/* binding */ getClasses),
-/* harmony export */   "hasClass": () => (/* binding */ hasClass),
-/* harmony export */   "removeClass": () => (/* binding */ removeClass),
-/* harmony export */   "toggleAttribute": () => (/* binding */ toggleAttribute),
-/* harmony export */   "toggleClass": () => (/* binding */ toggleClass),
-/* harmony export */   "toggleConditionalInput": () => (/* binding */ toggleConditionalInput)
+/* harmony export */   addClass: () => (/* binding */ addClass),
+/* harmony export */   getClasses: () => (/* binding */ getClasses),
+/* harmony export */   hasClass: () => (/* binding */ hasClass),
+/* harmony export */   removeClass: () => (/* binding */ removeClass),
+/* harmony export */   toggleAttribute: () => (/* binding */ toggleAttribute),
+/* harmony export */   toggleClass: () => (/* binding */ toggleClass),
+/* harmony export */   toggleConditionalInput: () => (/* binding */ toggleConditionalInput)
 /* harmony export */ });
 /**
  * Get an array of an HTML elements classes
