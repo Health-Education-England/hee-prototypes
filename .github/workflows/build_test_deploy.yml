@@ -103,7 +103,7 @@ jobs:
 
       # Docker image: ghcr.io/health-education-england/run-backstopjs-regression-tests:main
       - name: Pull HEE backstopjs docker image
-        run: docker-compose pull
+        run: docker-compose pull backstopjs
 
       # Run backstopjs tests.
       - name: Run backstopjs tests
@@ -148,7 +148,7 @@ jobs:
 
       # Docker image: mcr.microsoft.com/playwright:v1.35.1-jammy
       - name: Pull playwright docker image
-        run: docker-compose pull
+        run: docker-compose pull playwright
 
       # Run playwright tests.
       - name: Run playwright tests
