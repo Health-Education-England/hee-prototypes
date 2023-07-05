@@ -13,13 +13,16 @@
     "backstop:test": "docker-compose run backstopjs npm run backstop:test",
     "backstop:approve": "docker-compose run backstopjs npm run backstop:approve",
     "backstop:generate-config": "docker-compose run backstopjs npm run backstop:generate-config",
-    "playwright:test": "docker-compose run playwright npx playwright test --config ./tests/playwright/config/playwright.config.js"
+    "playwright:test": "docker-compose run playwright npx playwright test --config ./tests/playwright/config/playwright.config.js",
+    "playwright:test-trace": "docker-compose run playwright npx playwright test --config ./tests/playwright/config/playwright.config.js  --trace on",
+    "playwright:report": "gulp playwright-report"
   },
   "author": "https://github.com/nhsuk/",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
+    "@playwright/test": "^1.35.1",
     "babel-loader": "^8.2.5",
     "dotenv": "^6.0.0",
     "gulp": "^4.0.2",
@@ -41,6 +44,5 @@
     "sass": "^1.63.5",
     "webpack": "^5.87.0",
     "webpack-stream": "^7.0.0"
-  },
-  "dependencies": {}
+  }
 }
