@@ -9,7 +9,6 @@ services:
   playwright:
     image: mcr.microsoft.com/playwright:v1.35.1-jammy
     working_dir: /app
-    command: npx playwright show-report tests/playwright/report
     ports:
       - "3000:9323"
     volumes:
