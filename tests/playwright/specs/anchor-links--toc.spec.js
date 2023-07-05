@@ -3,7 +3,6 @@ import { test, expect } from "@playwright/test";
 test('Anchor links: TOC link navigation', async ({ page }) => {
   await page.goto('/blocks/content/examples/sidebar-anchor-links-toc.html');
 
-  //const anchorList = page.locator('.hee-anchorlinks ul');
   await expect(page.locator('.hee-anchorlinks')).toBeVisible();
 
   // H2: Overview.
