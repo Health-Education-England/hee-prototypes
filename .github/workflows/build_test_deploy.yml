@@ -176,7 +176,7 @@ jobs:
   deploy:
     if: github.ref == 'refs/heads/develop'
     name: Deploy
-    needs: bundle
+    needs: [bundle, test_backstopjs, test_playwright]
     runs-on: ubuntu-latest
 
     steps:
