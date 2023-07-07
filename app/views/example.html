@@ -149,31 +149,10 @@
     {% block headerEnd %}
     {% endblock %}
 
-    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-      <div class="nhsuk-width-container">
-        <ol class="nhsuk-breadcrumb__list">
-          <li class="nhsuk-breadcrumb__item">
-            <a class="nhsuk-breadcrumb__link" href="/">Home</a>
-          </li>
-          <li class="nhsuk-breadcrumb__item">
-            <a class="nhsuk-breadcrumb__link" href="/dental-trainee-recruitment">Dental trainee recruitment</a>
-          </li>
-          <li class="nhsuk-breadcrumb__item">
-            <a class="nhsuk-breadcrumb__link" href="/dental-trainee-recruitment/dental-specialty-training">Dental Specialty Training</a>
-          </li>
-          <li class="nhsuk-breadcrumb__item">
-            <a class="nhsuk-breadcrumb__link" href="/dental-trainee-recruitment/dental-specialty-training/oral-and-maxillofacial-pathology">Oral and Maxillofacial Pathology</a>
-          </li>
-          <li class="nhsuk-breadcrumb__item">
-            <a class="nhsuk-breadcrumb__link" href="/dental-trainee-recruitment/dental-specialty-training/oral-and-maxillofacial-pathology/overview-of-oral-and-maxillofacial-pathology">Overview of Oral and Maxillofacial Pathology</a>
-          </li>
-        </ol>
-
-        <p class="nhsuk-breadcrumb__back">
-          <a class="nhsuk-breadcrumb__backlink" href="/dental-trainee-recruitment/dental-specialty-training/oral-and-maxillofacial-pathology/overview-of-oral-and-maxillofacial-pathology">Back to Overview of Oral and Maxillofacial Pathology</a>
-        </p>
-      </div>
-    </nav>
+    <div class="breadcrumbs">
+      {% block breadcrumbs %}
+      {% endblock %}
+    </div>
 
     <div class="banners">
       {% block banners %}
@@ -189,7 +168,7 @@
 
     {% block scripts %}
       <script src="{{ basePath }}/js/jquery-3.3.1.min.js"></script>
-      <script src="{{ basePath }}/js/nhsuk.min.js"></script>
+      <script src="{{ basePath }}/js/nhsuk-7.0.0.min.js"></script>
       <script src="{{ basePath }}/js/hee.js"></script>
     {% endblock %}
     {% block bodyEnd %}
