@@ -1,0 +1,75 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'skip-link' %}
+{% set page_title = 'Skip Link' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block breadcrumbs %}
+  {{
+  breadcrumb({
+    items: [
+      {
+        href: basePath + "/",
+        text: "Home"
+      },
+      {
+        href: basePath + "/blocks",
+        text: "Blocks"
+      },
+      {
+        href: basePath + "/blocks/scaffolding",
+        text: "Scaffolding"
+      }
+    ],
+    href: basePath + "/blocks/scaffolding/"+page_url,
+    text: page_title
+  })
+  }}
+{% endblock %}
+
+{% block pageLeftbar %}
+  {{ subnav({
+    area: 'blocks',
+    subarea: 'scaffolding'
+  }) }}
+{% endblock %}
+
+{% block pageHeader %}
+  <span class="nhsuk-caption-xl">Scaffolding</span>
+  <h1>{{ page_title }}</h1>
+  <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+  <p>Hidden link used by screen readers allowing users to skip to main content. Should appear at the very top of the website and accessible by the tab key.</p>
+
+  <h2>Example</h2>
+  {{ example({
+    url: basePath + '/blocks/scaffolding/examples/' + page_url,
+    height: '400px'
+  }) }}
+
+  <hr />
+
+  <h2>Macro</h2>
+  {{ highlight({
+    html: '{{ skipLink({
+    href: "#maincontent",
+    text: "Skip to main content"
+}) }}
+'
+  }) }}
+
+  <hr />
+
+  <h3>HTML</h3>
+  {{ highlight({
+    html : '<a class="nhsuk-skip-link" href="#maincontent">Skip to main content</a>'
+  })
+  }}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

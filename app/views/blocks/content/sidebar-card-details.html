@@ -1,0 +1,111 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'sidebar-card-details' %}
+{% set page_title = 'Card--Details' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block breadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: basePath + "/",
+            text: "Home"
+        },
+        {
+            href: basePath + "/blocks",
+            text: "Blocks"
+        },
+        {
+            href: basePath + "/blocks/content",
+            text: "Content"
+        }
+    ],
+        href: basePath + "/blocks/"+page_url,
+      text: page_title
+    }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'blocks',
+    subarea: 'content'
+}) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Main</span>
+    <h1>{{ page_title }}</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+<p>Card displaying a title and a list of labels and values on each new line.</p>
+
+<h3>Example</h3>
+{{ example({
+    view: 'block',
+    url: basePath + '/blocks/content/examples/' + page_url,
+    height: '380'
+}) }}
+
+<hr />
+
+<h3>Macro</h3>
+{{ highlight({
+  html: '
+{{ detailsCard({
+    title: "Publication Info",
+    items: [
+      {
+        label: "Published:",
+        value: "24 June 2022"
+      },
+      {
+        label: "Updated:",
+        value: "24 July 2022"
+      },
+      {
+        label: "Topic:",
+        value: "<a href=\"#\">Profession 1</a>, <a href=\"#\">Topic 1</a>"
+      },
+      {
+        label: "Estimated reading time:",
+        value: "2 mins"
+      }
+    ]
+}) }}
+  '
+}) }}
+
+<hr />
+
+<h3>HTML</h3>
+{{ highlight({
+  html : '
+<div class="hee-card hee-card--details">
+    <h3>Publication Info</h3>
+    <div class="hee-card--details__item">
+      <span>Published:</span> 24 June 2022
+    </div>
+    <div class="hee-card--details__item">
+      <span>Updated:</span> 24 July 2022
+    </div>
+    <div class="hee-card--details__item">
+      <span>Topic:</span>
+      <a href="#">Profession 1</a>, <a href="#">Topic 1</a>
+    </div>
+    <div class="hee-card--details__item">
+      <span>Estimated reading time:</span> 2 mins
+    </div>
+</div>
+  '
+  }) 
+}}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

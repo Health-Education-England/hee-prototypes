@@ -1,0 +1,45 @@
+{% extends "example-blocks.html" %}
+
+{% block main %}
+  {{ careCard({
+    type: "non-urgent",
+    heading: "Speak to a GP if:",
+    HTML: "
+            <ul>
+              <li>You're not sure it's chickenpox</li>
+              <li>The skin around the blisters is red, hot or painful (signs of infection)</li>
+              <li>Your child is <a href=\"https://www.nhs.uk/conditions/dehydration\">dehydrated</a></li>
+              <li>You're concerned about your child or they get worse</li>
+            </ul>
+            <p>Tell the receptionist you think it's chickenpox before going in. They may recommend a special appointment time if other patients are at risk.</p>
+          "
+  }) }}
+
+  {{ careCard({
+    type: "urgent",
+    heading: "Speak to a GP if:",
+    HTML: "
+            <ul>
+              <li>You're not sure it's chickenpox</li>
+              <li>The skin around the blisters is red, hot or painful (signs of infection)</li>
+              <li>Your child is <a href=\"https://www.nhs.uk/conditions/dehydration\">dehydrated</a></li>
+              <li>You're concerned about your child or they get worse</li>
+            </ul>
+            <p>Tell the receptionist you think it's chickenpox before going in. They may recommend a special appointment time if other patients are at risk.</p>
+          "
+  }) }}
+
+  {{ careCard({
+    type: "immediate",
+    heading: "Speak to a GP if:",
+    HTML: "
+            <ul>
+              <li>You're not sure it's chickenpox</li>
+              <li>The skin around the blisters is red, hot or painful (signs of infection)</li>
+              <li>Your child is <a href=\"https://www.nhs.uk/conditions/dehydration\">dehydrated</a></li>
+              <li>You're concerned about your child or they get worse</li>
+            </ul>
+            <p>Tell the receptionist you think it's chickenpox before going in. They may recommend a special appointment time if other patients are at risk.</p>
+          "
+  }) }}
+{% endblock %}

@@ -1,0 +1,123 @@
+{% extends "example-template-leftbar.html" %}
+
+{% block pageTitle %}Blog Collection - Examples - NWP Prototype Kit{% endblock %}
+
+{% block breadcrumbs %}
+  {{
+  breadcrumb({
+    items: [
+      {
+        href: "/",
+        text: "Home"
+      }
+    ],
+    href: "/templates/examples/news-collection",
+    text: "News Collection"
+  })
+  }}
+{% endblock %}
+
+{% block pageHeader %}
+  <div class="nhsuk-width-container">
+    <h1>Blog Collection</h1>
+    <p class="nhsuk-lede-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum sit sed porta viverra. Amet, tincidunt cras augue justo, proin mollis sapien. Sed cursus quam suspendisse.</p>
+  </div>
+{% endblock %}
+
+{% block pageLeftbar %}
+  {{ filter({
+    groups: [
+      {
+        title: "Category",
+        showClearToggle: true,
+        items: [
+        {
+          text: "Learning and development",
+          value: "item_one",
+          checked: true
+        },
+        {
+          text: "School leavers",
+          value: "item_two",
+          checked: true
+        },
+        {
+          text: "Graduates",
+          value: "graduates",
+          checked: false
+        },
+        {
+          text: "Blended learning",
+          value: "blended",
+          checked: false
+        }
+      ]
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block pageContent %}
+  {% set selectAttributes = {
+    id: "sort",
+    name: "sort",
+    label: {
+      text: "Sort by"
+    },
+    items: [
+      {
+        value: "newest",
+        text: "Newest"
+      },
+      {
+        value: "relevance",
+        text: "Relevance"
+      }
+    ]
+  } %}
+
+  {% set submitAttributes = {
+    text: "Update",
+    classes: "hee-listing__filter__submit"
+  } %}
+
+  {% set items = [] %}
+  {% for i in range(0, 10) -%}
+    {% set item = {
+      title: "Blog item #" + loop.index,
+      href: "#",
+      details: [
+        {
+          label: "Blog type:",
+          value: "Briefing, Learning and development, School leavers and Graduates"
+        },
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+    } %}
+    {% set items = (items.push(item), items) %}
+  {% endfor %}
+
+  {{ listingLayout({
+    filter: {
+      select: selectAttributes,
+      submit: submitAttributes
+    },
+    tags: [
+      {
+        text: "Learning and development",
+        value: "learning-development"
+      },
+      {
+        text: "School leavers",
+        value: "school-leavers"
+      }
+    ],
+    results: items,
+    emptyMessage: "No results",
+    showPagination: true
+  }) }}
+{% endblock %}

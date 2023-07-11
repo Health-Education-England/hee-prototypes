@@ -1,0 +1,56 @@
+{
+  "id": "blocks",
+  "pathPattern": "/app/src/public/blocks/**/examples/*.html",
+  "overrides": [
+    {
+      "label": "blocks-header-navigation-desktop-submenu-click",
+      "clickSelectors": [
+        "li.nhsuk-subnav"
+      ],
+      "url": "http://127.0.0.1:8080/blocks/scaffolding/examples/header-navigation.html",
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1280,
+          "height": 720
+        }
+      ]
+    },
+    {
+      "label": "blocks-header-navigation-mobile-tablet-submenu-click",
+      "clickSelectors": [
+        "button.nhsuk-header__menu-toggle",
+        "li.nhsuk-subnav"
+      ],
+      "url": "http://127.0.0.1:8080/blocks/scaffolding/examples/header-navigation.html",
+      "viewports": [
+        {
+          "label": "tablet",
+          "width": 768,
+          "height": 1024
+        },
+        {
+          "label": "mobile",
+          "width": 375,
+          "height": 667
+        }
+      ]
+    },
+    {
+      "label": "blocks-main-google-map",
+      "delay": 5000,
+      "misMatchThreshold": 5.0
+    },
+    {
+      "label": "blocks-main-table-expander-open",
+      "clickSelectors": [
+        ".hee-table-expander__toggle a"
+      ],
+      "url": "http://127.0.0.1:8080/blocks/content/examples/main-table-expander.html"
+    },
+    {
+      "label": "blocks-skip-link",
+      "focusSelector": ".nhsuk-skip-link"
+    }
+  ]
+}

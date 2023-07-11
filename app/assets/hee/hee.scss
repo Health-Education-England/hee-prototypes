@@ -43,7 +43,6 @@
 @import '../components/relatedcards';
 @import '../components/contact';
 @import '../components/sectionbreak';
-@import '../components/related-links-card';
 @import '../components/hee/hee-microhero/microhero';
 @import '../components/hee/hee-timeline/timeline';
 @import '../components/timeline';
@@ -75,6 +74,14 @@
 @import '../hee/blocks/furniture/collections/hee-listing-item/listing-item';
 @import '../hee/blocks/furniture/collections/hee-filter/filter';
 @import '../hee/blocks/furniture/collections/hee-filtertag/filtertag';
+@import 'blocks/furniture/collections/hee-listing/listing';
+@import 'blocks/furniture/collections/hee-listing-item/listing-item';
+@import 'blocks/furniture/collections/hee-filter/filter';
+@import 'blocks/furniture/collections/hee-filtertag/filtertag';
+// -- Search
+@import 'blocks/furniture/search/form/search-form';
+@import 'blocks/furniture/search/listing/search-listing';
+@import 'blocks/furniture/search/listing-item/search-listing-item';
 
 ///// CONTENT
 @import 'blocks/content/hee-card';
@@ -92,7 +99,6 @@
 @import 'blocks/content/main/card--author/author';
 @import 'blocks/content/main/table-expander/table';
 @import 'blocks/content/main/quote/quote';
-@import 'blocks/content/main/card--summary/summary';
 //@import '../hee/blocks/content/sidebar/card--department/department';
 //@import '../hee/blocks/content/sidebar/card--contact/contact';
 

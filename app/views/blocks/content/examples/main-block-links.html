@@ -1,0 +1,51 @@
+{% extends "example-blocks.html" %}
+
+{% block main %}
+  {{ blocklinks({
+    heading: "Learning 2 Columns",
+    HTML: "<p>Discover resources and information designed to support you on your learning journey</p>",
+    columns: "2",
+    links: [
+      {
+        url: "/listing",
+        label: "Learning Zone"
+      },
+      {
+        url: "/listing",
+        label: "Equality, Diversity and Inclusion"
+      },
+      {
+        url: "/listing",
+        label: "Talent Management Toolkit"
+      },
+      {
+        url: "/listing",
+        label: "Case studies"
+      }]
+    })
+  }}
+
+  {{ blocklinks({
+    heading: "Learning 1 Columns",
+    HTML: "<p>Discover resources and information designed to support you on your learning journey</p>",
+    columns: "1",
+    links: [
+      {
+        url: "/listing",
+        label: "Learning Zone"
+      },
+      {
+        url: "/listing",
+        label: "Equality, Diversity and Inclusion"
+      },
+      {
+        url: "/listing",
+        label: "Talent Management Toolkit"
+      },
+      {
+        url: "/listing",
+        label: "Case studies"
+      }]
+  })
+  }}
+{% endblock %}

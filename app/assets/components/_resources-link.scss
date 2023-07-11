@@ -1,5 +1,6 @@
 /* NHSUK-Resources__link - old */
 .nhsuk-resources__link {
+    @include nhsuk-typography-responsive(16);
 
     .nhsuk-resources__tag,
     .nhsuk-resources__docSize {
