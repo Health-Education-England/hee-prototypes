@@ -10,8 +10,7 @@ import Listing from './blocks/furniture/collections/hee-listing/listing';
 import Media from './blocks/content/main/hee-media/media';
 import NavMap from './blocks/content/main/hee-navmap/navmap';
 import Newsletter from '../components/hee/hee-newsletter/newsletter';
-//import DetailsCard from '../components/hee/hee-detailscard/detailscard';
-import Tabs from '../components/hee/hee-tabs/tabs';
+import Tabs from './blocks/content/main/hee-tabs/tabs';
 import TableCard from './blocks/content/main/table-expander/table-expander';
 //import Timeline from '../components/hee/hee-timeline/timeline';
 
