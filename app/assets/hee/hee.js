@@ -7,7 +7,7 @@ import AnchorLinks from './blocks/content/sidebar/anchorlinks/anchorlinks';
 import AnchorLinksSticky from './blocks/content/footer/anchorlinks-sticky/anchorlinks-sticky';
 import TableContents from './blocks/content/sidebar/anchorlinks/toc';
 import Listing from './blocks/furniture/collections/hee-listing/listing';
-import Media from '../components/hee/hee-media/media';
+import Media from './blocks/content/main/hee-media/media';
 import NavMap from '../components/hee/hee-navmap/navmap';
 import Newsletter from '../components/hee/hee-newsletter/newsletter';
 //import DetailsCard from '../components/hee/hee-detailscard/detailscard';

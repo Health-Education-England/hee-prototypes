@@ -1,16 +1,16 @@
 {% macro media(params) %}
-  <div class="nhsuk-media">
+  <div class="hee-media">
     {% if params.title %}
       <h2>{{ params.title }}</h2>
     {% endif %}
 
     {% if params.description %}
-      <div class="nhsuk-media__description">
+      <div class="hee-media__description">
         <p>{{ params.description }}</p>
       </div>
     {% endif %}
 
-    <div class="nhsuk-media__container {{ params.type }}">
+    <div class="hee-media__container {{ params.type }}">
       {% if params.type === "youtube" or params.type === "vimeo" %}
       <iframe
         {% if params.type === "youtube" %}
@@ -32,16 +32,16 @@
       {% endif %}
     </div>
 
-    <div class="nhsuk-media__info">
+    <div class="hee-media__info">
 
       {% if params.transcript|length %}
-        <div class="nhsuk-media__transcript">
+        <div class="hee-media__transcript">
           <a href="javascript:void(0);">
-            <span class="nhsuk-media__show-text">Show transcript</span>
-            <span class="nhsuk-media__hide-text">Hide transcript</span>
+            <span class="hee-media__show-text">Show transcript</span>
+            <span class="hee-media__hide-text">Hide transcript</span>
           </a>
 
-          <div class="nhsuk-media__transcript-text">
+          <div class="hee-media__transcript-text">
             {% for line in params.transcript %}
               <p>{{ line | safe }}</p>
             {% endfor %}
@@ -49,7 +49,7 @@
         </div>
       {% endif %}
 
-      <div class="nhsuk-media__reviews">
+      <div class="hee-media__reviews">
         {% if params.lastReview|length %}
           <p>
             Media last reviewed: {{ params.lastReview }}
