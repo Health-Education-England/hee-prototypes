@@ -14,7 +14,6 @@ import Newsletter from '../components/hee/hee-newsletter/newsletter';
 import SummaryCard from "./blocks/content/main/card--summary/summary";
 import Tabs from './blocks/content/main/hee-tabs/tabs';
 import TableCard from './blocks/content/main/table-expander/table-expander';
-//import Timeline from '../components/hee/hee-timeline/timeline';
 
 // Unsorted components
 import Filter from './blocks/furniture/collections/hee-filter/filter';
