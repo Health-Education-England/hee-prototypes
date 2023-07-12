@@ -7,7 +7,7 @@ import AnchorLinks from './blocks/content/sidebar/anchorlinks/anchorlinks';
 import TableContents from './blocks/content/sidebar/anchorlinks/toc';
 import AnchorLinksSticky from './blocks/content/footer/anchorlinks-sticky/anchorlinks-sticky';
 import Listing from './blocks/furniture/collections/hee-listing/listing';
-import Media from '../components/hee/hee-media/media';
+import Media from './blocks/content/main/hee-media/media';
 import MegaMenu from './blocks/scaffolding/mega-menu/mega-menu';
 import NavMap from '../components/hee/hee-navmap/navmap';
 import Newsletter from '../components/hee/hee-newsletter/newsletter';
