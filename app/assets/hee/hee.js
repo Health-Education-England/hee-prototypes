@@ -9,7 +9,7 @@ import AnchorLinksSticky from './blocks/content/footer/anchorlinks-sticky/anchor
 import Listing from './blocks/furniture/collections/hee-listing/listing';
 import Media from './blocks/content/main/hee-media/media';
 import MegaMenu from './blocks/scaffolding/mega-menu/mega-menu';
-import NavMap from '../components/hee/hee-navmap/navmap';
+import NavMap from './blocks/content/main/hee-navmap/navmap';
 import Newsletter from '../components/hee/hee-newsletter/newsletter';
 import SummaryCard from "./blocks/content/main/card--summary/summary";
 import Tabs from '../components/hee/hee-tabs/tabs';
