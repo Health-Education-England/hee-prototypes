@@ -9,7 +9,7 @@ import TableContents from './blocks/content/sidebar/anchorlinks/toc';
 import Listing from './blocks/furniture/collections/hee-listing/listing';
 import Media from './blocks/content/main/hee-media/media';
 import NavMap from './blocks/content/main/hee-navmap/navmap';
-import Newsletter from '../components/hee/hee-newsletter/newsletter';
+import Newsletter from './blocks/content/main/hee-newsletter/newsletter';
 import Tabs from './blocks/content/main/hee-tabs/tabs';
 import TableCard from './blocks/content/main/table-expander/table-expander';
 
