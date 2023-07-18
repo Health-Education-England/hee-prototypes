@@ -40,5 +40,6 @@
       "height": 667
     }
   ],
+  "misMatchThreshold": 0.001,
   "scenarios": []
 }

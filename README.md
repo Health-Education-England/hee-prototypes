@@ -18,11 +18,11 @@ The generated assets are located within the `dist` folder, with the relevant fil
 
 **CSS**:
 * `\dist\css\hee.min.css`
-* `\dist\css\nhsuk-4.1.0.min.css`
+* `\dist\css\nhsuk-7.0.0.min.css`
 
 **Javascript**:
 - `\dist\js\hee.min.js`
-- `\dist\js\nhsuk.min.js`
+- `\dist\js\nhsuk-7.0.0.min.js`
 
 ## Contribute
 

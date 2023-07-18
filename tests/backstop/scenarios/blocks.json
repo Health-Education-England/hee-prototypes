@@ -51,6 +51,12 @@
     {
       "label": "blocks-skip-link",
       "focusSelector": ".nhsuk-skip-link"
+    },
+    {
+      "label": "blocks-main-media-embed",
+      "hideSelectors": [
+        ".nhsuk-media__container iframe"
+      ]
     }
   ]
 }
