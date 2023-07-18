@@ -24,7 +24,7 @@ export default () => {
         checkbox.dispatchEvent(new Event('change'));
       });
 
-      evt.target.remove();
+      this.tag.remove();
     }
 
     setUp() {
