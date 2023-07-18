@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="ie8" lang="en"><![endif]--><!--[if IE 9]><html class="ie9" lang="en"><![endif]--><!--[if gt IE 9]><!-->
+<html lang="en" style=""><!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title>Search Bank Collection - Examples - NWP Prototype Kit</title>
+  <link href="https://www.nhs.uk/" rel="preconnect">
+  <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
+  <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
+  <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
+  <link href="/hee-prototypes/css/nhsuk-7.0.0.min.css" rel="stylesheet" />
+  <link href="/hee-prototypes/css/hee.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="/hee-prototypes/favicons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/hee-prototypes/favicons/apple-touch-icon-180x180.png">
+  <link rel="mask-icon" href="/hee-prototypes/favicons/favicon.svg" color="#005eb8">
+  <link rel="icon" sizes="192x192" href="/hee-prototypes/favicons/favicon-192x192.png">
+  <meta name="msapplication-TileImage" content="/hee-prototypes/favicons/mediumtile-144x144.png">
+  <meta name="msapplication-TileColor" content="#005eb8">
+  <meta name="msapplication-square70x70logo" content="/hee-prototypes/favicons/smalltile-70x70.png">
+  <meta name="msapplication-square150x150logo" content="/hee-prototypes/favicons/mediumtile-150x150.png">
+  <meta name="msapplication-wide310x150logo" content="/hee-prototypes/favicons/widetile-310x150.png">
+  <meta name="msapplication-square310x310logo" content="/hee-prototypes/favicons/largetile-310x310.png">
+</head>
+
+<body>
+  <script>
+    document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+  </script>
+  <a class="nhsuk-skip-link" href="#maincontent">Skip to main content</a>
+  <div class="site-header">
+    <header class="nhsuk-header nhsuk-header--organisation nhsuk-header--white" role="banner">
+      <div class="nhsuk-width-container nhsuk-header__container">
+        <div class="nhsuk-header__multilogo">
+          <span class="nhsuk-header__logo nhsuk-header__logo-home">
+            <a class="nhsuk-header__link" href="http://hee.nhs.uk/" aria-label="Health Education England homepage">
+              <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="presentation" focusable="false" viewBox="0 0 40 16">
+                <path class="nhsuk-logo__background" d="M0 0h40v16H0z"></path>
+                <path class="nhsuk-logo__text" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+                <image src="https://assets.nhs.uk/images/nhs-logo.png" xlink:href=""></image>
+              </svg>
+              <span class="nhsuk-organisation-name">Health Education England</span>
+            </a>
+            <a class="nhsuk-header__link" href="/" aria-label="Dental Education Hub homepage">
+              <span class="nhsuk-organisation-descriptor">Dental Education Hub</span>
+            </a>
+          </span>
+        </div>
+        <div class="nhsuk-header__content" id="content-header">
+          <div class="nhsuk-header__menu">
+            <button class="nhsuk-header__menu-toggle" id="toggle-menu" aria-controls="header-navigation" aria-label="Open menu">Menu</button>
+          </div>
+          <div class="nhsuk-header__search">
+            <button class="nhsuk-header__search-toggle" id="toggle-search" aria-controls="search" aria-label="Open search">
+              <svg class="nhsuk-icon nhsuk-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+              </svg>
+              <span class="nhsuk-u-visually-hidden">Search</span>
+            </button>
+            <div class="nhsuk-header__search-wrap" id="wrap-search">
+              <form class="nhsuk-header__search-form" id="search" action="https://www.nhs.uk/search/" method="get" role="search">
+                <label class="nhsuk-u-visually-hidden" for="search-field">Search the NHS website</label>
+                <div class="autocomplete-container" id="autocomplete-container">
+                  <div class="autocomplete__wrapper">
+                    <input class="nhsuk-search__input" id="search-field" name="q" type="search" placeholder="Search" autocomplete="off">
+                  </div>
+                </div>
+                <button class="nhsuk-search__submit" type="submit">
+                  <svg class="nhsuk-icon nhsuk-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+                  </svg>
+                  <span class="nhsuk-u-visually-hidden">Search</span>
+                </button>
+                <button class="nhsuk-search__close" id="close-search">
+                  <svg class="nhsuk-icon nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
+                  </svg>
+                  <span class="nhsuk-u-visually-hidden">Close search</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="nhsuk-header__navigation nhsuk-header__navigation--more-items" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
+        <div class="nhsuk-width-container">
+          <p class="nhsuk-header__navigation-title"><span id="label-navigation">Menu</span>
+            <button class="nhsuk-header__navigation-close" id="close-menu">
+              <svg class="nhsuk-icon nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
+              </svg>
+              <span class="nhsuk-u-visually-hidden">Close menu</span>
+            </button>
+          </p>
+          <ul class="nhsuk-header__navigation-list">
+            <li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--for-mobile">
+              <a class="nhsuk-header__navigation-link" href="/"> Home </a>
+            </li>
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link" href="/hee-prototypes/templates"> Templates </a>
+            </li>
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link" href="/hee-prototypes/templates"> Templates longer name </a>
+            </li>
+            <li class="nhsuk-header__navigation-item nhsuk-subnav" aria-haspopup="true" aria-expanded="false">
+              <a class="nhsuk-header__navigation-link" href="#">
+                <div class="nhsuk-subnav__wrapper">
+                  <span class="nhsuk-header__link-text">Components</span>
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+                  </svg>
+                </div>
+              </a>
+              <ul class="nhsuk-subnav__list">
+                <li class="nhsuk-subnav__list-item">
+                  <a class="nhsuk-subnav__list-link" href="/hee-prototypes/components"> Components </a>
+                </li>
+                <li class="nhsuk-subnav__list-item">
+                  <a class="nhsuk-subnav__list-link" href="/hee-prototypes/scaffolding"> Scaffolding </a>
+                </li>
+                <li class="nhsuk-subnav__list-item">
+                  <a class="nhsuk-subnav__list-link" href="/hee-prototypes/components/furniture"> Furniture </a>
+                </li>
+                <li class="nhsuk-subnav__list-item">
+                  <a class="nhsuk-subnav__list-link" href="/hee-prototypes/components/contentblocks"> Content Blocks </a>
+                </li>
+                <li class="nhsuk-subnav__list-item">
+                  <a class="nhsuk-subnav__list-link" href="/hee-prototypes/components/rightblocks"> Right Blocks </a>
+                </li>
+                <li class="nhsuk-subnav__list-item">
+                  <a class="nhsuk-subnav__list-link" href="/hee-prototypes/components/featureblocks"> Feature Blocks </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  </div>
+  <div class="breadcrumbs">
+    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+      <div class="nhsuk-width-container">
+        <ol class="nhsuk-breadcrumb__list">
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates/examples/news-collection">News Collection</a></li>
+        </ol>
+        <p class="nhsuk-breadcrumb__back">
+          <a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/templates/examples/news-collection">
+            <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span> News Collection </a>
+        </p>
+      </div>
+    </nav>
+  </div>
+  <div class="banners">
+  </div>
+  <main class="page page--leftbar" id="maincontent" role="main">
+    <div class="page__header ">
+      <div class="nhsuk-width-container">
+        <h1>Search Bank Collection</h1>
+        <p class="nhsuk-lede-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum sit sed porta viverra. Amet, tincidunt cras augue justo, proin mollis sapien. Sed cursus quam suspendisse.</p>
+      </div>
+    </div>
+    <div class="page__layout nhsuk-width-container">
+      <aside class="page__leftbar">
+        <form class="nhsuk-filter" method="get">
+          <p class="nhsuk-filter__title nhsuk-heading-l">Filters</p>
+          <div class="nhsuk-filter__groups">
+            <div class="nhsuk-filter__group">
+              <a class="nhsuk-filter__group__clear" href="#">Clear</a>
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset">
+                  <legend class="nhsuk-fieldset__legend"> Topic </legend>
+                  <div class="nhsuk-checkboxes">
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="filter_Topic-1" name="filter" type="checkbox" value="item_one" checked>
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Topic-1"> 3D printing </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="filter_Topic-2" name="filter" type="checkbox" value="item_two" checked>
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Topic-2"> Abuse </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="filter_Topic-3" name="filter" type="checkbox" value="item_three">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Topic-3"> Acute respiratory distress syndrome </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="filter_Topic-4" name="filter" type="checkbox" value="four">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Topic-4"> Admission </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="filter_Topic-5" name="filter" type="checkbox" value="five">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Topic-5"> Adverse experience children </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <button class="nhsuk-button nhsuk-filter__submit" data-module="nhsuk-button" type="submit"> Update results </button>
+        </form>
+      </aside>
+      <div class="page__main">
+        <div class="page__content">
+          <div class="hee-listing">
+            <div class="hee-listing__summary">
+              <div class="hee-listing__count">
+                <h2 class="hee-listing__title nhsuk-heading-l">10 results</h2>
+              </div>
+              <div class="hee-listing__filter">
+                <form method="get" class="hee-listing__filter__sort">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="sort"> Sort by </label>
+                    <select class="nhsuk-select" id="sort" name="sort">
+                      <option value="oldest">Oldest</option>
+                      <option value="newest">Newest</option>
+                      <option value="a-z">A to Z</option>
+                    </select>
+                  </div>
+                  <button class="nhsuk-button hee-listing__filter__submit" data-module="nhsuk-button" type="submit"> Update </button>
+                </form>
+              </div>
+              <div class="hee-listing__tags">
+                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="item_one">
+                  <span>3D printing</span>
+                  <a class="nhsuk-filter-tag__icon">Remove</a>
+                </div>
+                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="item_two">
+                  <span>Abuse</span>
+                  <a class="nhsuk-filter-tag__icon">Remove</a>
+                </div>
+              </div>
+            </div>
+            <div class="hee-listing__results">
+              <div class="hee-listing-item">
+                <h3><a href="#">Search bank #1</a></h3>
+                <div class="hee-listing-item__details">
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Topics:</span>
+                    <span>Abuse, Admission, Adverse experience children</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Key Terms:</span>
+                    <span>Epidermolysis bullosa</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Strings / Strategies:</span>
+                    <span><a href="#">Get strategy</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Search:</span>
+                    <span><a href="#">Get search</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Completed on:</span>
+                    <span>12 October 2022</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Provider:</span>
+                    <span>Brighton and Sussex</span>
+                  </div>
+                </div>
+              </div>
+              <div class="hee-listing-item">
+                <h3><a href="#">Search bank #2</a></h3>
+                <div class="hee-listing-item__details">
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Topics:</span>
+                    <span>Abuse, Admission, Adverse experience children</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Key Terms:</span>
+                    <span>Epidermolysis bullosa</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Strings / Strategies:</span>
+                    <span><a href="#">Get strategy</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Search:</span>
+                    <span><a href="#">Get search</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Completed on:</span>
+                    <span>12 October 2022</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Provider:</span>
+                    <span>Brighton and Sussex</span>
+                  </div>
+                </div>
+              </div>
+              <div class="hee-listing-item">
+                <h3><a href="#">Search bank #3</a></h3>
+                <div class="hee-listing-item__details">
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Topics:</span>
+                    <span>Abuse, Admission, Adverse experience children</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Key Terms:</span>
+                    <span>Epidermolysis bullosa</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Strings / Strategies:</span>
+                    <span><a href="#">Get strategy</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Search:</span>
+                    <span><a href="#">Get search</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Completed on:</span>
+                    <span>12 October 2022</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Provider:</span>
+                    <span>Brighton and Sussex</span>
+                  </div>
+                </div>
+              </div>
+              <div class="hee-listing-item">
+                <h3><a href="#">Search bank #4</a></h3>
+                <div class="hee-listing-item__details">
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Topics:</span>
+                    <span>Abuse, Admission, Adverse experience children</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Key Terms:</span>
+                    <span>Epidermolysis bullosa</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Strings / Strategies:</span>
+                    <span><a href="#">Get strategy</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Search:</span>
+                    <span><a href="#">Get search</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Completed on:</span>
+                    <span>12 October 2022</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Provider:</span>
+                    <span>Brighton and Sussex</span>
+                  </div>
+                </div>
+              </div>
+              <div class="hee-listing-item">
+                <h3><a href="#">Search bank #5</a></h3>
+                <div class="hee-listing-item__details">
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Topics:</span>
+                    <span>Abuse, Admission, Adverse experience children</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Key Terms:</span>
+                    <span>Epidermolysis bullosa</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Strings / Strategies:</span>
+                    <span><a href="#">Get strategy</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Search:</span>
+                    <span><a href="#">Get search</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Completed on:</span>
+                    <span>12 October 2022</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Provider:</span>
+                    <span>Brighton and Sussex</span>
+                  </div>
+                </div>
+              </div>
+              <div class="hee-listing-item">
+                <h3><a href="#">Search bank #6</a></h3>
+                <div class="hee-listing-item__details">
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Topics:</span>
+                    <span>Abuse, Admission, Adverse experience children</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Key Terms:</span>
+                    <span>Epidermolysis bullosa</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Strings / Strategies:</span>
+                    <span><a href="#">Get strategy</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Search:</span>
+                    <span><a href="#">Get search</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Completed on:</span>
+                    <span>12 October 2022</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Provider:</span>
+                    <span>Brighton and Sussex</span>
+                  </div>
+                </div>
+              </div>
+              <div class="hee-listing-item">
+                <h3><a href="#">Search bank #7</a></h3>
+                <div class="hee-listing-item__details">
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Topics:</span>
+                    <span>Abuse, Admission, Adverse experience children</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Key Terms:</span>
+                    <span>Epidermolysis bullosa</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Strings / Strategies:</span>
+                    <span><a href="#">Get strategy</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Search:</span>
+                    <span><a href="#">Get search</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Completed on:</span>
+                    <span>12 October 2022</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Provider:</span>
+                    <span>Brighton and Sussex</span>
+                  </div>
+                </div>
+              </div>
+              <div class="hee-listing-item">
+                <h3><a href="#">Search bank #8</a></h3>
+                <div class="hee-listing-item__details">
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Topics:</span>
+                    <span>Abuse, Admission, Adverse experience children</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Key Terms:</span>
+                    <span>Epidermolysis bullosa</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Strings / Strategies:</span>
+                    <span><a href="#">Get strategy</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Search:</span>
+                    <span><a href="#">Get search</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Completed on:</span>
+                    <span>12 October 2022</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Provider:</span>
+                    <span>Brighton and Sussex</span>
+                  </div>
+                </div>
+              </div>
+              <div class="hee-listing-item">
+                <h3><a href="#">Search bank #9</a></h3>
+                <div class="hee-listing-item__details">
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Topics:</span>
+                    <span>Abuse, Admission, Adverse experience children</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Key Terms:</span>
+                    <span>Epidermolysis bullosa</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Strings / Strategies:</span>
+                    <span><a href="#">Get strategy</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Search:</span>
+                    <span><a href="#">Get search</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Completed on:</span>
+                    <span>12 October 2022</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Provider:</span>
+                    <span>Brighton and Sussex</span>
+                  </div>
+                </div>
+              </div>
+              <div class="hee-listing-item">
+                <h3><a href="#">Search bank #10</a></h3>
+                <div class="hee-listing-item__details">
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Topics:</span>
+                    <span>Abuse, Admission, Adverse experience children</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Key Terms:</span>
+                    <span>Epidermolysis bullosa</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Strings / Strategies:</span>
+                    <span><a href="#">Get strategy</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Search:</span>
+                    <span><a href="#">Get search</a></span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Completed on:</span>
+                    <span>12 October 2022</span>
+                  </div>
+                  <div class="hee-listing-item__details__row">
+                    <span class="hee-listing-item__details__label">Provider:</span>
+                    <span>Brighton and Sussex</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
+              <ul class="nhsuk-list nhsuk-pagination__list">
+                <li class="nhsuk-pagination-item--previous">
+                  <a class="nhsuk-pagination__link nhsuk-pagination__link--prev" href="#">
+                    <span class="nhsuk-pagination__title">Previous</span>
+                    <span class="nhsuk-u-visually-hidden">:</span>
+                    <span class="nhsuk-pagination__page">Page X of Y</span>
+                    <svg class="nhsuk-icon nhsuk-icon__arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+                      <path d="M4.1 12.3l2.7 3c.2.2.5.2.7 0 .1-.1.1-.2.1-.3v-2h11c.6 0 1-.4 1-1s-.4-1-1-1h-11V9c0-.2-.1-.4-.3-.5h-.2c-.1 0-.3.1-.4.2l-2.7 3c0 .2 0 .4.1.6z"></path>
+                    </svg>
+                  </a>
+                </li>
+                <li class="nhsuk-pagination-item--next">
+                  <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="#">
+                    <span class="nhsuk-pagination__title">Next</span>
+                    <span class="nhsuk-u-visually-hidden">:</span>
+                    <span class="nhsuk-pagination__page">Page X of Y</span>
+                    <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+                      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page__footer">
+    </div>
+    <section class="page__feature">
+    </section>
+  </main>
+  <footer class="nhsuk-footer site-footer" id="nhsuk-footer" role="contentinfo">
+    <div class="nhsuk-width-container">
+      <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+      <ul class="nhsuk-footer__list nhsuk-footer__list--three-columns">
+        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="#">Blog</a></li>
+        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="#">About us</a></li>
+        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="#">Contact us</a></li>
+      </ul>
+      <p class="nhsuk-footer__copyright">&copy; Crown</p>
+    </div>
+  </footer>
+  <script src="/hee-prototypes/js/jquery-3.3.1.min.js"></script>
+  <script src="/hee-prototypes/js/nhsuk-7.0.0.min.js"></script>
+  <script src="/hee-prototypes/js/hee.js"></script>
+</body>
+
+</html>
