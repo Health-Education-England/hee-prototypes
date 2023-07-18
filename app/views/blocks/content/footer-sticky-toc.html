@@ -1,0 +1,91 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'footer-sticky-toc' %}
+{% set page_title = 'Sticky Table of Contents' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block breadcrumbs %}
+{{ 
+    breadcrumb({
+    items: [
+        {
+            href: basePath + "/",
+            text: "Home"
+        },
+        {
+            href: basePath + "/blocks",
+            text: "Blocks"
+        },
+        {
+            href: basePath + "/blocks/content",
+            text: "Content"
+        }
+    ],
+        href: basePath + "/blocks/"+page_url,
+      text: page_title
+    }) 
+}}
+{% endblock %}
+
+{% block pageLeftbar %}
+{{ subnav({
+    area: 'blocks',
+    subarea: 'content'
+}) }}
+{% endblock %}
+
+{% block pageHeader %}
+    <span class="nhsuk-caption-xl">Footer</span>
+    <h1>{{ page_title }}</h1>
+    <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+<p>TOC navigation fixed at the bottom of the browser viewport, generated from the TOC within the page right hand sidebar.</p>
+<p>Requires that the <a href="{{ basePath }}/blocks/content/sidebar-anchor-links.html">TOC variant of the anchor links component</a> is placed in the right hand sidebar.</p>
+<p>By design, the component will not display if the entire right hand sidebar TOC component is visible in the viewport.</p>
+<p>It is recommended that this component is placed in the <strong>page__footer</strong> region.</p>
+    <p>A full working example can be found on the <a href="{{ basePath }}/templates/publications-item.html">Publication Item template.</a></p>
+
+<h3>Example</h3>
+{{ example({
+    view: 'scaled',
+    url: basePath + '/blocks/content/examples/' + page_url,
+    height: '500'
+}) }}
+
+<hr />
+
+<h3>Macro</h3>
+{{ highlight({
+    html: '{{ anchorLinksSticky() }}
+'
+}) }}
+
+<hr />
+
+<h3>HTML</h3>
+{{ highlight({
+    html : '
+<div aria-expanded="false" class="hee-anchorlinks__sticky" id="hee-anchorlinks-sticky">
+    <div class="hee-anchorlinks__sticky__wrapper">
+      <button aria-haspopup="true" aria-label="Open table of contents" class="hee-anchorlinks__sticky__btn" tabindex="1">
+        <span>Table of Contents</span>
+      </button>
+      <div class="hee-anchorlinks__sticky__container">
+        <div class="hee-anchorlinks nhsuk-anchor-links" data-toc-js=true data-headings="">
+          <h2 data-anchorlinksignore="true">Table of Contents</h2>
+        </div>
+      </div>
+      <a aria-label="Back to top of page" class="hee-anchorlinks__sticky__top-link" href="#maincontent" tabindex="2">Back to top</a>
+    </div>
+</div>
+'
+})
+}}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}

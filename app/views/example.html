@@ -30,7 +30,8 @@
 {%- from 'hee/blocks/furniture/collections/hee-listing-item/macro.njk' import listingItem %}
 {%- from 'hee/blocks/furniture/collections/hee-filter/macro.njk' import filter %}
 {%- from 'hee/blocks/furniture/collections/hee-filtertag/macro.njk' import filterTag %}
-
+{%- from 'hee/blocks/furniture/content/review-date/macro.njk' import reviewDate %}
+{%- from 'hee/blocks/furniture/a-z-listings/nav-a-z/macro.njk' import azNav %}
 {%- from 'pagination/macro.njk' import pagination %}
 
 {# CONTENT BLOCKS #}
@@ -77,15 +78,12 @@
 {%- from 'back-link/macro.njk' import backLink %}
 {%- from 'button/macro.njk' import button %}
 {%- from 'card/macro.njk' import card %}
-{%- from 'care-card/macro.njk' import careCard %}
 {%- from 'checkboxes/macro.njk' import checkboxes %}
 {%- from 'contents-list/macro.njk' import contentsList %}
 {%- from 'details/macro.njk' import details %}
 {%- from 'images/macro.njk' import image %}
 {%- from 'inset-text/macro.njk' import insetText %}
 {%- from 'do-dont-list/macro.njk' import list %}
-{%- from 'nav-a-z/macro.njk' import azNav %}
-{%- from 'review-date/macro.njk' import reviewDate %}
 {%- from 'summary-list/macro.njk' import summaryList %}
 {%- from 'select/macro.njk' import select %}
 {%- from 'tables/macro.njk' import table %}
@@ -118,7 +116,7 @@
     <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
 
     {% block headCSS %}
-      <link href="{{ basePath }}/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
+      <link href="{{ basePath }}/css/nhsuk-7.0.0.min.css" rel="stylesheet" />
       <link href="{{ basePath }}/css/hee.css" rel="stylesheet" />
     {% endblock %}
 
@@ -169,7 +167,7 @@
 
     {% block scripts %}
       <script src="{{ basePath }}/js/jquery-3.3.1.min.js"></script>
-      <script src="{{ basePath }}/js/nhsuk.min.js"></script>
+      <script src="{{ basePath }}/js/nhsuk-7.0.0.min.js"></script>
       <script src="{{ basePath }}/js/hee.js"></script>
     {% endblock %}
     {% block bodyEnd %}
