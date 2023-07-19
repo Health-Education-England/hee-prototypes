@@ -1,40 +1,51 @@
 {% macro listingLayout(list) %}
-{%- from 'button/macro.njk' import button %}
-{%- from 'hee/blocks/furniture/collections/hee-listing-item/macro.njk' import listingItem %}
-{%- from 'pagination/macro.njk' import pagination %}
-{%- from 'select/macro.njk' import select %}
-{%- from 'summary-list/macro.njk' import summaryList %}
+  {%- from 'button/macro.njk' import button %}
+  {%- from 'hee/blocks/furniture/collections/hee-listing-item/macro.njk' import listingItem %}
+  {%- from 'pagination/macro.njk' import pagination %}
+  {%- from 'select/macro.njk' import select %}
+  {%- from 'summary-list/macro.njk' import summaryList %}
+  {%- from 'hee/blocks/furniture/collections/hee-filtertag/macro.njk' import filterTag %}
 
-<div class="hee-listing">
-  <div class="hee-listing__summary">
-    <div class="hee-listing__count">
-      <h2 class="hee-listing__title nhsuk-heading-l">{{ list.results.length }} results</h2>
-    </div>
-    <div class="hee-listing__filter">
-      <form method="get" class="hee-listing__filter__sort">
-        {{ select(list.filter.select) }}
-        {{ button(list.filter.submit) }}
-      </form>
-    </div>
-  </div>
-  <div class="hee-listing__results">
-    {% if list.results.length > 0 %}
-      {% for result in list.results %}
-        {{ listingItem(result) }}
-      {% endfor %}
-    {% else %}
-      <div class="hee-listings__results__no-items">
-        {{ list.emptyMessage }}
+  <div class="hee-listing">
+    <div class="hee-listing__summary">
+      <div class="hee-listing__count">
+        <h2 class="hee-listing__title nhsuk-heading-l">{{ list.results.length }} results</h2>
       </div>
-    {% endif %}
-  </div>
-  {% if list.showPagination %}
-    {{ pagination({
+      <div class="hee-listing__filter">
+        <form method="get" class="hee-listing__filter__sort">
+          {{ select(list.filter.select) }}
+          {{ button(list.filter.submit) }}
+        </form>
+      </div>
+      {% if list.tags.length > 0 %}
+        <div class="hee-listing__tags">
+          {% for tag in list.tags %}
+            {{ filterTag({
+              text: tag.text,
+              value: tag.value
+            }) }}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+    <div class="hee-listing__results">
+      {% if list.results.length > 0 %}
+        {% for result in list.results %}
+          {{ listingItem(result) }}
+        {% endfor %}
+      {% else %}
+        <div class="hee-listings__results__no-items">
+          {{ list.emptyMessage }}
+        </div>
+      {% endif %}
+    </div>
+    {% if list.showPagination %}
+      {{ pagination({
         previousUrl: "#",
         previousPage: "Page X of Y",
         nextUrl: "#",
         nextPage: "Page X of Y"
-    }) }}
-  {% endif %}
-</div>
+      }) }}
+    {% endif %}
+  </div>
 {% endmacro %}

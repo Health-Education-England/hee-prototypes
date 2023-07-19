@@ -105,13 +105,10 @@
       </div>
       #}
 
-      <div class="nhsuk-review-date">
-        <p class="nhsuk-body-s">
-          Page last reviewed: 17 November 2021
-          <br>
-          Next review due: 5 October 2021
-        </p>
-      </div>
+      {{ reviewDate({
+        lastReview: "12 February 2016",
+        nextReview: "1 February 2019"
+      }) }}
 
     </div>{# end row #}
   </div>

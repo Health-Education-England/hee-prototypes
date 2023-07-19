@@ -23,7 +23,7 @@ const PATHS = {
   vendorJS: [
     './app/assets/javascript/jquery-3.3.1.min.js',
     './app/assets/prototype/highlight/highlight.min.js',
-    'node_modules/nhsuk-frontend/dist/nhsuk.min.js'
+    'node_modules/nhsuk-frontend/dist/nhsuk-7.0.0.min.js'
   ],
   public: 'public',
   dist: 'dist',

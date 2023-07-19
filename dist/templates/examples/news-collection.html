@@ -175,33 +175,24 @@
                   <legend class="nhsuk-fieldset__legend"> Category </legend>
                   <div class="nhsuk-checkboxes">
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Category-1" name="filter" type="checkbox" value="item_one" checked>
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-1"> Item one </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_Category-1" name="filter" type="checkbox" value="board">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-1"> Board development </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Category-2" name="filter" type="checkbox" value="item_two" checked>
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-2"> Item two </label>
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
-            </div>
-            <div class="nhsuk-filter__group">
-              <div class="nhsuk-form-group">
-                <fieldset class="nhsuk-fieldset">
-                  <legend class="nhsuk-fieldset__legend"> Organisation </legend>
-                  <div class="nhsuk-checkboxes">
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Organisation-1" name="filter" type="checkbox" value="item_one">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Organisation-1"> Item one </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_Category-2" name="filter" type="checkbox" value="fellowships">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-2"> Fellowships and scholarships </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Organisation-2" name="filter" type="checkbox" value="item_two">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Organisation-2"> Item two </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_Category-3" name="filter" type="checkbox" value="graduates" checked>
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-3"> Graduates </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Organisation-3" name="filter" type="checkbox" value="item_three">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Organisation-3"> Item three </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_Category-4" name="filter" type="checkbox" value="learning_dev" checked>
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-4"> Learning and development </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="filter_Category-5" name="filter" type="checkbox" value="school_leavers">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-5"> School leavers </label>
                     </div>
                   </div>
                 </fieldset>
@@ -230,14 +221,24 @@
                   <button class="nhsuk-button hee-listing__filter__submit" data-module="nhsuk-button" type="submit"> Update </button>
                 </form>
               </div>
+              <div class="hee-listing__tags">
+                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="graduates">
+                  <span>Graduates</span>
+                  <img class="nhsuk-filter-tag__icon" src="/hee-prototypes/images/icons/close.svg" alt="Remove" hidden />
+                </div>
+                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="learning-development">
+                  <span>Learning and development</span>
+                  <img class="nhsuk-filter-tag__icon" src="/hee-prototypes/images/icons/close.svg" alt="Remove" hidden />
+                </div>
+              </div>
             </div>
             <div class="hee-listing__results">
               <div class="hee-listing-item">
                 <h3><a href="#">News item #1</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">News type:</span>
-                    <span>Briefing</span>
+                    <span class="hee-listing-item__details__label">Category:</span>
+                    <span>Graduates</span>
                   </div>
                   <div class="hee-listing-item__details__row">
                     <span class="hee-listing-item__details__label">Publish date:</span>
@@ -250,8 +251,8 @@
                 <h3><a href="#">News item #2</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">News type:</span>
-                    <span>Briefing</span>
+                    <span class="hee-listing-item__details__label">Category:</span>
+                    <span>Graduates</span>
                   </div>
                   <div class="hee-listing-item__details__row">
                     <span class="hee-listing-item__details__label">Publish date:</span>
@@ -264,8 +265,8 @@
                 <h3><a href="#">News item #3</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">News type:</span>
-                    <span>Briefing</span>
+                    <span class="hee-listing-item__details__label">Category:</span>
+                    <span>Graduates</span>
                   </div>
                   <div class="hee-listing-item__details__row">
                     <span class="hee-listing-item__details__label">Publish date:</span>
@@ -278,8 +279,8 @@
                 <h3><a href="#">News item #4</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">News type:</span>
-                    <span>Briefing</span>
+                    <span class="hee-listing-item__details__label">Category:</span>
+                    <span>Graduates</span>
                   </div>
                   <div class="hee-listing-item__details__row">
                     <span class="hee-listing-item__details__label">Publish date:</span>
@@ -292,8 +293,8 @@
                 <h3><a href="#">News item #5</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">News type:</span>
-                    <span>Briefing</span>
+                    <span class="hee-listing-item__details__label">Category:</span>
+                    <span>Graduates</span>
                   </div>
                   <div class="hee-listing-item__details__row">
                     <span class="hee-listing-item__details__label">Publish date:</span>
@@ -306,8 +307,8 @@
                 <h3><a href="#">News item #6</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">News type:</span>
-                    <span>Briefing</span>
+                    <span class="hee-listing-item__details__label">Category:</span>
+                    <span>Graduates</span>
                   </div>
                   <div class="hee-listing-item__details__row">
                     <span class="hee-listing-item__details__label">Publish date:</span>
@@ -320,8 +321,8 @@
                 <h3><a href="#">News item #7</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">News type:</span>
-                    <span>Briefing</span>
+                    <span class="hee-listing-item__details__label">Category:</span>
+                    <span>Graduates</span>
                   </div>
                   <div class="hee-listing-item__details__row">
                     <span class="hee-listing-item__details__label">Publish date:</span>
@@ -334,8 +335,8 @@
                 <h3><a href="#">News item #8</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">News type:</span>
-                    <span>Briefing</span>
+                    <span class="hee-listing-item__details__label">Category:</span>
+                    <span>Graduates</span>
                   </div>
                   <div class="hee-listing-item__details__row">
                     <span class="hee-listing-item__details__label">Publish date:</span>
@@ -348,8 +349,8 @@
                 <h3><a href="#">News item #9</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">News type:</span>
-                    <span>Briefing</span>
+                    <span class="hee-listing-item__details__label">Category:</span>
+                    <span>Graduates</span>
                   </div>
                   <div class="hee-listing-item__details__row">
                     <span class="hee-listing-item__details__label">Publish date:</span>
@@ -362,8 +363,8 @@
                 <h3><a href="#">News item #10</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
-                    <span class="hee-listing-item__details__label">News type:</span>
-                    <span>Briefing</span>
+                    <span class="hee-listing-item__details__label">Category:</span>
+                    <span>Graduates</span>
                   </div>
                   <div class="hee-listing-item__details__row">
                     <span class="hee-listing-item__details__label">Publish date:</span>
