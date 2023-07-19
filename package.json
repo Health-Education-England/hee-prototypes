@@ -21,11 +21,9 @@
   "author": "https://github.com/Health-Education-England/",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.17.9",
-    "@babel/preset-env": "^7.16.11",
-    "@playwright/test": "^1.35.1",
     "@babel/core": "^7.22.8",
     "@babel/preset-env": "^7.22.7",
+    "@playwright/test": "^1.35.1",
     "babel-loader": "^8.2.5",
     "dotenv": "^6.0.0",
     "gulp": "^4.0.2",
