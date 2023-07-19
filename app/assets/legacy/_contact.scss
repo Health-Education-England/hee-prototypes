@@ -178,3 +178,7 @@
 .nhsuk-contact__content--feature {
     padding-top: 0 !important;
 }
+
+.nhsuk-contact__card .nhsuk-contact__secondary-info > * {
+    @include nhsuk-typography-responsive(16);
+}

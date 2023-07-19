@@ -43,7 +43,7 @@
     },
     {
       "label": "blocks-main-media-embed",
-      "delay": 5250,
+      "hideSelectors": [".hee-media__container iframe"],
       "clickSelectors": [
         ".hee-media__transcript a"
       ],
