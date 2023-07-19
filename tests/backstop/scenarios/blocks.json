@@ -43,11 +43,11 @@
     },
     {
       "label": "blocks-main-media-embed",
-      "delay": 5250,
+      "delay": 5000,
+      "hideSelectors": [".nhsuk-media__container iframe"],
       "clickSelectors": [
-        ".hee-media__transcript a"
-      ],
-      "url": "http://127.0.0.1:8080/blocks/content/examples/main-media-embed.html"
+        ".nhsuk-media__transcript a"
+      ]
     },
     {
       "label": "blocks-main-table-expander-open",
@@ -66,6 +66,12 @@
         ".hee-card--summary__toggle"
       ],
       "url": "http://127.0.0.1:8080/blocks/content/examples/main-card-summary.html"
+    },
+    {
+      "label": "blocks-main-media-embed",
+      "hideSelectors": [
+        ".nhsuk-media__container iframe"
+      ]
     }
   ]
 }

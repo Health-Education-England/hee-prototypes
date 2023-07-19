@@ -1,6 +1,6 @@
 const gulp = require("gulp");
 const sourcemaps = require("gulp-sourcemaps");
-const sass = require("gulp-sass");
+const sass = require("gulp-sass")(require('sass'));
 const cleanCSS = require("gulp-clean-css");
 const rename = require("gulp-rename");
 const webpack = require("webpack-stream");

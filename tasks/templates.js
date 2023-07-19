@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const rename = require('gulp-rename');
 const gulpNunjucks = require('gulp-nunjucks');
 const nunjucks = require('nunjucks');
-const htmlbeautify = require('gulp-html-beautify');
+const beautify = require('gulp-beautify');
 
 const taskServe = require('./serve');
 
@@ -43,7 +43,7 @@ function buildTemplates() {
     .pipe(rename({
       extname: '.html',
     }))
-    .pipe(htmlbeautify({
+    .pipe(beautify.html({
       'indent_size': 2,
       'indent_char': ' ',
       'preserve_newlines': false

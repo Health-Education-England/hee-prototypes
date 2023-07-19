@@ -67,6 +67,7 @@
 @import 'blocks/scaffolding/notifications/banner/banner';
 @import 'blocks/content/sidebar/hee-card--sidebar-image/sidebar-image';
 @import 'blocks/content/sidebar/card--related-links/related-links';
+@import 'blocks/scaffolding/footer/footer';
 
 ///// FURNITURE
 // -- Collections
@@ -78,6 +79,8 @@
 @import 'blocks/furniture/search/form/search-form';
 @import 'blocks/furniture/search/listing/search-listing';
 @import 'blocks/furniture/search/listing-item/search-listing-item';
+// -- Content
+@import 'blocks/furniture/content/review-date/review-date';
 
 ///// CONTENT
 @import 'blocks/content/hee-card';

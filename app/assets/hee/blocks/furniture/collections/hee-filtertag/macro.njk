@@ -1,6 +1,6 @@
 {% macro filterTag(filter) %}
 <div class="nhsuk-filter-tag nhsuk-tag" data-filter="{{filter.value}}">
   <span>{{ filter.text }}</span>
-  <img class="nhsuk-filter-tag__icon" src="{{ basePath }}/images/icons/close.svg" alt="Remove" hidden />
+  <a class="nhsuk-filter-tag__icon">Remove</a>
 </div>
 {% endmacro %}

@@ -63,7 +63,7 @@
 <h3>Macro - Non-urgent</h3>
 {{ highlight({
   html: '
-  {{ careCard({
+  {{ card({
     type: "non-urgent",
     heading: "Speak to a GP if:",
     HTML: "
@@ -84,19 +84,21 @@
 <h3>HTML - Non-urgent</h3>
 {{ highlight({
   html : '
-<div class="nhsuk-care-card nhsuk-care-card--non-urgent">
-    <div class="nhsuk-care-card__heading-container">
-      <h3 class="nhsuk-care-card__heading"><span role="text"><span class="nhsuk-u-visually-hidden">Non-urgent advice: </span>Speak to a GP if:</span></h3>
-      <span class="nhsuk-care-card__arrow" aria-hidden="true"></span>
+<div class="nhsuk-card nhsuk-card--care nhsuk-card--care--non-urgent">
+    <div class="nhsuk-card--care__heading-container">
+      <h2 class="nhsuk-card--care__heading">
+        <span role="text"><span class="nhsuk-u-visually-hidden">Non-urgent advice: </span>Speak to a GP if:</span>
+      </h2>
+      <span class="nhsuk-card--care__arrow" aria-hidden="true"></span>
     </div>
-    <div class="nhsuk-care-card__content">
+    <div class="nhsuk-card__content">
       <ul>
         <li>You\'re not sure it\'s chickenpox</li>
         <li>The skin around the blisters is red, hot or painful (signs of infection)</li>
         <li>Your child is <a href="https://www.nhs.uk/conditions/dehydration">dehydrated</a></li>
         <li>You\'re concerned about your child or they get worse</li>
-    </ul>
-    <p>Tell the receptionist you think it\'s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.</p>
+      </ul>
+      <p>Tell the receptionist you think it\'s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.</p>
     </div>
 </div>
   '
@@ -108,8 +110,8 @@
 <h3>Macro - Urgent</h3>
 {{ highlight({
     html:
-    '{{ careCard({
-    type: "Urgent",
+    '  {{ card({
+    type: "urgent",
     heading: "Speak to a GP if:",
     HTML: "
             <ul>
@@ -120,7 +122,7 @@
             </ul>
             <p>Tell the receptionist you think it\'s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.</p>
           "
-}) }}
+  }) }}
 '
 }) }}
 
@@ -129,19 +131,21 @@
 <h3>HTML - Urgent</h3>
 {{ highlight({
     html : '
-<div class="nhsuk-care-card nhsuk-care-card--urgent">
-    <div class="nhsuk-care-card__heading-container">
-      <h3 class="nhsuk-care-card__heading"><span role="text"><span class="nhsuk-u-visually-hidden">Non-urgent advice: </span>Speak to a GP if:</span></h3>
-      <span class="nhsuk-care-card__arrow" aria-hidden="true"></span>
+<div class="nhsuk-card nhsuk-card--care nhsuk-card--care--urgent">
+    <div class="nhsuk-card--care__heading-container">
+      <h2 class="nhsuk-card--care__heading">
+        <span role="text"><span class="nhsuk-u-visually-hidden">Urgent advice: </span>Speak to a GP if:</span>
+      </h2>
+      <span class="nhsuk-card--care__arrow" aria-hidden="true"></span>
     </div>
-    <div class="nhsuk-care-card__content">
+    <div class="nhsuk-card__content">
       <ul>
         <li>You\'re not sure it\'s chickenpox</li>
         <li>The skin around the blisters is red, hot or painful (signs of infection)</li>
         <li>Your child is <a href="https://www.nhs.uk/conditions/dehydration">dehydrated</a></li>
         <li>You\'re concerned about your child or they get worse</li>
-    </ul>
-    <p>Tell the receptionist you think it\'s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.</p>
+      </ul>
+      <p>Tell the receptionist you think it\'s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.</p>
     </div>
 </div>
 '
@@ -153,8 +157,8 @@
 <h3>Macro - Immediate</h3>
 {{ highlight({
     html: '
-{{ careCard({
-    type: "immediate",
+  {{ card({
+    type: "emergency",
     heading: "Speak to a GP if:",
     HTML: "
             <ul>
@@ -165,7 +169,7 @@
             </ul>
             <p>Tell the receptionist you think it\'s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.</p>
           "
-}) }}
+  }) }}
 '
 }) }}
 
@@ -174,19 +178,21 @@
 <h3>HTML - Immediate</h3>
 {{ highlight({
     html : '
-<div class="nhsuk-care-card nhsuk-care-card--immediate">
-    <div class="nhsuk-care-card__heading-container">
-      <h3 class="nhsuk-care-card__heading"><span role="text"><span class="nhsuk-u-visually-hidden">Non-urgent advice: </span>Speak to a GP if:</span></h3>
-      <span class="nhsuk-care-card__arrow" aria-hidden="true"></span>
+<div class="nhsuk-card nhsuk-card--care nhsuk-card--care--emergency">
+    <div class="nhsuk-card--care__heading-container">
+      <h2 class="nhsuk-card--care__heading">
+        <span role="text"><span class="nhsuk-u-visually-hidden">Immediate action required: </span>Speak to a GP if:</span>
+      </h2>
+      <span class="nhsuk-card--care__arrow" aria-hidden="true"></span>
     </div>
-    <div class="nhsuk-care-card__content">
+    <div class="nhsuk-card__content">
       <ul>
         <li>You\'re not sure it\'s chickenpox</li>
         <li>The skin around the blisters is red, hot or painful (signs of infection)</li>
         <li>Your child is <a href="https://www.nhs.uk/conditions/dehydration">dehydrated</a></li>
         <li>You\'re concerned about your child or they get worse</li>
-    </ul>
-    <p>Tell the receptionist you think it\'s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.</p>
+      </ul>
+      <p>Tell the receptionist you think it\'s chickenpox before going in. They may recommend a special appointment time if other patients are at risk.</p>
     </div>
 </div>
 '
