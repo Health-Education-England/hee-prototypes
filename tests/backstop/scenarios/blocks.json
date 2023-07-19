@@ -66,6 +66,12 @@
         ".hee-card--summary__toggle"
       ],
       "url": "http://127.0.0.1:8080/blocks/content/examples/main-card-summary.html"
+    },
+    {
+      "label": "blocks-main-media-embed",
+      "hideSelectors": [
+        ".nhsuk-media__container iframe"
+      ]
     }
   ]
 }
