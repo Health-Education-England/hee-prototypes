@@ -24,7 +24,6 @@
 ///////////////////////////////////////////
 @import '../components/nhsuk-hee/nhsuk-hee-blocklinks/blocklinks';
 @import '../components/nhsuk-hee/nhsuk-hee-breadcrumb/breadcrumb';
-@import '../components/nhsuk-hee/nhsuk-hee-reviewdate/reviewdate';
 @import '../components/nhsuk-hee/nhsuk-hee-contentslist/contentslist';
 @import '../components/nhsuk-hee/nhsuk-hee-image/image';
 @import 'blocks/content/sidebar/card--details/details';
@@ -68,6 +67,7 @@
 @import 'blocks/scaffolding/notifications/banner/banner';
 @import '../components/hee/hee-sidebarimage/sidebarimage';
 @import 'blocks/content/sidebar/card--related-links/related-links';
+@import 'blocks/scaffolding/footer/footer';
 
 ///// FURNITURE
 // -- Collections
@@ -79,6 +79,8 @@
 @import 'blocks/furniture/search/form/search-form';
 @import 'blocks/furniture/search/listing/search-listing';
 @import 'blocks/furniture/search/listing-item/search-listing-item';
+// -- Content
+@import 'blocks/furniture/content/review-date/review-date';
 
 ///// CONTENT
 @import 'blocks/content/hee-card';
@@ -95,7 +97,6 @@
 //@import '../hee/blocks/content/sidebar/card--department/department';
 //@import '../hee/blocks/content/sidebar/card--contact/contact';
 
-//@import '../components/nhsuk-hee/nhsuk-hee-reviewdate/reviewdate';
 //@import '../components/nhsuk-hee/nhsuk-hee-summarylist/summarylist';
 //@import '../components/hee/hee-homesection/homesection';
 @import '../components/hee/hee-newsletter/newsletter';

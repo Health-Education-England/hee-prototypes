@@ -1,9 +1,10 @@
 {
-  "name": "HEE-prototypes",
+  "name": "hee-prototypes",
   "version": "2.0.0",
   "description": "Rapidly create HTML prototypes of NHS websites and services.",
   "main": "app.js",
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "serve": "gulp serve",
     "build": "gulp build",
     "build:prod": "gulp build --prod",
@@ -17,21 +18,21 @@
     "playwright:test-trace": "docker-compose run playwright npx playwright test --config ./tests/playwright/config/playwright.config.js  --trace on",
     "playwright:report": "gulp playwright-report"
   },
-  "author": "https://github.com/nhsuk/",
+  "author": "https://github.com/Health-Education-England/",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.17.9",
-    "@babel/preset-env": "^7.16.11",
+    "@babel/core": "^7.22.8",
+    "@babel/preset-env": "^7.22.7",
     "@playwright/test": "^1.35.1",
     "babel-loader": "^8.2.5",
     "dotenv": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
+    "gulp-beautify": "^3.0.0",
     "gulp-clean": "^0.4.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.7.0",
-    "gulp-html-beautify": "^1.0.1",
     "gulp-minify": "^3.1.0",
     "gulp-nodemon": "^2.5.0",
     "gulp-nunjucks": "^5.1.0",
@@ -39,10 +40,21 @@
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
-    "nhsuk-frontend": "4.1.0",
-    "nunjucks": "^3.2.2",
+    "nhsuk-frontend": "^7.0.0",
+    "nunjucks": "^3.2.4",
     "sass": "^1.63.5",
     "webpack": "^5.87.0",
     "webpack-stream": "^7.0.0"
+  },
+  "resolutions": {
+    "ansi-regex": "^4.1.1",
+    "decode-uri-component": "^0.2.1",
+    "http-cache-semantics": "^4.1.1",
+    "glob-parent": "^6.0.1",
+    "got": "^11.8.5",
+    "json5": "^2.2.2",
+    "minimist": "^1.2.6",
+    "semver": "^7.5.2",
+    "terser": "^4.8.1"
   }
 }

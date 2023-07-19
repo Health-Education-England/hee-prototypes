@@ -83,15 +83,18 @@
 {{ highlight({
     html : '
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-    <div class="nhsuk-width-container">
-      <ol class="nhsuk-breadcrumb__list">
-        <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
-        <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/blocks">Blocks</a></li>
-        <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/blocks/scaffolding">Scaffolding</a></li>
-        <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="#">Breadcrumbs</a></li>
-      </ol>
-      <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="#">Back to Breadcrumbs</a></p>
-    </div>
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/blocks">Blocks</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/blocks/scaffolding">Scaffolding</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="#">Breadcrumbs</a></li>
+    </ol>
+    <p class="nhsuk-breadcrumb__back">
+      <a class="nhsuk-breadcrumb__backlink" href="#">
+        <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span> Breadcrumbs </a>
+    </p>
+  </div>
 </nav>
 '
 })
