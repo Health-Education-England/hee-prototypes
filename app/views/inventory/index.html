@@ -23,6 +23,7 @@
 {% endblock %}
 
 {% block pageMain %}
+{% set bPath = basePath %}
   <div class="page__header">
     <div class="nhsuk-width-container">
       <h1>{{ page_title }}</h1>
@@ -43,13 +44,13 @@
             <tr>
               <td>{{ item.title }}</td>
               <td width="150">
-                <a href="{{ bathPath }}/templates/{{ item.url }}">Information</a>
+                <a href="{{ bPath }}/templates/{{ item.url }}">Information</a>
               </td>
               <td width="150">
                 {% set regExp = r/^base.*/g %}
                 {% if regExp.test(item.url) %}
                 {% else %}
-                  <a href="{{ bathPath }}/templates/examples/{{ item.url }}">Preview</a>
+                  <a href="{{ bPath }}/templates/examples/{{ item.url }}">Preview????</a>
                 {% endif %}
               </td>
               <td width="200" style="text-align:right;">
@@ -74,8 +75,8 @@
             {% for item in section.links %}
             <tr>
               <td>{{ item.title }}</td>
-              <td width="150"><a href="{{ bathPath }}/blocks/scaffolding/{{ item.url }}">Information</a></td>
-              <td width="150"><a href="{{ bathPath }}/blocks/scaffolding/examples/{{ item.url }}">Preview</a></td>
+              <td width="150"><a href="{{ bPath }}/blocks/scaffolding/{{ item.url }}">Information</a></td>
+              <td width="150"><a href="{{ bPath }}/blocks/scaffolding/examples/{{ item.url }}">Preview</a></td>
               <td width="200" style="text-align:right;">
                 {{ statusTag({
                   status: item.status
@@ -98,8 +99,8 @@
             {% for item in section.links %}
             <tr>
               <td>{{ item.title }}</td>
-              <td width="150"><a href="{{ bathPath }}/blocks/furniture/{{ item.url }}">Information</a></td>
-              <td width="150"><a href="{{ bathPath }}/blocks/furniture/examples/{{ item.url }}">Preview</a></td>
+              <td width="150"><a href="{{ bPath }}/blocks/furniture/{{ item.url }}">Information</a></td>
+              <td width="150"><a href="{{ bPath }}/blocks/furniture/examples/{{ item.url }}">Preview</a></td>
               <td width="200" style="text-align:right;">
                 {{ statusTag({
                   status: item.status
@@ -122,8 +123,8 @@
             {% for item in section.links %}
             <tr>
               <td>{{ item.title }}</td>
-              <td width="150"><a href="{{ bathPath }}/blocks/content/{{ item.url }}">Information</a></td>
-              <td width="150"><a href="{{ bathPath }}/blocks/content/examples/{{ item.url }}">Preview</a></td>
+              <td width="150"><a href="{{ bPath }}/blocks/content/{{ item.url }}">Information</a></td>
+              <td width="150"><a href="{{ bPath }}/blocks/content/examples/{{ item.url }}">Preview</a></td>
               <td width="200" style="text-align:right;">
                 {{ statusTag({
                   status: item.status
