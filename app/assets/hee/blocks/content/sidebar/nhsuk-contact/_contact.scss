@@ -1,0 +1,186 @@
+/* Contact (from live) */
+.nhsuk-contact {
+    margin-bottom: nhsuk-spacing(6);
+    position: relative;
+    width: 100%;
+
+    @include mq($from: tablet) {
+        margin-bottom: nhsuk-spacing(7);
+    }
+
+    h2, h3, h4, h5 {
+        margin-bottom: 0;
+    }
+
+    h4, h5 {
+        @include nhsuk-typography-weight-normal;
+        font-size: 19px;
+        font-size: 1.1875rem;
+    }
+
+    .nhsuk-contact__img-container {
+        background: $color_nhsuk-grey-4;
+        border-radius: 50%;
+        color: $color_nhsuk-grey-1;
+        font-size: 3rem;
+        font-weight: 700;
+        height: 8.375rem;
+        line-height: 8.375rem;
+        margin-bottom: nhsuk-spacing(4);
+        position: relative;
+        text-align: center;
+        width: 8.375rem;
+
+        @include govuk-media-query($media-type: print) {
+            display: none;
+        }
+    }
+
+    .nhsuk-contact__img {
+        border-bottom: 1px solid $color_nhsuk-grey-5;
+        border-radius: 50%;
+        display: block;
+        height: 8.375rem;
+        left: 0;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        width: 8.375rem;
+
+        @include govuk-media-query($media-type: print) {
+            display: none;
+        }
+    }
+
+    .nhsuk-contact__description,
+    .nhsuk-contact__heading,
+    .nhsuk-contact__metadata {
+        margin-bottom: nhsuk-spacing(2);
+    }
+
+    .nhsuk-contact__pronoun {
+        color: $color_nhsuk-grey-1;
+    }
+
+    .nhsuk-contact__secondary-info p {
+        word-wrap: break-word;
+    }
+}
+
+.nhsuk-contact__card {
+    background: $color_nhsuk-white;
+    border: 1px solid $color_nhsuk-grey-4;
+
+    .nhsuk-contact__content {
+        padding: nhsuk-spacing(4);
+        position: relative;
+
+        @include mq($from: tablet) {
+            padding: nhsuk-spacing(5);
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .nhsuk-contact__pronoun {
+        margin-bottom: nhsuk-spacing(2);
+    }
+
+    p[aria-label="Address"] {
+        font-size: 1.1875rem;
+        line-height: 1.47368;
+    }
+}
+
+.nhsuk-contact-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: nhsuk-spacing(6);
+    padding: 0;
+
+    @include mq($from: desktop) {
+        margin-bottom: nhsuk-spacing(3);
+    }
+
+    + .nhsuk-heading-l,
+    + .nhsuk-heading-m,
+    + h2,
+    + h3 {
+        padding-top: 0;
+    }
+
+    .nhsuk-contact-group__item {
+        display: flex;
+        flex: 0 0 100%;
+        list-style-type: none;
+        margin-bottom: 0;
+
+        @include mq($from: desktop) {
+            flex: 0 0 50%;
+        }
+
+        .nhsuk-contact {
+            margin-bottom: 16px;
+
+            @include mq($from: desktop) {
+                margin-bottom: nhsuk-spacing(5);
+            }
+        }
+
+        &:last-child {
+            .nhsuk-contact {
+                margin-bottom: 0;
+
+                @include mq($from: desktop) {
+                    margin-bottom: nhsuk-spacing(5);
+                }
+            }
+        }
+    }
+}
+
+
+.nhsuk-contact--feature {
+    margin-top: nhsuk-spacing(6);
+
+    @include mq($from: tablet) {
+        margin-top: nhsuk-spacing(8);
+    }
+}
+
+.nhsuk-contact__heading--feature {
+    background: $color_nhsuk-blue;
+    color: $color_nhsuk-white;
+    display: inline-block;
+    left: -25px;
+    margin-bottom: nhsuk-spacing(2);
+    margin-right: nhsuk-spacing(4) * -1;
+    padding: 8px 24px;
+    position: relative;
+    top: -8px;
+
+    @include mq($from: tablet) {
+        left: -33px;
+        margin-right: -32px;
+        padding: nhsuk-spacing(2) nhsuk-spacing(5);
+        top: nhsuk-spacing(3) * -1;
+    }
+}
+
+.nhsuk-contact__content--feature {
+    padding-top: 0 !important;
+}
+
+.nhsuk-contact__card .nhsuk-contact__secondary-info > * {
+    @include nhsuk-typography-responsive(16);
+}
+
+.nhsuk-contact__secondary-info > * {
+    margin-bottom: 12px;
+}
