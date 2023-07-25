@@ -47,7 +47,6 @@
 @import '../legacy/image-card';
 @import '../hee/blocks/content/sidebar/card--details/details';
 @import '../legacy/related-nav';
-@import '../legacy/header-search';
 @import 'blocks/content/main/hee-media/media';
 @import 'blocks/content/main/hee-navmap/navmap';
 @import '../legacy/related-nav'; //?
@@ -77,6 +76,8 @@
 @import 'blocks/furniture/search/listing-item/search-listing-item';
 // -- Content
 @import 'blocks/furniture/content/review-date/review-date';
+// -- A-Z listings
+@import 'blocks/furniture/a-z-listings/nav-a-z/nav-a-z';
 
 ///// CONTENT
 @import 'blocks/content/hee-card';

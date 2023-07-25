@@ -44,6 +44,13 @@
       }
     }
   }
+
+  .nhsuk-search__close {
+    height: auto;
+    width: auto;
+    margin: 0 -6px 0 0;
+    padding: 4px 7px;
+  }
 }
 
 /* NHSUK-Header__search - Blue BG variation */
@@ -60,5 +67,17 @@
         fill: $color-nhsuk-white;
       }
     }
+  }
+}
+
+@include mq($from: tablet) {
+  .autocomplete__input {
+    width: 180px;
+  }
+}
+
+@include mq($from: desktop) {
+  .autocomplete__input {
+    width: 200px;
   }
 }
