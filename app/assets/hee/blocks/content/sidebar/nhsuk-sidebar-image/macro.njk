@@ -1,10 +1,10 @@
 {% macro imageCard(params) %}
-  <figure class="hee-sidebar-image">
+  <figure class="nhsuk-image-image">
     {%- if params.imgURL %}
-      <img class="hee-sidebar-image__img" src="{{ params.imgURL }}" alt="{{ params.imgALT }}" />
+      <img class="nhsuk-image-image__img" src="{{ params.imgURL }}" alt="{{ params.imgALT }}" />
     {%- endif %}
     {%- if params.imgCaption %}
-    <figcaption class="hee-sidebar-image__caption">
+    <figcaption class="nhsuk-image-image__caption">
       {{ params.imgCaption }}
     </figcaption>
     {%- endif %}
