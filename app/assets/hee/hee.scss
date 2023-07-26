@@ -1,8 +1,6 @@
 ///////////////////////////////////////////
 // NHS.UK Frontend library
 ///////////////////////////////////////////
-//@import 'node_modules/nhsuk-frontend/packages/nhsuk';
-//@import 'node_modules/nhsuk-frontend/packages/core/all';
 @import 'node_modules/nhsuk-frontend/packages/core/settings/all';
 @import 'node_modules/nhsuk-frontend/packages/core/tools/all';
 
@@ -43,7 +41,6 @@
 @import 'blocks/furniture/page/hee-microhero/microhero';
 @import 'blocks/content/main/hee-timeline/timeline';
 @import 'blocks/content/sidebar/nhsuk-sidebar-image/sidebar-image';
-@import '../hee/blocks/content/sidebar/card--details/details';
 @import 'blocks/content/main/hee-media/media';
 @import 'blocks/content/main/hee-navmap/navmap';
 @import 'blocks/content/sidebar/resources/resources';
@@ -74,24 +71,11 @@
 
 ///// CONTENT
 @import 'blocks/content/hee-card';
-//@import 'blocks/content/main/card--author/author';
 @import 'blocks/content/main/hee-publication-doc/publication-doc';
 @import 'blocks/content/main/training-journey/training-journey';
 @import 'blocks/content/featured/featured-content/featured-content';
-//@import '../hee/blocks/content/sidebar/card--department/department';
-//@import '../hee/blocks/content/sidebar/card--contact/contact';
-
-//@import '../components/hee/hee-sidebarlinks/sidebarlinks';
-
 @import 'blocks/content/hee-card';
 @import 'blocks/content/main/card--author/author';
 @import 'blocks/content/main/table-expander/table';
 @import 'blocks/content/main/quote/quote';
-//@import '../hee/blocks/content/sidebar/card--department/department';
-//@import '../hee/blocks/content/sidebar/card--contact/contact';
-
-//@import '../components/nhsuk-hee/nhsuk-hee-summarylist/summarylist';
-//@import '../components/hee/hee-homesection/homesection';
 @import 'blocks/content/main/hee-newsletter/newsletter';
-//@import '../components/hee/hee-relatednav/relatednav';
-//@import '../components/hee/hee-sidebarlinks/sidebarlinks';
