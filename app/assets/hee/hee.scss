@@ -36,7 +36,7 @@
 @import 'blocks/scaffolding/header/navigation/menu';
 @import 'blocks/scaffolding/header/navigation/subnav';
 @import 'blocks/furniture/page/nhsuk-hee-hero/hero';
-@import '../legacy/hee-table';
+@import 'blocks/content/main/nhsuk-hee-table/table';
 @import 'blocks/content/sidebar/nhsuk-related-links-list/nhsuk-related-links-list';
 @import 'blocks/content/sidebar/nhsuk-contact/contact';
 @import 'utils/section-break';
@@ -47,13 +47,11 @@
 @import 'blocks/content/main/hee-media/media';
 @import 'blocks/content/main/hee-navmap/navmap';
 @import 'blocks/content/sidebar/resources/resources';
-@import '../legacy/hee-table-2';
 @import 'blocks/content/main/applies-to/applies-to';
 @import 'blocks/content/footer/anchorlinks-sticky/anchorlinks-sticky';
 @import 'blocks/content/sidebar/anchorlinks/anchorlinks';
 @import 'blocks/scaffolding/notifications/phasebanner/phasebanner';
 @import 'blocks/content/main/hee-tabs/tabs';
-@import '../legacy/tables2'; //?
 
 @import 'blocks/scaffolding/notifications/banner/banner';
 @import 'blocks/scaffolding/back-to-top/back-to-top';

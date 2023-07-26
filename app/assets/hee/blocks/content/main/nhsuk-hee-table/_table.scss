@@ -1,0 +1,100 @@
+table {
+    background-color: $color_nhsuk-white;
+    padding: nhsuk-spacing(3);
+    word-break: normal;
+
+    caption {
+        background-color: $color_nhsuk-white;
+        padding: nhsuk-spacing(3) nhsuk-spacing(3) 0 nhsuk-spacing(3);
+    }
+}
+
+.nhsuk-hee-table {
+    background-color: $color_nhsuk-white;
+    margin-bottom: 4em !important;
+    padding: nhsuk-spacing(3);
+
+    caption {
+        background-color: $color_nhsuk-white;
+        padding: nhsuk-spacing(3) nhsuk-spacing(3) 0 nhsuk-spacing(3);
+    }
+}
+
+.nhsuk-table-responsive {
+    .nhsuk-table__row {
+        display: block;
+        margin-bottom: 24px;
+    }
+
+    .nhsuk-table__cell {
+        @include mq($until: desktop) {
+            display: block;
+            min-width: 1px;
+            padding-right: 0;
+            text-align: right;
+        }
+
+        &:last-of-type {
+            @include mq($until: desktop) {
+                border-bottom: 3px solid $color_nhsuk-grey-4;
+            }
+        }
+    }
+
+    .nhsuk-table-responsive__heading {
+        @include mq($until: desktop) {
+            display: inline-block;
+            float: left;
+            font-weight: 600;
+            padding-right: 16px;
+            text-align: left;
+            width: 50%;
+        }
+    }
+}
+
+.nhsuk-hee-table--multicols {
+    background-color: $color_nhsuk-white;
+    width: 100%;
+
+    .nhsuk-table__head {
+        -webkit-clip-path: inset(50%);
+        border: 0;
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+    }
+
+    .nhsuk-table__row {
+        display: block !important;
+        margin-bottom: nhsuk-spacing(4);
+    }
+
+    .nhsuk-table__cell {
+        display: flex !important;
+        min-width: 1px;
+        padding-right: 0;
+        text-align: right;
+
+        &:last-of-type {
+            border-bottom: 3px solid $color_nhsuk-grey-4;
+        }
+    }
+
+    .nhsuk-table-responsive__heading {
+        display: block !important;
+        font-weight: 600;
+        padding-right: nhsuk-spacing(3);
+        text-align: left;
+        width: 50%;
+        text-align: left;
+        display: inline-block;
+        float: left;
+    }
+}
