@@ -17,8 +17,6 @@ import TableCard from './blocks/content/main/table-expander/table-expander';
 import Filter from './blocks/furniture/collections/hee-filter/filter';
 import FilterTag from './blocks/furniture/collections/hee-filtertag/filtertag';
 
-//import './polyfills';
-
 // Initialize components
 document.addEventListener('DOMContentLoaded', () => {
   Tabs();
