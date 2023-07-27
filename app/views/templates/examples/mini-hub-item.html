@@ -128,10 +128,30 @@
 {% endblock %}
 
 {% block pageRightbar %}
+  {{ relatedLinks({
+    heading: "Curabitur sit amet",
+    items: [
+      {
+        label: "Donec pulvinar",
+        url: "#"
+      },
+      {
+        label: "Duis consequat",
+        url: "#"
+      },
+      {
+        label: "Fusce at neque",
+        url: "#"
+      }
+    ]
+  })}}
+
   {{ card({
     heading: "Manage your GP application",
+    clickable: "true",
     descriptionHtml: "<a class=\"nhsuk-button\" href=\"https://oriel.nhs.uk/Web/\" draggable=\"false\">Go to Oriel</a>"
   }) }}
+
 {% endblock %}
 
 {% block pageFeature %}
