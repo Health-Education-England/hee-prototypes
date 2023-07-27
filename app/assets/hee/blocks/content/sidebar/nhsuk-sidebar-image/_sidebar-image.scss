@@ -1,17 +1,17 @@
-.nhsuk-image-image {
+.nhsuk-image--card {
   border: 1px solid $nhsuk-border-color;
   background-color: $color_nhsuk-white;
-  padding: 24px;
+  padding: nhsuk-spacing(4);
   margin-left: 0;
   margin-right: 0;
-  margin-bottom: 24px;
+  margin-bottom: nhsuk-spacing(4);
 
-  .nhsuk-image-image__img {
+  .nhsuk-image__img {
     max-width: 100%;
     height: auto;
   }
 
-  .nhsuk-image-image__caption {
+  .nhsuk-image__caption {
     font-size: 0.9rem;
     color: $nhsuk-text-color;
     padding: 0;
