@@ -1,6 +1,6 @@
 {%- from 'card/macro.njk' import card %}
 
-{% macro nhsukRelatedLinksList(params) %}
+{% macro relatedLinks(params) %}
   {% set cardContent %}
     <ul class="nhsuk-related-links-card__list">
       {% for item in params.items %}
