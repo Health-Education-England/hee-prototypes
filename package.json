@@ -16,7 +16,8 @@
     "backstop:generate-config": "docker-compose run backstopjs npm run backstop:generate-config",
     "playwright:test": "docker-compose run playwright npx playwright test --config ./tests/playwright/config/playwright.config.js",
     "playwright:test-trace": "docker-compose run playwright npx playwright test --config ./tests/playwright/config/playwright.config.js  --trace on",
-    "playwright:report": "gulp playwright-report"
+    "playwright:report": "gulp playwright-report",
+    "lint:css": "npx stylelint -f verbose --config ./tests/linters/.stylelintrc.js app/assets/hee/**/*.scss"
   },
   "author": "https://github.com/Health-Education-England/",
   "license": "MIT",
@@ -43,6 +44,10 @@
     "nhsuk-frontend": "^7.0.0",
     "nunjucks": "^3.2.4",
     "sass": "^1.63.5",
+    "stylelint": "^15.10.2",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-order": "^6.0.3",
+    "stylelint-scss": "^5.0.1",
     "webpack": "^5.87.0",
     "webpack-stream": "^7.0.0"
   },
