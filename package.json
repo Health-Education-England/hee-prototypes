@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "preinstall": "npx npm-force-resolutions",
+    "prepare": "husky install",
     "serve": "gulp serve",
     "build": "gulp build",
     "build:prod": "gulp build --prod",
@@ -41,6 +42,8 @@
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
     "nhsuk-frontend": "^7.0.0",
     "nunjucks": "^3.2.4",
     "prettier": "3.0.0",
