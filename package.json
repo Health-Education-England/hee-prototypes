@@ -65,5 +65,11 @@
     "minimist": "^1.2.6",
     "semver": "^7.5.2",
     "terser": "^4.8.1"
+  },
+  "lint-staged": {
+    "*.scss": [
+      "npx prettier --write",
+      "npx stylelint --fix -f verbose --config ./tests/linters/.stylelintrc.js"
+    ]
   }
 }
