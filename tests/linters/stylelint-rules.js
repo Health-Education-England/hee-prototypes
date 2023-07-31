@@ -33,5 +33,6 @@ module.exports = {
   'scss/at-mixin-pattern': '^[-_a-z]+$',
   'scss/percent-placeholder-pattern': '^[-_a-z]+$',
   'function-calc-no-unspaced-operator': true,
-  'scss/operator-no-unspaced': true
+  'scss/operator-no-unspaced': true,
+  'selector-class-pattern': null,
 }
