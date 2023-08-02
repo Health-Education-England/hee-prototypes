@@ -22,7 +22,7 @@
     "prettier:fix": "npx prettier app/assets/hee/**/*.scss app/assets/hee/**/*.js --write",
     "lint:css": "npx stylelint -f verbose --config ./tests/linters/.stylelintrc.js app/**/*.scss",
     "lint:css:fix": "npx stylelint --fix -f verbose --config ./tests/linters/.stylelintrc.js app/**/*.scss",
-    "lint:css:html": "npm run build && npx htmlhint --config ./tests/linters/.htmlhintrc public/**/*.html",
+    "lint:html": "npm run build && npx htmlhint --config ./tests/linters/.htmlhintrc public/**/*.html",
     "lint:js": "npx eslint -c ./tests/linters/.eslintrc.js app/assets/hee/**/*.js",
     "lint:js:fix": "npx eslint --fix -c ./tests/linters/.eslintrc.js app/assets/hee/**/*.js"
   },
