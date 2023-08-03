@@ -1,6 +1,6 @@
 .nhsuk-list--border {
   >li {
-    border-bottom: 1px solid $color_nhsuk-grey-4;
+    border-bottom: 1px solid $nhsuk-border-color;
     padding: nhsuk-spacing(2) 0 nhsuk-spacing(3);
     > {
       :first-child {
@@ -11,7 +11,7 @@
       }
     }
     &:first-of-type {
-      border-top: 1px solid #d8dde0;
+      border-top: 1px solid $nhsuk-border-color;
       padding: nhsuk-spacing(3) 0;
     }
   }
