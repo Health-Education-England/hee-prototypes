@@ -1,7 +1,7 @@
 export default () => {
   /**
   * Media transcript
-  * Elements with the selector '.nhsuk-transcript' are passed into this class
+  * Elements with the selector '.hee-media-transcript' are passed into this class
   */
   class Transcript {
     constructor(container) {
