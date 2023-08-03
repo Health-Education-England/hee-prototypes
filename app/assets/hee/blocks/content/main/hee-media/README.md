@@ -1,47 +1,131 @@
-"type" | string
+# Media embed
 
-Use appropriate value for your media type. Currently supported values:
+## Guidance
 
-"youtube"
-"vimeo"
-"anchor"
+This component provides a media embed from providers YouTube, Vimeo and Spotify / Anchor FM. Content editors are
+able to provide transcript text, as well as last reviewed dates to accompany the media embed.
 
-"mediaId" | String
+## Quick start example
 
-Find you video reference on YouTube or Vimeo. This will be a code in the URL for example:
+#### HTML markup (Youtube)
 
-https://www.youtube.com/watch?v=sHzqS03AVj8
+```html
+<div class="hee-media">
+    <h2>Pellentesque sit amet nulla</h2>
+    <div class="hee-media__description">
+        <p>Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus.</p>
+    </div>
+    <iframe class="youtube" src="https://youtube.com/embed/C0DPdy98e4c" title="Pellentesque sit amet nulla" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"></iframe>
+    <div class="hee-media__info">
+        <div class="hee-media__transcript">
+            <a href="javascript:void(0);">
+                <span class="hee-media__show-text">Show transcript</span>
+                <span class="hee-media__hide-text">Hide transcript</span>
+            </a>
+            <div class="hee-media__transcript-text">
+                <p>Donec pulvinar sollicitudin massa, nec pulvinar turpis dictum maximus.</p>
+            </div>
+        </div>
+        <div class="hee-media__reviews">
+            <p> Page last reviewed: 09/05/2022 </p>
+            <p> Next review due: 09/05/2023 </p>
+        </div>
+    </div>
+</div>
+```
 
-Or if you click on "Share"
+#### Nunjucks macro (Youtube)
 
-https://youtu.be/sHzqS03AVj8
+```
+{{ media({
+    title: "Pellentesque sit amet nulla",
+    description: "Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus.",
+    type: "youtube",
+    transcript: ["Donec pulvinar sollicitudin massa, nec pulvinar turpis dictum maximus."],
+    mediaId: "C0DPdy98e4c",
+    lastReview: "09/05/2022",
+    reviewDue: "09/05/2023"
+}) }}
+```
 
-The video ID is "sHzqS03AVj8"
+#### HTML markup (Vimeo)
 
-Please be carefull not to include any extra code at the end after a "?" such as https://youtu.be/sHzqS03AVj8?t=1 or https://www.youtube.com/embed/sHzqS03AVj8?start=2 unless you are deliberately enabling features from the "Embed" window.
+```html
+<div class="hee-media">
+    <h2>Pellentesque sit amet nulla</h2>
+    <div class="hee-media__description">
+        <p>Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus.</p>
+    </div>
+    <iframe class="vimeo" src="https://player.vimeo.com/video/226053498" title="Pellentesque sit amet nulla" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"></iframe>
+    <div class="hee-media__info">
+        <div class="hee-media__transcript">
+            <a href="javascript:void(0);">
+                <span class="hee-media__show-text">Show transcript</span>
+                <span class="hee-media__hide-text">Hide transcript</span>
+            </a>
+            <div class="hee-media__transcript-text">
+                <p>Donec pulvinar sollicitudin massa, nec pulvinar turpis dictum maximus.</p>
+            </div>
+        </div>
+        <div class="hee-media__reviews">
+            <p> Page last reviewed: 09/05/2022 </p>
+            <p> Next review due: 09/05/2023 </p>
+        </div>
+    </div>
+</div>
+```
 
-"src" | String
+#### Nunjucks macro (Vimeo)
 
-Use for your anchorFM string. Click "share" and copy "url"
+```
+{{ media({
+    title: "Pellentesque sit amet nulla",
+    description: "Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus.",
+    type: "vimeo",
+    transcript: ["Donec pulvinar sollicitudin massa, nec pulvinar turpis dictum maximus."],
+    mediaId: "226053498",
+    lastReview: "09/05/2022",
+    reviewDue: "09/05/2023"
+}) }}
+```
 
-"title" | String
+#### HTML markup (Spotify / AnchorFM)
 
-Give your video a relevant title, ideally the same as the media piece.
+```html
+<div class="hee-media">
+    <h2>Anchor.fm Example</h2>
+    <div class="hee-media__container anchor">
+        <iframe src="https://anchor.fm/health-education-england/embed/episodes/Robyn-Scargill---Trainee-nursing-associate-eqe7mk/a-a4l5nun" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div class="hee-media__info">
+        <div class="hee-media__reviews">
+            <p> Page last reviewed: 01/01/2021 </p>
+            <p> Next review due: 01/01/2022 </p>
+        </div>
+    </div>
+</div>
+```
 
-"transcript" | Array
+#### Nunjucks macro (Vimeo)
 
-If you have a transcript, write it out as a basic array. For example:
+```
+{{ media({
+  "type": "anchor",
+  "src": "https://anchor.fm/health-education-england/embed/episodes/Robyn-Scargill---Trainee-nursing-associate-eqe7mk/a-a4l5nun",
+  "title": "Anchor.fm Example",
+  "lastReview": "01/01/2021",
+  "reviewDue": "01/01/2022"
+}) }}
+```
 
-Let's start at the very beginning
-A very good place to start
-When you read you begin with A-be-see
-When you sing you begin with do-re-mi
+### Nunjucks arguments
 
-Becomes
+The macro takes the following arguments:
 
-[
-    "Let's start at the very beginning",
-    "A very good place to start",
-    "When you read you begin with A-be-see",
-    "When you sing you begin with do-re-mi"
-]
+| Name         | Type     | Required | Description                                              |
+|--------------|----------|----------|----------------------------------------------------------|
+| type         | string   | Yes      | Supported values: "youtube", "vimeo", "anchor"           |
+| mediaId      | string   | Yes      | Media id obtained from video media provider              |
+| src          | string   | Yes      | AnchorFM embed string                                    |
+| title        | string   | No       | Title displayed at top of component                      |
+| transcript   | string[] | No       | Each array item represents a text line in the transcript |
