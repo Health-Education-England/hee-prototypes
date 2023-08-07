@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Publications Collection - Templates - NWP Prototype Kit</title>
+  <title>Training Programmes - Page - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -77,7 +77,7 @@
               <li><a href="/templates/news-collection">News Collection</a></li>
               <li><a href="/templates/blog-collection">Blog Collection</a></li>
               <li><a href="/templates/case-studies-collection">Casestudies Collection</a></li>
-              <li class='current'><a href="/templates/publications-collection">Publications Collection</a></li>
+              <li><a href="/templates/publications-collection">Publications Collection</a></li>
               <li><a href="/templates/event-collection">Event Collection</a></li>
               <li><a href="/templates/search-bank-collection">Search Bank Collection</a></li>
               <li><a href="/templates/bulletin-collection">Bulletin Collection</a></li>
@@ -93,27 +93,27 @@
               <li><a href="/templates/publications-item">Publication Item</a></li>
               <li>Event Item</li>
               <li><a href="/templates/training-programmes-homepage">Training Programmes - Homepage</a></li>
-              <li><a href="/templates/training-programmes-page">Training Programmes - Page</a></li>
+              <li class='current'><a href="/templates/training-programmes-page">Training Programmes - Page</a></li>
             </ul>
           </nav>
         </div>
         <div class="page__main">
           <div class="page__header">
             <span class="nhsuk-caption-xl">Templates</span>
-            <h1>Publications Collection</h1>
-            <p class="nhsuk-lede-text">A layout with a left sidebar and right content area. Used for listing publication items.</p>
+            <h1>Training Programmes - Page</h1>
+            <p class="nhsuk-lede-text">Used to display information regarding specific Training Programmes on a single page.</p>
           </div>
           <h2>Example</h2>
           <div class="prototype__example scaled" style="height:400px;overflow:hidden;">
-            <a href="/templates/examples/publications-collection" target="_blank" class="prototype__example-link">Open this example in new window</a>
+            <a href="/hee-prototypes/templates/examples/training-programmes-page" target="_blank" class="prototype__example-link">Open this example in new window</a>
             <div class="thumbnail">
-              <iframe src="/templates/examples/publications-collection" height="780"></iframe>
+              <iframe src="/hee-prototypes/templates/examples/training-programmes-page" height="780"></iframe>
             </div>
           </div>
           <hr />
-          <pre><code>&lt;main class=&quot;page page--leftbar&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
+          <h2>HTML</h2>
+          <pre><code>&lt;main class=&quot;page page--rightbar&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
   &lt;div class=&quot;page__header&quot;&gt;
-    [ PAGE_MICROHERO ]
     &lt;div class=&quot;nhsuk-width-container&quot;&gt;
       &lt;h1&gt;[ PAGE_TITLE ]&lt;/h1&gt;
       &lt;span class=&quot;nhsuk-caption-xl&quot;&gt;[ PAGE_CAPTION ]&lt;/span&gt;
@@ -121,21 +121,37 @@
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;page__layout nhsuk-width-container&quot;&gt;
-    &lt;aside class=&quot;page__leftbar&quot;&gt;
-      [ FILTER_GROUP | FILTER_CLEAR ]
-    &lt;/aside&gt;
     &lt;div class=&quot;page__main&quot;&gt;
-      [ RESULTS_TITLE | RESULTS_SORTING ]
-      [ FILTER_TAG ]
-      [ RESULTS_LISTING ]
-      [ RESULTS_PAGINATION ]
+      &lt;div class=&quot;page__content&quot;&gt;
+        [ CONTENT--MAIN_BLOCKS ]
+      &lt;/div&gt;
+      [ PAGE_LASTUPDATED ]
     &lt;/div&gt;
+    &lt;aside class=&quot;page__rightbar&quot;&gt;
+      [ CONTENT--SIDEBAR_BLOCKS ]
+    &lt;/aside&gt;
   &lt;/div&gt;
   &lt;div class=&quot;page__footer&quot;&gt;
+    [ PUBLISHED_INFO ]
+    [ INTEMPLATE_BACKTOTOP ]
   &lt;/div&gt;
   &lt;section class=&quot;page__feature&quot;&gt;
+    [ CONTENT--FEATURED_BLOCKS ]
   &lt;/section&gt;
 &lt;/main&gt;</code></pre>
+          <hr />
+          <h2>Components</h2>
+          <h4>Furniture</h4>
+          <ul>
+            <li>Page</li>
+            <li>Content</li>
+          </ul>
+          <h4>Content Blocks</h4>
+          <ul>
+            <li>Main</li>
+            <li>Sidebar</li>
+            <li>Featured</li>
+          </ul>
         </div>
       </div>
     </div>
