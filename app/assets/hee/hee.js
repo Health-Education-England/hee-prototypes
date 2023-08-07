@@ -10,6 +10,7 @@ import Listing from './blocks/furniture/collections/hee-listing/listing';
 import Media from './blocks/content/main/hee-media/media';
 import NavMap from './blocks/content/main/hee-navmap/navmap';
 import Newsletter from './blocks/content/main/hee-newsletter/newsletter';
+//import SummaryCard from "./blocks/content/main/card--summary/summary";
 import Tabs from './blocks/content/main/hee-tabs/tabs';
 import TableCard from './blocks/content/main/table-expander/table-expander';
 
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   Media();
   NavMap();
   SubNav();
+  //SummaryCard();
   Newsletter();
   TableContents();
   TableCard();
