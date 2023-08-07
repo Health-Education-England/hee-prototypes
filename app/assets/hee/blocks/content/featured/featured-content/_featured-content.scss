@@ -31,9 +31,14 @@
   }
 
   .hee-featured-content-wrapper.double {
+    @include mq($from: desktop) {
+      column-gap: 24px;
+    }
+
     .hee-featured-content__item {
       @include mq($from: large-desktop) {
         flex-basis: 48%;
+        width: 100%;
       }
     }
   }
@@ -46,20 +51,6 @@
     span.hee-listing-item__details__label {
       @include mq($from: tablet) {
         width: auto;
-      }
-    }
-  }
-}
-
-.page--rightbar, .page--leftbar {
-  .page__content {
-    .hee-featured-content__item {
-      @include mq($from: desktop) {
-        flex-basis: 48%;
-      }
-
-      @include mq($from: large-desktop) {
-        flex-basis: 48%;
       }
     }
   }
