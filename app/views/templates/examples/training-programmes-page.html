@@ -264,8 +264,8 @@
 {% endblock %}
 
 {% block pageRightbar %}
-  {{ relatedLinksCard({
-    heading: "Pages related to this programme",
+  {{ programmeInfoCard({
+    heading: "Programme information",
     itemBorder: true,
     links: [
       {
@@ -317,7 +317,7 @@
     href: "#"
   }) }}
 
-  {{ relatedLinksCard({
+  {{ programmeInfoCard({
     heading: "Related links",
     links: [
       {
@@ -351,7 +351,7 @@
     ]
   })}}
 
-  {{ relatedLinksCard({
+  {{ programmeInfoCard({
     heading: "External links",
     links: [
       {
