@@ -1,6 +1,6 @@
 {% extends "prototype.html" %}
 
-{% block pageTitle %}Home - HEE Prototype Kit - TESTING{% endblock %}
+{% block pageTitle %}Home - HEE Prototype Kit{% endblock %}
 
 {% block main %}
 <main class="page page--prototype-home" id="maincontent" role="main">
@@ -8,7 +8,7 @@
     {{ hero({
         "heading": "Welcome to HEE's Prototype Kit",
         "text": "Helping you build consistent HEE websites.",
-        "imageURL": {{ basePath }} + "/images/young-child-using-tablet-device.jpg"
+        "imageURL": basePath + "/images/young-child-using-tablet-device.jpg"
     }) }}
   </div>
   <div class="page__main">
@@ -16,9 +16,9 @@
       <ul class="nhsuk-grid-row nhsuk-card-group">
         <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
           {{ card({
-            "href": {{ basePath }} + "/templates",
+            "href": basePath + "/templates",
             "clickable": "true",
-            "heading": "Templates - TESTING",
+            "heading": "Templates",
             "headingLevel": "3",
             "headingClasses": "nhsuk-heading-m",
             "description": ""
@@ -26,9 +26,9 @@
         </li>
         <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
           {{ card({
-            "href": {{ basePath }} + "/blocks",
+            "href": basePath + "/blocks",
             "clickable": "true",
-            "heading": "Blocks - TESTING",
+            "heading": "Blocks",
             "headingLevel": "3",
             "headingClasses": "nhsuk-heading-m",
             "description": ""
@@ -36,9 +36,9 @@
         </li>
         <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
           {{ card({
-            "href": {{ basePath }} + "/inventory",
+            "href": basePath + "/inventory",
             "clickable": "true",
-            "heading": "Inventory - TESTING",
+            "heading": "Inventory",
             "headingLevel": "3",
             "headingClasses": "nhsuk-heading-m",
             "description": ""
