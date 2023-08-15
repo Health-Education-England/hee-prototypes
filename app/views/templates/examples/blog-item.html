@@ -12,15 +12,15 @@
     breadcrumb({
       items: [
         {
-          href: "/",
+          href: basePath + "/",
           text: "Home"
         },
         {
-          href: "/templates",
+          href: basePath + "/templates",
           text: "Templates"
         },
         {
-          href: "/templates/examples",
+          href: basePath + "/templates/examples",
           text: "Examples"
         }
       ],
@@ -32,7 +32,7 @@
 
 {% block pageHeader %}
   {{ microHero({
-    "imgURL": "/images/young-child-using-tablet-device.jpg"
+    "imgURL": basePath + "/images/young-child-using-tablet-device.jpg"
   }) }}
   <div class="nhsuk-width-container">
     <h1>Blog Item</h1>

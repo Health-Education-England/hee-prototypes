@@ -13,19 +13,19 @@
     breadcrumb({
       items: [
         {
-          href: "/",
+          href: basePath + "/",
           text: "Home"
         },
         {
-          href: "/templates",
+          href: basePath + "/templates",
           text: "Templates"
         },
         {
-          href: "/templates/examples",
+          href: basePath + "/templates/examples",
           text: "Examples"
         }
       ],
-      href: "/templates/examples/"+page_url,
+      href: basePath + "/templates/examples/"+page_url,
       text: page_title
     })
   }}
@@ -67,7 +67,7 @@
   {{ hero({
     "heading": "Page Title",
     "text": "Pretium morbi mauris est purus tortor. Enim nec blandit rutrum diam nisl scelerisque.",
-    "imageURL": "/images/young-child-using-tablet-device.jpg"
+    "imageURL": basePath + "/images/young-child-using-tablet-device.jpg"
   }) }}
 {% endblock %}
 
