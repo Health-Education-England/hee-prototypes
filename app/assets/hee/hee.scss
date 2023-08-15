@@ -72,8 +72,13 @@
 @import 'blocks/content/main/hee-publication-doc/publication-doc';
 @import 'blocks/content/main/training-journey/training-journey';
 @import 'blocks/content/featured/featured-content/featured-content';
-//@import 'blocks/content/main/card--summary/summary';
+@import 'blocks/content/main/card--summary/summary';
 @import 'blocks/content/main/card--author/author';
 @import 'blocks/content/main/table-expander/table';
 @import 'blocks/content/main/quote/quote';
 @import 'blocks/content/main/hee-newsletter/newsletter';
+
+@import './parent-alpha';
+@import 'blocks/scaffolding/mega-menu/mega-menu';
+@import 'blocks/scaffolding/back-to-home-banner/back-to-home';
+@import 'blocks/scaffolding/secondary-menu/secondary-menu';

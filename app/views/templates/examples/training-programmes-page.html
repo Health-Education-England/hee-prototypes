@@ -264,52 +264,54 @@
 {% endblock %}
 
 {% block pageRightbar %}
-  {#{{ relatedLinksCard({
-    heading: "Pages related to this programme",
-    itemBorder: true,
-    links: [
+  {{ summaryCard({
+    title: "Programme summary",
+    items: [
       {
-        label: "Overview",
-        url: "#"
+        label: "Training programme",
+        value: "Core Training Surgery"
       },
       {
-        label: "Recruitment timelines",
-        url: "#"
+        label: "Training type",
+        url: "http://www.abc1234.com",
+        value: "Core Training"
       },
       {
-        label: "Eligibility",
-        url: "#"
+        label: "Professions",
+        url: "http://www.abc1234.com",
+        value: "Medical"
       },
       {
-        label: "Applying",
-        url: "#"
+        label: "Discipline",
+        url: "http://www.abc1234.com",
+        value: "Surgery"
       },
       {
-        label: "Shortlisting",
-        url: "#"
+        label: "Recruitment format",
+        value: "Uncoupled"
       },
       {
-        label: "Interviews and selection",
-        url: "#"
+        label: "Duration",
+        value: "24 months"
       },
       {
-        label: "Preferencing",
-        url: "#"
+        label: "Competition ratio",
+        value: "2.56"
       },
       {
-        label: "Person specification",
-        url: "#"
+        label: "Fill rate",
+        value: "100%"
       },
       {
-        label: "Curriculum",
-        url: "#"
+        label: "Opening",
+        value: "Thu 03/11/2022"
       },
       {
-        label: "Current posts",
-        url: "#"
+        label: "Closing",
+        value: "Thu 01/12/2022"
       }
     ]
-  })}}#}
+  }) }}
 
   {{ card({
     heading: "Apply for surgery on Oriel",
