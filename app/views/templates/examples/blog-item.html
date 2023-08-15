@@ -24,7 +24,7 @@
           text: "Examples"
         }
       ],
-      href: "/templates/examples/"+page_url,
+      href: basePath + "/templates/examples/"+page_url,
       text: page_title
     })
   }}
@@ -63,7 +63,7 @@
   <p>Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus, semper ligula quis, eleifend ante. Pellentesque non malesuada tellus. Donec porta faucibus lacus at elementum. Pellentesque tempus magna vulputate felis ultricies porta. Cras condimentum imperdiet lobortis. Suspendisse aliquam nisl ut augue ultrices, sit amet tristique enim placerat. Nunc augue sapien, rhoncus scelerisque urna quis, posuere semper enim.</p>
 
   {{ authorCard({
-    imgURL: "/images/doctor-headshot.png",
+    imgURL: basePath + "/images/doctor-headshot.png",
     title: "Mr",
     name: "First Last",
     initials: "JB",
@@ -85,7 +85,7 @@
 
   <div class="hee-card--author__container">
     {{ authorCard({
-      imgURL: "/images/doctor-headshot.png",
+      imgURL: basePath + "/images/doctor-headshot.png",
       title: "Mr",
       name: "First Last",
       initials: "JB",
@@ -106,7 +106,7 @@
     }) }}
 
     {{ authorCard({
-      imgURL: "/images/doctor-headshot.png",
+      imgURL: basePath + "/images/doctor-headshot.png",
       title: "Mr",
       name: "First Last",
       initials: "JB",
@@ -135,7 +135,7 @@
 
 {% block pageRightbar %}
   {{ authorCard({
-    imgURL: "/images/doctor-headshot.png",
+    imgURL: basePath + "/images/doctor-headshot.png",
     title: "Mr",
     name: "First Last",
     initials: "JB",
