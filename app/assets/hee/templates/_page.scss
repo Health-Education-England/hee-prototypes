@@ -59,7 +59,7 @@ html {
 
 .page__feature {
     h1, p, span {
-        @include mq($from: tablet) {
+        @include mq($from: desktop) {
             max-width: 66.6667%;
         }
     }

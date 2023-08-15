@@ -40,7 +40,7 @@
 {% endblock %}
 
 {% block pageContent %}
-  {#{{ summaryCard({
+  {{ summaryCard({
     title: "Programme summary",
     items: [
       {
@@ -87,7 +87,7 @@
         value: "Thu 01/12/2022"
       }
     ]
-  }) }}#}
+  }) }}
 
   <h2>Overview</h2>
   <p>Lorem ipsum dolor sit amet consectetur. Cursus massa pulvinar vestibulum dui in dictum elementum lacinia. Sagittis nisl vitae egestas convallis placerat amet ultrices. </p>
@@ -264,54 +264,52 @@
 {% endblock %}
 
 {% block pageRightbar %}
-  {{ summaryCard({
-    title: "Programme summary",
-    items: [
+  {{ relatedLinksCard({
+    heading: "Pages related to this programme",
+    itemBorder: true,
+    links: [
       {
-        label: "Training programme",
-        value: "Core Training Surgery"
+        label: "Overview",
+        url: "#"
       },
       {
-        label: "Training type",
-        url: "http://www.abc1234.com",
-        value: "Core Training"
+        label: "Recruitment timelines",
+        url: "#"
       },
       {
-        label: "Professions",
-        url: "http://www.abc1234.com",
-        value: "Medical"
+        label: "Eligibility",
+        url: "#"
       },
       {
-        label: "Discipline",
-        url: "http://www.abc1234.com",
-        value: "Surgery"
+        label: "Applying",
+        url: "#"
       },
       {
-        label: "Recruitment format",
-        value: "Uncoupled"
+        label: "Shortlisting",
+        url: "#"
       },
       {
-        label: "Duration",
-        value: "24 months"
+        label: "Interviews and selection",
+        url: "#"
       },
       {
-        label: "Competition ratio",
-        value: "2.56"
+        label: "Preferencing",
+        url: "#"
       },
       {
-        label: "Fill rate",
-        value: "100%"
+        label: "Person specification",
+        url: "#"
       },
       {
-        label: "Opening",
-        value: "Thu 03/11/2022"
+        label: "Curriculum",
+        url: "#"
       },
       {
-        label: "Closing",
-        value: "Thu 01/12/2022"
+        label: "Current posts",
+        url: "#"
       }
     ]
-  }) }}
+  })}}
 
   {{ card({
     heading: "Apply for surgery on Oriel",
