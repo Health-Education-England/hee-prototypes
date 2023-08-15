@@ -26,7 +26,7 @@
   <meta name="msapplication-square310x310logo" content="/hee-prototypes/favicons/largetile-310x310.png">
 </head>
 
-<body>
+<body class="">
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script>
@@ -144,11 +144,11 @@
     <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
       <div class="nhsuk-width-container">
         <ol class="nhsuk-breadcrumb__list">
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates/examples/standard-content">Standard Content</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates/examples/standard-content">Standard Content</a></li>
         </ol>
         <p class="nhsuk-breadcrumb__back">
-          <a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/templates/examples/standard-content">
+          <a class="nhsuk-breadcrumb__backlink" href="/templates/examples/standard-content">
             <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span> Standard Content </a>
         </p>
       </div>
@@ -158,7 +158,7 @@
   </div>
   <main class="page page--rightbar" id="maincontent" role="main">
     <div class="page__header has-microhero">
-      <div class="hee-microhero" style="background-image:url(/hee-prototypes/images/young-child-using-tablet-device.jpg);"></div>
+      <div class="hee-microhero" style="background-image:url(/images/young-child-using-tablet-device.jpg);"></div>
       <div class="nhsuk-width-container">
         <h1>Standard Content</h1>
         <span class="nhsuk-caption-xl">Caption</span>
@@ -169,7 +169,7 @@
       <div class="page__main">
         <div class="page__content">
           <p class="nhsuk-lede-text">Pulvinar id lorem tincidunt porttitor non commodo in eu massa. Eget tempor vel sollicitudin aliquam euismod. Scelerisque nisl, vel eros, nunc condimentum donec.</p>
-          <div class="hee-anchorlinks nhsuk-anchor-links" data-headings="h2,h3,h4,h5,h6">
+          <div class="nhsuk-anchor-links hee-anchorlinks" data-headings="h2,h3,h4,h5,h6">
             <h2 data-anchorlinksignore="true">On this page</h2>
           </div>
           <h2><strong>CLA Licence<br />Plus</strong></h2>
@@ -180,7 +180,7 @@
           <p>See also The British Library’s help about <a href="#">Library Privilege.</a></p>
           <div class="hee-table-expander">
             <div class="hee-table-expander__toggle">
-              <a data-label-open="Expand all" data-label-close="Close all" href="#"></a>
+              <a data-label-open="Expand all" data-label-close="Collapse all" href="#"></a>
             </div>
             <details class="nhsuk-details nhsuk-expander">
               <summary class="nhsuk-details__summary">
@@ -277,7 +277,7 @@
                 <button class="nhsuk-tabs__list-item" role="tab" aria-selected="false" aria-controls="tabsone-panel-3" id="tabsone-tab-3" tabindex="0"> Tab three </button>
               </div>
               <div class="nhsuk-tabs__panel" id="tabsone-panel-1" role="tabpanel" tabindex="0" aria-labelledby="tabsone-tab-1">
-                <img src="/hee-prototypes/images/young-child-using-tablet-device.jpg" alt="" />
+                <img src="/images/young-child-using-tablet-device.jpg" alt="" />
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               </div>
               <div class="nhsuk-tabs__panel" id="tabsone-panel-2" role="tabpanel" tabindex="0" aria-labelledby="tabsone-tab-2" hidden>
@@ -291,7 +291,7 @@
               <div class="nhsuk-tabs__list" role="tablist" aria-label="HEE Tabs Width With RH" data-module="nhsuk-tabs">
                 <button class="nhsuk-tabs__list-item" role="tab" aria-selected="false" aria-controls="tabsone-panel-mobile-1" id="tabsone-tab-mobile-1" tabindex="0"> Tab one </button>
                 <div class="nhsuk-tabs__panel" id="tabsone-panel-mobile-1" role="tabpanel" tabindex="0" aria-labelledby="tabsone-tab-mobile-1" hidden>
-                  <img src="/hee-prototypes/images/young-child-using-tablet-device.jpg" alt="" />
+                  <img src="/images/young-child-using-tablet-device.jpg" alt="" />
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
                 <button class="nhsuk-tabs__list-item" role="tab" aria-selected="false" aria-controls="tabsone-panel-mobile-2" id="tabsone-tab-mobile-2" tabindex="0"> Tab two </button>
@@ -338,72 +338,27 @@
             </a>
           </div>
         </div>
-        <div class="nhsuk-related-nav">
-          <h2 class="nhsuk-related-nav__heading">Quick Links</h2>
-          <nav role="navigation" class="nhsuk-related-nav__nav-section">
-            <ul class="nhsuk-related-nav__list nhsuk-related-nav__list--sub">
-              <li class="nhsuk-related-nav__item">
-                <a class="nhsuk-related-nav__link" href="#">Briefing for library staff on Library and inter-library document supply and copyright in the NHS</a>
-              </li>
-              <li class="nhsuk-related-nav__item">
-                <a class="nhsuk-related-nav__link" href="#">Decision Tree</a>
-              </li>
-              <li class="nhsuk-related-nav__item">
-                <a class="nhsuk-related-nav__link" href="#">NHS-HE crossover copyright queries: guidance for higher education and NHS Library staff</a>
-              </li>
-              <li class="nhsuk-related-nav__item">
-                <a class="nhsuk-related-nav__link" href="#">CILIP Copyright Hub</a>
-              </li>
-              <li class="nhsuk-related-nav__item">
-                <a class="nhsuk-related-nav__link" href="#">NHS Copy Aid</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="hee-card hee-card--related-links ">
-          <div class="hee-card--related-links__content">
-            <h3 class="hee-card--related-links__heading">Related Posts</h3>
-            <ul class="hee-card--related-links__list">
+        <div class="nhsuk-card">
+          <div class="nhsuk-card__content">
+            <h3 class="nhsuk-card__heading"> Related Posts </h3>
+            <ul class="nhsuk-related-links-card__list">
               <li>
-                <a class="hee-card--related-links__link" href="#">Expert searching</a>
+                <a class="nhsuk-related-links-card__link" href="#"> Expert searching </a>
               </li>
               <li>
-                <a class="hee-card--related-links__link" href="#">Search training as a longer title</a>
+                <a class="nhsuk-related-links-card__link" href="#"> Search training as a longer title </a>
               </li>
               <li>
-                <a class="hee-card--related-links__link" href="#">Search bank</a>
+                <a class="nhsuk-related-links-card__link" href="#"> Search bank </a>
               </li>
               <li>
-                <a class="hee-card--related-links__link" href="#">Costing</a>
+                <a class="nhsuk-related-links-card__link" href="#"> Costing </a>
               </li>
               <li>
-                <a class="hee-card--related-links__link" href="#">Search training</a>
+                <a class="nhsuk-related-links-card__link" href="#"> Search training </a>
               </li>
             </ul>
           </div>
-        </div>
-        <div class="hee-card hee-card--person">
-          <div class="hee-card--header">
-            <div class="hee-card__image ">
-              <div class="hee-card__initials">
-                <span>BS</span>
-              </div>
-            </div>
-            <div class="hee-card--details">
-              <h2 class="hee-card__name" aria-label="Name"> Dr Bobby Smith </h2>
-              <span class="hee-card__pronouns" aria-label="Pronouns">They/them</span>
-              <h3 class="nhsuk-heading-m hee-card__jobtitle" aria-label="Job Title">Content Editor</h3>
-              <p class="hee-card__department" aria-label="Department">National Website Platform</p>
-              <p class="hee-card__organisation" aria-label="Organisation">NHS UK</p>
-            </div>
-          </div>
-          <ul class="hee-card__contact">
-            <li class="hee-card__telephone hee-card__contact__item" aria-label="Telephone"><a href="tel:01162344444;" title="Opens telephone">01162344444</a></li>
-            <li class="hee-card__email hee-card__contact__item" aria-label="Email"><a href="mailto:bobby.smithandthelongestemail@hee.co.uk;" title="Opens email">bobby.smithandthelongestemail@hee.co.uk</a></li>
-            <li class="hee-card__website hee-card__contact__item" aria-label="Website"><a href="http://nhs.uk/" title="Opens website">http://nhs.uk/</a></li>
-            <li class="hee-card__twitter hee-card__contact__item" aria-label="Twitter"><a href="https://twitter.com/nhsengland" title="Opens twitter">@nhsengland</a></li>
-          </ul>
-          <p class="hee-card__address" aria-label="Address"> 2 Stephenson St<br> Birmingham<br> West Midlands<br> B1 2SE </p>
         </div>
       </aside>
     </div>
@@ -411,9 +366,9 @@
     </div>
     <section class="page__feature">
       <div class="nhsuk-width-container">
-        <h2>Related content</h2>
-        <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet. Nunc turpis vel aliquam lacus arcu. Sodales nullam id lectus orci quis sed. dsf</p>
         <div class="hee-featured-content">
+          <h2>Related content</h2>
+          <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet. Nunc turpis vel aliquam lacus arcu. Sodales nullam id lectus orci quis sed. dsf</p>
           <div class="hee-featured-content-wrapper ">
             <div class="hee-featured-content__item">
               <div class="hee-listing-item">
