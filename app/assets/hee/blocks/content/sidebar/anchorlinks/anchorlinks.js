@@ -7,7 +7,6 @@ export default () => {
     constructor(anchorLinks) {
       this.anchorLinks = anchorLinks;
 
-      // Disable anchor link generation logic if component is TOC variant.
       if (this.anchorLinks.hasAttribute('data-toc-js')) {
         return;
       }

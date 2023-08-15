@@ -10,19 +10,19 @@
     breadcrumb({
     items: [
         {
-            href: basePath + "/",
+            href: "/",
             text: "Home"
         },
         {
-            href: basePath + "/blocks",
+            href: "/blocks",
             text: "Blocks"
         },
         {
-            href: basePath + "/blocks/content",
+            href: "/blocks/content",
             text: "Content"
         }
     ],
-        href: basePath + "/blocks/"+page_url,
+        href: "/blocks/"+page_url,
       text: page_title
     }) 
 }}
@@ -48,7 +48,7 @@
 <h3>Example</h3>
 {{ example({
     view: 'block',
-    url: basePath + '/blocks/content/examples/' + page_url,
+    url: '/blocks/content/examples/' + page_url,
     height: '620'
 }) }}
 

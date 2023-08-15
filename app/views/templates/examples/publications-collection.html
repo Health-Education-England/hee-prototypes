@@ -2,19 +2,19 @@
 
 {% block pageTitle %}Publications Collection - Examples - NWP Prototype Kit{% endblock %}
 
-{% block breadcrumbs %}
-{{ 
-    breadcrumb({
+{% block pageBreadcrumbs %}
+  {{
+  breadcrumb({
     items: [
-        {
-            href: basePath + "/",
-            text: "Home"
-        }
+      {
+        href: "/",
+        text: "Home"
+      }
     ],
-        href: basePath + "/templates/examples/publications-collection",
-        text: "News Collection"
-    }) 
-}}
+    href: "/templates/examples/publications-collection",
+    text: "News Collection"
+  })
+  }}
 {% endblock %}
 
 {% block pageHeader %}
@@ -57,8 +57,7 @@
           },
           {
             text: "Item three",
-            value: "item_three",
-            checked: true
+            value: "item_three"
           }
         ]
       }

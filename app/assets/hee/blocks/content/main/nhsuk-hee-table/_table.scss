@@ -1,0 +1,136 @@
+.nhsuk-hee-table {
+    margin-bottom: 4em !important;
+    background-color: #fff;
+}
+.nhsuk-hee-table--multicols {
+    width: 100%;
+    background-color: #fff;
+}
+.nhsuk-hee-table--multicols caption {
+    font-size: 1.375rem;
+    line-height: 1.45455;
+}
+.nhsuk-hee-table--multicols .nhsuk-table__head {
+    -webkit-clip-path: inset(50%);
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+.nhsuk-hee-table--multicols .nhsuk-table__body .nhsuk-table__row {
+    display: block;
+    margin-bottom: 24px;
+}
+.nhsuk-hee-table--multicols .nhsuk-table__body .nhsuk-table__row .nhsuk-table__cell {
+    display: flex;
+    justify-content: space-between;
+    min-width: 1px;
+    padding-right: 0;
+    text-align: right;
+}
+.nhsuk-hee-table--multicols .nhsuk-table__body .nhsuk-table__row .nhsuk-table__cell:last-of-type {
+    border-bottom: 3px solid #d8dde0;
+}
+.nhsuk-hee-table--multicols .nhsuk-table__body .nhsuk-table__row .nhsuk-table-responsive__heading {
+    font-weight: 600;
+    padding-right: 16px;
+    text-align: left;
+    display: block;
+}
+
+.nhsuk-hee-table {
+    background-color: #fff;
+    padding: 16px;
+}
+.nhsuk-hee-table caption {
+    background-color: #fff;
+    padding: 16px 16px 0 16px;
+}
+
+table {
+    background-color: #fff;
+    padding: 16px;
+    word-break: normal;
+}
+table caption {
+    background-color: #fff;
+    padding: 16px 16px 0 16px;
+}
+.nhsuk-hee-table {
+    margin-bottom: 4em !important;
+    background-color: #fff;
+}
+
+
+
+@media (max-width: 48.0525em) {
+    .nhsuk-table-responsive .nhsuk-table__body .nhsuk-table__row {
+        display: block;
+        margin-bottom: 24px;
+    }
+    .nhsuk-table-responsive .nhsuk-table__body .nhsuk-table__row .nhsuk-table__cell {
+        display: block;
+        min-width: 1px;
+        padding-right: 0;
+        text-align: right;
+    }
+    .nhsuk-table-responsive .nhsuk-table__body .nhsuk-table__row .nhsuk-table__cell:last-of-type {
+        border-bottom: 3px solid #d8dde0;
+    }
+    .nhsuk-table-responsive .nhsuk-table__body .nhsuk-table__row .nhsuk-table-responsive__heading {
+        width: 50%;
+        font-weight: 600;
+        padding-right: 16px;
+        text-align: left;
+        display: inline-block;
+        float: left;
+    }
+}
+.nhsuk-hee-table--multicols {
+    width: 100%;
+    background-color: #fff;
+}
+.nhsuk-hee-table--multicols caption {
+    font-size: 1.375rem;
+    line-height: 1.45455;
+}
+.nhsuk-hee-table--multicols .nhsuk-table__head {
+    -webkit-clip-path: inset(50%);
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+.nhsuk-hee-table--multicols .nhsuk-table__body .nhsuk-table__row {
+    display: block;
+    margin-bottom: 24px;
+}
+.nhsuk-hee-table--multicols .nhsuk-table__body .nhsuk-table__row .nhsuk-table__cell {
+    display: block;
+    min-width: 1px;
+    padding-right: 0;
+    text-align: right;
+}
+.nhsuk-hee-table--multicols .nhsuk-table__body .nhsuk-table__row .nhsuk-table__cell:last-of-type {
+    border-bottom: 3px solid #d8dde0;
+}
+.nhsuk-hee-table--multicols .nhsuk-table__body .nhsuk-table__row .nhsuk-table-responsive__heading {
+    width: 50%;
+    font-weight: 600;
+    padding-right: 16px;
+    text-align: left;
+    display: inline-block;
+    float: left;
+}

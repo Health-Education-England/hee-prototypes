@@ -7,11 +7,11 @@
   breadcrumb({
     items: [
       {
-        href: basePath + "/",
+        href: "/",
         text: "Home"
       }
     ],
-    href: basePath + "/templates/examples/event-item",
+    href: "/templates/examples/event-item",
     text: "Event Item"
   })
   }}
@@ -77,10 +77,11 @@
   {% endfor %}
 
   <div class="nhsuk-width-container">
-    <h2>Related Events</h2>
-    <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet. Nunc turpis vel aliquam lacus arcu. Sodales nullam id lectus orci quis sed. dsf</p>
-
-    {{ featuredContent({items: items}) }}
+    {{ featuredContent({
+      title: "Related Events",
+      summary: "Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet. Nunc turpis vel aliquam lacus arcu. Sodales nullam id lectus orci quis sed. dsf",
+      items: items
+    }) }}
   </div>
 {% endblock %}
 
@@ -113,18 +114,5 @@
         value: "<a href=\"#\">www.website.com</a>"
       }
     ]
-  }) }}
-
-  {{ ctaCard({
-    title: "Book this event",
-    text: "Book on Eventbrite",
-    href: "#"
-  }) }}
-
-  {{ ctaCard({
-    title: "Add to calendar",
-    text: "Add to calendar",
-    href: "#",
-    secondary: true
   }) }}
 {% endblock %}

@@ -12,44 +12,49 @@
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
-  <link href="/hee-prototypes/css/nhsuk-7.0.0.min.css" rel="stylesheet" />
-  <link href="/hee-prototypes/css/hee.css" rel="stylesheet" />
-  <link rel="shortcut icon" href="/hee-prototypes/favicons/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="/hee-prototypes/favicons/apple-touch-icon-180x180.png">
-  <link rel="mask-icon" href="/hee-prototypes/favicons/favicon.svg" color="#005eb8">
-  <link rel="icon" sizes="192x192" href="/hee-prototypes/favicons/favicon-192x192.png">
-  <meta name="msapplication-TileImage" content="/hee-prototypes/favicons/mediumtile-144x144.png">
+  <link href="/css/nhsuk-4.1.0.min.css" rel="stylesheet" />
+  <link href="/css/hee.css" rel="stylesheet" />
+  <style>
+    .example {}
+
+    .example--template {}
+
+    .example--blocks {
+      padding: 1em;
+      background-color: #f0f4f5;
+    }
+  </style>
+  <link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png">
+  <link rel="mask-icon" href="/nhsuk-frontend/assets/favicons/favicon.svg" color="#005eb8">
+  <link rel="icon" sizes="192x192" href="/nhsuk-frontend/assets/favicons/favicon-192x192.png">
+  <meta name="msapplication-TileImage" content="/nhsuk-frontend/assets/favicons/mediumtile-144x144.png">
   <meta name="msapplication-TileColor" content="#005eb8">
-  <meta name="msapplication-square70x70logo" content="/hee-prototypes/favicons/smalltile-70x70.png">
-  <meta name="msapplication-square150x150logo" content="/hee-prototypes/favicons/mediumtile-150x150.png">
-  <meta name="msapplication-wide310x150logo" content="/hee-prototypes/favicons/widetile-310x150.png">
-  <meta name="msapplication-square310x310logo" content="/hee-prototypes/favicons/largetile-310x310.png">
+  <meta name="msapplication-square70x70logo" content="/nhsuk-frontend/assets/favicons/smalltile-70x70.png">
+  <meta name="msapplication-square150x150logo" content="/nhsuk-frontend/assets/favicons/mediumtile-150x150.png">
+  <meta name="msapplication-wide310x150logo" content="/nhsuk-frontend/assets/favicons/widetile-310x150.png">
+  <meta name="msapplication-square310x310logo" content="/nhsuk-frontend/assets/favicons/largetile-310x310.png">
 </head>
 
-<body>
+<body class="example example--blocks">
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script>
   <div class="breadcrumbs">
   </div>
-  <div class="banners">
-  </div>
   <div class="hee-card hee-card--department">
-    <div class="hee-card--department__header">
-      <h2 class="nhsuk-heading-m hee-card__jobtitle" aria-label="Department name"> Department Name </h2>
-      <p class="hee-card__organisation" aria-label="Organisation">Organisation</p>
-    </div>
+    <h2 class="nhsuk-heading-m hee-card__jobtitle" aria-label="Department name"> Paediatrics </h2>
+    <p class="hee-card__organisation" aria-label="Organisation">University Hospitals Birmingham NHS Foundation Trust </p>
+    <hr />
     <ul class="hee-card__contact">
-      <li class="hee-card__telephone hee-card__contact__item" aria-label="Telephone"><a href="tel:07575 731 776;" title="Opens telephone">07575 731 776</a></li>
-      <li class="hee-card__email hee-card__contact__item" aria-label="Email"><a href="mailto:email@hee.co.uk;" title="Opens email">email@hee.co.uk</a></li>
-      <li class="hee-card__website hee-card__contact__item" aria-label="Website"><a href="http://nhs.uk/" title="Opens website">http://nhs.uk/</a></li>
+      <li class="hee-card__email" aria-label="Email"><a href="mailto:http://nhs.uk/;">email@hee.co.uk</a></li>
+      <li class="hee-card__website" aria-label="Website"><a href="http://nhs.uk/">http://nhs.uk/</a></li>
     </ul>
-    <p class="hee-card__address" aria-label="Address">Health Education England<br> 3 Piccadilly<br> Manchester<br> M1 3BN</p>
-    <p class="hee-card__description" aria-label="Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque ac pellentesque in sapien.</p>
+    <p class="hee-card__description" aria-label="Description">Lorem ipsum dolor sit amet</p>
   </div>
-  <script src="/hee-prototypes/js/jquery-3.3.1.min.js"></script>
-  <script src="/hee-prototypes/js/nhsuk-7.0.0.min.js"></script>
-  <script src="/hee-prototypes/js/hee.js"></script>
+  <script src="/js/jquery-3.3.1.min.js"></script>
+  <script src="/js/nhsuk.min.js"></script>
+  <script src="/js/hee.js"></script>
 </body>
 
 </html>

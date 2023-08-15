@@ -3,18 +3,18 @@
 {% block pageTitle %}Blog Collection - Examples - NWP Prototype Kit{% endblock %}
 
 {% block breadcrumbs %}
-{{ 
-    breadcrumb({
+  {{
+  breadcrumb({
     items: [
-        {
-            href: basePath + "/",
-            text: "Home"
-        }
+      {
+        href: "/",
+        text: "Home"
+      }
     ],
-        href: basePath + "/templates/examples/news-collection",
-        text: "News Collection"
-    }) 
-}}
+    href: "/templates/examples/news-collection",
+    text: "News Collection"
+  })
+  }}
 {% endblock %}
 
 {% block pageHeader %}
@@ -31,27 +31,27 @@
         title: "Category",
         showClearToggle: true,
         items: [
-          {
-            text: "Learning and development",
-            value: "item_one",
-            checked: true
-          },
-          {
-            text: "School leavers",
-            value: "item_two",
-            checked: true
-          },
-          {
-            text: "Graduates",
-            value: "graduates",
-            checked: false
-          },
-          {
-            text: "Blended learning",
-            value: "blended",
-            checked: false
-          }
-        ]
+        {
+          text: "Learning and development",
+          value: "item_one",
+          checked: true
+        },
+        {
+          text: "School leavers",
+          value: "item_two",
+          checked: true
+        },
+        {
+          text: "Graduates",
+          value: "graduates",
+          checked: false
+        },
+        {
+          text: "Blended learning",
+          value: "blended",
+          checked: false
+        }
+      ]
       }
     ]
   }) }}

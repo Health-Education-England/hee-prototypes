@@ -6,56 +6,56 @@
 {% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
 
 {% block breadcrumbs %}
-{{ 
-    breadcrumb({
+  {{
+  breadcrumb({
     items: [
-        {
-            href: basePath + "/",
-            text: "Home"
-        },
-        {
-            href: basePath + "/blocks",
-            text: "Blocks"
-        },
-        {
-            href: basePath + "/blocks/scaffolding",
-            text: "Scaffolding"
-        }
+      {
+        href: basePath + "/",
+        text: "Home"
+      },
+      {
+        href: basePath + "/blocks",
+        text: "Blocks"
+      },
+      {
+        href: basePath + "/blocks/scaffolding",
+        text: "Scaffolding"
+      }
     ],
-        href: basePath + "/blocks/scaffolding/"+page_url,
-        text: page_title
-    }) 
-}}
+    href: basePath + "/blocks/scaffolding/"+page_url,
+    text: page_title
+  })
+  }}
 {% endblock %}
 
 {% block pageLeftbar %}
-{{ subnav({
+  {{ subnav({
     area: 'blocks',
     subarea: 'scaffolding'
-}) }}
+  }) }}
 {% endblock %}
 
 {% block pageHeader %}
-    <span class="nhsuk-caption-xl">Scaffolding</span>
-    <h1>{{ page_title }}</h1>
-    <p class="nhsuk-lede-text"></p>
+  <span class="nhsuk-caption-xl">Scaffolding</span>
+  <h1>{{ page_title }}</h1>
+  <p class="nhsuk-lede-text"></p>
 {% endblock %}
 
 {% block pageContent %}
 
-<p>Navigation trail displayed at the top of pages.</p>
+  <p>Navigation trail displayed at the top of pages.</p>
 
-<h2>Example</h2>
-{{ example({
+  <h2>Example</h2>
+  {{ example({
     url: basePath + '/blocks/scaffolding/examples/' + page_url,
     height: '400px'
-}) }}
+  }) }}
 
-<hr />
+  <hr />
 
-<h2>Macro</h2>
-{{ highlight({
-  html: '{{
+  <h2>Macro</h2>
+  {{ highlight({
+    html: '{{
     breadcrumb({
       items: [
         {
@@ -75,12 +75,12 @@
       text: "Breadcrumbs"
     })
 }}'
-}) }}
+  }) }}
 
-<hr />
+  <hr />
 
-<h3>HTML</h3>
-{{ highlight({
+  <h3>HTML</h3>
+  {{ highlight({
     html : '
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <div class="nhsuk-width-container">
@@ -97,8 +97,8 @@
   </div>
 </nav>
 '
-})
-}}
+  })
+  }}
 
 {% endblock %}
 

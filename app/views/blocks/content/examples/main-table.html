@@ -1,6 +1,7 @@
 {% extends "example-blocks.html" %}
 
 {% block main %}
+  <h2>A responsive table</h2>
   {{ table({
     tableClasses: 'nhsuk-hee-table',
     responsive: true,
@@ -63,4 +64,167 @@
       ]
     ]
   })  }}
+
+  <h3>A WYSIWYG table (non-responsive)</h3>
+  <table role="table">
+    <thead role="rowgroup">
+    <tr role="row">
+      <th role="columnheader" scope="col">
+        Age
+      </th>
+      <th role="columnheader" scope="col">
+        How much
+      </th>
+      <th role="columnheader" scope="col">
+        How often
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr role="row">
+      <td role="cell">
+        <span>Age </span>7 to 9 years
+      </td>
+      <td role="cell">
+        <span>How much? </span>200mg
+      </td>
+      <td role="cell">
+        <span>How often? </span>Max 3 times in 24 hours
+      </td>
+    </tr>
+    <tr role="row">
+      <td role="cell">
+        <span>Age </span>10 to 11 years
+      </td>
+      <td role="cell">
+        <span>How much medicine do we need? </span>200mg to 300mg and maybe a  bit more if they're really poorly
+      </td>
+      <td role="cell">
+        <span>How often? </span>Max 3 times in 24 hours
+      </td>
+    </tr>
+    <tr role="row">
+      <td role="cell">
+        <span>Age</span>12 to 17 years
+      </td>
+      <td role="cell">
+        <span>How much? </span><a href="#">200mg to 400mg</a> (Open in new window)
+      </td>
+      <td role="cell">
+        <span>How often? </span>Max 3 times in 24 hours
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <h2>A table with more than 3 rows</h2>
+  {{
+  table({
+    tableClasses: 'nhsuk-hee-table nhsuk-hee-table--multicols',
+    responsive: true,
+    panel: false,
+    caption: "Ibuprofen tablet dosages for children",
+    firstCellIsHeader: false,
+    head: [
+      {
+        text: "Age"
+      },
+      {
+        text: "How much"
+      },
+      {
+        text: "How often"
+      },
+      {
+        text: "How often"
+      },
+      {
+        text: "How often"
+      },
+      {
+        text: "How often"
+      }
+    ],
+    rows: [
+      [
+        {
+          header: "Age",
+          text: "7 to 9 years"
+        },
+        {
+          header: "How often?",
+          text: "200mg"
+        },
+        {
+          header: "How often?",
+          text: "Max 3 times in 24 hours"
+        },
+        {
+          header: "How often?",
+          text: "Max 3 times in 24 hours"
+        },
+        {
+          header: "How often?",
+          text: "Max 3 times in 24 hours"
+        },
+        {
+          header: "How often?",
+          text: "Max 3 times in 24 hours"
+        }
+      ],
+      [
+        {
+          header: "Age",
+          text: "10 to 11 years"
+        },
+        {
+          header: "How much?",
+          text: "<a href=''>200mg to 300mg</a>"
+        },
+        {
+          header: "How often?",
+          text: "Max 3 times in 24 hours"
+        },
+        {
+          header: "How often?",
+          text: "Max 3 times in 24 hours"
+        },
+        {
+          header: "How often?",
+          text: "Max 3 times in 24 hours"
+        },
+        {
+          header: "How often?",
+          text: "Max 3 times in 24 hours"
+        }
+      ],
+      [
+        {
+          header: "Age",
+          text: "12 to 17 years"
+        },
+        {
+          header: "How much?",
+          text: "200mg to 400mg"
+        },
+        {
+          header: "How often?",
+          text: "Max 3 times in 24 hours"
+        },
+        {
+          header: "How often?",
+          text: "Max 3 times in 24 hours"
+        },
+        {
+          header: "How often?",
+          text: "Max 3 times in 24 hours"
+        },
+        {
+          header: "How often?",
+          text: "Max 3 times in 24 hours"
+        }
+      ]
+    ]
+  })
+  }}
 {% endblock %}

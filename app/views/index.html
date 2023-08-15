@@ -8,46 +8,43 @@
     {{ hero({
         "heading": "Welcome to HEE's Prototype Kit",
         "text": "Helping you build consistent HEE websites.",
-        "imageURL": basePath + "/images/young-child-using-tablet-device.jpg"
+        "imageURL": "/images/young-child-using-tablet-device.jpg"
     }) }}
   </div>
   <div class="page__main">
     <div class="nhsuk-width-container">
-      {% set content %}
-        <ul class="nhsuk-grid-row nhsuk-card-group">
-          <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-            {{ card({
-              "href": basePath + "/templates",
-              "clickable": "true",
-              "heading": "Templates",
-              "headingLevel": "3",
-              "headingClasses": "nhsuk-heading-m",
-              "description": ""
-            }) }}
-          </li>
-          <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-            {{ card({
-              "href": basePath + "/blocks",
-              "clickable": "true",
-              "heading": "Blocks",
-              "headingLevel": "3",
-              "headingClasses": "nhsuk-heading-m",
-              "description": ""
-            }) }}
-          </li>
-          <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-            {{ card({
-              "href": basePath + "/inventory",
-              "clickable": "true",
-              "heading": "Inventory",
-              "headingLevel": "3",
-              "headingClasses": "nhsuk-heading-m",
-              "description": ""
-            }) }}
-          </li>
-        </ul>
-      {% endset %}
-      {{ homepageSection(content) }}
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          {{ card({
+            "href": "/templates",
+            "clickable": "true",
+            "heading": "Templates",
+            "headingLevel": "3",
+            "headingClasses": "nhsuk-heading-m",
+            "description": ""
+          }) }}
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          {{ card({
+            "href": "/blocks",
+            "clickable": "true",
+            "heading": "Blocks",
+            "headingLevel": "3",
+            "headingClasses": "nhsuk-heading-m",
+            "description": ""
+          }) }}
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          {{ card({
+            "href": "/inventory",
+            "clickable": "true",
+            "heading": "Inventory",
+            "headingLevel": "3",
+            "headingClasses": "nhsuk-heading-m",
+            "description": ""
+          }) }}
+        </li>
+      </ul>
     </div>
   </div>
 </main>

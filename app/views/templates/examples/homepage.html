@@ -13,19 +13,19 @@
     breadcrumb({
       items: [
         {
-          href: basePath + "/",
+          href: "/",
           text: "Home"
         },
         {
-          href: basePath + "/templates",
+          href: "/templates",
           text: "Templates"
         },
         {
-          href: basePath + "/templates/examples",
+          href: "/templates/examples",
           text: "Examples"
         }
       ],
-      href: basePath + "/templates/examples/"+page_url,
+      href: "/templates/examples/"+page_url,
       text: page_title
     })
   }}
@@ -67,7 +67,7 @@
   {{ hero({
     "heading": "Page Title",
     "text": "Pretium morbi mauris est purus tortor. Enim nec blandit rutrum diam nisl scelerisque.",
-    "imageURL": basePath + "/images/young-child-using-tablet-device.jpg"
+    "imageURL": "/images/young-child-using-tablet-device.jpg"
   }) }}
 {% endblock %}
 
@@ -79,7 +79,7 @@
   {{ tableExpander({
     showToggleLink: true,
     toggleLabelOpen: "Expand all",
-    toggleLabelClose: "Close all",
+    toggleLabelClose: "Collapse all",
     items: [
       {
         title: "First item",
@@ -266,84 +266,4 @@
       </li>
     </ul>
   </div>
-    {{ blocklinks({
-      heading: "Learning 2 Columns",
-      HTML: "<p>Discover resources and information designed to support you on your learning journey</p>",
-      columns: "2",
-      links: [
-        {
-          url: "#",
-          label: "Learning Zone"
-        },
-        {
-          url: "#",
-          label: "Equality, Diversity and Inclusion"
-        },
-        {
-          url: basePath + "/listing",
-          label: "Talent Management Toolkit"
-        },
-        {
-          url: basePath + "/listing",
-          label: "Case studies"
-        }]
-    })
-    }}
-    <h2>Navigation cards component</h2>
-    <div class="nhsuk-grid-row">
-      <ul class="nhsuk-card-group">
-        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-          {{ card({
-            "imgURL": "https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg",
-            "href": "#",
-            "clickable": "true",
-            "heading": "Facilisi lorem tristique.",
-            "headingClasses": "nhsuk-heading-m",
-            "description": "Risus vel, ut in in eu. Tincidunt purus adipiscing."
-          }) }}
-        </li>
-        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-          {{ card({
-            "imgURL": "https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg",
-            "href": "#",
-            "clickable": "true",
-            "heading": "Ornare ac tincidunt.",
-            "headingClasses": "nhsuk-heading-m",
-            "description": "Nibh venenatis pretium semper facilisis ante consequat bibendum magna. "
-          }) }}
-        </li>
-        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-          {{ card({
-            "imgURL": "https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg",
-            "href": "#",
-            "clickable": "true",
-            "heading": "Tristique phasellus.",
-            "headingClasses": "nhsuk-heading-m",
-            "description": "Imperdiet a id vestibulum bibendum. Facilisis amet."
-          }) }}
-        </li>
-        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-          {{ card({
-            "imgURL": "https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg",
-            "href": "#",
-            "clickable": "true",
-            "heading": "Cursus dolor, faucibus nam orci. Nunc lacus orci nibh risus sed.",
-            "headingClasses": "nhsuk-heading-m",
-            "description": "Libero dignissim pharetra pharetra enim, vitae amet, aliquam. Nunc tincidunt."
-          }) }}
-        </li>
-        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-          {{ card({
-            "imgURL": "https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg",
-            "href": "#",
-            "clickable": "true",
-            "heading": "Faucibus nunc donec.",
-            "headingClasses": "nhsuk-heading-m",
-            "description": "Est sollicitudin tempus dui sagittis enim luctus viverra. Pellentesque tempus blandit."
-          }) }}
-        </li>
-      </ul>
-    </div>
-  </section>
-</div>
 {% endblock %}

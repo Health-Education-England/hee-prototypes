@@ -5,20 +5,20 @@
 
 {% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
 
-{% block breadcrumbs %}
+{% block pageBreadcrumbs %}
   {{
     breadcrumb({
       items: [
         {
-          href: basePath + "/",
+          href: "/",
           text: "Home"
         },
         {
-          href: basePath + "/templates",
+          href: "/templates",
           text: "Templates"
         }
       ],
-      href: basePath + "/templates/examples/"+page_url,
+      href: "/templates/examples/"+page_url,
       text: page_title
     })
   }}
@@ -169,92 +169,92 @@
     ]
   }) }}
 
-  {{ downloadsCard({
+  {% set pdf %}
+    {{ resources({
+      title: "First Publication Title",
+      text: "First Publication Title",
+      url: "#",
+      docType: "PDF",
+      tagColor: "pdf"
+    }) }}
+  {% endset %}
+
+  {% set odf %}
+    {{ resources({
+      title: "Second Publication Title",
+      text: "Second Publication Title",
+      url: "#",
+      docType: "ODF",
+      tagColor: "odf"
+    }) }}
+  {% endset %}
+
+  {% set xls %}
+    {{ resources({
+      title: "Third Publication Title",
+      text: "Third Publication Title",
+      url: "#",
+      docType: "XLS",
+      tagColor: "xls"
+    }) }}
+  {% endset %}
+
+  {% set ppt %}
+    {{ resources({
+      title: "Fourth Publication Title",
+      text: "Fourth Publication Title",
+      url: "#",
+      docType: "PPT",
+      tagColor: "ppt"
+    }) }}
+  {% endset %}
+
+  {{ detailsCard({
     title: "Alternative versions",
     items: [
       {
-        title: "Short title",
-        text: "Short title",
-        url: "#",
-        docSize: "836KB",
-        docType: "PDF",
-        tagColor: "pdf"
+        value: pdf
       },
       {
-        title: "Second Publication Title",
-        text: "Second Publication Title",
-        url: "#",
-        docSize: "1.4MB",
-        docType: "ODF",
-        tagColor: "odf"
+        value: odf
       },
       {
-        title: "Third Publication Title",
-        text: "Third Publication Title",
-        url: "#",
-        docSize: "2.89MB",
-        docType: "XLS",
-        tagColor: "xls"
+        value: xls
       },
       {
-        title: "Fourth Publication Title",
-        text: "Fourth Publication Title",
-        url: "#",
-        docSize: "2.89MB",
-        docType: "MRC",
-        tagColor: "mrc"
+        value: ppt
       }
     ]
   }) }}
 
-  {{ downloadsCard({
-    title: "Alternative versions",
-    items: [
-      {
-        title: "Publication title - PDF version",
-        text: "Publication title - PDF version",
-        url: "#",
-        docSize: "1.4MB",
-        docType: "PDF",
-        tagColor: "pdf"
-      },
-      {
-        title: "Publication title - Open Document",
-        text: "Publication title - Open Document",
-        url: "#",
-        docType: "ODF",
-        docSize: "2.89MB",
-        tagColor: "odf"
-      },
-      {
-        title: "Publication title - Excel",
-        text: "Publication title - Excel",
-        url: "#",
-        docSize: "836KB",
-        docType: "XLS",
-        tagColor: "xls"
-      }
-    ]
-  }) }}
+  {% set firstLang %}
+    {{ resources({
+      title: "Teitl y cyhoeddiad",
+      text: "Teitl y cyhoeddiad",
+      url: "#",
+      docType: "PDF",
+      tagColor: "pdf"
+    }) }}
+  {% endset %}
 
-  {{ downloadsCard({
+  {% set secondLang %}
+    {{ resources({
+      title: "Tytuł publikacji",
+      text: "Tytuł publikacji",
+      url: "#",
+      docType: "PDF",
+      tagColor: "pdf"
+    }) }}
+  {% endset %}
+
+  {{ detailsCard({
     title: "Languages",
     items: [
       {
-        title: "Teitl y cyhoeddiad - Fersiwn PDF",
-        text: "Teitl y cyhoeddiad - Fersiwn PDF",
-        url: "#",
-        docSize: "2.89MB",
-        docType: "PDF",
-        tagColor: "pdf"
+        value: firstLang
       },
       {
-        title: "Tytuł publikacji - wersja PDF",
-        text: "Tytuł publikacji - wersja PDF",
-        url: "#",
-        docSize: "1.4MB",
-        docType: "PDF",
-        tagColor: "pdf"
+        value: secondLang
       }
     ]
   }) }}

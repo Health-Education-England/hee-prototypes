@@ -9,11 +9,11 @@
   breadcrumb({
     items: [
       {
-        href: basePath + "/",
+        href: "/",
         text: "Home"
       }
     ],
-    href: basePath + "/templates/examples/news-item",
+    href: "/templates/examples/news-item",
     text: "News Item"
   })
   }}
@@ -21,7 +21,7 @@
 
 {% block pageHeader %}
   {{ microHero({
-    "imgURL":  basePath + "/images/young-child-using-tablet-device.jpg"
+    "imgURL": "/images/young-child-using-tablet-device.jpg"
   }) }}
   <div class="nhsuk-width-container">
     <h1>News Item</h1>
@@ -75,9 +75,9 @@
 {% endblock %}
 
 {% block pageRightbar %}
-  {{ relatedLinksCard({
+  {{ relatedLinks({
     heading: "Curabitur sit amet",
-    links: [
+    items: [
       {
         label: "Donec pulvinar",
         url: "#"
@@ -133,8 +133,10 @@
   %}
 
   <div class="nhsuk-width-container">
-    <h2>Related content</h2>
-    <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet. Nunc turpis vel aliquam lacus arcu. Sodales nullam id lectus orci quis sed. dsf</p>
-    {{ featuredContent({items: items}) }}
+    {{ featuredContent({
+      title: "Related content",
+      summary: "Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet. Nunc turpis vel aliquam lacus arcu. Sodales nullam id lectus orci quis sed. dsf",
+      items: items
+    }) }}
   </div>
 {% endblock %}

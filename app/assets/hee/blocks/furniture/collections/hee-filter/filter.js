@@ -1,8 +1,8 @@
 export default () => {
   /**
-  * Filter
-  * Elements with the selector '.nhsuk-filter' are passed into this class
-  */
+   * Filter
+   * Elements with the selector '.nhsuk-filter' are passed into this class
+   */
   class Filter {
     constructor(container) {
       this.container = container;

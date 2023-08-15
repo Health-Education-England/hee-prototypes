@@ -6,22 +6,22 @@
 {% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
 
 {% block breadcrumbs %}
-{{ 
+  {{
   breadcrumb({
-  items: [
+    items: [
       {
-        href: basePath + "/",
+        href: "/",
         text: "Home"
       },
       {
-        href: basePath + "/templates",
+        href: "/templates",
         text: "Templates"
       }
-  ],
-      href: basePath + "/templates/"+page_url,
-      text: page_title
-  }) 
-}}
+    ],
+    href: "/templates/"+page_url,
+    text: page_title
+  })
+  }}
 {% endblock %}
 
 {% block pageLeftbar %}
@@ -32,32 +32,31 @@
 {% endblock %}
 
 {% block pageHeader %}
-    <span class="nhsuk-caption-xl">Templates</span>
-    <h1>{{ page_title }}</h1>
-    <p class="nhsuk-lede-text">A layout with a left sidebar and right content area. Used for listing blog items.</p>
+  <span class="nhsuk-caption-xl">Templates</span>
+  <h1>{{ page_title }}</h1>
+  <p class="nhsuk-lede-text">A layout with a left sidebar and right content area. Used for listing blog items.</p>
 {% endblock %}
 
 {% block pageContent %}
 
   <h2>Example</h2>
   {{ example({
-    url: basePath + '/templates/examples/' + page_url,
+    url: '/templates/examples/' + page_url,
     view: 'template'
   }) }}
   <hr />
 
-{{ highlight({
-  "html" : '<main class="page page--leftbar" id="maincontent" role="main">
-<div class="page__header">
-  [ PAGE_MICROHERO ]
-  <div class="nhsuk-width-container">
-    <h1>[ PAGE_TITLE ]</h1>
-    <span class="nhsuk-caption-xl">[ PAGE_CAPTION ]</span>
-    <p class="nhsuk-lede-text">[ PAGE_SUMMARY ]</p>
+  {{ highlight({
+    "html" : '<main class="page page--leftbar" id="maincontent" role="main">
+  <div class="page__header">
+    [ PAGE_MICROHERO ]
+    <div class="nhsuk-width-container">
+      <h1>[ PAGE_TITLE ]</h1>
+      <span class="nhsuk-caption-xl">[ PAGE_CAPTION ]</span>
+      <p class="nhsuk-lede-text">[ PAGE_SUMMARY ]</p>
+    </div>
   </div>
-</div>
-<div class="nhsuk-width-container">
-  <div class="page__layout">
+  <div class="page__layout nhsuk-width-container">
     <aside class="page__leftbar">
       [ FILTER_GROUP | FILTER_CLEAR ]
     </aside>
@@ -68,14 +67,13 @@
       [ RESULTS_PAGINATION ]
     </div>
   </div>
-</div>
-<div class="page__footer">
-</div>
-<section class="page__feature">
-</section>
+  <div class="page__footer">
+  </div>
+  <section class="page__feature">
+  </section>
 </main>'
-})
-}}
+  })
+  }}
 {% endblock %}
 
 {% block pageFooter %}{% endblock %}

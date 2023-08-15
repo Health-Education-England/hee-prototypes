@@ -10,15 +10,15 @@
   breadcrumb({
   items: [
       {
-        href: basePath + "/",
+        href: "/",
         text: "Home"
       },
       {
-        href: basePath + "/templates",
+        href: "/templates",
         text: "Templates"
       }
   ],
-      href: basePath + "/templates/"+page_url,
+      href: "/templates/"+page_url,
       text: page_title
   }) 
 }}
@@ -41,7 +41,7 @@
 
   <h2>Example</h2>
   {{ example({
-    url: basePath + '/templates/examples/'+page_url,
+    url: '/templates/examples/'+page_url,
     view: 'template'
   }) }}
   <hr />

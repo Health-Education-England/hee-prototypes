@@ -1,10 +1,9 @@
-{% extends "example-template.html" %}
+{% extends "example-template-fullwidth.html" %}
 
 {% set page_url = 'search-listing' %}
 {% set page_title = 'Search results' %}
 
 {% block pageClass %}page--search{% endblock %}
-{% block pageHeaderClass %}has-microhero{% endblock %}
 
 {% block pageTitle %}{{ page_title }} - Examples - NWP Prototype Kit{% endblock %}
 
@@ -32,13 +31,8 @@
 {% endblock %}
 
 {% block pageHeader %}
-{{ microHero({
-  "imgURL": basePath + "/images/young-child-using-tablet-device.jpg"
-}) }}
 <div class="nhsuk-width-container">
   <h1>Search results</h1>
-  <span class="nhsuk-caption-xl">Caption</span>
-  <p class="nhsuk-lede-text nhsuk-u-reading-width">Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi.</p>
 
   {{ searchForm({
     label: "Enter a search term",
@@ -54,11 +48,8 @@
     {% for i in range(0, 10) -%}
       {% set item = {
         title: "Assessment of Dental Core competency #" + loop.index,
-        subtitle: "Dental and Maxillofacial Radiology recruitment",
         href: "#",
-        url: "https://dental.hee.nhs.uk/dental-trainee-recruitment/dental-specialty-training/oral-medicine/overview-of-oral-medicine/assessment-of-dental-core-competency",
-        summary: "Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1)",
-        attributes: [
+        details: [
           {
             label: "Date:",
             value: "21 July 2021"
@@ -68,7 +59,7 @@
             value: "Birmingham"
           }
         ],
-        lastUpdated: "Page last updated: 17 January 2023"
+        summary: "Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1)"
       } %}
       {% set items = (items.push(item), items) %}
     {% endfor %}

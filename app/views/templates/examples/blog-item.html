@@ -12,19 +12,19 @@
     breadcrumb({
       items: [
         {
-          href: basePath + "/",
+          href: "/",
           text: "Home"
         },
         {
-          href: basePath + "/templates",
+          href: "/templates",
           text: "Templates"
         },
         {
-          href: basePath + "/templates/examples",
+          href: "/templates/examples",
           text: "Examples"
         }
       ],
-      href: basePath + "/templates/examples/"+page_url,
+      href: "/templates/examples/"+page_url,
       text: page_title
     })
   }}
@@ -32,7 +32,7 @@
 
 {% block pageHeader %}
   {{ microHero({
-    "imgURL":  basePath + "/images/young-child-using-tablet-device.jpg"
+    "imgURL": "/images/young-child-using-tablet-device.jpg"
   }) }}
   <div class="nhsuk-width-container">
     <h1>Blog Item</h1>
@@ -63,7 +63,7 @@
   <p>Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus, semper ligula quis, eleifend ante. Pellentesque non malesuada tellus. Donec porta faucibus lacus at elementum. Pellentesque tempus magna vulputate felis ultricies porta. Cras condimentum imperdiet lobortis. Suspendisse aliquam nisl ut augue ultrices, sit amet tristique enim placerat. Nunc augue sapien, rhoncus scelerisque urna quis, posuere semper enim.</p>
 
   {{ authorCard({
-    imgURL: basePath + "/images/doctor-headshot.png",
+    imgURL: "/images/doctor-headshot.png",
     title: "Mr",
     name: "First Last",
     initials: "JB",
@@ -85,7 +85,7 @@
 
   <div class="hee-card--author__container">
     {{ authorCard({
-      imgURL: basePath + "/images/doctor-headshot.png",
+      imgURL: "/images/doctor-headshot.png",
       title: "Mr",
       name: "First Last",
       initials: "JB",
@@ -106,7 +106,7 @@
     }) }}
 
     {{ authorCard({
-      imgURL: basePath + "/images/doctor-headshot.png",
+      imgURL: "/images/doctor-headshot.png",
       title: "Mr",
       name: "First Last",
       initials: "JB",
@@ -135,7 +135,7 @@
 
 {% block pageRightbar %}
   {{ authorCard({
-    imgURL: basePath + "/images/doctor-headshot.png",
+    imgURL: "/images/doctor-headshot.png",
     title: "Mr",
     name: "First Last",
     initials: "JB",
@@ -213,8 +213,10 @@
   %}
 
   <div class="nhsuk-width-container">
-    <h2>Related content</h2>
-    <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet. Nunc turpis vel aliquam lacus arcu. Sodales nullam id lectus orci quis sed. dsf</p>
-    {{ featuredContent({items: items}) }}
+    {{ featuredContent({
+      title: "Related content",
+      summary: "Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet. Nunc turpis vel aliquam lacus arcu. Sodales nullam id lectus orci quis sed. dsf",
+      items: items
+    }) }}
   </div>
 {% endblock %}

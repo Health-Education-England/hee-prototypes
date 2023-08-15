@@ -11,20 +11,20 @@
 
 {% block breadcrumbs %}
   {{
-    breadcrumb({
-      items: [
-        {
-          href: basePath + "/",
-          text: "Home"
-        },
-        {
-          href: basePath + "/templates",
-          text: "Templates"
-        }
-      ],
-      href: basePath + "/templates/examples/"+page_url,
-      text: page_title
-    })
+  breadcrumb({
+    items: [
+      {
+        href: basePath + "/",
+        text: "Home"
+      },
+      {
+        href: basePath + "/templates",
+        text: "Templates"
+      }
+    ],
+    href: basePath + "/templates/examples/"+page_url,
+    text: page_title
+  })
   }}
 {% endblock %}
 
@@ -193,25 +193,27 @@
     toc: true
   }) }}
 
-  {{ ctaCard({
-    title: "Apply for surgery on Oriel",
-    text: "Visit Oriel",
-    href: "#"
+  {{ card({
+    heading: "Apply for surgery on Oriel",
+    headingLevel: "3",
+    clickable: "true",
+    descriptionHtml: "<a class=\"nhsuk-button\" href=\"https://oriel.nhs.uk/Web/\" draggable=\"false\">Visit Oriel</a>"
   }) }}
 
-  {{ relatedLinksCard({
-    heading: "Surgery posts",
-    links: [
+  {{ relatedLinks({
+    heading: "Related Posts",
+    items: [
       {
         label: "Surgery Training posts",
         url: "#"
       }
     ]
-  })}}
+  })
+  }}
 
-  {{ relatedLinksCard({
+  {{ relatedLinks({
     heading: "Useful pages",
-    links: [
+    items: [
       {
         label: "Flexible training",
         url: "#"
@@ -239,9 +241,9 @@
     ]
   })}}
 
-  {{ relatedLinksCard({
+  {{ relatedLinks({
     heading: "External links",
-    links: [
+    items: [
       {
         label: "Royal College of Surgeons of Edinburgh",
         url: "#"
@@ -265,7 +267,7 @@
     ]
   })}}
 
-  {{ departmentCard({
+{#  {{ departmentCard({
     name: "Department Name",
     organisation: "Organisation",
     telephone: "07575 731 776",
@@ -276,7 +278,7 @@
               Manchester<br>
               M1 3BN",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque ac pellentesque in sapien."
-  }) }}
+  }) }}#}
 
 {% endblock %}
 

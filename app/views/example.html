@@ -6,9 +6,6 @@
 {# Header #}
 {%- from 'hee/blocks/scaffolding/header/macro.njk' import customHeader %}
 {%- from 'skip-link/macro.njk' import skipLink %}
-{%- from 'hee/blocks/scaffolding/mega-menu/macro.njk' import megaMenu %}
-{%- from 'hee/blocks/scaffolding/back-to-home-banner/macro.njk' import backToHomeBanner %}
-{%- from 'hee/blocks/scaffolding/secondary-menu/macro.njk' import secondaryMenu %}
 
 {# Notifications #}
 {%- from 'hee/blocks/scaffolding/notifications/banner/macro.njk' import banner %}
@@ -22,8 +19,7 @@
 
 {# TEMPLATE BLOCKS #}
 {%- from 'hero/macro.njk' import hero %}
-{%- from 'components/hee/hee-microhero/macro.njk' import microHero %}
-{%- from 'components/hee/hee-homesection/macro.njk' import homepageSection %}
+{%- from 'hee/blocks/furniture/page/hee-microhero/macro.njk' import microHero %}
 {%- from 'hee/blocks/content/main/hee-publication-doc/macro.njk' import publicationDoc %}
 {%- from 'hee/blocks/content/featured/featured-content/macro.njk' import featuredContent %}
 {%- from 'hee/blocks/furniture/collections/hee-listing/macro.njk' import listingLayout %}
@@ -32,6 +28,7 @@
 {%- from 'hee/blocks/furniture/collections/hee-filtertag/macro.njk' import filterTag %}
 {%- from 'hee/blocks/furniture/content/review-date/macro.njk' import reviewDate %}
 {%- from 'hee/blocks/furniture/a-z-listings/nav-a-z/macro.njk' import azNav %}
+
 {%- from 'pagination/macro.njk' import pagination %}
 
 {# CONTENT BLOCKS #}
@@ -43,16 +40,14 @@
 {%- from 'hee/blocks/content/main/google-map/macro.njk' import googleMap %}
 {%- from 'hee/blocks/content/main/training-journey/macro.njk' import trainingJourney %}
 {%- from 'hee/blocks/content/main/quote/macro.njk' import quote %}
-{%- from 'hee/blocks/content/sidebar/card--person/macro.njk' import personCard %}
-{%- from 'hee/blocks/content/sidebar/card--department/macro.njk' import departmentCard %}
-{%- from 'components/hee/hee-detailscard/contact.njk' import contact %}
+{%- from 'hee/blocks/content/main/card--summary/macro.njk' import summaryCard %}
+{#{%- from 'hee/blocks/content/sidebar/card--person/macro.njk' import personCard %}
+{%- from 'hee/blocks/content/sidebar/card--department/macro.njk' import departmentCard %}#}
 
 {# Sidebar #}
 {%- from 'hee/blocks/content/sidebar/card--details/macro.njk' import detailsCard %}
-{%- from 'hee/blocks/content/sidebar/card--cta/macro.njk' import ctaCard %}
 {%- from 'hee/blocks/content/sidebar/card--downloads/marco.njk' import downloadsCard %}
 {%- from 'hee/blocks/content/sidebar/card--related-links/macro.njk' import relatedLinksCard %}
-{%- from 'hee/blocks/content/main/card--summary/macro.njk' import summaryCard %}
 
 {# Search #}
 {%- from 'hee/blocks/furniture/search/form/macro.njk' import searchForm %}
@@ -62,16 +57,18 @@
 {# To Sort #}
 {# HEE Components #}
 {%- from 'hee/blocks/content/sidebar/anchorlinks/macro.njk' import anchorLinks %}
+{%- from 'hee/blocks/furniture/collections/hee-listing-item/macro.njk' import listingItem %}
+{%- from 'hee/blocks/content/sidebar/anchorlinks/macro.njk' import anchorLinks %}
 {%- from 'hee/blocks/content/footer/anchorlinks-sticky/macro.njk' import anchorLinksSticky %}
-{%- from 'components/hee/hee-media/macro.njk' import media %}
-{%- from 'components/hee/hee-navmap/macro.njk' import navMap %}
-{%- from 'components/hee/hee-relatednav/macro.njk' import relatedNav %}
+{%- from 'hee/blocks/content/main/hee-media/macro.njk' import media %}
+{%- from 'hee/blocks/content/main/hee-navmap/macro.njk' import navMap %}
 {%- from 'hee/blocks/content/sidebar/resources/macro.njk' import resources %}
-{%- from 'components/hee/hee-sidebarimage/macro.njk' import imageCard %}
-{%- from 'components/hee/hee-tabs/macro.njk' import tabs %}
-{%- from 'components/hee/hee-timeline/macro.njk' import timeline %}
-{%- from 'components/nhsuk-hee/nhsuk-hee-blocklinks/macro.njk' import blocklinks %}
+{%- from 'hee/blocks/content/sidebar/nhsuk-image-card/macro.njk' import imageCard %}
+{%- from 'hee/blocks/content/main/hee-tabs/macro.njk' import tabs %}
+{%- from 'hee/blocks/content/main/nhsuk-hee-blocklinks/macro.njk' import blocklinks %}
 {%- from 'hee/blocks/scaffolding/back-to-top/macro.njk' import backToTop %}
+{%- from 'hee/blocks/content/sidebar/nhsuk-contact/macro.njk' import contact %}
+{%- from 'hee/blocks/content/sidebar/nhsuk-related-links/macro.njk' import relatedLinks %}
 
 {# NHSUK Components #}
 {%- from 'action-link/macro.njk' import actionLink %}
@@ -134,7 +131,7 @@
     {% endblock %}
   </head>
 
-  <body>
+  <body class="{{ bodyClasses }}">
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
     {% block bodyStart %}
     {% endblock %}
