@@ -38,7 +38,7 @@
   .hee-search-listing-item__url {
     @include nhsuk-responsive-margin(4, 'bottom');
     align-items: center;
-    display: flex;
+    display: none;
 
     a {
       display: block;

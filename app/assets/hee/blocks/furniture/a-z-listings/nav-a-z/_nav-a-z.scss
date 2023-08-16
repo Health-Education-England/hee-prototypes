@@ -1,0 +1,18 @@
+.nhsuk-list--border {
+  >li {
+    border-bottom: 1px solid $nhsuk-border-color;
+    padding: nhsuk-spacing(2) 0 nhsuk-spacing(3);
+    > {
+      :first-child {
+        margin-top: 0;
+      }
+      :last-child {
+        margin-bottom: 0;
+      }
+    }
+    &:first-of-type {
+      border-top: 1px solid $nhsuk-border-color;
+      padding: nhsuk-spacing(3) 0;
+    }
+  }
+}

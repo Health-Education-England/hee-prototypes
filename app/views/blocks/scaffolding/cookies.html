@@ -6,62 +6,62 @@
 {% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
 
 {% block breadcrumbs %}
-{{ 
-    breadcrumb({
+  {{
+  breadcrumb({
     items: [
-        {
-            href: basePath + "/",
-            text: "Home"
-        },
-        {
-            href: basePath + "/blocks",
-            text: "Blocks"
-        },
-        {
-            href: basePath + "/blocks/scaffolding",
-            text: "Scaffolding"
-        }
+      {
+        href: basePath + "/",
+        text: "Home"
+      },
+      {
+        href: basePath + "/blocks",
+        text: "Blocks"
+      },
+      {
+        href: basePath + "/blocks/scaffolding",
+        text: "Scaffolding"
+      }
     ],
-        href: basePath + "/blocks/scaffolding/"+page_url,
-        text: page_title
-    }) 
-}}
+    href: basePath + "/blocks/scaffolding/"+page_url,
+    text: page_title
+  })
+  }}
 {% endblock %}
 
 {% block pageLeftbar %}
-{{ subnav({
+  {{ subnav({
     area: 'blocks',
     subarea: 'scaffolding'
-}) }}
+  }) }}
 {% endblock %}
 
 {% block pageHeader %}
-    <span class="nhsuk-caption-xl">Scaffolding</span>
-    <h1>{{ page_title }}</h1>
-    <p class="nhsuk-lede-text"></p>
+  <span class="nhsuk-caption-xl">Scaffolding</span>
+  <h1>{{ page_title }}</h1>
+  <p class="nhsuk-lede-text"></p>
 {% endblock %}
 
 {% block pageContent %}
 
-<p>Cookie policy banner appearing at the very top of the website.</p>
+  <p>Cookie policy banner appearing at the very top of the website.</p>
 
-<h2>Example</h2>
-{{ example({
+  <h2>Example</h2>
+  {{ example({
     url: basePath + '/blocks/scaffolding/examples/' + page_url,
     height: '400px'
-}) }}
+  }) }}
 
-<hr />
+  <hr />
 
-<h2>Macro</h2>
-{{ highlight({
-  html: '{{ cookies() }}'
-}) }}
+  <h2>Macro</h2>
+  {{ highlight({
+    html: '{{ cookies() }}'
+  }) }}
 
-<hr />
+  <hr />
 
-<h3>HTML</h3>
-{{ highlight({
+  <h3>HTML</h3>
+  {{ highlight({
     html : '
 <div class="nhsuk-cookie-banner">
     <div class="nhsuk-width-container">
@@ -74,8 +74,8 @@
     </div>
 </div>
 '
-})
-}}
+  })
+  }}
 
 {% endblock %}
 

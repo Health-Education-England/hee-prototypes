@@ -1,4 +1,5 @@
-import {toggleAttribute, toggleClass} from 'nhsuk-frontend/packages/common';
+import {toggleAttribute} from 'nhsuk-frontend/packages/common';
+import {toggleClass} from '../../../utils/utils.js';
 
 export default () => {
 

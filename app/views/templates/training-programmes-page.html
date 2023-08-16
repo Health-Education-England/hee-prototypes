@@ -7,24 +7,24 @@
 
 {% block pageBreadcrumbs %}
   {{
-    breadcrumb({
-      items: [
-        {
-          href: basePath + "/",
-          text: "Home"
-        },
-        {
-          href: basePath + "/templates",
-          text: "Templates"
-        },
-        {
-          href: basePath + "/templates/examples",
-          text: "Examples"
-        }
-      ],
-      href: basePath + "/templates/examples/" + page_url,
-      text: page_title
-    })
+  breadcrumb({
+    items: [
+      {
+        href: basePath + "/",
+        text: "Home"
+      },
+      {
+        href: basePath + "/templates",
+        text: "Templates"
+      },
+      {
+        href: basePath + "/templates/examples",
+        text: "Examples"
+      }
+    ],
+    href: basePath + "/templates/examples/" + page_url,
+    text: page_title
+  })
   }}
 {% endblock %}
 
@@ -49,10 +49,10 @@
     view: 'template'
   }) }}
   <hr />
-  
+
   <h2>HTML</h2>
-{{ highlight({
-  "html" : '<main class="page page--rightbar" id="maincontent" role="main">
+  {{ highlight({
+    "html" : '<main class="page page--rightbar" id="maincontent" role="main">
   <div class="page__header">
     <div class="nhsuk-width-container">
       <h1>[ PAGE_TITLE ]</h1>
@@ -80,7 +80,7 @@
   </section>
 </main>'
   })
-}}
+  }}
 
   <hr />
 

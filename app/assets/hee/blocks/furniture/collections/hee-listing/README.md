@@ -144,7 +144,7 @@ The filter macro takes the following arguments:
 
 | Name               | Type    | Required | Description                                               |
 |--------------------|---------|----------|-----------------------------------------------------------|
-| **filter**         | array   | No       | An array of sort form attributes (select and submit)      
+| **filter**         | array   | No       | An array of sort form attributes (select and submit)      |
 | **results**        | array   | Yes      | An array of results; see listingItem for more information |
 | **showPagination** | boolean | No       | Display pagination for this example?                      |
 | **emptyMessage**   | string  | Yes      | String which is displayed when no results found           |

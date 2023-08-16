@@ -5,10 +5,10 @@
 
 {% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
 
-{% block breadcrumbs %}
-{{ 
+{% block pageBreadcrumbs %}
+  {{
   breadcrumb({
-  items: [
+    items: [
       {
         href: basePath + "/",
         text: "Home"
@@ -17,11 +17,11 @@
         href: basePath + "/templates",
         text: "Templates"
       }
-  ],
-      href: basePath + "/templates/"+page_url,
-      text: page_title
-  }) 
-}}
+    ],
+    href: basePath + "/templates/"+page_url,
+    text: page_title
+  })
+  }}
 {% endblock %}
 
 {% block pageLeftbar %}
@@ -32,9 +32,9 @@
 {% endblock %}
 
 {% block pageHeader %}
-    <span class="nhsuk-caption-xl">Templates</span>
-    <h1>{{ page_title }}</h1>
-    <p class="nhsuk-lede-text">A layout with a left sidebar and right content area. Used for listing publication items.</p>
+  <span class="nhsuk-caption-xl">Templates</span>
+  <h1>{{ page_title }}</h1>
+  <p class="nhsuk-lede-text">A layout with a left sidebar and right content area. Used for listing publication items.</p>
 {% endblock %}
 
 {% block pageContent %}
@@ -46,8 +46,8 @@
   }) }}
   <hr />
 
-{{ highlight({
-  "html" : '<main class="page page--leftbar" id="maincontent" role="main">
+  {{ highlight({
+    "html" : '<main class="page page--leftbar" id="maincontent" role="main">
   <div class="page__header">
     [ PAGE_MICROHERO ]
     <div class="nhsuk-width-container">
@@ -72,8 +72,8 @@
   <section class="page__feature">
   </section>
 </main>'
-})
-}}
+  })
+  }}
 {% endblock %}
 
 {% block pageFooter %}{% endblock %}

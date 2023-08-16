@@ -11,20 +11,20 @@
 
 {% block pageBreadcrumbs %}
   {{
-    breadcrumb({
-      items: [
-        {
-          href: basePath + "/",
-          text: "Home"
-        },
-        {
-          href: basePath + "/templates",
-          text: "Templates"
-        }
-      ],
-      href: basePath + "/templates/examples/"+page_url,
-      text: page_title
-    })
+  breadcrumb({
+    items: [
+      {
+        href: basePath + "/",
+        text: "Home"
+      },
+      {
+        href: basePath + "/templates",
+        text: "Templates"
+      }
+    ],
+    href: basePath + "/templates/examples/"+page_url,
+    text: page_title
+  })
   }}
 {% endblock %}
 
@@ -191,70 +191,70 @@
       {
         name: "Prerequisites",
         items: [
-          {
-            label: "Foundation Surgery",
-            url: "https://www.abc123.com"
-          },
-          {
-            label: "F2 Standalone Surgery",
-            url: "https://www.abc123.com"
-          }
-        ]
+        {
+          label: "Foundation Surgery",
+          url: "https://www.abc123.com"
+        },
+        {
+          label: "F2 Standalone Surgery",
+          url: "https://www.abc123.com"
+        }
+      ]
       },
       {
         name: "You are here",
         items: [
-          {
-            active: true,
-            label: "Core surgery",
-            url: "https://www.abc123.com"
-          }
-        ]
+        {
+          active: true,
+          label: "Core surgery",
+          url: "https://www.abc123.com"
+        }
+      ]
       },
       {
         name: "Optional routes",
         items: [
-          {
-            label: "Cardiothoracic Surgery",
-            url: "https://www.abc123.com"
-          },
-          {
-            label: "General Surgery",
-            url: "https://www.abc123.com"
-          },
-          {
-            label: "Neurosurgery",
-            url: "https://www.abc123.com"
-          },
-          {
-            label: "Oral & Maxillofacial Surgery",
-            url: "https://www.abc123.com"
-          },
-          {
-            label: "Otolaryngology Surgery",
-            url: "https://www.abc123.com"
-          },
-          {
-            label: "Paediatric Surgery ",
-            url: "https://www.abc123.com"
-          },
-          {
-            label: "Plastic Surgery",
-            url: "https://www.abc123.com"
-          },
-          {
-            label: "Trauma & Orthopaedics",
-            url: "https://www.abc123.com"
-          },
-          {
-            label: "Urology",
-            url: "https://www.abc123.com"
-          },
-          {
-            label: "Vascular Surgery",
-            url: "https://www.abc123.com"
-          }
-        ]
+        {
+          label: "Cardiothoracic Surgery",
+          url: "https://www.abc123.com"
+        },
+        {
+          label: "General Surgery",
+          url: "https://www.abc123.com"
+        },
+        {
+          label: "Neurosurgery",
+          url: "https://www.abc123.com"
+        },
+        {
+          label: "Oral & Maxillofacial Surgery",
+          url: "https://www.abc123.com"
+        },
+        {
+          label: "Otolaryngology Surgery",
+          url: "https://www.abc123.com"
+        },
+        {
+          label: "Paediatric Surgery ",
+          url: "https://www.abc123.com"
+        },
+        {
+          label: "Plastic Surgery",
+          url: "https://www.abc123.com"
+        },
+        {
+          label: "Trauma & Orthopaedics",
+          url: "https://www.abc123.com"
+        },
+        {
+          label: "Urology",
+          url: "https://www.abc123.com"
+        },
+        {
+          label: "Vascular Surgery",
+          url: "https://www.abc123.com"
+        }
+      ]
       }
     ]
   } %}
@@ -264,7 +264,7 @@
 {% endblock %}
 
 {% block pageRightbar %}
-  {{ programmeInfoCard({
+  {{ relatedLinksCard({
     heading: "Programme information",
     itemBorder: true,
     links: [
@@ -311,15 +311,16 @@
     ]
   })}}
 
-  {{ ctaCard({
-    title: "Apply for surgery on Oriel",
-    text: "Visit Oriel",
-    href: "#"
+  {{ card({
+    heading: "Apply for surgery on Oriel",
+    headingLevel: "3",
+    clickable: "true",
+    descriptionHtml: "<a class=\"nhsuk-button\" href=\"https://oriel.nhs.uk/Web/\" draggable=\"false\">Visit Oriel</a>"
   }) }}
 
-  {{ programmeInfoCard({
+  {{ relatedLinks({
     heading: "Related links",
-    links: [
+    items: [
       {
         label: "Link goes here",
         url: "#"
@@ -351,9 +352,9 @@
     ]
   })}}
 
-  {{ programmeInfoCard({
+  {{ relatedLinks({
     heading: "External links",
-    links: [
+    items: [
       {
         label: "Link goes here",
         url: "#"
@@ -385,7 +386,7 @@
     ]
   })}}
 
-  {{ departmentCard({
+{#  {{ departmentCard({
     name: "Department Name",
     organisation: "Organisation",
     telephone: "07575 731 776",
@@ -396,7 +397,7 @@
               Manchester<br>
               M1 3BN",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque ac pellentesque in sapien."
-  }) }}
+  }) }}#}
 
 {% endblock %}
 

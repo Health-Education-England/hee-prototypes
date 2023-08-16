@@ -26,7 +26,7 @@
   <meta name="msapplication-square310x310logo" content="/hee-prototypes/favicons/largetile-310x310.png">
 </head>
 
-<body>
+<body class="">
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
   </script>
@@ -141,19 +141,6 @@
     </header>
   </div>
   <div class="breadcrumbs">
-    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-      <div class="nhsuk-width-container">
-        <ol class="nhsuk-breadcrumb__list">
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates">Templates</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/templates/examples/publications-item">Publication Item</a></li>
-        </ol>
-        <p class="nhsuk-breadcrumb__back">
-          <a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/templates/examples/publications-item">
-            <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span> Publication Item </a>
-        </p>
-      </div>
-    </nav>
   </div>
   <div class="banners">
   </div>
@@ -314,7 +301,7 @@
         </div>
       </div>
       <aside class="page__rightbar">
-        <div class="hee-anchorlinks nhsuk-anchor-links" data-toc-js=true data-headings="">
+        <div class="nhsuk-anchor-links hee-anchorlinks" data-toc-js=true data-headings="">
           <h2 data-anchorlinksignore="true">Table of Contents</h2>
         </div>
         <div class="hee-card hee-card--details">
@@ -334,12 +321,12 @@
             <a href="#">Topic 1</a>, <a href="#">Topic 2</a>
           </div>
         </div>
-        <div class="hee-card hee-card--details hee-card--downloads">
+        <div class="hee-card hee-card--details">
           <h3>Alternative versions</h3>
           <div class="hee-card--details__item">
-            <a class="hee-resources__link" href="#" title="Short title">
+            <a class="hee-resources__link" href="#" title="First Publication Title">
               <div class="hee-resources__wrapper">
-                <span class="hee-resources__text"> Short title </span><span class="hee-resources__docSize"> 836KB </span>
+                <span class="hee-resources__text"> First Publication Title </span>
               </div><span class="hee-resources__tag
           hee-resources__pdf"> PDF </span>
             </a>
@@ -347,7 +334,7 @@
           <div class="hee-card--details__item">
             <a class="hee-resources__link" href="#" title="Second Publication Title">
               <div class="hee-resources__wrapper">
-                <span class="hee-resources__text"> Second Publication Title </span><span class="hee-resources__docSize"> 1.4MB </span>
+                <span class="hee-resources__text"> Second Publication Title </span>
               </div><span class="hee-resources__tag
           hee-resources__odf"> ODF </span>
             </a>
@@ -355,7 +342,7 @@
           <div class="hee-card--details__item">
             <a class="hee-resources__link" href="#" title="Third Publication Title">
               <div class="hee-resources__wrapper">
-                <span class="hee-resources__text"> Third Publication Title </span><span class="hee-resources__docSize"> 2.89MB </span>
+                <span class="hee-resources__text"> Third Publication Title </span>
               </div><span class="hee-resources__tag
           hee-resources__xls"> XLS </span>
             </a>
@@ -363,53 +350,26 @@
           <div class="hee-card--details__item">
             <a class="hee-resources__link" href="#" title="Fourth Publication Title">
               <div class="hee-resources__wrapper">
-                <span class="hee-resources__text"> Fourth Publication Title </span><span class="hee-resources__docSize"> 2.89MB </span>
+                <span class="hee-resources__text"> Fourth Publication Title </span>
               </div><span class="hee-resources__tag
-          hee-resources__mrc"> MRC </span>
+          hee-resources__ppt"> PPT </span>
             </a>
           </div>
         </div>
-        <div class="hee-card hee-card--details hee-card--downloads">
-          <h3>Alternative versions</h3>
-          <div class="hee-card--details__item">
-            <a class="hee-resources__link" href="#" title="Publication title - PDF version">
-              <div class="hee-resources__wrapper">
-                <span class="hee-resources__text"> Publication title - PDF version </span><span class="hee-resources__docSize"> 1.4MB </span>
-              </div><span class="hee-resources__tag
-          hee-resources__pdf"> PDF </span>
-            </a>
-          </div>
-          <div class="hee-card--details__item">
-            <a class="hee-resources__link" href="#" title="Publication title - Open Document">
-              <div class="hee-resources__wrapper">
-                <span class="hee-resources__text"> Publication title - Open Document </span><span class="hee-resources__docSize"> 2.89MB </span>
-              </div><span class="hee-resources__tag
-          hee-resources__odf"> ODF </span>
-            </a>
-          </div>
-          <div class="hee-card--details__item">
-            <a class="hee-resources__link" href="#" title="Publication title - Excel">
-              <div class="hee-resources__wrapper">
-                <span class="hee-resources__text"> Publication title - Excel </span><span class="hee-resources__docSize"> 836KB </span>
-              </div><span class="hee-resources__tag
-          hee-resources__xls"> XLS </span>
-            </a>
-          </div>
-        </div>
-        <div class="hee-card hee-card--details hee-card--downloads">
+        <div class="hee-card hee-card--details">
           <h3>Languages</h3>
           <div class="hee-card--details__item">
-            <a class="hee-resources__link" href="#" title="Teitl y cyhoeddiad - Fersiwn PDF">
+            <a class="hee-resources__link" href="#" title="Teitl y cyhoeddiad">
               <div class="hee-resources__wrapper">
-                <span class="hee-resources__text"> Teitl y cyhoeddiad - Fersiwn PDF </span><span class="hee-resources__docSize"> 2.89MB </span>
+                <span class="hee-resources__text"> Teitl y cyhoeddiad </span>
               </div><span class="hee-resources__tag
           hee-resources__pdf"> PDF </span>
             </a>
           </div>
           <div class="hee-card--details__item">
-            <a class="hee-resources__link" href="#" title="Tytuł publikacji - wersja PDF">
+            <a class="hee-resources__link" href="#" title="Tytuł publikacji">
               <div class="hee-resources__wrapper">
-                <span class="hee-resources__text"> Tytuł publikacji - wersja PDF </span><span class="hee-resources__docSize"> 1.4MB </span>
+                <span class="hee-resources__text"> Tytuł publikacji </span>
               </div><span class="hee-resources__tag
           hee-resources__pdf"> PDF </span>
             </a>
@@ -424,7 +384,7 @@
             <span>Table of Contents</span>
           </button>
           <div class="hee-anchorlinks__sticky__container">
-            <div class="hee-anchorlinks nhsuk-anchor-links" data-toc-js=true data-headings="">
+            <div class="nhsuk-anchor-links hee-anchorlinks" data-toc-js=true data-headings="">
               <h2 data-anchorlinksignore="true">Table of Contents</h2>
             </div>
           </div>

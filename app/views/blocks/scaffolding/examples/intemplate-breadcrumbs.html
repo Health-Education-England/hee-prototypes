@@ -2,23 +2,23 @@
 
 {% block main %}
   {{
-    breadcrumb({
-      items: [
-        {
-          href: basePath + "/",
-          text: "Home"
-        },
-        {
-          href: basePath + "/blocks",
-          text: "Blocks"
-        },
-        {
-          href: basePath + "/blocks/scaffolding",
-          text: "Scaffolding"
-        }
-      ],
-      href: "#",
-      text: "Breadcrumbs"
-    })
+  breadcrumb({
+    items: [
+      {
+        href: basePath + "/",
+        text: "Home"
+      },
+      {
+        href: basePath + "/blocks",
+        text: "Blocks"
+      },
+      {
+        href: basePath + "/blocks/scaffolding",
+        text: "Scaffolding"
+      }
+    ],
+    href: "#",
+    text: "Breadcrumbs"
+  })
   }}
 {% endblock %}

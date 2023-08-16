@@ -9,19 +9,19 @@
   {{
   breadcrumb({
     items: [
-        {
-            href: basePath + "/",
-            text: "Home"
-        },
-        {
-            href: basePath + "/templates",
-            text: "Templates"
-        }
+      {
+        href: basePath + "/",
+        text: "Home"
+      },
+      {
+        href: basePath + "/templates",
+        text: "Templates"
+      }
     ],
-        href: basePath + "/templates/"+page_url,
-        text: page_title
-    }) 
-}}
+    href: basePath + "/templates/"+page_url,
+    text: page_title
+  })
+  }}
 {% endblock %}
 
 {% block pageLeftbar %}
@@ -41,7 +41,7 @@
 
   <h2>Example</h2>
   {{ example({
-    url:  basePath + '/templates/examples/'+page_url,
+    url: basePath + '/templates/examples/'+page_url,
     view: 'template'
   }) }}
 

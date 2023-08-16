@@ -30,7 +30,7 @@ function getBasePath() {
 function buildTemplates() {
   const basePath = getBasePath();
   const environment = new nunjucks.Environment(
-      new nunjucks.FileSystemLoader(config.templates)
+    new nunjucks.FileSystemLoader(config.templates)
   );
   environment.addGlobal('basePath', basePath)
 

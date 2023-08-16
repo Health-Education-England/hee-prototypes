@@ -9,7 +9,7 @@
     "build": "gulp build",
     "build:prod": "gulp build --prod",
     "watch": "gulp watch",
-    "test": "npm run backstop:test",
+    "test": "npm run build && npm run backstop:test && npm run playwright:test",
     "backstop:ref": "docker-compose run backstopjs npm run backstop:ref",
     "backstop:test": "docker-compose run backstopjs npm run backstop:test",
     "backstop:approve": "docker-compose run backstopjs npm run backstop:approve",
