@@ -23,8 +23,6 @@
       .page__rightbar {
           @include hee-flexgrid-col(3.75,$col-offset:0.4);
 
-          .hee-sidebarlinks,
-          .hee-sidebarimage,
           .nhsuk-card,
           .nhsuk-contact__card,
           .hee-card {

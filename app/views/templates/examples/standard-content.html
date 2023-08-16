@@ -205,38 +205,9 @@
     ]
   }) }}
 
-  {{ relatedNav({
-      "heading": "Quick Links",
-      "subsections": [{
-        "links": [
-          {
-            "url"  : "#",
-            "label" : "Briefing for library staff on Library and inter-library document supply and copyright in the NHS"
-          },
-          {
-            "url" : "#",
-            "label" : "Decision Tree"
-          },
-          {
-            "url" : "#",
-            "label" : "NHS-HE crossover copyright queries: guidance for higher education and NHS Library staff"
-          },
-          {
-            "url"  : "#",
-            "label" : "CILIP Copyright Hub"
-          },
-          {
-            "url"  : "#",
-            "label" : "NHS Copy Aid"
-          }
-        ]
-      }]
-    })
-  }}
-
-  {{ relatedLinksCard({
-      "heading": "Related Posts",
-      "links": [
+  {{ relatedLinks({
+      heading: "Related Posts",
+      items: [
         {
           "url"  : "#",
           "label" : "Expert searching"
@@ -301,8 +272,10 @@
   %}
 
   <div class="nhsuk-width-container">
-    <h2>Related content</h2>
-    <p>Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet. Nunc turpis vel aliquam lacus arcu. Sodales nullam id lectus orci quis sed. dsf</p>
-    {{ featuredContent(items) }}
+    {{ featuredContent({
+      title: "Related content",
+      summary: "Sed gravida laoreet fames eu. Proin id cras eu elementum. Aliquam orci, arcu nulla enim. Adipiscing sit id vestibulum in duis amet sit placerat. Magnis ullamcorper elementum ante elit amet imperdiet. Nunc turpis vel aliquam lacus arcu. Sodales nullam id lectus orci quis sed. dsf",
+      items: items
+    }) }}
   </div>
 {% endblock %}
