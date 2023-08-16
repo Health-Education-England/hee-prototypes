@@ -4,7 +4,9 @@
   "overrides": [
     {
       "label": "templates-event-item",
-      "delay": 5000
+      "hideSelectors": [
+        ".hee-media__container iframe"
+      ]
     }
   ]
 }
