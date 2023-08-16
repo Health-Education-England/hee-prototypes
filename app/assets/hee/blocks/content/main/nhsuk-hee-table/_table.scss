@@ -1,6 +1,16 @@
 .nhsuk-hee-table {
     margin-bottom: 4em !important;
     background-color: #fff;
+    border: 1px solid $color_nhsuk-grey-4;
+
+    &.has-caption {
+        border-top: none;
+
+        caption {
+            border: 1px solid $color_nhsuk-grey-4;
+            border-bottom: none;
+        }
+    }
 }
 .nhsuk-hee-table--multicols {
     width: 100%;
@@ -55,6 +65,7 @@
 
 table {
     background-color: #fff;
+    border: 1px solid $color_nhsuk-grey-4;
     padding: 16px;
     word-break: normal;
 }
