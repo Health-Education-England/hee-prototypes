@@ -6,7 +6,6 @@
   margin: 0 nhsuk-spacing(3);
   padding: 20px 0;
   position: relative;
-  z-index: 100;
 
   @include mq($from: desktop) {
     margin: 0 32px;
