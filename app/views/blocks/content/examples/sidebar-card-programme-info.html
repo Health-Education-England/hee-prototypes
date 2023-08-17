@@ -1,0 +1,50 @@
+{% extends "example-blocks.html" %}
+
+{% block main %}
+  {{ programmeInfoCard({
+    heading: "Programme information",
+    itemBorder: true,
+    links: [
+      {
+        label: "Overview",
+        url: "#"
+      },
+      {
+        label: "Recruitment timelines",
+        url: "#"
+      },
+      {
+        label: "Eligibility",
+        url: "#"
+      },
+      {
+        label: "Applying",
+        url: "#"
+      },
+      {
+        label: "Shortlisting",
+        url: "#"
+      },
+      {
+        label: "Interviews and selection",
+        url: "#"
+      },
+      {
+        label: "Preferencing",
+        url: "#"
+      },
+      {
+        label: "Person specification",
+        url: "#"
+      },
+      {
+        label: "Curriculum",
+        url: "#"
+      },
+      {
+        label: "Current posts",
+        url: "#"
+      }
+    ]
+  })}}
+{% endblock %}
