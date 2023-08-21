@@ -3,7 +3,9 @@ import { test, expect } from "@playwright/test";
 test('Newsletter form: validation tests', async ({ page }) => {
   await page.goto('/blocks/content/examples/main-newsletter-form.html');
 
+  // Check default state of error summary is hidden.
   const errorSummary = page.locator('#error-summary');
+  await expect(errorSummary).not.toBeVisible();
 
   // Check default disabled submit button state.
   const submitButton = page.getByRole('button', {name: 'Subscribe'});
