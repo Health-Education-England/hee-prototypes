@@ -1,9 +1,9 @@
 .hee-media {
-  min-width: 288px;
-  margin: nhsuk-spacing(6) 0 80px;
   background: #fff;
+  border: 1px solid $color_nhsuk-grey-4;
   padding: nhsuk-spacing(4) 0;
-  border-bottom: 4px solid $nhsuk-border-color;
+  margin: nhsuk-spacing(6) 0 80px;
+  min-width: 288px;
 
   h2 {
     margin: 0 nhsuk-spacing(4) nhsuk-spacing(4);
