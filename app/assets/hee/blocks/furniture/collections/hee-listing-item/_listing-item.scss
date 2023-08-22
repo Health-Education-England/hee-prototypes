@@ -2,11 +2,19 @@
   @include nhsuk-typography-responsive(19);
   background-color: $color_nhsuk-white;
   border: 1px solid $color_nhsuk-grey-4;
-  padding: map-get($nhsuk-spacing-points, 3);
-  margin-bottom: map-get($nhsuk-spacing-points, 3);
+  padding: nhsuk-spacing(4);
+  margin-bottom: nhsuk-spacing(3);
+
+  .hee-listing-item__image {
+    background-size: contain;
+    margin: nhsuk-spacing(4) * -1;
+    margin-bottom: nhsuk-spacing(4);
+    min-height: 150px;
+    min-width: 304px;
+  }
 
   .hee-listing-item__details__row {
-    margin-bottom: map-get($nhsuk-spacing-points, 2);
+    margin-bottom: nhsuk-spacing(2);
 
     span {
       display: inline-block;
@@ -18,6 +26,20 @@
           width: 33%;
         }
       }
+    }
+  }
+
+  // Image variant.
+  &.has-image {
+    max-width: 306px;
+
+    .hee-listing-item__details__row {
+      margin-bottom: nhsuk-spacing(3);
+    }
+
+    .hee-listing-item__details__label {
+      display: block;
+      width: auto;
     }
   }
 }

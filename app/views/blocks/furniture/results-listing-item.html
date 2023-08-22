@@ -1,0 +1,152 @@
+{% extends "prototype-inner.html" %}
+
+{% set page_url = 'results-listing-item' %}
+{% set page_title = 'Results listing item' %}
+
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
+
+{% block breadcrumbs %}
+  {{
+  breadcrumb({
+    items: [
+      {
+        href: basePath + "/",
+        text: "Home"
+      },
+      {
+        href: basePath + "/blocks",
+        text: "Blocks"
+      }
+    ],
+    href: basePath + "/blocks/"+page_url,
+    text: page_title
+  })
+  }}
+{% endblock %}
+
+{% block pageLeftbar %}
+  {{ subnav({
+    area: 'blocks',
+    subarea: 'furniture'
+  }) }}
+{% endblock %}
+
+{% block pageHeader %}
+  <span class="nhsuk-caption-xl">Furniture</span>
+  <h1>{{ page_title }}</h1>
+  <p class="nhsuk-lede-text">Listings items are used in collection pages / featured content blocks to represent a single result.</p>
+{% endblock %}
+
+{% block pageContent %}
+
+  <h3>Example</h3>
+  {{ example({
+    url: basePath + '/blocks/furniture/examples/' + page_url,
+    height: '500'
+  }) }}
+
+  <hr />
+
+  <h3>Macro - without image</h3>
+  {{ highlight({
+    html: '
+  {{ listingItem({
+    title: "Result item",
+    href: "http://www.google.com",
+    details: [
+      {
+        label: "Publications type:",
+        value: "Briefing"
+      },
+      {
+        label: "Publish date:",
+        value: "07 September 2022"
+      }
+    ],
+    summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+  }) }}
+  '
+  }) }}
+
+  <hr />
+
+  <h3>HTML - without image</h3>
+  {{ highlight({
+    html : '<div class="hee-listing-item">
+    <h3><a href="http://www.google.com">Result item</a></h3>
+    <div class="hee-listing-item__details">
+      <div class="hee-listing-item__details__row">
+        <span class="hee-listing-item__details__label">Profession:</span>
+        <span><a href="#">Medical</a></span>
+      </div>
+      <div class="hee-listing-item__details__row">
+        <span class="hee-listing-item__details__label">Discipline:</span>
+        <span><a href="#">Anaesthesia</a></span>
+      </div>
+      <div class="hee-listing-item__details__row">
+        <span class="hee-listing-item__details__label">Duration:</span>
+        <span><a href="#">24 months</a></span>
+      </div>
+    </div>
+    <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
+  </div>'
+  })
+  }}
+
+  <hr />
+
+  <h3>Macro - with image</h3>
+  {{ highlight({
+    html: '
+  {{ listingItem({
+    image: basePath + "/images/training-programme-card.png",
+    title: "Result item",
+    href: "http://www.google.com",
+    details: [
+      {
+        label: "Profession:",
+        value: "<a href=\"#\">Medical</a>"
+      },
+      {
+        label: "Discipline:",
+        value: "<a href=\"#\">Anaesthesia</a>"
+      },
+      {
+        label: "Duration:",
+        value: "<a href=\"#\">24 months</a>"
+      }
+    ],
+    summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+  }) }}
+  '
+  }) }}
+
+  <hr />
+
+  <h3>HTML - without image</h3>
+  {{ highlight({
+    html : '<div class="hee-listing-item has-image">
+    <div class="hee-listing-item__image" style="background-image:url(/images/training-programme-card.png);"></div>
+    <h3><a href="http://www.google.com">Result item</a></h3>
+    <div class="hee-listing-item__details">
+      <div class="hee-listing-item__details__row">
+        <span class="hee-listing-item__details__label">Profession:</span>
+        <span><a href="#">Medical</a></span>
+      </div>
+      <div class="hee-listing-item__details__row">
+        <span class="hee-listing-item__details__label">Discipline:</span>
+        <span><a href="#">Anaesthesia</a></span>
+      </div>
+      <div class="hee-listing-item__details__row">
+        <span class="hee-listing-item__details__label">Duration:</span>
+        <span><a href="#">24 months</a></span>
+      </div>
+    </div>
+    <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
+  </div>'
+  })
+  }}
+
+{% endblock %}
+
+{% block pageFooter %}{% endblock %}
