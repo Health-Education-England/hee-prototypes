@@ -9,10 +9,9 @@
 
     @include mq($from: desktop) {
       align-content: space-between;
-      column-gap: 18px;
       display: flex;
       flex-wrap: wrap;
-      justify-content: flex-start;
+      justify-content: space-between;
     }
   }
 
@@ -31,10 +30,6 @@
   }
 
   .hee-featured-content-wrapper.double {
-    @include mq($from: desktop) {
-      column-gap: 24px;
-    }
-
     .hee-featured-content__item {
       @include mq($from: large-desktop) {
         flex-basis: 48%;
