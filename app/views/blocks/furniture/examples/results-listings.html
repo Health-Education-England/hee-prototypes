@@ -44,6 +44,7 @@
     {% set items = (items.push(item), items) %}
   {% endfor %}
 
+  <h2>One column layout</h2>
   {{ listingLayout({
     filter: {
       select: selectAttributes,
@@ -80,5 +81,42 @@
     results: items,
     emptyMessage: "No results",
     showPagination: true
+  }) }}
+
+  {% set items = [] %}
+  {% for i in range(0, 10) -%}
+    {% set item = {
+      image: basePath + "/images/specialty-hero.jpg",
+      title: "Anaesthesia",
+      href: "#",
+      details: [
+        {
+          label: "Profession:",
+          value: "<a href=\"#\">Medical</a>"
+        },
+        {
+          label: "Discipline:",
+          value: "<a href=\"#\">Anaesthesia</a>"
+        },
+        {
+          label: "Duration:",
+          value: "<a href=\"#\">24 months</a>"
+        }
+      ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+    } %}
+    {% set items = (items.push(item), items) %}
+  {% endfor %}
+
+  <h2>Two column layout</h2>
+  {{ listingLayout({
+    filter: {
+      select: selectAttributes,
+      submit: submitAttributes
+    },
+    results: items,
+    emptyMessage: "No results",
+    showPagination: true,
+    twoColumnLayout: true
   }) }}
 {% endblock %}
