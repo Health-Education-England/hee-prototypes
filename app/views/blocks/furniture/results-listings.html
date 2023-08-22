@@ -34,7 +34,8 @@
 {% block pageHeader %}
   <span class="nhsuk-caption-xl">Furniture</span>
   <h1>{{ page_title }}</h1>
-  <p class="nhsuk-lede-text"></p>
+  <p>Custom component to display a list of results, sort by and pagination (if required).</p>
+  <p>The listing component uses the listingItem() macro to display each result.</p>
 {% endblock %}
 
 {% block pageContent %}
@@ -47,100 +48,124 @@
 
   <hr />
 
-  <h3>Macro</h3>
-  {{ highlight({
-    html: '
-{{ filter({
-    groups: [
+  <h3>Macro (fullwidth item layout)</h3>
+{{ highlight({
+  html: '
+{% set selectAttributes = {
+    id: "sort",
+    name: "sort",
+    label: {
+      text: "Sort by"
+    },
+    items: [
       {
-        title: "Topic",
-        showClearToggle: true,
-        items: [
-        {
-          text: "Item one",
-          value: "item_one",
-          checked: true
-        },
-        {
-          text: "Item two",
-          value: "item_two",
-          checked: true
-        }
-      ]
+        value: "newest",
+        text: "Newest"
       },
       {
-        title: "Publication type",
-        items: [
-        {
-          text: "Item one",
-          value: "item_one"
-        },
-        {
-          text: "Item two",
-          value: "item_two"
-        },
-        {
-          text: "Item three",
-          value: "item_three"
-        }
-      ]
+        value: "relevance",
+        text: "Relevance"
       }
     ]
+  } %}
+
+  {% set submitAttributes = {
+    text: "Update",
+    classes: "hee-listing__filter__submit"
+  } %}
+
+  {% set items = [] %}
+  {% for i in range(0, 10) -%}
+    {% set item = {
+      title: "Publication item #" + loop.index,
+      href: "#",
+      details: [
+        {
+          label: "Publications type:",
+          value: "Briefing"
+        },
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+    } %}
+    {% set items = (items.push(item), items) %}
+  {% endfor %}
+
+  {{ listingLayout({
+    filter: {
+      select: selectAttributes,
+      submit: submitAttributes
+    },
+    results: items,
+    emptyMessage: "No results",
+    showPagination: true
+  }) }}
+  '
+}) }}
+
+<hr>
+
+  <h2>Macro (half width item layout)</h2>
+  {{ highlight({
+    html: '
+{% set selectAttributes = {
+    id: "sort",
+    name: "sort",
+    label: {
+      text: "Sort by"
+    },
+    items: [
+      {
+        value: "newest",
+        text: "Newest"
+      },
+      {
+        value: "relevance",
+        text: "Relevance"
+      }
+    ]
+  } %}
+
+  {% set submitAttributes = {
+    text: "Update",
+    classes: "hee-listing__filter__submit"
+  } %}
+
+  {% set items = [] %}
+  {% for i in range(0, 10) -%}
+    {% set item = {
+      title: "Publication item #" + loop.index,
+      href: "#",
+      details: [
+        {
+          label: "Publications type:",
+          value: "Briefing"
+        },
+        {
+          label: "Publish date:",
+          value: "07 September 2022"
+        }
+      ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+    } %}
+    {% set items = (items.push(item), items) %}
+  {% endfor %}
+
+  {{ listingLayout({
+    filter: {
+      select: selectAttributes,
+      submit: submitAttributes
+    },
+    results: items,
+    emptyMessage: "No results",
+    showPagination: true,
+    halfWidthResults: true
   }) }}
   '
   }) }}
-
-  <hr />
-
-  <h3>HTML</h3>
-  {{ highlight({
-    html : '<form class="nhsuk-filter nhsuk-filter--js" method="get">
-    <p class="nhsuk-filter__title nhsuk-heading-l">Filters</p>
-    <div class="nhsuk-filter__groups">
-      <div class="nhsuk-filter__group">
-        <a class="nhsuk-filter__group__clear" href="#">Clear</a>
-        <div class="nhsuk-form-group">
-          <fieldset class="nhsuk-fieldset">
-            <legend class="nhsuk-fieldset__legend"> Topic </legend>
-            <div class="nhsuk-checkboxes">
-              <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="filter_Topic-1" name="filter" type="checkbox" value="item_one" checked="">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Topic-1"> Item one </label>
-              </div>
-              <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="filter_Topic-2" name="filter" type="checkbox" value="item_two" checked="">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Topic-2"> Item two </label>
-              </div>
-            </div>
-          </fieldset>
-        </div>
-      </div>
-      <div class="nhsuk-filter__group">
-        <div class="nhsuk-form-group">
-          <fieldset class="nhsuk-fieldset">
-            <legend class="nhsuk-fieldset__legend"> Publication type </legend>
-            <div class="nhsuk-checkboxes">
-              <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="filter_Publication type-1" name="filter" type="checkbox" value="item_one">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Publication type-1"> Item one </label>
-              </div>
-              <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="filter_Publication type-2" name="filter" type="checkbox" value="item_two">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Publication type-2"> Item two </label>
-              </div>
-              <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="filter_Publication type-3" name="filter" type="checkbox" value="item_three">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Publication type-3"> Item three </label>
-              </div>
-            </div>
-          </fieldset>
-        </div>
-      </div>
-    </div>
-    <button class="nhsuk-button nhsuk-filter__submit" type="submit" hidden=""> Update results </button>
-</form>'
-  })
-  }}
 
 {% endblock %}
 
