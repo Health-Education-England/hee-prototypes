@@ -28,7 +28,7 @@
         </div>
       {% endif %}
     </div>
-    <div class="hee-listing__results">
+    <div class="hee-listing__results {{ "layout-half-width" if list.halfWidthResults }}">
       {% if list.results.length > 0 %}
         {% for result in list.results %}
           {{ listingItem(result) }}
