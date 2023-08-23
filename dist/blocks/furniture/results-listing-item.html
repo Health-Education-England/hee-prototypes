@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Caption - Templates - NWP Prototype Kit</title>
+  <title>Results listing item - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -59,12 +59,11 @@
         <ol class="nhsuk-breadcrumb__list">
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks">Blocks</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/furniture">Furniture</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/furniture/page-caption">Caption</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/results-listing-item">Results listing item</a></li>
         </ol>
         <p class="nhsuk-breadcrumb__back">
-          <a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/furniture/page-caption">
-            <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span> Caption </a>
+          <a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/results-listing-item">
+            <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span> Results listing item </a>
         </p>
       </div>
     </nav>
@@ -131,19 +130,100 @@
         <div class="page__main">
           <div class="page__header">
             <span class="nhsuk-caption-xl">Furniture</span>
-            <h1>Caption</h1>
-            <p class="nhsuk-lede-text"></p>
+            <h1>Results listing item</h1>
+            <p class="nhsuk-lede-text">Listings items are used in collection pages / featured content blocks to represent a single result.</p>
           </div>
           <h3>Example</h3>
           <div class="prototype__example block">
-            <a href="/hee-prototypes/blocks/furniture/examples/page-caption.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
+            <a href="/hee-prototypes/blocks/furniture/examples/results-listing-item.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
             <div class="thumbnail">
-              <iframe src="/hee-prototypes/blocks/furniture/examples/page-caption.html" height="100px"></iframe>
+              <iframe src="/hee-prototypes/blocks/furniture/examples/results-listing-item.html" height="500"></iframe>
             </div>
           </div>
           <hr />
-          <h3>HTML</h3>
-          <pre><code>&lt;span class=&quot;nhsuk-caption-xl&quot;&gt;Caption&lt;/span&gt;</code></pre>
+          <h3>Macro - without image</h3>
+          <pre><code>
+  {{ listingItem({
+    title: &quot;Result item&quot;,
+    href: &quot;http://www.google.com&quot;,
+    details: [
+      {
+        label: &quot;Publications type:&quot;,
+        value: &quot;Briefing&quot;
+      },
+      {
+        label: &quot;Publish date:&quot;,
+        value: &quot;07 September 2022&quot;
+      }
+    ],
+    summary: &quot;Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec.&quot;
+  }) }}
+  </code></pre>
+          <hr />
+          <h3>HTML - without image</h3>
+          <pre><code>&lt;div class=&quot;hee-listing-item&quot;&gt;
+    &lt;h3&gt;&lt;a href=&quot;http://www.google.com&quot;&gt;Result item&lt;/a&gt;&lt;/h3&gt;
+    &lt;div class=&quot;hee-listing-item__details&quot;&gt;
+      &lt;div class=&quot;hee-listing-item__details__row&quot;&gt;
+        &lt;span class=&quot;hee-listing-item__details__label&quot;&gt;Profession:&lt;/span&gt;
+        &lt;span&gt;&lt;a href=&quot;#&quot;&gt;Medical&lt;/a&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;hee-listing-item__details__row&quot;&gt;
+        &lt;span class=&quot;hee-listing-item__details__label&quot;&gt;Discipline:&lt;/span&gt;
+        &lt;span&gt;&lt;a href=&quot;#&quot;&gt;Anaesthesia&lt;/a&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;hee-listing-item__details__row&quot;&gt;
+        &lt;span class=&quot;hee-listing-item__details__label&quot;&gt;Duration:&lt;/span&gt;
+        &lt;span&gt;&lt;a href=&quot;#&quot;&gt;24 months&lt;/a&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;hee-listing-item__summary&quot;&gt; Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+          <hr />
+          <h3>Macro - with image</h3>
+          <pre><code>
+  {{ listingItem({
+    image: basePath + &quot;/images/training-programme-card.png&quot;,
+    title: &quot;Result item&quot;,
+    href: &quot;http://www.google.com&quot;,
+    details: [
+      {
+        label: &quot;Profession:&quot;,
+        value: &quot;&lt;a href=&quot;#&quot;&gt;Medical&lt;/a&gt;&quot;
+      },
+      {
+        label: &quot;Discipline:&quot;,
+        value: &quot;&lt;a href=&quot;#&quot;&gt;Anaesthesia&lt;/a&gt;&quot;
+      },
+      {
+        label: &quot;Duration:&quot;,
+        value: &quot;&lt;a href=&quot;#&quot;&gt;24 months&lt;/a&gt;&quot;
+      }
+    ],
+    summary: &quot;Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec.&quot;
+  }) }}
+  </code></pre>
+          <hr />
+          <h3>HTML - without image</h3>
+          <pre><code>&lt;div class=&quot;hee-listing-item has-image&quot;&gt;
+    &lt;div class=&quot;hee-listing-item__image&quot; style=&quot;background-image:url(/images/training-programme-card.png);&quot;&gt;&lt;/div&gt;
+    &lt;h3&gt;&lt;a href=&quot;http://www.google.com&quot;&gt;Result item&lt;/a&gt;&lt;/h3&gt;
+    &lt;div class=&quot;hee-listing-item__details&quot;&gt;
+      &lt;div class=&quot;hee-listing-item__details__row&quot;&gt;
+        &lt;span class=&quot;hee-listing-item__details__label&quot;&gt;Profession:&lt;/span&gt;
+        &lt;span&gt;&lt;a href=&quot;#&quot;&gt;Medical&lt;/a&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;hee-listing-item__details__row&quot;&gt;
+        &lt;span class=&quot;hee-listing-item__details__label&quot;&gt;Discipline:&lt;/span&gt;
+        &lt;span&gt;&lt;a href=&quot;#&quot;&gt;Anaesthesia&lt;/a&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;hee-listing-item__details__row&quot;&gt;
+        &lt;span class=&quot;hee-listing-item__details__label&quot;&gt;Duration:&lt;/span&gt;
+        &lt;span&gt;&lt;a href=&quot;#&quot;&gt;24 months&lt;/a&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;hee-listing-item__summary&quot;&gt; Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
         </div>
       </div>
     </div>
