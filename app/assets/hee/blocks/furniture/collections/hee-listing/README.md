@@ -266,7 +266,7 @@ The listing component uses the listingItem() macro to display each result.
     results: items,
     emptyMessage: "No results",
     showPagination: true,
-    halfWidthResults: true
+    twoColumnLayout: true
   }) }}
 ```
 
@@ -282,4 +282,4 @@ The filter macro takes the following arguments:
 | **results**          | array   | Yes      | An array of results; see listingItem for more information  |
 | **showPagination**   | boolean | No       | Display pagination for this example?                       |
 | **emptyMessage**     | string  | Yes      | String which is displayed when no results found            |
-| **halfWidthResults** | boolean | No       | Flag which sets results items to 50% width on desktop      |
+| **twoColumnLayout** | boolean | No       | Flag which sets results items to 50% width on desktop      |

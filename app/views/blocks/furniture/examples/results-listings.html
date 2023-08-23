@@ -44,7 +44,7 @@
     {% set items = (items.push(item), items) %}
   {% endfor %}
 
-  <h2>Fullwidth results layout</h2>
+  <h2>One column layout</h2>
   {{ listingLayout({
     filter: {
       select: selectAttributes,
@@ -55,7 +55,7 @@
     showPagination: true
   }) }}
 
-  <h2>Half width results layout</h2>
+  <h2>Two column layout</h2>
   {{ listingLayout({
     filter: {
       select: selectAttributes,
@@ -64,6 +64,6 @@
     results: items,
     emptyMessage: "No results",
     showPagination: true,
-    halfWidthResults: true
+    twoColumnLayout: true
   }) }}
 {% endblock %}
