@@ -18,7 +18,7 @@
     @include nhsuk-responsive-margin(7, 'bottom');
     padding-top: nhsuk-spacing(5);
 
-    &.layout-half-width {
+    &.layout-two-col {
       @include mq($from: desktop) {
         display: flex;
         flex-wrap: wrap;
