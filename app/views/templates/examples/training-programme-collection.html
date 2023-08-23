@@ -1,0 +1,448 @@
+{% extends "example-template-leftbar.html" %}
+
+{% block pageTitle %}Training Programme Collection - Examples - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+  {{
+  breadcrumb({
+    items: [
+      {
+        href: basePath + "/",
+        text: "Home"
+      }
+    ],
+    href: basePath + "/templates/examples/training-programme-collection",
+    text: "Training Programme Collection"
+  })
+  }}
+{% endblock %}
+
+{% block pageHeader %}
+  <div class="nhsuk-width-container">
+    <h1>Training Programmes</h1>
+    <span class="nhsuk-caption-xl">Caption</span>
+    <p class="nhsuk-lede-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum sit sed porta viverra. Amet, tincidunt cras augue justo, proin mollis sapien. Sed cursus quam suspendisse.</p>
+  </div>
+{% endblock %}
+
+{% block pageLeftbar %}
+  {{ filter({
+    groups: [
+      {
+        title: "Clinical Discipline",
+        showClearToggle: true,
+        items: [
+          {
+            text: "Acute Care Common Stem",
+            value: "acute-care-common-stem"
+          },
+          {
+            text: "Anaesthesia",
+            value: "anaesthesia"
+
+          },
+          {
+            text: "Dental",
+            value: "dental"
+          },
+          {
+            text: "Emergency Medicine",
+            value: "emergency-medicine"
+          },
+          {
+            text: "Foundation",
+            value: "foundation"
+          },
+          {
+            text: "General Practice",
+            value: "general-practice"
+          },
+          {
+            text: "Medicine",
+            value: "medicine"
+          },
+          {
+            text: "Obstetrics & Gynaecology",
+            value: "obstetrics-gynaecology"
+          },
+          {
+            text: "Ophthalmology",
+            value: "ophthalmology"
+          },
+          {
+            text: "Paediatrics",
+            value: "paediatrics",
+            checked: true
+          },
+          {
+            text: "Pathology",
+            value: "pathology"
+          },
+          {
+            text: "Psychiatry",
+            value: "psychiatry"
+          },
+          {
+            text: "Public Health",
+            value: "public-health"
+          },
+          {
+            text: "Radiology",
+            value: "radiology"
+          },
+          {
+            text: "Surgery",
+            value: "surgery"
+          }
+        ]
+      },
+      {
+        title: "Topic",
+        showClearToggle: true,
+        items: [
+          {
+            text: "Addiction",
+            value: "addiction"
+          },
+          {
+            text: "Advanced clinical practice",
+            value: "advanced-clinical-practice"
+          },
+          {
+            text: "Antimicrobial resistance",
+            value: "antimicrobial resistance"
+          },
+          {
+            text: "Armed forces",
+            value: "armed-forces"
+          },
+          {
+            text: "Cancer",
+            value: "cancer"
+          },
+          {
+            text: "Careers",
+            value: "careers"
+          },
+          {
+            text: "Children and young people",
+            value: "children-young-people"
+          },
+          {
+            text: "Community care",
+            value: "community-care"
+          },
+          {
+            text: "Cosmetic procedures",
+            value: "cosmetic-procedures",
+            checked: true
+          },
+          {
+            text: "Covid-19",
+            value: "covid-19"
+          },
+          {
+            text: "Critical care",
+            value: "critical-care"
+          },
+          {
+            text: "Dementia",
+            value: "dementia"
+          },
+          {
+            text: "Digital skills",
+            value: "digital-skills"
+          },
+          {
+            text: "End of life care",
+            value: "end-life-care"
+          },
+          {
+            text: "Genomics",
+            value: "genomics"
+          },
+          {
+            text: "Global health",
+            value: "global-health"
+          },
+          {
+            text: "Health academia",
+            value: "health-academia"
+          },
+          {
+            text: "health-inequalities",
+            value: "health-inequalities"
+          },
+          {
+            text: "Infection management",
+            value: "infection-management"
+          },
+          {
+            text: "Knowledge management",
+            value: "knowledge-management"
+          },
+          {
+            text: "Learning disability and autism",
+            value: "learning-disability-autism"
+          },
+          {
+            text: "Long term conditions",
+            value: "long-term-conditions"
+          },
+          {
+            text: "Maternity",
+            value: "maternity"
+          },
+          {
+            text: "Medicines optimisation",
+            value: "medicines-optimisation",
+            checked: true
+          },
+          {
+            text: "Neonatal",
+            value: "neonatal"
+          },
+          {
+            text: "NHS Screening Services",
+            value: "nhs-screening-services"
+          },
+          {
+            text: "Personalised care",
+            value: "personalised-care"
+          },
+          {
+            text: "Pre-employment",
+            value: "pre-employment"
+          },
+          {
+            text: "Prevention and public health",
+            value: "prevention-public-health"
+          },
+          {
+            text: "Primary care",
+            value: "primary-care"
+          },
+          {
+            text: "Quality",
+            value: "quality"
+          },
+          {
+            text: "Sexual and reproductive health",
+            value: "sexual-reproductive-health"
+          },
+          {
+            text: "Urgent and emergency care",
+            value: "urgent-emergency-care"
+          },
+          {
+            text: "Workforce planning",
+            value: "workforce-planning"
+          },
+          {
+            text: "Workforce transformation",
+            value: "workforce-transformation"
+          }
+        ]
+      },
+      {
+        title: "Profession",
+        showClearToggle: true,
+        items: [
+          {
+            text: "Advanced critical care practitioners",
+            value: "advanced-critical-care-practitioners"
+          },
+          {
+            text: "Allied health professionals",
+            value: "allied-health-professionals"
+          },
+          {
+            text: "Ambulance service team",
+            value: "ambulance-service-team"
+          },
+          {
+            text: "Dental professionals",
+            value: "dental-professionals"
+          },
+          {
+            text: "Health informaticians",
+            value: "health-informaticians"
+          },
+          {
+            text: "Healthcare scientists",
+            value: "healthcare-scientists",
+            checked: true
+          },
+          {
+            text: "Management professionals",
+            value: "management-professionals",
+            checked: true
+          },
+          {
+            text: "Medical associate professionals",
+            value: "medical-associate-professionals"
+          },
+          {
+            text: "Medical doctors",
+            value: "medical-doctors"
+          },
+          {
+            text: "Midwives",
+            value: "midwives"
+          },
+          {
+            text: "Nurses",
+            value: "nurses"
+          },
+          {
+            text: "Pharmacy professionals",
+            value: "pharmacy-professionals"
+          },
+          {
+            text: "Psychological professionals",
+            value: "psychological-professionals"
+          },
+          {
+            text: "Public health professionals",
+            value: "public-health-professionals"
+          }
+        ]
+      },
+      {
+        title: "Recruitment Format",
+        showClearToggle: true,
+        items: [
+          {
+            text: "Uncoupled",
+            value: "uncoupled"
+          },
+          {
+            text: "Runthrough",
+            value: "runthrough",
+            checked: true
+          },
+          {
+            text: "Standard",
+            value: "standard"
+          },
+          {
+            text: "N/A",
+            value: "na"
+          }
+        ]
+      },
+      {
+        title: "Training type",
+        showClearToggle: true,
+        items: [
+          {
+            text: "Academic",
+            value: "academic"
+          },
+          {
+            text: "Core",
+            value: "core",
+            checked: true
+          },
+          {
+            text: "Formal training",
+            value: "formal-training"
+          },
+          {
+            text: "Foundation",
+            value: "foundation"
+          },
+          {
+            text: "Higher specialist scientist training",
+            value: "higher-specialist-scientist-training"
+          },
+          {
+            text: "Higher speciality",
+            value: "higher-speciality"
+          },
+          {
+            text: "Mentoring",
+            value: "mentoring"
+          },
+          {
+            text: "Practitioner training programme",
+            value: "practitioner-training-programme"
+          },
+          {
+            text: "Scientist training programme",
+            value: "scientist-training-programme"
+          },
+          {
+            text: "Self learning",
+            value: "self-learning"
+          },
+          {
+            text: "Speciality",
+            value: "speciality"
+          }
+        ]
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block pageContent %}
+  {% set selectAttributes = {
+    id: "sort",
+    name: "sort",
+    label: {
+      text: "Sort by"
+    },
+    items: [
+      {
+        value: "newest",
+        text: "Newest"
+      },
+      {
+        value: "relevance",
+        text: "Relevance"
+      }
+    ]
+  } %}
+
+  {% set submitAttributes = {
+    text: "Update",
+    classes: "hee-listing__filter__submit"
+  } %}
+
+  {% set items = [] %}
+  {% for i in range(0, 10) -%}
+    {% set item = {
+      image: basePath + "/images/training-programme-card.png",
+      title: "Anaesthesia",
+      href: "#",
+      details: [
+        {
+          label: "Profession:",
+          value: "<a href=\"#\">Medical</a>"
+        },
+        {
+          label: "Discipline:",
+          value: "<a href=\"#\">Anaesthesia</a>"
+        },
+        {
+          label: "Duration:",
+          value: "<a href=\"#\">24 months</a>"
+        }
+      ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+    } %}
+    {% set items = (items.push(item), items) %}
+  {% endfor %}
+
+  {{ listingLayout({
+    filter: {
+      select: selectAttributes,
+      submit: submitAttributes
+    },
+    results: items,
+    emptyMessage: "No results",
+    showPagination: true,
+    twoColumnLayout: true
+  }) }}
+{% endblock %}
