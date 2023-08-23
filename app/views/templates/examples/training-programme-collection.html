@@ -1,5 +1,11 @@
 {% extends "example-template-leftbar.html" %}
 
+{% import 'includes/_taxonomy-clinical-discipline.html' as taxonomyClinicalDiscipline %}
+{% import 'includes/_taxonomy-profession.html' as taxonomyProfession %}
+{% import 'includes/_taxonomy-recruitment-format.html' as taxonomyRecruitmentFormat %}
+{% import 'includes/_taxonomy-topic.html' as taxonomyTopic %}
+{% import 'includes/_taxonomy-training-type.html' as taxonomyTrainingType %}
+
 {% block pageTitle %}Training Programme Collection - Examples - NWP Prototype Kit{% endblock %}
 
 {% block pageBreadcrumbs %}
@@ -31,356 +37,27 @@
       {
         title: "Clinical Discipline",
         showClearToggle: true,
-        items: [
-          {
-            text: "Acute Care Common Stem",
-            value: "acute-care-common-stem"
-          },
-          {
-            text: "Anaesthesia",
-            value: "anaesthesia"
-
-          },
-          {
-            text: "Dental",
-            value: "dental"
-          },
-          {
-            text: "Emergency Medicine",
-            value: "emergency-medicine"
-          },
-          {
-            text: "Foundation",
-            value: "foundation"
-          },
-          {
-            text: "General Practice",
-            value: "general-practice"
-          },
-          {
-            text: "Medicine",
-            value: "medicine"
-          },
-          {
-            text: "Obstetrics & Gynaecology",
-            value: "obstetrics-gynaecology"
-          },
-          {
-            text: "Ophthalmology",
-            value: "ophthalmology"
-          },
-          {
-            text: "Paediatrics",
-            value: "paediatrics",
-            checked: true
-          },
-          {
-            text: "Pathology",
-            value: "pathology"
-          },
-          {
-            text: "Psychiatry",
-            value: "psychiatry"
-          },
-          {
-            text: "Public Health",
-            value: "public-health"
-          },
-          {
-            text: "Radiology",
-            value: "radiology"
-          },
-          {
-            text: "Surgery",
-            value: "surgery"
-          }
-        ]
+        items: taxonomyClinicalDiscipline.items
       },
       {
         title: "Topic",
         showClearToggle: true,
-        items: [
-          {
-            text: "Addiction",
-            value: "addiction"
-          },
-          {
-            text: "Advanced clinical practice",
-            value: "advanced-clinical-practice"
-          },
-          {
-            text: "Antimicrobial resistance",
-            value: "antimicrobial resistance"
-          },
-          {
-            text: "Armed forces",
-            value: "armed-forces"
-          },
-          {
-            text: "Cancer",
-            value: "cancer"
-          },
-          {
-            text: "Careers",
-            value: "careers"
-          },
-          {
-            text: "Children and young people",
-            value: "children-young-people"
-          },
-          {
-            text: "Community care",
-            value: "community-care"
-          },
-          {
-            text: "Cosmetic procedures",
-            value: "cosmetic-procedures",
-            checked: true
-          },
-          {
-            text: "Covid-19",
-            value: "covid-19"
-          },
-          {
-            text: "Critical care",
-            value: "critical-care"
-          },
-          {
-            text: "Dementia",
-            value: "dementia"
-          },
-          {
-            text: "Digital skills",
-            value: "digital-skills"
-          },
-          {
-            text: "End of life care",
-            value: "end-life-care"
-          },
-          {
-            text: "Genomics",
-            value: "genomics"
-          },
-          {
-            text: "Global health",
-            value: "global-health"
-          },
-          {
-            text: "Health academia",
-            value: "health-academia"
-          },
-          {
-            text: "health-inequalities",
-            value: "health-inequalities"
-          },
-          {
-            text: "Infection management",
-            value: "infection-management"
-          },
-          {
-            text: "Knowledge management",
-            value: "knowledge-management"
-          },
-          {
-            text: "Learning disability and autism",
-            value: "learning-disability-autism"
-          },
-          {
-            text: "Long term conditions",
-            value: "long-term-conditions"
-          },
-          {
-            text: "Maternity",
-            value: "maternity"
-          },
-          {
-            text: "Medicines optimisation",
-            value: "medicines-optimisation",
-            checked: true
-          },
-          {
-            text: "Neonatal",
-            value: "neonatal"
-          },
-          {
-            text: "NHS Screening Services",
-            value: "nhs-screening-services"
-          },
-          {
-            text: "Personalised care",
-            value: "personalised-care"
-          },
-          {
-            text: "Pre-employment",
-            value: "pre-employment"
-          },
-          {
-            text: "Prevention and public health",
-            value: "prevention-public-health"
-          },
-          {
-            text: "Primary care",
-            value: "primary-care"
-          },
-          {
-            text: "Quality",
-            value: "quality"
-          },
-          {
-            text: "Sexual and reproductive health",
-            value: "sexual-reproductive-health"
-          },
-          {
-            text: "Urgent and emergency care",
-            value: "urgent-emergency-care"
-          },
-          {
-            text: "Workforce planning",
-            value: "workforce-planning"
-          },
-          {
-            text: "Workforce transformation",
-            value: "workforce-transformation"
-          }
-        ]
+        items: taxonomyTopic.items
       },
       {
         title: "Profession",
         showClearToggle: true,
-        items: [
-          {
-            text: "Advanced critical care practitioners",
-            value: "advanced-critical-care-practitioners"
-          },
-          {
-            text: "Allied health professionals",
-            value: "allied-health-professionals"
-          },
-          {
-            text: "Ambulance service team",
-            value: "ambulance-service-team"
-          },
-          {
-            text: "Dental professionals",
-            value: "dental-professionals"
-          },
-          {
-            text: "Health informaticians",
-            value: "health-informaticians"
-          },
-          {
-            text: "Healthcare scientists",
-            value: "healthcare-scientists",
-            checked: true
-          },
-          {
-            text: "Management professionals",
-            value: "management-professionals",
-            checked: true
-          },
-          {
-            text: "Medical associate professionals",
-            value: "medical-associate-professionals"
-          },
-          {
-            text: "Medical doctors",
-            value: "medical-doctors"
-          },
-          {
-            text: "Midwives",
-            value: "midwives"
-          },
-          {
-            text: "Nurses",
-            value: "nurses"
-          },
-          {
-            text: "Pharmacy professionals",
-            value: "pharmacy-professionals"
-          },
-          {
-            text: "Psychological professionals",
-            value: "psychological-professionals"
-          },
-          {
-            text: "Public health professionals",
-            value: "public-health-professionals"
-          }
-        ]
+        items: taxonomyProfession.items
       },
       {
         title: "Recruitment Format",
         showClearToggle: true,
-        items: [
-          {
-            text: "Uncoupled",
-            value: "uncoupled"
-          },
-          {
-            text: "Runthrough",
-            value: "runthrough",
-            checked: true
-          },
-          {
-            text: "Standard",
-            value: "standard"
-          },
-          {
-            text: "N/A",
-            value: "na"
-          }
-        ]
+        items: taxonomyRecruitmentFormat.items
       },
       {
         title: "Training type",
         showClearToggle: true,
-        items: [
-          {
-            text: "Academic",
-            value: "academic"
-          },
-          {
-            text: "Core",
-            value: "core",
-            checked: true
-          },
-          {
-            text: "Formal training",
-            value: "formal-training"
-          },
-          {
-            text: "Foundation",
-            value: "foundation"
-          },
-          {
-            text: "Higher specialist scientist training",
-            value: "higher-specialist-scientist-training"
-          },
-          {
-            text: "Higher speciality",
-            value: "higher-speciality"
-          },
-          {
-            text: "Mentoring",
-            value: "mentoring"
-          },
-          {
-            text: "Practitioner training programme",
-            value: "practitioner-training-programme"
-          },
-          {
-            text: "Scientist training programme",
-            value: "scientist-training-programme"
-          },
-          {
-            text: "Self learning",
-            value: "self-learning"
-          },
-          {
-            text: "Speciality",
-            value: "speciality"
-          }
-        ]
+        items: taxonomyTrainingType.items
       }
     ]
   }) }}
