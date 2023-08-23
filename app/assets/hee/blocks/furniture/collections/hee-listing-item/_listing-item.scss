@@ -1,17 +1,10 @@
 .hee-listing-item {
   @include nhsuk-typography-responsive(19);
+
   background-color: $color_nhsuk-white;
   border: 1px solid $color_nhsuk-grey-4;
   padding: nhsuk-spacing(4);
   margin-bottom: nhsuk-spacing(3);
-
-  .hee-listing-item__image {
-    background-size: contain;
-    margin: nhsuk-spacing(4) * -1;
-    margin-bottom: nhsuk-spacing(4);
-    min-height: 150px;
-    min-width: 304px;
-  }
 
   .hee-listing-item__details__row {
     margin-bottom: nhsuk-spacing(2);
@@ -31,15 +24,34 @@
 
   // Image variant.
   &.has-image {
-    max-width: 306px;
+    padding: 0 0 nhsuk-spacing(4) 0;
+
+    .hee-listing-item__image {
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-bottom: nhsuk-spacing(4);
+      max-width: 100%;
+      padding-bottom: 49.34%;
+    }
+
+    h3 {
+      padding: 0 nhsuk-spacing(4) 0 nhsuk-spacing(4);
+    }
 
     .hee-listing-item__details__row {
       margin-bottom: nhsuk-spacing(3);
+      padding: 0 nhsuk-spacing(4) 0 nhsuk-spacing(4);
     }
 
     .hee-listing-item__details__label {
       display: block;
       width: auto;
+    }
+
+    .hee-listing-item__summary {
+      @include nhsuk-typography-responsive(16);
+
+      padding: 0 nhsuk-spacing(4) 0 nhsuk-spacing(4);
     }
   }
 }
