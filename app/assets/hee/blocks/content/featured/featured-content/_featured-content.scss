@@ -47,7 +47,7 @@
   }
 }
 
-.page__content {
+.page--rightbar .page__content {
   .hee-featured-content__item {
     @include mq($from: desktop) {
       flex-basis: 48%;
@@ -60,8 +60,6 @@
     @include mq($from: desktop) {
       align-content: flex-start;
       column-gap: 24px;
-      display: flex;
-      flex-wrap: wrap;
       justify-content: flex-start;
     }
   }
