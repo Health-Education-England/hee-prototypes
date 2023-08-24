@@ -20,7 +20,7 @@
       align-items: stretch;
       align-content: stretch;
       display: flex;
-      flex-basis: 31%;
+      flex-basis: 31.66%;
       row-gap: 10px;
     }
   }
@@ -59,7 +59,7 @@
   .hee-featured-content-wrapper {
     @include mq($from: desktop) {
       align-content: flex-start;
-      column-gap: 24px;
+      column-gap: 2.5%;
       justify-content: flex-start;
     }
   }
