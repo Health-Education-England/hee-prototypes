@@ -55,6 +55,11 @@ export default () => {
     }
 
     updateResults(evt) {
+      // Add results container anchor to ensure viewport resets after form submit.
+      const url = new URL(window.location);
+      url.hash = '#results';
+      window.history.pushState({}, '', url);
+
       this.container.submit();
     }
 
