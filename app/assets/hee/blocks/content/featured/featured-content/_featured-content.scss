@@ -20,12 +20,8 @@
       align-items: stretch;
       align-content: stretch;
       display: flex;
-      flex-basis: 48%;
+      flex-basis: 31%;
       row-gap: 10px;
-    }
-
-    @include mq($from: large-desktop) {
-      flex-basis: 32%;
     }
   }
 
@@ -47,6 +43,26 @@
       @include mq($from: tablet) {
         width: auto;
       }
+    }
+  }
+}
+
+.page__content {
+  .hee-featured-content__item {
+    @include mq($from: desktop) {
+      flex-basis: 48%;
+    }
+  }
+}
+
+.page__feature {
+  .hee-featured-content-wrapper {
+    @include mq($from: desktop) {
+      align-content: flex-start;
+      column-gap: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
     }
   }
 }
