@@ -1,5 +1,8 @@
 {% extends "example-template-leftbar.html" %}
 
+{% import 'includes/_taxonomy-profession.html' as taxonomyProfession %}
+{% import 'includes/_taxonomy-topic.html' as taxonomyTopic %}
+
 {% block pageTitle %}Blog Collection - Examples - NWP Prototype Kit{% endblock %}
 
 {% block breadcrumbs %}
@@ -28,30 +31,14 @@
   {{ filter({
     groups: [
       {
-        title: "Category",
+        title: "Topic",
         showClearToggle: true,
-        items: [
-        {
-          text: "Learning and development",
-          value: "item_one",
-          checked: true
-        },
-        {
-          text: "School leavers",
-          value: "item_two",
-          checked: true
-        },
-        {
-          text: "Graduates",
-          value: "graduates",
-          checked: false
-        },
-        {
-          text: "Blended learning",
-          value: "blended",
-          checked: false
-        }
-      ]
+        items: taxonomyTopic.items
+      },
+      {
+        title: "Profession",
+        showClearToggle: true,
+        items: taxonomyProfession.items
       }
     ]
   }) }}
