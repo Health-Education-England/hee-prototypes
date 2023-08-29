@@ -1,5 +1,10 @@
 .nhse-hero {
-  margin-bottom: nhsuk-spacing(4);
+  margin-bottom: nhsuk-spacing(6);
+  position: relative;
+
+  @include mq($from: desktop) {
+    margin-bottom: nhsuk-spacing(9);
+  }
 
   .nhse-hero__image {
     background-position: center right;
@@ -7,28 +12,69 @@
     background-size: cover;
     border-radius: 12px;
     min-height: 202px;
+
+    @include mq($from: desktop) {
+      min-height: 380px;
+    }
+  }
+
+  .nhse-hero__wrapper {
+    position: relative;
+  }
+
+  .nhse-hero__wrapper__shape {
+    background-color: $color_nhsuk-aqua-green;
+    border-radius: 12px 0 0 12px;
+    bottom: nhsuk-spacing(5);
+    display: none;
+    height: 78px;
+    position: absolute;
+    right: 0;
+    width: 90px;
+
+    @include mq($from: desktop) {
+      display: block;
+    }
   }
 
   .nhse-hero__content {
     background-color: $color_nhsuk-blue;
     border-radius: 12px;
     color: $color_nhsuk-white;
-    margin: -16px nhsuk-spacing(4) 0 nhsuk-spacing(4);
+    margin-top: -16px;
     padding: nhsuk-spacing(3);
     position: relative;
+
+    @include mq($from: tablet) {
+      padding: nhsuk-spacing(4);
+    }
+
+    @include mq($from: desktop) {
+      padding-bottom: nhsuk-spacing(8);
+      position: absolute;
+      bottom: nhsuk-spacing(5) * -1;
+      width: 66%;
+    }
 
     h1 {
       @include nhsuk-typography-responsive(48);
       margin-bottom: nhsuk-spacing(2);
       margin-top: nhsuk-spacing(3);
+      max-width: 100%;
+
+      @include mq($from: desktop) {
+        margin-bottom: nhsuk-spacing(4);
+        margin-top: 0;
+      }
     }
 
     p {
       margin-bottom: 0;
+      max-width: 100%;
     }
   }
 
-  .nhse-hero__content__border {
+  .nhse-hero__content__shape {
     background-color: $nhse-colour-dark-blue;
     border-radius: 12px 12px 0 0;
     height: nhsuk-spacing(3);
@@ -36,5 +82,14 @@
     position: absolute;
     top: 0;
     width: 100%;
+
+    @include mq($from: desktop) {
+      background-color: $nhse-colour-aqua-blue;
+      border-radius: 0 0 12px 12px;
+      bottom: 0;
+      height: nhsuk-spacing(5);
+      top: inherit;
+    }
   }
+
 }
