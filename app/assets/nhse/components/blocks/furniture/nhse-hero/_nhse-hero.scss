@@ -1,0 +1,40 @@
+.nhse-hero {
+  margin-bottom: nhsuk-spacing(4);
+
+  .nhse-hero__image {
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 12px;
+    min-height: 202px;
+  }
+
+  .nhse-hero__content {
+    background-color: $color_nhsuk-blue;
+    border-radius: 12px;
+    color: $color_nhsuk-white;
+    margin: -16px nhsuk-spacing(4) 0 nhsuk-spacing(4);
+    padding: nhsuk-spacing(3);
+    position: relative;
+
+    h1 {
+      @include nhsuk-typography-responsive(48);
+      margin-bottom: nhsuk-spacing(2);
+      margin-top: nhsuk-spacing(3);
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .nhse-hero__content__border {
+    background-color: $nhse-colour-dark-blue;
+    border-radius: 12px 12px 0 0;
+    height: nhsuk-spacing(3);
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
