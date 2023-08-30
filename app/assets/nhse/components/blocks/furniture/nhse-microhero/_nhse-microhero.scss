@@ -1,0 +1,63 @@
+.nhse-microhero {
+  margin-bottom: nhsuk-spacing(6);
+  position: relative;
+
+  .nhse-microhero__image {
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 21.79%;
+
+    @include mq($from: desktop) {
+      padding: 0;
+      height: 260px;
+    }
+  }
+
+  .nhse-microhero_shape__horizontal {
+    background-color: $nhse-colour-dark-blue;
+    border-radius: 15% 0 0 15%;
+    height: 30%;
+    position: absolute;
+    right: 0;
+    top: 20%;
+    width: 8%;
+
+    @include mq($from: desktop) {
+      height: 55px;
+      top: 15%;
+      width: 70px;
+    }
+  }
+
+  .nhse-microhero_shape__vertical {
+    background-color: $color_nhsuk-aqua-green;
+    border-radius: 12%;
+    bottom: -8%;
+    height: 63%;
+    left: 4%;
+    position: absolute;
+    width: 6%;
+
+    @include mq($from: desktop) {
+      border-radius: 12px;
+      height: 146px;
+      width: 60px;
+    }
+  }
+
+  .nhse-microhero_shape__vertical__overlay {
+    background-color: $nhse-colour-aqua-green;
+    border-radius: 0 0 12% 12%;
+    bottom: 0;
+    height: 13%;
+    position: absolute;
+    width: 100%;
+
+    @include mq($from: desktop) {
+      border-radius: 0 0 12px 12px;
+      height: 20px;
+      width: 60px;
+    }
+  }
+}
