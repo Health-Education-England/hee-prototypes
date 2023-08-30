@@ -1,23 +1,41 @@
 {% macro nhseHero(params) %}
-<div class="nhse-hero">
-  <div class="nhse-hero__image" style="background-image:url({{ params.image }});"></div>
-  <div class="nhse-hero__wrapper nhsuk-width-container">
-    <div class="nhse-hero__content">
-      <div class="nhse-hero__content__shape"></div>
-      {% if params.title %}
-        <div class="nhse-hero__title">
-          {% if params.title %}
-            <h1>{{ params.title }}</h1>
-          {% endif %}
-        </div>
-      {% endif %}
-      {% if params.text %}
-        <div class="nhse-hero__text">
-          <p>{{ params.text }}</p>
-        </div>
-      {% endif %}
+  {% if params.image %}
+    {% set hasImg = true %}
+  {% else %}
+    {% set hasImg = false %}
+  {% endif %}
+
+  <div class="nhse-hero {{ "has-image" if hasImg else "no-image" }}">
+    <div class="nhse-hero__image" style="background-image:url({{ params.image }});"></div>
+    <div class="nhse-hero__wrapper nhsuk-width-container">
+      <div class="nhse-hero__content">
+        <div class="nhse-hero__content__shape"></div>
+        {% if params.title %}
+          <div class="nhse-hero__title">
+            {% if params.title %}
+              <h1>{{ params.title }}</h1>
+            {% endif %}
+          </div>
+        {% endif %}
+        {% if params.text %}
+          <div class="nhse-hero__text">
+            <p>{{ params.text }}</p>
+          </div>
+        {% endif %}
+      </div>
     </div>
+    <div class="nhse-hero__wrapper__shape"></div>
+
+    {% if hasImg == false %}
+      <div class="nhse-hero_shape-group">
+        <div class="nhse-hero_shape-group__vertical">
+          <div class="nhse-hero_shape-group__vertical__overlay"></div>
+        </div>
+        <div class="nhse-hero_shape-group__horizontal">
+          <div class="nhse-hero_shape-group__horizontal__overlay"></div>
+        </div>
+      </div>
+    {% endif %}
+
   </div>
-  <div class="nhse-hero__wrapper__shape"></div>
-</div>
 {% endmacro %}

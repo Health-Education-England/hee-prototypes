@@ -92,4 +92,98 @@
     }
   }
 
+  // No image variant.
+  &.no-image {
+    @include mq($from: desktop) {
+      background-color: $color_nhsuk-blue;
+      border-radius: 12px;
+    }
+
+    .nhse-hero__image {
+      display: none;
+    }
+
+    .nhse-hero__wrapper {
+      background-color: $color_nhsuk-blue;
+      border-radius: 12px;
+      margin: 0;
+
+      @include mq($from: desktop) {
+        margin: 0 auto;
+      }
+    }
+
+    .nhse-hero__content {
+      margin-top: 0;
+
+      @include mq($from: desktop) {
+        bottom: 0;
+        padding: nhsuk-spacing(7) nhsuk-spacing(4);
+        position: relative;
+        width: 50%;
+      }
+
+      @include mq($from: large-desktop) {
+        padding: nhsuk-spacing(7) 0;
+      }
+    }
+
+    .nhse-hero__wrapper__shape {
+      display: none;
+    }
+
+    .nhse-hero__content__shape {
+      display: none;
+    }
+
+    .nhse-hero_shape-group {
+      display: none;
+
+      @include mq($from: desktop) {
+        bottom: -1 * nhsuk-spacing(5);
+        display: block;
+        height: 215px;
+        position: absolute;
+        right: nhsuk-spacing(9);
+        width: 175px;
+      }
+
+      .nhse-hero_shape-group__vertical {
+        background-color: $color_nhsuk-aqua-green;
+        border-radius: 12px;
+        height: 215px;
+        position: absolute;
+        right: 0;
+        width: 50%;
+      }
+
+      .nhse-hero_shape-group__vertical__overlay {
+        background-color: $nhse-colour-aqua-green;
+        border-radius:  0 0 12px 12px;
+        bottom: 0;
+        height: 32px;
+        position: absolute;
+        width: 100%;
+      }
+
+      .nhse-hero_shape-group__horizontal {
+        background-color: $nhse-colour-aqua-blue;
+        border-radius: 12px;
+        height: 58px;
+        position: absolute;
+        left: 0;
+        bottom: 64px;
+        width: 132px;
+      }
+
+      .nhse-hero_shape-group__horizontal__overlay {
+        background-color: $nhse-colour-dark-blue;
+        border-radius: 0 12px 12px 0;
+        height: 58px;
+        position: absolute;
+        right: 0;
+        width: 48px;
+      }
+    }
+  }
 }
