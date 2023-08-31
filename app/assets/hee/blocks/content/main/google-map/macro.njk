@@ -1,5 +1,5 @@
 {% macro googleMap(params) %}
-<div class="hee-google-map" aria-label="Google Map">
+<div class="hee-google-map {{ params.theme }}" aria-label="Google Map">
     <div class="hee-google-map__wrapper">
         {{ params.embedCode|safe }}
     </div>
