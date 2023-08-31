@@ -1,0 +1,9 @@
+.nhsuk-image {
+  background-color: transparent;
+  border: none;
+
+  .nhsuk-image__caption {
+    background-color: $nhse-colour-light-grey;
+    border-radius: 0 0 12px 12px;
+  }
+}
