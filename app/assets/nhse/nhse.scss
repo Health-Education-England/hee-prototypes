@@ -1,8 +1,13 @@
 @import 'settings/colours';
 
+// New components.
 @import 'components/blocks/furniture/nhse-hero/hero';
 @import 'components/blocks/furniture/nhse-microhero/microhero';
 
+// NHSUK components.
 @import 'components/blocks/content/nhsuk-hee-image/image';
-@import 'components/blocks/content/hee-media/media';
+@import 'components/blocks/content/nhsuk-warning-callout/warning-callout';
+
+// HEE components.
 @import 'components/blocks/content/hee-google-map/google-map';
+@import 'components/blocks/content/hee-media/media';

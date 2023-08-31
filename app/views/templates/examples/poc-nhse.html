@@ -39,6 +39,11 @@
 {% block pageContent %}
   <p class="nhsuk-body-l">Lorem ipsum dolor sit amet consectetur. A eu vitae commodo laoreet nulla vitae bibendum. Ipsum neque mauris porta sit dis cras elementum nibh.</p>
 
+  {{ warningCallout({
+    heading: "Important",
+    HTML: "<p>Maecenas eu magna a sem aliquam luctus. Donec nec metus condimentum, molestie nulla eu, auctor sem.</p>"
+  }) }}
+
   <h2 class="toc_h2">Overview</h2>
   <p>Working with The Royal College of Surgeons, Health Education England provides world-class education, assessment and development to 30,000 surgeons.</p>
   <p>As your career progresses from medical school student through to surgeon, you will go through a number of stages that all have a level of competitive entry.</p>
@@ -174,50 +179,6 @@
     href: "#"
   }) }}
 
-  <h2 class="toc_h2">Regions</h2>
-  <p>Pellentesque id posuere sapien vestibulum, quam pellentesque at libero. Aliquam at id fames hendrerit in vulputate orci aliquet augue. Massa penatibus sociis et nisl. Enim aliquam mauris suscipit turpis non hendrerit felis.</p>
-  {{ navMap({
-    src:  basePath + "/images/nav-maps/dental-regions.svg",
-    caption: {
-      items: [
-        {
-          id: "lk",
-          url: "#",
-          text: "London and Kent, Surrey and Sussex (KSS)"
-        },
-        {
-          id: "me",
-          url: "#",
-          text: "Midlands and the East"
-        },
-        {
-          id: "nenc",
-          url: "#",
-          text: "North East and North Cumbria"
-        },
-        {
-          id: "nw",
-          url: "#",
-          text: "North West"
-        },
-        {
-          id: "sw",
-          url: "#",
-          text: "South West"
-        },
-        {
-          id: "tvw",
-          url: "#",
-          text: "Thames Valley and Wessex"
-        },
-        {
-          id: "yh",
-          url: "#",
-          text: "Yorkshire and the Humber"
-        }
-      ]
-    }
-  }) }}
 {% endblock %}
 
 {% block pageRightbar %}
@@ -299,19 +260,6 @@
       }
     ]
   })}}
-
-{#  {{ departmentCard({
-    name: "Department Name",
-    organisation: "Organisation",
-    telephone: "07575 731 776",
-    email: "email@hee.co.uk",
-    website: "http://nhs.uk/",
-    address: "Health Education England<br>
-              3 Piccadilly<br>
-              Manchester<br>
-              M1 3BN",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque ac pellentesque in sapien."
-  }) }}#}
 
 {% endblock %}
 
