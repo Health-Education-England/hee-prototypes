@@ -1,5 +1,5 @@
 {% macro media(params) %}
-  <div class="hee-media">
+  <div class="hee-media {{ params.theme }}">
     {% if params.title %}
       <h2>{{ params.title }}</h2>
     {% endif %}
