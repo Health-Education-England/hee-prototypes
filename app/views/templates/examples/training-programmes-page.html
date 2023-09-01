@@ -40,7 +40,7 @@
 {% endblock %}
 
 {% block pageContent %}
-  {#{{ summaryCard({
+  {{ summaryCard({
     title: "Programme summary",
     items: [
       {
@@ -87,7 +87,7 @@
         value: "Thu 01/12/2022"
       }
     ]
-  }) }}#}
+  }) }}
 
   <h2>Overview</h2>
   <p>Lorem ipsum dolor sit amet consectetur. Cursus massa pulvinar vestibulum dui in dictum elementum lacinia. Sagittis nisl vitae egestas convallis placerat amet ultrices. </p>
@@ -264,7 +264,7 @@
 {% endblock %}
 
 {% block pageRightbar %}
-  {#{{ relatedLinksCard({
+  {{ relatedLinksCard({
     heading: "Pages related to this programme",
     itemBorder: true,
     links: [
@@ -309,7 +309,7 @@
         url: "#"
       }
     ]
-  })}}#}
+  })}}
 
   {{ card({
     heading: "Apply for surgery on Oriel",
