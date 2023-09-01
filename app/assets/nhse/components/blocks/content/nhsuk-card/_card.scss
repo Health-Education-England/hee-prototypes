@@ -1,0 +1,11 @@
+.nhsuk-card--care {
+  border-radius: 12px;
+
+  .nhsuk-card--care__heading-container {
+    border-radius: 12px 12px 0 0;
+  }
+
+  .nhsuk-card--care__arrow {
+    display: none;
+  }
+}
