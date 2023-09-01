@@ -47,6 +47,7 @@
 @import 'blocks/content/sidebar/anchorlinks/anchorlinks';
 @import 'blocks/scaffolding/notifications/phasebanner/phasebanner';
 @import 'blocks/content/main/hee-tabs/tabs';
+@import 'blocks/content/sidebar/card--related-links/related-links';
 
 @import 'blocks/scaffolding/notifications/banner/banner';
 @import 'blocks/scaffolding/back-to-top/back-to-top';
@@ -72,7 +73,7 @@
 @import 'blocks/content/main/hee-publication-doc/publication-doc';
 @import 'blocks/content/main/training-journey/training-journey';
 @import 'blocks/content/featured/featured-content/featured-content';
-//@import 'blocks/content/main/card--summary/summary';
+@import 'blocks/content/main/card--summary/summary';
 @import 'blocks/content/main/card--author/author';
 @import 'blocks/content/main/table-expander/table';
 @import 'blocks/content/main/quote/quote';

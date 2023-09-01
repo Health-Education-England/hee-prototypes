@@ -66,3 +66,4 @@ The macro takes the following arguments:
 | **items[].url**   | string   | No       | Turns the item value into a link when present. |
 | **items[].label** | string   | No       | Optional label displayed above item value.     |
 | **items[].value** | string   | Yes      | Value of the summary item to be displayed.     |
+
