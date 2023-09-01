@@ -1,0 +1,18 @@
+.nhsuk-footer {
+  .nhsuk-footer__list--three-columns {
+    @include mq($from: desktop) {
+      -moz-column-count: 3;
+      -moz-column-gap: 24px;
+      -webkit-column-count: 3;
+      -webkit-column-gap: 24px;
+      column-count: 3;
+      column-gap: 24px;
+    }
+
+    li {
+      @include mq($from: desktop) {
+        float: none;
+      }
+    }
+  }
+}

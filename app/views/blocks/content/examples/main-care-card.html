@@ -1,7 +1,7 @@
 {% extends "example-blocks.html" %}
 
 {% block main %}
-  {{ careCard({
+  {{ card({
     type: "non-urgent",
     heading: "Speak to a GP if:",
     HTML: "
@@ -15,7 +15,7 @@
           "
   }) }}
 
-  {{ careCard({
+  {{ card({
     type: "urgent",
     heading: "Speak to a GP if:",
     HTML: "
@@ -29,8 +29,8 @@
           "
   }) }}
 
-  {{ careCard({
-    type: "immediate",
+  {{ card({
+    type: "emergency",
     heading: "Speak to a GP if:",
     HTML: "
             <ul>

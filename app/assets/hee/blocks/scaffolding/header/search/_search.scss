@@ -1,5 +1,3 @@
-/* NHSUK-Header__search */
-
 .nhsuk-header__search {
   display: inline-block;
   width: 100%;
@@ -30,9 +28,57 @@
   .nhsuk-header__search-toggle {
     position: relative;
   }
+
+  .autocomplete-container {
+    display: inline-block;
+
+    .nhsuk-search__input {
+      @include mq($from: tablet) {
+        padding: 0 12px;
+      }
+
+      &::placeholder {
+        color: $color_nhsuk-grey-2;
+      }
+    }
+  }
+
+  .nhsuk-search__close {
+    height: auto;
+    width: auto;
+    margin: 0 -6px 0 0;
+    padding: 4px 7px;
+  }
 }
 
-/* NHSUK-Header__search - Blue BG variation */
+.nhsuk-search__input--search-results {
+  -ms-flex-positive: 2;
+  -webkit-appearance: listbox;
+  background-color: $color_nhsuk-white !important;
+  border-bottom: 1px solid $color_nhsuk-grey-3;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-left: 1px solid $color_nhsuk-grey-3;
+  border-right: 0;
+  border-top: 1px solid $color_nhsuk-grey-3;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 0;
+  flex-grow: 2;
+  font-size: inherit;
+  height: 52px;
+  margin: 0;
+  outline: 0;
+  padding: 0 16px;
+  width: 100%;
+
+  &:focus {
+    border: 4px solid $color_nhsuk-yellow;
+    box-shadow: inset 0 0 0 4px $color_nhsuk-black;
+    padding: 0 16px 0 13px;
+    outline: 0;
+  }
+}
+
 .nhsuk-header--white2 {
   .nhsuk-header__search-wrap {
     form {
@@ -46,5 +92,17 @@
         fill: $color-nhsuk-white;
       }
     }
+  }
+}
+
+@include mq($from: tablet) {
+  .autocomplete__input {
+    width: 180px;
+  }
+}
+
+@include mq($from: desktop) {
+  .autocomplete__input {
+    width: 200px;
   }
 }

@@ -128,10 +128,36 @@
 {% endblock %}
 
 {% block pageRightbar %}
+  {{ relatedLinks({
+    heading: "Curabitur sit amet",
+    items: [
+      {
+        label: "Donec pulvinar",
+        url: "#"
+      },
+      {
+        label: "Duis consequat",
+        url: "#"
+      },
+      {
+        label: "Fusce at neque",
+        url: "#"
+      }
+    ]
+  })}}
+
+  {{ imageCard({
+    imgURL: "https://1000logos.net/wp-content/uploads/2017/09/NHS-logo-500x229.png",
+    imgALT: "Donec pulvinar sollicitudin massa",
+    imgCaption: "Donec pulvinar sollicitudin massa"
+  }) }}
+
   {{ card({
     heading: "Manage your GP application",
+    clickable: "true",
     descriptionHtml: "<a class=\"nhsuk-button\" href=\"https://oriel.nhs.uk/Web/\" draggable=\"false\">Go to Oriel</a>"
   }) }}
+
 {% endblock %}
 
 {% block pageFeature %}

@@ -18,12 +18,12 @@ const PATHS = {
   ],
   vendorCSS: [
     './app/assets/prototype/highlight/highlight.css',
-    'node_modules/nhsuk-frontend/dist/nhsuk-4.1.0.min.css'
+    'node_modules/nhsuk-frontend/dist/nhsuk-7.0.0.min.css'
   ],
   vendorJS: [
     './app/assets/javascript/jquery-3.3.1.min.js',
     './app/assets/prototype/highlight/highlight.min.js',
-    'node_modules/nhsuk-frontend/dist/nhsuk.min.js'
+    'node_modules/nhsuk-frontend/dist/nhsuk-7.0.0.min.js'
   ],
   public: 'public',
   dist: 'dist',
@@ -63,5 +63,7 @@ gulp.task('watch', gulp.series([
   'build',
   gulp.parallel([taskServe.serve, watch]),
 ]));
+
+gulp.task('playwright-report', taskServe.playwrightReport);
 
 exports.PATHS = PATHS;

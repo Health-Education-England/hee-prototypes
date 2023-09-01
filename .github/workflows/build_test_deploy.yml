@@ -102,7 +102,7 @@ jobs:
 
       # Docker image: ghcr.io/health-education-england/run-backstopjs-regression-tests:main
       - name: Pull HEE backstopjs docker image
-        run: docker-compose pull
+        run: docker-compose pull backstopjs
 
       # Run backstopjs tests.
       - name: Run backstopjs tests
@@ -126,11 +126,56 @@ jobs:
           path: tests/backstop/config/backstop.json
           retention-days: 1
 
+  # Run playwright integration tests only when in PR.
+  test_playwright:
+    if: github.event_name == 'pull_request'
+    name: 'Run tests: Playwright'
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout repo from GitHub and use current branch.
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Download assets from "Build" step into "public/" directory.
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: assets-tests
+          path: public
+
+      # Docker image: mcr.microsoft.com/playwright:v1.35.1-jammy
+      - name: Pull playwright docker image
+        run: docker-compose pull playwright
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install --no-optional
+
+      # Run playwright tests.
+      - name: Run playwright tests
+        run: npm run playwright:test
+
+      # Upload html report as an asset
+      - name: Upload playwright report
+        uses: actions/upload-artifact@v3
+        if: ${{ always() }}
+        with:
+          name: playwright_report
+          path: tests/playwright/report/**
+          retention-days: 1
+
   # Runs the release job if we're on "develop" to deploy our latest build to GitHub Pages.
   deploy:
     if: github.ref == 'refs/heads/develop'
     name: Deploy
-    needs: bundle
+    needs: [bundle, test_backstopjs, test_playwright]
     runs-on: ubuntu-latest
 
     steps:
