@@ -7,6 +7,7 @@
     padding-bottom: nhsuk-spacing(4);
     padding-top: nhsuk-spacing(3);
     width: 97%;
+    z-index: 2;
 
     &:before {
       display: none;
@@ -22,7 +23,7 @@
       background-image: url("data:image/svg+xml,%3Csvg width='34' height='30' viewBox='0 0 34 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.5877 30V21.6985C18.5877 17.3473 19.0995 13.7786 20.1232 10.9924C21.1848 8.20611 22.9668 5.83969 25.4692 3.89313C27.9716 1.94656 30.8152 0.648855 34 0V6.64122C31.763 7.93893 30.4929 9.67557 30.1896 11.8511H34V30H18.5877ZM0 30V21.6985C0 17.3473 0.511848 13.7786 1.53555 10.9924C2.59716 8.20611 4.37915 5.83969 6.88152 3.89313C9.4218 1.94656 12.2654 0.648855 15.4123 0V6.64122C13.1754 7.93893 11.9052 9.67557 11.6019 11.8511H15.4123V30H0Z' fill='white'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: center center;
-      border-radius: 8px;
+      border-radius: nhsuk-spacing(2);
       content: "";
       display: block;
       height: 62px;
@@ -34,10 +35,35 @@
 
     .hee-quote__icon__overlay {
       background-color: $nhse-colour-aqua-green;
-      border-radius: 8px 0 0 8px;
+      border-radius: nhsuk-spacing(2) 0 0 nhsuk-spacing(2);
       display: block;
       height: 62px;
       width: nhsuk-spacing(3);
     }
+
+    &.overlay-grey {
+      .hee-quote__source {
+        background-color: $nhse-colour-dark-blue;
+        border-radius: 0 12px 0 12px;
+        bottom: -1 * nhsuk-spacing(4);
+        display: block;
+        height: 42px;
+        left: -1 * nhsuk-spacing(4);
+        padding: nhsuk-spacing(2) 0 0 nhsuk-spacing(4);
+        position: relative;
+        width: 206px;
+      }
+    }
   }
+}
+
+.hee-quote__source__overlay {
+  background-color: $nhse-colour-medium-grey;
+  border-radius: 12px;
+  bottom: 67px;
+  height: 86px;
+  left: 0;
+  position: relative;
+  width: 224px;
+  z-index: 1;
 }
