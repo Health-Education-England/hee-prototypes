@@ -1,5 +1,10 @@
 {% macro quote(params) %}
-  <div class="hee-quote">
+  <div class="hee-quote {{ "nhse" if params.theme }} {{ params.theme }}">
+    {% if params.theme %}
+      <div class="hee-quote__icon">
+        <div class="hee-quote__icon__overlay"></div>
+      </div>
+    {% endif %}
     <div class="hee-quote__text">
       {{ params.text }}
     </div>
