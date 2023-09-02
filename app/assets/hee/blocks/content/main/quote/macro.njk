@@ -15,6 +15,6 @@
     {% endif %}
   </div>
   {% if params.theme %}
-    <div class="hee-quote__source__overlay"></div>
+    <div class="hee-quote__source__overlay {{ "nhse" if params.theme }} {{ params.theme }}"></div>
   {% endif %}
 {% endmacro %}

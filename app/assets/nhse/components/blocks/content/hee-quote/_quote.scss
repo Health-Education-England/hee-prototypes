@@ -2,6 +2,7 @@
 
   // NHSE variants.
   &.nhse {
+    border: none;
     border-radius: 12px;
     left: nhsuk-spacing(3);
     padding-bottom: nhsuk-spacing(4);
@@ -54,6 +55,23 @@
         width: 206px;
       }
     }
+
+    &.bg-grey {
+      background-color: $color_nhsuk-grey-2;
+      color: $color_nhsuk-white;
+    }
+
+    &.quote-grey {
+      .hee-quote__icon {
+        background-color: $color_nhsuk-grey-2;
+        background-position: left center;
+        right: 0;
+      }
+
+      .hee-quote__icon__overlay {
+        background-color: transparent;
+      }
+    }
   }
 }
 
@@ -66,4 +84,8 @@
   position: relative;
   width: 224px;
   z-index: 1;
+
+  &.overlay-blue {
+    background-color: $color_nhsuk-blue;
+  }
 }
