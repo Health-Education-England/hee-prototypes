@@ -26,9 +26,19 @@
     }
     .hee-card--related-links__link {
       @include nhsuk-typography-responsive(16);
+
       text-decoration: none;
+
       &:hover {
         text-decoration: underline;
+      }
+
+      &.active {
+        font-weight: $nhsuk-font-bold;
+
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
 

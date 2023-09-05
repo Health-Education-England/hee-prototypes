@@ -135,10 +135,11 @@ There are two style variants for this component:
 
 The relatedNav macro takes the following arguments:
 
-| Name                | Type    | Required  | Description                                                            |
-| --------------------|---------|-----------|------------------------------------------------------------------------|
-| **heading**         | string  | No        | Text heading of the related-links-card component.                      |
-| **itemBorder**      | boolean | No        | Flag to style the item borders                                         |
-| **links**           | array   | Yes       | Array of navigation links for use in the related-links-card component. |
-| **links[].url**     | string  | Yes       | The href of a navigation item in the related-links-card component.     |
-| **links[].label**   | string  | Yes       | The label of a navigation item in the related-links-card component.    |
+| Name               | Type    | Required | Description                                                            |
+|--------------------|---------|----------|------------------------------------------------------------------------|
+| **heading**        | string  | No       | Text heading of the related-links-card component.                      |
+| **itemBorder**     | boolean | No       | Flag to style the item borders                                         |
+| **links**          | array   | Yes      | Array of navigation links for use in the related-links-card component. |
+| **links[].url**    | string  | Yes      | The href of a navigation item in the related-links-card component.     |
+| **links[].label**  | string  | Yes      | The label of a navigation item in the related-links-card component.    |
+| **links[].active** | boolean | No       | Flag indicating whether current link is currently being viewed.        |

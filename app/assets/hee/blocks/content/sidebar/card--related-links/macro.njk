@@ -8,7 +8,15 @@
       <ul class="hee-card--related-links__list">
         {%- for item in params.links %}
           <li>
-            <a class="hee-card--related-links__link" href="{{item.url}}">{{item.label}}</a>
+            {% if item.active === true %}
+              <span {{ 'aria-current=page' if item.active === true }} class="hee-card--related-links__link {{ 'active' if item.active === true }}">
+                {{item.label}}
+              </span>
+            {% else %}
+              <a class="hee-card--related-links__link" href="{{item.url}}">
+                {{item.label}}
+              </a>
+            {% endif %}
           </li>
         {%- endfor %}
       </ul>
