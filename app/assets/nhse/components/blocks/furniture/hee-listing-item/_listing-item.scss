@@ -1,0 +1,13 @@
+.hee-listing-item {
+  border-radius: 12px;
+}
+
+.hee-featured-content {
+  .hee-featured-content__item {
+    &.theme-light-grey {
+      .hee-listing-item {
+        background-color: $nhse-colour-light-grey;
+      }
+    }
+  }
+}

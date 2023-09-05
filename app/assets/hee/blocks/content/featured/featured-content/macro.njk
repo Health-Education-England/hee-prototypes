@@ -10,7 +10,7 @@
     {% endif %}
     <div class="hee-featured-content-wrapper {{ "double" if params.items.length == 2 }}">
       {% for item in params.items %}
-        <div class="hee-featured-content__item">
+        <div class="hee-featured-content__item {{ params.theme }}">
           {{ listingItem(item) }}
         </div>
       {% endfor %}
