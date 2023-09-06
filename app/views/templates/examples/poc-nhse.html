@@ -317,6 +317,27 @@
     ]
   }) }}
 
+  {{ authorCard({
+    imgURL: basePath + "/images/doctor-headshot.png",
+    title: "Mr",
+    name: "First Last",
+    initials: "JB",
+    pronouns: "Pronoun",
+    jobTitle: "Job title",
+    department: "Department",
+    organisation: "Organisation",
+    email: "jo.bloggs@hee.co.uk",
+    website: "http://nhs.uk/",
+    twitter: "nhsengland",
+    linkedin: "nhs",
+    address: "Health Education England<br>
+            3 Piccadilly<br>
+            Manchester<br>
+            M1 3BN",
+    bio: "Lorem ipsum dolor sit amet...",
+    authorURL: "/author/jo-blogs"
+  }) }}
+
 {% endblock %}
 
 {% block pageRightbar %}
@@ -398,6 +419,31 @@
       }
     ]
   })}}
+
+  {{ personCard({
+    imgURL: basePath + "/images/doctor-headshot.png",
+    title: "Dr",
+    name: "Bobby Smith",
+    initials: "BS",
+    pronouns: "They/them",
+    jobTitle: "Content Editor",
+    department: "National Website Platform",
+    organisation: "NHS UK",
+    workAddress: {
+      line1: "2 Stephenson St",
+      line2: "",
+      line3: "",
+      city: "Birmingham",
+      county: "West Midlands",
+      postcode: "B1 2SE"
+    },
+    image: "",
+    email: "bobby.smithandthelongestemail@hee.co.uk",
+    telephone: "01162344444",
+    website: "http://nhs.uk/",
+    twitter: "nhsengland",
+    linkedIn: "nhs"
+  }) }}
 
 {% endblock %}
 
