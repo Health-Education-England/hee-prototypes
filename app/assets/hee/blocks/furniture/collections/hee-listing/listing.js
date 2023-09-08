@@ -56,7 +56,7 @@ export default () => {
     scrollToResults() {
       const url = new URL(window.location);
 
-      if (url.searchParams.has('sort_updated') || url.searchParams.has('filter_updated')) {
+      if (url.searchParams.has('results_updated')) {
         const listingContainer = document.getElementById('results');
 
         if (listingContainer !== null) {

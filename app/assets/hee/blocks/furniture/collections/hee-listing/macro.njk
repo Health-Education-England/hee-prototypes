@@ -15,7 +15,7 @@
         <form method="get" class="hee-listing__filter__sort">
           {{ select(list.filter.select) }}
           {{ button(list.filter.submit) }}
-          <input data-update-flag="listing" name="sort_updated" type="hidden" value="false">
+          <input data-update-flag="listing" name="results_updated" type="hidden" value="false">
         </form>
       </div>
       {% if list.tags.length > 0 %}
