@@ -10,10 +10,14 @@ export default () => {
   class Listing {
     constructor(container) {
 
+      this.container = container;
+
       [...container.querySelectorAll('.hee-listing__filter__sort, .nhsuk-listing__sort')].forEach(formElement => {
         this.addEventListeners(formElement);
         this.toggleJavascriptElements(formElement);
       });
+
+      this.scrollToResults();
     }
 
     addEventListeners(formElement) {
@@ -34,13 +38,31 @@ export default () => {
       }
     }
 
+    setUpdatedFlag(isUpdated) {
+      let flagElement = this.container.querySelector('input[data-update-flag="listing"]');
+      if (flagElement !== null) {
+        flagElement.value = isUpdated;
+      }
+    }
+
     updateResults(formElement) {
-      // Add results container anchor to ensure viewport resets after form submit.
-      const url = new URL(window.location);
-      url.hash = '#results';
-      window.history.pushState({}, '', url);
+      // Set sort container hidden scroll flag value,to ensure viewport scrolls
+      // down to results listings after form submit.
+      this.setUpdatedFlag(true);
 
       formElement.submit();
+    }
+
+    scrollToResults() {
+      const url = new URL(window.location);
+
+      if (url.searchParams.has('sort_updated') || url.searchParams.has('filter_updated')) {
+        const listingContainer = document.getElementById('results');
+
+        if (listingContainer !== null) {
+          listingContainer.scrollIntoView();
+        }
+      }
     }
   }
 
