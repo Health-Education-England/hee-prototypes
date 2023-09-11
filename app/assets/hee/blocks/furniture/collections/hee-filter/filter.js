@@ -54,7 +54,20 @@ export default () => {
       evt.target.closest('.nhsuk-filter__group').classList.toggle('nhsuk-filter__group--closed');
     }
 
+    setUpdatedFlag(isUpdated) {
+      // Set sort container hidden scroll flag value. to ensure viewport resets
+      // after form submit.
+      let flagElement = this.container.querySelector('input[data-update-flag="filter"]');
+      if (flagElement !== null) {
+        flagElement.value = isUpdated;
+      }
+    }
+
     updateResults(evt) {
+      // Set sort container hidden scroll flag value,to ensure viewport scrolls
+      // down to results listings after form submit.
+      this.setUpdatedFlag(true);
+
       this.container.submit();
     }
 
