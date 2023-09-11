@@ -17,6 +17,9 @@ export default () => {
         this.toggleJavascriptElements(formElement);
       });
 
+      // Disables browser restoring viewport to position before page reload.
+      history.scrollRestoration = 'manual';
+
       this.scrollToResults();
     }
 
