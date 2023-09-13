@@ -2,6 +2,15 @@
     margin-bottom: 4em !important;
     background-color: #fff;
     border: 1px solid $color_nhsuk-grey-4;
+
+    &.has-caption {
+        border-top: none;
+
+        caption {
+            border: 1px solid $color_nhsuk-grey-4;
+            border-bottom: none;
+        }
+    }
 }
 .nhsuk-hee-table--multicols {
     width: 100%;
@@ -120,7 +129,7 @@ table caption {
     margin-bottom: 24px;
 }
 .nhsuk-hee-table--multicols .nhsuk-table__body .nhsuk-table__row .nhsuk-table__cell {
-    display: block;
+    display: flex;
     min-width: 1px;
     padding-right: 0;
     text-align: right;
@@ -134,5 +143,29 @@ table caption {
     padding-right: 16px;
     text-align: left;
     display: inline-block;
-    float: left;
+    float: none;
+}
+
+/* POC table fixes. */
+.hee-table-scroll {
+    overflow: auto;
+
+    table {
+        margin-bottom: 0;
+    }
+
+    margin-bottom: nhsuk-spacing(5);
+}
+
+.nhsuk-hee-table--multicols {
+    .nhsuk-table__cell__container {
+        width: 48%;
+        padding-left: 16px;
+        text-align: left;
+        display: inline-block;
+    }
+}
+
+.nhsuk-table-responsive thead {
+    white-space: normal;
 }
