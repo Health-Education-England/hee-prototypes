@@ -7,8 +7,13 @@
 // NHSUK components.
 @import 'components/blocks/content/nhsuk-blocklinks/blocklinks';
 @import 'components/blocks/content/nhsuk-card/card';
+@import 'components/blocks/furniture/nhsuk-checkboxes/checkboxes';
 @import 'components/blocks/content/nhsuk-expander/expander';
+@import 'components/blocks/furniture/nhsuk-filter-tag/filter-tag';
 @import 'components/blocks/content/nhsuk-hee-image/image';
+@import 'components/blocks/furniture/nhsuk-input/input';
+@import 'components/blocks/furniture/nhsuk-select/select';
+@import 'components/blocks/content/nhsuk-hee-table/table';
 @import 'components/blocks/content/nhsuk-warning-callout/warning-callout';
 
 // HEE components.
@@ -21,5 +26,4 @@
 @import 'components/blocks/content/hee-media/media';
 @import 'components/blocks/scaffolding/hee-phasebanner/phasebanner';
 @import 'components/blocks/content/hee-quote/quote';
-@import 'components/blocks/content/nhsuk-hee-table/table';
 @import 'components/blocks/content/hee-tabs/tabs';
