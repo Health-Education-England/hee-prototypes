@@ -31,6 +31,383 @@
 {% endblock %}
 
 {% block pageContent %}
+  <h2>Responsive tables</h2>
+  <ul>
+    <li>Don't collapse when less than 4 columns</li>
+    <li>Would break out of container with long table headings</li>
+    <li>Fixed word-wrap and white space issue in table header rows</li>
+  </ul>
+
+  <table role="table" class="nhsuk-table nhsuk-hee-table nhsuk-table-responsive has-caption">
+    <caption class="nhsuk-table__caption">Clinical Prioritisation scoring breakdown</caption>
+    <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+      <th scope="col" role="columnheader">Area</th>
+      <th scope="col" role="columnheader">Maximum score per panel member</th>
+      <th scope="col" role="columnheader">Maximum score per question</th>
+    </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Area</span>
+        Ability to prioritise
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Maximum score per panel member</span>
+        4
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Maximum score per question</span>
+        8
+      </td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Area</span>
+        Priority 1
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Maximum score per panel member</span>
+        6
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Maximum score per question</span>
+        12
+      </td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Area</span>
+        Priority 2
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Maximum score per panel member</span>
+        4
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Maximum score per question</span>
+        8
+      </td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Area</span>
+        Priority 3
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Maximum score per panel member</span>
+        4
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Maximum score per question</span>
+        8
+      </td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Area</span>
+        Priority 4
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Maximum score per panel member</span>
+        2
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Maximum score per question</span>
+        4
+      </td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Area</span>
+        Total score
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Maximum score per panel member</span>
+        20
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Maximum score per question</span>
+        40
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <table role="table" class="nhsuk-table nhsuk-hee-table nhsuk-table-responsive has-caption">
+    <caption class="nhsuk-table__caption">Structured Interview scoring breakdown</caption>
+    <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+      <th scope="col" role="columnheader">Area</th>
+      <th scope="col" role="columnheader">Maximum score per panel member</th>
+      <th scope="col" role="columnheader">Maximum score per question</th>
+    </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Area</span>
+        Commitment to specialty
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Maximum score per panel member</span>
+        5
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Maximum score per question</span>
+        10
+      </td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Area</span>
+        Quality improvement measures
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Maximum score per panel member</span>
+        5
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Maximum score per question</span>
+        10
+      </td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Area</span>
+        Research and teaching
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Maximum score per panel member</span>
+        5
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Maximum score per question</span>
+        10
+      </td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Area</span>
+        Experience outside of medicine, leadership and teamworking
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Maximum score per panel member</span>
+        5
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Maximum score per question</span>
+        10
+      </td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Area</span>
+        Total score
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Maximum score per panel member</span>
+        20
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Maximum score per question</span>
+        40
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <h2>Multi-column table layout</h2>
+
+  <h3>Original</h3>
+  <ul>
+    <li>Does not collapse correctly on smaller mobile viewports</li>
+    <li>Long text and multipl paragraphs don't align correctly</li>
+  </ul>
+
+  <table role="table" class="nhsuk-table nhsuk-hee-table nhsuk-table-responsive nhsuk-hee-table--multicols has-caption">
+    <caption class="nhsuk-table__caption">Online interview overview</caption>
+    <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+      <th scope="col" role="columnheader">Area</th>
+      <th scope="col" role="columnheader">Raw marks by panel member</th>
+      <th scope="col" role="columnheader">Total marks</th>
+      <th scope="col" role="columnheader">Percentage of final score %</th>
+    </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Area</span>
+        Clinical prioritisation
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Raw marks by panel member</span>
+        20
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Total marks</span>
+        40
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Percentage of final score %</span>
+        26.64
+      </td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Area</span>
+        Structured interview
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Raw marks by panel member</span>
+        <p>Score: 5</p>
+        <p>By December 2022, I have completed a quality improvement project (QIP) or complete audit cycle (for example, first audit/project, action plan and re-audit/assessment to quantify impact of intervention) which has resulted in national change</p>
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Total marks</span>
+        40
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Percentage of final score %</span>
+        26.64
+      </td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Area</span>
+        Global performance score
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Raw marks by panel member</span>
+        10
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Total marks</span>
+        20
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Percentage of final score %</span>
+        13.32
+      </td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Area</span>
+        Total
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Raw marks by panel member</span>
+        50
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Total marks</span>
+        100
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Percentage of final score %</span>
+        66.66
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <h3>Amended styling (forces mobile view on desktop)</h3>
+  <ul>
+    <li>Collapsed by default on all viewports (mobile -> desktop)</li>
+    <li>Requires new wrapper: <strong><code>nhsuk-table__cell__container</code></strong> around cell data</li>
+  </ul>
+
+  <table role="table" class="nhsuk-table nhsuk-hee-table nhsuk-table-responsive nhsuk-hee-table--multicols has-caption">
+    <caption class="nhsuk-table__caption">Online interview overview</caption>
+    <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+      <th scope="col" role="columnheader">Area</th>
+      <th scope="col" role="columnheader">Raw marks by panel member</th>
+      <th scope="col" role="columnheader">Total marks</th>
+      <th scope="col" role="columnheader">Percentage of final score %</th>
+    </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Area</span>
+        <div class="nhsuk-table__cell__container">Clinical prioritisation</div>
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Raw marks by panel member</span>
+        <div class="nhsuk-table__cell__container">20</div>
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Total marks</span>
+        <div class="nhsuk-table__cell__container">40</div>
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Percentage of final score %</span>
+        <div class="nhsuk-table__cell__container">26.64</div>
+      </td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Area</span>
+        <div class="nhsuk-table__cell__container">
+          <p>Score: 5</p>
+          <p>By December 2022, I have completed a quality improvement project (QIP) or complete audit cycle (for example,&nbsp;first audit/project, action plan and re-audit/assessment to quantify impact of intervention) which has resulted in national change</p>
+        </div>
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Raw marks by panel member</span>
+        <div class="nhsuk-table__cell__container">20</div>
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Total marks</span>
+        <div class="nhsuk-table__cell__container">40</div>
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Percentage of final score %</span>
+        <div class="nhsuk-table__cell__container">26.64</div>
+      </td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Area</span>
+        <div class="nhsuk-table__cell__container">Global performance score</div>
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Raw marks by panel member</span>
+        <div class="nhsuk-table__cell__container">10</div>
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Total marks</span>
+        <div class="nhsuk-table__cell__container">20</div>
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Percentage of final score %</span>
+        <div class="nhsuk-table__cell__container">13.32</div>
+      </td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Area</span>
+        <div class="nhsuk-table__cell__container">Total</div>
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Raw marks by panel member</span>
+        <div class="nhsuk-table__cell__container">50</div>
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Total marks</span>
+        <div class="nhsuk-table__cell__container">100</div>
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Percentage of final score %</span>
+        <div class="nhsuk-table__cell__container">66.66</div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
   <h2>Scrollable tables</h2>
   <ul>
     <li>Not really viable for longer tables (no contextual headings)</li>
@@ -38,7 +415,7 @@
   </ul>
 
   <div class="hee-table-scroll" tabindex="0" role="group">
-    <table>
+    <table style="word-break: normal">
       <thead>
       <tr>
         <th scope="col">
@@ -266,190 +643,1893 @@
     </table>
   </div>
 
-  <h2>Multi-column table layout</h2>
+  <h2>Tables nested within Expanders</h2>
 
-  <h3>Original</h3>
+  <div class="nhsuk-expander-group">
+    <details class="nhsuk-details nhsuk-expander">
+      <summary class="nhsuk-details__summary">
+           	 				<span class="nhsuk-details__summary-text">
+           	 					Applications made
+           	 				</span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <table summary="Table of 2021 Recruitment country of qualification applications data - Round 1 and Round 2 split by specialty and level" border="0.5" cellpadding="7" cellspacing="1" style="width:537px;">
+          <thead>
+          <tr>
+            <th scope="col" style="width: 290px;">
+              <p>Specialty and level</p>
+            </th>
+            <th scope="col" style="width: 70px;">UK</th>
+            <th scope="col" style="width: 77px;">EU</th>
+            <th scope="col" style="width: 82px;">Rest of the World</th>
+            <th scope="col" style="width: 82px;">Non medical</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td style="width: 290px;">
+              <p>Acute Care Common Stem (ACCS) Anaesthetics/Core&nbsp;Anaesthetics CT1</p>
+            </td>
+            <td style="width: 70px;">1913</td>
+            <td style="width: 77px;">134</td>
+            <td style="width: 82px;">410</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">ACCS Emergency Medicine ST1/CT1</td>
+            <td style="width: 70px;">798</td>
+            <td style="width: 77px;">71</td>
+            <td style="width: 82px;">555</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">ACCS Internal Medicine/Internal Medicine Training CT1</td>
+            <td style="width: 70px;">2143</td>
+            <td style="width: 77px;">209</td>
+            <td style="width: 82px;">1238</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Allergy ST3</td>
+            <td style="width: 70px;">6</td>
+            <td style="width: 77px;">&lt;5</td>
+            <td style="width: 82px;">31</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Anaesthetics ST3</td>
+            <td style="width: 70px;">1328</td>
+            <td style="width: 77px;">40</td>
+            <td style="width: 82px;">259</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Audiovestibular Medicine ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 77px;">0</td>
+            <td style="width: 82px;">15</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Cardiology ST3</td>
+            <td style="width: 70px;">118</td>
+            <td style="width: 77px;">21</td>
+            <td style="width: 82px;">262</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Cardiothoracic Surgery ST1</td>
+            <td style="width: 70px;">54</td>
+            <td style="width: 77px;">17</td>
+            <td style="width: 82px;">42</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Cardiothoracic Surgery ST3</td>
+            <td style="width: 70px;">16</td>
+            <td style="width: 77px;">&lt;5</td>
+            <td style="width: 82px;">28</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Chemical Pathology ST3</td>
+            <td style="width: 70px;">6</td>
+            <td style="width: 77px;">0</td>
+            <td style="width: 82px;">23</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Clinical Genetics ST3</td>
+            <td style="width: 70px;">27</td>
+            <td style="width: 77px;">4</td>
+            <td style="width: 82px;">25</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Clinical Neurophysiology ST3</td>
+            <td style="width: 70px;">5</td>
+            <td style="width: 77px;">&lt;5</td>
+            <td style="width: 82px;">33</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Clinical Oncology ST3</td>
+            <td style="width: 70px;">126</td>
+            <td style="width: 77px;">6</td>
+            <td style="width: 82px;">135</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Clinical Radiology ST1</td>
+            <td style="width: 70px;">772</td>
+            <td style="width: 77px;">149</td>
+            <td style="width: 82px;">958</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Combined Infection Training ST3</td>
+            <td style="width: 70px;">99</td>
+            <td style="width: 77px;">12</td>
+            <td style="width: 82px;">144</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Community Sexual and&nbsp;Reproductive Health ST1</td>
+            <td style="width: 70px;">74</td>
+            <td style="width: 77px;">10</td>
+            <td style="width: 82px;">83</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Core Psychiatry&nbsp;CT1</td>
+            <td style="width: 70px;">697</td>
+            <td style="width: 77px;">138</td>
+            <td style="width: 82px;">1295</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Core Surgical Training CT1</td>
+            <td style="width: 70px;">1662</td>
+            <td style="width: 77px;">260</td>
+            <td style="width: 82px;">606</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Dermatology ST3</td>
+            <td style="width: 70px;">178</td>
+            <td style="width: 77px;">25</td>
+            <td style="width: 82px;">90</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Diagnostic Neuropathology ST3</td>
+            <td style="width: 70px;">5</td>
+            <td style="width: 77px;">0</td>
+            <td style="width: 82px;">11</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Emergency Medicine ST3</td>
+            <td style="width: 70px;">19</td>
+            <td style="width: 77px;">5</td>
+            <td style="width: 82px;">213</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Emergency Medicine ST4</td>
+            <td style="width: 70px;">81</td>
+            <td style="width: 77px;">6</td>
+            <td style="width: 82px;">51</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Gastroenterology ST3</td>
+            <td style="width: 70px;">22</td>
+            <td style="width: 77px;">&lt;5</td>
+            <td style="width: 82px;">109</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">General and Vascular Surgery&nbsp;ST3</td>
+            <td style="width: 70px;">257</td>
+            <td style="width: 77px;">30</td>
+            <td style="width: 82px;">320</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">General Practice ST1</td>
+            <td style="width: 70px;">3847</td>
+            <td style="width: 77px;">716</td>
+            <td style="width: 82px;">5490</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Genitourinary Medicine ST3</td>
+            <td style="width: 70px;">14</td>
+            <td style="width: 77px;">5</td>
+            <td style="width: 82px;">30</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Haematology ST3</td>
+            <td style="width: 70px;">119</td>
+            <td style="width: 77px;">19</td>
+            <td style="width: 82px;">230</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Histopathology ST1</td>
+            <td style="width: 70px;">145</td>
+            <td style="width: 77px;">25</td>
+            <td style="width: 82px;">181</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Immunology ST3</td>
+            <td style="width: 70px;">9</td>
+            <td style="width: 77px;">&lt;5</td>
+            <td style="width: 82px;">64</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Intensive Care Medicine ST3</td>
+            <td style="width: 70px;">425</td>
+            <td style="width: 77px;">20</td>
+            <td style="width: 82px;">150</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Medical Oncology ST3</td>
+            <td style="width: 70px;">108</td>
+            <td style="width: 77px;">6</td>
+            <td style="width: 82px;">98</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Medical Ophthalmology ST3</td>
+            <td style="width: 70px;">5</td>
+            <td style="width: 77px;">&lt;5</td>
+            <td style="width: 82px;">14</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Neurology ST3</td>
+            <td style="width: 70px;">45</td>
+            <td style="width: 77px;">7</td>
+            <td style="width: 82px;">116</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Neurosurgery ST1</td>
+            <td style="width: 70px;">138</td>
+            <td style="width: 77px;">26</td>
+            <td style="width: 82px;">78</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Neurosurgery ST2</td>
+            <td style="width: 70px;">9</td>
+            <td style="width: 77px;">12</td>
+            <td style="width: 82px;">38</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Nuclear Medicine ST3</td>
+            <td style="width: 70px;">6</td>
+            <td style="width: 77px;">0</td>
+            <td style="width: 82px;">10</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Obstetrics and Gynaecology ST1</td>
+            <td style="width: 70px;">473</td>
+            <td style="width: 77px;">58</td>
+            <td style="width: 82px;">346</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Obstetrics and Gynaecology ST3</td>
+            <td style="width: 70px;">5</td>
+            <td style="width: 77px;">5</td>
+            <td style="width: 82px;">302</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Occupational Medicine ST3</td>
+            <td style="width: 70px;">21</td>
+            <td style="width: 77px;">&lt;5</td>
+            <td style="width: 82px;">23</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Ophthalmology ST1</td>
+            <td style="width: 70px;">335</td>
+            <td style="width: 77px;">56</td>
+            <td style="width: 82px;">214</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Ophthalmology ST3</td>
+            <td style="width: 70px;">5</td>
+            <td style="width: 77px;">5</td>
+            <td style="width: 82px;">72</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Oral and Maxillofacial Surgery&nbsp;ST1</td>
+            <td style="width: 70px;">39</td>
+            <td style="width: 77px;">&lt;5</td>
+            <td style="width: 82px;">10</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Oral and Maxillofacial Surgery&nbsp;ST3</td>
+            <td style="width: 70px;">20</td>
+            <td style="width: 77px;">&lt;5</td>
+            <td style="width: 82px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Otolaryngology ST3</td>
+            <td style="width: 70px;">103</td>
+            <td style="width: 77px;">6</td>
+            <td style="width: 82px;">46</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Paediatric and Perinatal&nbsp;Pathology&nbsp;ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 77px;">&lt;5</td>
+            <td style="width: 82px;">7</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Paediatric Cardiology ST4</td>
+            <td style="width: 70px;">11</td>
+            <td style="width: 77px;">5</td>
+            <td style="width: 82px;">19</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Paediatric Surgery ST3</td>
+            <td style="width: 70px;">42</td>
+            <td style="width: 77px;">&lt;5</td>
+            <td style="width: 82px;">34</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Paediatrics ST1</td>
+            <td style="width: 70px;">531</td>
+            <td style="width: 77px;">37</td>
+            <td style="width: 82px;">318</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Paediatrics ST3</td>
+            <td style="width: 70px;">16</td>
+            <td style="width: 77px;">&lt;5</td>
+            <td style="width: 82px;">203</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Paediatrics ST4</td>
+            <td style="width: 70px;">10</td>
+            <td style="width: 77px;">&lt;5</td>
+            <td style="width: 82px;">161</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Palliative Medicine ST3</td>
+            <td style="width: 70px;">63</td>
+            <td style="width: 77px;">&lt;5</td>
+            <td style="width: 82px;">38</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Plastic Surgery ST3</td>
+            <td style="width: 70px;">153</td>
+            <td style="width: 77px;">13</td>
+            <td style="width: 82px;">45</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Psychiatry (all specialties) ST4</td>
+            <td style="width: 70px;">346</td>
+            <td style="width: 77px;">43</td>
+            <td style="width: 82px;">256</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Public Health Medicine ST1</td>
+            <td style="width: 70px;">293</td>
+            <td style="width: 77px;">28</td>
+            <td style="width: 82px;">122</td>
+            <td style="width: 82px;">545</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Rehabilitation Medicine ST3</td>
+            <td style="width: 70px;">13</td>
+            <td style="width: 77px;">&lt;5</td>
+            <td style="width: 82px;">61</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Sport and Exercise Medicine ST3</td>
+            <td style="width: 70px;">18</td>
+            <td style="width: 77px;">&lt;5</td>
+            <td style="width: 82px;">13</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Trauma and Orthopaedic Surgery ST3</td>
+            <td style="width: 70px;">308</td>
+            <td style="width: 77px;">32</td>
+            <td style="width: 82px;">264</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Urology ST3</td>
+            <td style="width: 70px;">114</td>
+            <td style="width: 77px;">11</td>
+            <td style="width: 82px;">74</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          </tbody>
+        </table>           	 			</div>
+    </details>
+    <details class="nhsuk-details nhsuk-expander">
+      <summary class="nhsuk-details__summary">
+           	 				<span class="nhsuk-details__summary-text">
+           	 					Appointable applicants
+           	 				</span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <table summary="Table of 2021 Recruitment country of qualfication appointable applicants data - Round 1 and Round 2 split by specialty and level" border="0.5" cellpadding="7" cellspacing="1" style="width:533px;">
+          <thead>
+          <tr>
+            <th scope="col" style="width: 290px;">
+              <p>Specialty and level</p>
+            </th>
+            <th scope="col" style="width: 70px;">UK</th>
+            <th scope="col" style="width: 77px;">EU</th>
+            <th scope="col" style="width: 82px;">Rest of the World</th>
+            <th scope="col" style="width: 82px;">Non medical</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td style="width: 290px;">
+              <p>Acute Care Common Stem (ACCS) Anaesthetics/Core&nbsp;Anaesthetics CT1</p>
+            </td>
+            <td style="width: 70px;">1172</td>
+            <td style="width: 93px;">23</td>
+            <td style="width: 71px;">17</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">ACCS Emergency Medicine ST1/CT1</td>
+            <td style="width: 70px;">592</td>
+            <td style="width: 93px;">21</td>
+            <td style="width: 71px;">61</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">ACCS Internal Medicine/Internal Medicine Training CT1</td>
+            <td style="width: 70px;">1659</td>
+            <td style="width: 93px;">123</td>
+            <td style="width: 71px;">546</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Allergy ST3</td>
+            <td style="width: 70px;">5</td>
+            <td style="width: 93px;">&lt;5</td>
+            <td style="width: 71px;">6</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Anaesthetics ST3</td>
+            <td style="width: 70px;">1035</td>
+            <td style="width: 93px;">25</td>
+            <td style="width: 71px;">131</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Audiovestibular Medicine ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 93px;">0</td>
+            <td style="width: 71px;">6</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Cardiology ST3</td>
+            <td style="width: 70px;">86</td>
+            <td style="width: 93px;">10</td>
+            <td style="width: 71px;">114</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Cardiothoracic Surgery ST1</td>
+            <td style="width: 70px;">9</td>
+            <td style="width: 93px;">0</td>
+            <td style="width: 71px;">0</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Cardiothoracic Surgery ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 93px;">0</td>
+            <td style="width: 71px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Chemical Pathology ST3</td>
+            <td style="width: 70px;">5</td>
+            <td style="width: 93px;">0</td>
+            <td style="width: 71px;">13</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Clinical Genetics ST3</td>
+            <td style="width: 70px;">21</td>
+            <td style="width: 93px;">&lt;5</td>
+            <td style="width: 71px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Clinical Neurophysiology ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 93px;">&lt;5</td>
+            <td style="width: 71px;">8</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Clinical Oncology ST3</td>
+            <td style="width: 70px;">97</td>
+            <td style="width: 93px;">&lt;5</td>
+            <td style="width: 71px;">55</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Clinical Radiology ST1</td>
+            <td style="width: 70px;">419</td>
+            <td style="width: 93px;">29</td>
+            <td style="width: 71px;">111</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Combined Infection Training ST3</td>
+            <td style="width: 70px;">75</td>
+            <td style="width: 93px;">&lt;5</td>
+            <td style="width: 71px;">21</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Community Sexual and&nbsp;Reproductive Health ST1</td>
+            <td style="width: 70px;">13</td>
+            <td style="width: 93px;">0</td>
+            <td style="width: 71px;">0</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Core Psychiatry&nbsp;CT1</td>
+            <td style="width: 70px;">583</td>
+            <td style="width: 93px;">54</td>
+            <td style="width: 71px;">575</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Core Surgical Training CT1</td>
+            <td style="width: 70px;">607</td>
+            <td style="width: 93px;">40</td>
+            <td style="width: 71px;">47</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Dermatology ST3</td>
+            <td style="width: 70px;">100</td>
+            <td style="width: 93px;">11</td>
+            <td style="width: 71px;">20</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Diagnostic Neuropathology ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 93px;">0</td>
+            <td style="width: 71px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Emergency Medicine ST3</td>
+            <td style="width: 70px;">10</td>
+            <td style="width: 93px;">&lt;5</td>
+            <td style="width: 71px;">100</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Emergency Medicine ST4</td>
+            <td style="width: 70px;">64</td>
+            <td style="width: 93px;">&lt;5</td>
+            <td style="width: 71px;">15</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Gastroenterology ST3</td>
+            <td style="width: 70px;">22</td>
+            <td style="width: 93px;">&lt;5</td>
+            <td style="width: 71px;">51</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">General and Vascular Surgery&nbsp;ST3</td>
+            <td style="width: 70px;">172</td>
+            <td style="width: 93px;">12</td>
+            <td style="width: 71px;">68</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">General Practice ST1</td>
+            <td style="width: 70px;">3484</td>
+            <td style="width: 93px;">411</td>
+            <td style="width: 71px;">3359</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Genitourinary Medicine ST3</td>
+            <td style="width: 70px;">11</td>
+            <td style="width: 93px;">
+              <p>&lt;5</p>
+            </td>
+            <td style="width: 71px;">6</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Haematology ST3</td>
+            <td style="width: 70px;">83</td>
+            <td style="width: 93px;">6</td>
+            <td style="width: 71px;">42</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Histopathology ST1</td>
+            <td style="width: 70px;">90</td>
+            <td style="width: 93px;">8</td>
+            <td style="width: 71px;">47</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Immunology ST3</td>
+            <td style="width: 70px;">6</td>
+            <td style="width: 93px;">&lt;5</td>
+            <td style="width: 71px;">22</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Intensive Care Medicine ST3</td>
+            <td style="width: 70px;">348</td>
+            <td style="width: 93px;">15</td>
+            <td style="width: 71px;">83</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Medical Oncology ST3</td>
+            <td style="width: 70px;">77</td>
+            <td style="width: 93px;">&lt;5</td>
+            <td style="width: 71px;">40</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Medical Ophthalmology ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 93px;">&lt;5</td>
+            <td style="width: 71px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Neurology ST3</td>
+            <td style="width: 70px;">38</td>
+            <td style="width: 93px;">5</td>
+            <td style="width: 71px;">27</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Neurosurgery ST1</td>
+            <td style="width: 70px;">32</td>
+            <td style="width: 93px;">&lt;5</td>
+            <td style="width: 71px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Neurosurgery ST2</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 93px;">&lt;5</td>
+            <td style="width: 71px;">0</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Nuclear Medicine ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 93px;">0</td>
+            <td style="width: 71px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Obstetrics and Gynaecology ST1</td>
+            <td style="width: 70px;">360</td>
+            <td style="width: 93px;">15</td>
+            <td style="width: 71px;">47</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Obstetrics and Gynaecology ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 93px;">&lt;5</td>
+            <td style="width: 71px;">54</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Occupational Medicine ST3</td>
+            <td style="width: 70px;">7</td>
+            <td style="width: 93px;">0</td>
+            <td style="width: 71px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Ophthalmology ST1</td>
+            <td style="width: 70px;">111</td>
+            <td style="width: 93px;">&lt;5</td>
+            <td style="width: 71px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Ophthalmology ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 93px;">&lt;5</td>
+            <td style="width: 71px;">25</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Oral and Maxillofacial Surgery&nbsp;ST1</td>
+            <td style="width: 70px;">26</td>
+            <td style="width: 93px;">0</td>
+            <td style="width: 71px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Oral and Maxillofacial Surgery&nbsp;ST3</td>
+            <td style="width: 70px;">13</td>
+            <td style="width: 93px;">&lt;5</td>
+            <td style="width: 71px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Otolaryngology ST3</td>
+            <td style="width: 70px;">69</td>
+            <td style="width: 93px;">&lt;5</td>
+            <td style="width: 71px;">5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Paediatric and Perinatal&nbsp;Pathology&nbsp;ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 93px;">&lt;5</td>
+            <td style="width: 71px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Paediatric Cardiology ST4</td>
+            <td style="width: 70px;">8</td>
+            <td style="width: 93px;">&lt;5</td>
+            <td style="width: 71px;">5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Paediatric Surgery ST3</td>
+            <td style="width: 70px;">18</td>
+            <td style="width: 93px;">&lt;5</td>
+            <td style="width: 71px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Paediatrics ST1</td>
+            <td style="width: 70px;">470</td>
+            <td style="width: 93px;">25</td>
+            <td style="width: 71px;">113</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Paediatrics ST3</td>
+            <td style="width: 70px;">11</td>
+            <td style="width: 93px;">&lt;5</td>
+            <td style="width: 71px;">102</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Paediatrics ST4</td>
+            <td style="width: 70px;">9</td>
+            <td style="width: 93px;">&lt;5</td>
+            <td style="width: 71px;">87</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Palliative Medicine ST3</td>
+            <td style="width: 70px;">43</td>
+            <td style="width: 93px;">0</td>
+            <td style="width: 71px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Plastic Surgery ST3</td>
+            <td style="width: 70px;">76</td>
+            <td style="width: 93px;">&lt;5</td>
+            <td style="width: 71px;">5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Psychiatry (all specialties) ST4</td>
+            <td style="width: 70px;">314</td>
+            <td style="width: 93px;">35</td>
+            <td style="width: 71px;">203</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Public Health Medicine ST1</td>
+            <td style="width: 70px;">81</td>
+            <td style="width: 93px;">&lt;5</td>
+            <td style="width: 71px;">0</td>
+            <td style="width: 82px;">63</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Rehabilitation Medicine ST3</td>
+            <td style="width: 70px;">8</td>
+            <td style="width: 93px;">&lt;5</td>
+            <td style="width: 71px;">17</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Sport and Exercise Medicine ST3</td>
+            <td style="width: 70px;">9</td>
+            <td style="width: 93px;">&lt;5</td>
+            <td style="width: 71px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Trauma and Orthopaedic Surgery ST3</td>
+            <td style="width: 70px;">266</td>
+            <td style="width: 93px;">23</td>
+            <td style="width: 71px;">43</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Urology ST3</td>
+            <td style="width: 70px;">71</td>
+            <td style="width: 93px;">6</td>
+            <td style="width: 71px;">29</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          </tbody>
+        </table>           	 			</div>
+    </details>
+    <details class="nhsuk-details nhsuk-expander">
+      <summary class="nhsuk-details__summary">
+           	 				<span class="nhsuk-details__summary-text">
+           	 					Offers made
+           	 				</span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <table summary="Table of 2021 Recruitment country of qualification offers made data - Round 1 and Round 2 split by specialty and level" border="0.5" cellpadding="7" cellspacing="1" style="width:533px;">
+          <thead>
+          <tr>
+            <th scope="col" style="width: 290px;">
+              <p>Specialty and level</p>
+            </th>
+            <th scope="col" style="width: 70px;">UK</th>
+            <th scope="col" style="width: 77px;">EU</th>
+            <th scope="col" style="width: 82px;">Rest of the World</th>
+            <th scope="col" style="width: 82px;">Non medical</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td style="width: 290px;">
+              <p>Acute Care Common Stem (ACCS) Anaesthetics/Core&nbsp;Anaesthetics CT1</p>
+            </td>
+            <td style="width: 70px;">791</td>
+            <td style="width: 88px;">12</td>
+            <td style="width: 73px;">6</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">ACCS Emergency Medicine ST1/CT1</td>
+            <td style="width: 70px;">504</td>
+            <td style="width: 88px;">13</td>
+            <td style="width: 73px;">40</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">ACCS Internal Medicine/Internal Medicine Training CT1</td>
+            <td style="width: 70px;">1513</td>
+            <td style="width: 88px;">110</td>
+            <td style="width: 73px;">490</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Allergy ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 88px;">&lt;5</td>
+            <td style="width: 73px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Anaesthetics ST3</td>
+            <td style="width: 70px;">578</td>
+            <td style="width: 88px;">12</td>
+            <td style="width: 73px;">50</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Audiovestibular Medicine ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 88px;">0</td>
+            <td style="width: 73px;">6</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Cardiology ST3</td>
+            <td style="width: 70px;">66</td>
+            <td style="width: 88px;">5</td>
+            <td style="width: 73px;">37</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Cardiothoracic Surgery ST1</td>
+            <td style="width: 70px;">6</td>
+            <td style="width: 88px;">0</td>
+            <td style="width: 73px;">0</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Cardiothoracic Surgery ST3</td>
+            <td style="width: 70px;">0</td>
+            <td style="width: 88px;">0</td>
+            <td style="width: 73px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Chemical Pathology ST3</td>
+            <td style="width: 70px;">5</td>
+            <td style="width: 88px;">0</td>
+            <td style="width: 73px;">12</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Clinical Genetics ST3</td>
+            <td style="width: 70px;">16</td>
+            <td style="width: 88px;">&lt;5</td>
+            <td style="width: 73px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Clinical Neurophysiology ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 88px;">&lt;5</td>
+            <td style="width: 73px;">6</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Clinical Oncology ST3</td>
+            <td style="width: 70px;">92</td>
+            <td style="width: 88px;">&lt;5</td>
+            <td style="width: 73px;">55</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Clinical Radiology ST1</td>
+            <td style="width: 70px;">387</td>
+            <td style="width: 88px;">23</td>
+            <td style="width: 73px;">62</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Combined Infection Training ST3</td>
+            <td style="width: 70px;">69</td>
+            <td style="width: 88px;">&lt;5</td>
+            <td style="width: 73px;">20</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Community Sexual and&nbsp;Reproductive Health ST1</td>
+            <td style="width: 70px;">10</td>
+            <td style="width: 88px;">0</td>
+            <td style="width: 73px;">0</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Core Psychiatry&nbsp;CT1</td>
+            <td style="width: 70px;">573</td>
+            <td style="width: 88px;">51</td>
+            <td style="width: 73px;">481</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Core Surgical Training CT1</td>
+            <td style="width: 70px;">585</td>
+            <td style="width: 88px;">40</td>
+            <td style="width: 73px;">47</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Dermatology ST3</td>
+            <td style="width: 70px;">44</td>
+            <td style="width: 88px;">5</td>
+            <td style="width: 73px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Diagnostic Neuropathology ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 88px;">0</td>
+            <td style="width: 73px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Emergency Medicine ST3</td>
+            <td style="width: 70px;">5</td>
+            <td style="width: 88px;">&lt;5</td>
+            <td style="width: 73px;">17</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Emergency Medicine ST4</td>
+            <td style="width: 70px;">57</td>
+            <td style="width: 88px;">&lt;5</td>
+            <td style="width: 73px;">15</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Gastroenterology ST3</td>
+            <td style="width: 70px;">15</td>
+            <td style="width: 88px;">0</td>
+            <td style="width: 73px;">27</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">General and Vascular Surgery&nbsp;ST3</td>
+            <td style="width: 70px;">121</td>
+            <td style="width: 88px;">9</td>
+            <td style="width: 73px;">29</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">General Practice ST1</td>
+            <td style="width: 70px;">3393</td>
+            <td style="width: 88px;">367</td>
+            <td style="width: 73px;">2838</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Genitourinary Medicine ST3</td>
+            <td style="width: 70px;">11</td>
+            <td style="width: 88px;">&lt;5</td>
+            <td style="width: 73px;">6</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Haematology ST3</td>
+            <td style="width: 70px;">70</td>
+            <td style="width: 88px;">6</td>
+            <td style="width: 73px;">39</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Histopathology ST1</td>
+            <td style="width: 70px;">77</td>
+            <td style="width: 88px;">7</td>
+            <td style="width: 73px;">40</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Immunology ST3</td>
+            <td style="width: 70px;">5</td>
+            <td style="width: 88px;">&lt;5</td>
+            <td style="width: 73px;">11</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Intensive Care Medicine ST3</td>
+            <td style="width: 70px;">238</td>
+            <td style="width: 88px;">8</td>
+            <td style="width: 73px;">43</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Medical Oncology ST3</td>
+            <td style="width: 70px;">74</td>
+            <td style="width: 88px;">&lt;5</td>
+            <td style="width: 73px;">39</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Medical Ophthalmology ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 88px;">&lt;5</td>
+            <td style="width: 73px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Neurology ST3</td>
+            <td style="width: 70px;">30</td>
+            <td style="width: 88px;">&lt;5</td>
+            <td style="width: 73px;">25</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Neurosurgery ST1</td>
+            <td style="width: 70px;">23</td>
+            <td style="width: 88px;">&lt;5</td>
+            <td style="width: 73px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Neurosurgery ST2</td>
+            <td style="width: 70px;">0</td>
+            <td style="width: 88px;">&lt;5</td>
+            <td style="width: 73px;">0</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Nuclear Medicine ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 88px;">0</td>
+            <td style="width: 73px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Obstetrics and Gynaecology ST1</td>
+            <td style="width: 70px;">331</td>
+            <td style="width: 88px;">10</td>
+            <td style="width: 73px;">34</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Obstetrics and Gynaecology ST3</td>
+            <td style="width: 70px;">0</td>
+            <td style="width: 88px;">&lt;5</td>
+            <td style="width: 73px;">22</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Occupational Medicine ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 88px;">0</td>
+            <td style="width: 73px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Ophthalmology ST1</td>
+            <td style="width: 70px;">98</td>
+            <td style="width: 88px;">&lt;5</td>
+            <td style="width: 73px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Ophthalmology ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 88px;">&lt;5</td>
+            <td style="width: 73px;">16</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Oral and Maxillofacial Surgery&nbsp;ST1</td>
+            <td style="width: 70px;">14</td>
+            <td style="width: 88px;">0</td>
+            <td style="width: 73px;">0</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Oral and Maxillofacial Surgery&nbsp;ST3</td>
+            <td style="width: 70px;">12</td>
+            <td style="width: 88px;">&lt;5</td>
+            <td style="width: 73px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Otolaryngology ST3</td>
+            <td style="width: 70px;">40</td>
+            <td style="width: 88px;">&lt;5</td>
+            <td style="width: 73px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Paediatric and Perinatal&nbsp;Pathology&nbsp;ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 88px;">&lt;5</td>
+            <td style="width: 73px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Paediatric Cardiology ST4</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 88px;">0</td>
+            <td style="width: 73px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Paediatric Surgery ST3</td>
+            <td style="width: 70px;">11</td>
+            <td style="width: 88px;">&lt;5</td>
+            <td style="width: 73px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Paediatrics ST1</td>
+            <td style="width: 70px;">442</td>
+            <td style="width: 88px;">18</td>
+            <td style="width: 73px;">87</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Paediatrics ST3</td>
+            <td style="width: 70px;">6</td>
+            <td style="width: 88px;">&lt;5</td>
+            <td style="width: 73px;">25</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Paediatrics ST4</td>
+            <td style="width: 70px;">5</td>
+            <td style="width: 88px;">0</td>
+            <td style="width: 73px;">28</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Palliative Medicine ST3</td>
+            <td style="width: 70px;">37</td>
+            <td style="width: 88px;">0</td>
+            <td style="width: 73px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Plastic Surgery ST3</td>
+            <td style="width: 70px;">71</td>
+            <td style="width: 88px;">&lt;5</td>
+            <td style="width: 73px;">5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Psychiatry (all specialties) ST4</td>
+            <td style="width: 70px;">286</td>
+            <td style="width: 88px;">33</td>
+            <td style="width: 73px;">196</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Public Health Medicine ST1</td>
+            <td style="width: 70px;">72</td>
+            <td style="width: 88px;">&lt;5</td>
+            <td style="width: 73px;">0</td>
+            <td style="width: 82px;">43</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Rehabilitation Medicine ST3</td>
+            <td style="width: 70px;">8</td>
+            <td style="width: 88px;">&lt;5</td>
+            <td style="width: 73px;">17</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Sport and Exercise Medicine ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 88px;">&lt;5</td>
+            <td style="width: 73px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Trauma and Orthopaedic Surgery ST3</td>
+            <td style="width: 70px;">169</td>
+            <td style="width: 88px;">12</td>
+            <td style="width: 73px;">10</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Urology ST3</td>
+            <td style="width: 70px;">36</td>
+            <td style="width: 88px;">6</td>
+            <td style="width: 73px;">12</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          </tbody>
+        </table>           	 			</div>
+    </details>
+    <details class="nhsuk-details nhsuk-expander">
+      <summary class="nhsuk-details__summary">
+           	 				<span class="nhsuk-details__summary-text">
+           	 					Accepted offers
+           	 				</span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <table summary="Table of 2021 Recruitment country of qualification accepted offers data - Round 1 and Round 2 split by specialty and level" border="0.5" cellpadding="7" cellspacing="1" style="width:517px;">
+          <thead>
+          <tr>
+            <th scope="col" style="width: 290px;">
+              <p>Specialty and level</p>
+            </th>
+            <th scope="col" style="width: 70px;">UK</th>
+            <th scope="col" style="width: 77px;">EU</th>
+            <th scope="col" style="width: 82px;">Rest of the World</th>
+            <th scope="col" style="width: 82px;">Non medical</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td style="width: 290px;">
+              <p>Acute Care Common Stem (ACCS) Anaesthetics/Core&nbsp;Anaesthetics CT1</p>
+            </td>
+            <td style="width: 70px;">631</td>
+            <td style="width: 85px;">11</td>
+            <td style="width: 67px;">6</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">ACCS Emergency Medicine ST1/CT1</td>
+            <td style="width: 70px;">324</td>
+            <td style="width: 85px;">7</td>
+            <td style="width: 67px;">30</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">ACCS Internal Medicine/Internal Medicine Training CT1</td>
+            <td style="width: 70px;">1085</td>
+            <td style="width: 85px;">74</td>
+            <td style="width: 67px;">407</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Allergy ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 85px;">0</td>
+            <td style="width: 67px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Anaesthetics ST3</td>
+            <td style="width: 70px;">518</td>
+            <td style="width: 85px;">12</td>
+            <td style="width: 67px;">47</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Audiovestibular Medicine ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 85px;">0</td>
+            <td style="width: 67px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Cardiology ST3</td>
+            <td style="width: 70px;">56</td>
+            <td style="width: 85px;">5</td>
+            <td style="width: 67px;">36</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Cardiothoracic Surgery ST1</td>
+            <td style="width: 70px;">6</td>
+            <td style="width: 85px;">0</td>
+            <td style="width: 67px;">0</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Cardiothoracic Surgery ST3</td>
+            <td style="width: 70px;">0</td>
+            <td style="width: 85px;">0</td>
+            <td style="width: 67px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Chemical Pathology ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 85px;">0</td>
+            <td style="width: 67px;">8</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Clinical Genetics ST3</td>
+            <td style="width: 70px;">15</td>
+            <td style="width: 85px;">&lt;5</td>
+            <td style="width: 67px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Clinical Neurophysiology ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 85px;">&lt;5</td>
+            <td style="width: 67px;">5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Clinical Oncology ST3</td>
+            <td style="width: 70px;">67</td>
+            <td style="width: 85px;">&lt;5</td>
+            <td style="width: 67px;">42</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Clinical Radiology ST1</td>
+            <td style="width: 70px;">312</td>
+            <td style="width: 85px;">19</td>
+            <td style="width: 67px;">59</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Combined Infection Training ST3</td>
+            <td style="width: 70px;">47</td>
+            <td style="width: 85px;">&lt;5</td>
+            <td style="width: 67px;">18</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Community Sexual and&nbsp;Reproductive Health ST1</td>
+            <td style="width: 70px;">6</td>
+            <td style="width: 85px;">0</td>
+            <td style="width: 67px;">0</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Core Psychiatry&nbsp;CT1</td>
+            <td style="width: 70px;">369</td>
+            <td style="width: 85px;">29</td>
+            <td style="width: 67px;">285</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Core Surgical Training CT1</td>
+            <td style="width: 70px;">475</td>
+            <td style="width: 85px;">33</td>
+            <td style="width: 67px;">46</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Dermatology ST3</td>
+            <td style="width: 70px;">35</td>
+            <td style="width: 85px;">5</td>
+            <td style="width: 67px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Diagnostic Neuropathology ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 85px;">0</td>
+            <td style="width: 67px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Emergency Medicine ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 85px;">&lt;5</td>
+            <td style="width: 67px;">15</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Emergency Medicine ST4</td>
+            <td style="width: 70px;">44</td>
+            <td style="width: 85px;">&lt;5</td>
+            <td style="width: 67px;">13</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Gastroenterology ST3</td>
+            <td style="width: 70px;">14</td>
+            <td style="width: 85px;">0</td>
+            <td style="width: 67px;">27</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">General and Vascular Surgery&nbsp;ST3</td>
+            <td style="width: 70px;">104</td>
+            <td style="width: 85px;">9</td>
+            <td style="width: 67px;">22</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">General Practice ST1</td>
+            <td style="width: 70px;">2215</td>
+            <td style="width: 85px;">265</td>
+            <td style="width: 67px;">2100</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Genitourinary Medicine ST3</td>
+            <td style="width: 70px;">9</td>
+            <td style="width: 85px;">&lt;5</td>
+            <td style="width: 67px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Haematology ST3</td>
+            <td style="width: 70px;">53</td>
+            <td style="width: 85px;">5</td>
+            <td style="width: 67px;">28</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Histopathology ST1</td>
+            <td style="width: 70px;">68</td>
+            <td style="width: 85px;">6</td>
+            <td style="width: 67px;">35</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Immunology ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 85px;">0</td>
+            <td style="width: 67px;">7</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Intensive Care Medicine ST3</td>
+            <td style="width: 70px;">168</td>
+            <td style="width: 85px;">&lt;5</td>
+            <td style="width: 67px;">30</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Medical Oncology ST3</td>
+            <td style="width: 70px;">46</td>
+            <td style="width: 85px;">&lt;5</td>
+            <td style="width: 67px;">31</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Medical Ophthalmology ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 85px;">&lt;5</td>
+            <td style="width: 67px;">0</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Neurology ST3</td>
+            <td style="width: 70px;">27</td>
+            <td style="width: 85px;">&lt;5</td>
+            <td style="width: 67px;">20</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Neurosurgery ST1</td>
+            <td style="width: 70px;">14</td>
+            <td style="width: 85px;">0</td>
+            <td style="width: 67px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Neurosurgery ST2</td>
+            <td style="width: 70px;">0</td>
+            <td style="width: 85px;">&lt;5</td>
+            <td style="width: 67px;">0</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Nuclear Medicine ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 85px;">0</td>
+            <td style="width: 67px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Obstetrics and Gynaecology ST1</td>
+            <td style="width: 70px;">229</td>
+            <td style="width: 85px;">7</td>
+            <td style="width: 67px;">24</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Obstetrics and Gynaecology ST3</td>
+            <td style="width: 70px;">0</td>
+            <td style="width: 85px;">&lt;5</td>
+            <td style="width: 67px;">21</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Occupational Medicine ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 85px;">0</td>
+            <td style="width: 67px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Ophthalmology ST1</td>
+            <td style="width: 70px;">84</td>
+            <td style="width: 85px;">&lt;5</td>
+            <td style="width: 67px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Ophthalmology ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 85px;">&lt;5</td>
+            <td style="width: 67px;">14</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Oral and Maxillofacial Surgery&nbsp;ST1</td>
+            <td style="width: 70px;">10</td>
+            <td style="width: 85px;">0</td>
+            <td style="width: 67px;">0</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Oral and Maxillofacial Surgery&nbsp;ST3</td>
+            <td style="width: 70px;">12</td>
+            <td style="width: 85px;">&lt;5</td>
+            <td style="width: 67px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Otolaryngology ST3</td>
+            <td style="width: 70px;">32</td>
+            <td style="width: 85px;">&lt;5</td>
+            <td style="width: 67px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Paediatric and Perinatal&nbsp;Pathology&nbsp;ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 85px;">&lt;5</td>
+            <td style="width: 67px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Paediatric Cardiology ST4</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 85px;">0</td>
+            <td style="width: 67px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Paediatric Surgery ST3</td>
+            <td style="width: 70px;">7</td>
+            <td style="width: 85px;">&lt;5</td>
+            <td style="width: 67px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Paediatrics ST1</td>
+            <td style="width: 70px;">332</td>
+            <td style="width: 85px;">13</td>
+            <td style="width: 67px;">78</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Paediatrics ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 85px;">&lt;5</td>
+            <td style="width: 67px;">18</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Paediatrics ST4</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 85px;">0</td>
+            <td style="width: 67px;">23</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Palliative Medicine ST3</td>
+            <td style="width: 70px;">32</td>
+            <td style="width: 85px;">0</td>
+            <td style="width: 67px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Plastic Surgery ST3</td>
+            <td style="width: 70px;">66</td>
+            <td style="width: 85px;">&lt;5</td>
+            <td style="width: 67px;">5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Psychiatry (all specialties) ST4</td>
+            <td style="width: 70px;">241</td>
+            <td style="width: 85px;">25</td>
+            <td style="width: 67px;">176</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Public Health Medicine ST1</td>
+            <td style="width: 70px;">54</td>
+            <td style="width: 85px;">&lt;5</td>
+            <td style="width: 67px;">0</td>
+            <td style="width: 82px;">41</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Rehabilitation Medicine ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 85px;">0</td>
+            <td style="width: 67px;">12</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Sport and Exercise Medicine ST3</td>
+            <td style="width: 70px;">&lt;5</td>
+            <td style="width: 85px;">&lt;5</td>
+            <td style="width: 67px;">&lt;5</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Trauma and Orthopaedic Surgery ST3</td>
+            <td style="width: 70px;">156</td>
+            <td style="width: 85px;">12</td>
+            <td style="width: 67px;">9</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="width: 290px;">Urology ST3</td>
+            <td style="width: 70px;">35</td>
+            <td style="width: 85px;">5</td>
+            <td style="width: 67px;">12</td>
+            <td style="width: 82px;">N/A</td>
+          </tr>
+          </tbody>
+        </table>           	 			</div>
+    </details>
+  </div>
+
+  <h2>WYSIWYG editor tables</h2>
   <ul>
-    <li>Does not collapse correctly on smaller mobile viewports</li>
+    <li>Added via text editor in Bloomreach</li>
+    <li>Don't leverage mobile table macros</li>
+    <li>Output is vanilla HTML with some width constraint attributes</li>
+    <li>Currently no support for mobile / desktop collapsed layout</li>
   </ul>
 
-  <table role="table" class="nhsuk-table nhsuk-hee-table nhsuk-table-responsive has-caption">
-    <caption class="nhsuk-table__caption">Online interview overview</caption>
-    <thead role="rowgroup" class="nhsuk-table__head">
-    <tr role="row">
-      <th scope="col" role="columnheader">Area</th>
-      <th scope="col" role="columnheader">Raw marks by panel member</th>
-      <th scope="col" role="columnheader">Total marks</th>
-      <th scope="col" role="columnheader">Percentage of final score %</th>
+  <table summary="Table of 2021 Recruitment country of qualification applications data - Round 1 and Round 2 split by specialty and level" border="0.5" cellpadding="7" cellspacing="1" style="word-break:normal">
+    <thead>
+    <tr>
+      <th scope="col" style="width: 290px;">
+        <p>Specialty and level</p>
+      </th>
+      <th scope="col" style="width: 70px;">UK</th>
+      <th scope="col" style="width: 77px;">EU</th>
+      <th scope="col" style="width: 82px;">Rest of the World</th>
+      <th scope="col" style="width: 82px;">Non medical</th>
+      <th scope="col" style="width: 82px;">Lorum Ipsum</th>
+      <th scope="col" style="width: 82px;">Another heading</th>
     </tr>
     </thead>
-    <tbody class="nhsuk-table__body">
-    <tr role="row" class="nhsuk-table__row">
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Area</span>
-        Clinical prioritisation
+    <tbody>
+    <tr>
+      <td style="width: 290px;">
+        <p>Acute Care Common Stem (ACCS) Anaesthetics/Core&nbsp;Anaesthetics CT1</p>
       </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Raw marks by panel member</span>
-        20
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Total marks</span>
-        40
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Percentage of final score %</span>
-        26.64
-      </td>
+      <td style="width: 70px;">1913</td>
+      <td style="width: 77px;">134</td>
+      <td style="width: 82px;">410</td>
+      <td style="width: 82px;">N/A</td>
+      <td style="width: 82px;">410</td>
+      <td style="width: 82px;">N/A</td>
+
     </tr>
-    <tr role="row" class="nhsuk-table__row">
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Area</span>
-        Structured interview
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Raw marks by panel member</span>
-        20
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Total marks</span>
-        40
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Percentage of final score %</span>
-        26.64
-      </td>
+    <tr>
+      <td style="width: 290px;">ACCS Emergency Medicine ST1/CT1</td>
+      <td style="width: 70px;">798</td>
+      <td style="width: 77px;">71</td>
+      <td style="width: 82px;">555</td>
+      <td style="width: 82px;">N/A</td>
+      <td style="width: 82px;">555</td>
+      <td style="width: 82px;">N/A</td>
+
     </tr>
-    <tr role="row" class="nhsuk-table__row">
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Area</span>
-        Global performance score
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Raw marks by panel member</span>
-        10
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Total marks</span>
-        20
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Percentage of final score %</span>
-        13.32
-      </td>
+    <tr>
+      <td style="width: 290px;">ACCS Internal Medicine/Internal Medicine Training CT1</td>
+      <td style="width: 70px;">2143</td>
+      <td style="width: 77px;">209</td>
+      <td style="width: 82px;">1238</td>
+      <td style="width: 82px;">N/A</td>
+      <td style="width: 82px;">555</td>
+      <td style="width: 82px;">N/A</td>
     </tr>
-    <tr role="row" class="nhsuk-table__row">
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Area</span>
-        Total
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Raw marks by panel member</span>
-        50
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Total marks</span>
-        100
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Percentage of final score %</span>
-        66.66
-      </td>
+    <tr>
+      <td style="width: 290px;">Allergy ST3</td>
+      <td style="width: 70px;">6</td>
+      <td style="width: 77px;">&lt;5</td>
+      <td style="width: 82px;">31</td>
+      <td style="width: 82px;">N/A</td>
+      <td style="width: 82px;">555</td>
+      <td style="width: 82px;">N/A</td>
+    </tr>
+    <tr>
+      <td style="width: 290px;">Anaesthetics ST3</td>
+      <td style="width: 70px;">1328</td>
+      <td style="width: 77px;">40</td>
+      <td style="width: 82px;">259</td>
+      <td style="width: 82px;">N/A</td>
+      <td style="width: 82px;">555</td>
+      <td style="width: 82px;">N/A</td>
+    </tr>
+    <tr>
+      <td style="width: 290px;">Audiovestibular Medicine ST3</td>
+      <td style="width: 70px;">&lt;5</td>
+      <td style="width: 77px;">0</td>
+      <td style="width: 82px;">15</td>
+      <td style="width: 82px;">N/A</td>
+      <td style="width: 82px;">555</td>
+      <td style="width: 82px;">N/A</td>
     </tr>
     </tbody>
   </table>
 
-  <h3>Amended styling (forces mobile view on desktop)</h3>
-  <ul>
-    <li>Collapsed by default on all viewports (mobile -> desktop)</li>
-    <li>Requires new wrapper: <strong><code>nhsuk-table__cell__container</code></strong> around cell data</li>
-  </ul>
-
-  <table role="table" class="nhsuk-table nhsuk-hee-table nhsuk-table-responsive nhsuk-hee-table--multicols has-caption">
-    <caption class="nhsuk-table__caption">Online interview overview</caption>
-    <thead role="rowgroup" class="nhsuk-table__head">
-    <tr role="row">
-      <th scope="col" role="columnheader">Area</th>
-      <th scope="col" role="columnheader">Raw marks by panel member</th>
-      <th scope="col" role="columnheader">Total marks</th>
-      <th scope="col" role="columnheader">Percentage of final score %</th>
+  <table summary="Table of 2021 Recruitment country of qualification applications data - Round 1 and Round 2 split by specialty and level" border="0.5" cellpadding="7" cellspacing="1" style="width:537px;">
+    <thead>
+    <tr>
+      <th scope="col" style="width: 290px;">
+        <p>Specialty and level</p>
+      </th>
+      <th scope="col" style="width: 70px;">UK</th>
+      <th scope="col" style="width: 77px;">EU</th>
+      <th scope="col" style="width: 82px;">Rest of the World</th>
+      <th scope="col" style="width: 82px;">Non medical</th>
+      <th scope="col" style="width: 82px;">Lorum Ipsum</th>
+      <th scope="col" style="width: 82px;">Another heading</th>
     </tr>
     </thead>
-    <tbody class="nhsuk-table__body">
-    <tr role="row" class="nhsuk-table__row">
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Area</span>
-        <div class="nhsuk-table__cell__container">Clinical prioritisation</div>
+    <tbody>
+    <tr>
+      <td style="width: 290px;">
+        <p>Acute Care Common Stem (ACCS) Anaesthetics/Core&nbsp;Anaesthetics CT1</p>
       </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Raw marks by panel member</span>
-        <div class="nhsuk-table__cell__container">20</div>
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Total marks</span>
-        <div class="nhsuk-table__cell__container">40</div>
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Percentage of final score %</span>
-        <div class="nhsuk-table__cell__container">26.64</div>
-      </td>
+      <td style="width: 70px;">1913</td>
+      <td style="width: 77px;">134</td>
+      <td style="width: 82px;">410</td>
+      <td style="width: 82px;">N/A</td>
+      <td style="width: 82px;">410</td>
+      <td style="width: 82px;">N/A</td>
+
     </tr>
-    <tr role="row" class="nhsuk-table__row">
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Area</span>
-        <div class="nhsuk-table__cell__container">
-          <p>Score: 5</p>
-          <p>By December 2022, I have completed a quality improvement project (QIP) or complete audit cycle (for example,&nbsp;first audit/project, action plan and re-audit/assessment to quantify impact of intervention) which has resulted in national change</p>
-        </div>
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Raw marks by panel member</span>
-        <div class="nhsuk-table__cell__container">20</div>
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Total marks</span>
-        <div class="nhsuk-table__cell__container">40</div>
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Percentage of final score %</span>
-        <div class="nhsuk-table__cell__container">26.64</div>
-      </td>
+    <tr>
+      <td style="width: 290px;">ACCS Emergency Medicine ST1/CT1</td>
+      <td style="width: 70px;">798</td>
+      <td style="width: 77px;">71</td>
+      <td style="width: 82px;">555</td>
+      <td style="width: 82px;">N/A</td>
+      <td style="width: 82px;">555</td>
+      <td style="width: 82px;">N/A</td>
+
     </tr>
-    <tr role="row" class="nhsuk-table__row">
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Area</span>
-        <div class="nhsuk-table__cell__container">Global performance score</div>
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Raw marks by panel member</span>
-        <div class="nhsuk-table__cell__container">10</div>
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Total marks</span>
-        <div class="nhsuk-table__cell__container">20</div>
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Percentage of final score %</span>
-        <div class="nhsuk-table__cell__container">13.32</div>
-      </td>
+    <tr>
+      <td style="width: 290px;">ACCS Internal Medicine/Internal Medicine Training CT1</td>
+      <td style="width: 70px;">2143</td>
+      <td style="width: 77px;">209</td>
+      <td style="width: 82px;">1238</td>
+      <td style="width: 82px;">N/A</td>
+      <td style="width: 82px;">555</td>
+      <td style="width: 82px;">N/A</td>
     </tr>
-    <tr role="row" class="nhsuk-table__row">
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Area</span>
-        <div class="nhsuk-table__cell__container">Total</div>
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Raw marks by panel member</span>
-        <div class="nhsuk-table__cell__container">50</div>
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Total marks</span>
-        <div class="nhsuk-table__cell__container">100</div>
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Percentage of final score %</span>
-        <div class="nhsuk-table__cell__container">66.66</div>
-      </td>
+    <tr>
+      <td style="width: 290px;">Allergy ST3</td>
+      <td style="width: 70px;">6</td>
+      <td style="width: 77px;">&lt;5</td>
+      <td style="width: 82px;">31</td>
+      <td style="width: 82px;">N/A</td>
+      <td style="width: 82px;">555</td>
+      <td style="width: 82px;">N/A</td>
+    </tr>
+    <tr>
+      <td style="width: 290px;">Anaesthetics ST3</td>
+      <td style="width: 70px;">1328</td>
+      <td style="width: 77px;">40</td>
+      <td style="width: 82px;">259</td>
+      <td style="width: 82px;">N/A</td>
+      <td style="width: 82px;">555</td>
+      <td style="width: 82px;">N/A</td>
+    </tr>
+    <tr>
+      <td style="width: 290px;">Audiovestibular Medicine ST3</td>
+      <td style="width: 70px;">&lt;5</td>
+      <td style="width: 77px;">0</td>
+      <td style="width: 82px;">15</td>
+      <td style="width: 82px;">N/A</td>
+      <td style="width: 82px;">555</td>
+      <td style="width: 82px;">N/A</td>
     </tr>
     </tbody>
   </table>
