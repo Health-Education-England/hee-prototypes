@@ -1,0 +1,14 @@
+.nhsuk-hee-table {
+  border-radius: 12px;
+
+  &.has-caption {
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+
+    caption {
+      border: 1px solid $color_nhsuk-grey-4;
+      border-bottom: none;
+      border-radius: 12px 12px 0 0;
+    }
+  }
+}

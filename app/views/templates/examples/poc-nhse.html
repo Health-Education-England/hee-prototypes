@@ -349,6 +349,52 @@
     ]
   }) }}
 
+  <table role="table" class="nhsuk-table-responsive nhsuk-hee-table has-caption">
+    <caption class="nhsuk-table__caption">Ibuprofen tablet dosages for children</caption>
+    <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+      <th role="columnheader" class="" scope="col"> Age </th>
+      <th role="columnheader" class="" scope="col"> How much? </th>
+      <th role="columnheader" class="" scope="col"> How often </th>
+    </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Age </span>7 to 9 years
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">How much? </span>200mg
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">How often? </span>Max 3 times in 24 hours
+      </td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Age </span>10 to 11 years
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">How much? </span>200mg to 300mg
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">How often? </span>Max 3 times in 24 hours
+      </td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Age </span>12 to 17 years
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">How much? </span>200mg to 400mg
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">How often? </span>Max 3 times in 24 hours
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
   {{ authorCard({
     imgURL: basePath + "/images/doctor-headshot.png",
     title: "Mr",
@@ -451,6 +497,118 @@
       }
     ]
   })}}
+
+  {{ detailsCard({
+    title: "Publication Info",
+    items: [
+      {
+        label: "Published:",
+        value: "24 June 2022"
+      },
+      {
+        label: "Updated:",
+        value: "24 July 2022"
+      },
+      {
+        label: "Professions:",
+        value: "<a href=\"#\">Profession 1</a>, <a href=\"#\">Profession 2</a>"
+      },
+      {
+        label: "Topics:",
+        value: "<a href=\"#\">Topic 1</a>, <a href=\"#\">Topic 2</a>"
+      }
+    ]
+  }) }}
+
+  {% set pdf %}
+    {{ resources({
+      title: "First Publication Title",
+      text: "First Publication Title",
+      url: "#",
+      docType: "PDF",
+      tagColor: "pdf"
+    }) }}
+  {% endset %}
+
+  {% set odf %}
+    {{ resources({
+      title: "Second Publication Title",
+      text: "Second Publication Title",
+      url: "#",
+      docType: "ODF",
+      tagColor: "odf"
+    }) }}
+  {% endset %}
+
+  {% set xls %}
+    {{ resources({
+      title: "Third Publication Title",
+      text: "Third Publication Title",
+      url: "#",
+      docType: "XLS",
+      tagColor: "xls"
+    }) }}
+  {% endset %}
+
+  {% set ppt %}
+    {{ resources({
+      title: "Fourth Publication Title",
+      text: "Fourth Publication Title",
+      url: "#",
+      docType: "PPT",
+      tagColor: "ppt"
+    }) }}
+  {% endset %}
+
+  {{ detailsCard({
+    title: "Alternative versions",
+    items: [
+      {
+        value: pdf
+      },
+      {
+        value: odf
+      },
+      {
+        value: xls
+      },
+      {
+        value: ppt
+      }
+    ]
+  }) }}
+
+  {% set firstLang %}
+    {{ resources({
+      title: "Teitl y cyhoeddiad",
+      text: "Teitl y cyhoeddiad",
+      url: "#",
+      docType: "PDF",
+      tagColor: "pdf"
+    }) }}
+  {% endset %}
+
+  {% set secondLang %}
+    {{ resources({
+      title: "Tytuł publikacji",
+      text: "Tytuł publikacji",
+      url: "#",
+      docType: "PDF",
+      tagColor: "pdf"
+    }) }}
+  {% endset %}
+
+  {{ detailsCard({
+    title: "Languages",
+    items: [
+      {
+        value: firstLang
+      },
+      {
+        value: secondLang
+      }
+    ]
+  }) }}
 
   {{ personCard({
     imgURL: basePath + "/images/doctor-headshot.png",
