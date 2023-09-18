@@ -158,3 +158,4 @@ exports.compilePrototypeScripts = compilePrototypeScripts
 exports.copyVendorStyles = copyVendorStyles
 exports.copyVendorScripts = copyVendorScripts
 exports.copyImages = copyImages
+exports.webpackBuild = webpackBuild
