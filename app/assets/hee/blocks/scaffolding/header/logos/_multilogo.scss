@@ -3,6 +3,7 @@
 .nhsuk-header__multilogo {
   display: flex;
   flex-direction: column;
+  margin-top: 8px;
 
   @include mq($from: desktop) {
     flex-direction: row;
