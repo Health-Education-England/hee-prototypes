@@ -1,36 +1,75 @@
-# Newsletter Signup Form
+{% extends "prototype-inner.html" %}
 
-## Guidance
-The newsletter component for the NWP currently uses a third party email subscription service (Pure360).
+{% set page_url = 'main-newsletter-form' %}
+{% set page_title = 'Newsletter Signup' %}
 
-It Allows editors to embed a third-party Pure360 newsletter signup form within content.
+{% block pageTitle %}{{ page_title }} - Templates - NWP Prototype Kit{% endblock %}
 
-Custom javascript handles the form validation on the frontend, while Pure360 handles the form submission logic externally.
+{% block breadcrumbs %}
+  {{
+  breadcrumb({
+    items: [
+      {
+        href: basePath + "/",
+        text: "Home"
+      },
+      {
+        href: basePath + "/blocks",
+        text: "Blocks"
+      },
+      {
+        href: basePath + "/blocks/content",
+        text: "Content"
+      }
+    ],
+    href: basePath + "/blocks/" + page_url,
+    text: page_title
+  })
+  }}
+{% endblock %}
 
-The Javascript initially hides these messages on page load.
-
-The Javascript then adds onfocusout event listeners to the required fields which are currently:
-- firstname
-- lastname
-- email
-- consent
-
-On event invocation the field values are validated and if necessary error messages are displayed above the target fields, as well as within the error summary box.
-
-## Nunjucks macro
-```
-  {{ newsletterForm({
-    title: "Subscribe to our newsletter",
-    subtitle: "Subscribe to receive marketing and update emails.",
-    accName: "Digital.Readiness",
-    listName: "NHS Digital Academy bulletin",
-    successUrl: "https://digital-transformation.hee.nhs.uk/newsletter-subscription-successful",
-    errorUrl: "https://digital-transformation.hee.nhs.uk/newsletter-subscription-unsuccessful",
-    doubleOptin: false
+{% block pageLeftbar %}
+  {{ subnav({
+    area: 'blocks',
+    subarea: 'content'
   }) }}
-```
+{% endblock %}
 
-```html
+{% block pageHeader %}
+  <span class="nhsuk-caption-xl">Main</span>
+  <h1>{{ page_title }}</h1>
+  <p class="nhsuk-lede-text"></p>
+{% endblock %}
+
+{% block pageContent %}
+
+  <p>Allows editors to embed a third-party Pure360 newsletter signup form within content.</p>
+  <p>Custom javascript handles the form validation on the frontend, while Pure360 handles the form submission logic externally.</p>
+
+  <h3>Example</h3>
+  {{ example({
+    view: 'block',
+    url: basePath + '/blocks/content/examples/' + page_url,
+    height: '620'
+  }) }}
+
+  <hr />
+
+  <h3>Macro</h3>
+  {{ highlight({
+    html: '
+{{ newsletterForm({
+    title: "Subscribe to our newsletter",
+    description: "Subscribe to receive marketing and update emails."
+}) }}
+  '
+  }) }}
+
+  <hr />
+
+  <h3>HTML</h3>
+  {{ highlight({
+    html : '
 <form id="newsletter-form" method="POST" action="https://response.pure360.com/interface/list.php">
     <div id="error-summary" class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" style="display: none;">
         <h2 class="nhsuk-error-summary__title" id="error-summary-title">
@@ -186,18 +225,10 @@ Please tick the reCAPTCHA box to enable the subscribe button
         Subscribe
     </button>
 </form>
-```
+  '
+  })
+  }}
 
-### Nunjucks arguments
+{% endblock %}
 
-The macro takes the following arguments:
-
-| Name        | Type    | Required | Description                                 |
-|-------------|---------|----------|---------------------------------------------|
-| title       | string  | No       | Title displayed above the form              |
-| description | string  | No       | Description lede text displayed below title |
-| accName     | string  | Yes      | Pure360 account name param                  |
-| listName    | string  | Yes      | Pure360 mailing list name param             |
-| successUrl  | string  | Yes      | Pure360 success callback URL                |
-| errorUrl    | string  | Yes      | Pure360 error callback URL                  |
-| doubleOptin | boolean | Yes      | Pure360 double opt in flag                  |
+{% block pageFooter %}{% endblock %}
