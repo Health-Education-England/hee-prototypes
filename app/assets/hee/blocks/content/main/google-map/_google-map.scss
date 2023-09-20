@@ -1,10 +1,9 @@
 .hee-google-map {
+  border: 1px solid $color_nhsuk-grey-4;
   margin-bottom: nhsuk-spacing(4);
-  padding-top: nhsuk-spacing(4);
 
 
   .hee-google-map__wrapper {
-    border: 1px solid $color_nhsuk-grey-4;
     height: 0;
     overflow: hidden;
     position: relative;
