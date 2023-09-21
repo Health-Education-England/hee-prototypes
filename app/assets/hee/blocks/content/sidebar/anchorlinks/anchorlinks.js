@@ -24,7 +24,8 @@ export default () => {
     findHeadings(headings) {
       let foundHeadings = []
       if (headings) {
-        document.querySelectorAll(headings).forEach((heading, i) => {
+        const contentContainer = document.querySelector('.page__content');
+        contentContainer.querySelectorAll(headings).forEach((heading, i) => {
           if (!heading.id) {
             heading.id = heading.innerText.replace(/ .*/,'').replace(/[\n\r]/g,'').replace(/\s/g,'').toLowerCase()+i;
           }
