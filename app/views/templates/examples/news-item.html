@@ -9,11 +9,11 @@
   breadcrumb({
     items: [
       {
-        href: "/",
+        href: basePath + "/",
         text: "Home"
       }
     ],
-    href: "/templates/examples/news-item",
+    href: basePath + "/templates/examples/news-item",
     text: "News Item"
   })
   }}
@@ -21,7 +21,7 @@
 
 {% block pageHeader %}
   {{ microHero({
-    "imgURL": "/images/young-child-using-tablet-device.jpg"
+    "imgURL":  basePath + "/images/young-child-using-tablet-device.jpg"
   }) }}
   <div class="nhsuk-width-container">
     <h1>News Item</h1>

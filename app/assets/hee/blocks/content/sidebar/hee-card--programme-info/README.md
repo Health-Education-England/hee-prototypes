@@ -40,7 +40,7 @@ There are two style variants for this component:
 #### Nunjucks macro
 
 ```
-  {{ relatedLinksCard({
+  {{ programmeInfoCard({
     heading: "Pages related to this programme",
     links: [
       {
@@ -101,7 +101,7 @@ There are two style variants for this component:
 #### Nunjucks macro
 
 ```
-  {{ relatedLinksCard({
+  {{ programmeInfoCard({
     heading: "Pages related to this programme",
     itemBorder: true,
     links: [
