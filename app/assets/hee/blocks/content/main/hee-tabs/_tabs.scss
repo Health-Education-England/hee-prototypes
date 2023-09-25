@@ -81,10 +81,17 @@
             background-image: url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__minus' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='32' aria-hidden='true'%3E%3Ccircle cx='12' cy='12' r='10' fill='none'%3E%3C/circle%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M8 12h8'%3E%3C/path%3E%3C/svg%3E%0A");
             background-position: right nhsuk-spacing(1) center;
             background-repeat: no-repeat;
+            border: 1px solid $color_nhsuk-grey-4;
+            border-bottom: none;
+            border-top: none;
             box-shadow: none;
             font-weight: 600;
             color: $nhsuk-focus-text-color;
             cursor: unset;
+
+            &:first-child {
+              border-top: 1px solid $color_nhsuk-grey-4;
+            }
         }
     }
 
@@ -92,9 +99,21 @@
         @include nhsuk-responsive-margin(0, "bottom");
         padding: nhsuk-spacing(6) nhsuk-spacing(4);
         background-color: $color_nhsuk-white;
+        border: 1px solid $color_nhsuk-grey-4;
+        border-bottom: none;
+        border-top: none;
         padding: nhsuk-spacing(3);
+
+        @include mq($from: tablet) {
+          border: none;
+        }
+
         img {
             max-width: 100%;
+        }
+
+        &:last-child {
+          border-bottom: 1px solid $color_nhsuk-grey-4;
         }
     }
 }
