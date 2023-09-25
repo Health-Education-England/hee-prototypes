@@ -96,6 +96,12 @@
                 border: none;
               }
             }
+
+            &:last-child {
+              @include mq($from: desktop) {
+                border: none;
+              }
+            }
         }
     }
 
@@ -108,7 +114,7 @@
         border-top: none;
         padding: nhsuk-spacing(3);
 
-        @include mq($from: tablet) {
+        @include mq($from: desktop) {
           border: none;
         }
 
@@ -131,14 +137,14 @@
 
   .nhsuk-tabs__list {
     border-bottom: none;
-    @include mq($from: tablet) {
+    @include mq($from: desktop) {
       border: 1px solid $color_nhsuk-grey-4;
       border-bottom: none;
     }
   }
 
   .nhsuk-tabs__panel {
-    @include mq($from: tablet) {
+    @include mq($from: desktop) {
       border: none;
     }
 
@@ -158,3 +164,4 @@
 
   }
 }
+
