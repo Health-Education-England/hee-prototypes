@@ -61,6 +61,18 @@
     {
       "label": "blocks-skip-link",
       "focusSelector": ".nhsuk-skip-link"
+    },
+    {
+      "label": "blocks-main-newsletter-form",
+      "delay": 7000
+    },
+    {
+      "label": "blocks-main-newsletter-form-validation-error",
+      "delay": 5000,
+      "clickSelectors": [
+        "#firstname", "#lastname", "#email", "#consent"
+      ],
+      "url": "http://127.0.0.1:8080/blocks/content/examples/main-newsletter-form.html"
     }
   ]
 }

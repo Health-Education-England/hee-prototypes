@@ -108,11 +108,20 @@
 
   .nhsuk-tabs__list {
     border-bottom: none;
+    @include mq($from: tablet) {
+      border: 1px solid $color_nhsuk-grey-4;
+      border-bottom: none;
+    }
   }
 
   .nhsuk-tabs__panel {
     @include mq($from: tablet) {
       border: none;
+    }
+
+    @include mq($from: desktop) {
+      border: 1px solid $color_nhsuk-grey-4;
+      border-top: none;
     }
 
     &>:last-child {
