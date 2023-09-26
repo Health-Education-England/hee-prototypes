@@ -89,18 +89,13 @@
             color: $nhsuk-focus-text-color;
             cursor: unset;
 
-            &:first-child {
-              border-top: 1px solid $color_nhsuk-grey-4;
-
-              @include mq($from: desktop) {
-                border: none;
-              }
+            @include mq($from: desktop) {
+              border: 1px solid $color_nhsuk-grey-4;
+              border-bottom: none;
             }
 
-            &:last-child {
-              @include mq($from: desktop) {
-                border: none;
-              }
+            &:first-child {
+              border-top: 1px solid $color_nhsuk-grey-4;
             }
         }
     }
@@ -138,8 +133,7 @@
   .nhsuk-tabs__list {
     border-bottom: none;
     @include mq($from: desktop) {
-      border: 1px solid $color_nhsuk-grey-4;
-      border-bottom: none;
+      border: none;
     }
   }
 
