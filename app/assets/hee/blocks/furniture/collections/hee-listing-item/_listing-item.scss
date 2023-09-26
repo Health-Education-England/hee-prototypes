@@ -49,8 +49,6 @@
     }
 
     .hee-listing-item__summary {
-      @include nhsuk-typography-responsive(16);
-
       padding: 0 nhsuk-spacing(4) 0 nhsuk-spacing(4);
     }
   }
