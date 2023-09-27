@@ -95,7 +95,9 @@
         word-break: break-word;
 
         &:hover {
-            text-decoration: underline;
+            > .hee-resources__text {
+                text-decoration: underline;
+            }
         }
     }
 
