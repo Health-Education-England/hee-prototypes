@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Anchor Links - Templates - NWP Prototype Kit</title>
+  <title>Card--Programme Info - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -60,11 +60,11 @@
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks">Blocks</a></li>
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/content">Content</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/sidebar-anchor-links">Anchor Links</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/sidebar-card-programme-info">Card--Programme Info</a></li>
         </ol>
         <p class="nhsuk-breadcrumb__back">
-          <a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/sidebar-anchor-links">
-            <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span> Anchor Links </a>
+          <a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/sidebar-card-programme-info">
+            <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span> Card--Programme Info </a>
         </p>
       </div>
     </nav>
@@ -129,60 +129,109 @@
         </div>
         <div class="page__main">
           <div class="page__header">
-            <span class="nhsuk-caption-xl">Sidebar</span>
-            <h1>Anchor Links</h1>
+            <span class="nhsuk-caption-xl">Main</span>
+            <h1>Card--Programme Info</h1>
             <p class="nhsuk-lede-text"></p>
           </div>
-          <p>Generates a list of anchor links within the page right hand sidebar, based on the structure of main page content.</p>
-          <p>Comes in two variants:</p>
-          <ul>
-            <li><strong>Anchor links (auto generated)</strong></li>
-            <li><strong>Table of Contents (based on custom heading tags)</strong></li>
-          </ul>
-          <h3>Example - Anchor links</h3>
-          <div class="prototype__example scaled" style="height:223.52941176470588px;">
-            <a href="/hee-prototypes/blocks/content/examples/sidebar-anchor-links.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
+          <p>A sidebar card used on Training Programme pages, to display links related to the programme you're currently viewing.</p>
+          <h3>Example</h3>
+          <div class="prototype__example block">
+            <a href="/hee-prototypes/blocks/content/examples/sidebar-card-programme-info.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
             <div class="thumbnail">
-              <iframe src="/hee-prototypes/blocks/content/examples/sidebar-anchor-links.html" height="380"></iframe>
+              <iframe src="/hee-prototypes/blocks/content/examples/sidebar-card-programme-info.html" height="640"></iframe>
             </div>
           </div>
           <hr />
-          <h3>Example - Table of Contents</h3>
-          <div class="prototype__example scaled" style="height:223.52941176470588px;">
-            <a href="/hee-prototypes/blocks/content/examples/sidebar-anchor-links-toc.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
-            <div class="thumbnail">
-              <iframe src="/hee-prototypes/blocks/content/examples/sidebar-anchor-links-toc.html" height="380"></iframe>
-            </div>
-          </div>
-          <hr />
-          <h3>Macro - Anchor links</h3>
+          <h3>Macro</h3>
           <pre><code>
-{{ anchorlinks({
-  title: &quot;On this page&quot;,
-  headings: &quot;h2,h3,h4,h5,h6&quot;
-  })
-}}
+  {{ programmeInfoCard({
+    heading: &quot;Programme information&quot;,
+    itemBorder: true,
+    links: [
+      {
+        label: &quot;Overview&quot;,
+        url: &quot;#&quot;
+      },
+      {
+        label: &quot;Recruitment timelines&quot;,
+        url: &quot;#&quot;
+      },
+      {
+        label: &quot;Eligibility&quot;,
+        url: &quot;#&quot;
+      },
+      {
+        label: &quot;Applying&quot;,
+        url: &quot;#&quot;
+      },
+      {
+        label: &quot;Shortlisting&quot;,
+        url: &quot;#&quot;
+      },
+      {
+        label: &quot;Interviews and selection&quot;,
+        url: &quot;#&quot;
+      },
+      {
+        label: &quot;Preferencing&quot;,
+        url: &quot;#&quot;
+      },
+      {
+        label: &quot;Person specification&quot;,
+        url: &quot;#&quot;
+      },
+      {
+        label: &quot;Curriculum&quot;,
+        url: &quot;#&quot;
+      },
+      {
+        label: &quot;Current posts&quot;,
+        url: &quot;#&quot;
+      }
+    ]
+  })}}
   </code></pre>
           <hr />
-          <h3>HTML - Anchor links</h3>
-          <pre><code>&lt;div class=&quot;hee-anchorlinks&quot; data-headings=&quot;h2,h3,h4,h5,h6&quot;&gt;
-    &lt;h2 data-anchorlinksignore=&quot;true&quot;&gt;On this page&lt;/h2&gt;
+          <h3>HTML</h3>
+          <pre><code>
+&lt;div class=&quot;hee-card hee-card--programme-info theme__item-border&quot;&gt;
+  &lt;div class=&quot;hee-card--programme-info__content&quot;&gt;
+    &lt;h3 class=&quot;hee-card--programme-info__heading&quot;&gt;Programme information&lt;/h3&gt;
+    &lt;ul class=&quot;hee-card--programme-info__list&quot;&gt;
+      &lt;li&gt;
+        &lt;a class=&quot;hee-card--programme-info__link&quot; href=&quot;#&quot;&gt;Overview&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a class=&quot;hee-card--programme-info__link&quot; href=&quot;#&quot;&gt;Recruitment timelines&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a class=&quot;hee-card--programme-info__link&quot; href=&quot;#&quot;&gt;Eligibility&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a class=&quot;hee-card--programme-info__link&quot; href=&quot;#&quot;&gt;Applying&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a class=&quot;hee-card--programme-info__link&quot; href=&quot;#&quot;&gt;Shortlisting&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a class=&quot;hee-card--programme-info__link&quot; href=&quot;#&quot;&gt;Interviews and selection&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a class=&quot;hee-card--programme-info__link&quot; href=&quot;#&quot;&gt;Preferencing&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a class=&quot;hee-card--programme-info__link&quot; href=&quot;#&quot;&gt;Person specification&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a class=&quot;hee-card--programme-info__link&quot; href=&quot;#&quot;&gt;Curriculum&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a class=&quot;hee-card--programme-info__link&quot; href=&quot;#&quot;&gt;Current posts&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
   </code></pre>
-          <hr />
-          <h3>Macro - Table of Contents</h3>
-          <pre><code>
-{{ anchorLinks({
-  title: &quot;Table of Contents&quot;,
-  toc: true
-  })
-}}
-</code></pre>
-          <hr />
-          <pre><code>&lt;div class=&quot;hee-anchorlinks&quot; data-toc-js=&quot;true&quot;&gt;
-    &lt;h2&gt;Table of Contents&lt;/h2&gt;
-&lt;/div&gt;
-</code></pre>
         </div>
       </div>
     </div>
