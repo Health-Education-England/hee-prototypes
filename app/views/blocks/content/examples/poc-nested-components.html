@@ -1,0 +1,290 @@
+{% extends "example-blocks.html" %}
+
+{% block main %}
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-grid-column-two-thirds">
+      <br />
+      <h2>Details block examples</h2>
+
+      {% set insetContent %}
+        {{ insetText({
+          HTML: "<p>You can report any suspected side effect to the <a href=\"https://yellowcard.mhra.gov.uk/\" title=\"External website\">UK safety scheme</a>.</p>"
+        }) }}
+      {% endset %}
+
+      {{ details({
+        text: "Click here to view Inset example",
+        HTML: insetContent
+      }) }}
+
+      {% set imageContent %}
+        {{ image({
+          src: "https://digital-transformation.hee.nhs.uk/binaries/content/gallery/digital-transformation/blogs/vr-headsets.jpg",
+          alt: "Nulla vitae est vel metus aliquam pharetra",
+          caption: "Pellentesque sit amet nulla a nibh"
+        }) }}
+      {% endset %}
+
+      {{ details({
+        text: "Click here to view Image example",
+        HTML: imageContent
+      }) }}
+
+      {% set mediaContent %}
+        {{ media({
+          title: "Pellentesque sit amet nulla",
+          description: "Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus.",
+          type: "youtube",
+          transcript: ["Donec pulvinar sollicitudin massa, nec pulvinar turpis dictum maximus."],
+          mediaId: "C0DPdy98e4c",
+          lastReview: "09/05/2022",
+          reviewDue: "09/05/2023"
+        }) }}
+      {% endset %}
+
+      {{ details({
+        text: "Click here to view Media example",
+        HTML: mediaContent
+      }) }}
+
+      {% set content %}
+        <p class="nhsuk-body-l">Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi.</p>
+        <h2>Donec pulvinar sollicitudin</h2>
+        <p>Nulla vitae est vel <em>metus aliquam pharetra</em> vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi. Sed vestibulum quis mi nec volutpat. Proin tristique eleifend volutpat. Maecenas eu magna a sem aliquam luctus. Donec nec metus condimentum, molestie nulla eu, auctor sem. Cras nec arcu sed lorem eleifend pellentesque nec nec ligula.</p>
+        <h3>Duis consequat sem</h3>
+        <p>Nulla <strong>odales</strong> dictum auctor. Donec <a href="#">pulvinar sollicitudin</a> massa, nec pulvinar turpis dictum maximus. Duis consequat sem pretium purus vehicula ultricies. Maecenas sed turpis sed eros euismod consectetur.</p>
+
+      {% endset %}
+
+      {{ details({
+        text: "Click here to view Rich Text example",
+        HTML: content
+      }) }}
+
+      {% set actionLinkContent %}
+        {{ actionLink({
+          text: "Find a minor injuries unit",
+          href: "https://www.nhs.uk/service-search/minor-injuries-unit/locationsearch/551"
+        }) }}
+
+        {{ actionLink({
+          text: "Find a minor injuries unit",
+          href: "https://www.nhs.uk/service-search/minor-injuries-unit/locationsearch/551"
+        }) }}
+
+        {{ actionLink({
+          text: "Find a minor injuries unit",
+          href: "https://www.nhs.uk/service-search/minor-injuries-unit/locationsearch/551"
+        }) }}
+      {% endset %}
+
+      {{ details({
+        text: "Click here to view Action Link example",
+        HTML: actionLinkContent
+      }) }}
+
+      <hr />
+
+      {% set textContent %}
+        <p class="nhsuk-body-l">Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi.</p>
+        <h2>Donec pulvinar sollicitudin</h2>
+        <p>Nulla vitae est vel <em>metus aliquam pharetra</em> vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi. Sed vestibulum quis mi nec volutpat. Proin tristique eleifend volutpat. Maecenas eu magna a sem aliquam luctus. Donec nec metus condimentum, molestie nulla eu, auctor sem. Cras nec arcu sed lorem eleifend pellentesque nec nec ligula.</p>
+        <h3>Duis consequat sem</h3>
+        <p>Nulla <strong>odales</strong> dictum auctor. Donec <a href="#">pulvinar sollicitudin</a> massa, nec pulvinar turpis dictum maximus. Duis consequat sem pretium purus vehicula ultricies. Maecenas sed turpis sed eros euismod consectetur.</p>
+      {% endset %}
+
+      {% set tableContent %}
+        <h3>Responsive table</h3>
+        {{ table({
+          tableClasses: 'nhsuk-hee-table',
+          responsive: true,
+          panel: false,
+          caption: "Ibuprofen tablet dosages for children",
+          firstCellIsHeader: false,
+          head: [
+            {
+              text: "Age"
+            },
+            {
+              text: "How much?"
+            },
+            {
+              text: "How often"
+            },
+            {
+              text: "Extra long column"
+            }
+          ],
+          rows: [
+            [
+              {
+                header: "Age",
+                text: "7 to 9 years"
+              },
+              {
+                header: "How much?",
+                text: "200mg"
+              },
+              {
+                header: "How often?",
+                text: "Max 3 times in 24 hours Max 3 times in 24 hours Max 3 times in 24 hours Max 3 times in 24 hours Max 3 times in 24 hours"
+              },
+              {
+                header: "Extra long column",
+                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed mattis odio. Mauris gravida ipsum sit amet enim volutpat, accumsan dictum quam ornare. "
+              }
+            ],
+            [
+              {
+                header: "Age",
+                text: "10 to 11 years"
+              },
+              {
+                header: "How much?",
+                text: "200mg to 300mg"
+              },
+              {
+                header: "How often?",
+                text: "Max 3 times in 24 hours"
+              },
+              {
+                header: "Extra long column",
+                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed mattis odio. Mauris gravida ipsum sit amet enim volutpat, accumsan dictum quam ornare. "
+              }
+            ],
+            [
+              {
+                header: "Age",
+                text: "12 to 17 years"
+              },
+              {
+                header: "How much?",
+                text: "200mg to 400mg"
+              },
+              {
+                header: "How often?",
+                text: "Max 3 times in 24 hours"
+              },
+              {
+                header: "Extra long column",
+                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed mattis odio. Mauris gravida ipsum sit amet enim volutpat, accumsan dictum quam ornare. "
+              }
+            ]
+          ]
+        })  }}
+
+        <h3>Vanilla WYSIWYG table (non-responsive)</h3>
+        <table role="table">
+          <thead role="rowgroup">
+          <tr role="row">
+            <th role="columnheader" scope="col"> Age </th>
+            <th role="columnheader" scope="col"> How much </th>
+            <th role="columnheader" scope="col"> How often </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr role="row">
+            <td role="cell">
+              <span>Age </span>7 to 9 years
+            </td>
+            <td role="cell">
+              <span>How much? </span>200mg
+            </td>
+            <td role="cell">
+              <span>How often? </span>Max 3 times in 24 hours
+            </td>
+          </tr>
+          <tr role="row">
+            <td role="cell">
+              <span>Age </span>10 to 11 years
+            </td>
+            <td role="cell">
+              <span>How much medicine do we need? </span>200mg to 300mg and maybe a bit more if they're really poorly
+            </td>
+            <td role="cell">
+              <span>How often? </span>Max 3 times in 24 hours
+            </td>
+          </tr>
+          <tr role="row">
+            <td role="cell">
+              <span>Age</span>12 to 17 years
+            </td>
+            <td role="cell">
+              <span>How much? </span><a href="#">200mg to 400mg</a> (Open in new window)
+            </td>
+            <td role="cell">
+              <span>How often? </span>Max 3 times in 24 hours
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      {% endset %}
+
+      {{ tabs({
+        uniqueId: "tabsone",
+        title: "Tabs examples",
+        items: [
+          {
+            label: "Rich Text example",
+            panel: {
+            html: textContent
+          }
+          },
+          {
+            label: "Table example",
+            panel: {
+            html: tableContent
+          }
+          },
+          {
+            label: "Action Link example",
+            panel: {
+            html: actionLinkContent
+          }
+          }
+        ]
+      }) }}
+
+      <hr />
+
+      <h2>Expander examples</h2>
+
+      {{ details({
+        classes: "nhsuk-expander",
+        text: "Click here to view Inset example",
+        HTML: insetContent
+      }) }}
+
+      {{ details({
+        classes: "nhsuk-expander",
+        text: "Click here to view Image example",
+        HTML: imageContent
+      }) }}
+
+      {{ details({
+        classes: "nhsuk-expander",
+        text: "Click here to view Media example",
+        HTML: mediaContent
+      }) }}
+
+      {{ details({
+        classes: "nhsuk-expander",
+        text: "Click here to view Rich Text example",
+        HTML: textContent
+      }) }}
+
+      {{ details({
+        classes: "nhsuk-expander",
+        text: "Click here to view Table example",
+        HTML: tableContent
+      }) }}
+
+      {{ details({
+        classes: "nhsuk-expander",
+        text: "Click here to view Action Link example",
+        HTML: actionLinkContent
+      }) }}
+
+    </div>
+  </div>
+{% endblock %}
