@@ -1,0 +1,188 @@
+{% extends "example-blocks.html" %}
+
+{% block main %}
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-grid-column-two-thirds">
+      <br />
+      <h2>Details block examples</h2>
+
+      {% set detailsContent %}
+        <p class="nhsuk-body-l">Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi.</p>
+        <h2>Donec pulvinar sollicitudin</h2>
+        <p>Nulla vitae est vel <em>metus aliquam pharetra</em> vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi. Sed vestibulum quis mi nec volutpat. Proin tristique eleifend volutpat. Maecenas eu magna a sem aliquam luctus. Donec nec metus condimentum, molestie nulla eu, auctor sem. Cras nec arcu sed lorem eleifend pellentesque nec nec ligula.</p>
+        <h3>Duis consequat sem</h3>
+        <p>Nulla <strong>odales</strong> dictum auctor. Donec <a href="#">pulvinar sollicitudin</a> massa, nec pulvinar turpis dictum maximus. Duis consequat sem pretium purus vehicula ultricies. Maecenas sed turpis sed eros euismod consectetur.</p>
+
+        {{ insetText({
+          HTML: "<p>You can report any suspected side effect to the <a href=\"https://yellowcard.mhra.gov.uk/\" title=\"External website\">UK safety scheme</a>.</p>"
+        }) }}
+
+        {{ image({
+          src: "https://digital-transformation.hee.nhs.uk/binaries/content/gallery/digital-transformation/blogs/vr-headsets.jpg",
+          alt: "Nulla vitae est vel metus aliquam pharetra",
+          caption: "Pellentesque sit amet nulla a nibh"
+        }) }}
+
+        {{ media({
+          title: "Pellentesque sit amet nulla",
+          description: "Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus.",
+          type: "youtube",
+          transcript: ["Donec pulvinar sollicitudin massa, nec pulvinar turpis dictum maximus."],
+          mediaId: "C0DPdy98e4c",
+          lastReview: "09/05/2022",
+          reviewDue: "09/05/2023"
+        }) }}
+
+        {{ actionLink({
+          text: "Find a minor injuries unit",
+          href: "https://www.nhs.uk/service-search/minor-injuries-unit/locationsearch/551"
+        }) }}
+
+        {{ actionLink({
+          text: "Find a minor injuries unit",
+          href: "https://www.nhs.uk/service-search/minor-injuries-unit/locationsearch/551"
+        }) }}
+
+        {{ actionLink({
+          text: "Find a minor injuries unit",
+          href: "https://www.nhs.uk/service-search/minor-injuries-unit/locationsearch/551"
+        }) }}
+      {% endset %}
+
+      {{ details({
+        text: "Example details block",
+        HTML: detailsContent
+      }) }}
+
+      <hr />
+
+      {% set tabContent %}
+        <p class="nhsuk-body-l">Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi.</p>
+        <h2>Donec pulvinar sollicitudin</h2>
+        <p>Nulla vitae est vel <em>metus aliquam pharetra</em> vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi. Sed vestibulum quis mi nec volutpat. Proin tristique eleifend volutpat. Maecenas eu magna a sem aliquam luctus. Donec nec metus condimentum, molestie nulla eu, auctor sem. Cras nec arcu sed lorem eleifend pellentesque nec nec ligula.</p>
+        <h3>Duis consequat sem</h3>
+        <p>Nulla <strong>odales</strong> dictum auctor. Donec <a href="#">pulvinar sollicitudin</a> massa, nec pulvinar turpis dictum maximus. Duis consequat sem pretium purus vehicula ultricies. Maecenas sed turpis sed eros euismod consectetur.</p>
+
+        {{ actionLink({
+          text: "Find a minor injuries unit",
+          href: "https://www.nhs.uk/service-search/minor-injuries-unit/locationsearch/551"
+        }) }}
+
+        {{ actionLink({
+          text: "Find a minor injuries unit",
+          href: "https://www.nhs.uk/service-search/minor-injuries-unit/locationsearch/551"
+        }) }}
+
+        {{ actionLink({
+          text: "Find a minor injuries unit",
+          href: "https://www.nhs.uk/service-search/minor-injuries-unit/locationsearch/551"
+        }) }}
+
+        {{ tableExpander({
+          showToggleLink: true,
+          toggleLabelOpen: "Expand all",
+          toggleLabelClose: "Collapse all",
+          items: [
+            {
+              title: "First item",
+              rows: [
+              {
+                heading: "Defence Medical Services (DMS)",
+                content: "1"
+              },
+              {
+                heading: "No of Posts 2013 - indicitive",
+                content: "7"
+              },
+              {
+                heading: "Competition ratios 2022 data - Ratio",
+                content: "6 (6:37)"
+              },
+              {
+                heading: "Job/Programme Descriptions",
+                content: "Kent, Surrey and Sussex",
+                href: "http://www.yahoo.com"
+              }
+            ]
+            },
+            {
+              title: "Second item",
+              rows: [
+              {
+                heading: "Defence Medical Services (DMS)",
+                content: "1"
+              },
+              {
+                heading: "No of Posts 2013 - indicitive",
+                content: "7"
+              },
+              {
+                heading: "Competition ratios 2022 data - Ratio",
+                content: "6 (6:37)"
+              },
+              {
+                heading: "Job/Programme Descriptions",
+                content: "Kent, Surrey and Sussex",
+                href: "http://www.yahoo.com"
+              }
+            ]
+            },
+            {
+              title: "Third item",
+              rows: [
+              {
+                heading: "Defence Medical Services (DMS)",
+                content: "1"
+              },
+              {
+                heading: "No of Posts 2013 - indicitive",
+                content: "7"
+              },
+              {
+                heading: "Competition ratios 2022 data - Ratio",
+                content: "6 (6:37)"
+              },
+              {
+                heading: "Job/Programme Descriptions",
+                content: "Kent, Surrey and Sussex",
+                href: "http://www.yahoo.com"
+              }
+            ]
+            }
+          ]
+        }) }}
+
+      {% endset %}
+
+      {{ tabs({
+        uniqueId: "tabsone",
+        title: "Tabs examples",
+        items: [
+          {
+            label: "Example components",
+            panel: {
+              html: tabContent
+            }
+          },
+          {
+            label: "Example components #2",
+            panel: {
+              html: tabContent
+            }
+          }
+        ]
+      }) }}
+
+      <hr />
+
+      <h2>Expander examples</h2>
+
+      {{ details({
+        classes: "nhsuk-expander",
+        text: "Click here to view Inset example",
+        HTML: detailsContent
+      }) }}
+
+    </div>
+  </div>
+{% endblock %}

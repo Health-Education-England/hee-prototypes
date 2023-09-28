@@ -167,3 +167,11 @@
 		}
 	}
 }
+
+.nhsuk-tabs__panel {
+	.nhsuk-action-link {
+		&:last-child {
+			margin-bottom: 0 !important;
+		}
+	}
+}
