@@ -11,15 +11,15 @@ Minihub - Layouts - HEE Prototype
     breadcrumb({
     items: [
         {
-            href: "/",
+            href: basePath + "/",
             text: "Home"
         },
         {
-            href: "/layouts",
+            href: basePath + "/layouts",
             text: "Layouts"
         }
     ],
-        href: "/layouts/minihub",
+        href: basePath + "/layouts/minihub",
         text: "Minihub"
     }) 
 }}
@@ -49,7 +49,7 @@ Minihub - Layouts - HEE Prototype
 {% endblock %}
 
 {% block sidebar %}
-{{ relatedLinksCard({
+{{ programmeInfoCard({
     "heading": "Related Posts",
     "links": [
         {

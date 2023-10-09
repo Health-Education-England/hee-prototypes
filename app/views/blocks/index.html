@@ -13,11 +13,11 @@
     {{ breadcrumb({
         items: [
             {
-                href: "/",
+                href: basePath + "/",
                 text: "Home"
             }
         ],
-        href: page_url,
+        href: basePath + page_url,
         text: page_title
     }) }}
 {% endblock %}
@@ -43,7 +43,7 @@
                     {% for item in section.links %}
                     <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
                     {{ card({
-                        "href": "/blocks/"+item.url,
+                        "href": basePath + "/blocks/"+item.url,
                         "clickable": "true",
                         "heading": item.title,
                         "headingLevel": "3",

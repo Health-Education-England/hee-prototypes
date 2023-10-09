@@ -1,0 +1,413 @@
+{%- from 'hee/blocks/scaffolding/mega-menu/macro.njk' import megaMenu %}
+
+{{ megaMenu({
+  id: "menu-main",
+  ariaLabel: "Primary navigation",
+  theme: "theme-white-blue",
+  primaryLinks: [
+    {
+      url: "#",
+      label: "Professions",
+      children: [
+        [
+          {
+            url: "#",
+            label: "All Professions A-Z"
+          },
+          {
+            url: "#",
+            label: "Allied health professions "
+          },
+          {
+            url: "#",
+            label: "Ambulance service"
+          },
+          {
+            url: "#",
+            label: "Armed forces"
+          },
+          {
+            url: "#",
+            label: "Digital, Data and Technology "
+          },
+          {
+            url: "#",
+            label: "Dental professions"
+          },
+          {
+            url: "#",
+            label: "Dentists"
+          }
+        ],
+        [
+          {
+            url: "#",
+            label: "Estates and facilities"
+          },
+          {
+            url: "#",
+            label: "Health academia"
+          },
+          {
+            url: "#",
+            label: "Health coach"
+          },
+          {
+            url: "#",
+            label: "Health coach"
+          },
+          {
+            url: "#",
+            label: "Healthcare scientists"
+          },
+          {
+            url: "#",
+            label: "Healthcare support workers"
+          },
+          {
+            url: "#",
+            label: "Knowledge staff"
+          }
+        ],
+        [
+          {
+            url: "#",
+            label: "Management (non-clinical)"
+          },
+          {
+            url: "#",
+            label: "Medical associate professions"
+          },
+          {
+            url: "#",
+            label: "Medical doctors"
+          },
+          {
+            url: "#",
+            label: "Midwives"
+          },
+          {
+            url: "#",
+            label: "Nurses"
+          },
+          {
+            url: "#",
+            label: "Pharmacy professions"
+          },
+          {
+            url: "#",
+            label: "Psychological professions"
+          }
+        ],
+        [
+          {
+            url: "#",
+            label: "Public health professions"
+          },
+          {
+            url: "#",
+            label: "Wider healthcare team"
+          }
+        ]
+      ]
+    },
+    {
+      url: "#",
+      label: "Healthcare topics",
+      children: [
+        [
+          {
+            url: "#",
+            label: "Antimicrobial resistance"
+          },
+          {
+            url: "#",
+            label: "Cancer"
+          },
+          {
+            url: "#",
+            label: "Children and young people"
+          },
+          {
+            url: "#",
+            label: "Community care"
+          },
+          {
+            url: "#",
+            label: "COVID-19"
+          },
+          {
+            url: "#",
+            label: "Dementia"
+          },
+          {
+            url: "#",
+            label: "End of life care"
+          },
+          {
+            url: "#",
+            label: "Genomics"
+          }
+        ],
+        [
+          {
+            url: "#",
+            label: "Global health "
+          },
+          {
+            url: "#",
+            label: "Health inequalities"
+          },
+          {
+            url: "#",
+            label: "Infection management"
+          },
+          {
+            url: "#",
+            label: "Integrated care"
+          },
+          {
+            url: "#",
+            label: "Learning disability and autism"
+          },
+          {
+            url: "#",
+            label: "Long-term conditions"
+          },
+          {
+            url: "#",
+            label: "Maternity"
+          },
+          {
+            url: "#",
+            label: "Medicines optimisation"
+          }
+        ],
+        [
+          {
+              url: basePath + "/alpha/double-mental-health.html",
+            label: "Mental health"
+          },
+          {
+            url: "#",
+            label: "Neonatal care"
+          },
+          {
+            url: "#",
+            label: "NHS Screening services"
+          },
+          {
+            url: "#",
+            label: "Patient safety"
+          },
+          {
+            url: "#",
+            label: "Personalised care"
+          },
+          {
+            url: "#",
+            label: "Primary care"
+          },
+          {
+            url: "#",
+            label: "Public health"
+          },
+          {
+            url: "#",
+            label: "Sexual and reproductive health"
+          }
+        ],
+        [
+          {
+            url: "#",
+            label: "Urgent and emergency care"
+          }
+        ]
+      ]
+    },
+    {
+      url: "#",
+      label: "About us",
+      children: [
+        [
+          {
+            url: "#",
+            label: "Blogs"
+          },
+          {
+            url: "#",
+            label: "Campaigns"
+          },
+          {
+            url: "#",
+            label: "Contact us"
+          },
+          {
+            url: "#",
+            label: "Events"
+          },
+          {
+            url: "#",
+            label: "Governance and management"
+          }
+        ],
+        [
+          {
+            url: basePath + "/alpha/double-news.html",
+            label: "News"
+          },
+          {
+            url: "#",
+            label: "Our values"
+          },
+          {
+            url: "#",
+            label: "Publications"
+          }
+        ]
+      ]
+    },
+    {
+      url: "#",
+      label: "Training and Education",
+      children: [
+        [
+          {
+            url: "#",
+            label: "Apprenticeships"
+          },
+          {
+            url: basePath + "/alpha/double-nhs-digital-academy.html",
+            label: "Digital academy"
+          },
+          {
+            url: "#",
+            label: "Education funding"
+          },
+          {
+            url: "#",
+            label: "E-learning resources"
+          },
+          {
+            url: "#",
+            label: "Help applying for training"
+          }
+        ],
+        [
+          {
+            url: "#",
+            label: "Postgraduate in-training support"
+          },
+          {
+            url: "#",
+            label: "Quality of training"
+          },
+          {
+            url: "#",
+            label: "Research and innovation"
+          },
+          {
+            url: "#",
+            label: "Training programmes"
+          }
+        ]
+      ]
+    },
+    {
+      url: "#",
+      label: "Support",
+      children: [
+        [
+          {
+            url: "#",
+            label: "Access knowledge and information"
+          },
+          {
+            url: "#",
+            label: "Financial support for training and education"
+          },
+          {
+            url: basePath + "/alpha/double-psw.html",
+            label: "Professional support and wellbeing"
+          },
+          {
+            url: "#",
+            label: "Postgraduate in-training support"
+          }
+        ]
+      ]
+    },
+    {
+      url: "#",
+      label: "Healthcare workforce",
+      children: [
+        [
+          {
+            url: "#",
+            label: "Recruiting the workforce"
+          },
+          {
+            url: "#",
+            label: "Widening participation"
+          },
+          {
+            url: "#",
+            label: "Workforce planning and intelligence"
+          }
+        ],
+        [
+          {
+            url: "#",
+            label: "Workforce transformation"
+          },
+          {
+            url: "#",
+            label: "Workforce strategy"
+          },
+          {
+            url: "#",
+            label: "Workforce streamlining"
+          }
+        ]
+      ]
+    },
+    {
+      url: "#",
+      label: "Regions",
+      children: [
+        [
+          {
+            url: "#",
+            label: "East of England"
+          },
+          {
+            url: "#",
+            label: "London"
+          },
+          {
+            url: "#",
+            label: "Midlands"
+          },
+          {
+            url: "#",
+            label: "North East and North Yorkshire"
+          }
+        ],
+        [
+          {
+            url: "#",
+            label: "North West"
+          },
+          {
+            url: "#",
+            label: "South East"
+          },
+          {
+            url: "#",
+            label: "South West"
+          }
+        ]
+      ]
+    }
+  ]
+}) }}

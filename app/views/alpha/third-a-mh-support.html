@@ -1,0 +1,145 @@
+{% extends "example-template-fullwidth.html" %}
+
+{% set page_title = 'Support - Workforce, Training and Education, NHS England' %}
+
+{% block pageClass %}page--fullwidth alpha-fullwidth double-menu third-a{% endblock %}
+{% block pageHeaderClass %}has-microhero{% endblock %}
+
+{% block pageTitle %}{{ page_title }}{% endblock %}
+
+{% block header %}
+  <div class="site-header">
+    {{ customHeader({
+      "showNav": "false",
+      "showSearch": "false",
+      "showLogos": "false",
+      "heeHref": basePath + "/alpha/third-a-index.html",
+      "homeHref": "/alpha/third-a-mental-health.html",
+      "classes": "nhsuk-header--white",
+      "organisation": {
+        "name": "Workforce, Training and Education",
+        "split": "",
+        "descriptor": "Mental Health"
+      },
+      "logos": [
+        {
+          "href": "https://www.nimdta.gov.uk/",
+          "label": "Northern Ireland Medical and Dental Training Agency Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/nimdta-logo.png",
+          "imgAlt": "Logo for Northern Ireland Medical and Dental Training Agency"
+        },
+        {
+          "href": "https://www.nes.scot.nhs.uk/",
+          "label": "NHS Education for Scotland Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/nhs-scotland-logo.png",
+          "imgAlt": "Logo for NHS Education for Scotland"
+        },
+        {
+          "href": "https://heiw.nhs.wales/",
+          "label": "Health Education and Improvement Wales Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/heiw-logo.png",
+          "imgAlt": "Logo for Health Education and Improvement Wales"
+        }
+      ]
+    })
+    }}
+
+    {% include "alpha/_third-a-menu-main.html" %}
+  </div>
+
+  {{ phaseBanner({
+    tag: "Alpha",
+    description: 'This is a new service – your <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.'
+  }) }}
+{% endblock %}
+
+{% block pageHeader %}
+  {{ microHero({
+    imgURL: basePath + "/images/alpha-involved-hero.jpg"
+  }) }}
+
+  {{ secondaryMenu({
+    homeIcon: true,
+    theme: "theme-black-text",
+    items: [
+      {
+        title: "Mental health",
+        url: basePath + "/alpha/third-a-mental-health.html"
+      },
+      {
+        title: "Training and education",
+        url: basePath + "/alpha/third-a-mh-training-education.html"
+      },
+      {
+        title: "Evidence and resources",
+        url: basePath + "/alpha/third-a-mh-evidence-resources.html"
+      },
+      {
+        title: "Get involved",
+        url: basePath + "/alpha/third-a-mh-get-involved.html"
+      },
+      {
+        active: true,
+        title: "Support"
+      },
+      {
+        title: "Workforce",
+        url: basePath + "/alpha/third-a-mh-workforce.html"
+      }
+    ]
+  }) }}
+
+  <div class="breadcrumbs alpha">
+    {{
+      breadcrumb({
+        items: [
+          {
+            href: basePath + "/alpha/third-a-index.html",
+            text: "WTE"
+          },
+          {
+            href: "#",
+            text: "Healthcare topics"
+          }
+        ],
+        href: basePath + "/alpha/third-a-mental-health.html",
+        text: "Mental health"
+      })
+    }}
+  </div>
+
+  <div class="nhsuk-width-container">
+    <h1>Support</h1>
+    <span class="nhsuk-caption-xl">Mental Health</span>
+  </div>
+{% endblock %}
+
+{% block pageContent %}
+  {% set items = [
+    {
+      title: "Support for learners",
+      href: "#",
+      summary: "Find help and advice with your training and education"
+    },
+    {
+      title: "Support for commissioners",
+      href: "#",
+      summary: "Access services and support to help you commission mental health services"
+    },
+    {
+      title: "Support for educators",
+      href: "#",
+      summary: "Find guidance and support to help you deliver the best quality mental health education"
+    },
+    {
+      title: "Support for employers",
+      href: "#",
+      summary: "Access guidance, data and advice to help you deploy and manage mental health professionals in your workforce"
+    }
+  ]
+  %}
+
+  <br>
+
+  {{ featuredContent({items: items}) }}
+{% endblock %}

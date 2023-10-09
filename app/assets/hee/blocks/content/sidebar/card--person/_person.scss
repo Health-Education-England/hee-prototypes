@@ -1,0 +1,17 @@
+.hee-card.hee-card--person {
+    .hee-card--header {
+        @include mq($from: tablet) {
+            display: inline-block;
+        }
+
+        .hee-card__image {
+            @include mq($from: tablet) {
+                margin-bottom: nhsuk-spacing(4);
+            }
+        }
+    }
+
+    .hee-card__jobtitle {
+        margin-bottom: 0;
+    }
+}

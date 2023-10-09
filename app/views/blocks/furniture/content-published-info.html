@@ -1,6 +1,6 @@
 {% extends "prototype-inner.html" %}
 
-{% set page_url = 'content-publishedinfo' %}
+{% set page_url = 'content-published-info' %}
 {% set page_title = 'Published Info' %}
 
 {% block pageTitle %}{{ page_title }} - Blocks - NWP Prototype Kit{% endblock %}
@@ -10,19 +10,19 @@
     breadcrumb({
     items: [
         {
-            href: "/",
+            href: basePath + "/",
             text: "Home"
         },
         {
-            href: "/blocks",
+            href: basePath + "/blocks",
             text: "Blocks"
         },
         {
-            href: "/blocks/furniture",
+            href: basePath + "/blocks/furniture",
             text: "Furniture"
         }
     ],
-        href: "/blocks/furniture/"+page_url,
+        href: basePath + "/blocks/furniture/"+page_url,
         text: page_title
     }) 
 }}
@@ -46,7 +46,7 @@
 <h3>Example</h3>
 {{ example({
     view: 'block',
-    url: '/blocks/furniture/examples/'+page_url,
+    url: basePath + '/blocks/furniture/examples/' + page_url,
     height: '100px'
 }) }}
 

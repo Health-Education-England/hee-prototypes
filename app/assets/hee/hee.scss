@@ -49,9 +49,12 @@
 @import 'blocks/content/main/hee-tabs/tabs';
 @import 'blocks/content/sidebar/card--related-links/related-links';
 
+@import 'blocks/content/sidebar/card--department/department';
+@import 'blocks/content/sidebar/card--person/person';
 @import 'blocks/scaffolding/notifications/banner/banner';
 @import 'blocks/scaffolding/back-to-top/back-to-top';
 @import 'blocks/scaffolding/footer/footer';
+@import 'blocks/content/sidebar/card--programme-info/programme-info';
 
 ///// FURNITURE
 // -- Collections
@@ -78,3 +81,8 @@
 @import 'blocks/content/main/table-expander/table';
 @import 'blocks/content/main/quote/quote';
 @import 'blocks/content/main/hee-newsletter/newsletter';
+
+@import './parent-alpha';
+@import 'blocks/scaffolding/mega-menu/mega-menu';
+@import 'blocks/scaffolding/back-to-home-banner/back-to-home';
+@import 'blocks/scaffolding/secondary-menu/secondary-menu';

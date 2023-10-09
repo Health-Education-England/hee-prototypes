@@ -1,0 +1,137 @@
+{% extends "example-template-fullwidth.html" %}
+
+{% set page_title = 'Professional Support & Wellbeing - Wellbeing and psychological support - Workforce, Training and Education, NHS England' %}
+
+{% block pageClass %}page--fullwidth alpha-fullwidth double-menu third-a{% endblock %}
+{% block pageHeaderClass %}has-microhero{% endblock %}
+
+{% block pageTitle %}{{ page_title }}{% endblock %}
+
+{% block header %}
+  <div class="site-header">
+    {{ customHeader({
+      "showNav": "false",
+      "showSearch": "false",
+      "showLogos": "false",
+      "heeHref": basePath + "/alpha/third-a-index.html",
+      "homeHref": "/alpha/third-a-psw.html",
+      "classes": "nhsuk-header--white",
+      "organisation": {
+        "name": "Workforce, Training and Education",
+        "split": "",
+        "descriptor": "Professional Support and Wellbeing"
+      },
+      "logos": [
+        {
+          "href": "https://www.nimdta.gov.uk/",
+          "label": "Northern Ireland Medical and Dental Training Agency Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/nimdta-logo.png",
+          "imgAlt": "Logo for Northern Ireland Medical and Dental Training Agency"
+        },
+        {
+          "href": "https://www.nes.scot.nhs.uk/",
+          "label": "NHS Education for Scotland Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/nhs-scotland-logo.png",
+          "imgAlt": "Logo for NHS Education for Scotland"
+        },
+        {
+          "href": "https://heiw.nhs.wales/",
+          "label": "Health Education and Improvement Wales Website (Opens in New Window)",
+          "imgSrc": basePath + "/images/logos/heiw-logo.png",
+          "imgAlt": "Logo for Health Education and Improvement Wales"
+        }
+      ]
+    })
+    }}
+
+    {% include "alpha/_third-a-menu-main.html" %}
+  </div>
+
+  {{ phaseBanner({
+    tag: "Alpha",
+    description: 'This is a new service – your <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu" target="_blank" title="Opens in New Window">feedback</a> will help us to improve it.'
+  }) }}
+{% endblock %}
+
+{% block pageHeader %}
+  {{ microHero({
+    imgURL: basePath + "/images/alpha-wellbeing-hero.jpg"
+  }) }}
+
+  {{ secondaryMenu({
+    homeIcon: true,
+    theme: "theme-black-text",
+    items: [
+      {
+        title: "PSW",
+        url: basePath + "/alpha/third-a-psw.html"
+      },
+      {
+        active: true,
+        title: "Wellbeing & psychological support"
+      },
+      {
+        title: "Coaching support",
+        url: basePath + "/alpha/third-a-psw-coaching.html"
+      },
+      {
+        title: "Careers support",
+        url: basePath + "/alpha/third-a-psw-careers-support.html"
+      }
+    ]
+  }) }}
+
+  <div class="breadcrumbs alpha">
+    {{
+    breadcrumb({
+      items: [
+        {
+          href: basePath + "/alpha/third-a-index.html",
+          text: "WTE"
+        },
+        {
+          href: "#",
+          text: "Support"
+        }
+      ],
+      href: basePath + "/alpha/third-a-psw.html",
+      text: "Professional Support & Wellbeing"
+    })
+    }}
+  </div>
+
+  <div class="nhsuk-width-container">
+    <h1>Wellbeing and psychological support</h1>
+    <span class="nhsuk-caption-xl">Professional Support and Wellbeing</span>
+  </div>
+{% endblock %}
+
+{% block pageContent %}
+  {% set items = [
+    {
+      title: "Wellbeing resources",
+      href: basePath + "/alpha/third-a-wellbeing-resources.html",
+      summary: "Access tools and resources to help you manage your wellbeing."
+    },
+    {
+      title: "Occupational health",
+      href: "#",
+      summary: "Get information about how occupational health can help you."
+    },
+    {
+      title: "Mental health support",
+      href: "#",
+      summary: "Find out how to access support for your mental health."
+    },
+    {
+      title: "Support for addiction",
+      href: "#",
+      summary: "Access resources and support for addiction."
+    }
+  ]
+  %}
+
+  <br>
+
+  {{ featuredContent({items: items}) }}
+{% endblock %}

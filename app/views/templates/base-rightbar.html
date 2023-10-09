@@ -10,15 +10,15 @@
   breadcrumb({
   items: [
       {
-        href: "/",
+        href: basePath + "/",
         text: "Home"
       },
       {
-        href: "/templates",
+        href: basePath + "/templates",
         text: "Templates"
       }
   ],
-      href: "/templates/"+page_url,
+      href: basePath + "/templates/"+page_url,
       text: page_title
   }) 
 }}
@@ -40,7 +40,7 @@
 {% block pageContent %}
 
 <p>This layout is typically used for content pages with supporting sidebar content.</p>
-<p>It will have access to the <a href="/blocks/furniture">Furniture</a> [PAGE + CONTENT] components, as well as the <a href="/blocks/content">Content Blocks</a> [MAIN, SIDEBAR + FEATURED].</p>
+<p>It will have access to the <a href="{{ basePath }}/blocks/furniture">Furniture</a> [PAGE + CONTENT] components, as well as the <a href="{{ basePath }}/blocks/content">Content Blocks</a> [MAIN, SIDEBAR + FEATURED].</p>
 
 {{ highlight({
   "html" : '<article class="page page--rightbar" id="maincontent" role="main">

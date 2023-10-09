@@ -10,15 +10,15 @@
     breadcrumb({
     items: [
         {
-            href: "/",
+            href: basePath + "/",
             text: "Home"
         },
         {
-            href: "/blocks",
+            href: basePath + "/blocks",
             text: "Blocks"
         }
     ],
-        href: "/blocks/"+page_url,
+        href: basePath + "/blocks/"+page_url,
       text: page_title
     }) 
 }}
@@ -42,7 +42,7 @@
 <h3>Example</h3>
 {{ example({
     view: 'scaled',
-    url: '/blocks/furniture/examples/'+page_url,
+    url: basePath + '/blocks/furniture/examples/' + page_url,
     height: '450'
 }) }}
 
@@ -52,7 +52,7 @@
 {{ highlight({
   html: '
 {{ microhero({
-    "imgURL": "/images/young-child-using-tablet-device.jpg"
+    "imgURL": basePath + "/images/young-child-using-tablet-device.jpg"
 }) }}
   '
 }) }}

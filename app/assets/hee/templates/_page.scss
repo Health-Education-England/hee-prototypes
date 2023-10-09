@@ -57,6 +57,14 @@ html {
     @include nhsuk-responsive-margin(8, 'top');
 }
 
+.page__feature {
+    h1, p, span {
+        @include mq($from: desktop) {
+            max-width: 66.6667%;
+        }
+    }
+}
+
 @import '../templates/fullwidth';
 @import '../templates/leftbar';
 @import '../templates/rightbar';

@@ -1,0 +1,19 @@
+{% macro secondaryMenu(params) %}
+  <div class="hee-secondary-menu {{ params.theme }}">
+    <div class="nhsuk-width-container">
+      <ul class="hee-secondary-menu__list">
+        {% for item in params.items %}
+          <li class="hee-secondary-menu__item {{ "has-home-icon" if params.homeIcon === true and loop.first }}" {{ 'aria-hidden="true"'|safe if item.active else '' }}>
+            {% if item.url %}
+              <a class="hee-secondary-menu__link {{ "is-active" if item.active }}" href="{{ item.url }}">
+                {{ item.title }}
+              </a>
+            {% else %}
+              <span aria-hidden="true" class="hee-secondary-menu__label {{ "is-active" if item.active }}">{{ item.title }}</span>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endmacro %}
