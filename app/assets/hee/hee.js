@@ -5,7 +5,6 @@ import SubNav from './blocks/scaffolding/header/navigation/subnav';
 // HEE Components
 import AnchorLinks from './blocks/content/sidebar/anchorlinks/anchorlinks';
 import AnchorLinksSticky from './blocks/content/footer/anchorlinks-sticky/anchorlinks-sticky';
-import GlobalMenu from "./blocks/scaffolding/nhse-global-menu/global-menu";
 import TableContents from './blocks/content/sidebar/anchorlinks/toc';
 import Listing from './blocks/furniture/collections/hee-listing/listing';
 import Media from './blocks/content/main/hee-media/media';
@@ -28,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
   Cookies();
   Filter();
   FilterTag();
-  GlobalMenu();
   Listing();
   Media();
   MegaMenu();

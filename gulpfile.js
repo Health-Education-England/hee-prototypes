@@ -6,7 +6,6 @@ const gulp = require('gulp');
 const taskAssets = require('./tasks/assets');
 const taskTemplates = require('./tasks/templates');
 const taskServe = require('./tasks/serve');
-const taskWidgets = require('./tasks/widgets');
 
 const PATHS = {
   heeCSS: './app/assets/hee/hee.scss',
@@ -31,14 +30,10 @@ const PATHS = {
 };
 
 function watch(done) {
-  gulp.watch(['app/assets/**/*.scss'], gulp.parallel([
-    taskAssets.compileHEEStyles,
-    taskWidgets.compileWidgetGlobalMenuStyles,
-  ]));
+  gulp.watch(['app/assets/**/*.scss'], taskAssets.compileHEEStyles);
   gulp.watch(['app/assets/**/*.js'], gulp.parallel([
     taskAssets.compileHEEScriptsDev,
-    taskAssets.compileHEEScriptsProd,
-    taskWidgets.compileWidgetGlobalMenuScripts,
+    taskAssets.compileHEEScriptsProd
   ]));
   gulp.watch(['app/assets/prototype/prototype.scss', 'app/assets/prototype/**/*.scss'], taskAssets.compilePrototypeStyles);
   gulp.watch(['app/assets/prototype/prototype.js', 'app/assets/prototype/**/*.js'], taskAssets.compilePrototypeScripts);
@@ -54,8 +49,7 @@ function cleanPublic() {
 gulp.task('build', gulp.series(
   cleanPublic,
   'build:assets',
-  'build:templates',
-  'build:widgets:nhse-global-menu'
+  'build:templates'
 ));
 
 gulp.task('serve', taskServe.serve);
@@ -71,10 +65,5 @@ gulp.task('watch', gulp.series([
 ]));
 
 gulp.task('playwright-report', taskServe.playwrightReport);
-
-gulp.task('build:widgets', gulp.series([
-  taskWidgets.cleanPublic,
-  'build:widgets:nhse-global-menu'
-]));
 
 exports.PATHS = PATHS;
