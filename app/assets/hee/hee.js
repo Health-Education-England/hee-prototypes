@@ -1,18 +1,18 @@
 // NHSUK-HEE Components
-import Cookies from './blocks/scaffolding/cookies/cookies';
-import SubNav from './blocks/scaffolding/header/navigation/subnav';
+import Cookies from './blocks/scaffolding/nhsuk-hee-cookies/cookies';
+import SubNav from './blocks/scaffolding/nhsuk-hee-header/navigation/subnav';
 
 // HEE Components
-import AnchorLinks from './blocks/content/sidebar/anchorlinks/anchorlinks';
-import AnchorLinksSticky from './blocks/content/footer/anchorlinks-sticky/anchorlinks-sticky';
-import TableContents from './blocks/content/sidebar/anchorlinks/toc';
+import AnchorLinks from './blocks/content/sidebar/hee-anchorlinks/anchorlinks';
+import AnchorLinksSticky from './blocks/content/footer/hee-anchorlinks-sticky/anchorlinks-sticky';
+import TableContents from './blocks/content/sidebar/hee-anchorlinks/toc';
 import Listing from './blocks/furniture/collections/hee-listing/listing';
 import Media from './blocks/content/main/hee-media/media';
 import NavMap from './blocks/content/main/hee-navmap/navmap';
 import Newsletter from './blocks/content/main/hee-newsletter/newsletter';
-import SummaryCard from "./blocks/content/main/card--summary/summary";
+import SummaryCard from "./blocks/content/main/hee-card--summary/summary";
 import Tabs from './blocks/content/main/hee-tabs/tabs';
-import TableCard from './blocks/content/main/table-expander/table-expander';
+import TableCard from './blocks/content/main/hee-table-expander/table-expander';
 
 // Unsorted components
 import Filter from './blocks/furniture/collections/hee-filter/filter';

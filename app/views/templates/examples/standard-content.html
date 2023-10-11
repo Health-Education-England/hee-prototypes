@@ -9,11 +9,11 @@
     breadcrumb({
     items: [
         {
-            href: "/",
+            href: basePath + "/",
             text: "Home"
         }
     ],
-        href: "/templates/examples/standard-content",
+        href: basePath + "/templates/examples/standard-content",
         text: "Standard Content"
     }) 
 }}
@@ -21,7 +21,7 @@
 
 {% block pageHeader %}
   {{ microHero({
-    "imgURL": "/images/young-child-using-tablet-device.jpg"
+    "imgURL":  basePath + "/images/young-child-using-tablet-device.jpg"
   }) }}
   <div class="nhsuk-width-container">
     <h1>Standard Content</h1>
@@ -206,31 +206,32 @@
   }) }}
 
   {{ relatedLinks({
-      heading: "Related Posts",
-      items: [
-        {
-          "url"  : "#",
-          "label" : "Expert searching"
-        },
-        {
-          "url"  : "#",
-          "label" : "Search training as a longer title"
-        },
-        {
-          "url" : "#",
-          "label" : "Search bank"
-        },
-        {
-          "url" : "#",
-          "label" : "Costing"
-        },
-        {
-          "url"  : "#",
-          "label" : "Search training"
-        }
-      ]
-    })
+    heading: "Related Posts",
+    items: [
+      {
+        "url"  : "#",
+        "label" : "Expert searching"
+      },
+      {
+        "url"  : "#",
+        "label" : "Search training as a longer title"
+      },
+      {
+        "url" : "#",
+        "label" : "Search bank"
+      },
+      {
+        "url" : "#",
+        "label" : "Costing"
+      },
+      {
+        "url"  : "#",
+        "label" : "Search training"
+      }
+    ]
+  })
   }}
+
 {% endblock %}
 
 {% block pageFeature %}
