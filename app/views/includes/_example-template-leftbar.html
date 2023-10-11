@@ -1,6 +1,6 @@
-{% extends "example-template.html" %}
+{% extends "includes/_example-template.html" %}
 
-{% block pageClass %}page--rightbar{% endblock %}
+{% block pageClass %}page--leftbar{% endblock %}
 
 {% block breadcrumbs %}
 {% endblock %}
@@ -10,14 +10,14 @@
 
 {% block pageMain %}
   <div class="page__layout nhsuk-width-container">
+    <aside class="page__leftbar">
+      {% block pageLeftbar %}{% endblock %}
+    </aside>
     <div class="page__main">
       <div class="page__content">
         {% block pageContent %}{% endblock %}
       </div>
     </div>
-    <aside class="page__rightbar">
-      {% block pageRightbar %}{% endblock %}
-    </aside>
   </div>
 {% endblock %}
 
