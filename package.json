@@ -8,6 +8,7 @@
     "serve": "gulp serve",
     "build": "gulp build",
     "build:prod": "gulp build --prod",
+    "build:staging": "gulp build --staging",
     "watch": "gulp watch",
     "test": "npm run build && npm run backstop:test && npm run playwright:test",
     "backstop:ref": "docker-compose run backstopjs npm run backstop:ref",
