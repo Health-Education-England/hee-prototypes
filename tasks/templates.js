@@ -22,6 +22,8 @@ function getBasePath() {
 
   if(process.argv.indexOf("--prod") > -1) {
     basePath = '/hee-prototypes';
+  } else if (process.argv.indexOf("--staging") > -1) {
+    basePath = '/hee-global-header';
   }
 
   return basePath;
