@@ -1,6 +1,7 @@
 {% macro filter(filter) %}
   {%- from 'button/macro.njk' import button %}
   {%- from 'checkboxes/macro.njk' import checkboxes %}
+  {%- from 'select/macro.njk' import select %}
 
   <form class="nhsuk-filter" method="get">
     <p class="nhsuk-filter__title nhsuk-heading-l">Filters</p>
@@ -8,21 +9,65 @@
     {% if filter.groups.length > 0 %}
       <div class="nhsuk-filter__groups">
         {% for group in filter.groups %}
-          <div class="nhsuk-filter__group">
-            {% if group.showClearToggle %}
-              <a class="nhsuk-filter__group__clear" href="#">Clear</a>
-            {% endif %}
-            {{ checkboxes({
-              "idPrefix": "filter_" + group.title,
-              "name": "filter",
-              "fieldset": {
-                "legend": {
-                  "text": group.title
-                }
-              },
-              "items": group.items
-            }) }}
-          </div>
+          {% if group.type === "select" %}
+            <div class="nhsuk-filter__group {{ "has-subgroup" if group.subGroup }}">
+              {% if group.showClearToggle %}
+                <a class="nhsuk-filter__group__clear" href="#">Clear</a>
+              {% endif %}
+              <div class="nhsuk-form-group {{ "parent-group" if group.subGroup }}">
+                <fieldset class="nhsuk-fieldset">
+                  <legend class="nhsuk-fieldset__legend">{{ group.title }}</legend>
+                  {% if group.subGroup %}
+                    {{ select({
+                      id: group.name,
+                      name: group.name,
+                      label: {
+                        text: group.title
+                      },
+                      items: group.items
+                    }) }}
+                  {% else %}
+                    {{ select({
+                      id: group.name,
+                      name: group.name,
+                      items: group.items
+                    }) }}
+                  {% endif %}
+                </fieldset>
+              </div>
+              {% if group.subGroup %}
+                <div class="nhsuk-form-group sub-group">
+                  {{ select({
+                    id: group.subGroup.name,
+                    name: group.subGroup.name,
+                    label: {
+                      text: group.subGroup.title
+                    },
+                    items: group.subGroup.items
+                  }) }}
+                </div>
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="nhsuk-filter__group">
+              {% if group.showClearToggle %}
+                <a class="nhsuk-filter__group__clear" href="#">Clear</a>
+              {% endif %}
+              {{ checkboxes({
+                idPrefix: "filter_" + group.title,
+                name: "filter",
+                fieldset: {
+                  legend: {
+                    text: group.title
+                  }
+                },
+                hint: {
+                  text: "0 selected"
+                },
+                items: group.items
+              }) }}
+            </div>
+          {% endif %}
         {% endfor %}
       </div>
     {% endif %}

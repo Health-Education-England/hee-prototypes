@@ -19,9 +19,14 @@ export default () => {
     removeFilter(evt) {
       evt.preventDefault();
 
-      document.querySelectorAll(`input[value='${this.tag.dataset.filter}']`).forEach(checkbox => {
+      document.querySelectorAll(`form.nhsuk-filter input[value='${this.tag.dataset.filter}']`).forEach(checkbox => {
         checkbox.checked = false;
         checkbox.dispatchEvent(new Event('change'));
+      });
+
+      document.querySelectorAll(`form.nhsuk-filter select option[value='${this.tag.dataset.filter}']`).forEach(option => {
+        option.parentElement.selectedIndex = 0;
+        option.parentElement.dispatchEvent(new Event('change'));
       });
 
       this.tag.remove();

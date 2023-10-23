@@ -8,6 +8,7 @@ export default () => {
       this.container = container;
 
       this.checkboxes = [...this.container.getElementsByClassName('nhsuk-checkboxes__input')];
+      this.dropdowns = [...this.container.getElementsByClassName('nhsuk-select')];
       this.groups = [...this.container.getElementsByClassName('nhsuk-filter__group')];
       this.submit = this.container.querySelector('.nhsuk-filter__submit');
       this.clearToggle = [...this.container.getElementsByClassName('nhsuk-filter__group__clear')];
@@ -21,27 +22,28 @@ export default () => {
         checkbox.addEventListener('change', evt => this.updateResults(evt));
       });
 
+      this.dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('change', evt => this.updateResults(evt));
+      });
+
       this.groups.forEach(group => {
         const legend = group.querySelector('.nhsuk-fieldset__legend');
         if (legend) {
-          legend.addEventListener('click', evt => this.toggleGroup(evt));
+          legend.addEventListener('click', evt => this.toggleGroupFieldset(evt));
         }
       });
 
       this.clearToggle.forEach(toggle => {
-        toggle.addEventListener('click', evt => this.clearCheckboxes(evt));
+        toggle.addEventListener('click', evt => this.clearFilter(evt));
       });
     }
 
     setUp() {
       this.container.classList.add('nhsuk-filter--js');
 
-      // Close groups
-      // this.groups.forEach(group => group.classList.add('nhsuk-filter__group--closed'));
-
-      this.clearToggle.forEach(toggle => {
-        this.toggleClearLinkVisibility(toggle);
-      });
+      this.initFilters();
+      this.initClearToggles();
+      this.initCounters();
 
       // Hide submit button
       if (this.submit) {
@@ -49,7 +51,86 @@ export default () => {
       }
     }
 
-    toggleGroup(evt) {
+    initFilters() {
+      this.groups.forEach(group => {
+        // Collapse group if filters not active.
+        if (!this.isGroupFilterActive(group)) {
+          group.classList.add('nhsuk-filter__group--closed');
+        }
+
+        // Disable sub-group select if no option in parent selected.
+        if (group.classList.contains('has-subgroup')) {
+          const parentSelect = group.querySelector('.nhsuk-form-group.parent-group select');
+          const subSelect = group.querySelector('.nhsuk-form-group.sub-group select');
+
+          if (subSelect !== null && parentSelect !== null && parentSelect.value === '') {
+            subSelect.setAttribute('disabled', 'disabled');
+          }
+        }
+      });
+    }
+
+    initClearToggles() {
+      this.groups.forEach(group => {
+        const toggleLink = group.querySelector('.nhsuk-filter__group__clear');
+        if (this.isGroupFilterActive(group)) {
+          toggleLink.classList.add('visible');
+        }
+      });
+    }
+
+    initCounters() {
+      this.groups.forEach(group => {
+        this.updateActiveCount(group);
+      });
+    }
+
+    updateActiveCount(group) {
+      const countElem = group.querySelector('.nhsuk-hint');
+
+      if (countElem === null) {
+        return;
+      }
+
+      let count = 0;
+      const checkboxes = group.querySelectorAll('.nhsuk-checkboxes__input');
+
+      for (let i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked === true) {
+          count++;
+        }
+      }
+
+      if (count === 0) {
+        countElem.classList.remove('visible');
+        return;
+      }
+
+      countElem.innerText = `${count} selected`
+      countElem.classList.add('visible');
+    }
+
+    isGroupFilterActive(group) {
+      // Check if checkboxes are active.
+      const checkboxes = group.querySelectorAll('.nhsuk-checkboxes__input');
+      for (let i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked === true) {
+          return true;
+        }
+      }
+
+      // Check if selects are active.
+      const selectElements = group.querySelectorAll('.nhsuk-select');
+      for (let i = 0; i < selectElements.length; i++) {
+        if (selectElements[i].value !== '') {
+          return true;
+        }
+      }
+
+      return false;
+    }
+
+    toggleGroupFieldset(evt) {
       evt.preventDefault();
       evt.target.closest('.nhsuk-filter__group').classList.toggle('nhsuk-filter__group--closed');
     }
@@ -68,30 +149,39 @@ export default () => {
       // down to results listings after form submit.
       this.setUpdatedFlag(true);
 
+      const parentGroup = evt.target.closest('.nhsuk-filter__group');
+      this.updateActiveCount(parentGroup);
+
       this.container.submit();
+    }
+
+    clearFilter(evt) {
+      this.clearCheckboxes(evt);
+      this.clearSelectElements(evt);
+
+      this.updateResults(evt);
     }
 
     clearCheckboxes(evt) {
       evt.preventDefault();
 
       const toggleLink = evt.target;
-      const checkboxes = [...toggleLink.parentElement.querySelectorAll('.nhsuk-checkboxes__input')];
+      const checkboxes = toggleLink.parentElement.querySelectorAll('.nhsuk-checkboxes__input');
 
       checkboxes.forEach(cb => {
         cb.removeAttribute('checked');
       });
-
-      this.updateResults(evt);
     }
 
-    toggleClearLinkVisibility(toggleLink) {
-      const checkboxes = [...toggleLink.parentElement.querySelectorAll('.nhsuk-checkboxes__input')];
-      for (let i = 0; i < checkboxes.length; i++ ) {
-        if (checkboxes[i].hasAttribute('checked')) {
-          toggleLink.classList.add('visible');
-          break;
-        }
-      }
+    clearSelectElements(evt) {
+      evt.preventDefault();
+
+      const toggleLink = evt.target;
+      const selectElements = toggleLink.parentElement.querySelectorAll('.nhsuk-select');
+
+      selectElements.forEach(select => {
+        select.selectedIndex = 0;
+      });
     }
   }
 
