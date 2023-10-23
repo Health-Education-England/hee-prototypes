@@ -24,7 +24,13 @@
   }
 
   // Closed groups
-  &__group--closed .nhsuk-checkboxes {
+  &__group--closed:not(.level-two) {
+    .nhsuk-checkboxes, .nhsuk-select {
+      display: none;
+    }
+  }
+
+  &__group--level-two-closed {
     display: none;
   }
 

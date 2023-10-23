@@ -29,23 +29,73 @@
   {{ filter({
     groups: [
       {
-        title: "Topic",
-        showClearToggle: true,
+        type: "selectbox",
+        level: 1,
+        name: "profession",
+        title: "Profession",
+        showClearToggle: false,
         items: [
           {
-            text: "Item one",
-            value: "item_one"
+            text: "All professions",
+            value: "",
+            disabled: true
           },
           {
-            text: "Item two",
-            value: "item_two",
-            checked: true
+            text: "Allied health professionals",
+            value: "allied_health_professionals"
+          },
+          {
+            text: "Dental professionals",
+            value: "dental_professionals",
+            selected: true
+          },
+          {
+            text: "Medical doctors",
+            value: "medical_doctors"
+          },
+          {
+            text: "Public health professionals",
+            value: "public_health_professionals"
           }
-        ]
+        ],
+        attributes: {
+          "style": "width: 250px;"
+        }
       },
       {
+        type: "selectbox",
+        level: 2,
+        name: "sub_profession",
+        title: "Sub profession",
+        showClearToggle: false,
+        items: [
+          {
+            text: "All sub professions",
+            value: "",
+            disabled: true
+          },
+          {
+            text: "Dental nurse",
+            value: "dental_nurse"
+          },
+          {
+            text: "Dental therapist",
+            value: "dental_therapist",
+            selected: true
+          },
+          {
+            text: "Dentist",
+            value: "dentist"
+          }
+        ],
+        attributes: {
+          "style": "width: 250px;"
+        }
+      },
+      {
+        type: "checkbox",
         title: "Publication type",
-        showClearToggle: true,
+        showClearToggle: false,
         items: [
           {
             text: "Item one",

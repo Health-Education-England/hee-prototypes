@@ -8,21 +8,51 @@
     {% if filter.groups.length > 0 %}
       <div class="nhsuk-filter__groups">
         {% for group in filter.groups %}
-          <div class="nhsuk-filter__group">
-            {% if group.showClearToggle %}
-              <a class="nhsuk-filter__group__clear" href="#">Clear</a>
-            {% endif %}
-            {{ checkboxes({
-              "idPrefix": "filter_" + group.title,
-              "name": "filter",
-              "fieldset": {
-                "legend": {
-                  "text": group.title
-                }
-              },
-              "items": group.items
-            }) }}
-          </div>
+          {% if group.type === "selectbox" %}
+            <div class="nhsuk-filter__group
+            {%- if group.level == 2 %} level-two{% endif %}">
+              {% if group.showClearToggle %}
+                <a class="nhsuk-filter__group__clear" href="#">Clear</a>
+              {% endif %}
+              <div class="nhsuk-form-group"
+                {% if group.level == 1 %} style="margin-bottom: 16px;"{% endif %}>
+                {% if group.showClearToggle %}
+                  <a class="nhsuk-filter__group__clear" href="#">Clear</a>
+                {% endif %}
+                <fieldset class="nhsuk-fieldset">
+                  <legend class="nhsuk-fieldset__legend"
+                  {% if group.level == 2 %} style="background-image: none; padding-left: 0;"{% endif %}>{{ group.title }}</legend>
+                  <select class="nhsuk-select
+                    {%- if group.classes %} {{ group.classes }}{% endif %}"
+                    id="{{ 'filter_' + group.name }}" name="{{ group.name }}"
+                    {%- for attribute, value in group.attributes %} {{ attribute }}="{{ value }}"{% endfor %}>
+                  {%- for item in group.items %}
+                    <option value="{{ item.value }}"
+                      {{-" selected" if item.selected }}
+                      {{-" disabled" if item.disabled }}
+                      {%- for attribute, value in item.attributes %} {{ attribute }}="{{ value }}"{% endfor -%}>{{ item.text }}</option>
+                  {%- endfor %}
+                  </select>
+                </fieldset>
+              </div>
+            </div>
+          {% else %}
+            <div class="nhsuk-filter__group">
+              {% if group.showClearToggle %}
+                <a class="nhsuk-filter__group__clear" href="#">Clear</a>
+              {% endif %}
+              {{ checkboxes({
+                "idPrefix": "filter_" + group.title,
+                "name": "filter",
+                "fieldset": {
+                  "legend": {
+                    "text": group.title
+                  }
+                },
+                "items": group.items
+              }) }}
+            </div>
+          {% endif %}
         {% endfor %}
       </div>
     {% endif %}
