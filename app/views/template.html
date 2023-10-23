@@ -1,18 +1,18 @@
 {# SCAFFOLDING #}
 
 {# Cookies #}
-{%- from 'hee/blocks/scaffolding/cookies/macro.njk' import cookies %}
+{%- from 'hee/blocks/scaffolding/nhsuk-hee-cookies/macro.njk' import cookies %}
 
 {# Header #}
-{%- from 'hee/blocks/scaffolding/header/macro.njk' import customHeader %}
+{%- from 'hee/blocks/scaffolding/nhsuk-hee-header/macro.njk' import customHeader %}
 {%- from 'skip-link/macro.njk' import skipLink %}
 
 {# Notifications #}
-{%- from 'hee/blocks/scaffolding/notifications/banner/macro.njk' import banner %}
-{%- from 'hee/blocks/scaffolding/notifications/phasebanner/macro.njk' import phaseBanner %}
+{%- from 'hee/blocks/scaffolding/hee-banner/macro.njk' import banner %}
+{%- from 'hee/blocks/scaffolding/hee-phasebanner/macro.njk' import phaseBanner %}
 
 {# Footer #}
-{%- from 'hee/blocks/scaffolding/footer/macro.njk' import siteFooter %}
+{%- from 'hee/blocks/scaffolding/nhsuk-hee-footer/macro.njk' import siteFooter %}
 
 {# Main #}
 {%- from 'breadcrumb/macro.njk' import breadcrumb %}
@@ -20,7 +20,7 @@
 {# TEMPLATE COMPONENTS #}
 {%- from 'hero/macro.njk' import hero %}
 {%- from 'hee/blocks/furniture/page/hee-microhero/macro.njk' import microHero %}
-{%- from 'hee/blocks/content/featured/featured-content/macro.njk' import featuredContent %}
+{%- from 'hee/blocks/content/featured/hee-featured-content/macro.njk' import featuredContent %}
 {%- from 'hee/blocks/furniture/collections/hee-listing/macro.njk' import listingLayout %}
 {%- from 'hee/blocks/furniture/collections/hee-listing-item/macro.njk' import listingItem %}
 {%- from 'hee/blocks/furniture/collections/hee-filter/macro.njk' import filter %}
@@ -29,14 +29,16 @@
 {# CONTENT (BLOCKS) COMPONENTS #}
 
 {# HEE Components #}
-{%- from 'hee/blocks/content/sidebar/anchorlinks/macro.njk' import anchorLinks %}
-{%- from 'hee/blocks/content/main/card--author/macro.njk' import authorCard %}
-{#{%- from 'hee/blocks/content/sidebar/card--person/macro.njk' import personCard %}
-{%- from 'hee/blocks/content/sidebar/card--department/macro.njk' import departmentCard %}#}
+{%- from 'hee/blocks/content/sidebar/hee-anchorlinks/macro.njk' import anchorLinks %}
+{%- from 'hee/blocks/content/main/hee-card--author/macro.njk' import authorCard %}
+{#{%- from 'hee/blocks/content/sidebar/hee-card--person/macro.njk' import personCard %}
+{%- from 'hee/blocks/content/sidebar/hee-card--department/macro.njk' import departmentCard %}#}
 {%- from 'hee/blocks/content/main/hee-media/macro.njk' import media %}
 {%- from 'hee/blocks/content/main/hee-navmap/macro.njk' import navMap %}
-{%- from 'hee/blocks/content/sidebar/resources/macro.njk' import resources %}
-{%- from 'hee/blocks/content/sidebar/card--programme-info/macro.njk' import programmeInfoCard %}
+{%- from 'hee/blocks/content/sidebar/hee-resources/macro.njk' import resources %}
+{%- from 'hee/blocks/content/sidebar/nhsuk-image-card/macro.njk' import imageCard %}
+{%- from 'hee/blocks/content/sidebar/hee-card--programme-info/macro.njk' import programmeInfoCard %}
+{%- from 'hee/blocks/content/main/hee-tabs/macro.njk' import tabs %}
 
 {# NHSUK-HEE Components #}
 {%- from 'hee/blocks/content/main/nhsuk-hee-blocklinks/macro.njk' import blocklinks %}
