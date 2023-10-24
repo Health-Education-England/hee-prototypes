@@ -9,10 +9,9 @@
 
     @include mq($from: desktop) {
       align-content: space-between;
-      column-gap: 18px;
       display: flex;
       flex-wrap: wrap;
-      justify-content: flex-start;
+      justify-content: space-between;
     }
   }
 
@@ -21,12 +20,8 @@
       align-items: stretch;
       align-content: stretch;
       display: flex;
-      flex-basis: 48%;
+      flex-basis: 31.66%;
       row-gap: 10px;
-    }
-
-    @include mq($from: large-desktop) {
-      flex-basis: 32%;
     }
   }
 
@@ -34,6 +29,7 @@
     .hee-featured-content__item {
       @include mq($from: large-desktop) {
         flex-basis: 48%;
+        width: 100%;
       }
     }
   }
@@ -51,16 +47,20 @@
   }
 }
 
-.page--rightbar, .page--leftbar {
-  .page__content {
-    .hee-featured-content__item {
-      @include mq($from: desktop) {
-        flex-basis: 48%;
-      }
+.page--rightbar .page__content {
+  .hee-featured-content__item {
+    @include mq($from: desktop) {
+      flex-basis: 48%;
+    }
+  }
+}
 
-      @include mq($from: large-desktop) {
-        flex-basis: 48%;
-      }
+.page__feature {
+  .hee-featured-content-wrapper {
+    @include mq($from: desktop) {
+      align-content: flex-start;
+      column-gap: 2.5%;
+      justify-content: flex-start;
     }
   }
 }
