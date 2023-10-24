@@ -44,7 +44,7 @@ export default () => {
       this.initFilters();
 
       this.clearToggle.forEach(toggle => {
-        this.initClearToggle(toggle);
+        this.initClearToggles(toggle);
       });
 
       // Hide submit button
@@ -55,7 +55,7 @@ export default () => {
 
     initFilters() {
       this.groups.forEach(group => {
-        // Collapse group filters if not active.
+        // Collapse group if filters not active.
         if (!this.isGroupFilterActive(group)) {
           group.classList.add('nhsuk-filter__group--closed');
         }
@@ -71,8 +71,15 @@ export default () => {
       });
     }
 
+    initClearToggles(toggleLink) {
+      const group = toggleLink.parentElement;
+      if (this.isGroupFilterActive(group)) {
+        toggleLink.classList.add('visible');
+      }
+    }
+
     isGroupFilterActive(group) {
-      // Collapse checkbox filter if no checkbox is checked.
+      // Check if checkboxes are active.
       const checkboxes = group.querySelectorAll('.nhsuk-checkboxes__input');
       for (let i = 0; i < checkboxes.length; i++) {
         if (checkboxes[i].checked === true) {
@@ -80,32 +87,15 @@ export default () => {
         }
       }
 
-      // Collapse select filter if default option selected
+      // Check if selects are active.
       const selectElements = group.querySelectorAll('.nhsuk-select');
       for (let i = 0; i < selectElements.length; i++) {
         if (selectElements[i].value !== '') {
           return true;
         }
       }
-    }
 
-    initClearToggle(toggleLink) {
-      const checkboxes = toggleLink.parentElement.querySelectorAll('.nhsuk-checkboxes__input');
-      console.log(checkboxes);
-      for (let i = 0; i < checkboxes.length; i++ ) {
-        if (checkboxes[i].hasAttribute('checked')) {
-          toggleLink.classList.add('visible');
-          return;
-        }
-      }
-
-      const selectElements = toggleLink.parentElement.querySelectorAll('.nhsuk-select');
-      for (let i = 0; i < selectElements.length; i++) {
-        if (selectElements[i].value !== '') {
-          toggleLink.classList.add('visible');
-          return;
-        }
-      }
+      return false;
     }
 
     toggleGroupFieldset(evt) {
