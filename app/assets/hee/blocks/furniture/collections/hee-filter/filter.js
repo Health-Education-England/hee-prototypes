@@ -50,9 +50,7 @@ export default () => {
     setUp() {
       this.container.classList.add('nhsuk-filter--js');
 
-      /* this.collapseAllGroups();
-
-      this.openActiveGroups(); */
+      this.initFilters();
 
       this.clearToggle.forEach(toggle => {
         this.toggleClearLinkVisibility(toggle);
@@ -68,13 +66,32 @@ export default () => {
       }
     }
 
-    /* collapseAllGroups() {
-      ...
-    }
+    initFilters() {
+      this.groups.forEach(group => {
+        let collapse = true;
 
-    openActiveGroups() {
-      ...
-    } */
+        // Collapse checkbox filter if no checkbox is checked.
+        const checkboxes = group.querySelectorAll('.nhsuk-checkboxes__input');
+        for (let i = 0; i < checkboxes.length; i++) {
+          if (checkboxes[i].checked === true) {
+            collapse = false;
+            break;
+          }
+        }
+
+        // Collapse select filter if default option selected
+        const selectElements = group.querySelectorAll('.nhsuk-select');
+        for (let i = 0; i < selectElements.length; i++) {
+          if (selectElements[i].value !== '') {
+            collapse = false;
+          }
+        }
+
+        if (collapse) {
+          group.classList.add('nhsuk-filter__group--closed');
+        }
+      });
+    }
 
     toggleGroup(evt) {
       evt.preventDefault();
