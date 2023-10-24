@@ -87,6 +87,15 @@ export default () => {
           }
         }
 
+        // Disable sub-group select if no option in parent selected.
+        if (group.classList.contains('has-subgroup')) {
+          const parentSelect = group.querySelector('.nhsuk-form-group.parent-group select');
+          const subSelect = group.querySelector('.nhsuk-form-group.sub-group select');
+          if (subSelect !== null && parentSelect.value === '') {
+            subSelect.setAttribute('disabled', 'disabled');
+          }
+        }
+
         if (collapse) {
           group.classList.add('nhsuk-filter__group--closed');
         }
