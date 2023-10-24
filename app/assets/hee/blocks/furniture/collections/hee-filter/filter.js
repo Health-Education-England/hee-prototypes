@@ -44,7 +44,7 @@ export default () => {
       this.initFilters();
 
       this.clearToggle.forEach(toggle => {
-        this.initClearToggles(toggle);
+        this.initClearToggle(toggle);
       });
 
       // Hide submit button
@@ -89,7 +89,7 @@ export default () => {
       });
     }
 
-    initClearToggles(toggleLink) {
+    initClearToggle(toggleLink) {
       const checkboxes = toggleLink.parentElement.querySelectorAll('.nhsuk-checkboxes__input');
       console.log(checkboxes);
       for (let i = 0; i < checkboxes.length; i++ ) {
