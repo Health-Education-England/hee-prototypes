@@ -29,7 +29,7 @@ export default () => {
       this.groups.forEach(group => {
         const legend = group.querySelector('.nhsuk-fieldset__legend');
         if (legend) {
-          legend.addEventListener('click', evt => this.toggleGroup(evt));
+          legend.addEventListener('click', evt => this.toggleGroupFieldset(evt));
         }
       });
 
@@ -55,23 +55,9 @@ export default () => {
 
     initFilters() {
       this.groups.forEach(group => {
-        let collapse = true;
-
-        // Collapse checkbox filter if no checkbox is checked.
-        const checkboxes = group.querySelectorAll('.nhsuk-checkboxes__input');
-        for (let i = 0; i < checkboxes.length; i++) {
-          if (checkboxes[i].checked === true) {
-            collapse = false;
-            break;
-          }
-        }
-
-        // Collapse select filter if default option selected
-        const selectElements = group.querySelectorAll('.nhsuk-select');
-        for (let i = 0; i < selectElements.length; i++) {
-          if (selectElements[i].value !== '') {
-            collapse = false;
-          }
+        // Collapse group filters if not active.
+        if (!this.isGroupFilterActive(group)) {
+          group.classList.add('nhsuk-filter__group--closed');
         }
 
         // Disable sub-group select if no option in parent selected.
@@ -82,11 +68,25 @@ export default () => {
             subSelect.setAttribute('disabled', 'disabled');
           }
         }
-
-        if (collapse) {
-          group.classList.add('nhsuk-filter__group--closed');
-        }
       });
+    }
+
+    isGroupFilterActive(group) {
+      // Collapse checkbox filter if no checkbox is checked.
+      const checkboxes = group.querySelectorAll('.nhsuk-checkboxes__input');
+      for (let i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked === true) {
+          return true;
+        }
+      }
+
+      // Collapse select filter if default option selected
+      const selectElements = group.querySelectorAll('.nhsuk-select');
+      for (let i = 0; i < selectElements.length; i++) {
+        if (selectElements[i].value !== '') {
+          return true;
+        }
+      }
     }
 
     initClearToggle(toggleLink) {
@@ -108,7 +108,7 @@ export default () => {
       }
     }
 
-    toggleGroup(evt) {
+    toggleGroupFieldset(evt) {
       evt.preventDefault();
       evt.target.closest('.nhsuk-filter__group').classList.toggle('nhsuk-filter__group--closed');
     }
