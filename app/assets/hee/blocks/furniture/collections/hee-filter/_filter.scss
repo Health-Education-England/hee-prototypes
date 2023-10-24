@@ -22,8 +22,12 @@
   .nhsuk-form-group {
     margin-bottom: nhsuk-spacing(5);
 
-    &.has-subgroup {
+    &.parent-group {
       margin-bottom: nhsuk-spacing(3);
+    }
+
+    select {
+      width: 100%;
     }
   }
 
