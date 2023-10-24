@@ -29,25 +29,23 @@
   {{ filter({
     groups: [
       {
-        type: "selectbox",
-        level: 1,
+        type: "select",
         name: "profession",
         title: "Profession",
-        showClearToggle: false,
+        showClearToggle: true,
         items: [
           {
             text: "All professions",
-            value: "",
-            disabled: true
+            value: ""
           },
           {
             text: "Allied health professionals",
-            value: "allied_health_professionals"
+            value: "allied_health_professionals",
+            selected: true
           },
           {
             text: "Dental professionals",
-            value: "dental_professionals",
-            selected: true
+            value: "dental_professionals"
           },
           {
             text: "Medical doctors",
@@ -58,38 +56,28 @@
             value: "public_health_professionals"
           }
         ],
-        attributes: {
-          "style": "width: 250px;"
-        }
-      },
-      {
-        type: "selectbox",
-        level: 2,
-        name: "sub_profession",
-        title: "Sub profession",
-        showClearToggle: false,
-        items: [
-          {
-            text: "All sub professions",
-            value: "",
-            disabled: true
-          },
-          {
-            text: "Dental nurse",
-            value: "dental_nurse"
-          },
-          {
-            text: "Dental therapist",
-            value: "dental_therapist",
-            selected: true
-          },
-          {
-            text: "Dentist",
-            value: "dentist"
-          }
-        ],
-        attributes: {
-          "style": "width: 250px;"
+        subGroup: {
+          type: "selectbox",
+          name: "sub_profession",
+          title: "Sub profession",
+          items: [
+            {
+              text: "All sub professions",
+              value: ""
+            },
+            {
+              text: "Dental nurse",
+              value: "dental_nurse"
+            },
+            {
+              text: "Dental therapist",
+              value: "dental_therapist"
+            },
+            {
+              text: "Dentist",
+              value: "dentist"
+            }
+          ]
         }
       },
       {

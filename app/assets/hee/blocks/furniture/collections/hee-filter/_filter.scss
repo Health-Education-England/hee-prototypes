@@ -1,7 +1,7 @@
 .nhsuk-filter {
   .nhsuk-fieldset__legend {
     display: block;
-    margin-bottom: map-get($nhsuk-spacing-points, 3);
+    margin-bottom: nhsuk-spacing(3);
     width: 100%;
   }
 
@@ -20,18 +20,18 @@
   }
 
   .nhsuk-form-group {
-    margin-bottom: map-get($nhsuk-spacing-points, 5);
-  }
+    margin-bottom: nhsuk-spacing(5);
 
-  // Closed groups
-  &__group--closed:not(.level-two) {
-    .nhsuk-checkboxes, .nhsuk-select {
-      display: none;
+    &.has-subgroup {
+      margin-bottom: nhsuk-spacing(3);
     }
   }
 
-  &__group--level-two-closed {
-    display: none;
+  // Closed groups
+  &__group--closed {
+    label, .nhsuk-checkboxes, .nhsuk-select {
+      display: none;
+    }
   }
 
   &__group--closed .nhsuk-fieldset__legend {
