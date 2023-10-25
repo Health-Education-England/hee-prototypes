@@ -64,7 +64,8 @@ export default () => {
         if (group.classList.contains('has-subgroup')) {
           const parentSelect = group.querySelector('.nhsuk-form-group.parent-group select');
           const subSelect = group.querySelector('.nhsuk-form-group.sub-group select');
-          if (subSelect !== null && parentSelect.value === '') {
+
+          if (subSelect !== null && parentSelect !== null && parentSelect.value === '') {
             subSelect.setAttribute('disabled', 'disabled');
           }
         }

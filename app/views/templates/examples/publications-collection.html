@@ -40,12 +40,12 @@
           },
           {
             text: "Allied health professionals",
-            value: "allied_health_professionals",
-            selected: true
+            value: "allied_health_professionals"
           },
           {
             text: "Dental professionals",
-            value: "dental_professionals"
+            value: "dental_professionals",
+            selected: true
           },
           {
             text: "Medical doctors",
@@ -67,7 +67,8 @@
             },
             {
               text: "Dental nurse",
-              value: "dental_nurse"
+              value: "dental_nurse",
+              selected: true
             },
             {
               text: "Dental therapist",
@@ -83,19 +84,41 @@
       {
         type: "checkbox",
         title: "Publication type",
-        showClearToggle: false,
+        showClearToggle: true,
         items: [
           {
-            text: "Item one",
-            value: "item_one"
+            text: "Briefing",
+            value: "briefing"
           },
           {
-            text: "Item two",
-            value: "item_two"
+            text: "Consultation",
+            value: "consultation",
+            checked: true
           },
           {
-            text: "Item three",
-            value: "item_three"
+            text: "Data and statistics",
+            value: "data_statistics"
+          },
+          {
+            text: "FOI release",
+            value: "foi_release"
+          },
+          {
+            text: "Guidance",
+            value: "guidance",
+            checked: true
+          },
+          {
+            text: "Independent report",
+            value: "independent_report"
+          },
+          {
+            text: "Letter",
+            value: "letter"
+          },
+          {
+            text: "Policy or strategy",
+            value: "policy_strategy"
           }
         ]
       }
@@ -152,6 +175,24 @@
       select: selectAttributes,
       submit: submitAttributes
     },
+    tags: [
+      {
+        text: "Dental professionals",
+        value: "dental_professionals"
+      },
+      {
+        text: "Dental nurse",
+        value: "dental_nurse"
+      },
+      {
+        text: "Consultation",
+        value: "consultation"
+      },
+      {
+        text: "Guidance",
+        value: "guidance"
+      }
+    ],
     results: items,
     emptyMessage: "No results",
     showPagination: true
