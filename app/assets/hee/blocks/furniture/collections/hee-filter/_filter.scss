@@ -6,7 +6,13 @@
   }
 
   .nhsuk-filter__group {
+    border-bottom: 1px solid $color_nhsuk-grey-3;
+    margin-bottom: nhsuk-spacing(4);
     position: relative;
+
+    &:not(.nhsuk-filter__group--closed) {
+      padding-bottom: nhsuk-spacing(4);
+    }
 
     .nhsuk-filter__group__clear {
       display: none;
@@ -28,10 +34,25 @@
         display: block;
       }
     }
+
+    .nhsuk-checkboxes {
+      overflow-y: auto;
+      height: 190px;
+
+      &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 7px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: $color_nhsuk-grey-3;
+      }
+    }
   }
 
   .nhsuk-form-group {
-    margin-bottom: nhsuk-spacing(5);
+    margin-bottom: 0;
 
     &.parent-group {
       margin-bottom: nhsuk-spacing(3);
@@ -44,8 +65,14 @@
 
   // Closed groups
   &__group--closed {
+    padding-bottom: 0;
+
     label, .nhsuk-checkboxes, .nhsuk-select {
       display: none;
+    }
+
+    .nhsuk-hint.visible {
+      margin-top: 0;
     }
   }
 
