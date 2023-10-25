@@ -42,10 +42,8 @@ export default () => {
       this.container.classList.add('nhsuk-filter--js');
 
       this.initFilters();
-
-      this.clearToggle.forEach(toggle => {
-        this.initClearToggles(toggle);
-      });
+      this.initClearToggles();
+      this.initCounters();
 
       // Hide submit button
       if (this.submit) {
@@ -72,11 +70,44 @@ export default () => {
       });
     }
 
-    initClearToggles(toggleLink) {
-      const group = toggleLink.parentElement;
-      if (this.isGroupFilterActive(group)) {
-        toggleLink.classList.add('visible');
+    initClearToggles() {
+      this.groups.forEach(group => {
+        const toggleLink = group.querySelector('.nhsuk-filter__group__clear');
+        if (this.isGroupFilterActive(group)) {
+          toggleLink.classList.add('visible');
+        }
+      });
+    }
+
+    initCounters() {
+      this.groups.forEach(group => {
+        this.updateActiveCount(group);
+      });
+    }
+
+    updateActiveCount(group) {
+      const countElem = group.querySelector('.nhsuk-hint');
+
+      if (countElem === null) {
+        return;
       }
+
+      let count = 0;
+      const checkboxes = group.querySelectorAll('.nhsuk-checkboxes__input');
+
+      for (let i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked === true) {
+          count++;
+        }
+      }
+
+      if (count === 0) {
+        countElem.classList.remove('visible');
+        return;
+      }
+
+      countElem.innerText = `${count} selected`
+      countElem.classList.add('visible');
     }
 
     isGroupFilterActive(group) {
@@ -117,6 +148,9 @@ export default () => {
       // Set sort container hidden scroll flag value,to ensure viewport scrolls
       // down to results listings after form submit.
       this.setUpdatedFlag(true);
+
+      const parentGroup = evt.target.closest('.nhsuk-filter__group');
+      this.updateActiveCount(parentGroup);
 
       this.container.submit();
     }
