@@ -171,8 +171,9 @@
             <div class="nhsuk-filter__group">
               <a class="nhsuk-filter__group__clear" href="#">Clear</a>
               <div class="nhsuk-form-group">
-                <fieldset class="nhsuk-fieldset">
+                <fieldset class="nhsuk-fieldset" aria-describedby="filter_Topic-hint">
                   <legend class="nhsuk-fieldset__legend"> Topic </legend>
+                  <div class="nhsuk-hint" id="filter_Topic-hint"> 0 selected </div>
                   <div class="nhsuk-checkboxes">
                     <div class="nhsuk-checkboxes__item">
                       <input class="nhsuk-checkboxes__input" id="filter_Topic-1" name="filter" type="checkbox" value="addiction">
@@ -321,8 +322,9 @@
             <div class="nhsuk-filter__group">
               <a class="nhsuk-filter__group__clear" href="#">Clear</a>
               <div class="nhsuk-form-group">
-                <fieldset class="nhsuk-fieldset">
+                <fieldset class="nhsuk-fieldset" aria-describedby="filter_Profession-hint">
                   <legend class="nhsuk-fieldset__legend"> Profession </legend>
+                  <div class="nhsuk-hint" id="filter_Profession-hint"> 0 selected </div>
                   <div class="nhsuk-checkboxes">
                     <div class="nhsuk-checkboxes__item">
                       <input class="nhsuk-checkboxes__input" id="filter_Profession-1" name="filter" type="checkbox" value="advanced-critical-care-practitioners">
@@ -410,21 +412,17 @@
                 </form>
               </div>
               <div class="hee-listing__tags">
-                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="cosmetic-procedures">
-                  <span>Cosmetic procedures</span>
-                  <a class="nhsuk-filter-tag__icon">Remove</a>
+                <div class="hee-listing__tags__group">
+                  <label>: </label>
                 </div>
-                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="medicines-optimisation">
-                  <span>Medicines optimisation</span>
-                  <a class="nhsuk-filter-tag__icon">Remove</a>
+                <div class="hee-listing__tags__group">
+                  <label>: </label>
                 </div>
-                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="healthcare-scientists">
-                  <span>Healthcare scientists</span>
-                  <a class="nhsuk-filter-tag__icon">Remove</a>
+                <div class="hee-listing__tags__group">
+                  <label>: </label>
                 </div>
-                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="management-professionals">
-                  <span>Management professionals</span>
-                  <a class="nhsuk-filter-tag__icon">Remove</a>
+                <div class="hee-listing__tags__group">
+                  <label>: </label>
                 </div>
               </div>
             </div>

@@ -171,8 +171,9 @@
             <div class="nhsuk-filter__group">
               <a class="nhsuk-filter__group__clear" href="#">Clear</a>
               <div class="nhsuk-form-group">
-                <fieldset class="nhsuk-fieldset">
+                <fieldset class="nhsuk-fieldset" aria-describedby="filter_Topic-hint">
                   <legend class="nhsuk-fieldset__legend"> Topic </legend>
+                  <div class="nhsuk-hint" id="filter_Topic-hint"> 0 selected </div>
                   <div class="nhsuk-checkboxes">
                     <div class="nhsuk-checkboxes__item">
                       <input class="nhsuk-checkboxes__input" id="filter_Topic-1" name="filter" type="checkbox" value="item_one" checked>
@@ -225,13 +226,11 @@
                 </form>
               </div>
               <div class="hee-listing__tags">
-                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="item_one">
-                  <span>3D printing</span>
-                  <a class="nhsuk-filter-tag__icon">Remove</a>
+                <div class="hee-listing__tags__group">
+                  <label>: </label>
                 </div>
-                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="item_two">
-                  <span>Abuse</span>
-                  <a class="nhsuk-filter-tag__icon">Remove</a>
+                <div class="hee-listing__tags__group">
+                  <label>: </label>
                 </div>
               </div>
             </div>
