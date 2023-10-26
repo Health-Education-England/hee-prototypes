@@ -22,7 +22,7 @@
         <div class="hee-listing__tags">
           {% for group in list.tags %}
             <div class="hee-listing__tags__group">
-              <label>{{ group.groupLabel }}: </label>
+              <label>{{ group.label }}: </label>
               {% for tag in group.items %}
                 {{ filterTag({
                   text: tag.text,
