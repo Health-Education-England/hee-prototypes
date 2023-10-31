@@ -53,17 +53,10 @@ export default () => {
 
     initFilters() {
       this.groups.forEach(group => {
+
         if (!this.isGroupFilterActive(group)) {
           // Collapse group if filters not active.
           group.classList.add('nhsuk-filter__group--closed');
-        } else {
-          // Enable scrollable checkbox groups if more than four options.
-          const checkboxes = group.querySelectorAll('.nhsuk-checkboxes');
-          checkboxes.forEach(cb => {
-            if (cb.childElementCount > 4) {
-              cb.classList.add('scrollable');
-            }
-          });
         }
 
         // Disable sub-group select if no option in parent selected.
@@ -75,6 +68,14 @@ export default () => {
             subSelect.setAttribute('disabled', 'disabled');
           }
         }
+
+        // Enable scrollable checkbox groups if more than four options.
+        const checkboxes = group.querySelectorAll('.nhsuk-checkboxes');
+        checkboxes.forEach(cb => {
+          if (cb.childElementCount > 4) {
+            cb.classList.add('scrollable');
+          }
+        });
       });
     }
 
