@@ -36,17 +36,19 @@
     }
 
     .nhsuk-checkboxes {
-      overflow-y: auto;
-      height: 190px;
+      &.scrollable {
+        overflow-y: auto;
+        height: 190px;
 
-      &::-webkit-scrollbar {
-        -webkit-appearance: none;
-        width: 7px;
-      }
+        &::-webkit-scrollbar {
+          -webkit-appearance: none;
+          width: 7px;
+        }
 
-      &::-webkit-scrollbar-thumb {
-        border-radius: 4px;
-        background-color: $color_nhsuk-grey-3;
+        &::-webkit-scrollbar-thumb {
+          border-radius: 4px;
+          background-color: $color_nhsuk-grey-3;
+        }
       }
     }
   }
