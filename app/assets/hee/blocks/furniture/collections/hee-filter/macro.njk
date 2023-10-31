@@ -55,8 +55,9 @@
               {% endif %}
 
               {{ checkboxes({
-                idPrefix: "filter_" + group.title,
-                name: "filter",
+                idPrefix: "filter_" + group.name,
+                name: group.name,
+                name: "publication_type",
                 fieldset: {
                   legend: {
                     text: group.title
