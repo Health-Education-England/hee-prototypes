@@ -1,5 +1,16 @@
 version: '3'
 services:
+  nodejs:
+    image: node:18.18.2-alpine3.18
+    command: ['npm', 'run', 'watch']
+    working_dir: /app
+    volumes:
+      - .:/app
+    user: 'node'
+    ports:
+      - '3000:3000'
+      - '35729:35729'
+
   backstopjs:
     image: ghcr.io/health-education-england/run-backstopjs-regression-tests:main
     volumes:
@@ -8,6 +19,9 @@ services:
 
   playwright:
     image: mcr.microsoft.com/playwright:v1.36.1-jammy
+    command: ['npx', 'playwright', 'show-report', '/app/tests/playwright/report', '--host', '0.0.0.0']
     working_dir: /app
     volumes:
       - .:/app
+    ports:
+      - '9323:9323'
