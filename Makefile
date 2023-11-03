@@ -13,8 +13,6 @@ serve: build
 watch:
 	docker-compose run -p 3000:3000 -p 35729:35729 nodejs npm run watch
 
-test: build backstop-test playwright-test
-
 npm-audit:
 	docker-compose run nodejs npm audit
 
@@ -22,6 +20,8 @@ open-shell:
 	docker-compose up -d nodejs
 	docker-compose exec nodejs sh
 	docker-compose stop
+
+run-tests: build backstop-test playwright-test
 
 backstop-ref:
 	docker-compose run backstopjs npm run backstop:ref
