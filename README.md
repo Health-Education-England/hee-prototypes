@@ -31,7 +31,7 @@ Once complete you can run either:
 
 `make serve` 
 
-(_This will build the prototype and serve it on a local webserver_)
+_This will build the prototype and serve it on a local webserver - [http://localhost:3000](http://localhost:3000/)_
 
 or
 
@@ -55,17 +55,38 @@ The HEE prototype uses the following tech / tooling to compile and serve the pro
 - [Gulp](https://github.com/gulpjs/gulp)
 - [Babel](https://babeljs.io/) 
 - [Webpack](https://webpack.js.org/)
+- [BackstopJS](https://garris.github.io/BackstopJS/) (visual regression testing)
+- [Playwright](https://playwright.dev/) (end to end javascript testing)
 
 ## Makefile commands
 
 We make use of a `Makefile` for a better developer experience when working with the docker containers within the HEE
 prototype.
 
+All commands can be run using `make [command-name]`
+
 Below is a complete list of all the commands and their purposes:
 
-`install` - Installs all node dependencies via npm
+`install` - **Installs all node dependencies via npm**
 
-`build` - Compiles the prototype components, assets and templates into the `public` director via Gulp (TODO LINK HERE)
+`build` - **Compiles the prototype components, assets and templates into the `public` directory**
+
+`build-prod` - **Same as above, except adds a basePath for Github pages to all links (used for pipeline debugging purposes)**
+
+`serve` - **Runs the `build` command and starts up a local webserver serving the prototype at [http://localhost:3000](http://localhost:3000)**
+
+`watch` - **Runs the `serve` command and recompiles the codebase, reloads the browser when there is a change in any source code**
+
+`npm-audit` - **Runs the npm audit report displaying packages which need secruity updates. Helpful to use alongside 
+[GitHub Dependabot](https://github.blog/2020-06-01-keep-all-your-packages-up-to-date-with-dependabot/) reports.**
+
+`open-shell` - **Opens a terminal prompt allowing you to run commands directly within the nodejs container. Useful when installing, removing, upgrading packages or general build debugging.**
+
+`run-tests` - **Runs BackstopJS and Playwright tests. See more details in the Testing section - TODO LINK HERE.**
+
+## Codebase structure
+
+
 
 
 
