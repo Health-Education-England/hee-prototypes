@@ -6,6 +6,8 @@ England's (HEE) different websites / channels.
 It is based off the [NHS UK prototype kit](https://github.com/nhsuk/nhsuk-frontend), making use of existing components 
 and styles where possible. You can find more information on the NHS UK design system and it's components [here.](https://service-manual.nhs.uk/design-system)
 
+## TODO: Table of contents here
+
 ## Prerequisites 
 
 In order to install and configure the prototype on your local machine, there are a few prerequisite tools to install:
@@ -42,9 +44,10 @@ or
 ### Contributing your work
 
 Before starting on your first piece of work, please see [CONTRIBUTING.md](https://github.com/Health-Education-England/hee-prototypes/blob/master/CONTRIBUTING.md)
-for guidelines and best practices regarding HEE branching strategies etc. **----TODO FLESH OUT THIS DOC-----**
+for guidelines and best practices regarding HEE branching strategies etc. **-TODO FLESH OUT THIS DOC--**
 
 ## Tooling
+<a name="tooling"></a>
 
 The HEE prototype uses the following tech / tooling to compile and serve the prototype:
 
@@ -86,11 +89,70 @@ Below is a complete list of all the commands and their purposes:
 
 ## Codebase structure
 
+Below is a high level summary of the codebase structure:
 
+### App
 
+```bash
+.
+├── app
+│   ├── assets
+│   └── views
+```
 
+#### Assets
 
+`/app/assets/hee`
 
+HEE components containing all SASS, JS and Nunjucks assets, organised into the HEE design system definitions:
 
- 
+- **Content**
+- **Furniture**
+- **Scaffolding**
+
+`/app/assets/prototype`
+
+Contains all styling and JS logic related to the serving of the actual prototype itself. In other words assets which
+are not used in any HEE channels, but are used to display the prototype navigation, component / template previews etc.
+
+#### Views
+
+`/app/views`
+
+Contains all the Nunjucks templates which are eventually compiled into flat HTML files within the `public` folder, used 
+to render the HEE prototype in browser.
+
+### Tasks
+
+Contains all the Gulp task runners, pertaining to specific parts of the build process:
+
+- Assets - compiling stylesheets, javascript and copying other assets
+- Serve - serves prototype via [gulp-connect](https://www.npmjs.com/package/gulp-connect) webserver
+- Templates - logic for compiling component nunjucks macros and templates into flat HTML files) 
+
+```bash
+├── tasks
+│   ├── assets.js
+│   ├── serve.js
+│   └── templates.js
+│   └── README.md
+```
+
+For more information on the Gulp build process, please see the [README](https://github.com/Health-Education-England/hee-prototypes/blob/master/tasks/README.md) within the tasks directory.
+
+## Tests
+
+As mentioned in the [Tooling](#tooling) section there are two types of tests run against all HEE components and templates:
+
+- [BackstopJS](https://garris.github.io/BackstopJS/) for visual regression testing
+- [Playwright](https://playwright.dev/) for end to end javascript testing
+
+For a deeper dive on how to write and run your own tests, please see the [README](https://github.com/Health-Education-England/hee-prototypes/blob/master/tests/README.md) within the `tests` directory:
+
+```bash
+├── tests
+│   ├── backstop
+│   └── playwright
+│   └── README.md
+```
 
