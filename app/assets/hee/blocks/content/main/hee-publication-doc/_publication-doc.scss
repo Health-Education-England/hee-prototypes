@@ -1,5 +1,5 @@
 .hee-publication-doc {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   margin-bottom: map-get($nhsuk-spacing-points, 4);
 
@@ -51,6 +51,7 @@
   }
 
   .hee-publication-doc__details {
+    align-self: flex-start;
     padding-left: map-get($nhsuk-spacing-points, 4);
 
     h3 {

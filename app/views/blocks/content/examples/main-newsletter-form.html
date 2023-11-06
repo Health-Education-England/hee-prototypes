@@ -1,0 +1,13 @@
+{% extends "example-blocks.html" %}
+
+{% block main %}
+  {{ newsletterForm({
+    title: "Subscribe to our newsletter",
+    subtitle: "Subscribe to receive marketing and update emails.",
+    accName: "Digital.Readiness",
+    listName: "NHS Digital Academy bulletin",
+    successUrl: "https://digital-transformation.hee.nhs.uk/newsletter-subscription-successful",
+    errorUrl: "https://digital-transformation.hee.nhs.uk/newsletter-subscription-unsuccessful",
+    doubleOptin: false
+  }) }}
+{% endblock %}
