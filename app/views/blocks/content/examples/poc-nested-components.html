@@ -6,31 +6,23 @@
       <br />
       <h2>Details block examples</h2>
 
-      {% set insetContent %}
+      {% set detailsContent %}
+        <p class="nhsuk-body-l">Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi.</p>
+        <h2>Donec pulvinar sollicitudin</h2>
+        <p>Nulla vitae est vel <em>metus aliquam pharetra</em> vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi. Sed vestibulum quis mi nec volutpat. Proin tristique eleifend volutpat. Maecenas eu magna a sem aliquam luctus. Donec nec metus condimentum, molestie nulla eu, auctor sem. Cras nec arcu sed lorem eleifend pellentesque nec nec ligula.</p>
+        <h3>Duis consequat sem</h3>
+        <p>Nulla <strong>odales</strong> dictum auctor. Donec <a href="#">pulvinar sollicitudin</a> massa, nec pulvinar turpis dictum maximus. Duis consequat sem pretium purus vehicula ultricies. Maecenas sed turpis sed eros euismod consectetur.</p>
+
         {{ insetText({
           HTML: "<p>You can report any suspected side effect to the <a href=\"https://yellowcard.mhra.gov.uk/\" title=\"External website\">UK safety scheme</a>.</p>"
         }) }}
-      {% endset %}
 
-      {{ details({
-        text: "Click here to view Inset example",
-        HTML: insetContent
-      }) }}
-
-      {% set imageContent %}
         {{ image({
           src: "https://digital-transformation.hee.nhs.uk/binaries/content/gallery/digital-transformation/blogs/vr-headsets.jpg",
           alt: "Nulla vitae est vel metus aliquam pharetra",
           caption: "Pellentesque sit amet nulla a nibh"
         }) }}
-      {% endset %}
 
-      {{ details({
-        text: "Click here to view Image example",
-        HTML: imageContent
-      }) }}
-
-      {% set mediaContent %}
         {{ media({
           title: "Pellentesque sit amet nulla",
           description: "Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus.",
@@ -40,28 +32,17 @@
           lastReview: "09/05/2022",
           reviewDue: "09/05/2023"
         }) }}
-      {% endset %}
 
-      {{ details({
-        text: "Click here to view Media example",
-        HTML: mediaContent
-      }) }}
+        {{ actionLink({
+          text: "Find a minor injuries unit",
+          href: "https://www.nhs.uk/service-search/minor-injuries-unit/locationsearch/551"
+        }) }}
 
-      {% set content %}
-        <p class="nhsuk-body-l">Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi.</p>
-        <h2>Donec pulvinar sollicitudin</h2>
-        <p>Nulla vitae est vel <em>metus aliquam pharetra</em> vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi. Sed vestibulum quis mi nec volutpat. Proin tristique eleifend volutpat. Maecenas eu magna a sem aliquam luctus. Donec nec metus condimentum, molestie nulla eu, auctor sem. Cras nec arcu sed lorem eleifend pellentesque nec nec ligula.</p>
-        <h3>Duis consequat sem</h3>
-        <p>Nulla <strong>odales</strong> dictum auctor. Donec <a href="#">pulvinar sollicitudin</a> massa, nec pulvinar turpis dictum maximus. Duis consequat sem pretium purus vehicula ultricies. Maecenas sed turpis sed eros euismod consectetur.</p>
+        {{ actionLink({
+          text: "Find a minor injuries unit",
+          href: "https://www.nhs.uk/service-search/minor-injuries-unit/locationsearch/551"
+        }) }}
 
-      {% endset %}
-
-      {{ details({
-        text: "Click here to view Rich Text example",
-        HTML: content
-      }) }}
-
-      {% set actionLinkContent %}
         {{ actionLink({
           text: "Find a minor injuries unit",
           href: "https://www.nhs.uk/service-search/minor-injuries-unit/locationsearch/551"
@@ -69,98 +50,108 @@
       {% endset %}
 
       {{ details({
-        text: "Click here to view Action Link example",
-        HTML: actionLinkContent
+        text: "Example details block",
+        HTML: detailsContent
       }) }}
 
       <hr />
 
-      {% set textContent %}
+      {% set tabContent %}
         <p class="nhsuk-body-l">Nulla vitae est vel metus aliquam pharetra vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi.</p>
         <h2>Donec pulvinar sollicitudin</h2>
         <p>Nulla vitae est vel <em>metus aliquam pharetra</em> vel quis ipsum. Pellentesque sit amet nulla a nibh elementum interdum at vel mi. Sed vestibulum quis mi nec volutpat. Proin tristique eleifend volutpat. Maecenas eu magna a sem aliquam luctus. Donec nec metus condimentum, molestie nulla eu, auctor sem. Cras nec arcu sed lorem eleifend pellentesque nec nec ligula.</p>
         <h3>Duis consequat sem</h3>
         <p>Nulla <strong>odales</strong> dictum auctor. Donec <a href="#">pulvinar sollicitudin</a> massa, nec pulvinar turpis dictum maximus. Duis consequat sem pretium purus vehicula ultricies. Maecenas sed turpis sed eros euismod consectetur.</p>
-      {% endset %}
 
-      {% set tableContent %}
-        {{ table({
-          tableClasses: 'nhsuk-hee-table',
-          responsive: true,
-          panel: false,
-          caption: "Ibuprofen tablet dosages for children",
-          firstCellIsHeader: false,
-          head: [
+        {{ actionLink({
+          text: "Find a minor injuries unit",
+          href: "https://www.nhs.uk/service-search/minor-injuries-unit/locationsearch/551"
+        }) }}
+
+        {{ actionLink({
+          text: "Find a minor injuries unit",
+          href: "https://www.nhs.uk/service-search/minor-injuries-unit/locationsearch/551"
+        }) }}
+
+        {{ actionLink({
+          text: "Find a minor injuries unit",
+          href: "https://www.nhs.uk/service-search/minor-injuries-unit/locationsearch/551"
+        }) }}
+
+        {{ tableExpander({
+          showToggleLink: true,
+          toggleLabelOpen: "Expand all",
+          toggleLabelClose: "Collapse all",
+          items: [
             {
-              text: "Age"
-            },
-            {
-              text: "How much?"
-            },
-            {
-              text: "How often"
-            },
-            {
-              text: "Extra long column"
-            }
-          ],
-          rows: [
-            [
+              title: "First item",
+              rows: [
               {
-                header: "Age",
-                text: "7 to 9 years"
+                heading: "Defence Medical Services (DMS)",
+                content: "1"
               },
               {
-                header: "How much?",
-                text: "200mg"
+                heading: "No of Posts 2013 - indicitive",
+                content: "7"
               },
               {
-                header: "How often?",
-                text: "Max 3 times in 24 hoursMax 3 times in 24 hoursMax 3 times in 24 hoursMax 3 times in 24 hoursMax 3 times in 24 hours"
+                heading: "Competition ratios 2022 data - Ratio",
+                content: "6 (6:37)"
               },
               {
-                header: "Extra long column",
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed mattis odio. Mauris gravida ipsum sit amet enim volutpat, accumsan dictum quam ornare. "
-              }
-            ],
-            [
-              {
-                header: "Age",
-                text: "10 to 11 years"
-              },
-              {
-                header: "How much?",
-                text: "200mg to 300mg"
-              },
-              {
-                header: "How often?",
-                text: "Max 3 times in 24 hours"
-              },
-              {
-                header: "Extra long column",
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed mattis odio. Mauris gravida ipsum sit amet enim volutpat, accumsan dictum quam ornare. "
-              }
-            ],
-            [
-              {
-                header: "Age",
-                text: "12 to 17 years"
-              },
-              {
-                header: "How much?",
-                text: "200mg to 400mg"
-              },
-              {
-                header: "How often?",
-                text: "Max 3 times in 24 hours"
-              },
-              {
-                header: "Extra long column",
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed mattis odio. Mauris gravida ipsum sit amet enim volutpat, accumsan dictum quam ornare. "
+                heading: "Job/Programme Descriptions",
+                content: "Kent, Surrey and Sussex",
+                href: "http://www.yahoo.com"
               }
             ]
+            },
+            {
+              title: "Second item",
+              rows: [
+              {
+                heading: "Defence Medical Services (DMS)",
+                content: "1"
+              },
+              {
+                heading: "No of Posts 2013 - indicitive",
+                content: "7"
+              },
+              {
+                heading: "Competition ratios 2022 data - Ratio",
+                content: "6 (6:37)"
+              },
+              {
+                heading: "Job/Programme Descriptions",
+                content: "Kent, Surrey and Sussex",
+                href: "http://www.yahoo.com"
+              }
+            ]
+            },
+            {
+              title: "Third item",
+              rows: [
+              {
+                heading: "Defence Medical Services (DMS)",
+                content: "1"
+              },
+              {
+                heading: "No of Posts 2013 - indicitive",
+                content: "7"
+              },
+              {
+                heading: "Competition ratios 2022 data - Ratio",
+                content: "6 (6:37)"
+              },
+              {
+                heading: "Job/Programme Descriptions",
+                content: "Kent, Surrey and Sussex",
+                href: "http://www.yahoo.com"
+              }
+            ]
+            }
           ]
-        })  }}
+        }) }}
+
       {% endset %}
 
       {{ tabs({
@@ -168,21 +159,15 @@
         title: "Tabs examples",
         items: [
           {
-            label: "Rich Text example",
+            label: "Example components",
             panel: {
-              html: textContent
+              html: tabContent
             }
           },
           {
-            label: "Table example",
+            label: "Example components #2",
             panel: {
-              html: tableContent
-            }
-          },
-          {
-            label: "Action Link example",
-            panel: {
-              html: actionLinkContent
+              html: tabContent
             }
           }
         ]
@@ -195,37 +180,7 @@
       {{ details({
         classes: "nhsuk-expander",
         text: "Click here to view Inset example",
-        HTML: insetContent
-      }) }}
-
-      {{ details({
-        classes: "nhsuk-expander",
-        text: "Click here to view Image example",
-        HTML: imageContent
-      }) }}
-
-      {{ details({
-        classes: "nhsuk-expander",
-        text: "Click here to view Media example",
-        HTML: mediaContent
-      }) }}
-
-      {{ details({
-        classes: "nhsuk-expander",
-        text: "Click here to view Rich Text example",
-        HTML: textContent
-      }) }}
-
-      {{ details({
-        classes: "nhsuk-expander",
-        text: "Click here to view Table example",
-        HTML: tableContent
-      }) }}
-
-      {{ details({
-        classes: "nhsuk-expander",
-        text: "Click here to view Action Link example",
-        HTML: actionLinkContent
+        HTML: detailsContent
       }) }}
 
     </div>
