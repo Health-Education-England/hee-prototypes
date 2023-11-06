@@ -3,12 +3,29 @@
 This codebase contains the assets, components, templates ant tooling used to compile the frontend for Health Education 
 England's (HEE) different websites / channels.
 
+The compiled prototype is hosted on GitHub Pages, and can be viewed here: 
+[https://health-education-england.github.io/hee-prototypes/](https://health-education-england.github.io/hee-prototypes/)
+
 It is based off the [NHS UK prototype kit](https://github.com/nhsuk/nhsuk-frontend), making use of existing components 
 and styles where possible. You can find more information on the NHS UK design system and it's components [here.](https://service-manual.nhs.uk/design-system)
 
-## TODO: Table of contents here
+## Table of contents
+1. [Prerequisites](#prerequisites)
+2. [Getting started](#getting-started)
+   1. [Contributing your work](#contributing)
+3. [Tooling](#tooling)
+4. [Makefile commands](#makefile)
+5. [Codebase structure](#codebase)
+   1. [App](#codebase-app)
+      1. [Assets](#codebase-app-assets)
+      2. [Views](#codebase-app-views)
+   2. [Tasks](#codebase-tasks)
+   3. [Tests](#codebase-tests)
+6. [CI / CD pipeline](#ci-cd)
+7. [Hosting](#hosting)
 
 ## Prerequisites 
+<a name="prerequisites"></a>
 
 In order to install and configure the prototype on your local machine, there are a few prerequisite tools to install:
 
@@ -21,6 +38,7 @@ In order to install and configure the prototype on your local machine, there are
 All other build and testing tools are run within their respective docker containers, so don't need to be installed locally.
 
 ## Getting started
+<a name="getting-started"></a>
 
 To get the prototype up and running you first need to run: 
 
@@ -42,6 +60,7 @@ or
 (_This watches all `*.scss` `*.js` `*.njk` and `*.html` files, and rebuilds and reloads the browser when a change is detected_)
 
 ### Contributing your work
+<a name="contributing"></a>
 
 Before starting on your first piece of work, please see [CONTRIBUTING.md](https://github.com/Health-Education-England/hee-prototypes/blob/master/CONTRIBUTING.md)
 for guidelines and best practices regarding HEE branching strategies etc. **-TODO FLESH OUT THIS DOC--**
@@ -60,8 +79,11 @@ The HEE prototype uses the following tech / tooling to compile and serve the pro
 - [Webpack](https://webpack.js.org/)
 - [BackstopJS](https://garris.github.io/BackstopJS/) (visual regression testing)
 - [Playwright](https://playwright.dev/) (end to end javascript testing)
+- [GitHub Actions](https://github.com/features/actions) (CI / CD pipeline)
+- [GitHub Pages](https://pages.github.com/) 
 
 ## Makefile commands
+<a name="makefile"></a>
 
 We make use of a `Makefile` for a better developer experience when working with the docker containers within the HEE
 prototype.
@@ -88,10 +110,12 @@ Below is a complete list of all the commands and their purposes:
 `run-tests` - **Runs BackstopJS and Playwright tests. See more details in the Testing section - TODO LINK HERE.**
 
 ## Codebase structure
+<a name="codebase"></a>
 
 Below is a high level summary of the codebase structure:
 
 ### App
+<a name="codebase-app"></a>
 
 ```bash
 .
@@ -101,6 +125,7 @@ Below is a high level summary of the codebase structure:
 ```
 
 #### Assets
+<a name="codebase-app-assets"></a>
 
 `/app/assets/hee`
 
@@ -116,6 +141,7 @@ Contains all styling and JS logic related to the serving of the actual prototype
 are not used in any HEE channels, but are used to display the prototype navigation, component / template previews etc.
 
 #### Views
+<a name="codebase-app-views"></a>
 
 `/app/views`
 
@@ -123,6 +149,7 @@ Contains all the Nunjucks templates which are eventually compiled into flat HTML
 to render the HEE prototype in browser.
 
 ### Tasks
+<a name="codebase-tasks"></a>
 
 Contains all the Gulp task runners, pertaining to specific parts of the build process:
 
@@ -140,7 +167,8 @@ Contains all the Gulp task runners, pertaining to specific parts of the build pr
 
 For more information on the Gulp build process, please see the [README](https://github.com/Health-Education-England/hee-prototypes/blob/master/tasks/README.md) within the tasks directory.
 
-## Tests
+### Tests
+<a name="codebase-tests"></a>
 
 As mentioned in the [Tooling](#tooling) section there are two types of tests run against all HEE components and templates:
 
@@ -156,3 +184,20 @@ For a deeper dive on how to write and run your own tests, please see the [README
 │   └── README.md
 ```
 
+## CI / CD pipeline
+<a name="ci-cd"></a>
+
+We make use of Github Actions for our CI/CD pipeline. The prototype is compiled, tested and published using GitHub 
+Action workflows.
+
+For a full outline on the CI/CD build, please see the [README](https://github.com/Health-Education-England/hee-prototypes/blob/master/.github/README.md) 
+within the `.github` directory.
+
+## Hosting
+<a name="hosting"></a>
+
+The compiled prototype is hosted using [GitHub Pages](https://pages.github.com/) and can be viewed here:
+[https://health-education-england.github.io/hee-prototypes/](https://health-education-england.github.io/hee-prototypes/)
+
+GH Pages have been configured to serve the prototype from the `gh-pages` branch, but the publishing of updates is 
+handled in the CI / CD pipeline process above, and should not be updated manually. 
