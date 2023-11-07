@@ -11,7 +11,7 @@ test('Filter tags: tag removal', async ({ page }) => {
   await expect(pageHeader).toBeInViewport();
 
   // Click the Dental Professionals filter tag.
-  let tag = page.locator('div[data-filter="dental_professionals"]');
+  let tag = page.locator('div[data-filter="dental-professionals"]');
   await tag.click();
 
   // Check resulting URL.
@@ -27,7 +27,7 @@ test('Filter tags: tag removal', async ({ page }) => {
   await tag.click();
 
   // Check resulting URL.
-  await expect(page).toHaveURL(new RegExp('.html\\?profession=dental_professionals&sub_profession=dental_nurse&publication_type=guidance&results_updated=true$'));
+  await expect(page).toHaveURL(new RegExp('.html\\?profession=dental-professionals&sub_profession=dental-nurse&publication_type=guidance&results_updated=true$'));
 
   // Ensure submit button is not visible on page load as per javascript logic.
   await expect(page.locator('.hee-listing__filter__submit')).not.toBeVisible();

@@ -1,5 +1,10 @@
 {% extends "example-template-leftbar.html" %}
 
+{% import 'includes/_taxonomy-profession.html' as taxonomyProfession %}
+{% import 'includes/_taxonomy-sub-profession.html' as taxonomySubProfession %}
+{% import 'includes/_taxonomy-topic.html' as taxonomyTopic %}
+{% import 'includes/_taxonomy-sub-topic.html' as taxonomySubTopic %}
+
 {% block pageTitle %}Publications Collection - Examples - NWP Prototype Kit{% endblock %}
 
 {% block pageBreadcrumbs %}
@@ -33,52 +38,12 @@
         name: "profession",
         title: "Profession",
         showClearToggle: true,
-        items: [
-          {
-            text: "All professions",
-            value: ""
-          },
-          {
-            text: "Allied health professionals",
-            value: "allied_health_professionals"
-          },
-          {
-            text: "Dental professionals",
-            value: "dental_professionals",
-            selected: true
-          },
-          {
-            text: "Medical doctors",
-            value: "medical_doctors"
-          },
-          {
-            text: "Public health professionals",
-            value: "public_health_professionals"
-          }
-        ],
+        items: taxonomyProfession.items,
         subGroup: {
-          type: "selectbox",
+          type: "select",
           name: "sub_profession",
           title: "Sub profession",
-          items: [
-            {
-              text: "All sub professions",
-              value: ""
-            },
-            {
-              text: "Dental nurse",
-              value: "dental_nurse",
-              selected: true
-            },
-            {
-              text: "Dental therapist",
-              value: "dental_therapist"
-            },
-            {
-              text: "Dentist",
-              value: "dentist"
-            }
-          ]
+          items: taxonomySubProfession.items
         }
       },
       {
@@ -122,6 +87,19 @@
             value: "policy_strategy"
           }
         ]
+      },
+      {
+        type: "select",
+        name: "topic",
+        title: "Topic",
+        showClearToggle: true,
+        items: taxonomyTopic.items,
+        subGroup: {
+          type: "select",
+          name: "sub_topic",
+          title: "Sub topic",
+          items: taxonomySubTopic.items
+        }
       }
     ]
   }) }}
@@ -182,11 +160,11 @@
         items: [
           {
             text: "Dental professionals",
-            value: "dental_professionals"
+            value: "dental-professionals"
           },
           {
             text: "Dental nurse",
-            value: "dental_nurse"
+            value: "dental-nurse"
           }
         ]
       },
@@ -200,6 +178,19 @@
           {
             text: "Guidance",
             value: "guidance"
+          }
+        ]
+      },
+      {
+        label: "Topic",
+        items: [
+          {
+            text: "Cosmetic procedures",
+            value: "cosmetic-procedures"
+          },
+          {
+            text: "Funding",
+            value: "funding"
           }
         ]
       }
