@@ -1,7 +1,9 @@
 {% extends "example-template-leftbar.html" %}
 
 {% import 'includes/_taxonomy-profession.html' as taxonomyProfession %}
+{% import 'includes/_taxonomy-sub-profession.html' as taxonomySubProfession %}
 {% import 'includes/_taxonomy-topic.html' as taxonomyTopic %}
+{% import 'includes/_taxonomy-sub-topic.html' as taxonomySubTopic %}
 
 {% block pageTitle %}News Collection - Examples - NWP Prototype Kit{% endblock %}
 
@@ -31,16 +33,30 @@
   {{ filter({
     groups: [
       {
-        title: "Topic",
-        name: "topic",
+        type: "select",
+        name: "profession",
+        title: "Profession",
         showClearToggle: true,
-        items: taxonomyTopic.items
+        items: taxonomyProfession.items,
+        subGroup: {
+          type: "select",
+          name: "sub_profession",
+          title: "Sub profession",
+          items: taxonomySubProfession.items
+        }
       },
       {
-        title: "Profession",
-        name: "profession",
+        type: "select",
+        name: "topic",
+        title: "Topic",
         showClearToggle: true,
-        items: taxonomyProfession.items
+        items: taxonomyTopic.items,
+        subGroup: {
+          type: "select",
+          name: "sub_topic",
+          title: "Sub topic",
+          items: taxonomySubTopic.items
+        }
       }
     ]
   }) }}
@@ -93,6 +109,19 @@
     },
     tags: [
       {
+        label: "Profession",
+        items: [
+          {
+            text: "Dental professionals",
+            value: "dental-professionals"
+          },
+          {
+            text: "Dental nurse",
+            value: "dental-nurse"
+          }
+        ]
+      },
+      {
         label: "Topic",
         items: [
           {
@@ -100,21 +129,8 @@
             value: "cosmetic-procedures"
           },
           {
-            text: "Medicines optimisation",
-            value: "medicines-optimisation"
-          }
-        ]
-      },
-      {
-        label: "Profession",
-        items: [
-          {
-            text: "Healthcare scientists",
-            value: "healthcare-scientists"
-          },
-          {
-            text: "Management professionals",
-            value: "management-professionals"
+            text: "Funding",
+            value: "funding"
           }
         ]
       }
