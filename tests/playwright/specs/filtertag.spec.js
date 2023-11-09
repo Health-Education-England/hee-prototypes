@@ -15,7 +15,7 @@ test('Filter tags: tag removal', async ({ page }) => {
   await tag.click();
 
   // Check resulting URL.
-  await expect(page).toHaveURL(new RegExp('.html\\?profession=&sub_profession=&publication_type=consultation&publication_type=guidance&results_updated=true$'));
+  await expect(page).toHaveURL(new RegExp('.html\\?publication_type=consultation&publication_type=guidance&profession=&sub_profession=&topic=cosmetic-procedures&sub_topic=funding&results_updated=true$'));
 
   // Ensure submit button is not visible on page load as per javascript logic.
   await expect(page.locator('.hee-listing__filter__submit')).not.toBeVisible();
@@ -27,7 +27,7 @@ test('Filter tags: tag removal', async ({ page }) => {
   await tag.click();
 
   // Check resulting URL.
-  await expect(page).toHaveURL(new RegExp('.html\\?profession=dental-professionals&sub_profession=dental-nurse&publication_type=guidance&results_updated=true$'));
+  await expect(page).toHaveURL(new RegExp('.html\\?publication_type=guidance&profession=dental-professionals&sub_profession=dental-nurse&topic=cosmetic-procedures&sub_topic=funding&results_updated=true$'));
 
   // Ensure submit button is not visible on page load as per javascript logic.
   await expect(page.locator('.hee-listing__filter__submit')).not.toBeVisible();
