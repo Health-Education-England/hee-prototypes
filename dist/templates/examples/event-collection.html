@@ -171,20 +171,21 @@
             <div class="nhsuk-filter__group">
               <a class="nhsuk-filter__group__clear" href="#">Clear</a>
               <div class="nhsuk-form-group">
-                <fieldset class="nhsuk-fieldset">
+                <fieldset class="nhsuk-fieldset" aria-describedby="filter_year-hint">
                   <legend class="nhsuk-fieldset__legend"> Year </legend>
+                  <div class="nhsuk-hint" id="filter_year-hint"> 0 selected </div>
                   <div class="nhsuk-checkboxes">
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Year-1" name="filter" type="checkbox" value="2023" checked>
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Year-1"> 2023 </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_year-1" name="publication_type" type="checkbox" value="2023" checked>
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_year-1"> 2023 </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Year-2" name="filter" type="checkbox" value="2022" checked>
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Year-2"> 2022 </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_year-2" name="publication_type" type="checkbox" value="2022" checked>
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_year-2"> 2022 </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Year-3" name="filter" type="checkbox" value="2021">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Year-3"> 2021 </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_year-3" name="publication_type" type="checkbox" value="2021">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_year-3"> 2021 </label>
                     </div>
                   </div>
                 </fieldset>
@@ -217,13 +218,16 @@
                 </form>
               </div>
               <div class="hee-listing__tags">
-                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="2023">
-                  <span>2023</span>
-                  <a class="nhsuk-filter-tag__icon">Remove</a>
-                </div>
-                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="2022">
-                  <span>2022</span>
-                  <a class="nhsuk-filter-tag__icon">Remove</a>
+                <div class="hee-listing__tags__group">
+                  <label>Year: </label>
+                  <div class="nhsuk-filter-tag nhsuk-tag" data-filter="2023">
+                    <span>2023</span>
+                    <a class="nhsuk-filter-tag__icon">Remove</a>
+                  </div>
+                  <div class="nhsuk-filter-tag nhsuk-tag" data-filter="2022">
+                    <span>2022</span>
+                    <a class="nhsuk-filter-tag__icon">Remove</a>
+                  </div>
                 </div>
               </div>
             </div>

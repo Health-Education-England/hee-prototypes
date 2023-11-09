@@ -171,28 +171,29 @@
             <div class="nhsuk-filter__group">
               <a class="nhsuk-filter__group__clear" href="#">Clear</a>
               <div class="nhsuk-form-group">
-                <fieldset class="nhsuk-fieldset">
+                <fieldset class="nhsuk-fieldset" aria-describedby="filter_category-hint">
                   <legend class="nhsuk-fieldset__legend"> Category </legend>
+                  <div class="nhsuk-hint" id="filter_category-hint"> 0 selected </div>
                   <div class="nhsuk-checkboxes">
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Category-1" name="filter" type="checkbox" value="all_staff">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-1"> All Staff </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_category-1" name="publication_type" type="checkbox" value="all_staff">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_category-1"> All Staff </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Category-2" name="filter" type="checkbox" value="additional_clinical_services" checked>
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-2"> Additional Clinical Services </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_category-2" name="publication_type" type="checkbox" value="additional_clinical_services" checked>
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_category-2"> Additional Clinical Services </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Category-3" name="filter" type="checkbox" value="admin_clerical">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-3"> Admin and Clerical </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_category-3" name="publication_type" type="checkbox" value="admin_clerical">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_category-3"> Admin and Clerical </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Category-4" name="filter" type="checkbox" value="healthcare_scientists" checked>
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-4"> Healthcare Scientists </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_category-4" name="publication_type" type="checkbox" value="healthcare_scientists" checked>
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_category-4"> Healthcare Scientists </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Category-5" name="filter" type="checkbox" value="nursing_midwifery" checked>
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-5"> Nursing and Midwifery </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_category-5" name="publication_type" type="checkbox" value="nursing_midwifery" checked>
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_category-5"> Nursing and Midwifery </label>
                     </div>
                   </div>
                 </fieldset>
@@ -225,17 +226,20 @@
                 </form>
               </div>
               <div class="hee-listing__tags">
-                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="nursing_midwifery">
-                  <span>Nursing and Midwifery</span>
-                  <a class="nhsuk-filter-tag__icon">Remove</a>
-                </div>
-                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="healthcare_scientists">
-                  <span>Healthcare Scientists</span>
-                  <a class="nhsuk-filter-tag__icon">Remove</a>
-                </div>
-                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="additional_clinical_services">
-                  <span>Additional Clinical Services</span>
-                  <a class="nhsuk-filter-tag__icon">Remove</a>
+                <div class="hee-listing__tags__group">
+                  <label>Category: </label>
+                  <div class="nhsuk-filter-tag nhsuk-tag" data-filter="nursing_midwifery">
+                    <span>Nursing and Midwifery</span>
+                    <a class="nhsuk-filter-tag__icon">Remove</a>
+                  </div>
+                  <div class="nhsuk-filter-tag nhsuk-tag" data-filter="healthcare_scientists">
+                    <span>Healthcare Scientists</span>
+                    <a class="nhsuk-filter-tag__icon">Remove</a>
+                  </div>
+                  <div class="nhsuk-filter-tag nhsuk-tag" data-filter="additional_clinical_services">
+                    <span>Additional Clinical Services</span>
+                    <a class="nhsuk-filter-tag__icon">Remove</a>
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,5 +1,11 @@
 {% extends "example-template-leftbar.html" %}
 
+{% import 'includes/_taxonomy-profession.html' as taxonomyProfession %}
+{% import 'includes/_taxonomy-sub-profession.html' as taxonomySubProfession %}
+{% import 'includes/_taxonomy-topic.html' as taxonomyTopic %}
+{% import 'includes/_taxonomy-sub-topic.html' as taxonomySubTopic %}
+{% import 'includes/_taxonomy-tags.html' as taxonomyTags %}
+
 {% block pageTitle %}Blog Collection - Examples - NWP Prototype Kit{% endblock %}
 
 {% block breadcrumbs %}
@@ -7,11 +13,11 @@
   breadcrumb({
     items: [
       {
-        href: "/",
+        href: basePath + "/",
         text: "Home"
       }
     ],
-    href: "/templates/examples/news-collection",
+    href: basePath + "/templates/examples/news-collection",
     text: "News Collection"
   })
   }}
@@ -28,30 +34,37 @@
   {{ filter({
     groups: [
       {
-        title: "Category",
+        type: "select",
+        name: "profession",
+        title: "Profession",
         showClearToggle: true,
-        items: [
-        {
-          text: "Learning and development",
-          value: "item_one",
-          checked: true
-        },
-        {
-          text: "School leavers",
-          value: "item_two",
-          checked: true
-        },
-        {
-          text: "Graduates",
-          value: "graduates",
-          checked: false
-        },
-        {
-          text: "Blended learning",
-          value: "blended",
-          checked: false
+        items: taxonomyProfession.items,
+          subGroup: {
+          type: "select",
+          name: "sub_profession",
+          title: "Sub profession",
+          items: taxonomySubProfession.items
         }
-      ]
+      },
+      {
+        type: "select",
+        name: "topic",
+        title: "Topic",
+        showClearToggle: true,
+        items: taxonomyTopic.items,
+          subGroup: {
+          type: "select",
+          name: "sub_topic",
+          title: "Sub topic",
+          items: taxonomySubTopic.items
+        }
+      },
+      {
+        type: "checkbox",
+        title: "Tag",
+        name: "tag",
+        showClearToggle: true,
+        items: taxonomyTags.items
       }
     ]
   }) }}
@@ -88,12 +101,12 @@
       href: "#",
       details: [
         {
-          label: "Blog type:",
-          value: "Briefing, Learning and development, School leavers and Graduates"
+          label: "Published date:",
+          value: "12 July 2023"
         },
         {
-          label: "Publish date:",
-          value: "07 September 2022"
+          label: "Author(s):",
+          value: "James Smith"
         }
       ],
       summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
@@ -108,12 +121,43 @@
     },
     tags: [
       {
-        text: "Learning and development",
-        value: "learning-development"
+        label: "Profession",
+        items: [
+          {
+            text: "Dental professionals",
+            value: "dental-professionals"
+          },
+          {
+            text: "Dental nurse",
+            value: "dental-nurse"
+          }
+        ]
       },
       {
-        text: "School leavers",
-        value: "school-leavers"
+        label: "Topic",
+        items: [
+          {
+            text: "Cosmetic procedures",
+            value: "cosmetic-procedures"
+          },
+          {
+            text: "Funding",
+            value: "funding"
+          }
+        ]
+      },
+      {
+        label: "Tag",
+        items: [
+          {
+            text: "Innovation",
+            value: "innovation"
+          },
+          {
+            text: "Occupational frameworks",
+            value: "occupational-frameworks"
+          }
+        ]
       }
     ],
     results: items,
