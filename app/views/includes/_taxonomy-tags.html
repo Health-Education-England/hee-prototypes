@@ -1,0 +1,321 @@
+{% set items = [
+  {
+    text: "Advocacy",
+    value: "advocacy"
+  },
+  {
+    text: "Apprenticeship",
+    value: "apprenticeship"
+  },
+  {
+    text: "Artificial intelligence and robotics",
+    value: "artificial-intelligence-and-robotics"
+  },
+  {
+    text: "Authentication",
+    value: "authentication"
+  },
+  {
+    text: "Best practice",
+    value: "best-practice"
+  },
+  {
+    text: "Blended learning",
+    value: "blended-learning"
+  },
+  {
+    text: "Board development",
+    value: "board-development"
+  },
+  {
+    text: "Bursaries, grants and awards",
+    value: "bursaries,-grants-and-awards"
+  },
+  {
+    text: "Cataloguing",
+    value: "cataloguing"
+  },
+  {
+    text: "Circulation and counter activities",
+    value: "circulation-and-counter-activities"
+  },
+  {
+    text: "Collaboration and partnership",
+    value: "collaboration-and-partnership"
+  },
+  {
+    text: "Consultation",
+    value: "consultation"
+  },
+  {
+    text: "COVID-19",
+    value: "covid-19"
+  },
+  {
+    text: "Continuing professional development",
+    value: "continuing-professional-development"
+  },
+  {
+    text: "Copyright and licensing",
+    value: "copyright-and-licensing"
+  },
+  {
+    text: "Databases",
+    value: "databases"
+  },
+  {
+    text: "Development needs",
+    value: "development-needs"
+  },
+  {
+    text: "Digital capability frameworks",
+    value: "digital-capability-frameworks"
+  },
+  {
+    text: "Digital health leadership",
+    value: "digital-health-leadership"
+  },
+  {
+    text: "Digital literacy",
+    value: "digital-literacy"
+  },
+  {
+    text: "Digital roles and career pathways",
+    value: "digital-roles-and-career-pathways"
+  },
+  {
+    text: "Discovery",
+    value: "discovery"
+  },
+  {
+    text: "Electronic resources",
+    value: "electronic-resources"
+  },
+  {
+    text: "Emerging technology",
+    value: "emerging-technology"
+  },
+  {
+    text: "Equality, impact and diversity",
+    value: "equality,-impact-and-diversity"
+  },
+  {
+    text: "Evaluation framework",
+    value: "evaluation-framework"
+  },
+  {
+    text: "Events",
+    value: "events"
+  },
+  {
+    text: "Evidence and knowledge self assessments",
+    value: "evidence-and-knowledge-self-assessments"
+  },
+  {
+    text: "Fellowships and scholarships",
+    value: "fellowships-and-scholarships"
+  },
+  {
+    text: "Finance",
+    value: "finance"
+  },
+  {
+    text: "Graduates",
+    value: "graduates"
+  },
+  {
+    text: "Communities of practice",
+    value: "communities-of-practice"
+  },
+  {
+    text: "Health literacy",
+    value: "health-literacy"
+  },
+  {
+    text: "Help and guidance",
+    value: "help-and-guidance"
+  },
+  {
+    text: "Impact and value",
+    value: "impact-and-value"
+  },
+  {
+    text: "Industry",
+    value: "industry"
+  },
+  {
+    text: "Innovation",
+    value: "innovation",
+    checked: true
+  },
+  {
+    text: "Inter-library loan and document supply",
+    value: "inter-library-loan-and-document-supply"
+  },
+  {
+    text: "Knowledge for Healthcare",
+    value: "knowledge-for-healthcare"
+  },
+  {
+    text: "Learning and development",
+    value: "learning-and-development"
+  },
+  {
+    text: "Learning zone",
+    value: "learning-zone"
+  },
+  {
+    text: "LibKey Nomad",
+    value: "libkey-nomad"
+  },
+  {
+    text: "Library management systems",
+    value: "library-management-systems"
+  },
+  {
+    text: "Literature searching",
+    value: "literature-searching"
+  },
+  {
+    text: "Managing talent",
+    value: "managing-talent"
+  },
+  {
+    text: "Marketing and campaigns",
+    value: "marketing-and-campaigns"
+  },
+  {
+    text: "Mentoring",
+    value: "mentoring"
+  },
+  {
+    text: "Mergers",
+    value: "mergers"
+  },
+  {
+    text: "Mobilising evidence and knowledge",
+    value: "mobilising-evidence-and-knowledge"
+  },
+  {
+    text: "Networking",
+    value: "networking"
+  },
+  {
+    text: "NHS and healthcare systems",
+    value: "nhs-and-healthcare-systems"
+  },
+  {
+    text: "NHS Digital Academy",
+    value: "nhs-digital-academy"
+  },
+  {
+    text: "Occupational frameworks",
+    value: "occupational-frameworks",
+    checked: true
+  },
+  {
+    text: "Open access",
+    value: "open-access"
+  },
+  {
+    text: "Patient information",
+    value: "patient-information"
+  },
+  {
+    text: "Professional Knowledge and Skills Base (PKSB)",
+    value: "professional-knowledge-and-skills-base-(pksb)"
+  },
+  {
+    text: "Placements",
+    value: "placements"
+  },
+  {
+    text: "Policy",
+    value: "policy"
+  },
+  {
+    text: "Professional networks",
+    value: "professional-networks"
+  },
+  {
+    text: "Quality",
+    value: "quality"
+  },
+  {
+    text: "Quality and Improvement Outcomes",
+    value: "quality-and-improvement-outcomes"
+  },
+  {
+    text: "Regional Skills Development Networks",
+    value: "regional-skills-development-networks"
+  },
+  {
+    text: "Repositories",
+    value: "repositories"
+  },
+  {
+    text: "Research",
+    value: "research"
+  },
+  {
+    text: "Resource Discovery",
+    value: "resource-discovery"
+  },
+  {
+    text: "School leavers",
+    value: "school-leavers"
+  },
+  {
+    text: "Service delivery",
+    value: "service-delivery"
+  },
+  {
+    text: "Social care",
+    value: "social-care"
+  },
+  {
+    text: "Statistics and data",
+    value: "statistics-and-data"
+  },
+  {
+    text: "Strategy",
+    value: "strategy"
+  },
+  {
+    text: "Streamlining",
+    value: "streamlining"
+  },
+  {
+    text: "Sustainability",
+    value: "sustainability"
+  },
+  {
+    text: "Tools and techniques",
+    value: "tools-and-techniques"
+  },
+  {
+    text: "Training",
+    value: "training"
+  },
+  {
+    text: "Use of technology",
+    value: "use-of-technology"
+  },
+  {
+    text: "User experience",
+    value: "user-experience"
+  },
+  {
+    text: "Wellbeing",
+    value: "wellbeing"
+  },
+  {
+    text: "Wider profession",
+    value: "wider-profession"
+  },
+  {
+    text: "Workforce",
+    value: "workforce"
+  }
+]
+%}

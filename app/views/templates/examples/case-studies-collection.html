@@ -29,6 +29,7 @@
     groups: [
       {
         title: "Category",
+        name: "category",
         showClearToggle: true,
           items: [
           {
@@ -136,16 +137,21 @@
     },
     tags: [
       {
-        text: "Nursing and Midwifery",
-        value: "nursing_midwifery"
-      },
-      {
-        text: "Healthcare Scientists",
-        value: "healthcare_scientists"
-      },
-      {
-        text: "Additional Clinical Services",
-        value: "additional_clinical_services"
+        label: "Category",
+        items: [
+          {
+            text: "Nursing and Midwifery",
+            value: "nursing_midwifery"
+          },
+          {
+            text: "Healthcare Scientists",
+            value: "healthcare_scientists"
+          },
+          {
+            text: "Additional Clinical Services",
+            value: "additional_clinical_services"
+          }
+        ]
       }
     ],
     results: items,

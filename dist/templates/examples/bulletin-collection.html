@@ -85,7 +85,7 @@
           </div>
         </div>
       </div>
-      <nav class="nhsuk-header__navigation nhsuk-header__navigation--more-items" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
+      <nav class="nhsuk-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
         <div class="nhsuk-width-container">
           <p class="nhsuk-header__navigation-title"><span id="label-navigation">Menu</span>
             <button class="nhsuk-header__navigation-close" id="close-menu">
@@ -171,24 +171,25 @@
             <div class="nhsuk-filter__group">
               <a class="nhsuk-filter__group__clear" href="#">Clear</a>
               <div class="nhsuk-form-group">
-                <fieldset class="nhsuk-fieldset">
+                <fieldset class="nhsuk-fieldset" aria-describedby="filter_category-hint">
                   <legend class="nhsuk-fieldset__legend"> Category </legend>
+                  <div class="nhsuk-hint" id="filter_category-hint"> 0 selected </div>
                   <div class="nhsuk-checkboxes">
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Category-1" name="filter" type="checkbox" value="evidence_resource_searching" checked>
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-1"> Evidence and resources, Searching </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_category-1" name="publication_type" type="checkbox" value="evidence_resource_searching" checked>
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_category-1"> Evidence and resources, Searching </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Category-2" name="filter" type="checkbox" value="child_health">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-2"> Child Health </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_category-2" name="publication_type" type="checkbox" value="child_health">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_category-2"> Child Health </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Category-3" name="filter" type="checkbox" value="medical_oncology" checked>
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-3"> Medical Oncology </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_category-3" name="publication_type" type="checkbox" value="medical_oncology" checked>
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_category-3"> Medical Oncology </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Category-4" name="filter" type="checkbox" value="covid" checked>
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Category-4"> COVID-19 </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_category-4" name="publication_type" type="checkbox" value="covid" checked>
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_category-4"> COVID-19 </label>
                     </div>
                   </div>
                 </fieldset>
@@ -221,17 +222,20 @@
                 </form>
               </div>
               <div class="hee-listing__tags">
-                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="evidence-resources-searching">
-                  <span>Evidence and resources, Searching</span>
-                  <a class="nhsuk-filter-tag__icon">Remove</a>
-                </div>
-                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="medical-oncology">
-                  <span>Medical Oncology</span>
-                  <a class="nhsuk-filter-tag__icon">Remove</a>
-                </div>
-                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="covid">
-                  <span>COVID-19</span>
-                  <a class="nhsuk-filter-tag__icon">Remove</a>
+                <div class="hee-listing__tags__group">
+                  <label>Category: </label>
+                  <div class="nhsuk-filter-tag nhsuk-tag" data-filter="evidence-resources-searching">
+                    <span>Evidence and resources, Searching</span>
+                    <a class="nhsuk-filter-tag__icon">Remove</a>
+                  </div>
+                  <div class="nhsuk-filter-tag nhsuk-tag" data-filter="medical-oncology">
+                    <span>Medical Oncology</span>
+                    <a class="nhsuk-filter-tag__icon">Remove</a>
+                  </div>
+                  <div class="nhsuk-filter-tag nhsuk-tag" data-filter="covid">
+                    <span>COVID-19</span>
+                    <a class="nhsuk-filter-tag__icon">Remove</a>
+                  </div>
                 </div>
               </div>
             </div>
