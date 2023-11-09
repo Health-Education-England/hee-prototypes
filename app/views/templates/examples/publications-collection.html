@@ -34,19 +34,6 @@
   {{ filter({
     groups: [
       {
-        type: "select",
-        name: "profession",
-        title: "Profession",
-        showClearToggle: true,
-        items: taxonomyProfession.items,
-        subGroup: {
-          type: "select",
-          name: "sub_profession",
-          title: "Sub profession",
-          items: taxonomySubProfession.items
-        }
-      },
-      {
         type: "checkbox",
         title: "Publication type",
         name: "publication_type",
@@ -87,6 +74,19 @@
             value: "policy_strategy"
           }
         ]
+      },
+      {
+        type: "select",
+        name: "profession",
+        title: "Profession",
+        showClearToggle: true,
+        items: taxonomyProfession.items,
+        subGroup: {
+          type: "select",
+          name: "sub_profession",
+          title: "Sub profession",
+          items: taxonomySubProfession.items
+        }
       },
       {
         type: "select",
@@ -156,6 +156,19 @@
     },
     tags: [
       {
+        label: "Publication type",
+        items: [
+          {
+            text: "Consultation",
+            value: "consultation"
+          },
+          {
+            text: "Guidance",
+            value: "guidance"
+          }
+        ]
+      },
+      {
         label: "Profession",
         items: [
           {
@@ -165,19 +178,6 @@
           {
             text: "Dental nurse",
             value: "dental-nurse"
-          }
-        ]
-      },
-      {
-        label: "Publication",
-        items: [
-          {
-            text: "Consultation",
-            value: "consultation"
-          },
-          {
-            text: "Guidance",
-            value: "guidance"
           }
         ]
       },
