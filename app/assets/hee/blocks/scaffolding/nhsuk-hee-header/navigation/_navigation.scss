@@ -58,7 +58,6 @@
   }
 }
 
-
 @include mq($until: large-desktop) {
   .nhsuk-header__navigation-item {
     display: block;
@@ -66,28 +65,6 @@
   .nhsuk-header__navigation {
     .nhsuk-width-container {
       margin: 0;
-    }
-  }
-}
-
-.nhsuk-header__navigation--more-items {
-  .nhsuk-header__navigation-list {
-    display: block;
-
-    @include mq($from: large-desktop) {
-      display: flex;
-      justify-content: space-between;
-      align-items: stretch;
-    }
-  }
-  .nhsuk-header__navigation-item {
-    display: block;
-
-    @include mq($from: large-desktop) {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
     }
   }
 }

@@ -85,7 +85,7 @@
           </div>
         </div>
       </div>
-      <nav class="nhsuk-header__navigation nhsuk-header__navigation--more-items" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
+      <nav class="nhsuk-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
         <div class="nhsuk-width-container">
           <p class="nhsuk-header__navigation-title"><span id="label-navigation">Menu</span>
             <button class="nhsuk-header__navigation-close" id="close-menu">
@@ -160,41 +160,148 @@
             <div class="nhsuk-filter__group">
               <a class="nhsuk-filter__group__clear" href="#">Clear</a>
               <div class="nhsuk-form-group">
-                <fieldset class="nhsuk-fieldset">
-                  <legend class="nhsuk-fieldset__legend"> Topic </legend>
+                <fieldset class="nhsuk-fieldset" aria-describedby="filter_publication_type-hint">
+                  <legend class="nhsuk-fieldset__legend"> Publication type </legend>
+                  <div class="nhsuk-hint" id="filter_publication_type-hint"> 0 selected </div>
                   <div class="nhsuk-checkboxes">
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Topic-1" name="filter" type="checkbox" value="item_one">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Topic-1"> Item one </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_publication_type-1" name="publication_type" type="checkbox" value="briefing">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_publication_type-1"> Briefing [4] </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Topic-2" name="filter" type="checkbox" value="item_two" checked>
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Topic-2"> Item two </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_publication_type-2" name="publication_type" type="checkbox" value="consultation" checked>
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_publication_type-2"> Consultation [1] </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="filter_publication_type-3" name="publication_type" type="checkbox" value="data_statistics">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_publication_type-3"> Data and statistics [7] </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="filter_publication_type-4" name="publication_type" type="checkbox" value="foi_release">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_publication_type-4"> FOI release [12] </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="filter_publication_type-5" name="publication_type" type="checkbox" value="guidance" checked>
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_publication_type-5"> Guidance [22] </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="filter_publication_type-6" name="publication_type" type="checkbox" value="independent_report">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_publication_type-6"> Independent report [4] </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="filter_publication_type-7" name="publication_type" type="checkbox" value="letter">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_publication_type-7"> Letter [1] </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="filter_publication_type-8" name="publication_type" type="checkbox" value="policy_strategy">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_publication_type-8"> Policy or strategy [25] </label>
                     </div>
                   </div>
                 </fieldset>
               </div>
             </div>
-            <div class="nhsuk-filter__group">
+            <div class="nhsuk-filter__group has-subgroup">
               <a class="nhsuk-filter__group__clear" href="#">Clear</a>
-              <div class="nhsuk-form-group">
+              <div class="nhsuk-form-group parent-group">
                 <fieldset class="nhsuk-fieldset">
-                  <legend class="nhsuk-fieldset__legend"> Publication type </legend>
-                  <div class="nhsuk-checkboxes">
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Publication type-1" name="filter" type="checkbox" value="item_one">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Publication type-1"> Item one </label>
-                    </div>
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Publication type-2" name="filter" type="checkbox" value="item_two">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Publication type-2"> Item two </label>
-                    </div>
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Publication type-3" name="filter" type="checkbox" value="item_three">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Publication type-3"> Item three </label>
-                    </div>
+                  <legend class="nhsuk-fieldset__legend">Profession</legend>
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="profession"> Profession </label>
+                    <select class="nhsuk-select" id="profession" name="profession">
+                      <option value="">All professions</option>
+                      <option value="advanced-critical-care-practitioners">Advanced critical care practitioners</option>
+                      <option value="allied-health-professionals">Allied health professionals</option>
+                      <option value="ambulance-service-team">Ambulance service team</option>
+                      <option value="dental-professionals" selected>Dental professionals</option>
+                      <option value="health-informaticians">Health informaticians</option>
+                      <option value="healthcare-scientists">Healthcare scientists</option>
+                      <option value="management-professionals">Management professionals</option>
+                      <option value="medical-associate-professionals">Medical associate professionals</option>
+                      <option value="medical-doctors">Medical doctors</option>
+                      <option value="midwives">Midwives</option>
+                      <option value="nurses">Nurses</option>
+                      <option value="pharmacy-professionals">Pharmacy professionals</option>
+                      <option value="psychological-professionals">Psychological professionals</option>
+                      <option value="public-health-professionals">Public health professionals</option>
+                    </select>
                   </div>
                 </fieldset>
+              </div>
+              <div class="nhsuk-form-group sub-group">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="sub_profession"> Sub profession </label>
+                  <select class="nhsuk-select" id="sub_profession" name="sub_profession">
+                    <option value="">All sub professions</option>
+                    <option value="analytical-toxicology">Analytical toxicology</option>
+                    <option value="anatomical-pathology">Anatomical pathology</option>
+                    <option value="audiology">Audiology</option>
+                    <option value="biomedical-science">Biomedical science</option>
+                    <option value="blood-sciences">Blood sciences</option>
+                    <option value="clinical-immunology">Clinical immunology</option>
+                    <option value="dental-nurse" selected>Dental nurse</option>
+                    <option value="dentist">Dentist</option>
+                    <option value="genomics">Genomics</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="nhsuk-filter__group has-subgroup">
+              <a class="nhsuk-filter__group__clear" href="#">Clear</a>
+              <div class="nhsuk-form-group parent-group">
+                <fieldset class="nhsuk-fieldset">
+                  <legend class="nhsuk-fieldset__legend">Topic</legend>
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="topic"> Topic </label>
+                    <select class="nhsuk-select" id="topic" name="topic">
+                      <option value="">All topics</option>
+                      <option value="addiction">Addiction</option>
+                      <option value="advanced-clinical-practice">Advanced clinical practice</option>
+                      <option value="antimicrobial resistance">Antimicrobial resistance</option>
+                      <option value="armed-forces">Armed forces</option>
+                      <option value="cancer">Cancer</option>
+                      <option value="careers">Careers</option>
+                      <option value="children-young-people">Children and young people</option>
+                      <option value="community-care">Community care</option>
+                      <option value="cosmetic-procedures" selected>Cosmetic procedures</option>
+                      <option value="covid-19">Covid-19</option>
+                      <option value="critical-care">Critical care</option>
+                      <option value="dementia">Dementia</option>
+                      <option value="digital-skills">Digital skills</option>
+                      <option value="end-life-care">End of life care</option>
+                      <option value="genomics">Genomics</option>
+                      <option value="global-health">Global health</option>
+                      <option value="health-academia">Health academia</option>
+                      <option value="health-inequalities">health-inequalities</option>
+                      <option value="infection-management">Infection management</option>
+                      <option value="knowledge-management">Knowledge management</option>
+                      <option value="learning-disability-autism">Learning disability and autism</option>
+                      <option value="long-term-conditions">Long term conditions</option>
+                      <option value="maternity">Maternity</option>
+                      <option value="medicines-optimisation">Medicines optimisation</option>
+                      <option value="neonatal">Neonatal</option>
+                      <option value="nhs-screening-services">NHS Screening Services</option>
+                      <option value="personalised-care">Personalised care</option>
+                      <option value="pre-employment">Pre-employment</option>
+                      <option value="prevention-public-health">Prevention and public health</option>
+                      <option value="primary-care">Primary care</option>
+                      <option value="quality">Quality</option>
+                      <option value="sexual-reproductive-health">Sexual and reproductive health</option>
+                      <option value="urgent-emergency-care">Urgent and emergency care</option>
+                      <option value="workforce-planning">Workforce planning</option>
+                      <option value="workforce-transformation">Workforce transformation</option>
+                    </select>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="nhsuk-form-group sub-group">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="sub_topic"> Sub topic </label>
+                  <select class="nhsuk-select" id="sub_topic" name="sub_topic">
+                    <option value="">All sub topics</option>
+                    <option value="digital-transformation">Digital Transformation</option>
+                    <option value="funding" selected>Funding</option>
+                  </select>
+                </div>
               </div>
             </div>
           </div>
@@ -221,6 +328,41 @@
                   <button class="nhsuk-button hee-listing__filter__submit" data-module="nhsuk-button" type="submit"> Update </button>
                   <input data-update-flag="listing" name="results_updated" type="hidden" value="false">
                 </form>
+              </div>
+              <div class="hee-listing__tags">
+                <div class="hee-listing__tags__group">
+                  <label>Publication type: </label>
+                  <div class="nhsuk-filter-tag nhsuk-tag" data-filter="consultation">
+                    <span>Consultation</span>
+                    <a class="nhsuk-filter-tag__icon">Remove</a>
+                  </div>
+                  <div class="nhsuk-filter-tag nhsuk-tag" data-filter="guidance">
+                    <span>Guidance</span>
+                    <a class="nhsuk-filter-tag__icon">Remove</a>
+                  </div>
+                </div>
+                <div class="hee-listing__tags__group">
+                  <label>Profession: </label>
+                  <div class="nhsuk-filter-tag nhsuk-tag" data-filter="dental-professionals">
+                    <span>Dental professionals</span>
+                    <a class="nhsuk-filter-tag__icon">Remove</a>
+                  </div>
+                  <div class="nhsuk-filter-tag nhsuk-tag" data-filter="dental-nurse">
+                    <span>Dental nurse</span>
+                    <a class="nhsuk-filter-tag__icon">Remove</a>
+                  </div>
+                </div>
+                <div class="hee-listing__tags__group">
+                  <label>Topic: </label>
+                  <div class="nhsuk-filter-tag nhsuk-tag" data-filter="cosmetic-procedures">
+                    <span>Cosmetic procedures</span>
+                    <a class="nhsuk-filter-tag__icon">Remove</a>
+                  </div>
+                  <div class="nhsuk-filter-tag nhsuk-tag" data-filter="funding">
+                    <span>Funding</span>
+                    <a class="nhsuk-filter-tag__icon">Remove</a>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="hee-listing__results">

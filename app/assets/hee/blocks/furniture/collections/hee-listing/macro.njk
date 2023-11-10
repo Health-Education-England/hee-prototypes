@@ -20,11 +20,16 @@
       </div>
       {% if list.tags.length > 0 %}
         <div class="hee-listing__tags">
-          {% for tag in list.tags %}
-            {{ filterTag({
-              text: tag.text,
-              value: tag.value
-            }) }}
+          {% for group in list.tags %}
+            <div class="hee-listing__tags__group">
+              <label>{{ group.label }}: </label>
+              {% for tag in group.items %}
+                {{ filterTag({
+                  text: tag.text,
+                  value: tag.value
+                }) }}
+              {% endfor %}
+            </div>
           {% endfor %}
         </div>
       {% endif %}
