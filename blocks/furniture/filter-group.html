@@ -38,12 +38,12 @@
         <div class="nhsuk-header__multilogo">
           <span class="nhsuk-header__logo nhsuk-header__logo-home">
             <a class="nhsuk-header__link" href="http://hee.nhs.uk/" aria-label="Health Education England homepage">
-              <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="presentation" focusable="false" viewBox="0 0 40 16">
+              <svg class="nhsuk-logo " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="presentation" focusable="false" viewBox="0 0 40 16">
                 <path class="nhsuk-logo__background" d="M0 0h40v16H0z"></path>
                 <path class="nhsuk-logo__text" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
                 <image src="https://assets.nhs.uk/images/nhs-logo.png" xlink:href=""></image>
               </svg>
-              <span class="nhsuk-organisation-name">Health Education England</span>
+              <span class="nhsuk-organisation-name nhse-global-menu-descriptor">Health Education England</span>
             </a>
             <a class="nhsuk-header__link" href="/" aria-label="NWP Prototype Kit homepage">
               <span class="nhsuk-organisation-descriptor">NWP Prototype Kit</span>
@@ -130,7 +130,7 @@
           <div class="page__header">
             <span class="nhsuk-caption-xl">Furniture</span>
             <h1>Filter Group</h1>
-            <p class="nhsuk-lede-text"></p>
+            <p class="nhsuk-lede-text">Custom component which provides groups of facets in the left hand sidebar on collection pages, allowing site visitors to filter search results in a user-friendly manner.</p>
           </div>
           <h3>Example</h3>
           <div class="prototype__example block">
@@ -142,40 +142,102 @@
           <hr />
           <h3>Macro</h3>
           <pre><code>
-{{ filter({
+  {{ filter({
     groups: [
       {
-        title: &quot;Topic&quot;,
+        type: &quot;select&quot;,
+        name: &quot;profession&quot;,
+        title: &quot;Profession&quot;,
         showClearToggle: true,
         items: [
-        {
-          text: &quot;Item one&quot;,
-          value: &quot;item_one&quot;,
-          checked: true
-        },
-        {
-          text: &quot;Item two&quot;,
-          value: &quot;item_two&quot;,
-          checked: true
+          {
+            text: &quot;All professions&quot;,
+            value: &quot;&quot;
+          },
+          {
+            text: &quot;Allied health professionals&quot;,
+            value: &quot;allied_health_professionals&quot;
+          },
+          {
+            text: &quot;Dental professionals&quot;,
+            value: &quot;dental_professionals&quot;,
+            selected: true
+          },
+          {
+            text: &quot;Medical doctors&quot;,
+            value: &quot;medical_doctors&quot;
+          },
+          {
+            text: &quot;Public health professionals&quot;,
+            value: &quot;public_health_professionals&quot;
+          }
+        ],
+        subGroup: {
+          type: &quot;selectbox&quot;,
+          name: &quot;sub_profession&quot;,
+          title: &quot;Sub profession&quot;,
+          items: [
+            {
+              text: &quot;All sub professions&quot;,
+              value: &quot;&quot;
+            },
+            {
+              text: &quot;Dental nurse&quot;,
+              value: &quot;dental_nurse&quot;,
+              selected: true
+            },
+            {
+              text: &quot;Dental therapist&quot;,
+              value: &quot;dental_therapist&quot;
+            },
+            {
+              text: &quot;Dentist&quot;,
+              value: &quot;dentist&quot;
+            }
+          ]
         }
-      ]
       },
       {
+        type: &quot;checkbox&quot;,
         title: &quot;Publication type&quot;,
+        name: &quot;publication_type&quot;,
+        showClearToggle: true,
         items: [
-        {
-          text: &quot;Item one&quot;,
-          value: &quot;item_one&quot;
-        },
-        {
-          text: &quot;Item two&quot;,
-          value: &quot;item_two&quot;
-        },
-        {
-          text: &quot;Item three&quot;,
-          value: &quot;item_three&quot;
-        }
-      ]
+          {
+            text: &quot;Briefing&quot;,
+            value: &quot;briefing&quot;
+          },
+          {
+            text: &quot;Consultation&quot;,
+            value: &quot;consultation&quot;,
+            checked: true
+          },
+          {
+            text: &quot;Data and statistics&quot;,
+            value: &quot;data_statistics&quot;
+          },
+          {
+            text: &quot;FOI release&quot;,
+            value: &quot;foi_release&quot;
+          },
+          {
+            text: &quot;Guidance&quot;,
+            value: &quot;guidance&quot;,
+            checked: true
+          },
+          {
+            text: &quot;Independent report&quot;,
+            value: &quot;independent_report&quot;
+          },
+          {
+            text: &quot;Letter&quot;,
+            value: &quot;letter&quot;
+          },
+          {
+            text: &quot;Policy or strategy&quot;,
+            value: &quot;policy_strategy&quot;
+          }
+        ]
       }
     ]
   }) }}
@@ -183,49 +245,83 @@
           <hr />
           <h3>HTML</h3>
           <pre><code>&lt;form class=&quot;nhsuk-filter nhsuk-filter--js&quot; method=&quot;get&quot;&gt;
-    &lt;p class=&quot;nhsuk-filter__title nhsuk-heading-l&quot;&gt;Filters&lt;/p&gt;
-    &lt;div class=&quot;nhsuk-filter__groups&quot;&gt;
-      &lt;div class=&quot;nhsuk-filter__group&quot;&gt;
-        &lt;a class=&quot;nhsuk-filter__group__clear&quot; href=&quot;#&quot;&gt;Clear&lt;/a&gt;
-        &lt;div class=&quot;nhsuk-form-group&quot;&gt;
-          &lt;fieldset class=&quot;nhsuk-fieldset&quot;&gt;
-            &lt;legend class=&quot;nhsuk-fieldset__legend&quot;&gt; Topic &lt;/legend&gt;
-            &lt;div class=&quot;nhsuk-checkboxes&quot;&gt;
-              &lt;div class=&quot;nhsuk-checkboxes__item&quot;&gt;
-                &lt;input class=&quot;nhsuk-checkboxes__input&quot; id=&quot;filter_Topic-1&quot; name=&quot;filter&quot; type=&quot;checkbox&quot; value=&quot;item_one&quot; checked=&quot;&quot;&gt;
-                &lt;label class=&quot;nhsuk-label nhsuk-checkboxes__label&quot; for=&quot;filter_Topic-1&quot;&gt; Item one &lt;/label&gt;
-              &lt;/div&gt;
-              &lt;div class=&quot;nhsuk-checkboxes__item&quot;&gt;
-                &lt;input class=&quot;nhsuk-checkboxes__input&quot; id=&quot;filter_Topic-2&quot; name=&quot;filter&quot; type=&quot;checkbox&quot; value=&quot;item_two&quot; checked=&quot;&quot;&gt;
-                &lt;label class=&quot;nhsuk-label nhsuk-checkboxes__label&quot; for=&quot;filter_Topic-2&quot;&gt; Item two &lt;/label&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-          &lt;/fieldset&gt;
-        &lt;/div&gt;
+  &lt;p class=&quot;nhsuk-filter__title nhsuk-heading-l&quot;&gt;Filters&lt;/p&gt;
+  &lt;div class=&quot;nhsuk-filter__groups&quot;&gt;
+    &lt;div class=&quot;nhsuk-filter__group has-subgroup&quot;&gt;
+      &lt;a class=&quot;nhsuk-filter__group__clear visible&quot; href=&quot;#&quot;&gt;Clear&lt;/a&gt;
+      &lt;div class=&quot;nhsuk-form-group parent-group&quot;&gt;
+        &lt;fieldset class=&quot;nhsuk-fieldset&quot;&gt;
+          &lt;legend class=&quot;nhsuk-fieldset__legend&quot;&gt;Profession&lt;/legend&gt;
+          &lt;div class=&quot;nhsuk-form-group&quot;&gt;
+            &lt;label class=&quot;nhsuk-label&quot; for=&quot;profession&quot;&gt; Profession &lt;/label&gt;
+            &lt;select class=&quot;nhsuk-select&quot; id=&quot;profession&quot; name=&quot;profession&quot;&gt;
+              &lt;option value=&quot;&quot;&gt;All professions&lt;/option&gt;
+              &lt;option value=&quot;allied_health_professionals&quot;&gt;Allied health professionals&lt;/option&gt;
+              &lt;option value=&quot;dental_professionals&quot; selected=&quot;&quot;&gt;Dental professionals&lt;/option&gt;
+              &lt;option value=&quot;medical_doctors&quot;&gt;Medical doctors&lt;/option&gt;
+              &lt;option value=&quot;public_health_professionals&quot;&gt;Public health professionals&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+        &lt;/fieldset&gt;
       &lt;/div&gt;
-      &lt;div class=&quot;nhsuk-filter__group&quot;&gt;
+      &lt;div class=&quot;nhsuk-form-group sub-group&quot;&gt;
         &lt;div class=&quot;nhsuk-form-group&quot;&gt;
-          &lt;fieldset class=&quot;nhsuk-fieldset&quot;&gt;
-            &lt;legend class=&quot;nhsuk-fieldset__legend&quot;&gt; Publication type &lt;/legend&gt;
-            &lt;div class=&quot;nhsuk-checkboxes&quot;&gt;
-              &lt;div class=&quot;nhsuk-checkboxes__item&quot;&gt;
-                &lt;input class=&quot;nhsuk-checkboxes__input&quot; id=&quot;filter_Publication type-1&quot; name=&quot;filter&quot; type=&quot;checkbox&quot; value=&quot;item_one&quot;&gt;
-                &lt;label class=&quot;nhsuk-label nhsuk-checkboxes__label&quot; for=&quot;filter_Publication type-1&quot;&gt; Item one &lt;/label&gt;
-              &lt;/div&gt;
-              &lt;div class=&quot;nhsuk-checkboxes__item&quot;&gt;
-                &lt;input class=&quot;nhsuk-checkboxes__input&quot; id=&quot;filter_Publication type-2&quot; name=&quot;filter&quot; type=&quot;checkbox&quot; value=&quot;item_two&quot;&gt;
-                &lt;label class=&quot;nhsuk-label nhsuk-checkboxes__label&quot; for=&quot;filter_Publication type-2&quot;&gt; Item two &lt;/label&gt;
-              &lt;/div&gt;
-              &lt;div class=&quot;nhsuk-checkboxes__item&quot;&gt;
-                &lt;input class=&quot;nhsuk-checkboxes__input&quot; id=&quot;filter_Publication type-3&quot; name=&quot;filter&quot; type=&quot;checkbox&quot; value=&quot;item_three&quot;&gt;
-                &lt;label class=&quot;nhsuk-label nhsuk-checkboxes__label&quot; for=&quot;filter_Publication type-3&quot;&gt; Item three &lt;/label&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-          &lt;/fieldset&gt;
+          &lt;label class=&quot;nhsuk-label&quot; for=&quot;sub_profession&quot;&gt; Sub profession &lt;/label&gt;
+          &lt;select class=&quot;nhsuk-select&quot; id=&quot;sub_profession&quot; name=&quot;sub_profession&quot;&gt;
+            &lt;option value=&quot;&quot;&gt;All sub professions&lt;/option&gt;
+            &lt;option value=&quot;dental_nurse&quot; selected=&quot;&quot;&gt;Dental nurse&lt;/option&gt;
+            &lt;option value=&quot;dental_therapist&quot;&gt;Dental therapist&lt;/option&gt;
+            &lt;option value=&quot;dentist&quot;&gt;Dentist&lt;/option&gt;
+          &lt;/select&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-    &lt;button class=&quot;nhsuk-button nhsuk-filter__submit&quot; type=&quot;submit&quot; hidden=&quot;&quot;&gt; Update results &lt;/button&gt;
+    &lt;div class=&quot;nhsuk-filter__group&quot;&gt;
+      &lt;a class=&quot;nhsuk-filter__group__clear visible&quot; href=&quot;#&quot;&gt;Clear&lt;/a&gt;
+      &lt;div class=&quot;nhsuk-form-group&quot;&gt;
+        &lt;fieldset class=&quot;nhsuk-fieldset&quot; aria-describedby=&quot;filter_publication_type-hint&quot;&gt;
+          &lt;legend class=&quot;nhsuk-fieldset__legend&quot;&gt; Publication type &lt;/legend&gt;
+          &lt;div class=&quot;nhsuk-hint visible&quot; id=&quot;filter_publication_type-hint&quot;&gt;2 selected&lt;/div&gt;
+          &lt;div class=&quot;nhsuk-checkboxes&quot;&gt;
+            &lt;div class=&quot;nhsuk-checkboxes__item&quot;&gt;
+              &lt;input class=&quot;nhsuk-checkboxes__input&quot; id=&quot;filter_publication_type-1&quot; name=&quot;publication_type&quot; type=&quot;checkbox&quot; value=&quot;briefing&quot;&gt;
+              &lt;label class=&quot;nhsuk-label nhsuk-checkboxes__label&quot; for=&quot;filter_publication_type-1&quot;&gt; Briefing [4] &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;nhsuk-checkboxes__item&quot;&gt;
+              &lt;input class=&quot;nhsuk-checkboxes__input&quot; id=&quot;filter_publication_type-2&quot; name=&quot;publication_type&quot; type=&quot;checkbox&quot; value=&quot;consultation&quot; checked=&quot;&quot;&gt;
+              &lt;label class=&quot;nhsuk-label nhsuk-checkboxes__label&quot; for=&quot;filter_publication_type-2&quot;&gt; Consultation [1] &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;nhsuk-checkboxes__item&quot;&gt;
+              &lt;input class=&quot;nhsuk-checkboxes__input&quot; id=&quot;filter_publication_type-3&quot; name=&quot;publication_type&quot; type=&quot;checkbox&quot; value=&quot;data_statistics&quot;&gt;
+              &lt;label class=&quot;nhsuk-label nhsuk-checkboxes__label&quot; for=&quot;filter_publication_type-3&quot;&gt; Data and statistics [7] &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;nhsuk-checkboxes__item&quot;&gt;
+              &lt;input class=&quot;nhsuk-checkboxes__input&quot; id=&quot;filter_publication_type-4&quot; name=&quot;publication_type&quot; type=&quot;checkbox&quot; value=&quot;foi_release&quot;&gt;
+              &lt;label class=&quot;nhsuk-label nhsuk-checkboxes__label&quot; for=&quot;filter_publication_type-4&quot;&gt; FOI release [12] &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;nhsuk-checkboxes__item&quot;&gt;
+              &lt;input class=&quot;nhsuk-checkboxes__input&quot; id=&quot;filter_publication_type-5&quot; name=&quot;publication_type&quot; type=&quot;checkbox&quot; value=&quot;guidance&quot; checked=&quot;&quot;&gt;
+              &lt;label class=&quot;nhsuk-label nhsuk-checkboxes__label&quot; for=&quot;filter_publication_type-5&quot;&gt; Guidance [22] &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;nhsuk-checkboxes__item&quot;&gt;
+              &lt;input class=&quot;nhsuk-checkboxes__input&quot; id=&quot;filter_publication_type-6&quot; name=&quot;publication_type&quot; type=&quot;checkbox&quot; value=&quot;independent_report&quot;&gt;
+              &lt;label class=&quot;nhsuk-label nhsuk-checkboxes__label&quot; for=&quot;filter_publication_type-6&quot;&gt; Independent report [4] &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;nhsuk-checkboxes__item&quot;&gt;
+              &lt;input class=&quot;nhsuk-checkboxes__input&quot; id=&quot;filter_publication_type-7&quot; name=&quot;publication_type&quot; type=&quot;checkbox&quot; value=&quot;letter&quot;&gt;
+              &lt;label class=&quot;nhsuk-label nhsuk-checkboxes__label&quot; for=&quot;filter_publication_type-7&quot;&gt; Letter [1] &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;nhsuk-checkboxes__item&quot;&gt;
+              &lt;input class=&quot;nhsuk-checkboxes__input&quot; id=&quot;filter_publication_type-8&quot; name=&quot;publication_type&quot; type=&quot;checkbox&quot; value=&quot;policy_strategy&quot;&gt;
+              &lt;label class=&quot;nhsuk-label nhsuk-checkboxes__label&quot; for=&quot;filter_publication_type-8&quot;&gt; Policy or strategy [25] &lt;/label&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/fieldset&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;button class=&quot;nhsuk-button nhsuk-filter__submit&quot; data-module=&quot;nhsuk-button&quot; type=&quot;submit&quot; hidden=&quot;&quot;&gt; Update results &lt;/button&gt;
+  &lt;input data-update-flag=&quot;filter&quot; name=&quot;results_updated&quot; type=&quot;hidden&quot; value=&quot;false&quot;&gt;
 &lt;/form&gt;</code></pre>
         </div>
       </div>
