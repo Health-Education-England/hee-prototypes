@@ -1,0 +1,198 @@
+{% extends "example-template-leftbar.html" %}
+
+{% import 'includes/_taxonomy-clinical-discipline.html' as taxonomyClinicalDiscipline %}
+{% import 'includes/_taxonomy-profession.html' as taxonomyProfession %}
+{% import 'includes/_taxonomy-sub-profession.html' as taxonomySubProfession %}
+{% import 'includes/_taxonomy-recruitment-format.html' as taxonomyRecruitmentFormat %}
+{% import 'includes/_taxonomy-topic.html' as taxonomyTopic %}
+{% import 'includes/_taxonomy-sub-topic.html' as taxonomySubTopic %}
+{% import 'includes/_taxonomy-training-type.html' as taxonomyTrainingType %}
+
+{% block pageTitle %}Training Programme Collection - Examples - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+  {{
+  breadcrumb({
+    items: [
+      {
+        href: basePath + "/",
+        text: "Home"
+      }
+    ],
+    href: basePath + "/templates/examples/training-programme-collection",
+    text: "Training Programme Collection"
+  })
+  }}
+{% endblock %}
+
+{% block pageHeader %}
+  <div class="nhsuk-width-container">
+    <h1>Training Programmes</h1>
+    <span class="nhsuk-caption-xl">Caption</span>
+    <p class="nhsuk-lede-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum sit sed porta viverra. Amet, tincidunt cras augue justo, proin mollis sapien. Sed cursus quam suspendisse.</p>
+  </div>
+{% endblock %}
+
+{% block pageLeftbar %}
+  {{ filter({
+    groups: [
+      {
+        title: "Clinical Discipline",
+        showClearToggle: true,
+        items: taxonomyClinicalDiscipline.items
+      },
+      {
+        type: "select",
+        name: "profession",
+        title: "Profession",
+        showClearToggle: true,
+        items: taxonomyProfession.items,
+          subGroup: {
+          type: "select",
+          name: "sub_profession",
+          title: "Sub profession",
+          items: taxonomySubProfession.items
+        }
+      },
+      {
+        type: "select",
+        name: "topic",
+        title: "Topic",
+        showClearToggle: true,
+        items: taxonomyTopic.items,
+          subGroup: {
+          type: "select",
+          name: "sub_topic",
+          title: "Sub topic",
+          items: taxonomySubTopic.items
+        }
+      },
+      {
+        title: "Recruitment Format",
+        showClearToggle: true,
+        items: taxonomyRecruitmentFormat.items
+      },
+      {
+        title: "Training type",
+        showClearToggle: true,
+        items: taxonomyTrainingType.items
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block pageContent %}
+  {% set selectAttributes = {
+    id: "sort",
+    name: "sort",
+    label: {
+      text: "Sort by"
+    },
+    items: [
+      {
+        value: "newest",
+        text: "Newest"
+      },
+      {
+        value: "relevance",
+        text: "Relevance"
+      }
+    ]
+  } %}
+
+  {% set submitAttributes = {
+    text: "Update",
+    classes: "hee-listing__filter__submit"
+  } %}
+
+  {% set items = [] %}
+  {% for i in range(0, 10) -%}
+    {% set item = {
+      image: basePath + "/images/specialty-hero.jpg",
+      title: "Anaesthesia",
+      href: "#",
+      details: [
+        {
+          label: "Profession:",
+          value: "<a href=\"#\">Medical</a>"
+        },
+        {
+          label: "Discipline:",
+          value: "<a href=\"#\">Anaesthesia</a>"
+        },
+        {
+          label: "Duration:",
+          value: "<a href=\"#\">24 months</a>"
+        }
+      ],
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+    } %}
+    {% set items = (items.push(item), items) %}
+  {% endfor %}
+
+  {{ listingLayout({
+    filter: {
+      select: selectAttributes,
+      submit: submitAttributes
+    },
+    tags: [
+      {
+        label: "Clinical Discipline",
+        items: [
+          {
+            text: "Paediatrics",
+            value: "paediatrics"
+          }
+        ]
+      },
+      {
+        label: "Profession",
+        items: [
+          {
+            text: "Dental professionals",
+            value: "dental-professionals"
+          },
+          {
+            text: "Dental nurse",
+            value: "dental-nurse"
+          }
+        ]
+      },
+      {
+        label: "Topic",
+        items: [
+          {
+            text: "Cosmetic procedures",
+            value: "cosmetic-procedures"
+          },
+          {
+            text: "Funding",
+            value: "funding"
+          }
+        ]
+      },
+      {
+        label: "Recruitment format",
+        items: [
+          {
+            text: "Runthrough",
+            value: "runthrough"
+          }
+        ]
+      },
+      {
+        label: "Training type",
+        items: [
+          {
+            text: "Core",
+            value: "core"
+          }
+        ]
+      }
+    ],
+    results: items,
+    emptyMessage: "No results",
+    showPagination: true,
+    twoColumnLayout: true
+  }) }}
+{% endblock %}

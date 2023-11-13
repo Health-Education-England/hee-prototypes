@@ -34,7 +34,7 @@
         </div>
       {% endif %}
     </div>
-    <div class="hee-listing__results">
+    <div class="hee-listing__results {{ "layout-two-col" if list.twoColumnLayout }}">
       {% if list.results.length > 0 %}
         {% for result in list.results %}
           {{ listingItem(result) }}
