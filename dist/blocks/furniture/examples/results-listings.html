@@ -35,7 +35,7 @@
   <div class="banners">
   </div>
   <h2>One column layout</h2>
-  <div class="hee-listing">
+  <div class="hee-listing" id="results">
     <div class="hee-listing__summary">
       <div class="hee-listing__count">
         <h2 class="hee-listing__title nhsuk-heading-l">10 results</h2>
@@ -50,7 +50,32 @@
             </select>
           </div>
           <button class="nhsuk-button hee-listing__filter__submit" data-module="nhsuk-button" type="submit"> Update </button>
+          <input data-update-flag="listing" name="results_updated" type="hidden" value="false">
         </form>
+      </div>
+      <div class="hee-listing__tags">
+        <div class="hee-listing__tags__group">
+          <label>Profession: </label>
+          <div class="nhsuk-filter-tag nhsuk-tag" data-filter="dental_professionals">
+            <span>Dental professionals</span>
+            <a class="nhsuk-filter-tag__icon">Remove</a>
+          </div>
+          <div class="nhsuk-filter-tag nhsuk-tag" data-filter="dental_nurse">
+            <span>Dental nurse</span>
+            <a class="nhsuk-filter-tag__icon">Remove</a>
+          </div>
+        </div>
+        <div class="hee-listing__tags__group">
+          <label>Publication: </label>
+          <div class="nhsuk-filter-tag nhsuk-tag" data-filter="consultation">
+            <span>Consultation</span>
+            <a class="nhsuk-filter-tag__icon">Remove</a>
+          </div>
+          <div class="nhsuk-filter-tag nhsuk-tag" data-filter="guidance">
+            <span>Guidance</span>
+            <a class="nhsuk-filter-tag__icon">Remove</a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="hee-listing__results ">
@@ -221,7 +246,7 @@
     </nav>
   </div>
   <h2>Two column layout</h2>
-  <div class="hee-listing">
+  <div class="hee-listing" id="results">
     <div class="hee-listing__summary">
       <div class="hee-listing__count">
         <h2 class="hee-listing__title nhsuk-heading-l">10 results</h2>
@@ -236,6 +261,7 @@
             </select>
           </div>
           <button class="nhsuk-button hee-listing__filter__submit" data-module="nhsuk-button" type="submit"> Update </button>
+          <input data-update-flag="listing" name="results_updated" type="hidden" value="false">
         </form>
       </div>
     </div>
