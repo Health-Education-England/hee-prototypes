@@ -63,7 +63,7 @@ or
 <a name="contributing"></a>
 
 Before starting on your first piece of work, please see [CONTRIBUTING.md](https://github.com/Health-Education-England/hee-prototypes/blob/master/CONTRIBUTING.md)
-for guidelines and best practices regarding HEE branching strategies etc. **-TODO FLESH OUT THIS DOC--**
+for guidelines and best practices regarding HEE branching strategies etc.
 
 ## Tooling
 <a name="tooling"></a>
