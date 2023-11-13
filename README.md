@@ -190,7 +190,7 @@ For a deeper dive on how to write and run your own tests, please see the [README
 We make use of Github Actions for our CI/CD pipeline. The prototype is compiled, tested and published using GitHub
 Action workflows.
 
-For a full outline on the CI/CD build, please see the [README](https://github.com/Health-Education-England/hee-prototypes/blob/master/.github/README.md)
+For a full outline on the CI/CD build, please see the [README](https://github.com/Health-Education-England/hee-prototypes/blob/master/.github/README-PIPELINE.md)
 within the `.github` directory.
 
 ## Hosting
