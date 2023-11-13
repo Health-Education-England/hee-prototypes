@@ -162,10 +162,7 @@ Contains all the Gulp task runners, pertaining to specific parts of the build pr
 │   ├── assets.js
 │   ├── serve.js
 │   └── templates.js
-│   └── README.md
 ```
-
-For more information on the Gulp build process, please see the [README](https://github.com/Health-Education-England/hee-prototypes/blob/master/tasks/README.md) within the tasks directory.
 
 ### Tests
 <a name="codebase-tests"></a>
