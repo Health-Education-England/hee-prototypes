@@ -107,7 +107,7 @@ Below is a complete list of all the commands and their purposes:
 
 `open-shell` - **Opens a terminal prompt allowing you to run commands directly within the nodejs container. Useful when installing, removing, upgrading packages or general build debugging.**
 
-`run-tests` - **Runs BackstopJS and Playwright tests. See more details in the Testing section - TODO LINK HERE.**
+`run-tests` - **Runs BackstopJS and Playwright tests. See more details in the testing [README](https://github.com/Health-Education-England/hee-prototypes/blob/master/tests/README.md) within the `tests` directory.**
 
 ## Codebase structure
 <a name="codebase"></a>
