@@ -1,7 +1,10 @@
 {% extends "example-template-leftbar.html" %}
 
 {% import 'includes/_taxonomy-profession.html' as taxonomyProfession %}
+{% import 'includes/_taxonomy-sub-profession.html' as taxonomySubProfession %}
 {% import 'includes/_taxonomy-topic.html' as taxonomyTopic %}
+{% import 'includes/_taxonomy-sub-topic.html' as taxonomySubTopic %}
+{% import 'includes/_taxonomy-tags.html' as taxonomyTags %}
 
 {% block pageTitle %}Blog Collection - Examples - NWP Prototype Kit{% endblock %}
 
@@ -31,14 +34,37 @@
   {{ filter({
     groups: [
       {
-        title: "Topic",
-        showClearToggle: true,
-        items: taxonomyTopic.items
-      },
-      {
+        type: "select",
+        name: "profession",
         title: "Profession",
         showClearToggle: true,
-        items: taxonomyProfession.items
+        items: taxonomyProfession.items,
+          subGroup: {
+          type: "select",
+          name: "sub_profession",
+          title: "Sub profession",
+          items: taxonomySubProfession.items
+        }
+      },
+      {
+        type: "select",
+        name: "topic",
+        title: "Topic",
+        showClearToggle: true,
+        items: taxonomyTopic.items,
+          subGroup: {
+          type: "select",
+          name: "sub_topic",
+          title: "Sub topic",
+          items: taxonomySubTopic.items
+        }
+      },
+      {
+        type: "checkbox",
+        title: "Tag",
+        name: "tag",
+        showClearToggle: true,
+        items: taxonomyTags.items
       }
     ]
   }) }}
@@ -75,12 +101,12 @@
       href: "#",
       details: [
         {
-          label: "Publish date:",
+          label: "Published date:",
           value: "12 July 2023"
         },
         {
-          label: "Reading time:",
-          value: "2 mins"
+          label: "Author(s):",
+          value: "James Smith"
         }
       ],
       summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
@@ -95,20 +121,43 @@
     },
     tags: [
       {
-        text: "Cosmetic procedures",
-        value: "cosmetic-procedures"
+        label: "Profession",
+        items: [
+          {
+            text: "Dental professionals",
+            value: "dental-professionals"
+          },
+          {
+            text: "Dental nurse",
+            value: "dental-nurse"
+          }
+        ]
       },
       {
-        text: "Medicines optimisation",
-        value: "medicines-optimisation"
+        label: "Topic",
+        items: [
+          {
+            text: "Cosmetic procedures",
+            value: "cosmetic-procedures"
+          },
+          {
+            text: "Funding",
+            value: "funding"
+          }
+        ]
       },
       {
-        text: "Healthcare scientists",
-        value: "healthcare-scientists"
-      },
-      {
-        text: "Management professionals",
-        value: "management-professionals"
+        label: "Tag",
+        items: [
+          {
+            text: "Innovation",
+            value: "innovation"
+          },
+          {
+            text: "Occupational frameworks",
+            value: "occupational-frameworks"
+          }
+        ]
       }
     ],
     results: items,

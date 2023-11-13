@@ -19,12 +19,33 @@ export default () => {
     removeFilter(evt) {
       evt.preventDefault();
 
-      document.querySelectorAll(`input[value='${this.tag.dataset.filter}']`).forEach(checkbox => {
+      const groupTags = this.tag.parentElement.querySelectorAll('.nhsuk-filter-tag');
+
+      // Remove entire filter tag group if no other tags present.
+      if (groupTags.length === 1) {
+        this.tag.parentElement.remove();
+      }else {
+        this.tag.remove();
+      }
+
+      document.querySelectorAll(`form.nhsuk-filter input[value='${this.tag.dataset.filter}']`).forEach(checkbox => {
         checkbox.checked = false;
         checkbox.dispatchEvent(new Event('change'));
       });
 
-      this.tag.remove();
+      document.querySelectorAll(`form.nhsuk-filter select option[value='${this.tag.dataset.filter}']`).forEach(option => {
+        const parentGroupSelect = option.parentElement;
+        parentGroupSelect.selectedIndex = 0;
+
+        // Reset sub-group select if we are setting the parent,
+        const formGroupElem = option.parentElement.parentElement.parentElement.parentElement;
+        if (formGroupElem.classList.contains('parent-group')) {
+          const subGroupSelect = formGroupElem.nextElementSibling.querySelector('.nhsuk-select');
+          subGroupSelect.selectedIndex = 0;
+        }
+
+        parentGroupSelect.dispatchEvent(new Event('change'));
+      });
     }
 
     setUp() {

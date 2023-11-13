@@ -41,6 +41,22 @@
     }
   }
 
+  .hee-listing__tags__group {
+    display: block;
+    margin-bottom: nhsuk-spacing(2);
+    width:100%;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    label {
+      display: block;
+      font-weight: $nhsuk-font-bold;
+      margin-right: nhsuk-spacing(2);
+    }
+  }
+
   .hee-listing__tags {
     @include nhsuk-responsive-margin(5, 'bottom');
     width: 100%;
