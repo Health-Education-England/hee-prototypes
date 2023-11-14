@@ -81,6 +81,9 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[Github Actions] - Bundled assets for build number: ${{ github.run_number }}"
+          skip_checkout: true
+          skip_fetch: true
+
 
   # Run backstopjs regression tests only when in PR.
   test_backstopjs:
@@ -161,7 +164,7 @@ jobs:
 
       # Run playwright tests.
       - name: Run playwright tests
-        run: npm run playwright:test
+        run: docker-compose run playwright npx playwright test --config ./tests/playwright/config/playwright.config.js
 
       # Upload html report as an asset
       - name: Upload playwright report
