@@ -82,7 +82,6 @@ jobs:
         with:
           commit_message: "[Github Actions] - Bundled assets for build number: ${{ github.run_number }}"
           skip_checkout: true
-          skip_fetch: true
 
 
   # Run backstopjs regression tests only when in PR.
