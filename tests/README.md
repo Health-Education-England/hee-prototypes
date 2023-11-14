@@ -4,7 +4,7 @@ As mentioned in the main [README](https://github.com/Health-Education-England/he
 are two types of tests run against the HEE codebase:
 
 - **Visual regression tests** (using [BackstopJS](https://garris.github.io/BackstopJS/))
-- **End to end tests** (using [Playwright](https://playwright.dev/))
+- **End-to-end tests** (using [Playwright](https://playwright.dev/))
 
 These tests can be run locally, but are also implemented as steps within the CI/CD pipeline, allowing visual or functional
 issues to be caught before they are merged into the codebase.
@@ -16,11 +16,11 @@ Below we'll cover how to run, debug and implement your own tests in greater deta
 The concept behind [BackstopJS](https://garris.github.io/BackstopJS/) is fairly simple: 
 
 1. Backstop takes initial reference screenshots of your website
-2. Backstop tests are by a developer after a change to the code is made
+2. Backstop tests are run by a developer after any changes are made
 3. Backstop takes new screenshots of your website
-4. Backstop compares the reference screenshots again the new screenshots
+4. Backstop compares the reference screenshots against the new screenshots
 5. Any differences are flagged by Backstop in a report
-6. If the changes are intentional developers then approve the new screenshot containing the changes
+6. If the changes are intentional developers then approve the changes via Backstop
 
 ### Running Backstop tests
 
@@ -56,16 +56,16 @@ Git will highlight the changes in the reference directory which is located here:
 `tests/backstop/backstop_data/bitmaps_reference`
 
 We need to ensure this step is taken before opening any pull request, otherwise the Backstop tests within the pipeline
-will fail, and will be flagged on GitHub.
+will fail, and will be flagged within the pull request on GitHub.
 
-### Adding new Backstop scenarios
+### Adding Backstop scenarios
 
 Each URL captured by Backstop is defined in config using what is referred to as a **scenario**.
 
-A scenario can define properties such as the URL, which different viewports to use, click interactions etc.
+A scenario can define properties such as the URL to capture, which different viewports to use, click interactions etc.
 
-Usually new scenarios need to be added to the Backstop config manually, but we are using a [custom backstop docker image](https://github.com/Health-Education-England/run-backstopjs-regression-tests)
-which generates config for our individual scenarios automatically.
+Traditionally new scenarios need to be added to the Backstop config manually, but we are using a [custom backstop docker image](https://github.com/Health-Education-England/run-backstopjs-regression-tests)
+which generates config for each of our individual scenarios automatically.
 
 It does this by scanning the `public/templates/examples` and `public/blocks/**/examples` directories for html files, and 
 then including default scenario config entries for each file.
@@ -73,4 +73,97 @@ then including default scenario config entries for each file.
 For a more in depth explanation on this process please see the [run-backstopjs-regression-tests](https://github.com/Health-Education-England/run-backstopjs-regression-tests)
 docker image repo.
 
+### Customising Backstop scenarios
 
+There may be certain situations where you need to customise the auto-generated scenarios. You can do this either by 
+amending an existing scenario, or creating a completely new variation of an existing scenario.
+
+#### Customising an existing scenario 
+
+An example of this might be adding a screenshot delay time, or hiding an iframe.
+
+This can be achieved by adding a new entry to the `overrides` array within either of the following files:
+
+- `tests/backstop/scenarios/blocks.json` - for block scenarios
+- `tests/backstop/scenarios/templates.json` - for template scenarios
+
+To customise an existing scenario, ensure the `label` key matches the scenario you wish to customise. 
+
+For example, see this custom override adding a screenshot delay to the Google Maps block component:
+
+```
+{
+  ...
+  "overrides": [
+    ...
+    {
+      "label": "blocks-main-google-map",
+      "delay": 5000
+    }
+    ...
+  ]
+}
+```
+
+The format of the `label` key is the scenario type `id` key in the scenario json file, plus the filename of the template.
+
+Using the above example the `id` is:
+
+`tests/backstop/scenarios/blocks.json`:
+```
+{
+  "id": "blocks"
+  ...
+}
+```
+
+Filename without the file extension within `public/blocks/content/main-google-map.html` is `main-google-map`
+
+Therefore, the correct `label` key in the format of `[id_scenario_file][html_filename_no_ext]` is `blocks-main-google-map`  
+
+#### Creating a variation of an existing scenario.
+
+It is also possible to create a variation of an existing scenario, by creating a custom label and including the `url`
+property within the scenario definition.
+
+See this example whereby the desktop menu is being captured after a click interaction, and only using the desktop viewport:
+
+```
+{
+  "label": "blocks-header-navigation-desktop-submenu-click",
+  "clickSelectors": [
+    "li.nhsuk-subnav"
+  ],
+  "url": "http://127.0.0.1:8080/blocks/scaffolding/examples/header-navigation.html",
+  "viewports": [
+    {
+      "label": "desktop",
+      "width": 1280,
+      "height": 720
+    }
+  ]
+}
+```
+
+The `label` key is unique, but is a variation of the original `blocks-header-navigation-desktop-submenu` scenario label. 
+
+This will create a new scenario within the Backstop report, while keeping the original intact.
+
+### Configuring Backstop
+
+If you wish to alter the Backstop configuration, you can do so by editing the base config file here:
+
+`tests/backstop/config/base.json`
+
+The config properties within this base file, are combined with the auto generated scenarios, and then combined,
+resulting in a final backstop config located here: 
+
+`tests/backstop/config/backstop.json`
+
+Please note that this file is ignored by git and is compiled before every test run, so any edits made directly to this file 
+will be overwritten.
+
+If you would like to debug any changes made to the base configuration or scenarios without running any tests, you can 
+regenerate the config by running this command:
+
+`make backstop-generate-config`
