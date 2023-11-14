@@ -63,6 +63,8 @@ They are only run **when a PR is opened or amended in GitHub**:
 This allows for a first step of quality assurance during the PR review process, as any failed tests will be flagged 
 by GitHub, allowing developers to catch any accidental breaking changes before the new code is merged.
 
+Reports from both Backstop and Playwright are uploaded as artifacts after the tests have completed.
+
 For a deeper dive on how to write and run your own tests, please see the [README](https://github.com/Health-Education-England/hee-prototypes/blob/master/tests/README.md) within the `tests` directory.
 
 ### Deploy
