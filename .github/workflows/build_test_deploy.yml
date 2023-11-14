@@ -81,7 +81,6 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[Github Actions] - Bundled assets for build number: ${{ github.run_number }}"
-          skip_checkout: true
 
 
   # Run backstopjs regression tests only when in PR.
