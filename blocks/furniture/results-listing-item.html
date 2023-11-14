@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>Search Form - Templates - NWP Prototype Kit</title>
+  <title>Results listing item - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -59,12 +59,11 @@
         <ol class="nhsuk-breadcrumb__list">
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/">Home</a></li>
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks">Blocks</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/furniture">Furniture</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/furniture/search-form">Search Form</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/hee-prototypes/blocks/results-listing-item">Results listing item</a></li>
         </ol>
         <p class="nhsuk-breadcrumb__back">
-          <a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/furniture/search-form">
-            <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span> Search Form </a>
+          <a class="nhsuk-breadcrumb__backlink" href="/hee-prototypes/blocks/results-listing-item">
+            <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span> Results listing item </a>
         </p>
       </div>
     </nav>
@@ -131,41 +130,100 @@
         <div class="page__main">
           <div class="page__header">
             <span class="nhsuk-caption-xl">Furniture</span>
-            <h1>Search Form</h1>
-            <p class="nhsuk-lede-text"></p>
+            <h1>Results listing item</h1>
+            <p class="nhsuk-lede-text">Listings items are used in collection pages / featured content blocks to represent a single result.</p>
           </div>
           <h3>Example</h3>
           <div class="prototype__example block">
-            <a href="/hee-prototypes/blocks/furniture/examples/search-form.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
+            <a href="/hee-prototypes/blocks/furniture/examples/results-listing-item.html" target="_blank" class="prototype__example-link">Open this example in new window</a>
             <div class="thumbnail">
-              <iframe src="/hee-prototypes/blocks/furniture/examples/search-form.html" height="130px"></iframe>
+              <iframe src="/hee-prototypes/blocks/furniture/examples/results-listing-item.html" height="500"></iframe>
             </div>
           </div>
           <hr />
-          <h3>Macro</h3>
+          <h3>Macro - without image</h3>
           <pre><code>
-{{ searchForm({
-  label: &quot;Enter a search term&quot;,
-  placeholder: &quot;Type search here&quot;,
-  submitLabel: &quot;Submit&quot;
-}) }}
+  {{ listingItem({
+    title: &quot;Result item&quot;,
+    href: &quot;http://www.google.com&quot;,
+    details: [
+      {
+        label: &quot;Publications type:&quot;,
+        value: &quot;Briefing&quot;
+      },
+      {
+        label: &quot;Publish date:&quot;,
+        value: &quot;07 September 2022&quot;
+      }
+    ],
+    summary: &quot;Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec.&quot;
+  }) }}
   </code></pre>
           <hr />
-          <h3>HTML</h3>
-          <pre><code>&lt;form class=&quot;hee-search-form&quot; method=&quot;get&quot; action=&quot;&quot;&gt;
-  &lt;div class=&quot;hee-search-form__wrapper nhsuk-form-group&quot;&gt;
-    &lt;label class=&quot;nhsuk-label nhsuk-u-visually-hidden&quot; for=&quot;search-field&quot;&gt;Enter a search term&lt;/label&gt;
-    &lt;input class=&quot;hee-search-form__input nhsuk-input&quot; type=&quot;search&quot; name=&quot;q&quot; autocomplete=&quot;off&quot; id=&quot;search-field&quot; placeholder=&quot;Type search here&quot;&gt;
-    &lt;button class=&quot;hee-search-form__submit&quot; type=&quot;submit&quot;&gt;
-      &lt;span class=&quot;nhsuk-u-visually-hidden&quot;&gt;Submit&lt;/span&gt;
-      &lt;svg class=&quot;hee-search-form__icon nhsuk-icon&quot; width=&quot;14&quot; height=&quot;14&quot; viewBox=&quot;-5 -5 32 32&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-        &lt;path d=&quot;M10 17C13.866 17 17 13.866 17 10C17 6.13401 13.866 3 10 3C6.13401 3 3 6.13401 3 10C3 13.866 6.13401 17 10 17Z&quot; stroke=&quot;#F0F4F5&quot; stroke-width=&quot;1.5&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;/path&gt;
-        &lt;path d=&quot;M14.9531 14.95L19.0032 19.0001&quot; stroke=&quot;#F0F4F5&quot; stroke-width=&quot;1.5&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;/path&gt;
-      &lt;/svg&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;
-</code></pre>
+          <h3>HTML - without image</h3>
+          <pre><code>&lt;div class=&quot;hee-listing-item&quot;&gt;
+    &lt;h3&gt;&lt;a href=&quot;http://www.google.com&quot;&gt;Result item&lt;/a&gt;&lt;/h3&gt;
+    &lt;div class=&quot;hee-listing-item__details&quot;&gt;
+      &lt;div class=&quot;hee-listing-item__details__row&quot;&gt;
+        &lt;span class=&quot;hee-listing-item__details__label&quot;&gt;Profession:&lt;/span&gt;
+        &lt;span&gt;&lt;a href=&quot;#&quot;&gt;Medical&lt;/a&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;hee-listing-item__details__row&quot;&gt;
+        &lt;span class=&quot;hee-listing-item__details__label&quot;&gt;Discipline:&lt;/span&gt;
+        &lt;span&gt;&lt;a href=&quot;#&quot;&gt;Anaesthesia&lt;/a&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;hee-listing-item__details__row&quot;&gt;
+        &lt;span class=&quot;hee-listing-item__details__label&quot;&gt;Duration:&lt;/span&gt;
+        &lt;span&gt;&lt;a href=&quot;#&quot;&gt;24 months&lt;/a&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;hee-listing-item__summary&quot;&gt; Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+          <hr />
+          <h3>Macro - with image</h3>
+          <pre><code>
+  {{ listingItem({
+    image: basePath + &quot;/images/training-programme-card.png&quot;,
+    title: &quot;Result item&quot;,
+    href: &quot;http://www.google.com&quot;,
+    details: [
+      {
+        label: &quot;Profession:&quot;,
+        value: &quot;&lt;a href=&quot;#&quot;&gt;Medical&lt;/a&gt;&quot;
+      },
+      {
+        label: &quot;Discipline:&quot;,
+        value: &quot;&lt;a href=&quot;#&quot;&gt;Anaesthesia&lt;/a&gt;&quot;
+      },
+      {
+        label: &quot;Duration:&quot;,
+        value: &quot;&lt;a href=&quot;#&quot;&gt;24 months&lt;/a&gt;&quot;
+      }
+    ],
+    summary: &quot;Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec.&quot;
+  }) }}
+  </code></pre>
+          <hr />
+          <h3>HTML - without image</h3>
+          <pre><code>&lt;div class=&quot;hee-listing-item has-image&quot;&gt;
+    &lt;div class=&quot;hee-listing-item__image&quot; style=&quot;background-image:url(/images/training-programme-card.png);&quot;&gt;&lt;/div&gt;
+    &lt;h3&gt;&lt;a href=&quot;http://www.google.com&quot;&gt;Result item&lt;/a&gt;&lt;/h3&gt;
+    &lt;div class=&quot;hee-listing-item__details&quot;&gt;
+      &lt;div class=&quot;hee-listing-item__details__row&quot;&gt;
+        &lt;span class=&quot;hee-listing-item__details__label&quot;&gt;Profession:&lt;/span&gt;
+        &lt;span&gt;&lt;a href=&quot;#&quot;&gt;Medical&lt;/a&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;hee-listing-item__details__row&quot;&gt;
+        &lt;span class=&quot;hee-listing-item__details__label&quot;&gt;Discipline:&lt;/span&gt;
+        &lt;span&gt;&lt;a href=&quot;#&quot;&gt;Anaesthesia&lt;/a&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;hee-listing-item__details__row&quot;&gt;
+        &lt;span class=&quot;hee-listing-item__details__label&quot;&gt;Duration:&lt;/span&gt;
+        &lt;span&gt;&lt;a href=&quot;#&quot;&gt;24 months&lt;/a&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;hee-listing-item__summary&quot;&gt; Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
         </div>
       </div>
     </div>
