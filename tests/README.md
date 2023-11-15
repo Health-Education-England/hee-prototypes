@@ -268,3 +268,17 @@ To launch the trace viewer click on the test spec you wish to view, and then cli
 
 It's worth noting that tracing is enabled by default when running a single test using the `make playwright-test-single`
 Makefile command.
+
+### Writing Playwright tests
+
+Tests are located in the following location: `tests/playwright/specs`
+
+When writing a new test you should follow this general flow:
+
+1. Navigate to a URL
+2. Validate default browser state via "[Assertions](https://playwright.dev/docs/writing-tests#assertions)"
+3. Interact via "[Actions](https://playwright.dev/docs/writing-tests#actions)"
+4. Validate new browser state via "[Assertions](https://playwright.dev/docs/writing-tests#assertions)"
+5. Repeat for further interactions if necessary
+
+For more information and guidance on writing tests see the official [Playwright documentation](https://playwright.dev/docs/writing-tests).
