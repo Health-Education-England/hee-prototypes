@@ -167,3 +167,34 @@ If you would like to debug any changes made to the base configuration or scenari
 regenerate the config by running this command:
 
 `make backstop-generate-config`
+
+## End-to-end testing - Playwright
+
+In order to ensure all javascript functionality is working as expected, we use [Playwright](https://playwright.dev/) to perform interactions against
+templates and components, and validate the results.
+
+Each Playwright test will follow this general flow:
+
+1. Headless browser navigates to specific component / template URL
+2. Playwright validates default state of component / template via "[Assertions](https://playwright.dev/docs/writing-tests#assertions)"
+3. Playwright interacts with the browser via "[Actions](https://playwright.dev/docs/writing-tests#actions)"
+4. Playwright validates new state of component / template via "[Assertions](https://playwright.dev/docs/writing-tests#assertions)"
+5. Repeat for further interactions if necessary
+
+### Running Playwright tests
+
+To run all the Playwright tests use the following Makefile command:
+
+`make playwright-test`
+
+This will start up a docker container using Microsoft's official [Playwright docker image](https://playwright.dev/docs/docker), 
+and run all the tests / specs using the following headless browsers:
+
+- **Chrome**
+- **Firefox**
+- **Safari**
+
+Using the official docker image to run Playwright removes any need for local development environment configuration, as 
+Playwright installation requirements differ between each operating system.
+
+
