@@ -197,4 +197,74 @@ and run all the tests / specs using the following headless browsers:
 Using the official docker image to run Playwright removes any need for local development environment configuration, as 
 Playwright installation requirements differ between each operating system.
 
+It's worth noting that Playwright tests are also run via the GitHub Actions pipeline, whenever a pull request is opened
+or amended.
 
+Therefore, we need to ensure that we run Playwright tests locally before opening any pull request, otherwise the Playwright tests 
+within the pipeline will fail, and will be flagged within the pull request on GitHub.
+
+Tests are located in the following location:
+
+`tests/playwright/specs`
+
+#### Running a single test
+
+When writing or debugging a Playwright test / spec, you might find it useful to run a specific test, instead running the
+entire suite of tests.
+
+To run a single test use the following Makefile command:
+
+`make playwright-test-single TEST=[test-filename]`
+
+The filename for a specific test can be found within this directory: `tests/playwright/specs`
+
+The example below will only run the test for the Newsletter Form component:
+
+`make playwright-test-single TEST=newsletter-form.spec.js`
+
+### Viewing a Playwright report
+
+After each Playwright run completes, a report is output to the console listings all the successfully passed tests, and
+further detailing any failed including the line number where the failure occurred.
+
+Sometimes a detailed console based report can be difficult to read, so Playwright also outputs an HTML based report 
+which can be viewed locally in your browser.
+
+To view the HTML report use the following Makefile command:
+
+`playwright-serve-report`
+
+Playwright will then start a local webserver to serve the HTML report.
+
+** **NB** ** - the console will output `http://0.0.0.0:9323` as the URL to view the report, but this is **INCORRECT**.
+
+Please replace `0.0.0.0` with `localhost` in the URL and use:
+
+`http://localhost:9323`
+
+Not doing so might result in the report throwing javascript errors when tracing tests (more on tracing below).
+
+### Debugging / tracing a Playwright test
+
+While the console and HTML reports provide extensive details on the results of each of the test steps, you may need to 
+take a deeper dive and observe the interactions and state from within the browser.
+
+For these situations Playwright has a [trace viewer](https://playwright.dev/docs/trace-viewer) which provides extensive
+debugging tools such as a timeline, snapshots and logging details.
+
+Running the tests with tracing enabled will generally slow down the execution speed (and use further disk space), so 
+it is not enabled by default.
+
+To enable trace capture when running the tests, use the following Makefile command:
+
+`playwright-test-trace`
+
+Then you can view the HTML report using the usual Makefile report command:
+
+`playwright-serve-report`
+
+To launch the trace viewer click on the test spec you wish to view, and then click on the screenshot imagine within the
+`Traces` fieldset.
+
+It's worth noting that tracing is enabled by default when running a single test using the `make playwright-test-single`
+Makefile command.
