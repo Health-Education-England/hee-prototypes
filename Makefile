@@ -39,7 +39,10 @@ playwright-test:
 	docker-compose run playwright npx playwright test --config ./tests/playwright/config/playwright.config.js
 
 playwright-test-trace:
-	docker-compose run playwright npx playwright test --config ./tests/playwright/config/playwright.config.js  --trace on
+	docker-compose run playwright npx playwright test --config ./tests/playwright/config/playwright.config.js --trace on
+
+playwright-test-single:
+	docker-compose run playwright npx playwright test /tests/playwright/specs/$(TEST) --config ./tests/playwright/config/playwright.config.js --trace on
 
 playwright-serve-report:
 	docker-compose run -p 9323:9323 playwright npx playwright show-report /app/tests/playwright/report --host 0.0.0.0
