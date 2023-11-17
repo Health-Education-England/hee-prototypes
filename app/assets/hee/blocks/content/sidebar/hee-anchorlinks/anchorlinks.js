@@ -69,7 +69,6 @@ export default () => {
         }
       });
       this.anchorLinks.appendChild(ul);
-      this.anchorLinks.hidden = false;
     }
   }
 
