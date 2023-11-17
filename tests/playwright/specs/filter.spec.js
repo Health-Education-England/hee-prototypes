@@ -36,7 +36,7 @@ test('Filters: selection and clear', async ({ page }) => {
   await page.locator('select[name="profession"]').selectOption({ label: 'Medical doctors' });
 
   // Ensure all parameters have been removed and the results hash is present.
-  await expect(page).toHaveURL(new RegExp('.html\\?publication_type=consultation&publication_type=guidance&profession=medical-doctors&sub_profession=dental-nurse&topic=cosmetic-procedures&sub_topic=funding&results_updated=true$'));
+  await expect(page).toHaveURL(new RegExp('.html\\?publication_type=consultation&publication_type=guidance&profession=medical-doctors&sub_profession=&topic=cosmetic-procedures&sub_topic=funding&results_updated=true$'));
 
   // Change selected "Sub profession" filter.
   await page.locator('select[name="sub_profession"]').selectOption({ label: 'Dentist' });
