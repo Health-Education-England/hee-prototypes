@@ -63,6 +63,8 @@ jobs:
       # Checkout repo from GitHub and use current branch.
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
 
       # Copy assets from "Build" step into "dist/" directory.
       - name: Download build artifacts
@@ -161,7 +163,7 @@ jobs:
 
       # Run playwright tests.
       - name: Run playwright tests
-        run: npm run playwright:test
+        run: docker-compose run playwright npx playwright test --config ./tests/playwright/config/playwright.config.js
 
       # Upload html report as an asset
       - name: Upload playwright report
