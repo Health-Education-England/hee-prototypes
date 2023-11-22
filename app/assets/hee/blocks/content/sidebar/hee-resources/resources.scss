@@ -20,7 +20,7 @@
     }
 
     .hee-resources__pdf {
-        background-color: #F40F02;
+        background-color: $color_nhsuk-red;
     }
     .hee-resources__doc,
     .hee-resources__docx {
@@ -33,7 +33,7 @@
     }
     .hee-resources__txt,
     .hee-resources__mrc {
-        background-color: #768692;
+        background-color: $color_nhsuk-grey-1;
     }
     .hee-resources__odt,
     .hee-resources__ott,
@@ -43,7 +43,7 @@
     .hee-resources__ods,
     .hee-resources__ots,
     .hee-resources__fods {
-        background-color: #8abf1c;
+        background-color: $color_nhsuk-green;
     }
     .hee-resources__odf,
     .hee-resources__fodf {
@@ -54,7 +54,7 @@
     .hee-resources__fodp,
     .hee-resources__ppt,
     .hee-resources__pptx {
-        background-color: #f1662d;
+        background-color: $color_nhsuk-red;
     }
     .hee-resources__oth {
         background-color: #737373;
@@ -62,7 +62,7 @@
     .hee-resources__odg,
     .hee-resources__fodg,
     .hee-resources__otg {
-        background-color: #e4a204;
+        background-color: #a5265b;;
     }
     .hee-resources__odb,
     .hee-resources__fodb {
@@ -76,7 +76,7 @@
 
     .hee-resources__docSize {
         display: inline-block;
-        color: $color_nhsuk-grey-2;
+        color: $color_nhsuk-grey-1;
     }
 
 }
