@@ -85,7 +85,7 @@
           </div>
         </div>
       </div>
-      <nav class="nhsuk-header__navigation nhsuk-header__navigation--more-items" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
+      <nav class="nhsuk-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
         <div class="nhsuk-width-container">
           <p class="nhsuk-header__navigation-title"><span id="label-navigation">Menu</span>
             <button class="nhsuk-header__navigation-close" id="close-menu">
@@ -171,28 +171,29 @@
             <div class="nhsuk-filter__group">
               <a class="nhsuk-filter__group__clear" href="#">Clear</a>
               <div class="nhsuk-form-group">
-                <fieldset class="nhsuk-fieldset">
+                <fieldset class="nhsuk-fieldset" aria-describedby="filter_topic-hint">
                   <legend class="nhsuk-fieldset__legend"> Topic </legend>
+                  <div class="nhsuk-hint" id="filter_topic-hint"> 0 selected </div>
                   <div class="nhsuk-checkboxes">
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Topic-1" name="filter" type="checkbox" value="item_one" checked>
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Topic-1"> 3D printing </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_topic-1" name="publication_type" type="checkbox" value="item_one" checked>
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_topic-1"> 3D printing </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Topic-2" name="filter" type="checkbox" value="item_two" checked>
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Topic-2"> Abuse </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_topic-2" name="publication_type" type="checkbox" value="item_two" checked>
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_topic-2"> Abuse </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Topic-3" name="filter" type="checkbox" value="item_three">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Topic-3"> Acute respiratory distress syndrome </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_topic-3" name="publication_type" type="checkbox" value="item_three">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_topic-3"> Acute respiratory distress syndrome </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Topic-4" name="filter" type="checkbox" value="four">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Topic-4"> Admission </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_topic-4" name="publication_type" type="checkbox" value="four">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_topic-4"> Admission </label>
                     </div>
                     <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="filter_Topic-5" name="filter" type="checkbox" value="five">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_Topic-5"> Adverse experience children </label>
+                      <input class="nhsuk-checkboxes__input" id="filter_topic-5" name="publication_type" type="checkbox" value="five">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_topic-5"> Adverse experience children </label>
                     </div>
                   </div>
                 </fieldset>
@@ -225,18 +226,21 @@
                 </form>
               </div>
               <div class="hee-listing__tags">
-                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="item_one">
-                  <span>3D printing</span>
-                  <a class="nhsuk-filter-tag__icon">Remove</a>
-                </div>
-                <div class="nhsuk-filter-tag nhsuk-tag" data-filter="item_two">
-                  <span>Abuse</span>
-                  <a class="nhsuk-filter-tag__icon">Remove</a>
+                <div class="hee-listing__tags__group">
+                  <label>Topic: </label>
+                  <div class="nhsuk-filter-tag nhsuk-tag" data-filter="item_one">
+                    <span>3D printing</span>
+                    <a class="nhsuk-filter-tag__icon">Remove</a>
+                  </div>
+                  <div class="nhsuk-filter-tag nhsuk-tag" data-filter="item_two">
+                    <span>Abuse</span>
+                    <a class="nhsuk-filter-tag__icon">Remove</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="hee-listing__results">
-              <div class="hee-listing-item">
+            <div class="hee-listing__results ">
+              <div class="hee-listing-item ">
                 <h3><a href="#">Search bank #1</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
@@ -265,7 +269,7 @@
                   </div>
                 </div>
               </div>
-              <div class="hee-listing-item">
+              <div class="hee-listing-item ">
                 <h3><a href="#">Search bank #2</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
@@ -294,7 +298,7 @@
                   </div>
                 </div>
               </div>
-              <div class="hee-listing-item">
+              <div class="hee-listing-item ">
                 <h3><a href="#">Search bank #3</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
@@ -323,7 +327,7 @@
                   </div>
                 </div>
               </div>
-              <div class="hee-listing-item">
+              <div class="hee-listing-item ">
                 <h3><a href="#">Search bank #4</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
@@ -352,7 +356,7 @@
                   </div>
                 </div>
               </div>
-              <div class="hee-listing-item">
+              <div class="hee-listing-item ">
                 <h3><a href="#">Search bank #5</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
@@ -381,7 +385,7 @@
                   </div>
                 </div>
               </div>
-              <div class="hee-listing-item">
+              <div class="hee-listing-item ">
                 <h3><a href="#">Search bank #6</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
@@ -410,7 +414,7 @@
                   </div>
                 </div>
               </div>
-              <div class="hee-listing-item">
+              <div class="hee-listing-item ">
                 <h3><a href="#">Search bank #7</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
@@ -439,7 +443,7 @@
                   </div>
                 </div>
               </div>
-              <div class="hee-listing-item">
+              <div class="hee-listing-item ">
                 <h3><a href="#">Search bank #8</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
@@ -468,7 +472,7 @@
                   </div>
                 </div>
               </div>
-              <div class="hee-listing-item">
+              <div class="hee-listing-item ">
                 <h3><a href="#">Search bank #9</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
@@ -497,7 +501,7 @@
                   </div>
                 </div>
               </div>
-              <div class="hee-listing-item">
+              <div class="hee-listing-item ">
                 <h3><a href="#">Search bank #10</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">

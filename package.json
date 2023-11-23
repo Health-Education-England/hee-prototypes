@@ -5,18 +5,10 @@
   "main": "app.js",
   "scripts": {
     "preinstall": "npx npm-force-resolutions",
-    "serve": "gulp serve",
-    "build": "gulp build",
-    "build:prod": "gulp build --prod",
-    "watch": "gulp watch",
-    "test": "npm run build && npm run backstop:test && npm run playwright:test",
-    "backstop:ref": "docker-compose run backstopjs npm run backstop:ref",
-    "backstop:test": "docker-compose run backstopjs npm run backstop:test",
-    "backstop:approve": "docker-compose run backstopjs npm run backstop:approve",
-    "backstop:generate-config": "docker-compose run backstopjs npm run backstop:generate-config",
-    "playwright:test": "docker-compose run playwright npx playwright test --config ./tests/playwright/config/playwright.config.js",
-    "playwright:test-trace": "docker-compose run playwright npx playwright test --config ./tests/playwright/config/playwright.config.js  --trace on",
-    "playwright:report": "gulp playwright-report"
+    "serve": "npx gulp serve",
+    "build": "npx gulp build",
+    "build:prod": "npx gulp build --prod",
+    "watch": "gulp watch"
   },
   "author": "https://github.com/Health-Education-England/",
   "license": "MIT",
@@ -40,21 +32,21 @@
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
-    "nhsuk-frontend": "^7.0.0",
+    "nhsuk-frontend": "7.0.0",
     "nunjucks": "^3.2.4",
     "sass": "^1.63.5",
     "webpack": "^5.87.0",
     "webpack-stream": "^7.0.0"
   },
   "resolutions": {
-    "ansi-regex": "^4.1.1",
-    "decode-uri-component": "^0.2.1",
-    "http-cache-semantics": "^4.1.1",
-    "glob-parent": "^6.0.1",
-    "got": "^11.8.5",
-    "json5": "^2.2.2",
-    "minimist": "^1.2.6",
-    "semver": "^7.5.2",
-    "terser": "^4.8.1"
+    "ansi-regex": "4.1.1",
+    "decode-uri-component": "0.2.1",
+    "http-cache-semantics": "4.1.1",
+    "glob-parent": "6.0.1",
+    "got": "11.8.5",
+    "json5": "2.2.2",
+    "minimist": "1.2.6",
+    "semver": "7.5.2",
+    "terser": "4.8.1"
   }
 }

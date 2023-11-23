@@ -63,6 +63,8 @@ jobs:
       # Checkout repo from GitHub and use current branch.
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
 
       - name: Clean dist directory contents
         run: rm -rf dist/*
@@ -164,7 +166,7 @@ jobs:
 
       # Run playwright tests.
       - name: Run playwright tests
-        run: npm run playwright:test
+        run: docker-compose run playwright npx playwright test --config ./tests/playwright/config/playwright.config.js
 
       # Upload html report as an asset
       - name: Upload playwright report
@@ -186,6 +188,10 @@ jobs:
       # Checkout repo from GitHub and use current branch.
       - name: Checkout code
         uses: actions/checkout@v3
+
+      #  Ensures that we use the latest commit from step: "Commit bundled dist changes" above.
+      - name: Fetch latest commit from bundle step
+        run: git pull --no-rebase
 
       # Deploys and updates GitHub Pages.
       - name: Deploy GitHub pages

@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 test('Listings: sort by selection', async ({ page }) => {
-  await page.goto('/templates/examples/news-collection.html');
+  await page.goto('/templates/examples/publications-collection.html');
 
   const pageHeader = page.locator('.page__header');
 

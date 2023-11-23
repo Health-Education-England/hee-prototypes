@@ -1,13 +1,11 @@
 .nhsuk-header {
   position: relative;
-  z-index: 100;
 }
 
 .nhsuk-header__container {
   margin: 0 nhsuk-spacing(3);
   padding: 20px 0;
   position: relative;
-  z-index: 100;
 
   @include mq($from: desktop) {
     margin: 0 32px;
@@ -20,7 +18,7 @@
 .nhsuk-header__content {
   float:right;
   margin: -48px 0 0 0;
-  z-index: 10;
+  z-index: 0;
 
   @include mq($from: desktop) {
     margin: 0;

@@ -2,6 +2,15 @@
     margin-bottom: 4em !important;
     background-color: #fff;
     border: 1px solid $color_nhsuk-grey-4;
+
+    &.has-caption {
+        border-top: none;
+
+        caption {
+            border: 1px solid $color_nhsuk-grey-4;
+            border-bottom: none;
+        }
+    }
 }
 .nhsuk-hee-table--multicols {
     width: 100%;
@@ -68,9 +77,6 @@ table caption {
     margin-bottom: 4em !important;
     background-color: #fff;
 }
-
-
-
 @media (max-width: 48.0525em) {
     .nhsuk-table-responsive .nhsuk-table__body .nhsuk-table__row {
         display: block;
@@ -120,7 +126,7 @@ table caption {
     margin-bottom: 24px;
 }
 .nhsuk-hee-table--multicols .nhsuk-table__body .nhsuk-table__row .nhsuk-table__cell {
-    display: block;
+    display: flex;
     min-width: 1px;
     padding-right: 0;
     text-align: right;
@@ -134,5 +140,41 @@ table caption {
     padding-right: 16px;
     text-align: left;
     display: inline-block;
-    float: left;
+    float: none;
+}
+
+.nhsuk-hee-table--multicols {
+    .nhsuk-table__cell__container {
+        width: 48%;
+        padding-left: 16px;
+        text-align: left;
+        display: inline-block;
+    }
+}
+
+.nhsuk-details.nhsuk-expander, .nhsuk-tabs {
+    table {
+        border: none;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 0 !important;
+        word-break: break-word;
+
+        caption {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        thead {
+            white-space: normal;
+        }
+    }
+
+    .nhsuk-table-responsive {
+        word-break: normal;
+    }
+}
+
+.nhsuk-table-responsive thead {
+    white-space: normal;
 }

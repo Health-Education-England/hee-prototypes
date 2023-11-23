@@ -4,35 +4,96 @@
   {{ filter({
     groups: [
       {
-        title: "Topic",
+        type: "select",
+        name: "profession",
+        title: "Profession",
         showClearToggle: true,
         items: [
         {
-          text: "Item one",
-          value: "item_one",
-          checked: true
+          text: "All professions",
+          value: ""
         },
         {
-          text: "Item two",
-          value: "item_two",
-          checked: true
+          text: "Allied health professionals",
+          value: "allied_health_professionals"
+        },
+        {
+          text: "Dental professionals",
+          value: "dental_professionals",
+          selected: true
+        },
+        {
+          text: "Medical doctors",
+          value: "medical_doctors"
+        },
+        {
+          text: "Public health professionals",
+          value: "public_health_professionals"
         }
-      ]
+      ],
+        subGroup: {
+        type: "selectbox",
+        name: "sub_profession",
+        title: "Sub profession",
+        items: [
+          {
+            text: "All sub professions",
+            value: ""
+          },
+          {
+            text: "Dental nurse",
+            value: "dental_nurse",
+            selected: true
+          },
+          {
+            text: "Dental therapist",
+            value: "dental_therapist"
+          },
+          {
+            text: "Dentist",
+            value: "dentist"
+          }
+        ]
+      }
       },
       {
+        type: "checkbox",
         title: "Publication type",
+        showClearToggle: true,
         items: [
         {
-          text: "Item one",
-          value: "item_one"
+          text: "Briefing",
+          value: "briefing"
         },
         {
-          text: "Item two",
-          value: "item_two"
+          text: "Consultation",
+          value: "consultation",
+          checked: true
         },
         {
-          text: "Item three",
-          value: "item_three"
+          text: "Data and statistics",
+          value: "data_statistics"
+        },
+        {
+          text: "FOI release",
+          value: "foi_release"
+        },
+        {
+          text: "Guidance",
+          value: "guidance",
+          checked: true
+        },
+        {
+          text: "Independent report",
+          value: "independent_report"
+        },
+        {
+          text: "Letter",
+          value: "letter"
+        },
+        {
+          text: "Policy or strategy",
+          value: "policy_strategy"
         }
       ]
       }

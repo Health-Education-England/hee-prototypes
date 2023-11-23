@@ -1,71 +1,105 @@
 {% extends "includes/_example-blocks.html" %}
 
 {% block main %}
-  <h2>A responsive table</h2>
-  {{ table({
-    tableClasses: 'nhsuk-hee-table',
+  <h2>Responsive table</h2>
+
+  {{ responsiveTable({
+    tableClasses: 'nhsuk-hee-table nhsuk-hee-table--multicols',
     responsive: true,
     panel: false,
-    caption: "Ibuprofen tablet dosages for children",
+    caption: "Online interview overview",
     firstCellIsHeader: false,
     head: [
       {
-        text: "Age"
+        text: "Area"
       },
       {
-        text: "How much?"
+        text: "Raw marks by panel member"
       },
       {
-        text: "How often"
+        text: "Total marks"
+      },
+      {
+        text: "Percentage of final score %"
       }
     ],
     rows: [
       [
         {
-          header: "Age",
-          text: "7 to 9 years"
+          header: "Area",
+          html: "Clinical prioritisation"
         },
         {
-          header: "How much?",
-          text: "200mg"
+          header: "Raw marks by panel member",
+          html: "20"
         },
         {
-          header: "How often?",
-          text: "Max 3 times in 24 hours"
+          header: "Total marks",
+          html: "40"
+        },
+        {
+          header: "Percentage of final score %",
+          html: "26.64"
         }
       ],
       [
         {
-          header: "Age",
-          text: "10 to 11 years"
+          header: "Area",
+          html: "<p>Score: 5</p><p>By December 2022, I have completed a quality improvement project (QIP) or complete audit cycle (for example,&nbsp;first audit/project, action plan and re-audit/assessment to quantify impact of intervention) which has resulted in national change</p>"
         },
         {
-          header: "How much?",
-          text: "200mg to 300mg"
+          header: "Raw marks by panel member",
+          html: "20"
         },
         {
-          header: "How often?",
-          text: "Max 3 times in 24 hours"
+          header: "Total marks",
+          html: "40"
+        },
+        {
+          header: "Percentage of final score %",
+          html: "26.64"
         }
       ],
       [
         {
-          header: "Age",
-          text: "12 to 17 years"
+          header: "Area",
+          html: "Clinical prioritisation"
         },
         {
-          header: "How much?",
-          text: "200mg to 400mg"
+          header: "Raw marks by panel member",
+          html: "20"
         },
         {
-          header: "How often?",
-          text: "Max 3 times in 24 hours"
+          header: "Total marks",
+          html: "40"
+        },
+        {
+          header: "Percentage of final score %",
+          html: "26.64"
+        }
+      ],
+      [
+        {
+          header: "Area",
+          html: "Clinical prioritisation"
+        },
+        {
+          header: "Raw marks by panel member",
+          html: "20"
+        },
+        {
+          header: "Total marks",
+          html: "40"
+        },
+        {
+          header: "Percentage of final score %",
+          html: "26.64"
         }
       ]
     ]
-  })  }}
+  })}}
 
-  <h3>A WYSIWYG table (non-responsive)</h3>
+  <h2>A WYSIWYG table (non-responsive)</h2>
   <table role="table">
     <thead role="rowgroup">
     <tr role="row">
@@ -117,114 +151,4 @@
     </tbody>
   </table>
 
-  <h2>A table with more than 3 rows</h2>
-  {{
-  table({
-    tableClasses: 'nhsuk-hee-table nhsuk-hee-table--multicols',
-    responsive: true,
-    panel: false,
-    caption: "Ibuprofen tablet dosages for children",
-    firstCellIsHeader: false,
-    head: [
-      {
-        text: "Age"
-      },
-      {
-        text: "How much"
-      },
-      {
-        text: "How often"
-      },
-      {
-        text: "How often"
-      },
-      {
-        text: "How often"
-      },
-      {
-        text: "How often"
-      }
-    ],
-    rows: [
-      [
-        {
-          header: "Age",
-          text: "7 to 9 years"
-        },
-        {
-          header: "How often?",
-          text: "200mg"
-        },
-        {
-          header: "How often?",
-          text: "Max 3 times in 24 hours"
-        },
-        {
-          header: "How often?",
-          text: "Max 3 times in 24 hours"
-        },
-        {
-          header: "How often?",
-          text: "Max 3 times in 24 hours"
-        },
-        {
-          header: "How often?",
-          text: "Max 3 times in 24 hours"
-        }
-      ],
-      [
-        {
-          header: "Age",
-          text: "10 to 11 years"
-        },
-        {
-          header: "How much?",
-          text: "<a href=''>200mg to 300mg</a>"
-        },
-        {
-          header: "How often?",
-          text: "Max 3 times in 24 hours"
-        },
-        {
-          header: "How often?",
-          text: "Max 3 times in 24 hours"
-        },
-        {
-          header: "How often?",
-          text: "Max 3 times in 24 hours"
-        },
-        {
-          header: "How often?",
-          text: "Max 3 times in 24 hours"
-        }
-      ],
-      [
-        {
-          header: "Age",
-          text: "12 to 17 years"
-        },
-        {
-          header: "How much?",
-          text: "200mg to 400mg"
-        },
-        {
-          header: "How often?",
-          text: "Max 3 times in 24 hours"
-        },
-        {
-          header: "How often?",
-          text: "Max 3 times in 24 hours"
-        },
-        {
-          header: "How often?",
-          text: "Max 3 times in 24 hours"
-        },
-        {
-          header: "How often?",
-          text: "Max 3 times in 24 hours"
-        }
-      ]
-    ]
-  })
-  }}
 {% endblock %}
