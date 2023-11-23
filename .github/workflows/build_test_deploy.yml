@@ -64,6 +64,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Clean dist directory contents
+        run: rm -rf dist/*
+
       # Copy assets from "Build" step into "dist/" directory.
       - name: Download build artifacts
         uses: actions/download-artifact@v3
