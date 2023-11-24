@@ -45,7 +45,7 @@ authors at half width side by side (desktop).
 
 ```
 {{ authorCard({
-    imgURL: "/images/doctor-headshot.png",
+    imgURL: "/assets/images/doctor-headshot.png",
     title: "Mr",
     name: "First Last",
     initials: "JB",
@@ -73,7 +73,7 @@ authors at half width side by side (desktop).
 ```
 <div class="hee-card--author__container">
     {{ authorCard({
-        imgURL: "/images/doctor-headshot.png",
+        imgURL: "/assets/images/doctor-headshot.png",
         title: "Mr",
         name: "First Author",
         initials: "JB",
@@ -94,7 +94,7 @@ authors at half width side by side (desktop).
     }) }}
     
     {{ authorCard({
-        imgURL: "/images/doctor-headshot.png",
+        imgURL: "/assets/images/doctor-headshot.png",
         title: "Mr",
         name: "Second Author",
         initials: "JB",
@@ -115,7 +115,7 @@ authors at half width side by side (desktop).
     }) }}
     
     {{ authorCard({
-        imgURL: "/images/doctor-headshot.png",
+        imgURL: "/assets/images/doctor-headshot.png",
         title: "Mr",
         name: "Third Author",
         initials: "JB",
