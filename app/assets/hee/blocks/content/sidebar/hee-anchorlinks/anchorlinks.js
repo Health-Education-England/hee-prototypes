@@ -16,6 +16,7 @@ export default () => {
 
       if (this.foundHeadings.length) {
         this.addAnchorsToPage();
+      } else {
         this.anchorLinks.hidden = false;
       }
     }
