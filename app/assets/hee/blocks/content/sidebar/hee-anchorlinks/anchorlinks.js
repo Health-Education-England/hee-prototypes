@@ -23,17 +23,8 @@ export default () => {
     findHeadings(headings) {
       let foundHeadings = []
       if (headings) {
-
-        // Generate CSS selectors for only first level headings inside rich-text
-        // areas and outside of components.
-        const headingTypes = headings.split(',');
-        let selectors = headingTypes.map(type => {
-          return '.page__content > ' + type;
-        });
-        selectors = selectors.join(', ');
-
         const contentContainer = document.querySelector('.page__content');
-        contentContainer.querySelectorAll(selectors).forEach((heading, i) => {
+        contentContainer.querySelectorAll(headings).forEach((heading, i) => {
           if (!heading.id) {
             heading.id = heading.innerText.replace(/ .*/,'').replace(/[\n\r]/g,'').replace(/\s/g,'').toLowerCase()+i;
           }
