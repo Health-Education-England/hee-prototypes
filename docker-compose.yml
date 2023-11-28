@@ -1,5 +1,16 @@
 version: '3'
 services:
+  nodejs:
+    image: node:18.18.2-alpine3.18
+    command: ['tail', '-f', '/dev/null']
+    working_dir: /app
+    volumes:
+      - .:/app
+    user: 'node'
+    ports:
+      - '3000:3000'
+      - '35729:35729'
+
   backstopjs:
     image: ghcr.io/health-education-england/run-backstopjs-regression-tests:main
     volumes:

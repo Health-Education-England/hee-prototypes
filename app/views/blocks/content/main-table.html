@@ -57,101 +57,68 @@
 <h3>Macro</h3>
 {{ highlight({
   html: '
-{{ responsiveTable({
-    tableClasses: \'nhsuk-hee-table nhsuk-hee-table--multicols\',
+{{ table({
+    tableClasses: \'nhsuk-hee-table\',
     responsive: true,
     panel: false,
-    caption: "Online interview overview",
+    caption: "Ibuprofen tablet dosages for children",
     firstCellIsHeader: false,
     head: [
       {
-        text: "Area"
+        text: "Age"
       },
       {
-        text: "Raw marks by panel member"
+        text: "How much?"
       },
       {
-        text: "Total marks"
-      },
-      {
-        text: "Percentage of final score %"
+        text: "How often"
       }
     ],
     rows: [
       [
         {
-          header: "Area",
-          html: "Clinical prioritisation"
+          header: "Age",
+          text: "7 to 9 years"
         },
         {
-          header: "Raw marks by panel member",
-          html: "20"
+          header: "How much?",
+          text: "200mg"
         },
         {
-          header: "Total marks",
-          html: "40"
-        },
-        {
-          header: "Percentage of final score %",
-          html: "26.64"
+          header: "How often?",
+          text: "Max 3 times in 24 hours"
         }
       ],
       [
         {
-          header: "Area",
-          html: "<p>Score: 5</p><p>By December 2022, I have completed a quality improvement project (QIP) or complete audit cycle (for example,&nbsp;first audit/project, action plan and re-audit/assessment to quantify impact of intervention) which has resulted in national change</p>"
+          header: "Age",
+          text: "10 to 11 years"
         },
         {
-          header: "Raw marks by panel member",
-          html: "20"
+          header: "How much?",
+          text: "200mg to 300mg"
         },
         {
-          header: "Total marks",
-          html: "40"
-        },
-        {
-          header: "Percentage of final score %",
-          html: "26.64"
+          header: "How often?",
+          text: "Max 3 times in 24 hours"
         }
       ],
       [
         {
-          header: "Area",
-          html: "Clinical prioritisation"
+          header: "Age",
+          text: "12 to 17 years"
         },
         {
-          header: "Raw marks by panel member",
-          html: "20"
+          header: "How much?",
+          text: "200mg to 400mg"
         },
         {
-          header: "Total marks",
-          html: "40"
-        },
-        {
-          header: "Percentage of final score %",
-          html: "26.64"
-        }
-      ],
-      [
-        {
-          header: "Area",
-          html: "Clinical prioritisation"
-        },
-        {
-          header: "Raw marks by panel member",
-          html: "20"
-        },
-        {
-          header: "Total marks",
-          html: "40"
-        },
-        {
-          header: "Percentage of final score %",
-          html: "26.64"
+          header: "How often?",
+          text: "Max 3 times in 24 hours"
         }
       ]
     ]
-  })}}
+})  }}
   '
 }) }}
 
@@ -160,94 +127,51 @@
 <h3>HTML</h3>
 {{ highlight({
   html : '
-  <table role="table" class="nhsuk-table-responsive nhsuk-hee-table nhsuk-hee-table--multicols has-caption">
-    <caption class="nhsuk-table__caption">Online interview overview</caption>
+<table role="table" class="nhsuk-table-responsive nhsuk-hee-table">
+    <caption class="nhsuk-table__caption">Ibuprofen tablet dosages for children</caption>
     <thead role="rowgroup" class="nhsuk-table__head">
       <tr role="row">
-        <th role="columnheader" class="" scope="col"> Area </th>
-        <th role="columnheader" class="" scope="col"> Raw marks by panel member </th>
-        <th role="columnheader" class="" scope="col"> Total marks </th>
-        <th role="columnheader" class="" scope="col"> Percentage of final score % </th>
+        <th role="columnheader" class="" scope="col"> Age </th>
+        <th role="columnheader" class="" scope="col"> How much? </th>
+        <th role="columnheader" class="" scope="col"> How often </th>
       </tr>
     </thead>
     <tbody class="nhsuk-table__body">
       <tr role="row" class="nhsuk-table__row">
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Area </span>
-          <div class="nhsuk-table__cell__container">Clinical prioritisation</div>
+          <span class="nhsuk-table-responsive__heading">Age </span>7 to 9 years
         </td>
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Raw marks by panel member </span>
-          <div class="nhsuk-table__cell__container">20</div>
+          <span class="nhsuk-table-responsive__heading">How much? </span>200mg
         </td>
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Total marks </span>
-          <div class="nhsuk-table__cell__container">40</div>
-        </td>
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Percentage of final score % </span>
-          <div class="nhsuk-table__cell__container">26.64</div>
+          <span class="nhsuk-table-responsive__heading">How often? </span>Max 3 times in 24 hours
         </td>
       </tr>
       <tr role="row" class="nhsuk-table__row">
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Area </span>
-          <div class="nhsuk-table__cell__container">
-            <p>Score: 5</p>
-            <p>By December 2022, I have completed a quality improvement project (QIP) or complete audit cycle (for example,&nbsp;first audit/project, action plan and re-audit/assessment to quantify impact of intervention) which has resulted in national change</p>
-          </div>
+          <span class="nhsuk-table-responsive__heading">Age </span>10 to 11 years
         </td>
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Raw marks by panel member </span>
-          <div class="nhsuk-table__cell__container">20</div>
+          <span class="nhsuk-table-responsive__heading">How much? </span>200mg to 300mg
         </td>
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Total marks </span>
-          <div class="nhsuk-table__cell__container">40</div>
-        </td>
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Percentage of final score % </span>
-          <div class="nhsuk-table__cell__container">26.64</div>
+          <span class="nhsuk-table-responsive__heading">How often? </span>Max 3 times in 24 hours
         </td>
       </tr>
       <tr role="row" class="nhsuk-table__row">
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Area </span>
-          <div class="nhsuk-table__cell__container">Clinical prioritisation</div>
+          <span class="nhsuk-table-responsive__heading">Age </span>12 to 17 years
         </td>
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Raw marks by panel member </span>
-          <div class="nhsuk-table__cell__container">20</div>
+          <span class="nhsuk-table-responsive__heading">How much? </span>200mg to 400mg
         </td>
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Total marks </span>
-          <div class="nhsuk-table__cell__container">40</div>
-        </td>
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Percentage of final score % </span>
-          <div class="nhsuk-table__cell__container">26.64</div>
-        </td>
-      </tr>
-      <tr role="row" class="nhsuk-table__row">
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Area </span>
-          <div class="nhsuk-table__cell__container">Clinical prioritisation</div>
-        </td>
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Raw marks by panel member </span>
-          <div class="nhsuk-table__cell__container">20</div>
-        </td>
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Total marks </span>
-          <div class="nhsuk-table__cell__container">40</div>
-        </td>
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Percentage of final score % </span>
-          <div class="nhsuk-table__cell__container">26.64</div>
+          <span class="nhsuk-table-responsive__heading">How often? </span>Max 3 times in 24 hours
         </td>
       </tr>
     </tbody>
-  </table>
+</table>
   '
   }) 
 }}
