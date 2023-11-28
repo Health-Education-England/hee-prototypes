@@ -1,4 +1,4 @@
-{% extends "prototype-inner.html" %}
+{% extends "includes/_prototype-inner.html" %}
 
 {% set page_url = 'main-card-author' %}
 {% set page_title = 'Card--Author' %}
@@ -58,7 +58,7 @@
 {{ highlight({
   html: '
 {{ authorCard({
-  imgURL: "/images/doctor-headshot.png",
+  imgURL: "/assets/images/doctor-headshot.png",
   title: "Mr",
   name: "First Last",
   initials: "JB",
@@ -88,7 +88,7 @@
 <div class="hee-card hee-card--author">
     <div class="hee-card--author__header">
       <div class="hee-card__image has-bg">
-        <div class="hee-card__initials" style="background-image: url(\'/images/MicrosoftTeams-image.png\')">
+        <div class="hee-card__initials" style="background-image: url(\'/assets/images/MicrosoftTeams-image.png\')">
           <span>JB</span>
         </div>
       </div>

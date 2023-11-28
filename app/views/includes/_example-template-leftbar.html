@@ -1,0 +1,28 @@
+{% extends "includes/_example-template.html" %}
+
+{% block pageClass %}page--leftbar{% endblock %}
+
+{% block breadcrumbs %}
+{% endblock %}
+
+{% block pageHeader %}
+{% endblock %}
+
+{% block pageMain %}
+  <div class="page__layout nhsuk-width-container">
+    <aside class="page__leftbar">
+      {% block pageLeftbar %}{% endblock %}
+    </aside>
+    <div class="page__main">
+      <div class="page__content">
+        {% block pageContent %}{% endblock %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block pageFooter %}
+{% endblock %}
+
+{% block pageFeature %}
+{% endblock %}
