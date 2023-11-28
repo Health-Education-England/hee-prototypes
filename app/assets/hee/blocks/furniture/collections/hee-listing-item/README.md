@@ -57,7 +57,7 @@ It's worth noting that the image variant has a restriced with of 304px as per de
 
 ```html
 <div class="hee-listing-item has-image">
-  <div class="hee-listing-item__image" style="background-image:url(/images/training-programme-card.png);"></div>
+  <div class="hee-listing-item__image" style="background-image:url(/assets/images/training-programme-card.png);"></div>
   <h3><a href="http://www.google.com">Result item</a></h3>
   <div class="hee-listing-item__details">
     <div class="hee-listing-item__details__row">
@@ -81,7 +81,7 @@ It's worth noting that the image variant has a restriced with of 304px as per de
 
 ```
   {{ listingItem({
-    image: basePath + "/images/training-programme-card.png",
+    image: basePath + "/assets/images/training-programme-card.png",
     title: "Result item",
     href: "http://www.google.com",
     details: [

@@ -1,0 +1,179 @@
+{# HEE/Scaffolding #}
+
+{# Cookies #}
+{%- from 'hee/blocks/scaffolding/nhsuk-hee-cookies/macro.njk' import cookies %}
+
+{# Header #}
+{%- from 'hee/blocks/scaffolding/nhsuk-hee-header/macro.njk' import customHeader %}
+{%- from 'skip-link/macro.njk' import skipLink %}
+
+{# Notifications #}
+{%- from 'hee/blocks/scaffolding/hee-banner/macro.njk' import banner %}
+{%- from 'hee/blocks/scaffolding/hee-phasebanner/macro.njk' import phaseBanner %}
+
+{# Footer #}
+{%- from 'hee/blocks/scaffolding/nhsuk-hee-footer/macro.njk' import siteFooter %}
+
+{# Main #}
+{%- from 'breadcrumb/macro.njk' import breadcrumb %}
+
+{# TEMPLATE BLOCKS #}
+{%- from 'hero/macro.njk' import hero %}
+{%- from 'hee/blocks/furniture/page/hee-microhero/macro.njk' import microHero %}
+{%- from 'hee/blocks/content/main/hee-publication-doc/macro.njk' import publicationDoc %}
+{%- from 'hee/blocks/content/featured/hee-featured-content/macro.njk' import featuredContent %}
+{%- from 'hee/blocks/furniture/collections/hee-listing/macro.njk' import listingLayout %}
+{%- from 'hee/blocks/furniture/collections/hee-listing-item/macro.njk' import listingItem %}
+{%- from 'hee/blocks/furniture/collections/hee-filter/macro.njk' import filter %}
+{%- from 'hee/blocks/furniture/collections/hee-filtertag/macro.njk' import filterTag %}
+{%- from 'hee/blocks/furniture/content/nhsuk-hee-review-date/macro.njk' import reviewDate %}
+{%- from 'hee/blocks/furniture/a-z-listings/nhsuk-hee-nav-a-z/macro.njk' import azNav %}
+
+{%- from 'pagination/macro.njk' import pagination %}
+
+{# CONTENT BLOCKS #}
+
+{# Main #}
+{%- from 'hee/blocks/content/main/hee-applies-to/macro.njk' import appliesTo %}
+{%- from 'hee/blocks/content/main/hee-card--author/macro.njk' import authorCard %}
+{%- from 'hee/blocks/content/main/hee-table-expander/macro.njk' import tableExpander %}
+{%- from 'hee/blocks/content/main/hee-google-map/macro.njk' import googleMap %}
+{%- from 'hee/blocks/content/main/hee-training-journey/macro.njk' import trainingJourney %}
+{%- from 'hee/blocks/content/main/hee-quote/macro.njk' import quote %}
+{%- from 'hee/blocks/content/main/hee-card--summary/macro.njk' import summaryCard %}
+{%- from 'hee/blocks/content/sidebar/hee-card--person/macro.njk' import personCard %}
+{%- from 'hee/blocks/content/sidebar/hee-card--department/macro.njk' import departmentCard %}
+{%- from 'hee/blocks/content/main/hee-newsletter/macro.njk' import newsletterForm %}
+{%- from 'hee/blocks/content/main/nhsuk-hee-table/macro.njk' import responsiveTable %}
+
+{# Sidebar #}
+{%- from 'hee/blocks/content/sidebar/hee-card--details/macro.njk' import detailsCard %}
+{%- from 'hee/blocks/content/sidebar/hee-card--downloads/marco.njk' import downloadsCard %}
+{%- from 'hee/blocks/content/sidebar/hee-card--programme-info/macro.njk' import programmeInfoCard %}
+
+{# Search #}
+{%- from 'hee/blocks/furniture/search/hee-search-form/macro.njk' import searchForm %}
+{%- from 'hee/blocks/furniture/search/hee-search-listing/macro.njk' import searchListing %}
+{%- from 'hee/blocks/furniture/search/hee-search-listing-item/macro.njk' import searchListingItem %}
+
+{# To Sort #}
+{# HEE Components #}
+{%- from 'hee/blocks/content/sidebar/hee-anchorlinks/macro.njk' import anchorLinks %}
+{%- from 'hee/blocks/furniture/collections/hee-listing-item/macro.njk' import listingItem %}
+{%- from 'hee/blocks/content/footer/hee-anchorlinks-sticky/macro.njk' import anchorLinksSticky %}
+{%- from 'hee/blocks/content/main/hee-media/macro.njk' import media %}
+{%- from 'hee/blocks/content/main/hee-navmap/macro.njk' import navMap %}
+{%- from 'hee/blocks/content/sidebar/hee-resources/macro.njk' import resources %}
+{%- from 'hee/blocks/content/sidebar/nhsuk-image-card/macro.njk' import imageCard %}
+{%- from 'hee/blocks/content/main/hee-tabs/macro.njk' import tabs %}
+{%- from 'hee/blocks/content/main/nhsuk-hee-blocklinks/macro.njk' import blocklinks %}
+{%- from 'hee/blocks/scaffolding/hee-back-to-top/macro.njk' import backToTop %}
+{%- from 'hee/blocks/content/sidebar/nhsuk-contact/macro.njk' import contact %}
+{%- from 'hee/blocks/content/sidebar/nhsuk-related-links/macro.njk' import relatedLinks %}
+
+{# NHSUK Components #}
+{%- from 'action-link/macro.njk' import actionLink %}
+{%- from 'back-link/macro.njk' import backLink %}
+{%- from 'button/macro.njk' import button %}
+{%- from 'card/macro.njk' import card %}
+{%- from 'checkboxes/macro.njk' import checkboxes %}
+{%- from 'contents-list/macro.njk' import contentsList %}
+{%- from 'details/macro.njk' import details %}
+{%- from 'images/macro.njk' import image %}
+{%- from 'inset-text/macro.njk' import insetText %}
+{%- from 'do-dont-list/macro.njk' import list %}
+{%- from 'summary-list/macro.njk' import summaryList %}
+{%- from 'select/macro.njk' import select %}
+{%- from 'tables/macro.njk' import table %}
+{%- from 'warning-callout/macro.njk' import warningCallout %}
+{#{%- from 'care-card/macro.njk' import careCard %}
+{%- from 'date-input/macro.njk' import dateInput %}
+{%- from 'error-message/macro.njk' import errorMessage %}
+{%- from 'error-summary/macro.njk' import errorSummary %}
+{%- from 'fieldset/macro.njk' import fieldset %}
+{%- from 'hint/macro.njk' import hint %}
+{%- from 'input/macro.njk' import input %}
+{%- from 'label/macro.njk' import label %}
+{%- from 'list-panel/macro.njk' import listPanel %}
+{%- from 'radios/macro.njk' import radios %}
+{%- from 'tag/macro.njk' import tag %}
+{%- from 'textarea/macro.njk' import textarea %#}
+
+{%- from 'hee/blocks/scaffolding/mega-menu/macro.njk' import megaMenu %}
+{%- from 'hee/blocks/scaffolding/back-to-home-banner/macro.njk' import backToHomeBanner %}
+{%- from 'hee/blocks/scaffolding/secondary-menu/macro.njk' import secondaryMenu %}
+
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="ie8" lang="en"><![endif]--><!--[if IE 9]><html class="ie9" lang="en"><![endif]--><!--[if gt IE 9]><!--><html lang="en" style="{{ html_style }}"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>{% block pageTitle %}Examples{% endblock %}</title>
+    <link href="https://www.nhs.uk/" rel="preconnect">
+    <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
+    <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
+    <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
+
+    {% block headCSS %}
+      <link href="{{ basePath }}/assets/css/nhsuk-7.0.0.min.css" rel="stylesheet" />
+      <link href="{{ basePath }}/assets/css/hee.css" rel="stylesheet" />
+    {% endblock %}
+
+    {% block headIcons %}
+    <link rel="shortcut icon" href="{{ basePath }}/assets/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{ basePath }}/assets/favicons/apple-touch-icon-180x180.png">
+    <link rel="mask-icon" href="{{ basePath }}/assets/favicons/favicon.svg" color="#005eb8">
+    <link rel="icon" sizes="192x192" href="{{ basePath }}/assets/favicons/favicon-192x192.png">
+    <meta name="msapplication-TileImage" content="{{ basePath }}/assets/favicons/mediumtile-144x144.png">
+    <meta name="msapplication-TileColor" content="#005eb8">
+    <meta name="msapplication-square70x70logo" content="{{ basePath }}/assets/favicons/smalltile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="{{ basePath }}/assets/favicons/mediumtile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="{{ basePath }}/assets/favicons/widetile-310x150.png">
+    <meta name="msapplication-square310x310logo" content="{{ basePath }}/assets/favicons/largetile-310x310.png">
+    {% endblock %}
+  </head>
+
+  <body class="{{ bodyClasses }}">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    {% block bodyStart %}
+    {% endblock %}
+
+    {% block headerStart %}
+    {% endblock %}
+
+    {% block header %}
+    {% endblock %}
+
+    {% block headerEnd %}
+    {% endblock %}
+
+    <div class="breadcrumbs">
+      {% block breadcrumbs %}
+      {% endblock %}
+    </div>
+
+    <div class="banners">
+      {% block banners %}
+        {# Mourning and Alert banners #}
+      {% endblock %}
+    </div>
+
+    {% block main %}
+    {% endblock %}
+
+    {% block footer %}
+    {% endblock %}
+
+    {% block scripts %}
+      <script src="{{ basePath }}/assets/js/jquery-3.3.1.min.js"></script>
+      <script src="{{ basePath }}/assets/js/nhsuk-7.0.0.min.js"></script>
+      <script src="{{ basePath }}/assets/js/hee.js"></script>
+    {% endblock %}
+    {% block bodyEnd %}
+      {% block pageScripts %}
+      {% endblock %}
+    {% endblock %}
+  </body>
+</html>

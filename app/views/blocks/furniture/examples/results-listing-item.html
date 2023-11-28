@@ -1,4 +1,4 @@
-{% extends "example-blocks.html" %}
+{% extends "includes/_example-blocks.html" %}
 
 {% block main %}
   <h2>Listing item without image</h2>
@@ -22,7 +22,7 @@
 
   <h2>Listing item with image</h2>
   {{ listingItem({
-    image: basePath + "/images/training-programme-card.png",
+    image: basePath + "/assets/images/training-programme-card.png",
     title: "Result item",
     href: "#",
     details: [

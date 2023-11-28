@@ -12,18 +12,18 @@
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
-  <link href="/hee-prototypes/css/nhsuk-7.0.0.min.css" rel="stylesheet" />
-  <link href="/hee-prototypes/css/hee.css" rel="stylesheet" />
-  <link rel="shortcut icon" href="/hee-prototypes/favicons/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="/hee-prototypes/favicons/apple-touch-icon-180x180.png">
-  <link rel="mask-icon" href="/hee-prototypes/favicons/favicon.svg" color="#005eb8">
-  <link rel="icon" sizes="192x192" href="/hee-prototypes/favicons/favicon-192x192.png">
-  <meta name="msapplication-TileImage" content="/hee-prototypes/favicons/mediumtile-144x144.png">
+  <link href="/hee-prototypes/assets/css/nhsuk-7.0.0.min.css" rel="stylesheet" />
+  <link href="/hee-prototypes/assets/css/hee.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="/hee-prototypes/assets/favicons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/hee-prototypes/assets/favicons/apple-touch-icon-180x180.png">
+  <link rel="mask-icon" href="/hee-prototypes/assets/favicons/favicon.svg" color="#005eb8">
+  <link rel="icon" sizes="192x192" href="/hee-prototypes/assets/favicons/favicon-192x192.png">
+  <meta name="msapplication-TileImage" content="/hee-prototypes/assets/favicons/mediumtile-144x144.png">
   <meta name="msapplication-TileColor" content="#005eb8">
-  <meta name="msapplication-square70x70logo" content="/hee-prototypes/favicons/smalltile-70x70.png">
-  <meta name="msapplication-square150x150logo" content="/hee-prototypes/favicons/mediumtile-150x150.png">
-  <meta name="msapplication-wide310x150logo" content="/hee-prototypes/favicons/widetile-310x150.png">
-  <meta name="msapplication-square310x310logo" content="/hee-prototypes/favicons/largetile-310x310.png">
+  <meta name="msapplication-square70x70logo" content="/hee-prototypes/assets/favicons/smalltile-70x70.png">
+  <meta name="msapplication-square150x150logo" content="/hee-prototypes/assets/favicons/mediumtile-150x150.png">
+  <meta name="msapplication-wide310x150logo" content="/hee-prototypes/assets/favicons/widetile-310x150.png">
+  <meta name="msapplication-square310x310logo" content="/hee-prototypes/assets/favicons/largetile-310x310.png">
 </head>
 
 <body class="example example--blocks">
@@ -34,53 +34,96 @@
   </div>
   <div class="banners">
   </div>
-  <h2>A responsive table</h2>
-  <table role="table" class="nhsuk-table-responsive nhsuk-hee-table has-caption">
-    <caption class="nhsuk-table__caption">Ibuprofen tablet dosages for children</caption>
+  <h2>Responsive table</h2>
+  <table role="table" class="nhsuk-table-responsive nhsuk-hee-table nhsuk-hee-table--multicols has-caption">
+    <caption class="nhsuk-table__caption">Online interview overview</caption>
     <thead role="rowgroup" class="nhsuk-table__head">
       <tr role="row">
-        <th role="columnheader" class="" scope="col"> Age </th>
-        <th role="columnheader" class="" scope="col"> How much? </th>
-        <th role="columnheader" class="" scope="col"> How often </th>
+        <th role="columnheader" class="" scope="col"> Area </th>
+        <th role="columnheader" class="" scope="col"> Raw marks by panel member </th>
+        <th role="columnheader" class="" scope="col"> Total marks </th>
+        <th role="columnheader" class="" scope="col"> Percentage of final score % </th>
       </tr>
     </thead>
     <tbody class="nhsuk-table__body">
       <tr role="row" class="nhsuk-table__row">
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Age </span>7 to 9 years
+          <span class="nhsuk-table-responsive__heading">Area </span>
+          <div class="nhsuk-table__cell__container">Clinical prioritisation</div>
         </td>
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">How much? </span>200mg
+          <span class="nhsuk-table-responsive__heading">Raw marks by panel member </span>
+          <div class="nhsuk-table__cell__container">20</div>
         </td>
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">How often? </span>Max 3 times in 24 hours
-        </td>
-      </tr>
-      <tr role="row" class="nhsuk-table__row">
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Age </span>10 to 11 years
+          <span class="nhsuk-table-responsive__heading">Total marks </span>
+          <div class="nhsuk-table__cell__container">40</div>
         </td>
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">How much? </span>200mg to 300mg
-        </td>
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">How often? </span>Max 3 times in 24 hours
+          <span class="nhsuk-table-responsive__heading">Percentage of final score % </span>
+          <div class="nhsuk-table__cell__container">26.64</div>
         </td>
       </tr>
       <tr role="row" class="nhsuk-table__row">
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Age </span>12 to 17 years
+          <span class="nhsuk-table-responsive__heading">Area </span>
+          <div class="nhsuk-table__cell__container">
+            <p>Score: 5</p>
+            <p>By December 2022, I have completed a quality improvement project (QIP) or complete audit cycle (for example,&nbsp;first audit/project, action plan and re-audit/assessment to quantify impact of intervention) which has resulted in national change</p>
+          </div>
         </td>
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">How much? </span>200mg to 400mg
+          <span class="nhsuk-table-responsive__heading">Raw marks by panel member </span>
+          <div class="nhsuk-table__cell__container">20</div>
         </td>
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">How often? </span>Max 3 times in 24 hours
+          <span class="nhsuk-table-responsive__heading">Total marks </span>
+          <div class="nhsuk-table__cell__container">40</div>
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Percentage of final score % </span>
+          <div class="nhsuk-table__cell__container">26.64</div>
+        </td>
+      </tr>
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Area </span>
+          <div class="nhsuk-table__cell__container">Clinical prioritisation</div>
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Raw marks by panel member </span>
+          <div class="nhsuk-table__cell__container">20</div>
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Total marks </span>
+          <div class="nhsuk-table__cell__container">40</div>
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Percentage of final score % </span>
+          <div class="nhsuk-table__cell__container">26.64</div>
+        </td>
+      </tr>
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Area </span>
+          <div class="nhsuk-table__cell__container">Clinical prioritisation</div>
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Raw marks by panel member </span>
+          <div class="nhsuk-table__cell__container">20</div>
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Total marks </span>
+          <div class="nhsuk-table__cell__container">40</div>
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Percentage of final score % </span>
+          <div class="nhsuk-table__cell__container">26.64</div>
         </td>
       </tr>
     </tbody>
   </table>
-  <h3>A WYSIWYG table (non-responsive)</h3>
+  <h2>A WYSIWYG table (non-responsive)</h2>
   <table role="table">
     <thead role="rowgroup">
       <tr role="row">
@@ -125,85 +168,9 @@
       </tr>
     </tbody>
   </table>
-  <h2>A table with more than 3 rows</h2>
-  <table role="table" class="nhsuk-table-responsive nhsuk-hee-table nhsuk-hee-table--multicols has-caption">
-    <caption class="nhsuk-table__caption">Ibuprofen tablet dosages for children</caption>
-    <thead role="rowgroup" class="nhsuk-table__head">
-      <tr role="row">
-        <th role="columnheader" class="" scope="col"> Age </th>
-        <th role="columnheader" class="" scope="col"> How much </th>
-        <th role="columnheader" class="" scope="col"> How often </th>
-        <th role="columnheader" class="" scope="col"> How often </th>
-        <th role="columnheader" class="" scope="col"> How often </th>
-        <th role="columnheader" class="" scope="col"> How often </th>
-      </tr>
-    </thead>
-    <tbody class="nhsuk-table__body">
-      <tr role="row" class="nhsuk-table__row">
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Age </span>7 to 9 years
-        </td>
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">How often? </span>200mg
-        </td>
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">How often? </span>Max 3 times in 24 hours
-        </td>
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">How often? </span>Max 3 times in 24 hours
-        </td>
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">How often? </span>Max 3 times in 24 hours
-        </td>
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">How often? </span>Max 3 times in 24 hours
-        </td>
-      </tr>
-      <tr role="row" class="nhsuk-table__row">
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Age </span>10 to 11 years
-        </td>
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">How much? </span>&lt;a href=&#39;&#39;&gt;200mg to 300mg&lt;/a&gt;
-        </td>
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">How often? </span>Max 3 times in 24 hours
-        </td>
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">How often? </span>Max 3 times in 24 hours
-        </td>
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">How often? </span>Max 3 times in 24 hours
-        </td>
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">How often? </span>Max 3 times in 24 hours
-        </td>
-      </tr>
-      <tr role="row" class="nhsuk-table__row">
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Age </span>12 to 17 years
-        </td>
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">How much? </span>200mg to 400mg
-        </td>
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">How often? </span>Max 3 times in 24 hours
-        </td>
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">How often? </span>Max 3 times in 24 hours
-        </td>
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">How often? </span>Max 3 times in 24 hours
-        </td>
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">How often? </span>Max 3 times in 24 hours
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <script src="/hee-prototypes/js/jquery-3.3.1.min.js"></script>
-  <script src="/hee-prototypes/js/nhsuk-7.0.0.min.js"></script>
-  <script src="/hee-prototypes/js/hee.js"></script>
+  <script src="/hee-prototypes/assets/js/jquery-3.3.1.min.js"></script>
+  <script src="/hee-prototypes/assets/js/nhsuk-7.0.0.min.js"></script>
+  <script src="/hee-prototypes/assets/js/hee.js"></script>
 </body>
 
 </html>

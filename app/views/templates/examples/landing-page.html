@@ -1,4 +1,4 @@
-{% extends "example-template-fullwidth.html" %}
+{% extends "includes/_example-template-fullwidth.html" %}
 
 {% set page_url = 'landing-page' %}
 {% set page_title = 'Landing Page' %}
@@ -33,7 +33,7 @@
 
 {% block pageHeader %}
   {{ microHero({
-    "imgURL": basePath + "/images/young-child-using-tablet-device.jpg"
+    "imgURL": basePath + "/assets/images/young-child-using-tablet-device.jpg"
   }) }}
   <div class="nhsuk-width-container">
     {#{ backLink({

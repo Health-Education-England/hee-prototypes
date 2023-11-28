@@ -12,20 +12,20 @@
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
-  <link href="/hee-prototypes/css/nhsuk-7.0.0.min.css" rel="stylesheet" />
-  <link href="/hee-prototypes/css/highlight.css" rel="stylesheet" />
-  <link href="/hee-prototypes/css/prototype.css" rel="stylesheet" />
-  <link href="/hee-prototypes/css/hee.css" rel="stylesheet" />
-  <link rel="shortcut icon" href="/hee-prototypes/favicons/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="/hee-prototypes/favicons/apple-touch-icon-180x180.png">
-  <link rel="mask-icon" href="/hee-prototypes/favicons/favicon.svg" color="#005eb8">
-  <link rel="icon" sizes="192x192" href="/hee-prototypes/favicons/favicon-192x192.png">
-  <meta name="msapplication-TileImage" content="/hee-prototypes/favicons/mediumtile-144x144.png">
+  <link href="/hee-prototypes/assets/css/nhsuk-7.0.0.min.css" rel="stylesheet" />
+  <link href="/hee-prototypes/assets/css/highlight.css" rel="stylesheet" />
+  <link href="/hee-prototypes/assets/css/prototype.css" rel="stylesheet" />
+  <link href="/hee-prototypes/assets/css/hee.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="/hee-prototypes/assets/favicons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/hee-prototypes/assets/favicons/apple-touch-icon-180x180.png">
+  <link rel="mask-icon" href="/hee-prototypes/assets/favicons/favicon.svg" color="#005eb8">
+  <link rel="icon" sizes="192x192" href="/hee-prototypes/assets/favicons/favicon-192x192.png">
+  <meta name="msapplication-TileImage" content="/hee-prototypes/assets/favicons/mediumtile-144x144.png">
   <meta name="msapplication-TileColor" content="#005eb8">
-  <meta name="msapplication-square70x70logo" content="/hee-prototypes/favicons/smalltile-70x70.png">
-  <meta name="msapplication-square150x150logo" content="/hee-prototypes/favicons/mediumtile-150x150.png">
-  <meta name="msapplication-wide310x150logo" content="/hee-prototypes/favicons/widetile-310x150.png">
-  <meta name="msapplication-square310x310logo" content="/hee-prototypes/favicons/largetile-310x310.png">
+  <meta name="msapplication-square70x70logo" content="/hee-prototypes/assets/favicons/smalltile-70x70.png">
+  <meta name="msapplication-square150x150logo" content="/hee-prototypes/assets/favicons/mediumtile-150x150.png">
+  <meta name="msapplication-wide310x150logo" content="/hee-prototypes/assets/favicons/widetile-310x150.png">
+  <meta name="msapplication-square310x310logo" content="/hee-prototypes/assets/favicons/largetile-310x310.png">
 </head>
 
 <body class="prototype prototype--inner">
@@ -144,117 +144,193 @@
           <hr />
           <h3>Macro</h3>
           <pre><code>
-{{ table({
-    tableClasses: &#39;nhsuk-hee-table&#39;,
+{{ responsiveTable({
+    tableClasses: &#39;nhsuk-hee-table nhsuk-hee-table--multicols&#39;,
     responsive: true,
     panel: false,
-    caption: &quot;Ibuprofen tablet dosages for children&quot;,
+    caption: &quot;Online interview overview&quot;,
     firstCellIsHeader: false,
     head: [
       {
-        text: &quot;Age&quot;
+        text: &quot;Area&quot;
       },
       {
-        text: &quot;How much?&quot;
+        text: &quot;Raw marks by panel member&quot;
       },
       {
-        text: &quot;How often&quot;
+        text: &quot;Total marks&quot;
+      },
+      {
+        text: &quot;Percentage of final score %&quot;
       }
     ],
     rows: [
       [
         {
-          header: &quot;Age&quot;,
-          text: &quot;7 to 9 years&quot;
+          header: &quot;Area&quot;,
+          html: &quot;Clinical prioritisation&quot;
         },
         {
-          header: &quot;How much?&quot;,
-          text: &quot;200mg&quot;
+          header: &quot;Raw marks by panel member&quot;,
+          html: &quot;20&quot;
         },
         {
-          header: &quot;How often?&quot;,
-          text: &quot;Max 3 times in 24 hours&quot;
+          header: &quot;Total marks&quot;,
+          html: &quot;40&quot;
+        },
+        {
+          header: &quot;Percentage of final score %&quot;,
+          html: &quot;26.64&quot;
         }
       ],
       [
         {
-          header: &quot;Age&quot;,
-          text: &quot;10 to 11 years&quot;
+          header: &quot;Area&quot;,
+          html: &quot;&lt;p&gt;Score: 5&lt;/p&gt;&lt;p&gt;By December 2022, I have completed a quality improvement project (QIP) or complete audit cycle (for example,&amp;nbsp;first audit/project, action plan and re-audit/assessment to quantify impact of intervention) which has resulted in national change&lt;/p&gt;&quot;
         },
         {
-          header: &quot;How much?&quot;,
-          text: &quot;200mg to 300mg&quot;
+          header: &quot;Raw marks by panel member&quot;,
+          html: &quot;20&quot;
         },
         {
-          header: &quot;How often?&quot;,
-          text: &quot;Max 3 times in 24 hours&quot;
+          header: &quot;Total marks&quot;,
+          html: &quot;40&quot;
+        },
+        {
+          header: &quot;Percentage of final score %&quot;,
+          html: &quot;26.64&quot;
         }
       ],
       [
         {
-          header: &quot;Age&quot;,
-          text: &quot;12 to 17 years&quot;
+          header: &quot;Area&quot;,
+          html: &quot;Clinical prioritisation&quot;
         },
         {
-          header: &quot;How much?&quot;,
-          text: &quot;200mg to 400mg&quot;
+          header: &quot;Raw marks by panel member&quot;,
+          html: &quot;20&quot;
         },
         {
-          header: &quot;How often?&quot;,
-          text: &quot;Max 3 times in 24 hours&quot;
+          header: &quot;Total marks&quot;,
+          html: &quot;40&quot;
+        },
+        {
+          header: &quot;Percentage of final score %&quot;,
+          html: &quot;26.64&quot;
+        }
+      ],
+      [
+        {
+          header: &quot;Area&quot;,
+          html: &quot;Clinical prioritisation&quot;
+        },
+        {
+          header: &quot;Raw marks by panel member&quot;,
+          html: &quot;20&quot;
+        },
+        {
+          header: &quot;Total marks&quot;,
+          html: &quot;40&quot;
+        },
+        {
+          header: &quot;Percentage of final score %&quot;,
+          html: &quot;26.64&quot;
         }
       ]
     ]
-})  }}
+  })}}
   </code></pre>
           <hr />
           <h3>HTML</h3>
           <pre><code>
-&lt;table role=&quot;table&quot; class=&quot;nhsuk-table-responsive nhsuk-hee-table&quot;&gt;
-    &lt;caption class=&quot;nhsuk-table__caption&quot;&gt;Ibuprofen tablet dosages for children&lt;/caption&gt;
+  &lt;table role=&quot;table&quot; class=&quot;nhsuk-table-responsive nhsuk-hee-table nhsuk-hee-table--multicols has-caption&quot;&gt;
+    &lt;caption class=&quot;nhsuk-table__caption&quot;&gt;Online interview overview&lt;/caption&gt;
     &lt;thead role=&quot;rowgroup&quot; class=&quot;nhsuk-table__head&quot;&gt;
       &lt;tr role=&quot;row&quot;&gt;
-        &lt;th role=&quot;columnheader&quot; class=&quot;&quot; scope=&quot;col&quot;&gt; Age &lt;/th&gt;
-        &lt;th role=&quot;columnheader&quot; class=&quot;&quot; scope=&quot;col&quot;&gt; How much? &lt;/th&gt;
-        &lt;th role=&quot;columnheader&quot; class=&quot;&quot; scope=&quot;col&quot;&gt; How often &lt;/th&gt;
+        &lt;th role=&quot;columnheader&quot; class=&quot;&quot; scope=&quot;col&quot;&gt; Area &lt;/th&gt;
+        &lt;th role=&quot;columnheader&quot; class=&quot;&quot; scope=&quot;col&quot;&gt; Raw marks by panel member &lt;/th&gt;
+        &lt;th role=&quot;columnheader&quot; class=&quot;&quot; scope=&quot;col&quot;&gt; Total marks &lt;/th&gt;
+        &lt;th role=&quot;columnheader&quot; class=&quot;&quot; scope=&quot;col&quot;&gt; Percentage of final score % &lt;/th&gt;
       &lt;/tr&gt;
     &lt;/thead&gt;
     &lt;tbody class=&quot;nhsuk-table__body&quot;&gt;
       &lt;tr role=&quot;row&quot; class=&quot;nhsuk-table__row&quot;&gt;
         &lt;td role=&quot;cell&quot; class=&quot;nhsuk-table__cell&quot;&gt;
-          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;Age &lt;/span&gt;7 to 9 years
+          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;Area &lt;/span&gt;
+          &lt;div class=&quot;nhsuk-table__cell__container&quot;&gt;Clinical prioritisation&lt;/div&gt;
         &lt;/td&gt;
         &lt;td role=&quot;cell&quot; class=&quot;nhsuk-table__cell&quot;&gt;
-          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;How much? &lt;/span&gt;200mg
+          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;Raw marks by panel member &lt;/span&gt;
+          &lt;div class=&quot;nhsuk-table__cell__container&quot;&gt;20&lt;/div&gt;
         &lt;/td&gt;
         &lt;td role=&quot;cell&quot; class=&quot;nhsuk-table__cell&quot;&gt;
-          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;How often? &lt;/span&gt;Max 3 times in 24 hours
-        &lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr role=&quot;row&quot; class=&quot;nhsuk-table__row&quot;&gt;
-        &lt;td role=&quot;cell&quot; class=&quot;nhsuk-table__cell&quot;&gt;
-          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;Age &lt;/span&gt;10 to 11 years
+          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;Total marks &lt;/span&gt;
+          &lt;div class=&quot;nhsuk-table__cell__container&quot;&gt;40&lt;/div&gt;
         &lt;/td&gt;
         &lt;td role=&quot;cell&quot; class=&quot;nhsuk-table__cell&quot;&gt;
-          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;How much? &lt;/span&gt;200mg to 300mg
-        &lt;/td&gt;
-        &lt;td role=&quot;cell&quot; class=&quot;nhsuk-table__cell&quot;&gt;
-          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;How often? &lt;/span&gt;Max 3 times in 24 hours
+          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;Percentage of final score % &lt;/span&gt;
+          &lt;div class=&quot;nhsuk-table__cell__container&quot;&gt;26.64&lt;/div&gt;
         &lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr role=&quot;row&quot; class=&quot;nhsuk-table__row&quot;&gt;
         &lt;td role=&quot;cell&quot; class=&quot;nhsuk-table__cell&quot;&gt;
-          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;Age &lt;/span&gt;12 to 17 years
+          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;Area &lt;/span&gt;
+          &lt;div class=&quot;nhsuk-table__cell__container&quot;&gt;
+            &lt;p&gt;Score: 5&lt;/p&gt;
+            &lt;p&gt;By December 2022, I have completed a quality improvement project (QIP) or complete audit cycle (for example,&amp;nbsp;first audit/project, action plan and re-audit/assessment to quantify impact of intervention) which has resulted in national change&lt;/p&gt;
+          &lt;/div&gt;
         &lt;/td&gt;
         &lt;td role=&quot;cell&quot; class=&quot;nhsuk-table__cell&quot;&gt;
-          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;How much? &lt;/span&gt;200mg to 400mg
+          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;Raw marks by panel member &lt;/span&gt;
+          &lt;div class=&quot;nhsuk-table__cell__container&quot;&gt;20&lt;/div&gt;
         &lt;/td&gt;
         &lt;td role=&quot;cell&quot; class=&quot;nhsuk-table__cell&quot;&gt;
-          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;How often? &lt;/span&gt;Max 3 times in 24 hours
+          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;Total marks &lt;/span&gt;
+          &lt;div class=&quot;nhsuk-table__cell__container&quot;&gt;40&lt;/div&gt;
+        &lt;/td&gt;
+        &lt;td role=&quot;cell&quot; class=&quot;nhsuk-table__cell&quot;&gt;
+          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;Percentage of final score % &lt;/span&gt;
+          &lt;div class=&quot;nhsuk-table__cell__container&quot;&gt;26.64&lt;/div&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr role=&quot;row&quot; class=&quot;nhsuk-table__row&quot;&gt;
+        &lt;td role=&quot;cell&quot; class=&quot;nhsuk-table__cell&quot;&gt;
+          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;Area &lt;/span&gt;
+          &lt;div class=&quot;nhsuk-table__cell__container&quot;&gt;Clinical prioritisation&lt;/div&gt;
+        &lt;/td&gt;
+        &lt;td role=&quot;cell&quot; class=&quot;nhsuk-table__cell&quot;&gt;
+          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;Raw marks by panel member &lt;/span&gt;
+          &lt;div class=&quot;nhsuk-table__cell__container&quot;&gt;20&lt;/div&gt;
+        &lt;/td&gt;
+        &lt;td role=&quot;cell&quot; class=&quot;nhsuk-table__cell&quot;&gt;
+          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;Total marks &lt;/span&gt;
+          &lt;div class=&quot;nhsuk-table__cell__container&quot;&gt;40&lt;/div&gt;
+        &lt;/td&gt;
+        &lt;td role=&quot;cell&quot; class=&quot;nhsuk-table__cell&quot;&gt;
+          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;Percentage of final score % &lt;/span&gt;
+          &lt;div class=&quot;nhsuk-table__cell__container&quot;&gt;26.64&lt;/div&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr role=&quot;row&quot; class=&quot;nhsuk-table__row&quot;&gt;
+        &lt;td role=&quot;cell&quot; class=&quot;nhsuk-table__cell&quot;&gt;
+          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;Area &lt;/span&gt;
+          &lt;div class=&quot;nhsuk-table__cell__container&quot;&gt;Clinical prioritisation&lt;/div&gt;
+        &lt;/td&gt;
+        &lt;td role=&quot;cell&quot; class=&quot;nhsuk-table__cell&quot;&gt;
+          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;Raw marks by panel member &lt;/span&gt;
+          &lt;div class=&quot;nhsuk-table__cell__container&quot;&gt;20&lt;/div&gt;
+        &lt;/td&gt;
+        &lt;td role=&quot;cell&quot; class=&quot;nhsuk-table__cell&quot;&gt;
+          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;Total marks &lt;/span&gt;
+          &lt;div class=&quot;nhsuk-table__cell__container&quot;&gt;40&lt;/div&gt;
+        &lt;/td&gt;
+        &lt;td role=&quot;cell&quot; class=&quot;nhsuk-table__cell&quot;&gt;
+          &lt;span class=&quot;nhsuk-table-responsive__heading&quot;&gt;Percentage of final score % &lt;/span&gt;
+          &lt;div class=&quot;nhsuk-table__cell__container&quot;&gt;26.64&lt;/div&gt;
         &lt;/td&gt;
       &lt;/tr&gt;
     &lt;/tbody&gt;
-&lt;/table&gt;
+  &lt;/table&gt;
   </code></pre>
         </div>
       </div>
@@ -273,11 +349,11 @@
       <p class="nhsuk-footer__copyright">&copy; Crown</p>
     </div>
   </footer>
-  <script src="/hee-prototypes/js/jquery-3.3.1.min.js"></script>
-  <script src="/hee-prototypes/js/nhsuk-7.0.0.min.js"></script>
-  <script src="/hee-prototypes/js/highlight.min.js"></script>
-  <script src="/hee-prototypes/js/prototype.min.js"></script>
-  <script src="/hee-prototypes/js/hee.js"></script>
+  <script src="/hee-prototypes/assets/js/jquery-3.3.1.min.js"></script>
+  <script src="/hee-prototypes/assets/js/nhsuk-7.0.0.min.js"></script>
+  <script src="/hee-prototypes/assets/js/highlight.min.js"></script>
+  <script src="/hee-prototypes/assets/js/prototype.min.js"></script>
+  <script src="/hee-prototypes/assets/js/hee.js"></script>
   <script>
     hljs.highlightAll();
   </script>
