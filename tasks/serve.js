@@ -3,7 +3,7 @@ const fs = require('fs')
 
 function serve() {
   connect.server({
-    host: 'localhost',
+    host: '0.0.0.0',
     livereload: true,
     port: 3000,
     root: 'public',
@@ -40,15 +40,5 @@ function serve() {
   });
 }
 
-function playwrightReport() {
-  connect.server({
-    host: 'localhost',
-    livereload: true,
-    port: 8080,
-    root: 'tests/playwright/report'
-  });
-}
-
 exports.connect = connect
 exports.serve = serve
-exports.playwrightReport = playwrightReport
