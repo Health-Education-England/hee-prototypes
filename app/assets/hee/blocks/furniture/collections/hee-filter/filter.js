@@ -54,11 +54,6 @@ export default () => {
     initFilters() {
       this.groups.forEach(group => {
 
-        if (!this.isGroupFilterActive(group)) {
-          // Collapse group if filters not active.
-          group.classList.add('nhsuk-filter__group--closed');
-        }
-
         // Disable sub-group select if no option in parent selected.
         if (group.classList.contains('has-subgroup')) {
           const parentSelect = group.querySelector('.nhsuk-form-group.parent-group select');
@@ -82,9 +77,7 @@ export default () => {
     initClearToggles() {
       this.groups.forEach(group => {
         const toggleLink = group.querySelector('.nhsuk-filter__group__clear');
-        if (this.isGroupFilterActive(group)) {
-          toggleLink.classList.add('visible');
-        }
+        toggleLink.classList.add('visible');
       });
     }
 
@@ -117,26 +110,6 @@ export default () => {
 
       countElem.innerText = `${count} selected`
       countElem.classList.add('visible');
-    }
-
-    isGroupFilterActive(group) {
-      // Check if checkboxes are active.
-      const checkboxes = group.querySelectorAll('.nhsuk-checkboxes__input');
-      for (let i = 0; i < checkboxes.length; i++) {
-        if (checkboxes[i].checked === true) {
-          return true;
-        }
-      }
-
-      // Check if selects are active.
-      const selectElements = group.querySelectorAll('.nhsuk-select');
-      for (let i = 0; i < selectElements.length; i++) {
-        if (selectElements[i].value !== '') {
-          return true;
-        }
-      }
-
-      return false;
     }
 
     toggleGroupFieldset(evt) {
