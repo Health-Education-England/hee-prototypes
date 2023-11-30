@@ -1,5 +1,9 @@
 .nhsuk-header {
   position: relative;
+
+  .nhse-global-menu-descriptor {
+    line-height: normal;
+  }
 }
 
 .nhsuk-header__container {
@@ -14,6 +18,14 @@
   @include mq($from: large-desktop) {
     margin: 0 auto;
   }
+
+  .nhsuk-logo {
+    display: none;
+
+    &.visible {
+      display: inline;
+    }
+  }
 }
 .nhsuk-header__content {
   float:right;
@@ -21,7 +33,7 @@
   z-index: 0;
 
   @include mq($from: desktop) {
-    margin: 0;
+    margin: nhsuk-spacing(7) 0 0 0;
   }
 
   &.js-show {
