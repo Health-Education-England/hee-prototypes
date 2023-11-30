@@ -7,7 +7,7 @@ Custom component to display an image in a box for the sidebar
 {%- from 'image-card/macro.njk' import imageCard %}
 
 {{ imageCard({
-    "imgURL" : "/images/placeholders/dental-region-map.png",
+    "imgURL" : "/assets/images/placeholders/dental-region-map.png",
     "imgALT" : "Dental region map",
     "imgCaption" : "Yorkshire and Humber region"
     }) 

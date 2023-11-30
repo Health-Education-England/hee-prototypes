@@ -1,4 +1,4 @@
-{% extends "example-template-rightbar.html" %}
+{% extends "includes/_example-template-rightbar.html" %}
 
 {% set page_url = 'blog-item' %}
 {% set page_title = 'Blog Item' %}
@@ -12,19 +12,19 @@
     breadcrumb({
       items: [
         {
-          href: "/",
+          href: basePath + "/",
           text: "Home"
         },
         {
-          href: "/templates",
+          href: basePath + "/templates",
           text: "Templates"
         },
         {
-          href: "/templates/examples",
+          href: basePath + "/templates/examples",
           text: "Examples"
         }
       ],
-      href: "/templates/examples/"+page_url,
+      href: basePath + "/templates/examples/"+page_url,
       text: page_title
     })
   }}
@@ -32,7 +32,7 @@
 
 {% block pageHeader %}
   {{ microHero({
-    "imgURL": "/images/young-child-using-tablet-device.jpg"
+    "imgURL": basePath + "/assets/images/young-child-using-tablet-device.jpg"
   }) }}
   <div class="nhsuk-width-container">
     <h1>Blog Item</h1>
@@ -56,7 +56,7 @@
   <p>Fusce at neque laoreet mauris consectetur mollis at a nisl. Curabitur sit amet sapien rhoncus, semper ligula quis, eleifend ante. Pellentesque non malesuada tellus. Donec porta faucibus lacus at elementum. Pellentesque tempus magna vulputate felis ultricies porta. Cras condimentum imperdiet lobortis. Suspendisse aliquam nisl ut augue ultrices, sit amet tristique enim placerat. Nunc augue sapien, rhoncus scelerisque urna quis, posuere semper enim.</p>
 
   {{ authorCard({
-    imgURL: "/images/doctor-headshot.png",
+    imgURL: basePath + "/assets/images/doctor-headshot.png",
     title: "Mr",
     name: "First Last",
     initials: "JB",
@@ -78,7 +78,7 @@
 
   <div class="hee-card--author__container">
     {{ authorCard({
-      imgURL: "/images/doctor-headshot.png",
+      imgURL: basePath + "/assets/images/doctor-headshot.png",
       title: "Mr",
       name: "First Last",
       initials: "JB",
@@ -99,7 +99,7 @@
     }) }}
 
     {{ authorCard({
-      imgURL: "/images/doctor-headshot.png",
+      imgURL: basePath + "/assets/images/doctor-headshot.png",
       title: "Mr",
       name: "First Last",
       initials: "JB",
@@ -150,7 +150,7 @@
   }) }}
 
   {{ authorCard({
-    imgURL: "/images/doctor-headshot.png",
+    imgURL: basePath + "/assets/images/doctor-headshot.png",
     title: "Mr",
     name: "First Last",
     initials: "JB",
