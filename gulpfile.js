@@ -64,6 +64,4 @@ gulp.task('watch', gulp.series([
   gulp.parallel([taskServe.serve, watch]),
 ]));
 
-gulp.task('playwright-report', taskServe.playwrightReport);
-
 exports.PATHS = PATHS;
