@@ -20,6 +20,7 @@ export default () => {
       // Only attempt to build TOC links if H2 anchors found on page.
       let headings = document.querySelectorAll(this.containerSelector + ' ' + this.headingSelector);
       if (headings.length === 0) {
+        this.tableContents.hidden = true;
         return;
       }
 
