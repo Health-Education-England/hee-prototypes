@@ -1,4 +1,4 @@
-{% extends "prototype-inner.html" %}
+{% extends "includes/_prototype-inner.html" %}
 
 {% set page_url = 'results-listing-item' %}
 {% set page_title = 'Results listing item' %}
@@ -99,7 +99,7 @@
   {{ highlight({
     html: '
   {{ listingItem({
-    image: basePath + "/images/training-programme-card.png",
+    image: basePath + "/assets/images/training-programme-card.png",
     title: "Result item",
     href: "http://www.google.com",
     details: [
