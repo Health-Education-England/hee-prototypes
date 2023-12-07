@@ -34,7 +34,7 @@ function buildTemplates() {
   );
   environment.addGlobal('basePath', basePath)
 
-  return gulp.src(['app/views/**/*.html', 'app/assets/**/*.njk', '!app/views/lks/*.html'])
+  return gulp.src(['app/views/**/*.html', '!app/views/includes/*.html'])
     .pipe(gulpNunjucks.compile({
       baseUrl: config.baseUrl,
     }, {

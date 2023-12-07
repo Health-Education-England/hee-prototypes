@@ -14,10 +14,10 @@ function compileHEEStyles() {
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(config.PATHS.public+'/css'))
+    .pipe(gulp.dest(config.PATHS.public + '/assets/css'))
     .pipe(cleanCSS())
     .pipe(rename({ extname: '.min.css' }))
-    .pipe(gulp.dest(config.PATHS.public+'/css'))
+    .pipe(gulp.dest(config.PATHS.public + '/assets/css'))
     .pipe(taskServe.connect.reload())
     .on('error', (err) => {
       console.log(err)
@@ -30,10 +30,10 @@ function compilePrototypeStyles() {
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(config.PATHS.public+'/css'))
+    .pipe(gulp.dest(config.PATHS.public + '/assets/css'))
     .pipe(cleanCSS())
     .pipe(rename({ extname: '.min.css' }))
-    .pipe(gulp.dest(config.PATHS.public+'/css'))
+    .pipe(gulp.dest(config.PATHS.public + '/assets/css'))
     .pipe(taskServe.connect.reload())
     .on('error', (err) => {
       console.log(err)
@@ -47,7 +47,7 @@ function compileHEEScriptsProd() {
     config.PATHS.heeJS,
     'production',
     'hee.min.js',
-    config.PATHS.public + '/js'
+    config.PATHS.public + '/assets/js'
   );
 }
 
@@ -57,7 +57,7 @@ function compileHEEScriptsDev() {
     config.PATHS.heeJS,
     'development',
     'hee.js',
-    config.PATHS.public + '/js'
+    config.PATHS.public + '/assets/js'
   );
 }
 
@@ -67,18 +67,18 @@ function compilePrototypeScripts() {
     config.PATHS.prototypeJS,
     'development',
     'prototype.min.js',
-    config.PATHS.public + '/js'
+    config.PATHS.public + '/assets/js'
   );
 }
 
 function copyVendorScripts() {
   return gulp.src(config.PATHS.vendorJS)
-    .pipe(gulp.dest(config.PATHS.public+'/js'));
+    .pipe(gulp.dest(config.PATHS.public + '/assets/js'));
 }
 
 function copyVendorStyles() {
   return gulp.src(config.PATHS.vendorCSS)
-    .pipe(gulp.dest(config.PATHS.public+'/css'));
+    .pipe(gulp.dest(config.PATHS.public + '/assets/css'));
 }
 
 function compileHEEAssets() {
@@ -87,14 +87,14 @@ function compileHEEAssets() {
     '!**/assets/**/**/*.js',
     '!**/assets/**/**/*.scss',
   ])
-    .pipe(gulp.dest(config.PATHS.public));
+    .pipe(gulp.dest(config.PATHS.public + '/assets'));
 }
 
 function copyImages() {
   return gulp.src([
     'app/assets/images/**/*.*',
   ])
-    .pipe(gulp.dest(config.PATHS.public + '/images'));
+    .pipe(gulp.dest(config.PATHS.public + '/assets/images'));
 }
 
 /**

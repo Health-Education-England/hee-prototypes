@@ -1,4 +1,4 @@
-{% extends "example-template-fullwidth.html" %}
+{% extends "includes/_example-template-fullwidth.html" %}
 
 {% set page_url = 'landing-page' %}
 {% set page_title = 'Landing Page' %}
@@ -13,19 +13,19 @@
     breadcrumb({
       items: [
         {
-          href: "/",
+          href: basePath + "/",
           text: "Home"
         },
         {
-          href: "/templates",
+          href: basePath + "/templates",
           text: "Templates"
         },
         {
-          href: "/templates/examples",
+          href: basePath + "/templates/examples",
           text: "Examples"
         }
       ],
-      href: "/templates/examples/"+page_url,
+      href: basePath + "/templates/examples/"+page_url,
       text: page_title
     })
   }}
@@ -33,7 +33,7 @@
 
 {% block pageHeader %}
   {{ microHero({
-    "imgURL": "/images/young-child-using-tablet-device.jpg"
+    "imgURL": basePath + "/assets/images/young-child-using-tablet-device.jpg"
   }) }}
   <div class="nhsuk-width-container">
     {#{ backLink({
