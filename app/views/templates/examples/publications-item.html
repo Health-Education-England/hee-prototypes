@@ -7,20 +7,20 @@
 
 {% block pageBreadcrumbs %}
   {{
-    breadcrumb({
-      items: [
-        {
-          href: "/",
-          text: "Home"
-        },
-        {
-          href: "/templates",
-          text: "Templates"
-        }
-      ],
-      href: "/templates/examples/"+page_url,
-      text: page_title
-    })
+  breadcrumb({
+    items: [
+      {
+        href: basePath + "/",
+        text: "Home"
+      },
+      {
+        href: basePath + "/templates",
+        text: "Templates"
+      }
+    ],
+    href: basePath + "/templates/examples/"+page_url,
+    text: page_title
+  })
   }}
 {% endblock %}
 
@@ -144,7 +144,7 @@
   {{ anchorLinks({
     title: "Table of Contents",
     toc: true
-    })
+  })
   }}
 
   {{ detailsCard({
@@ -169,60 +169,40 @@
     ]
   }) }}
 
-  {% set pdf %}
-    {{ resources({
-      title: "First Publication Title",
-      text: "First Publication Title",
-      url: "#",
-      docType: "PDF",
-      tagColor: "pdf"
-    }) }}
-  {% endset %}
-
-  {% set odf %}
-    {{ resources({
-      title: "Second Publication Title",
-      text: "Second Publication Title",
-      url: "#",
-      docType: "ODF",
-      tagColor: "odf"
-    }) }}
-  {% endset %}
-
-  {% set xls %}
-    {{ resources({
-      title: "Third Publication Title",
-      text: "Third Publication Title",
-      url: "#",
-      docType: "XLS",
-      tagColor: "xls"
-    }) }}
-  {% endset %}
-
-  {% set ppt %}
-    {{ resources({
-      title: "Fourth Publication Title",
-      text: "Fourth Publication Title",
-      url: "#",
-      docType: "PPT",
-      tagColor: "ppt"
-    }) }}
-  {% endset %}
-
-  {{ detailsCard({
+  {{ downloadsCard({
     title: "Alternative versions",
     items: [
       {
-        value: pdf
+        title: "Short title",
+        text: "Short title",
+        url: "#",
+        docSize: "836KB",
+        docType: "PDF",
+        tagColor: "pdf"
       },
       {
-        value: odf
+        title: "Second Publication Title",
+        text: "Second Publication Title",
+        url: "#",
+        docSize: "1.4MB",
+        docType: "ODF",
+        tagColor: "odf"
       },
       {
-        value: xls
+        title: "Third Publication Title",
+        text: "Third Publication Title",
+        url: "#",
+        docSize: "2.89MB",
+        docType: "XLS",
+        tagColor: "xls"
       },
       {
-        value: ppt
+        title: "Fourth Publication Title",
+        text: "Fourth Publication Title",
+        url: "#",
+        docSize: "2.89MB",
+        docType: "MRC",
+        tagColor: "mrc"
       }
     ]
   }) }}
