@@ -1,4 +1,5 @@
 {% macro navMap(params) %}
+<div class="hee-navmap">
   {% if params.heading %}
     <h2>{{ params.heading }}</h2>
   {% endif %}
@@ -36,7 +37,7 @@
         </ul>
       </figcaption>
     {%- endif %}
-    
+
     <object
       class="nhsuk-map__image"
       data="{{ params.src }}"
@@ -45,5 +46,5 @@
     >
     </object>
   </figure>
-
+</div>
 {% endmacro %}
