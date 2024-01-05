@@ -3,7 +3,6 @@
 {% import 'includes/_taxonomy-clinical-discipline.html' as taxonomyClinicalDiscipline %}
 {% import 'includes/_taxonomy-profession.html' as taxonomyProfession %}
 {% import 'includes/_taxonomy-sub-profession.html' as taxonomySubProfession %}
-{% import 'includes/_taxonomy-recruitment-format.html' as taxonomyRecruitmentFormat %}
 {% import 'includes/_taxonomy-topic.html' as taxonomyTopic %}
 {% import 'includes/_taxonomy-sub-topic.html' as taxonomySubTopic %}
 {% import 'includes/_taxonomy-training-type.html' as taxonomyTrainingType %}
@@ -37,11 +36,6 @@
   {{ filter({
     groups: [
       {
-        title: "Clinical Discipline",
-        showClearToggle: true,
-        items: taxonomyClinicalDiscipline.items
-      },
-      {
         type: "select",
         name: "profession",
         title: "Profession",
@@ -68,9 +62,9 @@
         }
       },
       {
-        title: "Recruitment Format",
+        title: "Clinical discipline",
         showClearToggle: true,
-        items: taxonomyRecruitmentFormat.items
+        items: taxonomyClinicalDiscipline.items
       },
       {
         title: "Training type",
@@ -90,12 +84,12 @@
     },
     items: [
       {
-        value: "newest",
-        text: "Newest"
+        value: "a-z",
+        text: "Alphabetical (A to Z)"
       },
       {
-        value: "relevance",
-        text: "Relevance"
+        value: "z-a",
+        text: "Alphabetical (Z to A)"
       }
     ]
   } %}
@@ -108,24 +102,34 @@
   {% set items = [] %}
   {% for i in range(0, 10) -%}
     {% set item = {
-      image: basePath + "/assets/images/specialty-hero.jpg",
-      title: "Anaesthesia",
+      title: "Training programme",
       href: "#",
       details: [
         {
           label: "Profession:",
-          value: "<a href=\"#\">Medical</a>"
+          value: "<a href=\"#\">Dental professionals</a>, <a href=\"#\">Dental nurse</a>"
         },
         {
-          label: "Discipline:",
-          value: "<a href=\"#\">Anaesthesia</a>"
+          label: "Topic:",
+          value: "<a href=\"#\">Cosmetic procedures</a>, <a href=\"#\">Funding</a>"
+        },
+        {
+          label: "Clinical discipline:",
+          value: "<a href=\"#\">Paediatrics</a>"
+        },
+        {
+          label: "Training type:",
+          value: "<a href=\"#\">Core</a>"
         },
         {
           label: "Duration:",
-          value: "<a href=\"#\">24 months</a>"
+          value: "24"
+        },
+        {
+          label: "Recruitment format:",
+          value: "Uncoupled"
         }
-      ],
-      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+      ]
     } %}
     {% set items = (items.push(item), items) %}
   {% endfor %}
@@ -136,15 +140,6 @@
       submit: submitAttributes
     },
     tags: [
-      {
-        label: "Clinical Discipline",
-        items: [
-          {
-            text: "Paediatrics",
-            value: "paediatrics"
-          }
-        ]
-      },
       {
         label: "Profession",
         items: [
@@ -172,11 +167,11 @@
         ]
       },
       {
-        label: "Recruitment format",
+        label: "Clinical Discipline",
         items: [
           {
-            text: "Runthrough",
-            value: "runthrough"
+            text: "Paediatrics",
+            value: "paediatrics"
           }
         ]
       },
@@ -192,7 +187,6 @@
     ],
     results: items,
     emptyMessage: "No results",
-    showPagination: true,
-    twoColumnLayout: true
+    showPagination: true
   }) }}
 {% endblock %}
