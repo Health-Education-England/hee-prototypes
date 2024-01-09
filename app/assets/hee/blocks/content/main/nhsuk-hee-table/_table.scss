@@ -100,6 +100,13 @@ table caption {
         display: inline-block;
         float: left;
     }
+
+    .nhsuk-table-responsive .nhsuk-table__body .nhsuk-table__row .nhsuk-table__cell__container {
+        width: 48%;
+        padding-left: 16px;
+        text-align: left;
+        display: inline-block;
+    }
 }
 .nhsuk-hee-table--multicols {
     width: 100%;
