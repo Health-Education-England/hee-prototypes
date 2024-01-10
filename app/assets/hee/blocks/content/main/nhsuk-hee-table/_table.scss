@@ -77,9 +77,6 @@ table caption {
     margin-bottom: 4em !important;
     background-color: #fff;
 }
-
-
-
 @media (max-width: 48.0525em) {
     .nhsuk-table-responsive .nhsuk-table__body .nhsuk-table__row {
         display: block;
@@ -129,7 +126,7 @@ table caption {
     margin-bottom: 24px;
 }
 .nhsuk-hee-table--multicols .nhsuk-table__body .nhsuk-table__row .nhsuk-table__cell {
-    display: flex;
+    display: block;
     min-width: 1px;
     padding-right: 0;
     text-align: right;
@@ -143,7 +140,7 @@ table caption {
     padding-right: 16px;
     text-align: left;
     display: inline-block;
-    float: none;
+    float: left;
 }
 
 .nhsuk-details.nhsuk-expander, .nhsuk-tabs {
@@ -167,17 +164,4 @@ table caption {
     .nhsuk-table-responsive {
         word-break: normal;
     }
-}
-
-.nhsuk-hee-table--multicols {
-    .nhsuk-table__cell__container {
-        width: 48%;
-        padding-left: 16px;
-        text-align: left;
-        display: inline-block;
-    }
-}
-
-.nhsuk-table-responsive thead {
-    white-space: normal;
 }
