@@ -8,16 +8,18 @@
 
   <div class="hee-listing" id="results">
     <div class="hee-listing__summary">
-      <div class="hee-listing__count">
+      <div class="hee-listing__count {{ 'no-sort-filter' if list.filter.select.items.length == 0 else '' }}">
         <h2 class="hee-listing__title nhsuk-heading-l">{{ list.results.length }} results</h2>
       </div>
-      <div class="hee-listing__filter">
-        <form method="get" class="hee-listing__filter__sort">
-          {{ select(list.filter.select) }}
-          {{ button(list.filter.submit) }}
-          <input data-update-flag="listing" name="results_updated" type="hidden" value="false">
-        </form>
-      </div>
+      {% if list.filter.select.items.length > 0 %}
+        <div class="hee-listing__filter">
+          <form method="get" class="hee-listing__filter__sort">
+            {{ select(list.filter.select) }}
+            {{ button(list.filter.submit) }}
+            <input data-update-flag="listing" name="results_updated" type="hidden" value="false">
+          </form>
+        </div>
+      {% endif %}
       {% if list.tags.length > 0 %}
         <div class="hee-listing__tags">
           {% for group in list.tags %}
