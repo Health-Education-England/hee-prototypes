@@ -4,6 +4,7 @@
 {% import 'includes/_taxonomy-sub-profession.html' as taxonomySubProfession %}
 {% import 'includes/_taxonomy-topic.html' as taxonomyTopic %}
 {% import 'includes/_taxonomy-sub-topic.html' as taxonomySubTopic %}
+{% import 'includes/_taxonomy-news-types.html' as taxonomyNewsTypes %}
 {% import 'includes/_taxonomy-tags.html' as taxonomyTags %}
 
 {% block pageTitle %}News Collection - Examples - NWP Prototype Kit{% endblock %}
@@ -58,6 +59,13 @@
           title: "Sub topic",
           items: taxonomySubTopic.items
         }
+      },
+      {
+        type: "checkbox",
+        title: "Type",
+        name: "type",
+        showClearToggle: true,
+        items: taxonomyNewsTypes.items
       },
       {
         type: "checkbox",
@@ -139,6 +147,15 @@
           {
             text: "Funding",
             value: "funding"
+          }
+        ]
+      },
+      {
+        label: "Type",
+        items: [
+          {
+            text: "Press release",
+            value: "press-release"
           }
         ]
       },
