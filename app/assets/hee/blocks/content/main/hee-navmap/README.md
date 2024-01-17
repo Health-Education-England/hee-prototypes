@@ -21,7 +21,7 @@ Example:
 ...
 {{ navMap({
   "heading": "Dental regions",
-  "src": "/images/nav-maps/dental-regions.svg",
+  "src": "/assets/images/nav-maps/dental-regions.svg",
   "caption": {
     "description": {
       "subHeader": "A Title",

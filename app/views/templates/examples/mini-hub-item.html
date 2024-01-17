@@ -1,4 +1,4 @@
-{% extends "example-template-rightbar.html" %}
+{% extends "includes/_example-template-rightbar.html" %}
 
 {% block pageTitle %}Mini-hub Item - Examples - NWP Prototype Kit{% endblock %}
 
@@ -154,7 +154,6 @@
 
   {{ card({
     heading: "Manage your GP application",
-    clickable: "true",
     descriptionHtml: "<a class=\"nhsuk-button\" href=\"https://oriel.nhs.uk/Web/\" draggable=\"false\">Go to Oriel</a>"
   }) }}
 {% endblock %}
