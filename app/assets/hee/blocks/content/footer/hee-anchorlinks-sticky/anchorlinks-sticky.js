@@ -71,7 +71,10 @@ export default () => {
      * @returns void
      */
     toggleStickyToolbar() {
-      if (!this.isElementInViewport(this.sidebarAnchorLinks.querySelector('h2'))) {
+      const tocBlockVisible = this.isElementInViewport(this.sidebarAnchorLinks.querySelector('h2'));
+      const footerVisible = this.isElementInViewport(document.getElementById('nhsuk-footer'));
+
+      if (!tocBlockVisible && !footerVisible) {
         this.container.classList.add('active');
       } else {
         this.container.classList.remove('active');
