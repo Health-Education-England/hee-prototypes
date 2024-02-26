@@ -10,6 +10,7 @@ export default () => {
       this.toggleBtn = this.container.querySelector('button.hee-anchorlinks__sticky__btn');
       this.stickyAnchorLinks = this.container.querySelector('.hee-anchorlinks');
       this.sidebarAnchorLinks = document.querySelector('.page__rightbar .hee-anchorlinks');
+      this.footer = document.querySelector('nhsuk-footer');
 
       this.addEventListeners();
       this.toggleStickyToolbar();
@@ -72,9 +73,9 @@ export default () => {
      */
     toggleStickyToolbar() {
       const tocBlockVisible = this.isElementInViewport(this.sidebarAnchorLinks.querySelector('h2'));
-      const footerVisible = this.isElementInViewport(document.getElementById('nhsuk-footer'));
+      const footerVisible =   this.footer? this.isElementInViewport(this.footer): true;
 
-      if (!tocBlockVisible && !footerVisible) {
+      if (!tocBlockVisible || !footerVisible) {
         this.container.classList.add('active');
       } else {
         this.container.classList.remove('active');
