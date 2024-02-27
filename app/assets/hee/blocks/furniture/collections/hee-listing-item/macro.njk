@@ -9,7 +9,11 @@
         {% for detail in item.details %}
           <div class="hee-listing-item__details__row">
             <span class="hee-listing-item__details__label">{{ detail.label }}</span>
-            <span>{{ detail.value | safe }}</span>
+            {% if detail.label == 'File type:' %}
+                {{ detail.value | safe }}
+            {% else %}
+                <span>{{ detail.value | safe }}</span>
+            {% endif %}
           </div>
         {% endfor %}
       </div>
