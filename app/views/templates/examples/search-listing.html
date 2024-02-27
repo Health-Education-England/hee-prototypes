@@ -46,19 +46,34 @@
   <div class="page__main nhsuk-width-container">
     {% set items = [] %}
     {% for i in range(0, 10) -%}
+      {% set item_details = [
+        {
+          label: "Date:",
+          value: "21 July 2021"
+        },
+        {
+          label: "Location:",
+          value: "Birmingham"
+        }
+      ] %}
+
+      {% if loop.index is even %}
+        {% set item_details = item_details.concat([
+          {
+            label: "File type:",
+            value: "<span class=\"hee-resources__tag hee-resources__pdf\">PDF</span>"
+          },
+          {
+            label: "File size:",
+            value: "836KB"
+          }
+        ]) %}
+      {% endif %}
+
       {% set item = {
         title: "Assessment of Dental Core competency #" + loop.index,
         href: "#",
-        details: [
-          {
-            label: "Date:",
-            value: "21 July 2021"
-          },
-          {
-            label: "Location:",
-            value: "Birmingham"
-          }
-        ],
+        details: item_details,
         summary: "Dental Core competency must be demonstrated at the end of UK Dental Core Training year 1 (DCT1)"
       } %}
       {% set items = (items.push(item), items) %}

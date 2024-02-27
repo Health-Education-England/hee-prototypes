@@ -1,4 +1,4 @@
-.hee-resources__link {
+.hee-resources__link, .hee-listing-item__details__row {
 
     .hee-resources__tag,
     .hee-resources__docSize {
@@ -79,6 +79,12 @@
         color: $color_nhsuk-grey-1;
     }
 
+}
+
+.hee-listing-item__details__row {
+    .hee-resources__tag {
+        margin: 0;
+    }
 }
 
 .hee-resources__list {
