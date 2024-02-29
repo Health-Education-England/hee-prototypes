@@ -1,0 +1,183 @@
+{% extends "includes/_example-template-leftbar.html" %}
+
+{% import 'includes/_taxonomy-clinical-discipline.html' as taxonomyClinicalDiscipline %}
+{% import 'includes/_taxonomy-profession.html' as taxonomyProfession %}
+{% import 'includes/_taxonomy-sub-profession.html' as taxonomySubProfession %}
+{% import 'includes/_taxonomy-topic.html' as taxonomyTopic %}
+{% import 'includes/_taxonomy-sub-topic.html' as taxonomySubTopic %}
+{% import 'includes/_taxonomy-training-type.html' as taxonomyTrainingType %}
+
+{% block pageTitle %}Training Programme Collection - Examples - NWP Prototype Kit{% endblock %}
+
+{% block pageBreadcrumbs %}
+  {{
+  breadcrumb({
+    items: [
+      {
+        href: basePath + "/",
+        text: "Home"
+      }
+    ],
+    href: basePath + "/templates/examples/training-programme-collection",
+    text: "Training Programme Collection"
+  })
+  }}
+{% endblock %}
+
+{% block pageHeader %}
+  <div class="nhsuk-width-container">
+    <h1>Training Programmes</h1>
+    <span class="nhsuk-caption-xl">Caption</span>
+    <p class="nhsuk-lede-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum sit sed porta viverra. Amet, tincidunt cras augue justo, proin mollis sapien. Sed cursus quam suspendisse.</p>
+  </div>
+{% endblock %}
+
+{% block pageLeftbar %}
+  {{ filter({
+    groups: [
+      {
+        type: "select",
+        name: "profession",
+        title: "Profession",
+        showClearToggle: true,
+        items: taxonomyProfession.items,
+          subGroup: {
+          type: "select",
+          name: "sub_profession",
+          title: "Sub profession",
+          items: taxonomySubProfession.items
+        }
+      },
+      {
+        type: "select",
+        name: "topic",
+        title: "Topic",
+        showClearToggle: true,
+        items: taxonomyTopic.items,
+          subGroup: {
+          type: "select",
+          name: "sub_topic",
+          title: "Sub topic",
+          items: taxonomySubTopic.items
+        }
+      },
+      {
+        title: "Clinical discipline",
+        showClearToggle: true,
+        items: taxonomyClinicalDiscipline.items
+      },
+      {
+        title: "Training type",
+        showClearToggle: true,
+        items: taxonomyTrainingType.items
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block pageContent %}
+  {% set selectAttributes = {
+    id: "sort",
+    name: "sort",
+    label: {
+      text: "Sort by"
+    },
+    items: []
+  } %}
+
+  {% set submitAttributes = {
+    text: "Update",
+    classes: "hee-listing__filter__submit"
+  } %}
+
+  {% set items = [] %}
+  {% for i in range(0, 10) -%}
+    {% set item = {
+      title: "Training programme",
+      href: "#",
+      details: [
+        {
+          label: "Profession:",
+          value: "<a href=\"#\">Dental professionals</a>, <a href=\"#\">Dental nurse</a>"
+        },
+        {
+          label: "Topic:",
+          value: "<a href=\"#\">Cosmetic procedures</a>, <a href=\"#\">Funding</a>"
+        },
+        {
+          label: "Clinical discipline:",
+          value: "<a href=\"#\">Paediatrics</a>"
+        },
+        {
+          label: "Training type:",
+          value: "<a href=\"#\">Core</a>"
+        },
+        {
+          label: "Duration:",
+          value: "24"
+        },
+        {
+          label: "Recruitment format:",
+          value: "Uncoupled"
+        }
+      ]
+    } %}
+    {% set items = (items.push(item), items) %}
+  {% endfor %}
+
+  {{ listingLayout({
+    filter: {
+      select: selectAttributes,
+      submit: submitAttributes
+    },
+    tags: [
+      {
+        label: "Profession",
+        items: [
+          {
+            text: "Dental professionals",
+            value: "dental-professionals"
+          },
+          {
+            text: "Dental nurse",
+            value: "dental-nurse"
+          }
+        ]
+      },
+      {
+        label: "Topic",
+        items: [
+          {
+            text: "Cosmetic procedures",
+            value: "cosmetic-procedures"
+          },
+          {
+            text: "Funding",
+            value: "funding"
+          }
+        ]
+      },
+      {
+        label: "Clinical Discipline",
+        items: [
+          {
+            text: "Paediatrics",
+            value: "paediatrics"
+          }
+        ]
+      },
+      {
+        label: "Training type",
+        items: [
+          {
+            text: "Core",
+            value: "core"
+          }
+        ]
+      }
+    ],
+    results: items,
+    emptyMessage: "No results",
+    showPagination: true
+  }) }}
+{% endblock %}
