@@ -297,6 +297,33 @@
             <div class="nhsuk-filter__group">
               <a class="nhsuk-filter__group__clear" href="#">Clear</a>
               <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="filter_type-hint">
+                  <legend class="nhsuk-fieldset__legend"> Type </legend>
+                  <div class="nhsuk-hint" id="filter_type-hint"> 0 selected </div>
+                  <div class="nhsuk-checkboxes">
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="filter_type-1" name="publication_type" type="checkbox" value="announcement">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_type-1"> Announcement </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="filter_type-2" name="publication_type" type="checkbox" value="bulletin">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_type-2"> Bulletin </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="filter_type-3" name="publication_type" type="checkbox" value="news">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_type-3"> News </label>
+                    </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="filter_type-4" name="publication_type" type="checkbox" value="press-release" checked>
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="filter_type-4"> Press release </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <div class="nhsuk-filter__group">
+              <a class="nhsuk-filter__group__clear" href="#">Clear</a>
+              <div class="nhsuk-form-group">
                 <fieldset class="nhsuk-fieldset" aria-describedby="filter_tag-hint">
                   <legend class="nhsuk-fieldset__legend"> Tag </legend>
                   <div class="nhsuk-hint" id="filter_tag-hint"> 0 selected </div>
@@ -630,7 +657,7 @@
         <div class="page__content">
           <div class="hee-listing" id="results">
             <div class="hee-listing__summary">
-              <div class="hee-listing__count">
+              <div class="hee-listing__count ">
                 <h2 class="hee-listing__title nhsuk-heading-l">10 results</h2>
               </div>
               <div class="hee-listing__filter">
@@ -670,6 +697,13 @@
                   </div>
                 </div>
                 <div class="hee-listing__tags__group">
+                  <label>Type: </label>
+                  <div class="nhsuk-filter-tag nhsuk-tag" data-filter="press-release">
+                    <span>Press release</span>
+                    <a class="nhsuk-filter-tag__icon">Remove</a>
+                  </div>
+                </div>
+                <div class="hee-listing__tags__group">
                   <label>Tag: </label>
                   <div class="nhsuk-filter-tag nhsuk-tag" data-filter="innovation">
                     <span>Innovation</span>
@@ -682,8 +716,8 @@
                 </div>
               </div>
             </div>
-            <div class="hee-listing__results">
-              <div class="hee-listing-item">
+            <div class="hee-listing__results ">
+              <div class="hee-listing-item ">
                 <h3><a href="#">News item #1</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
@@ -693,7 +727,7 @@
                 </div>
                 <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
-              <div class="hee-listing-item">
+              <div class="hee-listing-item ">
                 <h3><a href="#">News item #2</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
@@ -703,7 +737,7 @@
                 </div>
                 <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
-              <div class="hee-listing-item">
+              <div class="hee-listing-item ">
                 <h3><a href="#">News item #3</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
@@ -713,7 +747,7 @@
                 </div>
                 <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
-              <div class="hee-listing-item">
+              <div class="hee-listing-item ">
                 <h3><a href="#">News item #4</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
@@ -723,7 +757,7 @@
                 </div>
                 <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
-              <div class="hee-listing-item">
+              <div class="hee-listing-item ">
                 <h3><a href="#">News item #5</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
@@ -733,7 +767,7 @@
                 </div>
                 <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
-              <div class="hee-listing-item">
+              <div class="hee-listing-item ">
                 <h3><a href="#">News item #6</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
@@ -743,7 +777,7 @@
                 </div>
                 <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
-              <div class="hee-listing-item">
+              <div class="hee-listing-item ">
                 <h3><a href="#">News item #7</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
@@ -753,7 +787,7 @@
                 </div>
                 <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
-              <div class="hee-listing-item">
+              <div class="hee-listing-item ">
                 <h3><a href="#">News item #8</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
@@ -763,7 +797,7 @@
                 </div>
                 <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
-              <div class="hee-listing-item">
+              <div class="hee-listing-item ">
                 <h3><a href="#">News item #9</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
@@ -773,7 +807,7 @@
                 </div>
                 <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. </div>
               </div>
-              <div class="hee-listing-item">
+              <div class="hee-listing-item ">
                 <h3><a href="#">News item #10</a></h3>
                 <div class="hee-listing-item__details">
                   <div class="hee-listing-item__details__row">
