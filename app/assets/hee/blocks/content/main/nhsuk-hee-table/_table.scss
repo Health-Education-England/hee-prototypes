@@ -84,7 +84,6 @@ table caption {
         margin-bottom: 24px;
     }
     .nhsuk-table-responsive .nhsuk-table__body .nhsuk-table__row .nhsuk-table__cell {
-        display: block;
         min-width: 1px;
         padding-right: 0;
         text-align: right;
@@ -98,7 +97,7 @@ table caption {
         padding-right: 16px;
         text-align: left;
         display: inline-block;
-        float: left;
+        vertical-align: top;
     }
 
     .nhsuk-table-responsive .nhsuk-table__body .nhsuk-table__row .nhsuk-table__cell__container {
@@ -148,7 +147,6 @@ table caption {
     padding-right: 16px;
     text-align: left;
     display: inline-block;
-    float: none;
 }
 
 .nhsuk-details.nhsuk-expander, .nhsuk-tabs {
