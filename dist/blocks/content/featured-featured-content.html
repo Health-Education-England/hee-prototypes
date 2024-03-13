@@ -141,7 +141,7 @@
             </div>
           </div>
           <hr />
-          <h3>Macro</h3>
+          <h3>Macro - without image</h3>
           <pre><code>
   {{ featuredContent({
     title: &quot;Phasellus sagittis&quot;,
@@ -241,7 +241,7 @@
   }) }}
   </code></pre>
           <hr />
-          <h3>HTML</h3>
+          <h3>HTML- without image</h3>
           <pre><code>
 &lt;div class=&quot;hee-featured-content&quot;&gt;
     &lt;h2&gt;Phasellus sagittis&lt;/h2&gt;
@@ -344,6 +344,65 @@
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
+&lt;/div&gt;
+  </code></pre>
+          <hr />
+          <h3>Macro - with image</h3>
+          <pre><code>
+  {{ featuredContent({
+    title: &quot;Image item example&quot;,
+    summary: &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultrices dui lacus, sit amet mattis ipsum accumsan a. Aliquam eget quam eget arcu rhoncus ullamcorper. &quot;,
+    items: [
+      {
+        title: &quot;Training item #1&quot;,
+        href: &quot;#&quot;,
+        image: basePath + &quot;/assets/images/training-programme-card.png&quot;,
+        summary: &quot;Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec.&quot;
+      },
+      {
+        title: &quot;Training item #2&quot;,
+        href: &quot;#&quot;,
+        image: basePath + &quot;/assets/images/training-programme-card.png&quot;,
+        summary: &quot;Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec.&quot;
+      },
+      {
+        title: &quot;Training item #2&quot;,
+        href: &quot;#&quot;,
+        image: basePath + &quot;/assets/images/training-programme-card.png&quot;,
+        summary: &quot;Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec.&quot;
+      }
+    ]
+  }) }}
+  </code></pre>
+          <hr />
+          <h3>HTML- with image</h3>
+          <pre><code>
+&lt;div class=&quot;hee-featured-content&quot;&gt;
+  &lt;h2&gt;Phasellus sagittis&lt;/h2&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultrices dui lacus, sit amet mattis ipsum accumsan a. Aliquam eget quam eget arcu rhoncus ullamcorper. &lt;/p&gt;
+  &lt;div class=&quot;hee-featured-content-wrapper&quot;&gt;
+    &lt;div class=&quot;hee-featured-content__item&quot;&gt;
+      &lt;div class=&quot;hee-listing-item has-image&quot;&gt;
+        &lt;div class=&quot;hee-listing-item__image&quot; style=&quot;background-image:url(/images/training-programme-card.png);&quot;&gt;&lt;/div&gt;
+        &lt;h3&gt;&lt;a href=&quot;http://www.google.com&quot;&gt;Result item&lt;/a&gt;&lt;/h3&gt;
+        &lt;div class=&quot;hee-listing-item__summary&quot;&gt; Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;hee-featured-content__item&quot;&gt;
+      &lt;div class=&quot;hee-listing-item has-image&quot;&gt;
+        &lt;div class=&quot;hee-listing-item__image&quot; style=&quot;background-image:url(/images/training-programme-card.png);&quot;&gt;&lt;/div&gt;
+        &lt;h3&gt;&lt;a href=&quot;http://www.google.com&quot;&gt;Result item&lt;/a&gt;&lt;/h3&gt;
+        &lt;div class=&quot;hee-listing-item__summary&quot;&gt; Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;hee-featured-content__item&quot;&gt;
+      &lt;div class=&quot;hee-listing-item has-image&quot;&gt;
+        &lt;div class=&quot;hee-listing-item__image&quot; style=&quot;background-image:url(/images/training-programme-card.png);&quot;&gt;&lt;/div&gt;
+        &lt;h3&gt;&lt;a href=&quot;http://www.google.com&quot;&gt;Result item&lt;/a&gt;&lt;/h3&gt;
+        &lt;div class=&quot;hee-listing-item__summary&quot;&gt; Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec. &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
   </code></pre>
         </div>
