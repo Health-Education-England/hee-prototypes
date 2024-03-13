@@ -67,7 +67,7 @@ table {
     background-color: #fff;
     border: 1px solid $color_nhsuk-grey-4;
     padding: 16px;
-    word-break: normal;
+    word-wrap: break-word;
 }
 table caption {
     background-color: #fff;
@@ -157,7 +157,7 @@ table caption {
         padding-left: 0;
         padding-right: 0;
         margin-bottom: 0 !important;
-        word-break: break-word;
+        word-wrap: break-word;
 
         caption {
             padding-left: 0;
@@ -170,7 +170,7 @@ table caption {
     }
 
     .nhsuk-table-responsive {
-        word-break: normal;
+        word-wrap: normal;
     }
 }
 
