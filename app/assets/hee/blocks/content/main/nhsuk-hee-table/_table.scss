@@ -67,7 +67,7 @@ table {
     background-color: #fff;
     border: 1px solid $color_nhsuk-grey-4;
     padding: 16px;
-    word-break: normal;
+    word-wrap: break-word;
 }
 table caption {
     background-color: #fff;
@@ -77,13 +77,13 @@ table caption {
     margin-bottom: 4em !important;
     background-color: #fff;
 }
+
 @media (max-width: 48.0525em) {
     .nhsuk-table-responsive .nhsuk-table__body .nhsuk-table__row {
         display: block;
         margin-bottom: 24px;
     }
     .nhsuk-table-responsive .nhsuk-table__body .nhsuk-table__row .nhsuk-table__cell {
-        display: block;
         min-width: 1px;
         padding-right: 0;
         text-align: right;
@@ -97,7 +97,14 @@ table caption {
         padding-right: 16px;
         text-align: left;
         display: inline-block;
-        float: left;
+        vertical-align: top;
+    }
+
+    .nhsuk-table-responsive .nhsuk-table__body .nhsuk-table__row .nhsuk-table__cell__container {
+        width: 48%;
+        padding-left: 16px;
+        text-align: left;
+        display: inline-block;
     }
 }
 .nhsuk-hee-table--multicols {
@@ -126,7 +133,7 @@ table caption {
     margin-bottom: 24px;
 }
 .nhsuk-hee-table--multicols .nhsuk-table__body .nhsuk-table__row .nhsuk-table__cell {
-    display: block;
+    display: flex;
     min-width: 1px;
     padding-right: 0;
     text-align: right;
@@ -140,7 +147,6 @@ table caption {
     padding-right: 16px;
     text-align: left;
     display: inline-block;
-    float: left;
 }
 
 .nhsuk-details.nhsuk-expander, .nhsuk-tabs {
@@ -149,7 +155,7 @@ table caption {
         padding-left: 0;
         padding-right: 0;
         margin-bottom: 0 !important;
-        word-break: break-word;
+        word-wrap: break-word;
 
         caption {
             padding-left: 0;
@@ -162,6 +168,19 @@ table caption {
     }
 
     .nhsuk-table-responsive {
-        word-break: normal;
+        word-wrap: normal;
     }
+}
+
+.nhsuk-hee-table--multicols {
+    .nhsuk-table__cell__container {
+        width: 48%;
+        padding-left: 16px;
+        text-align: left;
+        display: inline-block;
+    }
+}
+
+.nhsuk-table-responsive thead {
+    white-space: normal;
 }
