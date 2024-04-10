@@ -83,7 +83,13 @@ export default () => {
       let allOpen = false;
 
       this.expanders.forEach( (expander) => {
-        !expander.hasAttribute('open') ? allOpen = false : allOpen = true;
+        if (!expander.hasAttribute('open')){
+          this.closeExpander(expander);
+          allOpen = false;
+        }else{
+          this.setOpenAttributes(expander);
+          allOpen = true;
+        }
       });
 
       !allOpen ? this.stateOpen = false : this.stateOpen = true;
@@ -95,11 +101,6 @@ export default () => {
      * @param {HTMLElement} expander Expander element.
      */
     openExpander(expander) {
-      const summary = expander.querySelector('.nhsuk-details__summary');
-      const text = expander.querySelector('.nhsuk-details__text');
-
-      summary.setAttribute('aria-expanded', 'true');
-      text.setAttribute('aria-hidden', 'false');
       expander.setAttribute('open', 'open');
     }
 
@@ -114,6 +115,14 @@ export default () => {
       summary.setAttribute('aria-expanded', 'false');
       text.setAttribute('aria-hidden', 'true');
       expander.removeAttribute('open');
+    }
+
+    setOpenAttributes(expander) {
+      const summary = expander.querySelector('.nhsuk-details__summary');
+      const text = expander.querySelector('.nhsuk-details__text');
+
+      summary.setAttribute('aria-expanded', 'true');
+      text.setAttribute('aria-hidden', 'false');
     }
   }
 
