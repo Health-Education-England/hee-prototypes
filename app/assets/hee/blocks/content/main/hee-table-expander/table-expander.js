@@ -80,19 +80,18 @@ export default () => {
      *  "open" attribute.
      */
     updateToggleState() {
-      let allOpen = false;
-
+      let allOpen = 0;
+      
       this.expanders.forEach( (expander) => {
         if (!expander.hasAttribute('open')){
           this.closeExpander(expander);
-          allOpen = false;
         }else{
           this.setOpenAttributes(expander);
-          allOpen = true;
+          allOpen++;
         }
       });
 
-      !allOpen ? this.stateOpen = false : this.stateOpen = true;
+      !(allOpen === this.expanders.length) ? this.stateOpen = false : this.stateOpen = true;
       !this.stateOpen ? this.toggleLink.innerText = this.toggleLink.dataset.labelOpen : this.toggleLink.innerText = this.toggleLink.dataset.labelClose
     }
 
