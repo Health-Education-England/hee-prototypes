@@ -1,6 +1,9 @@
 {% macro anchorLinks(params) %}
-<div class="nhsuk-anchor-links hee-anchorlinks" {{ 'data-toc-js=true' if params.toc }} data-headings="{{ params.headings }}">
+<div class="nhsuk-anchor-links hee-anchorlinks {{params.srOnly}}" {{ 'data-toc-js=true' if params.toc }} data-headings="{{ params.headings }}">
     <h2 data-anchorlinksignore="true">{{ params.title }}</h2>
+    {% if params.skip %}
+        <a href=#mainblocks>Skip table of contents</a>
+    {% endif %}
     {% if params.items %}
         <ul>
         {% for item in params.items %}
