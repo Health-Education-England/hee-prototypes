@@ -38,7 +38,14 @@
 
 {% block pageContent %}
   <p class="nhsuk-body-l">This report has been produced in partnership between Health Education England (HEE) and Unity Insights.</p>
-
+  {{ anchorLinks({
+      srOnly: " sr-only",
+      title: "Table of Contents",
+      toc: true,
+      skip: true
+    })
+  }}
+<div id="mainblocks">
   <h2 class="toc_h2" data-short-title="Overview">Overview</h2>
   <p>Working with The Royal College of Surgeons, Health Education England provides world-class education, assessment and development to 30,000 surgeons.</p>
   <p>As your career progresses from medical school student through to surgeon, you will go through a number of stages that all have a level of competitive entry.</p>
@@ -137,7 +144,7 @@
 
   <h2 class="toc_h2">Regions</h2>
   <p>Pellentesque id posuere sapien vestibulum, quam pellentesque at libero. Aliquam at id fames hendrerit in vulputate orci aliquet augue. Massa penatibus sociis et nisl. Enim aliquam mauris suscipit turpis non hendrerit felis.</p>
-
+</div>
 {% endblock %}
 
 {% block pageRightbar %}
