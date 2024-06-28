@@ -9,16 +9,6 @@
     height: 8px;
     margin-top: nhsuk-spacing(2);
     width: 12px;
-
-    @include mq($from: desktop) {
-      transform: rotate(180deg);
-    }
-  }
-
-  .hee-card--summary__heading {
-    @include mq($from: desktop) {
-      margin: 0;
-    }
   }
 
   .hee-card--summary__list {
@@ -26,10 +16,6 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-
-    @include mq($from: desktop) {
-      display: none;
-    }
   }
 
   .hee-card--summary__item {
@@ -77,26 +63,14 @@
   &.default {
     .hee-card--summary__heading {
       margin-bottom: 0;
-
-      @include mq($from: desktop) {
-        @include nhsuk-responsive-margin(4, 'bottom');
-      }
     }
 
     .hee-card--summary__list {
       display: none;
-
-      @include mq($from: desktop) {
-        display: block;
-      }
     }
 
     .hee-card--summary__toggle {
       transform: rotate(180deg);
-
-      @include mq($from: desktop) {
-        transform: none;
-      }
     }
   }
 }

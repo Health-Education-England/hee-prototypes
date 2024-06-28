@@ -2,9 +2,8 @@
   @include nhsuk-typography-responsive(19);
   background-color: $color_nhsuk-white;
   border: 1px solid $color_nhsuk-grey-4;
-  padding: map-get($nhsuk-spacing-points, 3);
+  padding: map-get($nhsuk-spacing-points, 4);
   margin-bottom: map-get($nhsuk-spacing-points, 3);
-  width: 100%;
 
   .hee-listing-item__details__row {
     margin-bottom: map-get($nhsuk-spacing-points, 2);
@@ -19,6 +18,36 @@
           width: 33%;
         }
       }
+    }
+  }
+
+  &.has-image{
+    padding: 0 0 24px 0;
+
+    .hee-listing-item__image{
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-bottom: 24px;
+      max-width: 100%;
+      padding-bottom: 49.34%;
+    }
+
+    h3{
+      padding: 0 24px 0 24px;
+    }
+
+    .hee-listing-item__details__row{
+      margin-bottom: 16px;
+      padding: 0 24px 0 24px;
+    }
+
+    .hee-listing-item__details__label{
+      display: block;
+      width: auto;
+    }
+
+    .hee-listing-item__summary{
+      padding: 0 24px 0 24px;
     }
   }
 }
