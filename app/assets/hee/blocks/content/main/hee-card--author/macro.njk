@@ -39,7 +39,7 @@
     </div>
 
     <div class="hee-card--author__details">
-      <h2 class="hee-card__name" aria-label="Name">
+      <h2 class="hee-card__name" aria-label="Name {{ params.title | safe }} {{ params.name | safe }}">
         {{ params.title | safe }} {{ params.name | safe }}
       </h2>
 
@@ -48,11 +48,11 @@
       {% endif %}
 
       {%- if params.jobTitle %}
-        <h3 class="nhsuk-heading-m hee-card__jobtitle" aria-label="Job Title">{{ params.jobTitle | safe }}</h3>
+        <h3 class="nhsuk-heading-m hee-card__jobtitle" aria-label="Job Title {{ params.jobTitle | safe }}">{{ params.jobTitle | safe }}</h3>
       {%- endif %}
 
       {%- if params.department %}
-        <p class="hee-card__department" aria-label="Department">{{ params.department | safe }}</p>
+        <p class="hee-card__department" aria-label="Department {{ params.department | safe }}">{{ params.department | safe }}</p>
       {%- endif %}
 
       {%- if params.organisation %}
