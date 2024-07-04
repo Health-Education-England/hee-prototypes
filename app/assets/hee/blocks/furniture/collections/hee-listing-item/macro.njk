@@ -1,5 +1,8 @@
 {% macro listingItem(item) %}
-  <div class="hee-listing-item">
+  <div class="hee-listing-item {{ "has-image" if item.image }}">
+    {% if item.image %}
+      <div class="hee-listing-item__image" style="background-image:url({{ item.image }});"></div>
+    {% endif %}
     <h3><a href="{{ item.href }}">{{ item.title }}</a></h3>
     {% if item.details.length > 0 %}
       <div class="hee-listing-item__details">
