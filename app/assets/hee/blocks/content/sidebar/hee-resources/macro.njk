@@ -16,6 +16,7 @@
   <a class="hee-resources__link"
      href="{{ params.url }}"
      title="{{ params.title }}"
+     aria-label="Download {{ params.title }} in {{ params.docType | safe }} format, {{ params.docSize | safe }}"
     {%- if params.newTab === true %}
       target="_blank"
     {%- endif %}
