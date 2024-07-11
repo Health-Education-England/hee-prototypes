@@ -1692,10 +1692,11 @@ table caption {
   }
 }
 .hee-resources__link .hee-resources__tag,
-.hee-resources__link .hee-resources__docSize {
+.hee-resources__link .hee-resources__docSize, .hee-listing-item__details__row .hee-resources__tag,
+.hee-listing-item__details__row .hee-resources__docSize {
   text-decoration: none;
 }
-.hee-resources__link .hee-resources__tag {
+.hee-resources__link .hee-resources__tag, .hee-listing-item__details__row .hee-resources__tag {
   display: inline-block;
   position: relative;
   top: -1px;
@@ -1708,62 +1709,83 @@ table caption {
   text-transform: uppercase;
   border-radius: 12px;
 }
-.hee-resources__link .hee-resources__pdf {
+.hee-resources__link .hee-resources__pdf, .hee-listing-item__details__row .hee-resources__pdf {
   background-color: #d5281b;
 }
 .hee-resources__link .hee-resources__doc,
-.hee-resources__link .hee-resources__docx {
+.hee-resources__link .hee-resources__docx, .hee-listing-item__details__row .hee-resources__doc,
+.hee-listing-item__details__row .hee-resources__docx {
   background-color: #2b579a;
 }
 .hee-resources__link .hee-resources__xls,
 .hee-resources__link .hee-resources__xlsx,
-.hee-resources__link .hee-resources__csv {
+.hee-resources__link .hee-resources__csv, .hee-listing-item__details__row .hee-resources__xls,
+.hee-listing-item__details__row .hee-resources__xlsx,
+.hee-listing-item__details__row .hee-resources__csv {
   background-color: #1D6F42;
 }
 .hee-resources__link .hee-resources__txt,
-.hee-resources__link .hee-resources__mrc {
+.hee-resources__link .hee-resources__mrc, .hee-listing-item__details__row .hee-resources__txt,
+.hee-listing-item__details__row .hee-resources__mrc {
   background-color: #4c6272;
 }
 .hee-resources__link .hee-resources__odt,
 .hee-resources__link .hee-resources__ott,
-.hee-resources__link .hee-resources__fodt {
+.hee-resources__link .hee-resources__fodt, .hee-listing-item__details__row .hee-resources__odt,
+.hee-listing-item__details__row .hee-resources__ott,
+.hee-listing-item__details__row .hee-resources__fodt {
   background-color: #456697;
 }
 .hee-resources__link .hee-resources__ods,
 .hee-resources__link .hee-resources__ots,
-.hee-resources__link .hee-resources__fods {
+.hee-resources__link .hee-resources__fods, .hee-listing-item__details__row .hee-resources__ods,
+.hee-listing-item__details__row .hee-resources__ots,
+.hee-listing-item__details__row .hee-resources__fods {
   background-color: #007f3b;
 }
 .hee-resources__link .hee-resources__odf,
-.hee-resources__link .hee-resources__fodf {
+.hee-resources__link .hee-resources__fodf, .hee-listing-item__details__row .hee-resources__odf,
+.hee-listing-item__details__row .hee-resources__fodf {
   background-color: #106f5a;
 }
 .hee-resources__link .hee-resources__odp,
 .hee-resources__link .hee-resources__otp,
 .hee-resources__link .hee-resources__fodp,
 .hee-resources__link .hee-resources__ppt,
-.hee-resources__link .hee-resources__pptx {
+.hee-resources__link .hee-resources__pptx, .hee-listing-item__details__row .hee-resources__odp,
+.hee-listing-item__details__row .hee-resources__otp,
+.hee-listing-item__details__row .hee-resources__fodp,
+.hee-listing-item__details__row .hee-resources__ppt,
+.hee-listing-item__details__row .hee-resources__pptx {
   background-color: #d5281b;
 }
-.hee-resources__link .hee-resources__oth {
+.hee-resources__link .hee-resources__oth, .hee-listing-item__details__row .hee-resources__oth {
   background-color: #737373;
 }
 .hee-resources__link .hee-resources__odg,
 .hee-resources__link .hee-resources__fodg,
-.hee-resources__link .hee-resources__otg {
+.hee-resources__link .hee-resources__otg, .hee-listing-item__details__row .hee-resources__odg,
+.hee-listing-item__details__row .hee-resources__fodg,
+.hee-listing-item__details__row .hee-resources__otg {
   background-color: #a5265b;
 }
 .hee-resources__link .hee-resources__odb,
-.hee-resources__link .hee-resources__fodb {
+.hee-resources__link .hee-resources__fodb, .hee-listing-item__details__row .hee-resources__odb,
+.hee-listing-item__details__row .hee-resources__fodb {
   background-color: #a5265b;
 }
 .hee-resources__link .hee-resources__odm,
-.hee-resources__link .hee-resources__fodm {
+.hee-resources__link .hee-resources__fodm, .hee-listing-item__details__row .hee-resources__odm,
+.hee-listing-item__details__row .hee-resources__fodm {
   background-color: #344c84;
 }
-.hee-resources__link .hee-resources__docSize {
+.hee-resources__link .hee-resources__docSize, .hee-listing-item__details__row .hee-resources__docSize {
   display: inline-block;
   color: #4c6272;
+}
+
+.hee-listing-item__details__row .hee-resources__tag {
+  margin: 0;
 }
 
 .hee-resources__list {
@@ -1875,7 +1897,7 @@ table caption {
   left: 0;
   position: absolute;
   z-index: 10;
-  max-height: 80vh;
+  max-height: 65vh;
   overflow-y: auto;
 }
 .hee-anchorlinks__sticky .hee-anchorlinks__sticky__btn {
