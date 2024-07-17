@@ -37,6 +37,7 @@
   .hee-listing-item {
     @include mq($from: desktop) {
       margin-bottom: nhsuk-spacing(5);
+	  width: 100%;
     }
 
     span.hee-listing-item__details__label {
