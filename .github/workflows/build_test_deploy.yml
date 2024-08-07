@@ -108,11 +108,11 @@ jobs:
 
       # Docker image: ghcr.io/health-education-england/run-backstopjs-regression-tests:main
       - name: Pull HEE backstopjs docker image
-        run: docker-compose pull backstopjs
+        run: docker compose pull backstopjs
 
       # Run backstopjs tests.
       - name: Run backstopjs tests
-        run: docker-compose run backstopjs npm run backstop:test
+        run: docker compose run backstopjs npm run backstop:test
 
       # Upload html report as an asset
       - name: Upload backstop report
@@ -153,7 +153,7 @@ jobs:
 
       # Docker image: mcr.microsoft.com/playwright:v1.35.1-jammy
       - name: Pull playwright docker image
-        run: docker-compose pull playwright
+        run: docker compose pull playwright
 
       - name: Setup node
         uses: actions/setup-node@v4
@@ -166,7 +166,7 @@ jobs:
 
       # Run playwright tests.
       - name: Run playwright tests
-        run: docker-compose run playwright npx playwright test --config ./tests/playwright/config/playwright.config.js
+        run: docker compose run playwright npx playwright test --config ./tests/playwright/config/playwright.config.js
 
       # Upload html report as an asset
       - name: Upload playwright report
