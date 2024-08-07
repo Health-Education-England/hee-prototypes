@@ -1,0 +1,44 @@
+{% extends "includes/_example-blocks.html" %}
+
+{% block main %}
+  <h2>Listing item without image</h2>
+  {{ listingItem({
+    title: "Result item",
+    href: "#",
+    details: [
+      {
+        label: "Publications type:",
+        value: "Briefing"
+      },
+      {
+        label: "Publish date:",
+        value: "07 September 2022"
+      }
+    ],
+    summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+  }) }}
+
+  <br>
+
+  <h2>Listing item with image</h2>
+  {{ listingItem({
+    image: basePath + "/assets/images/training-programme-card.png",
+    title: "Result item",
+    href: "#",
+    details: [
+      {
+        label: "Profession:",
+        value: "<a href=\"#\">Medical</a>"
+      },
+      {
+        label: "Discipline:",
+        value: "<a href=\"#\">Anaesthesia</a>"
+      },
+      {
+        label: "Duration:",
+        value: "<a href=\"#\">24 months</a>"
+      }
+    ],
+    summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+  }) }}
+{% endblock %}

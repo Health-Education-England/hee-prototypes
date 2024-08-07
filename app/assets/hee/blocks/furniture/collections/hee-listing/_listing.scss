@@ -12,12 +12,37 @@
     h2 {
       margin-bottom: 0;
     }
+
+    &.no-sort-filter {
+      margin-bottom: 24px;
+    }
   }
 
   .hee-listing__results {
     @include nhsuk-responsive-margin(7, 'bottom');
-    padding-top: map-get($nhsuk-spacing-points, 5);
+    padding-top: nhsuk-spacing(5);
 
+    &.layout-two-col {
+      @include mq($from: desktop) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .hee-listing-item {
+        @include mq($from: desktop) {
+          margin-bottom: nhsuk-spacing(4);
+          flex-basis: 48%;
+        }
+      }
+
+      .hee-listing-item__details__label {
+        @include mq($from: desktop) {
+          display: block;
+          width: auto;
+        }
+      }
+    }
   }
 
   .hee-listing__tags__group {

@@ -22,10 +22,10 @@ authors at half width side by side (desktop).
         </div>
       </div>
       <div class="hee-card--author__details">
-        <h2 class="hee-card__name" aria-label="Name"> Mr First Last </h2>
+        <h2 class="hee-card__name" aria-label="Name Mr First Last"> Mr First Last </h2>
         <span class="hee-card__pronouns">Pronoun</span>
-        <h3 class="nhsuk-heading-m hee-card__jobtitle" aria-label="Job Title">Job title</h3>
-        <p class="hee-card__department" aria-label="Department">Department</p>
+        <h3 class="nhsuk-heading-m hee-card__jobtitle" aria-label="Job Title Job title">Job title</h3>
+        <p class="hee-card__department" aria-label="Department Department">Department</p>
         <p class="hee-card__organisation" aria-label="Organisation">Organisation</p>
       </div>
     </div>

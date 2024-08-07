@@ -1,13 +1,13 @@
 .hee-listing-item {
   @include nhsuk-typography-responsive(19);
+
   background-color: $color_nhsuk-white;
   border: 1px solid $color_nhsuk-grey-4;
-  padding: map-get($nhsuk-spacing-points, 3);
-  margin-bottom: map-get($nhsuk-spacing-points, 3);
-  width: 100%;
+  padding: nhsuk-spacing(4);
+  margin-bottom: nhsuk-spacing(3);
 
   .hee-listing-item__details__row {
-    margin-bottom: map-get($nhsuk-spacing-points, 2);
+    margin-bottom: nhsuk-spacing(2);
 
     span {
       display: inline-block;
@@ -19,6 +19,37 @@
           width: 33%;
         }
       }
+    }
+  }
+
+  // Image variant.
+  &.has-image {
+    padding: 0 0 nhsuk-spacing(4) 0;
+
+    .hee-listing-item__image {
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-bottom: nhsuk-spacing(4);
+      max-width: 100%;
+      padding-bottom: 49.34%;
+    }
+
+    h3 {
+      padding: 0 nhsuk-spacing(4) 0 nhsuk-spacing(4);
+    }
+
+    .hee-listing-item__details__row {
+      margin-bottom: nhsuk-spacing(3);
+      padding: 0 nhsuk-spacing(4) 0 nhsuk-spacing(4);
+    }
+
+    .hee-listing-item__details__label {
+      display: block;
+      width: auto;
+    }
+
+    .hee-listing-item__summary {
+      padding: 0 nhsuk-spacing(4) 0 nhsuk-spacing(4);
     }
   }
 }

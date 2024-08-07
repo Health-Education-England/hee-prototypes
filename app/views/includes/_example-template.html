@@ -1,5 +1,18 @@
 {% extends "includes/_example.html" %}
 
+{% block pageMetaData %}
+  <meta name="title" content="{{ page_title }} | Workforce, training and education | NHS England"/>
+  <meta name="description" content="Page summary"/>
+  <meta property="og:title" content="{{ page_title }} | Workforce, training and education | NHS England"/>
+  <meta property="og:description" content="Page summary"/>
+  <meta property="og:url" content="{{ basePath }}/templates/examples/{{ page_url }}.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="{{ basePath }}/assets/images/logos/nhse-logo.jpg"/>
+  <meta property="og:site_name" content="NHS England | Workforce, training and education | Organisation description (e.g. Medical hub, etc)"/>
+  <link rel="canonical" href="{{ basePath }}/templates/examples/{{ page_url }}.html"/>
+  {% block pageMetaDataForListingAndCollection %}{% endblock %}
+{% endblock %}
+
 {% block headerStart %}
   {{ skipLink({
     href: '#maincontent',

@@ -7,6 +7,8 @@ region at the botton of templates.
 
 ## Quick start example
 
+### Cards without images
+
 #### HTML markup
 
 ```html
@@ -114,6 +116,79 @@ region at the botton of templates.
 ]) }}
 ```
 
+### Cards with images
+
+#### HTML markup
+
+```html
+<div class="hee-featured-content">
+  <h2>Image item example</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultrices dui lacus, sit amet mattis ipsum
+    accumsan a. Aliquam eget quam eget arcu rhoncus ullamcorper. </p>
+  <div class="hee-featured-content-wrapper ">
+    <div class="hee-featured-content__item">
+      <div class="hee-listing-item has-image">
+        <div class="hee-listing-item__image" style="background-image:url(/assets/images/training-programme-card.png);">
+        </div>
+        <h3><a href="#">Training item #1</a></h3>
+        <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor,
+          malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et
+          mattis donec. </div>
+      </div>
+    </div>
+    <div class="hee-featured-content__item">
+      <div class="hee-listing-item has-image">
+        <div class="hee-listing-item__image" style="background-image:url(/assets/images/training-programme-card.png);">
+        </div>
+        <h3><a href="#">Training item #2</a></h3>
+        <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor,
+          malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et
+          mattis donec. </div>
+      </div>
+    </div>
+    <div class="hee-featured-content__item">
+      <div class="hee-listing-item has-image">
+        <div class="hee-listing-item__image" style="background-image:url(/assets/images/training-programme-card.png);">
+        </div>
+        <h3><a href="#">Training item #2</a></h3>
+        <div class="hee-listing-item__summary"> Porttitor nulla pellentesque sit consequat, euismod sociis tempor,
+          malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et
+          mattis donec. </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+#### Nunjucks macro
+
+```
+{{ featuredContent({
+  title: "Image item example",
+  summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultrices dui lacus, sit amet mattis ipsum accumsan a. Aliquam eget quam eget arcu rhoncus ullamcorper. ",
+  items: [
+    {
+      title: "Training item #1",
+      href: "#",
+      image: basePath + "/assets/images/training-programme-card.png",
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+    },
+    {
+      title: "Training item #2",
+      href: "#",
+      image: basePath + "/assets/images/training-programme-card.png",
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+    },
+    {
+      title: "Training item #2",
+      href: "#",
+      image: basePath + "/assets/images/training-programme-card.png",
+      summary: "Porttitor nulla pellentesque sit consequat, euismod sociis tempor, malesuada. Non senectus a placerat urna, nibh sed aliquam natoque. Diam gravida sit ullamcorper cras eu et mattis donec."
+    }
+  ]
+}) }}
+```
+
 ### Nunjucks arguments
 
 The macro takes the following arguments:
@@ -123,6 +198,7 @@ The macro takes the following arguments:
 | items                   | array  | Yes      | Array of listing items.                   |
 | items[].title           | string | Yes      | Title of the featured content.            |
 | items[].href            | string | Yes      | URL of the featured content.              |
+| items[].image           | string | No       | Path or URL for the header image.         |
 | items[].details         | array  | No       | Array of listing details (label + value). |
 | items[].details[].label | string | No       | Bold label.                               |
 | items[].details[].value | string | Yes      | Value next to bolded label.               |
