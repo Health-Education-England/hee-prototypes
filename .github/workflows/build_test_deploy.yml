@@ -19,10 +19,10 @@ jobs:
     steps:
       # Checkout repo from GitHub and use current branch.
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
           cache: 'npm'
@@ -35,7 +35,7 @@ jobs:
         run: npm run build:prod
 
       - name: Upload Github Pages build artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: assets
           path: public/**
@@ -47,7 +47,7 @@ jobs:
 
       # Share built assets between jobs.
       - name: Upload testing build artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: assets-tests
           path: public/**
@@ -62,7 +62,7 @@ jobs:
     steps:
       # Checkout repo from GitHub and use current branch.
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
 
@@ -71,7 +71,7 @@ jobs:
 
       # Copy assets from "Build" step into "dist/" directory.
       - name: Download build artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: assets
           path: dist/
@@ -83,7 +83,7 @@ jobs:
 
       # Commit any changes to ./dist directory..
       - name: Commit bundled dist changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "[Github Actions] - Bundled assets for build number: ${{ github.run_number }}"
 
@@ -97,26 +97,26 @@ jobs:
     steps:
       # Checkout repo from GitHub and use current branch.
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Download assets from "Build" step into "public/" directory.
       - name: Download build artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: assets-tests
           path: public
 
       # Docker image: ghcr.io/health-education-england/run-backstopjs-regression-tests:main
       - name: Pull HEE backstopjs docker image
-        run: docker-compose pull backstopjs
+        run: docker compose pull backstopjs
 
       # Run backstopjs tests.
       - name: Run backstopjs tests
-        run: docker-compose run backstopjs npm run backstop:test
+        run: docker compose run backstopjs npm run backstop:test
 
       # Upload html report as an asset
       - name: Upload backstop report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: ${{ always() }}
         with:
           name: backstop_report
@@ -125,7 +125,7 @@ jobs:
 
       # Upload backstop config as asset for debugging.
       - name: Upload generated backstop config
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: ${{ always() }}
         with:
           name: backstop_generated_config
@@ -142,21 +142,21 @@ jobs:
     steps:
       # Checkout repo from GitHub and use current branch.
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Download assets from "Build" step into "public/" directory.
       - name: Download build artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: assets-tests
           path: public
 
       # Docker image: mcr.microsoft.com/playwright:v1.35.1-jammy
       - name: Pull playwright docker image
-        run: docker-compose pull playwright
+        run: docker compose pull playwright
 
       - name: Setup node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
           cache: 'npm'
@@ -166,11 +166,11 @@ jobs:
 
       # Run playwright tests.
       - name: Run playwright tests
-        run: docker-compose run playwright npx playwright test --config ./tests/playwright/config/playwright.config.js
+        run: docker compose run playwright npx playwright test --config ./tests/playwright/config/playwright.config.js
 
       # Upload html report as an asset
       - name: Upload playwright report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: ${{ always() }}
         with:
           name: playwright_report
@@ -187,7 +187,7 @@ jobs:
     steps:
       # Checkout repo from GitHub and use current branch.
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       #  Ensures that we use the latest commit from step: "Commit bundled dist changes" above.
       - name: Fetch latest commit from bundle step
