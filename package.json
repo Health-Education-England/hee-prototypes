@@ -35,7 +35,7 @@
     "nhsuk-frontend": "7.0.0",
     "nunjucks": "^3.2.4",
     "sass": "^1.63.5",
-    "webpack": "^5.87.0",
+    "webpack": "^5.94.0",
     "webpack-stream": "^7.0.0"
   },
   "resolutions": {
