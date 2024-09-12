@@ -3,6 +3,17 @@
     border: 1px solid $color_nhsuk-grey-4;
     padding: nhsuk-spacing(4);
     margin-bottom: nhsuk-spacing(4);
+
+    &.sr-only:not(:focus):not(:active) {
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+    }
+
     h2 {
         @include nhsuk-typography-responsive(22);
         display: block;
@@ -85,5 +96,15 @@
             @include nhsuk-responsive-margin(2, 'top');
             @include nhsuk-responsive-margin(5, 'left');
         }
+    }
+}
+#mainblocks{
+    padding-top: 4px;
+
+    @include mq($from: desktop) {
+        padding-top: 8px;
+    }
+    @include mq($from: tablet) {
+        padding-top: 8px;
     }
 }
