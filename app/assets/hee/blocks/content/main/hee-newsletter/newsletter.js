@@ -26,7 +26,7 @@ export default () => {
     validate(target) {
       var targetError = document.getElementById("errors-"+target.name);
       var targetSummaryError = document.getElementById("error-summary-"+target.name);
-      if (target.name == "firstname" || target.name == "lastname") {
+      if (target.name == "name") {
         this.errorEmpty(target, targetError, targetSummaryError);
       }
       else if (target.name == "email") {
