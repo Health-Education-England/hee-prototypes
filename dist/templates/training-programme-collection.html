@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>404 - Templates - NWP Prototype Kit</title>
+  <title>Training Programme Collection - Templates - NWP Prototype Kit</title>
   <link href="https://www.nhs.uk/" rel="preconnect">
   <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
   <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
@@ -54,19 +54,6 @@
     </header>
   </div>
   <div class="breadcrumbs">
-    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-      <div class="nhsuk-width-container">
-        <ol class="nhsuk-breadcrumb__list">
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates">Templates</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/templates/404">404</a></li>
-        </ol>
-        <p class="nhsuk-breadcrumb__back">
-          <a class="nhsuk-breadcrumb__backlink" href="/templates/404">
-            <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span> 404 </a>
-        </p>
-      </div>
-    </nav>
   </div>
   <div class="site-notifications">
   </div>
@@ -80,7 +67,7 @@
               <li><a href="/templates/base-fullwidth">Base</a></li>
               <li><a href="/templates/homepage">Homepage</a></li>
               <li><a href="/templates/landing-page">Landing Page</a></li>
-              <li class='current'><a href="/templates/404">404</a></li>
+              <li><a href="/templates/404">404</a></li>
               <li><a href="/templates/az-listing">A-Z Listing</a></li>
               <li><a href="/templates/search-listing">Search Listing</a></li>
             </ul>
@@ -93,7 +80,7 @@
               <li><a href="/templates/publications-collection">Publications Collection</a></li>
               <li><a href="/templates/event-collection">Event Collection</a></li>
               <li><a href="/templates/search-bank-collection">Search Bank Collection</a></li>
-              <li><a href="/templates/training-programme-collection">Training Programme Collection</a></li>
+              <li class='current'><a href="/templates/training-programme-collection">Training Programme Collection</a></li>
             </ul>
             <h3>Rightbar</h3>
             <ul>
@@ -113,42 +100,42 @@
         <div class="page__main">
           <div class="page__header">
             <span class="nhsuk-caption-xl">Templates</span>
-            <h1>404</h1>
-            <p class="nhsuk-lede-text"></p>
+            <h1>Training Programme Collection</h1>
+            <p class="nhsuk-lede-text">A layout with a left sidebar and right content area. Used for listing training programme items.</p>
           </div>
           <h2>Example</h2>
           <div class="prototype__example scaled" style="height:400px;overflow:hidden;">
-            <a href="/templates/examples/404" target="_blank" class="prototype__example-link">Open this example in new window</a>
+            <a href="/hee-prototypes/templates/examples/training-programme-collection" target="_blank" class="prototype__example-link">Open this example in new window</a>
             <div class="thumbnail">
-              <iframe src="/templates/examples/404" height="780"></iframe>
+              <iframe src="/hee-prototypes/templates/examples/training-programme-collection" height="780"></iframe>
             </div>
           </div>
           <hr />
-          <h2>HTML</h2>
-          <pre><code>&lt;main class=&quot;page page--fullwidth&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
-  &lt;div class=&quot;page__header has-microhero&quot;&gt;
-    [ PAGE_HERO ]
+          <pre><code>&lt;main class=&quot;page page--leftbar&quot; id=&quot;maincontent&quot; role=&quot;main&quot;&gt;
+  &lt;div class=&quot;page__header&quot;&gt;
+    [ PAGE_MICROHERO ]
+    &lt;div class=&quot;nhsuk-width-container&quot;&gt;
+      &lt;h1&gt;[ PAGE_TITLE ]&lt;/h1&gt;
+      &lt;span class=&quot;nhsuk-caption-xl&quot;&gt;[ PAGE_CAPTION ]&lt;/span&gt;
+      &lt;p class=&quot;nhsuk-lede-text&quot;&gt;[ PAGE_SUMMARY ]&lt;/p&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;page__main nhsuk-width-container&quot;&gt;
-    &lt;div class=&quot;page__content&quot;&gt;
-      [ CONTENT--MAIN_BLOCKS ]
+  &lt;div class=&quot;page__layout nhsuk-width-container&quot;&gt;
+    &lt;aside class=&quot;page__leftbar&quot;&gt;
+      [ FILTER_GROUP | FILTER_CLEAR ]
+    &lt;/aside&gt;
+    &lt;div class=&quot;page__main&quot;&gt;
+      [ RESULTS_TITLE | RESULTS_SORTING ]
+      [ FILTER_TAG ]
+      [ RESULTS_LISTING ]
+      [ RESULTS_PAGINATION ]
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;page__footer&quot;&gt;
   &lt;/div&gt;
+  &lt;section class=&quot;page__feature&quot;&gt;
+  &lt;/section&gt;
 &lt;/main&gt;</code></pre>
-          <hr />
-          <h2>Components</h2>
-          <h4>Furniture</h4>
-          <ul>
-            <li>Page</li>
-            <li>Content</li>
-          </ul>
-          <h4>Content Blocks</h4>
-          <ul>
-            <li>Main</li>
-            <li>Featured</li>
-          </ul>
         </div>
       </div>
     </div>
