@@ -10,8 +10,7 @@ Custom javascript handles the form validation on the frontend, while Pure360 han
 The Javascript initially hides these messages on page load.
 
 The Javascript then adds onfocusout event listeners to the required fields which are currently:
-- firstname
-- lastname
+- name
 - email
 - consent
 
@@ -37,11 +36,8 @@ On event invocation the field values are validated and if necessary error messag
 There is a problem                    </h2>
         <div class="nhsuk-error-summary__body">
             <ul class="nhsuk-list nhsuk-error-summary__list">
-                <li id="error-summary-firstname" style="display: none;">
-                    <a href="#errors-firstname">Enter your first name</a>
-                </li>
-                <li id="error-summary-lastname" style="display: none;">
-                    <a href="#errors-lastname">Enter your last name</a>
+                <li id="error-summary-name" style="display: none;">
+                    <a href="#errors-name">Enter your name</a>
                 </li>
                 <li id="error-summary-email" style="display: none;">
                     <a href="#errors-email">Enter a valid email address</a>
@@ -55,23 +51,14 @@ There is a problem                    </h2>
 
     <fieldset class="nhsuk-fieldset">
 
-        <span class="nhsuk-error-message" id="errors-firstname" style="display: none;">
-            <span class="nhsuk-u-visually-hidden">Error:</span> Enter your first name
+        <span class="nhsuk-error-message" id="errors-name" style="display: none;">
+            <span class="nhsuk-u-visually-hidden">Error:</span> Enter your name
         </span>
         <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="firstname">
-Enter your first name                        </label>
-            <input class="nhsuk-input" id="firstname" name="firstname" type="text" required="">
+            <label class="nhsuk-label" for="name">
+Enter your name                        </label>
+            <input class="nhsuk-input" id="name" name="name" type="text" required="">
         <div data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div></div>
-
-        <span class="nhsuk-error-message" id="errors-lastname" style="display: none;">
-            <span class="nhsuk-u-visually-hidden">Error:</span> Enter your last name
-        </span>
-        <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="lastname">
-Last name                        </label>
-            <input class="nhsuk-input" id="lastname" name="lastname" type="text" required="">
-        </div>
 
         <span class="nhsuk-error-message" id="errors-email" style="display: none;">
             <span class="nhsuk-u-visually-hidden">Error:</span> Enter a valid email address
