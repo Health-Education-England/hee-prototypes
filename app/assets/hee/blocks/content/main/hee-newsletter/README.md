@@ -1,11 +1,11 @@
 # Newsletter Signup Form
 
 ## Guidance
-The newsletter component for the NWP currently uses a third party email subscription service (Pure360).
+The newsletter component for the NWP currently uses a third party email subscription service (Createsend).
 
-It Allows editors to embed a third-party Pure360 newsletter signup form within content.
+It Allows editors to embed a third-party Createsend newsletter signup form within content.
 
-Custom javascript handles the form validation on the frontend, while Pure360 handles the form submission logic externally.
+Custom javascript handles the form validation on the frontend, while Createsend handles the form submission logic externally.
 
 The Javascript initially hides these messages on page load.
 
@@ -23,6 +23,7 @@ On event invocation the field values are validated and if necessary error messag
     subtitle: "Subscribe to receive marketing and update emails.",
     accName: "Digital.Readiness",
     listName: "NHS Digital Academy bulletin",
+    dataId: "92D4C54F0FEC16E5ADC2B1904DE9ED1A508DB0E3577570F12F1BEA7077EF99C95C8869BD43B2B1BE8A600F4AB4140ADD2AC8BD79012A23F860CEB089AE1F7E2E",
     successUrl: "https://digital-transformation.hee.nhs.uk/newsletter-subscription-successful",
     errorUrl: "https://digital-transformation.hee.nhs.uk/newsletter-subscription-unsuccessful",
     doubleOptin: false
@@ -30,7 +31,8 @@ On event invocation the field values are validated and if necessary error messag
 ```
 
 ```html
-<form id="newsletter-form" method="POST" action="https://response.pure360.com/interface/list.php">
+<form id="newsletter-form" method="POST" action="https://www.createsend.com/t/subscribeerror?description="
+      data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1A508DB0E3577570F12F1BEA7077EF99C95C8869BD43B2B1BE8A600F4AB4140ADD2AC8BD79012A23F860CEB089AE1F7E2E">
     <div id="error-summary" class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" style="display: none;">
         <h2 class="nhsuk-error-summary__title" id="error-summary-title">
 There is a problem                    </h2>
@@ -183,8 +185,9 @@ The macro takes the following arguments:
 |-------------|---------|----------|---------------------------------------------|
 | title       | string  | No       | Title displayed above the form              |
 | description | string  | No       | Description lede text displayed below title |
-| accName     | string  | Yes      | Pure360 account name param                  |
-| listName    | string  | Yes      | Pure360 mailing list name param             |
-| successUrl  | string  | Yes      | Pure360 success callback URL                |
-| errorUrl    | string  | Yes      | Pure360 error callback URL                  |
-| doubleOptin | boolean | Yes      | Pure360 double opt in flag                  |
+| accName     | string  | Yes      | Createsend account name param               |
+| listName    | string  | Yes      | Createsend mailing list name param          |
+| dataId      | string  | Yes      | Createsend data ID param                    |
+| successUrl  | string  | Yes      | Createsend success callback URL             |
+| errorUrl    | string  | Yes      | Createsend error callback URL               |
+| doubleOptin | boolean | Yes      | Createsend double opt in flag               |
