@@ -132,8 +132,8 @@
             <h1>Newsletter Signup</h1>
             <p class="nhsuk-lede-text"></p>
           </div>
-          <p>Allows editors to embed a third-party Pure360 newsletter signup form within content.</p>
-          <p>Custom javascript handles the form validation on the frontend, while Pure360 handles the form submission logic externally.</p>
+          <p>Allows editors to embed a third-party Createsend newsletter signup form within content.</p>
+          <p>Custom javascript handles the form validation on the frontend, while Createsend handles the form submission logic externally.</p>
           <h3>Example</h3>
           <div class="prototype__example block">
             <a href="/hee-prototypes/blocks/content/examples/main-newsletter-form" target="_blank" class="prototype__example-link">Open this example in new window</a>
@@ -152,17 +152,15 @@
           <hr />
           <h3>HTML</h3>
           <pre><code>
-&lt;form id=&quot;newsletter-form&quot; method=&quot;POST&quot; action=&quot;https://response.pure360.com/interface/list.php&quot;&gt;
+&lt;form id=&quot;newsletter-form&quot; method=&quot;POST&quot; action=&quot;https://www.createsend.com/t/subscribeerror?description=&quot;
+      data-id=&quot;92D4C54F0FEC16E5ADC2B1904DE9ED1A508DB0E3577570F12F1BEA7077EF99C95C8869BD43B2B1BE8A600F4AB4140ADD2AC8BD79012A23F860CEB089AE1F7E2E&quot;&gt;
     &lt;div id=&quot;error-summary&quot; class=&quot;nhsuk-error-summary&quot; aria-labelledby=&quot;error-summary-title&quot; role=&quot;alert&quot; tabindex=&quot;-1&quot; style=&quot;display: none;&quot;&gt;
         &lt;h2 class=&quot;nhsuk-error-summary__title&quot; id=&quot;error-summary-title&quot;&gt;
 There is a problem                    &lt;/h2&gt;
         &lt;div class=&quot;nhsuk-error-summary__body&quot;&gt;
             &lt;ul class=&quot;nhsuk-list nhsuk-error-summary__list&quot;&gt;
-                &lt;li id=&quot;error-summary-firstname&quot; style=&quot;display: none;&quot;&gt;
-                    &lt;a href=&quot;#errors-firstname&quot;&gt;Enter your first name&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li id=&quot;error-summary-lastname&quot; style=&quot;display: none;&quot;&gt;
-                    &lt;a href=&quot;#errors-lastname&quot;&gt;Enter your last name&lt;/a&gt;
+                &lt;li id=&quot;error-summary-name&quot; style=&quot;display: none;&quot;&gt;
+                    &lt;a href=&quot;#errors-name&quot;&gt;Enter your name&lt;/a&gt;
                 &lt;/li&gt;
                 &lt;li id=&quot;error-summary-email&quot; style=&quot;display: none;&quot;&gt;
                     &lt;a href=&quot;#errors-email&quot;&gt;Enter a valid email address&lt;/a&gt;
@@ -176,23 +174,14 @@ There is a problem                    &lt;/h2&gt;
 
     &lt;fieldset class=&quot;nhsuk-fieldset&quot;&gt;
 
-        &lt;span class=&quot;nhsuk-error-message&quot; id=&quot;errors-firstname&quot; style=&quot;display: none;&quot;&gt;
-            &lt;span class=&quot;nhsuk-u-visually-hidden&quot;&gt;Error:&lt;/span&gt; Enter your first name
+        &lt;span class=&quot;nhsuk-error-message&quot; id=&quot;errors-name&quot; style=&quot;display: none;&quot;&gt;
+            &lt;span class=&quot;nhsuk-u-visually-hidden&quot;&gt;Error:&lt;/span&gt; Enter your name
         &lt;/span&gt;
         &lt;div class=&quot;nhsuk-form-group&quot;&gt;
-            &lt;label class=&quot;nhsuk-label&quot; for=&quot;firstname&quot;&gt;
-Enter your first name                        &lt;/label&gt;
-            &lt;input class=&quot;nhsuk-input&quot; id=&quot;firstname&quot; name=&quot;firstname&quot; type=&quot;text&quot; required=&quot;&quot;&gt;
+            &lt;label class=&quot;nhsuk-label&quot; for=&quot;name&quot;&gt;
+Enter your name                        &lt;/label&gt;
+            &lt;input class=&quot;nhsuk-input&quot; id=&quot;name&quot; name=&quot;name&quot; type=&quot;text&quot; required=&quot;&quot;&gt;
         &lt;div data-lastpass-icon-root=&quot;true&quot; style=&quot;position: relative !important; height: 0px !important; width: 0px !important; float: left !important;&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-
-        &lt;span class=&quot;nhsuk-error-message&quot; id=&quot;errors-lastname&quot; style=&quot;display: none;&quot;&gt;
-            &lt;span class=&quot;nhsuk-u-visually-hidden&quot;&gt;Error:&lt;/span&gt; Enter your last name
-        &lt;/span&gt;
-        &lt;div class=&quot;nhsuk-form-group&quot;&gt;
-            &lt;label class=&quot;nhsuk-label&quot; for=&quot;lastname&quot;&gt;
-Last name                        &lt;/label&gt;
-            &lt;input class=&quot;nhsuk-input&quot; id=&quot;lastname&quot; name=&quot;lastname&quot; type=&quot;text&quot; required=&quot;&quot;&gt;
-        &lt;/div&gt;
 
         &lt;span class=&quot;nhsuk-error-message&quot; id=&quot;errors-email&quot; style=&quot;display: none;&quot;&gt;
             &lt;span class=&quot;nhsuk-u-visually-hidden&quot;&gt;Error:&lt;/span&gt; Enter a valid email address

@@ -11,31 +11,18 @@ test('Newsletter form: validation tests', async ({ page }) => {
   const submitButton = page.getByRole('button', {name: 'Subscribe'});
   await expect(submitButton).toHaveAttribute('disabled', 'disabled');
 
-  // Test first name validation.
-  const firstNameInput = page.getByLabel('Enter your first name');
-  await firstNameInput.focus();
-  await firstNameInput.blur();
+  // Test name validation.
+  const nameInput = page.getByLabel('Enter your name');
+  await nameInput.focus();
+  await nameInput.blur();
   await expect(errorSummary).toBeVisible();
-  await expect(page.locator('#error-summary-firstname')).toBeVisible();
-  await expect(page.locator('#errors-firstname')).toBeVisible();
-  await firstNameInput.fill('Joe');
-  await firstNameInput.blur();
+  await expect(page.locator('#error-summary-name')).toBeVisible();
+  await expect(page.locator('#errors-name')).toBeVisible();
+  await nameInput.fill('Joe');
+  await nameInput.blur();
   await expect(errorSummary).not.toBeVisible();
-  await expect(page.locator('#error-summary-firstname')).not.toBeVisible();
-  await expect(page.locator('#errors-firstname')).not.toBeVisible();
-
-  // Test last name validation.
-  const lastNameInput = page.getByLabel('Last name');
-  await lastNameInput.focus();
-  await lastNameInput.blur();
-  await expect(errorSummary).toBeVisible();
-  await expect(page.locator('#error-summary-lastname')).toBeVisible();
-  await expect(page.locator('#errors-lastname')).toBeVisible();
-  await lastNameInput.fill('Soap');
-  await lastNameInput.blur();
-  await expect(errorSummary).not.toBeVisible();
-  await expect(page.locator('#error-summary-lastname')).not.toBeVisible();
-  await expect(page.locator('#errors-lastname')).not.toBeVisible();
+  await expect(page.locator('#error-summary-name')).not.toBeVisible();
+  await expect(page.locator('#errors-name')).not.toBeVisible();
 
   // Test email validation.
   const emailInput = page.getByLabel('Email address');
