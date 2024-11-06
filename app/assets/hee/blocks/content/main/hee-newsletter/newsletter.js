@@ -24,15 +24,15 @@ export default () => {
     }
 
     validate(target) {
-      var targetError = document.getElementById("errors-"+target.name);
-      var targetSummaryError = document.getElementById("error-summary-"+target.name);
-      if (target.name == "name") {
+      var targetError = document.getElementById("errors-"+target.id);
+      var targetSummaryError = document.getElementById("error-summary-"+target.id);
+      if (target.id == "name") {
         this.errorEmpty(target, targetError, targetSummaryError);
       }
-      else if (target.name == "email") {
+      else if (target.id == "email") {
         this.errorEmail(target, targetError, targetSummaryError);
       }
-      else if (target.name == "consent") {
+      else if (target.id == "consent") {
         this.errorConsent(target, targetError, targetSummaryError);
       }
       this.updateSummary();
