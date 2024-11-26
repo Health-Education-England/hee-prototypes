@@ -80,13 +80,18 @@ export default () => {
      *  "open" attribute.
      */
     updateToggleState() {
-      let allOpen = false;
-
+      let allOpen = 0;
+      
       this.expanders.forEach( (expander) => {
-        !expander.hasAttribute('open') ? allOpen = false : allOpen = true;
+        if (!expander.hasAttribute('open')){
+          this.closeExpander(expander);
+        }else{
+          this.setOpenAttributes(expander);
+          allOpen++;
+        }
       });
 
-      !allOpen ? this.stateOpen = false : this.stateOpen = true;
+      !(allOpen === this.expanders.length) ? this.stateOpen = false : this.stateOpen = true;
       !this.stateOpen ? this.toggleLink.innerText = this.toggleLink.dataset.labelOpen : this.toggleLink.innerText = this.toggleLink.dataset.labelClose
     }
 
@@ -95,11 +100,6 @@ export default () => {
      * @param {HTMLElement} expander Expander element.
      */
     openExpander(expander) {
-      const summary = expander.querySelector('.nhsuk-details__summary');
-      const text = expander.querySelector('.nhsuk-details__text');
-
-      summary.setAttribute('aria-expanded', 'true');
-      text.setAttribute('aria-hidden', 'false');
       expander.setAttribute('open', 'open');
     }
 
@@ -114,6 +114,14 @@ export default () => {
       summary.setAttribute('aria-expanded', 'false');
       text.setAttribute('aria-hidden', 'true');
       expander.removeAttribute('open');
+    }
+
+    setOpenAttributes(expander) {
+      const summary = expander.querySelector('.nhsuk-details__summary');
+      const text = expander.querySelector('.nhsuk-details__text');
+
+      summary.setAttribute('aria-expanded', 'true');
+      text.setAttribute('aria-hidden', 'false');
     }
   }
 
