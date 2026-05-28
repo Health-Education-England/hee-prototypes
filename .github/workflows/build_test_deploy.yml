@@ -1,6 +1,6 @@
 name: Build, test, commit and deploy
 
-# Only run workflow when committing directly to master, release branches or when within a PR.
+# Only run workflow when committing directly to master, develop, release branches or when within a PR.
 on:
   push:
     branches:
@@ -9,6 +9,11 @@ on:
       - release/*
   pull_request:
     types: [opened, reopened, synchronize, ready_for_review]
+
+env:
+  # Force all JavaScript actions to execute using Node.js 24 (early testing / future-proof)
+  # GitHub notes runners will default to Node24 from 16 June 2026.
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   # Build prototype dependencies, assets and templates.
@@ -19,23 +24,23 @@ jobs:
     steps:
       # Checkout repo from GitHub and use current branch.
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version-file: '.nvmrc'
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install --no-optional
+        run: npm ci --no-optional
 
       # This builds the assets with the correct '/hee-prototypes/' basePath for Github Pages.
       - name: Build assets (for Github Pages deployment)
         run: npm run build:prod
 
       - name: Upload Github Pages build artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: assets
           path: public/**
@@ -47,31 +52,35 @@ jobs:
 
       # Share built assets between jobs.
       - name: Upload testing build artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: assets-tests
           path: public/**
           retention-days: 1
 
-  # Prepare the "dist" directory use by GitHub pages to serve prototype.
+  # Prepare the "dist" directory used by GitHub pages to serve prototype.
   bundle:
     name: Bundle and Commit
     needs: build
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
       # Checkout repo from GitHub and use current branch.
+      # Use a ref that works for both PRs and branch pushes to avoid detached HEAD.
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
-          ref: ${{ github.head_ref }}
+          ref: ${{ github.head_ref || github.ref_name }}
 
       - name: Clean dist directory contents
         run: rm -rf dist/*
 
       # Copy assets from "Build" step into "dist/" directory.
       - name: Download build artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: assets
           path: dist/
@@ -81,9 +90,9 @@ jobs:
         run: ls -R
         working-directory: dist/
 
-      # Commit any changes to ./dist directory..
+      # Commit any changes to ./dist directory.
       - name: Commit bundled dist changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "[Github Actions] - Bundled assets for build number: ${{ github.run_number }}"
 
@@ -97,11 +106,11 @@ jobs:
     steps:
       # Checkout repo from GitHub and use current branch.
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       # Download assets from "Build" step into "public/" directory.
       - name: Download build artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: assets-tests
           path: public
@@ -116,7 +125,7 @@ jobs:
 
       # Upload html report as an asset
       - name: Upload backstop report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: ${{ always() }}
         with:
           name: backstop_report
@@ -125,7 +134,7 @@ jobs:
 
       # Upload backstop config as asset for debugging.
       - name: Upload generated backstop config
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: ${{ always() }}
         with:
           name: backstop_generated_config
@@ -142,11 +151,11 @@ jobs:
     steps:
       # Checkout repo from GitHub and use current branch.
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       # Download assets from "Build" step into "public/" directory.
       - name: Download build artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: assets-tests
           path: public
@@ -156,13 +165,13 @@ jobs:
         run: docker compose pull playwright
 
       - name: Setup node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version-file: '.nvmrc'
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install --no-optional
+        run: npm ci --no-optional
 
       # Run playwright tests.
       - name: Run playwright tests
@@ -170,7 +179,7 @@ jobs:
 
       # Upload html report as an asset
       - name: Upload playwright report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: ${{ always() }}
         with:
           name: playwright_report
@@ -184,17 +193,20 @@ jobs:
     needs: [bundle]
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
       # Checkout repo from GitHub and use current branch.
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
-      #  Ensures that we use the latest commit from step: "Commit bundled dist changes" above.
+      # Ensures that we use the latest commit from step: "Commit bundled dist changes" above.
       - name: Fetch latest commit from bundle step
         run: git pull --no-rebase
 
       # Deploys and updates GitHub Pages.
       - name: Deploy GitHub pages
-        uses: JamesIves/github-pages-deploy-action@v4.4.1
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist
